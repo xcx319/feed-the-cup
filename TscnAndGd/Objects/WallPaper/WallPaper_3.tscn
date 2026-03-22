@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://TscnAndGd/Objects/WallPaper/WallPaper.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 150, 111.75 )
+
+[sub_resource type="Animation" id=3]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.313726 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="WallPaper" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TexNode" type="Node2D" parent="."]
+
+[node name="AreaNode" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="AreaNode"]
+collision_layer = 0
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaNode/Area2D"]
+position = Vector2( 150, -113.25 )
+shape = SubResource( 2 )
+
+[node name="AniNode" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AniNode"]
+autoplay = "init"
+anims/hide = SubResource( 3 )
+anims/init = SubResource( 4 )
+
+[connection signal="body_entered" from="AreaNode/Area2D" to="." method="_on_player_entered"]
+[connection signal="body_exited" from="AreaNode/Area2D" to="." method="_on_player_exited"]

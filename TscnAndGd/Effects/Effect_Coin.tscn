@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_coin_1.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_coin_4.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_coin_6.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_coin_5.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_coin_2.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_coin_3.tres" type="Texture" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "1"
+step = 0.02
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Position/Centre:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 720, -0.4, -39.5652, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Position:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -249, -0.25, 0, 0.25, 0, -46, -0.25, 0, 0.1, 10.9307, 0, -0.1, -27.0318, 0.2, 6.45803 ),
+"times": PoolRealArray( 0, 0.7, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Position:position:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( -241, -0.25, 0, 0.25, 0, -1, -0.25, 0, 0, -17.6593, -1, 0, -29.7156, 0.2, -0.244621 ),
+"times": PoolRealArray( 0, 0.7, 1 )
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "2"
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("Position/Centre/Side/Coin:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.06, 0.12, 0.18, 0.24, 0.3, 0.36, 0.42, 0.48, 0.54, 0.6, 0.66, 0.72, 0.78 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 2 ) ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Position/Centre:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 360, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8 )
+}
+
+[node name="Effect_Coin" type="Node2D"]
+
+[node name="Position" type="Node2D" parent="."]
+position = Vector2( 0, -1 )
+
+[node name="Centre" type="Node2D" parent="Position"]
+rotation = 6.28319
+
+[node name="Side" type="Node2D" parent="Position/Centre"]
+position = Vector2( -20, 0 )
+
+[node name="Coin" type="Sprite" parent="Position/Centre/Side"]
+position = Vector2( 20, 0 )
+texture = ExtResource( 2 )
+
+[node name="Ani" type="AnimationPlayer" parent="."]
+anims/1 = SubResource( 1 )
+anims/2 = SubResource( 2 )

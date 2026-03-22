@@ -1,0 +1,461 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://TscnAndGd/Buttons/NoFocusButton.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_5.png" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_right.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_left.tres" type="Texture" id=4]
+
+[sub_resource type="StyleBoxTexture" id=154]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 1, 0.823529, 0.588235, 1 )
+
+[sub_resource type="StyleBoxTexture" id=153]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 1, 0.588235, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=155]
+
+[sub_resource type="StyleBoxTexture" id=157]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+
+[sub_resource type="StyleBoxTexture" id=156]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="Animation" id=143]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=158]
+resource_name = "press_one"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.8, 0.8 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=144]
+resource_name = "pressed"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.9, 0.9 ) ]
+}
+
+[sub_resource type="StyleBoxTexture" id=186]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 0.823529, 0.588235, 0.392157 )
+
+[sub_resource type="StyleBoxTexture" id=187]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 0.588235, 0, 0.784314 )
+
+[sub_resource type="StyleBoxEmpty" id=188]
+
+[sub_resource type="StyleBoxEmpty" id=189]
+
+[sub_resource type="StyleBoxEmpty" id=190]
+
+[sub_resource type="Animation" id=145]
+resource_name = "Empty"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_styles/hover")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 186 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:custom_styles/pressed")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 187 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:custom_styles/focus")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 188 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:custom_styles/disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 189 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:custom_styles/normal")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 190 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath(".:rect_min_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 90, 90 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath(".:rect_size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 90, 90 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath(".:rect_pivot_offset")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, 45 ) ]
+}
+
+[sub_resource type="StyleBoxTexture" id=191]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 1, 0.588235, 0, 1 )
+
+[sub_resource type="StyleBoxTexture" id=192]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 1, 0.823529, 0.588235, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=193]
+
+[sub_resource type="StyleBoxTexture" id=194]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=195]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+
+[sub_resource type="Animation" id=146]
+resource_name = "L"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_styles/pressed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 191 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:custom_styles/hover")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 192 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:custom_styles/focus")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 193 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:custom_styles/normal")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 194 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:custom_styles/disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 195 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath(".:rect_min_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 34, 34 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath(".:rect_size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 34, 34 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath(".:rect_pivot_offset")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 17, 17 ) ]
+}
+
+[sub_resource type="StyleBoxTexture" id=148]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 1, 0.588235, 0, 1 )
+
+[sub_resource type="StyleBoxTexture" id=147]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 1, 0.823529, 0.588235, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=149]
+
+[sub_resource type="StyleBoxTexture" id=151]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=150]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+
+[sub_resource type="Animation" id=152]
+resource_name = "R"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_styles/pressed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 148 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:custom_styles/hover")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 147 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:custom_styles/focus")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 149 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:custom_styles/normal")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 151 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:custom_styles/disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ SubResource( 150 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath(".:rect_min_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 34, 34 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath(".:rect_size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 34, 34 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath(".:rect_pivot_offset")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 17, 17 ) ]
+}
+
+[node name="LogicBut" type="Button"]
+margin_right = 34.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 34, 34 )
+rect_pivot_offset = Vector2( 17, 17 )
+focus_mode = 0
+custom_styles/hover = SubResource( 154 )
+custom_styles/pressed = SubResource( 153 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 157 )
+custom_styles/normal = SubResource( 156 )
+action_mode = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Ani" type="AnimationPlayer" parent="."]
+autoplay = "RESET"
+anims/RESET = SubResource( 143 )
+anims/press_one = SubResource( 158 )
+anims/pressed = SubResource( 144 )
+
+[node name="Type" type="AnimationPlayer" parent="."]
+autoplay = "Empty"
+anims/Empty = SubResource( 145 )
+anims/L = SubResource( 146 )
+anims/R = SubResource( 152 )

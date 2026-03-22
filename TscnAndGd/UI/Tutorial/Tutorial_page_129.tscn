@@ -1,0 +1,869 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_shovel_2.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_5.png" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_26.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_shock.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_body_front.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_idle_0.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_idle_1.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_work_4.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_tail_back.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_head_side.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_hold_2.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_3.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_arm_act_2.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_1.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_leg_stand_1.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_little_body_base_1.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_little_body_base_2.tres" type="Texture" id=17]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=18]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_frame.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_SnowFlower_4.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_SnowFlower_2.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_menu_point.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_SnowFlower_1.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_SnowDrift_1.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_SnowDrift_3.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/Maps/Single/Street/Tmap_floor_street_19.png" type="Texture" id=26]
+[ext_resource path="res://Resources/Maps/Tmap_wallpaper_oldbrink.png" type="Texture" id=27]
+[ext_resource path="res://Resources/Maps/Tmap_floor_outside.png" type="Texture" id=28]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=30]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_menu_warning.tres" type="Texture" id=31]
+[ext_resource path="res://Resources/Outdoor/outdoor2_pack.sprites/snowman_1.tres" type="Texture" id=33]
+[ext_resource path="res://Resources/Outdoor/outdoor2_pack.sprites/snowman_2.tres" type="Texture" id=34]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_pressure_2.tres" type="Texture" id=35]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_rep.tres" type="Texture" id=36]
+
+[sub_resource type="TileSet" id=306]
+0/name = "Tmap_floor_street_19.png 0"
+0/texture = ExtResource( 26 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 100, 100 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Tmap_floor_street_19.png 1"
+1/texture = ExtResource( 26 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 100, 0, 100, 100 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="TileSet" id=304]
+0/name = "Tmap_floor_outside.png 0"
+0/texture = ExtResource( 28 )
+0/tex_offset = Vector2( -25, -25 )
+0/modulate = Color( 1, 0.792157, 0.980392, 1 )
+0/region = Rect2( 0, 0, 150, 150 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Tmap_floor_outside.png 1"
+1/texture = ExtResource( 28 )
+1/tex_offset = Vector2( -25, -25 )
+1/modulate = Color( 0.94902, 0.839216, 0.596078, 1 )
+1/region = Rect2( 150, 0, 150, 150 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Tmap_floor_outside.png 2"
+2/texture = ExtResource( 28 )
+2/tex_offset = Vector2( -25, -25 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 300, 0, 150, 150 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Tmap_floor_outside.png 3"
+3/texture = ExtResource( 28 )
+3/tex_offset = Vector2( -25, -25 )
+3/modulate = Color( 0.756863, 0.788235, 0.776471, 1 )
+3/region = Rect2( 450, 0, 150, 150 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+
+[sub_resource type="TileSet" id=305]
+7/name = "Tmap_floor_outside.png 7"
+7/texture = ExtResource( 28 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 600, 150, 50, 50 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Tmap_floor_outside.png 8"
+8/texture = ExtResource( 28 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 650, 150, 100, 50 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "Tmap_floor_outside.png 9"
+9/texture = ExtResource( 28 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 600, 50, 50, 100 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+12/name = "Tmap_floor_outside.png 12"
+12/texture = ExtResource( 28 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 600, 0, 50, 50 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+14/name = "Tmap_floor_outside.png 14"
+14/texture = ExtResource( 28 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 650, 0, 100, 50 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "Tmap_floor_outside.png 15"
+15/texture = ExtResource( 28 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 850, 50, 50, 100 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "Tmap_floor_outside.png 16"
+16/texture = ExtResource( 28 )
+16/tex_offset = Vector2( 5, 5 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 205, 255, 90, 90 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "Tmap_floor_outside.png 17"
+17/texture = ExtResource( 28 )
+17/tex_offset = Vector2( 5, 5 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 5, 255, 90, 90 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "Tmap_floor_outside.png 18"
+18/texture = ExtResource( 28 )
+18/tex_offset = Vector2( 5, 5 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 305, 255, 90, 90 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "Tmap_floor_outside.png 19"
+19/texture = ExtResource( 28 )
+19/tex_offset = Vector2( 0, 5 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 105, 255, 90, 90 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+20/name = "Tmap_floor_outside.png 20"
+20/texture = ExtResource( 28 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 500, 150, 50, 50 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 0, 0 )
+20/navigation_offset = Vector2( 0, 0 )
+20/shape_offset = Vector2( 0, 0 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape_one_way = false
+20/shape_one_way_margin = 0.0
+20/shapes = [  ]
+20/z_index = 0
+21/name = "Tmap_floor_outside.png 21"
+21/texture = ExtResource( 28 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 500, 200, 50, 50 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 0, 0 )
+21/navigation_offset = Vector2( 0, 0 )
+21/shape_offset = Vector2( 0, 0 )
+21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+21/shape_one_way = false
+21/shape_one_way_margin = 0.0
+21/shapes = [  ]
+21/z_index = 0
+22/name = "Tmap_floor_outside.png 22"
+22/texture = ExtResource( 28 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 450, 150, 50, 50 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 0, 0 )
+22/navigation_offset = Vector2( 0, 0 )
+22/shape_offset = Vector2( 0, 0 )
+22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+22/shape_one_way = false
+22/shape_one_way_margin = 0.0
+22/shapes = [  ]
+22/z_index = 0
+23/name = "Tmap_floor_outside.png 23"
+23/texture = ExtResource( 28 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 450, 200, 50, 50 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 0, 0 )
+23/navigation_offset = Vector2( 0, 0 )
+23/shape_offset = Vector2( 0, 0 )
+23/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+23/shape_one_way = false
+23/shape_one_way_margin = 0.0
+23/shapes = [  ]
+23/z_index = 0
+24/name = "Tmap_floor_outside.png 24"
+24/texture = ExtResource( 28 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 350, 150, 50, 50 )
+24/tile_mode = 0
+24/occluder_offset = Vector2( 0, 0 )
+24/navigation_offset = Vector2( 0, 0 )
+24/shape_offset = Vector2( 0, 0 )
+24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+24/shape_one_way = false
+24/shape_one_way_margin = 0.0
+24/shapes = [  ]
+24/z_index = 0
+25/name = "Tmap_floor_outside.png 25"
+25/texture = ExtResource( 28 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 400, 150, 50, 50 )
+25/tile_mode = 0
+25/occluder_offset = Vector2( 0, 0 )
+25/navigation_offset = Vector2( 0, 0 )
+25/shape_offset = Vector2( 0, 0 )
+25/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+25/shape_one_way = false
+25/shape_one_way_margin = 0.0
+25/shapes = [  ]
+25/z_index = 0
+26/name = "Tmap_floor_outside.png 26"
+26/texture = ExtResource( 28 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 350, 200, 50, 50 )
+26/tile_mode = 0
+26/occluder_offset = Vector2( 0, 0 )
+26/navigation_offset = Vector2( 0, 0 )
+26/shape_offset = Vector2( 0, 0 )
+26/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+26/shape_one_way = false
+26/shape_one_way_margin = 0.0
+26/shapes = [  ]
+26/z_index = 0
+27/name = "Tmap_floor_outside.png 27"
+27/texture = ExtResource( 28 )
+27/tex_offset = Vector2( 0, 0 )
+27/modulate = Color( 1, 1, 1, 1 )
+27/region = Rect2( 400, 200, 50, 50 )
+27/tile_mode = 0
+27/occluder_offset = Vector2( 0, 0 )
+27/navigation_offset = Vector2( 0, 0 )
+27/shape_offset = Vector2( 0, 0 )
+27/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+27/shape_one_way = false
+27/shape_one_way_margin = 0.0
+27/shapes = [  ]
+27/z_index = 0
+28/name = "Tmap_floor_outside.png 28"
+28/texture = ExtResource( 28 )
+28/tex_offset = Vector2( 0, 0 )
+28/modulate = Color( 1, 1, 1, 1 )
+28/region = Rect2( 300, 150, 50, 50 )
+28/tile_mode = 0
+28/occluder_offset = Vector2( 0, 0 )
+28/navigation_offset = Vector2( 0, 0 )
+28/shape_offset = Vector2( 0, 0 )
+28/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+28/shape_one_way = false
+28/shape_one_way_margin = 0.0
+28/shapes = [  ]
+28/z_index = 0
+29/name = "Tmap_floor_outside.png 29"
+29/texture = ExtResource( 28 )
+29/tex_offset = Vector2( 0, 0 )
+29/modulate = Color( 1, 1, 1, 1 )
+29/region = Rect2( 250, 150, 50, 50 )
+29/tile_mode = 0
+29/occluder_offset = Vector2( 0, 0 )
+29/navigation_offset = Vector2( 0, 0 )
+29/shape_offset = Vector2( 0, 0 )
+29/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+29/shape_one_way = false
+29/shape_one_way_margin = 0.0
+29/shapes = [  ]
+29/z_index = 0
+30/name = "Tmap_floor_outside.png 30"
+30/texture = ExtResource( 28 )
+30/tex_offset = Vector2( 0, 0 )
+30/modulate = Color( 1, 1, 1, 1 )
+30/region = Rect2( 250, 200, 50, 50 )
+30/tile_mode = 0
+30/occluder_offset = Vector2( 0, 0 )
+30/navigation_offset = Vector2( 0, 0 )
+30/shape_offset = Vector2( 0, 0 )
+30/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+30/shape_one_way = false
+30/shape_one_way_margin = 0.0
+30/shapes = [  ]
+30/z_index = 0
+31/name = "Tmap_floor_outside.png 31"
+31/texture = ExtResource( 28 )
+31/tex_offset = Vector2( 0, 0 )
+31/modulate = Color( 1, 1, 1, 1 )
+31/region = Rect2( 550, 150, 50, 50 )
+31/tile_mode = 0
+31/occluder_offset = Vector2( 0, 0 )
+31/navigation_offset = Vector2( 0, 0 )
+31/shape_offset = Vector2( 0, 0 )
+31/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+31/shape_one_way = false
+31/shape_one_way_margin = 0.0
+31/shapes = [  ]
+31/z_index = 0
+32/name = "Tmap_floor_outside.png 32"
+32/texture = ExtResource( 28 )
+32/tex_offset = Vector2( 0, 0 )
+32/modulate = Color( 1, 1, 1, 1 )
+32/region = Rect2( 550, 200, 50, 50 )
+32/tile_mode = 0
+32/occluder_offset = Vector2( 0, 0 )
+32/navigation_offset = Vector2( 0, 0 )
+32/shape_offset = Vector2( 0, 0 )
+32/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+32/shape_one_way = false
+32/shape_one_way_margin = 0.0
+32/shapes = [  ]
+32/z_index = 0
+
+[sub_resource type="AtlasTexture" id=302]
+flags = 4
+atlas = ExtResource( 27 )
+region = Rect2( 200, 260, 100, 240 )
+
+[sub_resource type="AtlasTexture" id=303]
+flags = 4
+atlas = ExtResource( 27 )
+region = Rect2( 300, 260, 100, 240 )
+
+[node name="扫雪" type="Node2D"]
+
+[node name="198" type="RichTextLabel" parent="."]
+margin_left = -327.0
+margin_top = 416.0
+margin_right = 451.0
+margin_bottom = 637.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "下大雪了！积雪会使路面湿滑行动困难，持续下雪会形成大块的雪堆。
+为了保证主路通畅，你可以使用推雪铲把积雪推到路边绿化带上，那里不会有顾客行走。
+不要把大块的雪堆推到顾客身上，他们会生气的。"
+text = "下大雪了！积雪会使路面湿滑行动困难，持续下雪会形成大块的雪堆。
+为了保证主路通畅，你可以使用推雪铲把积雪推到路边绿化带上，那里不会有顾客行走。
+不要把大块的雪堆推到顾客身上，他们会生气的。"
+script = ExtResource( 18 )
+LabelTEXT = "信息-文字说明-198"
+Center_Bool = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = -314.0
+margin_top = -81.0
+margin_right = 20.0
+margin_bottom = 231.0
+
+[node name="3" type="Node2D" parent="ScrollContainer"]
+position = Vector2( 209, 3 )
+
+[node name="D_Down" type="TileMap" parent="ScrollContainer/3"]
+position = Vector2( 235, 119 )
+tile_set = SubResource( 306 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( -196599, 32, 0, -196598, 32, 0, -65541, 0, 0, -65540, 0, 0, -65539, 0, 0, -65538, 1, 0, -5, 0, 0, -4, 1, 0, -3, 1, 0, -2, 1, 0, 65531, 0, 0, 65532, 1, 0, 65533, 536870912, 0, 65534, 1, 0, 131067, 0, 0, 131068, 536870913, 0, 131069, 0, 0, 131070, 1, 0, 655375, -1610612722, 0, 655376, 13, 0, 917500, 17, 0, 851979, 17, 0, 851983, 17, 0 )
+
+[node name="D_Grass" type="TileMap" parent="ScrollContainer/3"]
+modulate = Color( 0.47451, 0.47451, 0.584314, 1 )
+position = Vector2( -1633, -471 )
+tile_set = SubResource( 304 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 393229, 2, 0, 393230, 2, 0, 393232, 3, 0, 393233, 1, 0, 458765, 1, 0, 458766, 1, 0, 458768, 3, 0, 458769, 1, 0 )
+
+[node name="D_Up" type="TileMap" parent="ScrollContainer/3"]
+position = Vector2( -1633, -471 )
+tile_set = SubResource( 305 )
+cell_size = Vector2( 50, 50 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( -65542, 2, 0, -131067, 3, 0, -131066, 3, 0, -131065, 3, 0, -131064, 3, 0, -131063, 3, 0, -131062, 3, 0, -131060, 3, 0, -131059, 3, 0, -131058, 3, 0, 720929, 21, 0, 786460, 27, 0, 786461, 25, 0, 786462, -536870898, 0, 786463, 9, 0, 786464, 27, 0, 786465, 26, 0, 852002, 25, 0, 917534, 536870921, 0, 917535, 9, 0 )
+
+[node name="Node2D2" type="Node2D" parent="ScrollContainer/3"]
+position = Vector2( -473, 125 )
+
+[node name="window" type="Sprite" parent="ScrollContainer/3/Node2D2"]
+position = Vector2( 251, 0 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 302 )
+offset = Vector2( 0, -118 )
+
+[node name="window2" type="Sprite" parent="ScrollContainer/3/Node2D2"]
+position = Vector2( 550, 0 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 302 )
+offset = Vector2( 0, -118 )
+
+[node name="door" type="Sprite" parent="ScrollContainer/3/Node2D2"]
+position = Vector2( 351, 0 )
+texture = SubResource( 303 )
+offset = Vector2( 0, -118 )
+
+[node name="door2" type="Sprite" parent="ScrollContainer/3/Node2D2"]
+position = Vector2( 450, 0 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 303 )
+offset = Vector2( 0, -118 )
+
+[node name="OutdoorSnowFlower2" type="Sprite" parent="ScrollContainer/3"]
+position = Vector2( 120, 162 )
+texture = ExtResource( 21 )
+
+[node name="OutdoorSnowFlower3" type="Sprite" parent="ScrollContainer/3"]
+position = Vector2( -48, 238 )
+texture = ExtResource( 21 )
+
+[node name="OutdoorSnowFlower1" type="Sprite" parent="ScrollContainer/3"]
+position = Vector2( -157, 233 )
+scale = Vector2( 0.741758, 0.741758 )
+texture = ExtResource( 23 )
+
+[node name="OutdoorSnowFlower4" type="Sprite" parent="ScrollContainer/3"]
+position = Vector2( -49.2163, 198.875 )
+scale = Vector2( 1.27963, 1.04808 )
+texture = ExtResource( 20 )
+
+[node name="OutdoorSnowFlower5" type="Sprite" parent="ScrollContainer/3"]
+position = Vector2( -97.1763, 176.875 )
+scale = Vector2( 1.30643, 1.08013 )
+texture = ExtResource( 20 )
+
+[node name="OutdoorSnowFlower6" type="Sprite" parent="ScrollContainer/3"]
+position = Vector2( 73, 247 )
+texture = ExtResource( 23 )
+
+[node name="snow" type="Node2D" parent="ScrollContainer/3"]
+
+[node name="ParticleCircle5" type="Sprite" parent="ScrollContainer/3/snow"]
+modulate = Color( 1, 1, 1, 0.8 )
+position = Vector2( -220.5, -6.5 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+
+[node name="ParticleCircle6" type="Sprite" parent="ScrollContainer/3/snow"]
+modulate = Color( 1, 1, 1, 0.894118 )
+position = Vector2( -164, -31 )
+scale = Vector2( 0.375, 0.375 )
+texture = ExtResource( 2 )
+
+[node name="ParticleCircle7" type="Sprite" parent="ScrollContainer/3/snow"]
+modulate = Color( 1, 1, 1, 0.8 )
+position = Vector2( 29, 12 )
+scale = Vector2( 0.375, 0.375 )
+texture = ExtResource( 2 )
+
+[node name="ParticleCircle8" type="Sprite" parent="ScrollContainer/3/snow"]
+modulate = Color( 1, 1, 1, 0.8 )
+position = Vector2( 66, -14 )
+scale = Vector2( 0.197499, 0.197499 )
+texture = ExtResource( 2 )
+
+[node name="ParticleCircle9" type="Sprite" parent="ScrollContainer/3/snow"]
+modulate = Color( 1, 1, 1, 0.8 )
+position = Vector2( -18.4375, 54.5625 )
+scale = Vector2( 0.148749, 0.148749 )
+texture = ExtResource( 2 )
+
+[node name="ParticleCircle10" type="Sprite" parent="ScrollContainer/3/snow"]
+modulate = Color( 1, 1, 1, 0.8 )
+position = Vector2( 54, 112 )
+scale = Vector2( 0.148749, 0.148749 )
+texture = ExtResource( 2 )
+
+[node name="ParticleCircle11" type="Sprite" parent="ScrollContainer/3/snow"]
+modulate = Color( 1, 1, 1, 0.8 )
+position = Vector2( -197, 106 )
+scale = Vector2( 0.148749, 0.148749 )
+texture = ExtResource( 2 )
+
+[node name="ParticleCircle12" type="Sprite" parent="ScrollContainer/3/snow"]
+modulate = Color( 1, 1, 1, 0.8 )
+position = Vector2( -183.719, -3.71873 )
+scale = Vector2( 0.134375, 0.134375 )
+texture = ExtResource( 2 )
+
+[node name="ParticleCircle13" type="Sprite" parent="ScrollContainer/3/snow"]
+modulate = Color( 1, 1, 1, 0.8 )
+position = Vector2( -94.3594, 33.6406 )
+scale = Vector2( 0.187187, 0.187187 )
+texture = ExtResource( 2 )
+
+[node name="ParticleCircle14" type="Sprite" parent="ScrollContainer/3/snow"]
+modulate = Color( 1, 1, 1, 0.94902 )
+position = Vector2( -81.3594, 104.641 )
+scale = Vector2( 0.267188, 0.267188 )
+texture = ExtResource( 2 )
+
+[node name="IconMenuPoint" type="Sprite" parent="ScrollContainer"]
+position = Vector2( 133, 111 )
+rotation = 1.5708
+texture = ExtResource( 22 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = -318.0
+margin_top = -87.0
+margin_right = 27.0
+margin_bottom = 237.0
+texture = ExtResource( 19 )
+patch_margin_left = 19
+patch_margin_top = 19
+patch_margin_right = 19
+patch_margin_bottom = 18
+
+[node name="2" type="Node2D" parent="."]
+position = Vector2( 334, 466 )
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2( 261, 201 )
+
+[node name="b" type="Node2D" parent="1"]
+position = Vector2( -521, 184 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+
+[node name="L" type="Sprite" parent="1/b"]
+position = Vector2( -7, -32 )
+texture = ExtResource( 7 )
+offset = Vector2( -8, 6 )
+
+[node name="R" type="Sprite" parent="1/b"]
+position = Vector2( 7, -27 )
+texture = ExtResource( 6 )
+offset = Vector2( -8, 6 )
+
+[node name="Arm2" type="Sprite" parent="1/b"]
+position = Vector2( -11.8423, -77.7817 )
+rotation = 0.190953
+scale = Vector2( 1.10606, 1.06009 )
+texture = ExtResource( 11 )
+offset = Vector2( -10, 3 )
+
+[node name="BodyBase" type="Sprite" parent="1/b"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( -0.459839, -56.749 )
+rotation = -0.0120274
+scale = Vector2( 1.10766, 1.05841 )
+texture = ExtResource( 5 )
+
+[node name="Left" type="Sprite" parent="1/b"]
+position = Vector2( -1.04236, -96.9643 )
+rotation = -0.0601552
+scale = Vector2( 1.10741, 1.05867 )
+texture = ExtResource( 10 )
+offset = Vector2( 0, -26 )
+
+[node name="DeviceShovel2" type="Sprite" parent="1/b"]
+position = Vector2( -39, -69 )
+rotation = 0.523598
+texture = ExtResource( 1 )
+
+[node name="Arm" type="Sprite" parent="1/b"]
+position = Vector2( -1.78021, -71.5045 )
+rotation = -0.0547642
+scale = Vector2( 1.10745, 1.05863 )
+texture = ExtResource( 8 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="1/b"]
+show_behind_parent = true
+position = Vector2( 30.7824, -41.2475 )
+rotation = -0.104873
+scale = Vector2( 1.10696, 1.05915 )
+texture = ExtResource( 9 )
+offset = Vector2( 20, -16 )
+
+[node name="OutdoorSnowDrift4" type="Sprite" parent="1/b"]
+position = Vector2( -131, -37 )
+texture = ExtResource( 25 )
+
+[node name="OutdoorSnowDrift1" type="Sprite" parent="1/b"]
+position = Vector2( -103.5, -6 )
+texture = ExtResource( 24 )
+
+[node name="TotuInfo2" type="Sprite" parent="1"]
+position = Vector2( -273, 138 )
+texture = ExtResource( 30 )
+
+[node name="TotuInfo3" type="Sprite" parent="1"]
+position = Vector2( -64, 138 )
+texture = ExtResource( 30 )
+
+[node name="Snowman1" type="Sprite" parent="1"]
+position = Vector2( -164, 142 )
+texture = ExtResource( 33 )
+
+[node name="Snowman2" type="Sprite" parent="1"]
+position = Vector2( 50, 151 )
+texture = ExtResource( 33 )
+
+[node name="Snowman2" type="Sprite" parent="1/Snowman2"]
+position = Vector2( 2, -46 )
+texture = ExtResource( 34 )
+
+[node name="Icon" type="Sprite" parent="1/Snowman2"]
+position = Vector2( 60, -21 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 36 )
+
+[node name="UiPoptipIdea8" type="Sprite" parent="1/Snowman2/Icon"]
+self_modulate = Color( 0.392157, 1, 0.286275, 1 )
+position = Vector2( 37.0001, 1.00037 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 35 )
+
+[node name="3" type="Node2D" parent="."]
+position = Vector2( 94, 55 )
+
+[node name="cup2" type="Node2D" parent="3"]
+position = Vector2( 447, 163 )
+
+[node name="All_note2" type="Node2D" parent="3/cup2"]
+position = Vector2( -200, -96 )
+
+[node name="Body_note" type="Node2D" parent="3/cup2/All_note2"]
+position = Vector2( 0, -24 )
+
+[node name="Body" type="Node2D" parent="3/cup2/All_note2/Body_note"]
+
+[node name="CupBody" type="Node2D" parent="3/cup2/All_note2/Body_note/Body"]
+position = Vector2( 0, -24 )
+
+[node name="BodyBase1" type="Sprite" parent="3/cup2/All_note2/Body_note/Body/CupBody"]
+self_modulate = Color( 0.458824, 0.529412, 0.670588, 1 )
+texture = ExtResource( 17 )
+
+[node name="BodyBase2" type="Sprite" parent="3/cup2/All_note2/Body_note/Body/CupBody"]
+texture = ExtResource( 16 )
+
+[node name="CupFace" type="Node2D" parent="3/cup2/All_note2/Body_note/Body"]
+position = Vector2( 0, -14 )
+
+[node name="L" type="Node2D" parent="3/cup2/All_note2/Body_note/Body/CupFace"]
+position = Vector2( -10, 0 )
+
+[node name="Eye" type="Sprite" parent="3/cup2/All_note2/Body_note/Body/CupFace/L"]
+texture = ExtResource( 14 )
+
+[node name="Ball" type="Sprite" parent="3/cup2/All_note2/Body_note/Body/CupFace/L"]
+position = Vector2( 1, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 12 )
+
+[node name="R" type="Node2D" parent="3/cup2/All_note2/Body_note/Body/CupFace"]
+position = Vector2( 8, 0 )
+scale = Vector2( -1, 1 )
+
+[node name="Eye" type="Sprite" parent="3/cup2/All_note2/Body_note/Body/CupFace/R"]
+texture = ExtResource( 14 )
+
+[node name="Ball" type="Sprite" parent="3/cup2/All_note2/Body_note/Body/CupFace/R"]
+scale = Vector2( -1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Arm_Hold" type="Node2D" parent="3/cup2/All_note2/Body_note"]
+position = Vector2( 23, -22 )
+
+[node name="Arm" type="Sprite" parent="3/cup2/All_note2/Body_note/Arm_Hold"]
+texture = ExtResource( 13 )
+offset = Vector2( 4, -17 )
+
+[node name="Weapon_note" type="Node2D" parent="3/cup2/All_note2/Body_note/Arm_Hold"]
+show_behind_parent = true
+position = Vector2( 20, 50 )
+scale = Vector2( -1, 1 )
+
+[node name="Legs" type="Node2D" parent="3/cup2/All_note2"]
+show_behind_parent = true
+
+[node name="Leg_L" type="Node2D" parent="3/cup2/All_note2/Legs"]
+position = Vector2( -7, -27 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="3/cup2/All_note2/Legs/Leg_L"]
+texture = ExtResource( 15 )
+offset = Vector2( -6, 0 )
+
+[node name="Leg_R" type="Node2D" parent="3/cup2/All_note2/Legs"]
+show_behind_parent = true
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="3/cup2/All_note2/Legs/Leg_R"]
+texture = ExtResource( 15 )
+offset = Vector2( -6, 0 )
+
+[node name="UiPoptipIdeaShock2" type="Sprite" parent="3/cup2"]
+self_modulate = Color( 1, 0.776471, 0.298039, 1 )
+position = Vector2( -156, -164 )
+texture = ExtResource( 4 )
+
+[node name="UiPoptipIdea26" type="Sprite" parent="3/cup2/UiPoptipIdeaShock2"]
+position = Vector2( -2, -3 )
+texture = ExtResource( 3 )
+
+[node name="OutdoorSnowFlower1" type="Sprite" parent="3"]
+position = Vector2( 22.5, 42 )
+texture = ExtResource( 23 )
+
+[node name="OutdoorSnowFlower2" type="Sprite" parent="3"]
+position = Vector2( 3.5, 17 )
+texture = ExtResource( 21 )
+
+[node name="OutdoorSnowFlower4" type="Sprite" parent="3"]
+self_modulate = Color( 1, 1, 1, 0.698039 )
+position = Vector2( -19, 66 )
+texture = ExtResource( 20 )
+
+[node name="OutdoorSnowDrift1" type="Sprite" parent="3"]
+position = Vector2( 169, 52 )
+texture = ExtResource( 24 )
+
+[node name="IconMenuWarning" type="Sprite" parent="3/OutdoorSnowDrift1"]
+position = Vector2( -4, -65 )
+texture = ExtResource( 31 )
+
+[node name="TotuInfo2" type="Sprite" parent="3"]
+position = Vector2( 91, 37 )
+texture = ExtResource( 30 )

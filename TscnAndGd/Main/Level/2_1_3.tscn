@@ -1,0 +1,3743 @@
+[gd_scene load_steps=152 format=2]
+
+[ext_resource path="res://Resources/Maps/Single/Street/Tmap_floor_street_7.png" type="Texture" id=1]
+[ext_resource path="res://TscnAndGd/Objects/Devices/WaterPort.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Portal_Door.tscn" type="PackedScene" id=3]
+[ext_resource path="res://TscnAndGd/Objects/Devices/SugarMachine.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Resources/Maps/logic_black.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Maps/Tmap_floor_outside.png" type="Texture" id=6]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Tree_2_leaves.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Tree_3_leaves.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Tree_2_base.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Maps/Tmap_wallpaper.png" type="Texture" id=10]
+[ext_resource path="res://TscnAndGd/Main/Level/NewLevel.gd" type="Script" id=11]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Tree_5_leaves.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Tree_4_leaves.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Tree_3_base.tres" type="Texture" id=14]
+[ext_resource path="res://TscnAndGd/Objects/WallPaper/Door_Roll_Open_1.tscn" type="PackedScene" id=15]
+[ext_resource path="res://TscnAndGd/Objects/Devices/ElecBox.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Resources/Maps/logic_road.png" type="Texture" id=17]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Tree_4_base.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Tree_1_leaves.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Tree_1_base.tres" type="Texture" id=20]
+[ext_resource path="res://TscnAndGd/Objects/Devices/OrderTab.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Tree_5_base.tres" type="Texture" id=22]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Lamp_2.tscn" type="PackedScene" id=23]
+[ext_resource path="res://Resources/Maps/Single/Street/Tmap_floor_street_9.png" type="Texture" id=24]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Tree_6_leaves.tres" type="Texture" id=25]
+[ext_resource path="res://TscnAndGd/Objects/Devices/TeaPort.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_menu_arrow_1.tres" type="Texture" id=27]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Tree_6_base.tres" type="Texture" id=28]
+[ext_resource path="res://TscnAndGd/Objects/WallPaper/Door_Roll_Open_4.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Resources/Maps/logic_white.png" type="Texture" id=30]
+[ext_resource path="res://TscnAndGd/Objects/Devices/Trashbin.tscn" type="PackedScene" id=31]
+[ext_resource path="res://TscnAndGd/Objects/Devices/InductionCooker.tscn" type="PackedScene" id=32]
+[ext_resource path="res://TscnAndGd/Objects/Devices/CupHolder_L.tscn" type="PackedScene" id=33]
+[ext_resource path="res://TscnAndGd/Objects/Devices/WorkBench.tscn" type="PackedScene" id=34]
+[ext_resource path="res://TscnAndGd/Objects/Devices/IceMachine.tscn" type="PackedScene" id=35]
+[ext_resource path="res://TscnAndGd/Objects/Devices/WorkBench_Immovable.tscn" type="PackedScene" id=36]
+[ext_resource path="res://TscnAndGd/Objects/Devices/WaterTank_S_Steel.tscn" type="PackedScene" id=37]
+[ext_resource path="res://TscnAndGd/Objects/Devices/Shelf.tscn" type="PackedScene" id=38]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Tree_fall_1.tres" type="Texture" id=39]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Tree_fall_2.tres" type="Texture" id=40]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Tree_fall_3.tres" type="Texture" id=41]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Tree_fall_4.tres" type="Texture" id=42]
+[ext_resource path="res://Resources/Effects/Single/Single/light_square_1.png" type="Texture" id=43]
+[ext_resource path="res://Resources/Maps/Single/Indoor/Tmap_floor_indoor_7.png" type="Texture" id=44]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Trashbin_Normal_up.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Resources/Effects/Single/Single/light_trapezoid_1.png" type="Texture" id=46]
+[ext_resource path="res://Resources/Maps/Single/Hall/Tmap_floor_hall_4.png" type="Texture" id=47]
+[ext_resource path="res://Resources/Decorate/Decorate_pack.sprites/tabletext_1.tres" type="Texture" id=48]
+[ext_resource path="res://TscnAndGd/Main/Level/DayChange.gd" type="Script" id=49]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Trashbin_Normal_D1.tscn" type="PackedScene" id=50]
+[ext_resource path="res://TscnAndGd/Objects/Devices/PhoneInBox.tscn" type="PackedScene" id=51]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Trashbin_Normal_D2.tscn" type="PackedScene" id=52]
+[ext_resource path="res://TscnAndGd/Objects/Devices/DeviceMopPool.tscn" type="PackedScene" id=53]
+[ext_resource path="res://Resources/Maps/Single/Kitchen/Tmap_floor_kitchen_4.png" type="Texture" id=54]
+[ext_resource path="res://Resources/Maps/Single/Hall/Tmap_floor_hall_2.png" type="Texture" id=55]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_view_point_3.tres" type="Texture" id=56]
+[ext_resource path="res://Resources/Decorate/Decorate_pack.sprites/tabletext_2.tres" type="Texture" id=57]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_OrderTab_2.tscn" type="PackedScene" id=58]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_OrderTab_1.tscn" type="PackedScene" id=59]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_StoreShelf.tscn" type="PackedScene" id=60]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_FaCai.tscn" type="PackedScene" id=61]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_CatHouse.tscn" type="PackedScene" id=62]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_OrderTab_4.tscn" type="PackedScene" id=63]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_Board.tscn" type="PackedScene" id=64]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_view_point_4.tres" type="Texture" id=65]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_view_point_2.tres" type="Texture" id=66]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_view_point_5.tres" type="Texture" id=67]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_view_point_1.tres" type="Texture" id=68]
+[ext_resource path="res://Sounds/Effect/特效闪回.wav" type="AudioStream" id=69]
+[ext_resource path="res://Resources/Maps/logic_indoor.png" type="Texture" id=70]
+[ext_resource path="res://TscnAndGd/Objects/WallPaper/Door_staffonly_3.tscn" type="PackedScene" id=76]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_Clean.tscn" type="PackedScene" id=92]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_OrderTab_3.tscn" type="PackedScene" id=96]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Street_construct_2.tscn" type="PackedScene" id=97]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Street_construct_4.tscn" type="PackedScene" id=98]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Street_construct_1.tscn" type="PackedScene" id=99]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Street_construct_3.tscn" type="PackedScene" id=100]
+
+[sub_resource type="Shader" id=173]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=330]
+resource_local_to_scene = true
+shader = SubResource( 173 )
+shader_param/aura_width = 1.0
+shader_param/aura_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=23]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=331]
+resource_local_to_scene = true
+shader = SubResource( 23 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=332]
+resource_local_to_scene = true
+shader = SubResource( 23 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=333]
+resource_local_to_scene = true
+shader = SubResource( 23 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=298]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=335]
+resource_local_to_scene = true
+shader = SubResource( 298 )
+shader_param/outline_width = 3.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=309]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=364]
+resource_local_to_scene = true
+shader = SubResource( 309 )
+shader_param/aura_width = 0.0
+shader_param/aura_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=336]
+resource_local_to_scene = true
+shader = SubResource( 298 )
+shader_param/outline_width = 3.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=337]
+resource_local_to_scene = true
+shader = SubResource( 298 )
+shader_param/outline_width = 3.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=338]
+resource_local_to_scene = true
+shader = SubResource( 298 )
+shader_param/outline_width = 3.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=341]
+resource_local_to_scene = true
+shader = SubResource( 298 )
+shader_param/outline_width = 3.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=176]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=342]
+resource_local_to_scene = true
+shader = SubResource( 176 )
+shader_param/aura_width = 0.0
+shader_param/aura_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Animation" id=479]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=480]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=481]
+resource_name = "3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=482]
+resource_name = "4"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=483]
+resource_name = "5"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 9 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 9 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 98 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 97 ) ]
+}
+
+[sub_resource type="Animation" id=484]
+resource_name = "6"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 92 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 91 ) ]
+}
+
+[sub_resource type="Animation" id=485]
+resource_name = "7"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 13 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 13 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 46, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=486]
+resource_name = "8"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 14 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 14 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 15 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 15 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 46, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=487]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=488]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("wrong:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("true:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../But:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=489]
+resource_name = "true"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("true:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("true:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=490]
+resource_name = "wrong"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("wrong:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("wrong:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=491]
+resource_name = "init"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/outline_width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Connect/L/OutLine_L:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TexNode/Connect/R/OutLine_R:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=492]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/outline_width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 2.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Connect/L/OutLine_L:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TexNode/Connect/R/OutLine_R:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=343]
+resource_local_to_scene = true
+shader = SubResource( 298 )
+shader_param/outline_width = 3.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=323]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=344]
+resource_local_to_scene = true
+shader = SubResource( 323 )
+shader_param/aura_width = 1.0
+shader_param/aura_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=317]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=347]
+resource_local_to_scene = true
+shader = SubResource( 317 )
+shader_param/aura_width = 1.0
+shader_param/aura_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="AtlasTexture" id=95]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 2, 10, 100, 240 )
+
+[sub_resource type="AtlasTexture" id=96]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 2, 10, 200, 240 )
+
+[sub_resource type="AtlasTexture" id=97]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 18, 10, 200, 240 )
+
+[sub_resource type="AtlasTexture" id=110]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 458, 10, 54, 240 )
+
+[sub_resource type="AtlasTexture" id=111]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 514, 18, 52, 190 )
+
+[sub_resource type="AtlasTexture" id=112]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 404, 48, 52, 202 )
+
+[sub_resource type="AtlasTexture" id=449]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 458, 48, 54, 200 )
+
+[sub_resource type="AtlasTexture" id=403]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 0, 510, 200, 240 )
+
+[sub_resource type="AtlasTexture" id=100]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 458, 10, 54, 240 )
+
+[sub_resource type="AtlasTexture" id=102]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 514, 20, 52, 150 )
+
+[sub_resource type="AtlasTexture" id=470]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 459, 510, 52, 240 )
+
+[sub_resource type="AtlasTexture" id=471]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 404, 700, 52, 50 )
+
+[sub_resource type="Shader" id=466]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=451]
+resource_local_to_scene = true
+shader = SubResource( 466 )
+shader_param/aura_width = 1.0
+shader_param/aura_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=469]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}"
+
+[sub_resource type="ShaderMaterial" id=468]
+resource_local_to_scene = true
+shader = SubResource( 469 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Animation" id=473]
+resource_name = "Portal"
+length = 0.4
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texture/Effect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.08, 0.14, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Texture/Effect/Particles:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.12, 0.16, 0.22, 0.28 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 68 ), ExtResource( 66 ), ExtResource( 56 ), ExtResource( 65 ), ExtResource( 67 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("OutPoint/Effect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.08, 0.14, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("OutPoint/Effect/Particles:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.12, 0.16, 0.22, 0.28 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 68 ), ExtResource( 66 ), ExtResource( 56 ), ExtResource( 65 ), ExtResource( 67 ) ]
+}
+tracks/4/type = "audio"
+tracks/4/path = NodePath("Audio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 69 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=474]
+resource_name = "Show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texture/Effect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("OutPoint/Effect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=475]
+resource_name = "init"
+length = 0.1
+
+[sub_resource type="Animation" id=476]
+resource_name = "Portal"
+length = 0.4
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texture/Effect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.08, 0.14, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Texture/Effect/Particles:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.12, 0.16, 0.22, 0.28 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 68 ), ExtResource( 66 ), ExtResource( 56 ), ExtResource( 65 ), ExtResource( 67 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("OutPoint/Effect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.08, 0.14, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("OutPoint/Effect/Particles:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.12, 0.16, 0.22, 0.28 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 68 ), ExtResource( 66 ), ExtResource( 56 ), ExtResource( 65 ), ExtResource( 67 ) ]
+}
+tracks/4/type = "audio"
+tracks/4/path = NodePath("Audio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 69 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=477]
+resource_name = "Show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texture/Effect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("OutPoint/Effect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=478]
+resource_name = "init"
+length = 0.1
+
+[sub_resource type="TileSet" id=472]
+1/name = "Tmap_floor_street_9.png 1"
+1/texture = ExtResource( 24 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 100, 100 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+4/name = "Tmap_floor_kitchen_4.png 4"
+4/texture = ExtResource( 54 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 100, 0, 100, 100 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Tmap_floor_kitchen_4.png 5"
+5/texture = ExtResource( 54 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 0.878431, 0.878431, 1 )
+5/region = Rect2( 0, 0, 100, 100 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "Tmap_floor_hall_2.png 6"
+6/texture = ExtResource( 55 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 0.827451, 0.945098, 1, 1 )
+6/region = Rect2( 0, 0, 100, 100 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+
+[sub_resource type="TileSet" id=94]
+0/name = "Tmap_floor_street_9.png 0"
+0/texture = ExtResource( 24 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 100, 0, 100, 100 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+2/name = "Tmap_floor_street_9.png 2"
+2/texture = ExtResource( 24 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 0, 100, 100, 100 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+
+[sub_resource type="TileSet" id=398]
+0/name = "Tmap_floor_outside.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( -25, -25 )
+0/modulate = Color( 1, 0.85098, 0.658824, 1 )
+0/region = Rect2( 0, 0, 150, 150 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Tmap_floor_outside.png 1"
+1/texture = ExtResource( 6 )
+1/tex_offset = Vector2( -25, -25 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 150, 0, 150, 150 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Tmap_floor_outside.png 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( -25, -25 )
+2/modulate = Color( 0.839216, 0.941176, 0.796078, 1 )
+2/region = Rect2( 300, 0, 150, 150 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Tmap_floor_outside.png 3"
+3/texture = ExtResource( 6 )
+3/tex_offset = Vector2( -25, -25 )
+3/modulate = Color( 0.945098, 0.945098, 0.945098, 1 )
+3/region = Rect2( 450, 0, 150, 150 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+
+[sub_resource type="TileSet" id=72]
+5/name = "Tmap_floor_hall_4.png 5"
+5/texture = ExtResource( 47 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 0, 0, 100, 100 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+8/name = "Tmap_floor_indoor_7.png 8"
+8/texture = ExtResource( 44 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 0, 100, 100 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "Tmap_floor_indoor_7.png 9"
+9/texture = ExtResource( 44 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 100, 0, 100, 100 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "Tmap_floor_hall_2.png 10"
+10/texture = ExtResource( 55 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 0.827451, 0.945098, 1, 1 )
+10/region = Rect2( 0, 0, 100, 100 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "Tmap_floor_kitchen_4.png 11"
+11/texture = ExtResource( 54 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 0, 100, 100 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "Tmap_floor_kitchen_4.png 12"
+12/texture = ExtResource( 54 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 100, 0, 100, 100 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+
+[sub_resource type="TileSet" id=493]
+0/name = "logic_indoor.png 0"
+0/texture = ExtResource( 70 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 100, 100 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=122]
+0/name = "Tmap_floor_street_7.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 100, 100 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=25]
+0/name = "logic_road.png 0"
+0/texture = ExtResource( 17 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 0 )
+0/region = Rect2( 0, 0, 100, 100 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Tmap_floor_outside.png 1"
+1/texture = ExtResource( 6 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 400, 250, 100, 100 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Tmap_floor_outside.png 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 480, 250, 100, 100 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Tmap_floor_outside.png 3"
+3/texture = ExtResource( 6 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 600, 250, 100, 100 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Tmap_floor_outside.png 4"
+4/texture = ExtResource( 6 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 700, 250, 100, 100 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=120]
+points = PoolVector2Array( 55, 55, 5, 55, 5, 5, 55, 5 )
+
+[sub_resource type="ConvexPolygonShape2D" id=121]
+points = PoolVector2Array( 55, 55, 5, 55, 5, 5, 55, 5 )
+
+[sub_resource type="ConvexPolygonShape2D" id=402]
+points = PoolVector2Array( 55, 55, 5, 55, 5, 5, 55, 5 )
+
+[sub_resource type="TileSet" id=40]
+0/name = "Tmap_floor_outside.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 405, 355, 60, 60 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 120 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 120 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Tmap_floor_outside.png 1"
+1/texture = ExtResource( 6 )
+1/tex_offset = Vector2( 25, -25 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 400, 440, 100, 10 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Tmap_floor_outside.png 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 465, 360, 60, 60 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 121 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 121 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "Tmap_floor_outside.png 3"
+3/texture = ExtResource( 6 )
+3/tex_offset = Vector2( -5, -5 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 530, 360, 60, 60 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 402 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 402 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "Tmap_floor_outside.png 4"
+4/texture = ExtResource( 6 )
+4/tex_offset = Vector2( 25, -25 )
+4/modulate = Color( 0.894118, 0.988235, 1, 1 )
+4/region = Rect2( 400, 426, 100, 10 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+
+[sub_resource type="TileSet" id=123]
+0/name = "Tmap_floor_outside.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 200, 350, 100, 100 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Tmap_floor_outside.png 1"
+1/texture = ExtResource( 6 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 100, 400, 100, 50 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Tmap_floor_outside.png 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 40, 350, 50, 100 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Tmap_floor_outside.png 3"
+3/texture = ExtResource( 6 )
+3/tex_offset = Vector2( 5, 5 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 205, 255, 90, 90 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Tmap_floor_outside.png 4"
+4/texture = ExtResource( 6 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 255, 100, 90 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 100, 100, 0, 100, 0, 0, 100, 0 )
+
+[sub_resource type="TileSet" id=9]
+0/name = "logic_black.png 0"
+0/texture = ExtResource( 5 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 100, 100 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 8 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=124]
+0/name = "logic_white.png 0"
+0/texture = ExtResource( 30 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 0.642944, 0.0859375, 0.588235 )
+0/region = Rect2( 0, 0, 20, 20 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "logic_white.png 1"
+1/texture = ExtResource( 30 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 0.792157, 0.792157, 0.792157, 0.588235 )
+1/region = Rect2( 20, 0, 20, 20 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "logic_white.png 2"
+2/texture = ExtResource( 30 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 0, 1, 0, 1 )
+2/region = Rect2( 40, 0, 20, 20 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "logic_white.png 3"
+3/texture = ExtResource( 30 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 0.419608, 0.878431, 1, 1 )
+3/region = Rect2( 60, 0, 20, 20 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "logic_white.png 4"
+4/texture = ExtResource( 30 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 0.647059, 1, 0.909804, 1 )
+4/region = Rect2( 80, 0, 20, 20 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "logic_white.png 5"
+5/texture = ExtResource( 30 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 0, 0, 1, 1 )
+5/region = Rect2( 0, 20, 20, 20 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "logic_white.png 6"
+6/texture = ExtResource( 30 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 20, 20, 20, 20 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "logic_white.png 7"
+7/texture = ExtResource( 30 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 40, 20, 20, 20 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "logic_white.png 8"
+8/texture = ExtResource( 30 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 60, 20, 20, 20 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "logic_white.png 9"
+9/texture = ExtResource( 30 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 80, 20, 20, 20 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "logic_white.png 10"
+10/texture = ExtResource( 30 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 40, 20, 20 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "logic_white.png 11"
+11/texture = ExtResource( 30 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 20, 40, 20, 20 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "logic_white.png 12"
+12/texture = ExtResource( 30 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 40, 40, 20, 20 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "logic_white.png 13"
+13/texture = ExtResource( 30 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 60, 40, 20, 20 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "logic_white.png 14"
+14/texture = ExtResource( 30 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 80, 40, 20, 20 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "logic_white.png 15"
+15/texture = ExtResource( 30 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 60, 20, 20 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "logic_white.png 16"
+16/texture = ExtResource( 30 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 20, 60, 20, 20 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "logic_white.png 17"
+17/texture = ExtResource( 30 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 40, 60, 20, 20 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "logic_white.png 18"
+18/texture = ExtResource( 30 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 60, 60, 20, 20 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "logic_white.png 19"
+19/texture = ExtResource( 30 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 80, 60, 20, 20 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+
+[sub_resource type="Animation" id=280]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("DayLight:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DayLight:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=281]
+resource_name = "show"
+length = 40.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("DayLight:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DayLight:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 40 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.196078, 0.196078, 0.196078, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 16 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_OpenLight"
+} ]
+}
+
+[node name="2_1" type="Node2D"]
+script = ExtResource( 11 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Players" type="YSort" parent="YSort"]
+
+[node name="NPCs" type="YSort" parent="YSort"]
+
+[node name="Items" type="YSort" parent="YSort"]
+
+[node name="Building" type="YSort" parent="YSort"]
+
+[node name="Updates" type="YSort" parent="YSort"]
+
+[node name="Devices" type="YSort" parent="YSort"]
+
+[node name="Trashbin" parent="YSort/Devices" instance=ExtResource( 31 )]
+material = SubResource( 330 )
+position = Vector2( 550, 550 )
+
+[node name="order" parent="YSort/Devices" instance=ExtResource( 36 )]
+material = SubResource( 331 )
+position = Vector2( 750, 925 )
+Tex = 8
+
+[node name="OrderTab" parent="YSort/Devices/order/ObjNode" index="0" instance=ExtResource( 21 )]
+
+[node name="Cupholder" parent="YSort/Devices" instance=ExtResource( 36 )]
+material = SubResource( 332 )
+position = Vector2( 850, 925 )
+Tex = 8
+
+[node name="CupHolder" parent="YSort/Devices/Cupholder/ObjNode" index="0" instance=ExtResource( 33 )]
+
+[node name="Pick1" parent="YSort/Devices" instance=ExtResource( 36 )]
+material = SubResource( 333 )
+position = Vector2( 650, 925 )
+CanPutDev = false
+Tex = 8
+
+[node name="Pick2" parent="YSort/Devices" instance=ExtResource( 36 )]
+material = SubResource( 333 )
+position = Vector2( 550, 925 )
+CanPutDev = false
+Tex = 8
+
+[node name="water" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 335 )
+position = Vector2( 350, 725 )
+Tex = 6
+
+[node name="Watertank" parent="YSort/Devices/water/ObjNode" index="0" instance=ExtResource( 37 )]
+material = SubResource( 364 )
+
+[node name="Induction" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 336 )
+position = Vector2( 950, 525 )
+Tex = 6
+
+[node name="InductionCooker" parent="YSort/Devices/Induction/ObjNode" index="0" instance=ExtResource( 32 )]
+
+[node name="sugar" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 337 )
+position = Vector2( 450, 725 )
+Tex = 6
+
+[node name="SugerMachine" parent="YSort/Devices/sugar/ObjNode" index="0" instance=ExtResource( 4 )]
+
+[node name="ice" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 338 )
+position = Vector2( 850, 725 )
+Tex = 6
+
+[node name="IceMachine" parent="YSort/Devices/ice/ObjNode" index="0" instance=ExtResource( 35 )]
+
+[node name="port1" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 341 )
+position = Vector2( 750, 725 )
+Tex = 6
+
+[node name="Waterport" parent="YSort/Devices/port1/ObjNode" index="0" instance=ExtResource( 2 )]
+material = SubResource( 342 )
+
+[node name="port2" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 341 )
+position = Vector2( 650, 725 )
+Tex = 6
+
+[node name="TypeAni" parent="YSort/Devices/port2/TexNode" index="2"]
+anims/1 = SubResource( 479 )
+anims/2 = SubResource( 480 )
+anims/3 = SubResource( 481 )
+anims/4 = SubResource( 482 )
+anims/5 = SubResource( 483 )
+anims/6 = SubResource( 484 )
+anims/7 = SubResource( 485 )
+anims/8 = SubResource( 486 )
+anims/RESET = SubResource( 487 )
+
+[node name="TakeAni" parent="YSort/Devices/port2/TexNode/TakeNode" index="2"]
+anims/init = SubResource( 488 )
+anims/true = SubResource( 489 )
+anims/wrong = SubResource( 490 )
+
+[node name="Waterport" parent="YSort/Devices/port2/ObjNode" index="0" instance=ExtResource( 2 )]
+material = SubResource( 342 )
+
+[node name="OutLineAni" parent="YSort/Devices/port2" index="9"]
+anims/init = SubResource( 491 )
+anims/show = SubResource( 492 )
+
+[node name="teaport" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 343 )
+position = Vector2( 950, 725 )
+Tex = 6
+
+[node name="Teaport" parent="YSort/Devices/teaport/ObjNode" index="0" instance=ExtResource( 26 )]
+material = SubResource( 344 )
+
+[node name="E1" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 343 )
+position = Vector2( 550, 725 )
+Tex = 6
+
+[node name="E2" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 343 )
+position = Vector2( 350, 825 )
+Tex = 6
+
+[node name="E3" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 343 )
+position = Vector2( 1050, 525 )
+Tex = 6
+
+[node name="Shelf1" parent="YSort/Devices" instance=ExtResource( 38 )]
+material = SubResource( 347 )
+position = Vector2( 750, 550 )
+
+[node name="Shelf2" parent="YSort/Devices" instance=ExtResource( 38 )]
+material = SubResource( 347 )
+position = Vector2( 350, 550 )
+
+[node name="DeviceMopPool" parent="YSort/Devices" instance=ExtResource( 53 )]
+position = Vector2( 650, 525 )
+
+[node name="Lamp" type="YSort" parent="YSort"]
+
+[node name="Lamp" parent="YSort/Lamp" instance=ExtResource( 23 )]
+position = Vector2( 225, 900 )
+
+[node name="Lamp6" parent="YSort/Lamp" instance=ExtResource( 23 )]
+position = Vector2( 1575, 600 )
+
+[node name="Lamp5" parent="YSort/Lamp" instance=ExtResource( 23 )]
+position = Vector2( 1750, 1050 )
+
+[node name="StreetCons" type="YSort" parent="YSort"]
+
+[node name="StreetCons" parent="YSort/StreetCons" instance=ExtResource( 99 )]
+position = Vector2( 1100, 1096 )
+
+[node name="StreetCons5" parent="YSort/StreetCons" instance=ExtResource( 99 )]
+modulate = Color( 0.745098, 0.768627, 0.776471, 1 )
+position = Vector2( 0, 775 )
+
+[node name="StreetCons6" parent="YSort/StreetCons" instance=ExtResource( 99 )]
+position = Vector2( 1400, 300 )
+
+[node name="StreetCons22" parent="YSort/StreetCons" instance=ExtResource( 99 )]
+modulate = Color( 0.745098, 0.745098, 0.745098, 1 )
+position = Vector2( 825, 200 )
+
+[node name="StreetCons23" parent="YSort/StreetCons" instance=ExtResource( 99 )]
+modulate = Color( 0.772549, 0.788235, 0.772549, 1 )
+position = Vector2( 525, 225 )
+
+[node name="StreetCons15" parent="YSort/StreetCons" instance=ExtResource( 99 )]
+position = Vector2( 25, 1200 )
+
+[node name="StreetCons20" parent="YSort/StreetCons" instance=ExtResource( 99 )]
+position = Vector2( 75, 500 )
+scale = Vector2( -1, 1 )
+
+[node name="StreetCons2" parent="YSort/StreetCons" instance=ExtResource( 97 )]
+position = Vector2( 175, 1200 )
+
+[node name="StreetCons3" parent="YSort/StreetCons" instance=ExtResource( 97 )]
+position = Vector2( 1200, 300 )
+scale = Vector2( -1, 1 )
+
+[node name="StreetCons13" parent="YSort/StreetCons" instance=ExtResource( 100 )]
+position = Vector2( 200, 1275 )
+
+[node name="StreetCons14" parent="YSort/StreetCons" instance=ExtResource( 100 )]
+position = Vector2( 100, 1300 )
+rotation = -0.0872665
+
+[node name="StreetCons25" parent="YSort/StreetCons" instance=ExtResource( 100 )]
+position = Vector2( 400, 1275 )
+rotation = -0.0872665
+
+[node name="StreetCons28" parent="YSort/StreetCons" instance=ExtResource( 100 )]
+position = Vector2( 1000, 1182 )
+
+[node name="StreetCons29" parent="YSort/StreetCons" instance=ExtResource( 100 )]
+position = Vector2( 1150, 1025 )
+
+[node name="StreetCons16" parent="YSort/StreetCons" instance=ExtResource( 100 )]
+position = Vector2( 0, 1125 )
+
+[node name="StreetCons17" parent="YSort/StreetCons" instance=ExtResource( 100 )]
+position = Vector2( -50, 1300 )
+rotation = -0.0872665
+
+[node name="StreetCons18" parent="YSort/StreetCons" instance=ExtResource( 100 )]
+position = Vector2( 1175, 1175 )
+rotation = 0.10472
+
+[node name="StreetCons19" parent="YSort/StreetCons" instance=ExtResource( 100 )]
+position = Vector2( 350, 1150 )
+
+[node name="StreetCons4" parent="YSort/StreetCons" instance=ExtResource( 98 )]
+position = Vector2( 1233, 1026 )
+
+[node name="StreetCons7" parent="YSort/StreetCons" instance=ExtResource( 98 )]
+position = Vector2( 950, 1125 )
+
+[node name="StreetCons8" parent="YSort/StreetCons" instance=ExtResource( 98 )]
+position = Vector2( 1250, 1125 )
+rotation = 1.74533
+
+[node name="StreetCons27" parent="YSort/StreetCons" instance=ExtResource( 98 )]
+position = Vector2( 1068, 1166 )
+rotation = 1.74533
+
+[node name="StreetCons26" parent="YSort/StreetCons" instance=ExtResource( 98 )]
+position = Vector2( 325, 1275 )
+rotation = 4.45058
+
+[node name="StreetCons9" parent="YSort/StreetCons" instance=ExtResource( 98 )]
+position = Vector2( 475, 1175 )
+
+[node name="StreetCons10" parent="YSort/StreetCons" instance=ExtResource( 98 )]
+position = Vector2( 1250, 1175 )
+
+[node name="StreetCons11" parent="YSort/StreetCons" instance=ExtResource( 98 )]
+position = Vector2( 1275, 1075 )
+
+[node name="StreetCons12" parent="YSort/StreetCons" instance=ExtResource( 98 )]
+position = Vector2( 934, 1050 )
+
+[node name="StreetCons24" parent="YSort/StreetCons" instance=ExtResource( 98 )]
+position = Vector2( 475, 1250 )
+
+[node name="StreetCons21" parent="YSort/StreetCons" instance=ExtResource( 98 )]
+position = Vector2( 1026, 1007 )
+rotation = -4.45058
+
+[node name="Outdoor" type="YSort" parent="YSort"]
+
+[node name="Leves" type="Node2D" parent="YSort/Outdoor"]
+
+[node name="OutdoorTreeFall1" type="Sprite" parent="YSort/Outdoor/Leves"]
+position = Vector2( 1325, 550 )
+texture = ExtResource( 39 )
+
+[node name="OutdoorTreeFall2" type="Sprite" parent="YSort/Outdoor/Leves"]
+position = Vector2( 1200, 525 )
+texture = ExtResource( 40 )
+
+[node name="OutdoorTreeFall7" type="Sprite" parent="YSort/Outdoor/Leves"]
+position = Vector2( -175, 950 )
+texture = ExtResource( 39 )
+
+[node name="OutdoorTreeFall8" type="Sprite" parent="YSort/Outdoor/Leves"]
+position = Vector2( 0, 900 )
+texture = ExtResource( 40 )
+
+[node name="OutdoorTreeFall3" type="Sprite" parent="YSort/Outdoor/Leves"]
+position = Vector2( 1175, 50 )
+texture = ExtResource( 41 )
+
+[node name="OutdoorTreeFall4" type="Sprite" parent="YSort/Outdoor/Leves"]
+position = Vector2( -50, 900 )
+texture = ExtResource( 42 )
+
+[node name="OutdoorTreeFall5" type="Sprite" parent="YSort/Outdoor/Leves"]
+position = Vector2( 1275, 225 )
+texture = ExtResource( 41 )
+
+[node name="OutdoorTreeFall6" type="Sprite" parent="YSort/Outdoor/Leves"]
+position = Vector2( 1175, 600 )
+texture = ExtResource( 42 )
+
+[node name="OutdoorTreeFall9" type="Sprite" parent="YSort/Outdoor/Leves"]
+position = Vector2( 225, 300 )
+texture = ExtResource( 41 )
+
+[node name="OutdoorTreeFall10" type="Sprite" parent="YSort/Outdoor/Leves"]
+position = Vector2( 228, 423.5 )
+texture = ExtResource( 42 )
+
+[node name="OutdoorTreeFall11" type="Sprite" parent="YSort/Outdoor/Leves"]
+position = Vector2( 275, 175 )
+texture = ExtResource( 41 )
+
+[node name="OutdoorTreeFall12" type="Sprite" parent="YSort/Outdoor/Leves"]
+position = Vector2( -75, 250 )
+texture = ExtResource( 42 )
+
+[node name="OutdoorTreeFall13" type="Sprite" parent="YSort/Outdoor/Leves"]
+position = Vector2( 625, 150 )
+texture = ExtResource( 42 )
+
+[node name="All" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( 1350, 125 )
+rotation = -1.309
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All"]
+modulate = Color( 1, 0.45098, 0.0901961, 1 )
+texture = ExtResource( 13 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All"]
+modulate = Color( 0.741176, 0.482353, 0.482353, 1 )
+texture = ExtResource( 18 )
+
+[node name="All8" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( 650, 25 )
+rotation = -1.57079
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All8"]
+modulate = Color( 1, 0.45098, 0.0901961, 1 )
+texture = ExtResource( 13 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All8"]
+modulate = Color( 0.741176, 0.482353, 0.482353, 1 )
+texture = ExtResource( 18 )
+
+[node name="All9" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( -75, 250 )
+rotation = 1.0472
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All9"]
+modulate = Color( 1, 0.45098, 0.0901961, 1 )
+position = Vector2( -90.8655, -49.045 )
+texture = ExtResource( 13 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All9"]
+modulate = Color( 0.741176, 0.482353, 0.482353, 1 )
+position = Vector2( -90.8655, -49.045 )
+texture = ExtResource( 18 )
+
+[node name="All16" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( -175, 900 )
+rotation = 1.0472
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All16"]
+modulate = Color( 1, 0.45098, 0.0901961, 1 )
+position = Vector2( -47.5646, -24.045 )
+texture = ExtResource( 13 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All16"]
+modulate = Color( 0.741176, 0.482353, 0.482353, 1 )
+position = Vector2( -47.5646, -24.045 )
+texture = ExtResource( 18 )
+
+[node name="All14" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( 350, 400 )
+rotation = 1.0472
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All14"]
+modulate = Color( 1, 0.45098, 0.0901961, 1 )
+position = Vector2( -90.8655, -49.045 )
+texture = ExtResource( 13 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All14"]
+modulate = Color( 0.741176, 0.482353, 0.482353, 1 )
+position = Vector2( -90.8655, -49.045 )
+texture = ExtResource( 18 )
+
+[node name="All2" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( 725, 50.0001 )
+rotation = 1.309
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All2"]
+modulate = Color( 0.192157, 0.545098, 0.270588, 1 )
+texture = ExtResource( 19 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All2"]
+modulate = Color( 0.737255, 0.737255, 0.737255, 1 )
+texture = ExtResource( 20 )
+
+[node name="All17" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( -150, 500 )
+rotation = -1.0472
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All17"]
+modulate = Color( 0.192157, 0.545098, 0.270588, 1 )
+position = Vector2( 116.058, -50.9277 )
+texture = ExtResource( 19 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All17"]
+modulate = Color( 0.737255, 0.737255, 0.737255, 1 )
+position = Vector2( 116.058, -50.9277 )
+texture = ExtResource( 20 )
+
+[node name="All3" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( 50, 575 )
+rotation = -1.57079
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All3"]
+modulate = Color( 0.192157, 0.545098, 0.419608, 1 )
+texture = ExtResource( 7 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All3"]
+modulate = Color( 0.737255, 0.737255, 0.737255, 1 )
+texture = ExtResource( 9 )
+
+[node name="All12" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( 50, 775 )
+rotation = 1.309
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All12"]
+modulate = Color( 0.192157, 0.545098, 0.419608, 1 )
+position = Vector2( -99.8468, -23.965 )
+texture = ExtResource( 7 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All12"]
+modulate = Color( 0.737255, 0.737255, 0.737255, 1 )
+position = Vector2( -99.8468, -23.965 )
+texture = ExtResource( 9 )
+
+[node name="All15" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( 75, 900 )
+rotation = 1.39626
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All15"]
+modulate = Color( 0.192157, 0.545098, 0.419608, 1 )
+position = Vector2( -13.2282, -21.7984 )
+texture = ExtResource( 7 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All15"]
+modulate = Color( 0.737255, 0.737255, 0.737255, 1 )
+position = Vector2( -13.2282, -21.7984 )
+texture = ExtResource( 9 )
+
+[node name="All4" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( 75, 525 )
+rotation = -1.309
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All4"]
+modulate = Color( 1, 0.552941, 0.121569, 1 )
+position = Vector2( 162.187, -23.2848 )
+texture = ExtResource( 8 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All4"]
+modulate = Color( 0.741176, 0.482353, 0.482353, 1 )
+position = Vector2( 162.187, -23.2848 )
+texture = ExtResource( 14 )
+
+[node name="All7" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( 525, 250 )
+rotation = -1.57079
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All7"]
+modulate = Color( 1, 0.552941, 0.121569, 1 )
+position = Vector2( 162.687, -105.514 )
+rotation = 0.261799
+texture = ExtResource( 8 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All7"]
+modulate = Color( 0.741176, 0.482353, 0.482353, 1 )
+position = Vector2( 162.687, -105.514 )
+rotation = 0.261799
+texture = ExtResource( 14 )
+
+[node name="All5" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( 25, 600 )
+rotation = -1.309
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All5"]
+modulate = Color( 0.215686, 0.313726, 0.223529, 1 )
+texture = ExtResource( 25 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All5"]
+modulate = Color( 0.741176, 0.482353, 0.482353, 1 )
+texture = ExtResource( 28 )
+
+[node name="All10" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( 1225, 175 )
+rotation = -1.309
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All10"]
+modulate = Color( 0.215686, 0.313726, 0.223529, 1 )
+texture = ExtResource( 25 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All10"]
+modulate = Color( 0.741176, 0.482353, 0.482353, 1 )
+texture = ExtResource( 28 )
+
+[node name="All6" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( -125, 775 )
+rotation = -1.0472
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All6"]
+modulate = Color( 0.376471, 0.529412, 0.670588, 1 )
+position = Vector2( 39.6569, -101.002 )
+texture = ExtResource( 12 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All6"]
+modulate = Color( 0.643137, 0.643137, 0.643137, 1 )
+position = Vector2( 39.6569, -101.002 )
+texture = ExtResource( 22 )
+
+[node name="All13" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( 250, 275 )
+rotation = -1.309
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All13"]
+modulate = Color( 0.376471, 0.529412, 0.670588, 1 )
+position = Vector2( 39.6569, -101.002 )
+texture = ExtResource( 12 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All13"]
+modulate = Color( 0.643137, 0.643137, 0.643137, 1 )
+position = Vector2( 39.6569, -101.002 )
+texture = ExtResource( 22 )
+
+[node name="All11" type="Node2D" parent="YSort/Outdoor"]
+position = Vector2( 950, 225 )
+rotation = 1.309
+
+[node name="Leaves" type="Sprite" parent="YSort/Outdoor/All11"]
+modulate = Color( 0.376471, 0.529412, 0.670588, 1 )
+position = Vector2( -135.041, -30.8191 )
+texture = ExtResource( 12 )
+
+[node name="Base" type="Sprite" parent="YSort/Outdoor/All11"]
+modulate = Color( 0.643137, 0.643137, 0.643137, 1 )
+position = Vector2( -135.041, -30.8191 )
+texture = ExtResource( 22 )
+
+[node name="WallPaper" type="YSort" parent="YSort"]
+light_mask = 0
+
+[node name="backwall" type="Node2D" parent="YSort/WallPaper"]
+position = Vector2( 250, 500 )
+
+[node name="1" type="Sprite" parent="YSort/WallPaper/backwall"]
+position = Vector2( 840, 0 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 95 )
+offset = Vector2( 0, -118 )
+
+[node name="2" type="Sprite" parent="YSort/WallPaper/backwall"]
+position = Vector2( 110, 0 )
+texture = SubResource( 96 )
+offset = Vector2( 0, -118 )
+
+[node name="3" type="Sprite" parent="YSort/WallPaper/backwall"]
+position = Vector2( 300, 0 )
+texture = SubResource( 97 )
+offset = Vector2( 0, -118 )
+
+[node name="4" type="Sprite" parent="YSort/WallPaper/backwall"]
+position = Vector2( 500, 0 )
+texture = SubResource( 97 )
+offset = Vector2( 0, -118 )
+
+[node name="5" type="Sprite" parent="YSort/WallPaper/backwall"]
+position = Vector2( 700, 0 )
+texture = SubResource( 97 )
+offset = Vector2( 0, -118 )
+
+[node name="Coner3" type="Node2D" parent="YSort/WallPaper"]
+position = Vector2( 1125, 700 )
+
+[node name="CornerBack2" type="Sprite" parent="YSort/WallPaper/Coner3"]
+position = Vector2( 0, -200 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 110 )
+offset = Vector2( 0, -118 )
+
+[node name="CornerBack3" type="Sprite" parent="YSort/WallPaper/Coner3"]
+position = Vector2( 0, -102 )
+scale = Vector2( 1, 1.05 )
+texture = SubResource( 111 )
+
+[node name="CornerBack6" type="Sprite" parent="YSort/WallPaper/Coner3"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 112 )
+offset = Vector2( 0, -98 )
+
+[node name="Coner4" type="Node2D" parent="YSort/WallPaper"]
+position = Vector2( 1125, 950 )
+
+[node name="CornerBack2" type="Sprite" parent="YSort/WallPaper/Coner4"]
+position = Vector2( -0.000144593, -182.034 )
+rotation = 3.14159
+scale = Vector2( 1, -0.738374 )
+texture = SubResource( 449 )
+offset = Vector2( 0, -118 )
+
+[node name="CornerBack3" type="Sprite" parent="YSort/WallPaper/Coner4"]
+position = Vector2( 0, -102 )
+scale = Vector2( 1, 1.05 )
+texture = SubResource( 111 )
+
+[node name="glass1" type="Sprite" parent="YSort/WallPaper/Coner4"]
+position = Vector2( -100, 0 )
+scale = Vector2( 1, 0.8 )
+texture = SubResource( 403 )
+offset = Vector2( 0, -118 )
+
+[node name="CornerBack6" type="Sprite" parent="YSort/WallPaper/Coner4"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 112 )
+offset = Vector2( 0, -98 )
+
+[node name="Coner2" type="Node2D" parent="YSort/WallPaper"]
+position = Vector2( 275, 950 )
+
+[node name="CornerBack1" type="Sprite" parent="YSort/WallPaper/Coner2"]
+position = Vector2( 0, -450 )
+texture = SubResource( 100 )
+offset = Vector2( 0, -118 )
+
+[node name="CornerBack5" type="Sprite" parent="YSort/WallPaper/Coner2"]
+position = Vector2( 0, -375 )
+scale = Vector2( 1, 1.08333 )
+texture = SubResource( 102 )
+
+[node name="CornerBack6" type="Sprite" parent="YSort/WallPaper/Coner2"]
+position = Vector2( 0, -150.125 )
+scale = Vector2( 1, 1.57763 )
+texture = SubResource( 111 )
+
+[node name="glass1" type="Sprite" parent="YSort/WallPaper/Coner2"]
+position = Vector2( 100, 0 )
+rotation = 3.14159
+scale = Vector2( 1, -0.8 )
+texture = SubResource( 403 )
+offset = Vector2( 0, -118 )
+
+[node name="CornerBack7" type="Sprite" parent="YSort/WallPaper/Coner2"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 112 )
+offset = Vector2( 0, -98 )
+
+[node name="GlassWall" type="Node2D" parent="YSort/WallPaper"]
+position = Vector2( 925, 1000 )
+
+[node name="glass1" type="Sprite" parent="YSort/WallPaper/GlassWall"]
+position = Vector2( 0, -50 )
+scale = Vector2( 1, 0.8 )
+texture = SubResource( 470 )
+offset = Vector2( 0, -118 )
+
+[node name="glass2" type="Sprite" parent="YSort/WallPaper/GlassWall"]
+position = Vector2( 0, -25 )
+texture = SubResource( 471 )
+
+[node name="glass3" type="Sprite" parent="YSort/WallPaper/GlassWall"]
+position = Vector2( -450, -50 )
+scale = Vector2( 1, 0.8 )
+texture = SubResource( 470 )
+offset = Vector2( 0, -118 )
+
+[node name="glass4" type="Sprite" parent="YSort/WallPaper/GlassWall"]
+position = Vector2( -450, -25 )
+texture = SubResource( 471 )
+
+[node name="Door_Roll1" parent="YSort/WallPaper" instance=ExtResource( 15 )]
+position = Vector2( 800, 1001 )
+
+[node name="Door_Roll4" parent="YSort/WallPaper" instance=ExtResource( 29 )]
+position = Vector2( 600, 1001 )
+
+[node name="Door_Staff" parent="YSort/WallPaper" instance=ExtResource( 76 )]
+position = Vector2( 1125, 800 )
+
+[node name="Other" type="YSort" parent="YSort"]
+
+[node name="PhoneInBox" parent="YSort/Other" instance=ExtResource( 51 )]
+material = SubResource( 451 )
+position = Vector2( 1375, 525 )
+
+[node name="Shadow1" type="Sprite" parent="YSort/Other"]
+self_modulate = Color( 0.0666667, 0.172549, 0.254902, 0.494118 )
+light_mask = 0
+position = Vector2( 1000, 500.025 )
+scale = Vector2( 2.66667, 1.29 )
+texture = ExtResource( 43 )
+offset = Vector2( 0, 40 )
+
+[node name="Shadow2" type="Sprite" parent="YSort/Other"]
+self_modulate = Color( 0.0666667, 0.172549, 0.254902, 0.494118 )
+light_mask = 0
+position = Vector2( 350, 800 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 43 )
+offset = Vector2( 0, 40 )
+
+[node name="Shadow4" type="Sprite" parent="YSort/Other"]
+self_modulate = Color( 0.0666667, 0.172549, 0.254902, 0.494118 )
+light_mask = 0
+position = Vector2( 700, 900 )
+scale = Vector2( 6, 1.3 )
+texture = ExtResource( 43 )
+offset = Vector2( 0, 40 )
+
+[node name="Shadow6" type="Sprite" parent="YSort/Other"]
+self_modulate = Color( 0.0666667, 0.172549, 0.254902, 0.494118 )
+light_mask = 0
+position = Vector2( 650, 700 )
+scale = Vector2( 10, 1.33333 )
+texture = ExtResource( 43 )
+offset = Vector2( 0, 40 )
+
+[node name="ElecBox" parent="YSort/Other" instance=ExtResource( 16 )]
+position = Vector2( 1025, 975 )
+
+[node name="IconMenuArrow1" type="Sprite" parent="YSort/Other"]
+self_modulate = Color( 1, 1, 1, 0.392157 )
+position = Vector2( 1175, 725 )
+scale = Vector2( 0.6, 0.8 )
+z_index = -4
+texture = ExtResource( 27 )
+offset = Vector2( 0, 30 )
+
+[node name="Tabletext_order" type="Sprite" parent="YSort/Other"]
+position = Vector2( 750, 1000 )
+z_index = -4
+texture = ExtResource( 57 )
+offset = Vector2( 0, 25 )
+
+[node name="Tabletext_pickup" type="Sprite" parent="YSort/Other"]
+position = Vector2( 600, 1000 )
+z_index = -4
+texture = ExtResource( 48 )
+offset = Vector2( 0, 25 )
+
+[node name="Trashbin" parent="YSort/Other" instance=ExtResource( 45 )]
+material = SubResource( 468 )
+position = Vector2( 1500, 550 )
+
+[node name="Trashbin2" parent="YSort/Other" instance=ExtResource( 52 )]
+position = Vector2( 1275, 400 )
+
+[node name="Trashbin3" parent="YSort/Other" instance=ExtResource( 50 )]
+position = Vector2( 1475, 400 )
+
+[node name="Trashbin5" parent="YSort/Other" instance=ExtResource( 50 )]
+position = Vector2( 1475, 75 )
+
+[node name="OutdoorTrashItem2" parent="YSort/Other/Trashbin5/TexNode" index="0"]
+position = Vector2( 74, 54 )
+
+[node name="OutdoorTrashItem6" parent="YSort/Other/Trashbin5/TexNode" index="2"]
+position = Vector2( 74, 129 )
+
+[node name="OutdoorTrashItem7" parent="YSort/Other/Trashbin5/TexNode" index="5"]
+position = Vector2( 99, 104 )
+
+[node name="OutdoorTrashItem1" parent="YSort/Other/Trashbin5/TexNode" index="6"]
+position = Vector2( -1, 29 )
+
+[node name="OutdoorTrashItemA1" parent="YSort/Other/Trashbin5/TexNode" index="7"]
+position = Vector2( 74, 179 )
+rotation = -0.523598
+
+[node name="OutdoorTrashItem5" parent="YSort/Other/Trashbin5/TexNode" index="8"]
+position = Vector2( -1, -121 )
+
+[node name="OutdoorTrashItemA2" parent="YSort/Other/Trashbin5/TexNode" index="9"]
+position = Vector2( 74, -46 )
+
+[node name="Decorate" type="YSort" parent="YSort"]
+
+[node name="Decorate_OrderTab1" parent="YSort/Decorate" instance=ExtResource( 59 )]
+position = Vector2( 575, 950 )
+
+[node name="Decorate_OrderTab2" parent="YSort/Decorate" instance=ExtResource( 58 )]
+position = Vector2( 600, 750 )
+
+[node name="Decorate_OrderTab3" parent="YSort/Decorate" instance=ExtResource( 96 )]
+position = Vector2( 550, 1000 )
+
+[node name="Decorate_OrderTab4" parent="YSort/Decorate" instance=ExtResource( 63 )]
+position = Vector2( 775, 1000 )
+
+[node name="Decorate_StoreShelf" parent="YSort/Decorate" instance=ExtResource( 60 )]
+position = Vector2( 750, 600 )
+
+[node name="Decorate_Clean" parent="YSort/Decorate" instance=ExtResource( 92 )]
+position = Vector2( 550, 800 )
+
+[node name="Decorate_Board" parent="YSort/Decorate" instance=ExtResource( 64 )]
+position = Vector2( 0, 975 )
+
+[node name="Decorate_FaCai" parent="YSort/Decorate" instance=ExtResource( 61 )]
+position = Vector2( 200, 1000 )
+
+[node name="Decorate_CatHouse" parent="YSort/Decorate" instance=ExtResource( 62 )]
+position = Vector2( 1225, 550 )
+
+[node name="Belt" type="YSort" parent="YSort"]
+
+[node name="PortalDoor_red1" parent="YSort/Belt" instance=ExtResource( 3 )]
+position = Vector2( 450, 900 )
+
+[node name="OutPoint" parent="YSort/Belt/PortalDoor_red1" index="0"]
+position = Vector2( 0, -350 )
+
+[node name="Effect" parent="YSort/Belt/PortalDoor_red1/OutPoint" index="0"]
+position = Vector2( 0, -100 )
+
+[node name="Ani" parent="YSort/Belt/PortalDoor_red1" index="2"]
+anims/Portal = SubResource( 473 )
+anims/Show = SubResource( 474 )
+anims/init = SubResource( 475 )
+
+[node name="PortalDoor_red2" parent="YSort/Belt" instance=ExtResource( 3 )]
+position = Vector2( 450, 500 )
+
+[node name="OutPoint" parent="YSort/Belt/PortalDoor_red2" index="0"]
+position = Vector2( 0, 350 )
+
+[node name="Ani" parent="YSort/Belt/PortalDoor_red2" index="2"]
+anims/Portal = SubResource( 476 )
+anims/Show = SubResource( 477 )
+anims/init = SubResource( 478 )
+
+[node name="MapNode" type="Node2D" parent="."]
+
+[node name="StreetMain" type="TileMap" parent="MapNode"]
+z_index = -5
+tile_set = SubResource( 472 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( -65520, 536870918, 0, 16, 536870918, 0, 17, 536870918, 0, 65552, 536870918, 0, 65553, 536870918, 0, 131088, 6, 0, 131089, 536870918, 0, 196624, 6, 0, 196625, 536870918, 0, 262160, 6, 0, 262161, 536870918, 0, 327696, 6, 0, 327697, 536870918, 0, 393228, 6, 0, 393229, 6, 0, 393230, 6, 0, 393231, 4, 0, 393232, 6, 0, 393233, 536870918, 0, 458763, 536870918, 0, 458764, 6, 0, 458765, 6, 0, 458766, 6, 0, 458767, 5, 0, 458768, 6, 0, 458769, 536870918, 0, 524300, 6, 0, 524301, 6, 0, 524302, 6, 0, 524303, 4, 0, 524304, 6, 0, 524305, 6, 0, 589836, 6, 0, 589837, 6, 0, 589838, 6, 0, 589839, 5, 0, 589840, 6, 0, 589841, 6, 0, 655365, 6, 0, 655366, 6, 0, 655367, 6, 0, 655368, 6, 0, 655373, 6, 0, 655374, 6, 0, 655375, 4, 0, 655376, 6, 0, 655377, 536870918, 0, 720901, 4, 0, 720902, 5, 0, 720903, 4, 0, 720904, 5, 0, 720909, 4, 0, 720910, 5, 0, 720911, 4, 0, 720912, -1073741820, 0, 720913, -1073741819, 0, 720914, -1073741823, 0, 720915, -1073741823, 0, 720916, -1073741823, 0, 786437, 6, 0, 786438, 6, 0, 786439, 6, 0, 786440, 6, 0, 786441, 6, 0, 786442, 6, 0, 786443, 6, 0, 786444, 6, 0, 786445, 6, 0, 786446, 6, 0, 786447, -1073741819, 0, 786448, 6, 0, 786449, 6, 0, 786450, -2147483647, 0, 786451, -2147483647, 0, 786452, -2147483647, 0, 851973, 536870918, 0, 851974, 536870918, 0, 851975, 536870918, 0, 851976, 536870918, 0, 851977, 536870918, 0, 851978, 6, 0, 851979, 536870918, 0, 851980, 536870918, 0, 851981, 536870918, 0, 851982, 536870918, 0, 851983, -1073741819, 0, 851984, 536870918, 0, 851985, 536870918, 0, 917509, 536870913, 0, 917510, 1, 0, 983045, 536870913, 0, 983046, 1, 0 )
+
+[node name="Street" type="TileMap" parent="MapNode"]
+z_index = -5
+tile_set = SubResource( 94 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+bake_navigation = true
+occluder_light_mask = 0
+format = 1
+tile_data = PoolIntArray( 18, 536870912, 0, 65554, 536870912, 0, 131090, 536870912, 0, 196626, 536870912, 0, 262162, 536870912, 0, 327698, 536870912, 0, 393234, 536870912, 0, 458770, 536870912, 0, 524306, 536870912, 0, 589842, 536870912, 0, 655378, 1073741826, 0, 851986, 0, 0 )
+
+[node name="D_Grass" type="TileMap" parent="MapNode"]
+modulate = Color( 0.678431, 0.458824, 0.172549, 1 )
+z_index = -5
+tile_set = SubResource( 398 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 65532, 3, 0, 65533, 0, 0, 65534, 2, 0, 65535, 1, 0, 0, 2, 0, 1, 0, 0, 2, 1, 0, 3, 2, 0, 4, 1, 0, 5, 0, 0, 6, 0, 0, 7, 2, 0, 8, 1, 0, 9, 3, 0, 10, 3, 0, 11, 1, 0, 12, 2, 0, 13, 0, 0, 14, 1, 0, 15, 2, 0, 131068, 3, 0, 131069, 1, 0, 131070, 1, 0, 131071, 0, 0, 65536, 3, 0, 65537, 0, 0, 65538, 3, 0, 65539, 2, 0, 65540, 0, 0, 65541, 3, 0, 65542, 1, 0, 65543, 1, 0, 65544, 0, 0, 65545, 0, 0, 65546, 1, 0, 65547, 0, 0, 65548, 0, 0, 65549, 2, 0, 65550, 0, 0, 65551, 1, 0, 196604, 1, 0, 196605, 1, 0, 196606, 3, 0, 196607, 1, 0, 131072, 1, 0, 131073, 3, 0, 131074, 1, 0, 131075, 2, 0, 131076, 2, 0, 131077, 1, 0, 131078, 0, 0, 131079, 3, 0, 131080, 2, 0, 131081, 1, 0, 131082, 3, 0, 131083, 1, 0, 131084, 3, 0, 131085, 1, 0, 131086, 2, 0, 131087, 1, 0, 262140, 3, 0, 262141, 2, 0, 262142, 2, 0, 262143, 2, 0, 196608, 2, 0, 196609, 1, 0, 196610, 2, 0, 196611, 0, 0, 196612, 3, 0, 196613, 1, 0, 196614, 2, 0, 196615, 0, 0, 196616, 1, 0, 196617, 0, 0, 196618, 1, 0, 196619, 0, 0, 196620, 1, 0, 196621, 0, 0, 196622, 1, 0, 196623, 0, 0, 327676, 1, 0, 327677, 0, 0, 327678, 0, 0, 327679, 1, 0, 262144, 3, 0, 262145, 1, 0, 262146, 3, 0, 262147, 2, 0, 262148, 2, 0, 262149, 2, 0, 262150, 2, 0, 262151, 1, 0, 262152, 0, 0, 262153, 0, 0, 262154, 1, 0, 262155, 3, 0, 262156, 2, 0, 262157, 1, 0, 262158, 3, 0, 262159, 2, 0, 393212, 3, 0, 393213, 3, 0, 393214, 0, 0, 393215, 3, 0, 327680, 3, 0, 327681, 0, 0, 327682, 3, 0, 327691, 2, 0, 327692, 2, 0, 327693, 2, 0, 327694, 3, 0, 327695, 2, 0, 458748, 1, 0, 458749, 0, 0, 458750, 1, 0, 458751, 3, 0, 393216, 3, 0, 393217, 0, 0, 393218, 0, 0, 524284, 1, 0, 524285, 1, 0, 524286, 0, 0, 524287, 2, 0, 458752, 3, 0, 458753, 1, 0, 458754, 3, 0, 589820, 1, 0, 589821, 2, 0, 589822, 1, 0, 589823, 3, 0, 524288, 0, 0, 524289, 1, 0, 524290, 2, 0 )
+
+[node name="D_Down" type="TileMap" parent="MapNode"]
+z_index = -5
+tile_set = SubResource( 72 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 327683, 8, 0, 327684, 9, 0, 327685, 8, 0, 327686, 9, 0, 327687, 8, 0, 327688, 9, 0, 327689, 8, 0, 327690, 9, 0, 393219, 8, 0, 393220, 9, 0, 393221, 8, 0, 393222, 9, 0, 393223, 8, 0, 393224, 9, 0, 393225, 8, 0, 393226, 9, 0, 393227, 10, 0, 458755, 8, 0, 458756, 9, 0, 458757, 8, 0, 458758, 9, 0, 458759, 8, 0, 458760, 9, 0, 458761, 8, 0, 458762, 9, 0, 458763, 10, 0, 524291, 8, 0, 524292, 9, 0, 524293, 8, 0, 524294, 9, 0, 524295, 8, 0, 524296, 9, 0, 524297, 8, 0, 524298, 9, 0, 524299, 10, 0, 655356, 10, 0, 655357, 10, 0, 655358, 10, 0, 655359, 10, 0, 589824, 10, 0, 589825, 10, 0, 589826, 10, 0, 589827, 10, 0, 589828, 10, 0, 589829, 8, 0, 589830, 9, 0, 589831, 8, 0, 589832, 9, 0, 589833, 10, 0, 589834, 10, 0, 589835, 10, 0, 589836, 10, 0, 720892, 10, 0, 720893, 10, 0, 720894, 10, 0, 720895, 10, 0, 655360, 10, 0, 655361, 10, 0, 655362, 10, 0, 655363, 10, 0, 655364, 10, 0, 655369, 10, 0, 655370, 10, 0, 655371, 10, 0, 655372, 10, 0, 786428, 11, 0, 786429, 11, 0, 786430, 11, 0, 786431, 11, 0, 720896, 11, 0, 720897, 11, 0, 720898, 11, 0, 720899, 11, 0, 720900, 12, 0, 720905, 11, 0, 720906, 12, 0, 720907, 11, 0, 720908, 12, 0, 851964, 10, 0, 851965, 10, 0, 851966, 10, 0, 851967, 10, 0, 786432, 10, 0, 786433, 10, 0, 786434, 10, 0, 786435, 10, 0, 786436, 10, 0, 917500, 10, 0, 917501, 10, 0, 917502, 10, 0, 917503, 10, 0, 851968, 10, 0, 851969, 10, 0, 851970, 10, 0, 851971, 10, 0, 851972, 10, 0 )
+
+[node name="Floor" type="TileMap" parent="MapNode"]
+visible = false
+z_index = -5
+tile_set = SubResource( 493 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 327684, 0, 0, 327688, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 458762, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0 )
+
+[node name="NPCFloor" type="TileMap" parent="MapNode"]
+visible = false
+modulate = Color( 0.615686, 1, 0.4, 1 )
+z_index = -5
+tile_set = SubResource( 122 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 720901, 0, 0, 720902, 0, 0, 720903, 0, 0, 720904, 0, 0, 786432, 536870912, 0, 786433, 536870912, 0, 786434, 536870912, 0, 786435, 536870912, 0, 786436, 536870912, 0, 786437, 536870912, 0, 786438, 536870912, 0, 786439, 536870912, 0, 786440, 536870912, 0, 786441, 536870912, 0, 786442, 536870912, 0, 786443, 536870912, 0, 786444, 0, 0, 786445, 0, 0, 851968, 536870912, 0, 851969, 536870912, 0, 851970, 536870912, 0, 851971, 536870912, 0, 851972, 536870912, 0, 851973, 536870912, 0, 851974, 536870912, 0, 851975, 536870912, 0, 851976, 536870912, 0, 851977, 536870912, 0, 851978, 536870912, 0, 851979, 536870912, 0, 851980, 0, 0, 851981, 0, 0 )
+
+[node name="Delivery" type="TileMap" parent="MapNode"]
+z_index = -5
+tile_set = SubResource( 25 )
+cell_size = Vector2( 100, 100 )
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 393228, 1, 0, 393229, 2, 0, 393230, -1610612735, 0, 458764, -1073741822, 0, 458765, -1073741824, 0, 458766, -1610612734, 0, 524300, -1073741823, 0, 524301, 1610612738, 0, 524302, -536870911, 0 )
+
+[node name="Wall" type="TileMap" parent="MapNode"]
+z_index = -5
+tile_set = SubResource( 40 )
+cell_size = Vector2( 50, 50 )
+cell_quadrant_size = 10
+cell_custom_transform = Transform2D( 50, 0, 0, 50, 0, 0 )
+cell_y_sort = true
+centered_textures = true
+collision_layer = 128
+collision_mask = 5120
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 0, 0, 589843, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0, 655365, 0, 0, 655382, 0, 0, 720901, 0, 0, 720918, 0, 0, 786437, 0, 0, 786454, 0, 0, 851973, 0, 0, 851990, 0, 0, 851998, -1073741820, 0, 852000, -1073741820, 0, 917509, 0, 0, 983045, 0, 0, 983062, -1073741823, 0, 983070, -1073741820, 0, 983072, -1073741820, 0, 1048581, 0, 0, 1048598, -1073741822, 0, 1114117, 0, 0, 1114134, -1073741822, 0, 1114142, -1073741820, 0, 1114144, -1073741820, 0, 1179653, 0, 0, 1179654, 0, 0, 1179655, 0, 0, 1179656, 0, 0, 1179657, 0, 0, 1179666, 0, 0, 1179667, 0, 0, 1179668, 0, 0, 1179669, 0, 0, 1179670, -1073741822, 0, 1245193, 0, 0, 1245194, -1073741823, 0, 1245202, 0, 0, 1245214, -1073741820, 0, 1245216, -1073741820, 0, 1310730, 1, 0, 1310732, 1, 0, 1310734, 1, 0, 1310736, 1, 0, 1376286, -1073741820, 0, 1376288, -1073741820, 0, 1507320, 4, 0, 1507322, 4, 0, 1507324, 4, 0, 1507326, 4, 0, 1441792, 4, 0, 1441794, 4, 0, 1441796, 4, 0, 1441798, 4, 0, 1441800, 4, 0, 1441802, 4, 0, 1441804, 4, 0, 1441806, 4, 0, 1441808, 4, 0, 1441810, 4, 0, 1441812, 4, 0, 1441814, 4, 0, 1441816, 4, 0, 1441818, 4, 0, 1441820, 4, 0, 1441824, 4, 0, 1441826, 4, 0, 1638392, 4, 0, 1638394, 4, 0, 1638396, 4, 0, 1638398, 4, 0, 1572864, 4, 0, 1572866, 4, 0, 1572868, 4, 0, 1572870, 4, 0, 1572872, 4, 0, 1572874, 4, 0, 1572876, 4, 0, 1572878, 4, 0, 1572880, 4, 0, 1572882, 4, 0, 1572884, 4, 0, 1572886, 4, 0, 1572888, 4, 0, 1572890, 4, 0, 1572892, 4, 0, 1572896, 4, 0, 1572898, 4, 0, 1638430, -1073741820, 0, 1638432, -1073741820, 0, 1769502, -1073741820, 0, 1769504, -1073741820, 0 )
+
+[node name="DecorateUp" type="TileMap" parent="MapNode"]
+z_index = -5
+tile_set = SubResource( 123 )
+cell_size = Vector2( 50, 50 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 35, 536870914, 0, 131107, 536870914, 0, 262179, 536870914, 0, 393251, 536870914, 0, 524323, 536870914, 0, 655395, 536870914, 0, 786467, 536870914, 0, 917539, 536870914, 0, 1048611, 536870914, 0, 1179683, 536870914, 0, 1310755, 536870914, 0, 1441827, 536870914, 0, 1572899, 536870914, 0, 1703970, 0, 0, 1835002, 1, 0, 1835004, 1, 0, 1835006, 1, 0, 1769472, 1, 0, 1769474, 1, 0, 1769476, 1, 0, 1769478, 1, 0, 1769480, 1, 0, 1769482, 1, 0, 1769484, 1, 0, 1769486, 1, 0, 1769488, 1, 0, 1769490, 1, 0, 1769492, 1, 0, 1769494, 1, 0, 1769496, 1, 0, 1769498, 1, 0, 1769500, 1, 0, 1769502, 1, 0, 1769504, 1, 0 )
+
+[node name="World" type="TileMap" parent="MapNode"]
+visible = false
+modulate = Color( 1, 1, 1, 0.45098 )
+z_index = -5
+tile_set = SubResource( 9 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 10
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+collision_layer = 0
+collision_mask = 512
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( -327663, 1, 0, -327662, 1, 0, -327661, 1, 0, -327660, 1, 0, -327659, 1, 0, -196591, 1, 0, -196590, 1, 0, -196589, 1, 0, -196588, 1, 0, -65519, 1, 0, -65518, 1, 0, -65517, 1, 0, -65516, 1, 0, 15, 0, 0, 16, 0, 0, 17, 0, 0, 18, 0, 0, 65551, 0, 0, 65554, 0, 0, 65556, 1, 0, 131087, 0, 0, 131090, 0, 0, 131092, 1, 0, 196623, 0, 0, 196626, 0, 0, 196628, 1, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 262162, 0, 0, 262164, 1, 0, 327682, 0, 0, 327691, 0, 0, 327692, 0, 0, 327698, 0, 0, 393218, 0, 0, 393234, 0, 0, 393236, 1, 0, 458754, 0, 0, 458770, 0, 0, 458772, 1, 0, 589821, 536870912, 0, 589822, 536870912, 0, 589823, 536870912, 0, 524288, 536870912, 0, 524289, 536870912, 0, 524290, 0, 0, 524306, 0, 0, 524308, 1, 0, 655357, 536870912, 0, 589842, 0, 0, 589844, 1, 0, 720893, 536870912, 0, 655377, 1, 0, 655378, 0, 0, 786429, 0, 0, 720913, 1, 0, 720914, 0, 0, 851965, 0, 0, 786449, 1, 0, 786450, 0, 0, 917501, 0, 0, 851985, 1, 0, 851986, 0, 0, 983037, 0, 0, 983038, 0, 0, 983039, 0, 0, 917504, 0, 0, 917505, 0, 0, 917506, 0, 0, 917507, 0, 0, 917508, 0, 0, 917509, 0, 0, 917510, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 0, 917522, 0, 0 )
+
+[node name="Audio" type="TileMap" parent="MapNode"]
+visible = false
+z_index = -5
+tile_set = SubResource( 124 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+centered_textures = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 65552, 1, 0, 65553, 1, 0, 131088, 1, 0, 131089, 1, 0, 196624, 1, 0, 196625, 1, 0, 262160, 1, 0, 262161, 1, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327696, 1, 0, 327697, 1, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 1, 0, 393228, 1, 0, 393229, 1, 0, 393230, 1, 0, 393231, 1, 0, 393232, 1, 0, 393233, 1, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 1, 0, 458764, 1, 0, 458765, 1, 0, 458766, 1, 0, 458767, 1, 0, 458768, 1, 0, 458769, 1, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524302, 1, 0, 524303, 1, 0, 524304, 1, 0, 524305, 1, 0, 655358, 1, 0, 655359, 1, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 1, 0, 589839, 1, 0, 589840, 1, 0, 589841, 1, 0, 720894, 1, 0, 720895, 1, 0, 655360, 1, 0, 655361, 1, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 1, 0, 655366, 1, 0, 655367, 1, 0, 655368, 1, 0, 655369, 1, 0, 655370, 1, 0, 655371, 1, 0, 655372, 1, 0, 655373, 1, 0, 655374, 1, 0, 655375, 1, 0, 655376, 1, 0, 655377, 1, 0, 786430, 1, 0, 786431, 1, 0, 720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 720899, 1, 0, 720900, 1, 0, 720901, 1, 0, 720902, 1, 0, 720903, 1, 0, 720904, 1, 0, 720905, 1, 0, 720906, 1, 0, 720907, 1, 0, 720908, 1, 0, 720909, 1, 0, 720910, 1, 0, 720911, 1, 0, 720912, 1, 0, 720913, 1, 0, 851966, 1, 0, 851967, -1610612735, 0, 786432, -1610612735, 0, 786433, 1, 0, 786434, 1, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786446, 1, 0, 786447, 1, 0, 786448, 1, 0, 786449, 1, 0, 917502, 1, 0, 917503, 1, 0, 851968, 1, 0, 851969, 1, 0, 851970, 1, 0, 851971, 1, 0, 851972, -1610612735, 0, 851973, 1, 0, 851974, 1, 0, 851975, 1, 0, 851976, 1, 0, 851977, 1, 0, 851978, 1, 0, 851979, 1, 0, 851980, 1, 0, 851981, 1, 0, 851982, 1, 0, 851983, 1, 0, 851984, 1, 0, 851985, 1, 0 )
+
+[node name="CameraShow" type="Camera2D" parent="."]
+position = Vector2( 700, 700 )
+zoom = Vector2( 2, 2 )
+
+[node name="Pos2DNode" type="Node2D" parent="."]
+
+[node name="1" type="Position2D" parent="Pos2DNode"]
+position = Vector2( 550, 1550 )
+
+[node name="2" type="Position2D" parent="Pos2DNode"]
+position = Vector2( 2050, 1150 )
+
+[node name="3" type="Position2D" parent="Pos2DNode"]
+position = Vector2( 1650, -50 )
+
+[node name="PlayerPos2D" type="Node2D" parent="."]
+
+[node name="1" type="Position2D" parent="PlayerPos2D"]
+position = Vector2( 1400, 1000 )
+
+[node name="2" type="Position2D" parent="PlayerPos2D"]
+position = Vector2( 1500, 1000 )
+
+[node name="3" type="Position2D" parent="PlayerPos2D"]
+position = Vector2( 1435, 1085 )
+
+[node name="4" type="Position2D" parent="PlayerPos2D"]
+position = Vector2( 1525, 1085 )
+
+[node name="DeliverPos" type="Node2D" parent="."]
+
+[node name="1" type="Position2D" parent="DeliverPos"]
+position = Vector2( 2050, 1150 )
+
+[node name="CameraPos2D" type="Node2D" parent="."]
+
+[node name="LeftTop" type="Position2D" parent="CameraPos2D"]
+position = Vector2( -225, 100 )
+
+[node name="RightBottom" type="Position2D" parent="CameraPos2D"]
+position = Vector2( 1850, 1375 )
+
+[node name="LightNode" type="Node2D" parent="."]
+visible = false
+
+[node name="Down" type="Light2D" parent="LightNode"]
+light_mask = 0
+position = Vector2( 712.5, 1112.5 )
+scale = Vector2( 11.25, 3.25 )
+texture = ExtResource( 46 )
+mode = 2
+shadow_item_cull_mask = 0
+
+[node name="Room" type="Light2D" parent="LightNode"]
+light_mask = 0
+position = Vector2( 687.499, 662.5 )
+scale = Vector2( 11.6667, 9.66667 )
+texture = ExtResource( 43 )
+mode = 2
+shadow_item_cull_mask = 0
+
+[node name="DayLight" type="CanvasModulate" parent="."]
+visible = false
+light_mask = 0
+color = Color( 0.196078, 0.196078, 0.196078, 1 )
+script = ExtResource( 49 )
+
+[node name="Ani" type="AnimationPlayer" parent="DayLight"]
+root_node = NodePath("../..")
+anims/init = SubResource( 280 )
+anims/show = SubResource( 281 )
+
+[node name="CameraNode" type="Node2D" parent="."]
+position = Vector2( 737, 723 )
+
+[node name="Camera2D" type="Camera2D" parent="CameraNode"]
+current = true
+zoom = Vector2( 0.75, 0.75 )
+limit_smoothed = true
+smoothing_enabled = true
+smoothing_speed = 1.0
+
+[editable path="YSort/Devices/order"]
+[editable path="YSort/Devices/Cupholder"]
+[editable path="YSort/Devices/water"]
+[editable path="YSort/Devices/Induction"]
+[editable path="YSort/Devices/sugar"]
+[editable path="YSort/Devices/ice"]
+[editable path="YSort/Devices/port1"]
+[editable path="YSort/Devices/port2"]
+[editable path="YSort/Devices/teaport"]
+[editable path="YSort/Other/Trashbin5"]
+[editable path="YSort/Belt/PortalDoor_red1"]
+[editable path="YSort/Belt/PortalDoor_red2"]

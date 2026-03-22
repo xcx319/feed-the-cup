@@ -1,0 +1,249 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut_1.tres" type="Texture" id=2]
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=3]
+[ext_resource path="res://TscnAndGd/UI/InGame/IconNode.tscn" type="PackedScene" id=4]
+[ext_resource path="res://TscnAndGd/UI/Info/OrderInfoLabel.gd" type="Script" id=8]
+
+[sub_resource type="Animation" id=3]
+resource_name = "TimeEnd"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/TimeLabel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_del"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 4.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("Control/Label")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-即将送达" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/BG:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 400, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/TimeLabel:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("Control/Label")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-预估用时" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "1"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/BG:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.992157, 1, 0, 0.27451 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/Label:custom_colors/default_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="OrderInfoLabel" type="Control"]
+margin_right = 400.0
+margin_bottom = 65.0
+rect_min_size = Vector2( 400, 65 )
+mouse_filter = 2
+script = ExtResource( 8 )
+
+[node name="Ani" type="AnimationPlayer" parent="."]
+autoplay = "show"
+anims/TimeEnd = SubResource( 3 )
+anims/show = SubResource( 1 )
+
+[node name="TypeAni" type="AnimationPlayer" parent="."]
+autoplay = "1"
+anims/1 = SubResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 3.05176e-05
+rect_min_size = Vector2( 400, 65 )
+mouse_filter = 2
+
+[node name="BG" type="NinePatchRect" parent="Control"]
+self_modulate = Color( 0.992157, 1, 0, 0.27451 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_right = 198.0
+texture = ExtResource( 2 )
+patch_margin_left = 56
+patch_margin_right = 53
+
+[node name="Label" type="Label" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 43.0
+margin_top = -1.0
+margin_right = -134.0
+margin_bottom = -6.0
+rect_min_size = Vector2( 150, 60 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+custom_fonts/font = ExtResource( 3 )
+text = "即将送达"
+align = 2
+valign = 1
+autowrap = true
+script = ExtResource( 1 )
+LabelTEXT = "信息-预估用时"
+
+[node name="TimeLabel" type="Label" parent="Control"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -125.0
+margin_top = -33.5
+margin_right = -75.0001
+margin_bottom = 31.5
+rect_min_size = Vector2( 50, 65 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+custom_fonts/font = ExtResource( 3 )
+text = "50"
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="Sprite" type="Sprite" parent="Control"]
+
+[node name="IconNode" parent="Control" instance=ExtResource( 4 )]
+position = Vector2( 358, 31 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

@@ -1,0 +1,360 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_Menu.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_lable.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_Goods_info.tres" type="Texture" id=4]
+[ext_resource path="res://TscnAndGd/UI/Buttons/button_base.gd" type="Script" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_RB.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_LB.tres" type="Texture" id=7]
+
+[sub_resource type="StyleBoxTexture" id=69]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 67, 56 )
+
+[sub_resource type="StyleBoxTexture" id=21]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 40, 30 )
+modulate_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+
+[sub_resource type="StyleBoxTexture" id=22]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 40, 30 )
+
+[sub_resource type="StyleBoxEmpty" id=23]
+
+[sub_resource type="StyleBoxTexture" id=24]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 40, 30 )
+modulate_color = Color( 0.588235, 0.588235, 0.588235, 1 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 40, 30 )
+modulate_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 40, 30 )
+
+[sub_resource type="StyleBoxEmpty" id=25]
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 40, 30 )
+modulate_color = Color( 0.588235, 0.588235, 0.588235, 1 )
+
+[sub_resource type="StyleBoxTexture" id=70]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 56, 70 )
+
+[sub_resource type="ButtonGroup" id=71]
+
+[sub_resource type="Animation" id=72]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Card:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -500, -342 ) ]
+}
+
+[sub_resource type="Animation" id=73]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Card:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -500, -342 ), Vector2( 55, -342 ) ]
+}
+
+[node name="PlayerInfo" type="Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+
+[node name="Button" type="Button" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -5.0
+margin_top = -335.0
+margin_right = 62.0
+margin_bottom = -279.0
+rect_min_size = Vector2( 67, 56 )
+custom_styles/normal = SubResource( 69 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Card" type="NinePatchRect" parent="."]
+margin_left = 55.0
+margin_top = -342.0
+margin_right = 505.0
+margin_bottom = 358.0
+rect_min_size = Vector2( 450, 700 )
+texture = ExtResource( 1 )
+patch_margin_left = 60
+patch_margin_top = 60
+patch_margin_right = 60
+patch_margin_bottom = 60
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Card"]
+anchor_right = 1.0
+margin_bottom = 101.0
+text = "熊熊"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Info" type="Label" parent="Card"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.0
+margin_right = -33.0
+text = "天天坐办公室，想开家奶茶店。"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="money" type="Label" parent="Card"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 103.0
+text = "333333"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="movespeed" type="Label" parent="Card"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 166.0
+text = "231"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Skills" type="VBoxContainer" parent="Card"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 49.0
+margin_top = 474.0
+margin_right = -45.0
+margin_bottom = -26.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="0" type="Label" parent="Card/Skills"]
+margin_right = 356.0
+margin_bottom = 21.0
+align = 1
+valign = 1
+
+[node name="1" type="Label" parent="Card/Skills"]
+margin_top = 25.0
+margin_right = 356.0
+margin_bottom = 46.0
+align = 1
+valign = 1
+
+[node name="2" type="Label" parent="Card/Skills"]
+margin_top = 50.0
+margin_right = 356.0
+margin_bottom = 71.0
+align = 1
+valign = 1
+
+[node name="Control" type="Control" parent="Card"]
+show_behind_parent = true
+margin_left = -10.0
+margin_top = -71.0
+margin_right = 461.0
+margin_bottom = 6.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="L" type="Button" parent="Card/Control"]
+margin_left = 20.0
+margin_top = 45.0
+margin_right = 60.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 40, 30 )
+rect_pivot_offset = Vector2( 20, 15 )
+custom_styles/hover = SubResource( 21 )
+custom_styles/pressed = SubResource( 22 )
+custom_styles/focus = SubResource( 23 )
+custom_styles/normal = SubResource( 24 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="R" type="Button" parent="Card/Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -60.0
+margin_top = 45.0
+margin_right = -20.0
+margin_bottom = 76.0
+rect_min_size = Vector2( 40, 30 )
+rect_pivot_offset = Vector2( 20, 15 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/focus = SubResource( 25 )
+custom_styles/normal = SubResource( 11 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Card/Control"]
+margin_left = 63.0
+margin_top = 22.0
+margin_right = 409.0
+margin_bottom = 92.0
+custom_constants/separation = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="Button" parent="Card/Control/HBoxContainer"]
+margin_right = 56.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 56, 70 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/pressed = SubResource( 70 )
+custom_styles/normal = SubResource( 70 )
+toggle_mode = true
+pressed = true
+group = SubResource( 71 )
+expand_icon = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "sell_1"
+}
+
+[node name="2" type="Button" parent="Card/Control/HBoxContainer"]
+margin_left = 58.0
+margin_right = 114.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 56, 70 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/pressed = SubResource( 70 )
+custom_styles/normal = SubResource( 70 )
+toggle_mode = true
+pressed = true
+group = SubResource( 71 )
+expand_icon = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "sell_1"
+}
+
+[node name="3" type="Button" parent="Card/Control/HBoxContainer"]
+margin_left = 116.0
+margin_right = 172.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 56, 70 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/pressed = SubResource( 70 )
+custom_styles/normal = SubResource( 70 )
+toggle_mode = true
+pressed = true
+group = SubResource( 71 )
+expand_icon = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "sell_1"
+}
+
+[node name="4" type="Button" parent="Card/Control/HBoxContainer"]
+margin_left = 174.0
+margin_right = 230.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 56, 70 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/pressed = SubResource( 70 )
+custom_styles/normal = SubResource( 70 )
+toggle_mode = true
+pressed = true
+group = SubResource( 71 )
+expand_icon = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "sell_1"
+}
+
+[node name="5" type="Button" parent="Card/Control/HBoxContainer"]
+margin_left = 232.0
+margin_right = 288.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 56, 70 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/pressed = SubResource( 70 )
+custom_styles/normal = SubResource( 70 )
+toggle_mode = true
+pressed = true
+group = SubResource( 71 )
+expand_icon = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "sell_1"
+}
+
+[node name="6" type="Button" parent="Card/Control/HBoxContainer"]
+margin_left = 290.0
+margin_right = 346.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 56, 70 )
+custom_styles/hover = SubResource( 70 )
+custom_styles/pressed = SubResource( 70 )
+custom_styles/normal = SubResource( 70 )
+toggle_mode = true
+pressed = true
+group = SubResource( 71 )
+expand_icon = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "sell_1"
+}
+
+[node name="AniNode" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AniNode"]
+autoplay = "init"
+anims/init = SubResource( 72 )
+anims/show = SubResource( 73 )

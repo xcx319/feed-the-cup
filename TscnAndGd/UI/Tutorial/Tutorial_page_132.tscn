@@ -1,0 +1,255 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_bottle_milk.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_bottle_kiwi.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_3.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_4.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_4.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_2.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_top.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_1.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_4.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_particle_0.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_frame_line.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_cuptip_1.tres" type="Texture" id=14]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=15]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_number_2.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_water_icecube.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_mix_12.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_ice_3.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_port_water_full.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_Break_mixcup.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_Break_stick.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_Break_base_s.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_Break_mixcup_back.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_Break_top.tres" type="Texture" id=27]
+
+[node name="破壁机2" type="Node2D"]
+position = Vector2( 921, 441 )
+
+[node name="202" type="RichTextLabel" parent="."]
+margin_left = -317.0
+margin_top = 188.0
+margin_right = 443.0
+margin_bottom = 398.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "注意沙冰和其他液体的加入顺序。
+如果沙冰在饮品最上层，你需要先用杯子接取沙冰原料进行破壁，然后使用空杯加入下方配料，再倒出破壁机里的沙冰。"
+text = "注意沙冰和其他液体的加入顺序。
+如果沙冰在饮品最上层，你需要先用杯子接取沙冰原料进行破壁，然后使用空杯加入下方配料，再倒出破壁机里的沙冰。"
+script = ExtResource( 15 )
+LabelTEXT = "信息-文字说明-202"
+Center_Bool = true
+
+[node name="要求" type="Node2D" parent="."]
+position = Vector2( 71, -156 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="要求"]
+margin_left = -136.0
+margin_top = -93.0
+margin_right = 150.0
+margin_bottom = 104.0
+texture = ExtResource( 14 )
+patch_margin_left = 15
+patch_margin_top = 12
+patch_margin_right = 20
+patch_margin_bottom = 25
+
+[node name="line" type="Sprite" parent="要求/NinePatchRect"]
+position = Vector2( 111, 90 )
+scale = Vector2( 1, 0.902857 )
+texture = ExtResource( 13 )
+
+[node name="IconLiquidBottleOrange" type="Sprite" parent="要求/NinePatchRect"]
+position = Vector2( 198, 62 )
+texture = ExtResource( 1 )
+
+[node name="IconLiquidNumber2" type="Sprite" parent="要求/NinePatchRect/IconLiquidBottleOrange"]
+position = Vector2( 0, 37 )
+texture = ExtResource( 16 )
+
+[node name="IconLiquidBottleOrange2" type="Sprite" parent="要求/NinePatchRect"]
+position = Vector2( 146, 62 )
+texture = ExtResource( 3 )
+
+[node name="IconLiquidNumber2" type="Sprite" parent="要求/NinePatchRect"]
+position = Vector2( 244, 62 )
+texture = ExtResource( 17 )
+
+[node name="IconLiquidMix11" type="Sprite" parent="要求/NinePatchRect"]
+position = Vector2( 194, 118 )
+texture = ExtResource( 19 )
+
+[node name="Cup2" type="Node2D" parent="要求"]
+position = Vector2( -96, 8 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="要求/Cup2"]
+texture = ExtResource( 7 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="要求/Cup2"]
+self_modulate = Color( 0.317647, 0.772549, 0.407843, 0.909804 )
+texture = ExtResource( 10 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="要求/Cup2"]
+self_modulate = Color( 1, 0.988235, 0.941176, 1 )
+texture = ExtResource( 8 )
+
+[node name="UiProcupWaterlayer3" type="Sprite" parent="要求/Cup2"]
+self_modulate = Color( 1, 0.988235, 0.941176, 1 )
+texture = ExtResource( 5 )
+
+[node name="UiProcupWaterlayer4" type="Sprite" parent="要求/Cup2"]
+self_modulate = Color( 1, 0.988235, 0.941176, 1 )
+texture = ExtResource( 11 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="要求/Cup2"]
+self_modulate = Color( 1, 0.988235, 0.941176, 1 )
+position = Vector2( 1, -23 )
+texture = ExtResource( 9 )
+
+[node name="UiProcupCup2" type="Sprite" parent="要求/Cup2"]
+texture = ExtResource( 6 )
+
+[node name="UiIconStateCold" type="Sprite" parent="要求"]
+position = Vector2( -45, -62 )
+texture = ExtResource( 12 )
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2( -22, 45 )
+
+[node name="Cup3" type="Node2D" parent="1"]
+position = Vector2( -132, -39 )
+rotation = 0.523598
+scale = Vector2( 0.8, 0.8 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="1/Cup3"]
+texture = ExtResource( 7 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="1/Cup3"]
+self_modulate = Color( 1, 0.996078, 0.858824, 0.909804 )
+texture = ExtResource( 10 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="1/Cup3"]
+self_modulate = Color( 1, 0.996078, 0.858824, 0.909804 )
+texture = ExtResource( 8 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="1/Cup3"]
+self_modulate = Color( 1, 0.996078, 0.858824, 0.909804 )
+position = Vector2( 1.82324, 7.6077 )
+scale = Vector2( 0.886793, 1 )
+texture = ExtResource( 9 )
+
+[node name="UiProcupCup2" type="Sprite" parent="1/Cup3"]
+texture = ExtResource( 6 )
+
+[node name="ItemIce3" type="Sprite" parent="1/Cup3"]
+position = Vector2( -0.122559, 7.28766 )
+texture = ExtResource( 20 )
+
+[node name="TotuInfo6" type="Sprite" parent="1"]
+position = Vector2( -75, -24 )
+rotation = -0.261799
+texture = ExtResource( 22 )
+
+[node name="Break" type="Node2D" parent="1"]
+position = Vector2( -39, 23 )
+
+[node name="base" type="Sprite" parent="1/Break"]
+position = Vector2( 2, 64 )
+texture = ExtResource( 25 )
+
+[node name="Cup" type="Node2D" parent="1/Break"]
+use_parent_material = true
+
+[node name="Back" type="Sprite" parent="1/Break/Cup"]
+texture = ExtResource( 26 )
+
+[node name="Water" type="Sprite" parent="1/Break/Cup"]
+visible = false
+position = Vector2( 0, 20 )
+scale = Vector2( 1.2, 0.3 )
+texture = ExtResource( 21 )
+offset = Vector2( 0, -27 )
+
+[node name="Top" type="Sprite" parent="1/Break/Cup"]
+position = Vector2( 41, -25 )
+rotation = 0.785397
+texture = ExtResource( 27 )
+offset = Vector2( -24, 1 )
+
+[node name="DeviceBreakStick" type="Sprite" parent="1/Break/Cup/Top"]
+show_behind_parent = true
+position = Vector2( -23, -9 )
+texture = ExtResource( 24 )
+offset = Vector2( 0, 10 )
+
+[node name="front" type="Sprite" parent="1/Break/Cup"]
+texture = ExtResource( 23 )
+
+[node name="2" type="Node2D" parent="."]
+position = Vector2( 427, 6 )
+
+[node name="Cup4" type="Node2D" parent="2"]
+position = Vector2( -292, 99 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="2/Cup4"]
+texture = ExtResource( 7 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="2/Cup4"]
+self_modulate = Color( 0.254902, 0.709804, 0.101961, 0.909804 )
+texture = ExtResource( 10 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="2/Cup4"]
+self_modulate = Color( 0.254902, 0.709804, 0.101961, 0.909804 )
+position = Vector2( 1.25, 23.75 )
+scale = Vector2( 0.886793, 1 )
+texture = ExtResource( 9 )
+
+[node name="UiProcupCup2" type="Sprite" parent="2/Cup4"]
+texture = ExtResource( 6 )
+
+[node name="TotuInfo6" type="Sprite" parent="2"]
+position = Vector2( -272, 39 )
+rotation = -6.02138
+scale = Vector2( -1, 1 )
+texture = ExtResource( 22 )
+
+[node name="Break" type="Node2D" parent="2"]
+position = Vector2( -187.226, 60.2385 )
+
+[node name="base" type="Sprite" parent="2/Break"]
+position = Vector2( 2, 64 )
+texture = ExtResource( 25 )
+
+[node name="Cup" type="Node2D" parent="2/Break"]
+use_parent_material = true
+position = Vector2( -18.774, -29.2385 )
+rotation = -0.785397
+
+[node name="Back" type="Sprite" parent="2/Break/Cup"]
+texture = ExtResource( 26 )
+
+[node name="Water" type="Sprite" parent="2/Break/Cup"]
+self_modulate = Color( 0.976471, 0.964706, 0.776471, 0.780392 )
+position = Vector2( 0, 15.3664 )
+scale = Vector2( 1.2, 0.763358 )
+texture = ExtResource( 21 )
+offset = Vector2( 0, -27 )
+
+[node name="Top" type="Sprite" parent="2/Break/Cup"]
+position = Vector2( 41, -25 )
+rotation = 0.785397
+texture = ExtResource( 27 )
+offset = Vector2( -24, 1 )
+
+[node name="DeviceBreakStick" type="Sprite" parent="2/Break/Cup/Top"]
+show_behind_parent = true
+position = Vector2( -23, -9 )
+texture = ExtResource( 24 )
+offset = Vector2( 0, 10 )
+
+[node name="front" type="Sprite" parent="2/Break/Cup"]
+texture = ExtResource( 23 )

@@ -1,0 +1,232 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_water_all.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_bobamachine_ui_2.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_popsyrup_lime.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_popsyrup_blueorange.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_tips_3.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_cuptip_1.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_idle_1.tres" type="Texture" id=17]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=18]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_telephone_2.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_pop_cuprite.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_pop_bluelime.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_body_front.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_head_front.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_idle_0.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_tail_back.tres" type="Texture" id=27]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_hold_2.tres" type="Texture" id=28]
+
+[node name="复合配方" type="Node2D"]
+position = Vector2( 950, 264 )
+
+[node name="158" type="RichTextLabel" parent="."]
+margin_left = -338.0
+margin_top = -37.0
+margin_right = -75.0
+margin_bottom = 123.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "靠近电话桌，可以看到你现在需要的汽水的配方比例。"
+text = "靠近电话桌，可以看到你现在需要的汽水的配方比例。"
+script = ExtResource( 18 )
+LabelTEXT = "信息-文字说明-158"
+Center_Bool = true
+
+[node name="配方详细" type="Node2D" parent="."]
+position = Vector2( 208, 62 )
+
+[node name="Bear2" type="Node2D" parent="配方详细"]
+position = Vector2( -225, 37 )
+
+[node name="Leg_L" type="Node2D" parent="配方详细/Bear2"]
+position = Vector2( -7, -27 )
+
+[node name="L" type="Sprite" parent="配方详细/Bear2/Leg_L"]
+texture = ExtResource( 26 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="配方详细/Bear2"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="R" type="Sprite" parent="配方详细/Bear2/Leg_R"]
+texture = ExtResource( 26 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="配方详细/Bear2"]
+show_behind_parent = true
+position = Vector2( 0, -25 )
+rotation = -0.0441624
+scale = Vector2( 1.025, 1.015 )
+
+[node name="BodyPose" type="Node2D" parent="配方详细/Bear2/Body_note"]
+
+[node name="Body" type="Node2D" parent="配方详细/Bear2/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="配方详细/Bear2/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+texture = ExtResource( 23 )
+
+[node name="HeadPose" type="Node2D" parent="配方详细/Bear2/Body_note/BodyPose/Body"]
+position = Vector2( 0, -70 )
+
+[node name="Head" type="Node2D" parent="配方详细/Bear2/Body_note/BodyPose/Body/HeadPose"]
+rotation = 0.131937
+
+[node name="Down" type="Sprite" parent="配方详细/Bear2/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 25 )
+offset = Vector2( 0, -26 )
+
+[node name="Arm_Hold" type="Node2D" parent="配方详细/Bear2/Body_note/BodyPose"]
+position = Vector2( 22, -47 )
+
+[node name="Pose_Hold" type="Node2D" parent="配方详细/Bear2/Body_note/BodyPose/Arm_Hold"]
+
+[node name="Arm" type="Sprite" parent="配方详细/Bear2/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+scale = Vector2( -1, 1 )
+texture = ExtResource( 28 )
+offset = Vector2( -10, 3 )
+
+[node name="Weapon_note" type="Node2D" parent="配方详细/Bear2/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( -18, 38 )
+
+[node name="Arm" type="Node2D" parent="配方详细/Bear2/Body_note/BodyPose"]
+position = Vector2( -22.5052, -50.2367 )
+scale = Vector2( -1, 1 )
+
+[node name="Pose" type="Node2D" parent="配方详细/Bear2/Body_note/BodyPose/Arm"]
+rotation = -0.117282
+
+[node name="Arm" type="Sprite" parent="配方详细/Bear2/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 17 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="配方详细/Bear2/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 0, -15 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 27 )
+offset = Vector2( 20, -16 )
+
+[node name="DeviceTelephone2" type="Sprite" parent="配方详细"]
+position = Vector2( -151, -16 )
+texture = ExtResource( 20 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="配方详细"]
+self_modulate = Color( 1, 1, 1, 0.705882 )
+margin_left = -109.0
+margin_top = -125.0
+margin_right = 191.0
+margin_bottom = 54.0
+texture = ExtResource( 15 )
+patch_margin_left = 56
+patch_margin_top = 15
+patch_margin_right = 56
+patch_margin_bottom = 23
+
+[node name="53" type="VBoxContainer" parent="配方详细"]
+margin_left = -7.0
+margin_top = -61.0
+margin_right = -7.0
+margin_bottom = 139.0
+custom_constants/separation = 50
+
+[node name="柠汽" type="Control" parent="配方详细/53"]
+
+[node name="BG" type="NinePatchRect" parent="配方详细/53/柠汽"]
+self_modulate = Color( 0, 0, 0, 0.0941176 )
+show_behind_parent = true
+margin_left = -87.0
+margin_top = -56.0
+margin_right = 179.0
+margin_bottom = -5.0
+texture = ExtResource( 13 )
+patch_margin_left = 13
+patch_margin_top = 12
+patch_margin_right = 13
+patch_margin_bottom = 10
+
+[node name="IconPopCupsi" type="Sprite" parent="配方详细/53/柠汽"]
+position = Vector2( -59, -30 )
+texture = ExtResource( 21 )
+
+[node name="Label" type="Label" parent="配方详细/53/柠汽"]
+margin_left = 114.0
+margin_top = -43.0
+margin_right = 215.0
+margin_bottom = -18.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "(1:4)"
+
+[node name="Icon2" type="Sprite" parent="配方详细/53/柠汽"]
+position = Vector2( 8, -30 )
+texture = ExtResource( 10 )
+
+[node name="Icon3" type="Sprite" parent="配方详细/53/柠汽"]
+position = Vector2( 48, -30 )
+texture = ExtResource( 1 )
+
+[node name="DeviceBobamachineUi2" type="Sprite" parent="配方详细/53/柠汽"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -28, -33 )
+texture = ExtResource( 5 )
+
+[node name="DeviceBobamachineUi3" type="Sprite" parent="配方详细/53/柠汽"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -28, -26 )
+texture = ExtResource( 5 )
+
+[node name="青柠蓝柑" type="Control" parent="配方详细/53"]
+margin_top = 50.0
+margin_bottom = 50.0
+
+[node name="BG" type="NinePatchRect" parent="配方详细/53/青柠蓝柑"]
+self_modulate = Color( 0, 0, 0, 0.0941176 )
+show_behind_parent = true
+margin_left = -87.0
+margin_top = -56.0
+margin_right = 179.0
+margin_bottom = -5.0
+texture = ExtResource( 13 )
+patch_margin_left = 13
+patch_margin_top = 12
+patch_margin_right = 13
+patch_margin_bottom = 10
+
+[node name="IconPopCupsi" type="Sprite" parent="配方详细/53/青柠蓝柑"]
+position = Vector2( -59, -30 )
+texture = ExtResource( 22 )
+
+[node name="Label" type="Label" parent="配方详细/53/青柠蓝柑"]
+margin_left = 114.0
+margin_top = -43.0
+margin_right = 215.0
+margin_bottom = -18.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "(1:1:2)"
+
+[node name="Icon" type="Sprite" parent="配方详细/53/青柠蓝柑"]
+position = Vector2( 9, -30 )
+texture = ExtResource( 12 )
+
+[node name="Icon2" type="Sprite" parent="配方详细/53/青柠蓝柑"]
+position = Vector2( 50, -30 )
+texture = ExtResource( 10 )
+
+[node name="Icon3" type="Sprite" parent="配方详细/53/青柠蓝柑"]
+position = Vector2( 90, -30 )
+texture = ExtResource( 1 )
+
+[node name="DeviceBobamachineUi2" type="Sprite" parent="配方详细/53/青柠蓝柑"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -28, -33 )
+texture = ExtResource( 5 )
+
+[node name="DeviceBobamachineUi3" type="Sprite" parent="配方详细/53/青柠蓝柑"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -28, -26 )
+texture = ExtResource( 5 )

@@ -1,0 +1,455 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_fox_body_front.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_drop_1.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_fox_tail_back.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_front_1.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_fox_arm_idle_1.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_work_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_head_front.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_idle_0.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_tail_back.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_body_front.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_6.png" type="Texture" id=11]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_fox_head_side.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_fox_leg_idle_1.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_fox_body_side.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_fox_leg_idle_0.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_fox_head_front.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_pressure_1.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_pressure_2.tres" type="Texture" id=18]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=19]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_2.png" type="Texture" id=20]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_4.png" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_help.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_help.tres" type="Texture" id=24]
+
+[node name="救助" type="Node2D"]
+position = Vector2( 465, 18 )
+
+[node name="Save" type="Node2D" parent="."]
+position = Vector2( -37, 293 )
+
+[node name="circle" type="Node2D" parent="Save"]
+position = Vector2( -162, 130 )
+
+[node name="BG" type="Sprite" parent="Save/circle"]
+modulate = Color( 0.792157, 1, 0, 0.380392 )
+self_modulate = Color( 1, 1, 1, 0.784314 )
+position = Vector2( 1, 0 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 11 )
+
+[node name="BG2" type="Sprite" parent="Save/circle"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( -2, 0 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 20 )
+
+[node name="LineProgress" type="TextureProgress" parent="Save/circle"]
+margin_left = -20.0
+margin_top = -20.0
+margin_right = 20.0
+margin_bottom = 20.0
+rect_scale = Vector2( 5, 5 )
+rect_pivot_offset = Vector2( 20, 20 )
+max_value = 10000.0
+value = 4333.0
+texture_under = ExtResource( 21 )
+texture_over = ExtResource( 21 )
+texture_progress = ExtResource( 21 )
+fill_mode = 4
+tint_under = Color( 1, 0.588235, 0.227451, 1 )
+tint_over = Color( 1, 0.996078, 0, 0 )
+tint_progress = Color( 0, 1, 0, 1 )
+nine_patch_stretch = true
+
+[node name="B1" type="Node2D" parent="Save"]
+position = Vector2( -161, 130 )
+
+[node name="Top_note" type="Node2D" parent="Save/B1"]
+light_mask = 0
+
+[node name="All_note" type="Node2D" parent="Save/B1/Top_note"]
+position = Vector2( 0, 20 )
+
+[node name="Leg_L" type="Node2D" parent="Save/B1/Top_note/All_note"]
+position = Vector2( -7, -27 )
+
+[node name="L" type="Sprite" parent="Save/B1/Top_note/All_note/Leg_L"]
+texture = ExtResource( 4 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="Save/B1/Top_note/All_note"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="R" type="Sprite" parent="Save/B1/Top_note/All_note/Leg_R"]
+texture = ExtResource( 4 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="Save/B1/Top_note/All_note"]
+show_behind_parent = true
+position = Vector2( 0, -25 )
+rotation = -0.0249258
+
+[node name="Body" type="Node2D" parent="Save/B1/Top_note/All_note/Body_note"]
+
+[node name="Body" type="Node2D" parent="Save/B1/Top_note/All_note/Body_note/Body"]
+position = Vector2( 0, -30 )
+
+[node name="BodyBase" type="Sprite" parent="Save/B1/Top_note/All_note/Body_note/Body/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+texture = ExtResource( 10 )
+
+[node name="Head" type="Node2D" parent="Save/B1/Top_note/All_note/Body_note/Body"]
+position = Vector2( 0, -66 )
+
+[node name="Down" type="Sprite" parent="Save/B1/Top_note/All_note/Body_note/Body/Head"]
+modulate = Color( 0.835294, 0.419608, 0.419608, 1 )
+texture = ExtResource( 7 )
+offset = Vector2( -3, -26 )
+
+[node name="Arm_Hold" type="Node2D" parent="Save/B1/Top_note/All_note/Body_note"]
+position = Vector2( 22, -47 )
+rotation = -0.843186
+
+[node name="Arm" type="Sprite" parent="Save/B1/Top_note/All_note/Body_note/Arm_Hold"]
+scale = Vector2( -1, 1 )
+texture = ExtResource( 6 )
+offset = Vector2( -10, 3 )
+
+[node name="Arm" type="Node2D" parent="Save/B1/Top_note/All_note/Body_note"]
+position = Vector2( -22, -47 )
+rotation = 0.804548
+scale = Vector2( -1, 1 )
+
+[node name="Arm" type="Sprite" parent="Save/B1/Top_note/All_note/Body_note/Arm"]
+scale = Vector2( -1, 1 )
+texture = ExtResource( 6 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="Save/B1/Top_note/All_note/Body_note"]
+show_behind_parent = true
+position = Vector2( 0, -15 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 9 )
+offset = Vector2( 20, -16 )
+
+[node name="EffectDrop1" type="Sprite" parent="Save/B1"]
+position = Vector2( -7, -99 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 2 )
+
+[node name="F1" type="Node2D" parent="Save"]
+light_mask = 0
+position = Vector2( -85, 166 )
+
+[node name="All_note" type="Node2D" parent="Save/F1"]
+
+[node name="Leg_L" type="Node2D" parent="Save/F1/All_note"]
+show_behind_parent = true
+position = Vector2( -7, -32 )
+
+[node name="L" type="Sprite" parent="Save/F1/All_note/Leg_L"]
+texture = ExtResource( 13 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="Save/F1/All_note"]
+position = Vector2( 7, -27 )
+
+[node name="R" type="Sprite" parent="Save/F1/All_note/Leg_R"]
+texture = ExtResource( 15 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="Save/F1/All_note"]
+show_behind_parent = true
+position = Vector2( 0, -25 )
+
+[node name="BodyPose" type="Node2D" parent="Save/F1/All_note/Body_note"]
+
+[node name="Body" type="Node2D" parent="Save/F1/All_note/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="Save/F1/All_note/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+texture = ExtResource( 14 )
+
+[node name="HeadPose" type="Node2D" parent="Save/F1/All_note/Body_note/BodyPose/Body"]
+position = Vector2( 0, -63 )
+
+[node name="Head" type="Node2D" parent="Save/F1/All_note/Body_note/BodyPose/Body/HeadPose"]
+
+[node name="Left" type="Sprite" parent="Save/F1/All_note/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 12 )
+offset = Vector2( 0, -26 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Save/F1/All_note/Body_note/BodyPose/Body/HeadPose/Head/Left"]
+margin_left = -47.0
+margin_top = -20.0
+margin_right = 52.0
+margin_bottom = 59.0
+
+[node name="R" type="Control" parent="Save/F1/All_note/Body_note/BodyPose/Body/HeadPose/Head/Left/ScrollContainer"]
+
+[node name="Down3" type="Sprite" parent="Save/F1/All_note/Body_note/BodyPose/Body/HeadPose/Head/Left/ScrollContainer/R"]
+modulate = Color( 0.964706, 0.482353, 0.482353, 1 )
+position = Vector2( 49, 20 )
+texture = ExtResource( 12 )
+offset = Vector2( -3, -26 )
+
+[node name="Arm_Hold" type="Node2D" parent="Save/F1/All_note/Body_note/BodyPose"]
+position = Vector2( 0, -44 )
+
+[node name="Pose_Hold" type="Node2D" parent="Save/F1/All_note/Body_note/BodyPose/Arm_Hold"]
+
+[node name="Arm" type="Sprite" parent="Save/F1/All_note/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 1, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 5 )
+offset = Vector2( -10, 3 )
+
+[node name="Arm" type="Node2D" parent="Save/F1/All_note/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( -10, -50 )
+scale = Vector2( -1, 1 )
+
+[node name="Pose" type="Node2D" parent="Save/F1/All_note/Body_note/BodyPose/Arm"]
+
+[node name="Arm" type="Sprite" parent="Save/F1/All_note/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 5 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="Save/F1/All_note/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 28, -15 )
+texture = ExtResource( 3 )
+offset = Vector2( 20, -16 )
+
+[node name="B2" type="Node2D" parent="Save"]
+position = Vector2( 143, 176 )
+
+[node name="Leg_L" type="Node2D" parent="Save/B2"]
+position = Vector2( -7, -27 )
+
+[node name="L" type="Sprite" parent="Save/B2/Leg_L"]
+texture = ExtResource( 8 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="Save/B2"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="R" type="Sprite" parent="Save/B2/Leg_R"]
+texture = ExtResource( 8 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="Save/B2"]
+show_behind_parent = true
+position = Vector2( 0, -25 )
+
+[node name="BodyPose" type="Node2D" parent="Save/B2/Body_note"]
+
+[node name="Body" type="Node2D" parent="Save/B2/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="Save/B2/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+texture = ExtResource( 10 )
+
+[node name="HeadPose" type="Node2D" parent="Save/B2/Body_note/BodyPose/Body"]
+position = Vector2( 0, -70 )
+
+[node name="Head" type="Node2D" parent="Save/B2/Body_note/BodyPose/Body/HeadPose"]
+rotation = 0.131937
+
+[node name="Down" type="Sprite" parent="Save/B2/Body_note/BodyPose/Body/HeadPose/Head"]
+position = Vector2( 524.408, 195.506 )
+texture = ExtResource( 7 )
+offset = Vector2( -524.408, -221.506 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Save/B2/Body_note/BodyPose/Body/HeadPose/Head/Down"]
+margin_left = -570.859
+margin_top = -234.973
+margin_right = -471.859
+margin_bottom = -155.973
+
+[node name="R" type="Control" parent="Save/B2/Body_note/BodyPose/Body/HeadPose/Head/Down/ScrollContainer"]
+
+[node name="Down3" type="Sprite" parent="Save/B2/Body_note/BodyPose/Body/HeadPose/Head/Down/ScrollContainer/R"]
+modulate = Color( 0.964706, 0.482353, 0.482353, 1 )
+position = Vector2( 49, 40 )
+texture = ExtResource( 7 )
+offset = Vector2( -3, -26 )
+
+[node name="Arm_Hold" type="Node2D" parent="Save/B2/Body_note/BodyPose"]
+position = Vector2( 22, -47 )
+
+[node name="Pose_Hold" type="Node2D" parent="Save/B2/Body_note/BodyPose/Arm_Hold"]
+rotation = -0.0846485
+
+[node name="Arm" type="Sprite" parent="Save/B2/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+scale = Vector2( -1, 1 )
+texture = ExtResource( 6 )
+offset = Vector2( -10, 3 )
+
+[node name="Weapon_note" type="Node2D" parent="Save/B2/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 42.9619, -0.720909 )
+
+[node name="Arm" type="Node2D" parent="Save/B2/Body_note/BodyPose"]
+position = Vector2( -17.4761, -50.0093 )
+rotation = -0.315317
+scale = Vector2( -1, 1 )
+
+[node name="Pose" type="Node2D" parent="Save/B2/Body_note/BodyPose/Arm"]
+rotation = -0.117282
+
+[node name="Arm" type="Sprite" parent="Save/B2/Body_note/BodyPose/Arm/Pose"]
+rotation = 2.87979
+scale = Vector2( 1, -1 )
+texture = ExtResource( 6 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="Save/B2/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 0, -15 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 9 )
+offset = Vector2( 20, -16 )
+
+[node name="F2" type="Node2D" parent="Save"]
+light_mask = 0
+position = Vector2( 258, 174 )
+
+[node name="All_note" type="Node2D" parent="Save/F2"]
+
+[node name="Leg_L" type="Node2D" parent="Save/F2/All_note"]
+position = Vector2( -7, -27 )
+
+[node name="L" type="Sprite" parent="Save/F2/All_note/Leg_L"]
+texture = ExtResource( 13 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="Save/F2/All_note"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="R" type="Sprite" parent="Save/F2/All_note/Leg_R"]
+texture = ExtResource( 15 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="Save/F2/All_note"]
+position = Vector2( 0, -25 )
+
+[node name="BodyPose" type="Node2D" parent="Save/F2/All_note/Body_note"]
+scale = Vector2( 1.065, 1.0325 )
+
+[node name="Body" type="Node2D" parent="Save/F2/All_note/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="Save/F2/All_note/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+texture = ExtResource( 1 )
+
+[node name="HeadPose" type="Node2D" parent="Save/F2/All_note/Body_note/BodyPose/Body"]
+position = Vector2( 0, -63 )
+
+[node name="Head" type="Node2D" parent="Save/F2/All_note/Body_note/BodyPose/Body/HeadPose"]
+
+[node name="Down" type="Sprite" parent="Save/F2/All_note/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 16 )
+offset = Vector2( 0, -26 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Save/F2/All_note/Body_note/BodyPose/Body/HeadPose/Head/Down"]
+margin_left = -46.0094
+margin_top = -49.3487
+margin_right = 52.9906
+margin_bottom = 29.6513
+
+[node name="R" type="Control" parent="Save/F2/All_note/Body_note/BodyPose/Body/HeadPose/Head/Down/ScrollContainer"]
+
+[node name="Down3" type="Sprite" parent="Save/F2/All_note/Body_note/BodyPose/Body/HeadPose/Head/Down/ScrollContainer/R"]
+modulate = Color( 0.964706, 0.482353, 0.482353, 1 )
+position = Vector2( 49, 49.276 )
+texture = ExtResource( 16 )
+offset = Vector2( -3, -26 )
+
+[node name="Arm_Hold" type="Node2D" parent="Save/F2/All_note/Body_note/BodyPose"]
+position = Vector2( 18, -47 )
+
+[node name="Pose_Hold" type="Node2D" parent="Save/F2/All_note/Body_note/BodyPose/Arm_Hold"]
+rotation = -0.101569
+
+[node name="Arm" type="Sprite" parent="Save/F2/All_note/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 1, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 5 )
+offset = Vector2( -10, 3 )
+
+[node name="Arm" type="Node2D" parent="Save/F2/All_note/Body_note/BodyPose"]
+position = Vector2( -18, -47 )
+scale = Vector2( -1, 1 )
+
+[node name="Pose" type="Node2D" parent="Save/F2/All_note/Body_note/BodyPose/Arm"]
+rotation = -0.14833
+
+[node name="Arm" type="Sprite" parent="Save/F2/All_note/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 5 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="Save/F2/All_note/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 0, -15 )
+rotation = -0.0955204
+scale = Vector2( -1, 1 )
+texture = ExtResource( 3 )
+offset = Vector2( 20, -16 )
+
+[node name="UiIconPressure5" type="Sprite" parent="Save"]
+position = Vector2( 133, -1 )
+texture = ExtResource( 17 )
+
+[node name="UiIconPressure6" type="Sprite" parent="Save/UiIconPressure5"]
+modulate = Color( 0.380392, 1, 0.282353, 1 )
+position = Vector2( 31, 0 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 18 )
+
+[node name="UiIconPressure6" type="Sprite" parent="Save"]
+position = Vector2( 250, -3 )
+texture = ExtResource( 17 )
+
+[node name="UiIconPressure6" type="Sprite" parent="Save/UiIconPressure6"]
+modulate = Color( 1, 0.282353, 0.282353, 1 )
+position = Vector2( 31, 0 )
+texture = ExtResource( 18 )
+
+[node name="TotuInfo1" type="Sprite" parent="Save"]
+position = Vector2( 201, -26 )
+rotation = -0.523598
+texture = ExtResource( 22 )
+
+[node name="UiPoptipIdeaHelp" type="Sprite" parent="Save"]
+position = Vector2( -167, -22 )
+texture = ExtResource( 23 )
+
+[node name="UiPoptipHelp" type="Sprite" parent="Save/UiPoptipIdeaHelp"]
+texture = ExtResource( 24 )
+
+[node name="98" type="RichTextLabel" parent="."]
+margin_left = -357.0
+margin_top = 514.0
+margin_right = 338.0
+margin_bottom = 663.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "多人游玩时，可以站在爆压的队友身边救助队友，成功后将平摊两人的{术语_压力}。"
+text = "多人游玩时，可以站在爆压的队友身边救助队友，成功后将平摊两人的{术语_压力}。"
+script = ExtResource( 19 )
+LabelTEXT = "信息-文字说明-98"
+Center_Bool = true

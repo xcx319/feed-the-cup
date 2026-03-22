@@ -1,0 +1,217 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_water_all.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_popsyrup_mint.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_popsyrup_cola.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_frame_line.tres" type="Texture" id=13]
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=14]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_pop_mintcola_1.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_pop_mintcola_2.tres" type="Texture" id=18]
+
+[node name="配比多样化" type="Node2D"]
+position = Vector2( 1054, 821 )
+
+[node name="Cap1" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2( -148, -174 )
+
+[node name="UI" type="Node2D" parent="Cap1"]
+position = Vector2( -1, -105 )
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Cap1/UI"]
+margin_left = -61.0
+margin_top = -117.0
+margin_right = 61.0
+margin_bottom = -77.0
+custom_constants/separation = 0
+alignment = 1
+
+[node name="1" type="Label" parent="Cap1/UI/VBoxContainer"]
+margin_left = 1.0
+margin_right = 41.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+custom_fonts/font = ExtResource( 14 )
+text = "10"
+align = 1
+valign = 1
+
+[node name="Icon" type="Sprite" parent="Cap1/UI/VBoxContainer/1"]
+position = Vector2( 20, -12 )
+texture = ExtResource( 12 )
+
+[node name="2" type="Label" parent="Cap1/UI/VBoxContainer"]
+margin_left = 41.0
+margin_right = 81.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+custom_fonts/font = ExtResource( 14 )
+text = "5"
+align = 1
+valign = 1
+
+[node name="Icon" type="Sprite" parent="Cap1/UI/VBoxContainer/2"]
+position = Vector2( 20, -12 )
+texture = ExtResource( 9 )
+
+[node name="3" type="Label" parent="Cap1/UI/VBoxContainer"]
+modulate = Color( 1, 1, 1, 0.45098 )
+margin_left = 81.0
+margin_right = 121.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+custom_fonts/font = ExtResource( 14 )
+text = "25"
+align = 1
+valign = 1
+
+[node name="Icon" type="Sprite" parent="Cap1/UI/VBoxContainer/3"]
+position = Vector2( 20, -12 )
+texture = ExtResource( 2 )
+
+[node name="FinishView" type="Node2D" parent="Cap1/UI"]
+position = Vector2( 180, -136 )
+
+[node name="Icon" type="Sprite" parent="Cap1/UI/FinishView"]
+position = Vector2( 0, 3 )
+texture = ExtResource( 16 )
+
+[node name="LiquidLabel" type="Label" parent="Cap1/UI/FinishView/Icon"]
+margin_left = -39.0
+margin_top = 14.0
+margin_right = 41.0
+margin_bottom = 54.0
+custom_fonts/font = ExtResource( 14 )
+text = "40"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="Cap1"]
+margin_left = -201.0
+margin_top = -242.0
+margin_right = -100.0
+margin_bottom = -217.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "(2:1:5)"
+
+[node name="IconPopCupsi" type="Sprite" parent="Cap1/Label"]
+position = Vector2( -21.1115, 13.333 )
+texture = ExtResource( 16 )
+
+[node name="TotuInfo2" type="Sprite" parent="Cap1"]
+position = Vector2( 113, -224 )
+texture = ExtResource( 4 )
+
+[node name="Cap2" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2( -146, -62 )
+
+[node name="UI" type="Node2D" parent="Cap2"]
+position = Vector2( -1, -105 )
+
+[node name="VBoxContainer" type="HBoxContainer" parent="Cap2/UI"]
+margin_left = -61.0
+margin_top = -117.0
+margin_right = 61.0
+margin_bottom = -77.0
+custom_constants/separation = 0
+alignment = 1
+
+[node name="1" type="Label" parent="Cap2/UI/VBoxContainer"]
+margin_left = 1.0
+margin_right = 41.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+custom_fonts/font = ExtResource( 14 )
+text = "5"
+align = 1
+valign = 1
+
+[node name="Icon" type="Sprite" parent="Cap2/UI/VBoxContainer/1"]
+position = Vector2( 20, -12 )
+texture = ExtResource( 12 )
+
+[node name="2" type="Label" parent="Cap2/UI/VBoxContainer"]
+margin_left = 41.0
+margin_right = 81.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+custom_fonts/font = ExtResource( 14 )
+text = "10"
+align = 1
+valign = 1
+
+[node name="Icon" type="Sprite" parent="Cap2/UI/VBoxContainer/2"]
+position = Vector2( 20, -12 )
+texture = ExtResource( 9 )
+
+[node name="3" type="Label" parent="Cap2/UI/VBoxContainer"]
+modulate = Color( 1, 1, 1, 0.45098 )
+margin_left = 81.0
+margin_right = 121.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+custom_fonts/font = ExtResource( 14 )
+text = "15"
+align = 1
+valign = 1
+
+[node name="Icon" type="Sprite" parent="Cap2/UI/VBoxContainer/3"]
+position = Vector2( 20, -12 )
+texture = ExtResource( 2 )
+
+[node name="FinishView" type="Node2D" parent="Cap2/UI"]
+position = Vector2( 179, -137 )
+
+[node name="Icon" type="Sprite" parent="Cap2/UI/FinishView"]
+position = Vector2( 0, 3 )
+texture = ExtResource( 18 )
+
+[node name="LiquidLabel" type="Label" parent="Cap2/UI/FinishView/Icon"]
+margin_left = -40.0
+margin_top = 16.0
+margin_right = 40.0
+margin_bottom = 56.0
+custom_fonts/font = ExtResource( 14 )
+text = "30"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="Cap2"]
+margin_left = -200.0
+margin_top = -232.0
+margin_right = -99.0
+margin_bottom = -207.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "(1:2:3)"
+
+[node name="IconPopCupsi" type="Sprite" parent="Cap2/Label"]
+position = Vector2( -21.1115, 13.333 )
+texture = ExtResource( 18 )
+
+[node name="TotuInfo2" type="Sprite" parent="Cap2"]
+position = Vector2( 113, -224 )
+texture = ExtResource( 4 )
+
+[node name="163" type="RichTextLabel" parent="."]
+margin_left = -445.0
+margin_top = -226.0
+margin_right = 280.0
+margin_bottom = -20.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "复合配方的比例要看清楚，不同的比例做出的汽水完全不同。
+糖浆和水的总量不可以超过水缸容量，否则无法做出正确的汽水。"
+text = "复合配方的比例要看清楚，不同的比例做出的汽水完全不同。
+糖浆和水的总量不可以超过水缸容量，否则无法做出正确的汽水。"
+script = ExtResource( 1 )
+LabelTEXT = "信息-文字说明-163"
+Center_Bool = true
+
+[node name="UiFrameLine" type="Sprite" parent="."]
+position = Vector2( -162, -339 )
+rotation = 1.5708
+scale = Vector2( 0.75, 3 )
+texture = ExtResource( 13 )

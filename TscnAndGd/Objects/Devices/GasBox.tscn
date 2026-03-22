@@ -1,0 +1,175 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/InGame/IconNode.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_box_CO2_mid.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_box_CO2_front.tres" type="Texture" id=4]
+[ext_resource path="res://TscnAndGd/Objects/Devices/GasBox.gd" type="Script" id=5]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_box_CO2_base.tres" type="Texture" id=6]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=9]
+
+[sub_resource type="Shader" id=14]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=177]
+resource_local_to_scene = true
+shader = SubResource( 14 )
+shader_param/aura_width = 0.0
+shader_param/aura_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 48, 36 )
+
+[node name="GasBox" type="Area2D"]
+use_parent_material = true
+collision_layer = 384
+collision_mask = 3584
+script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": "FreezerOnTable"
+}
+
+[node name="TexNode" type="Node2D" parent="."]
+pause_mode = 2
+material = SubResource( 177 )
+position = Vector2( 0, 25 )
+
+[node name="Bodyback" type="Sprite" parent="TexNode"]
+pause_mode = 2
+use_parent_material = true
+position = Vector2( 0, -47 )
+scale = Vector2( 1.1, 1 )
+texture = ExtResource( 6 )
+
+[node name="ItemNode" type="Node2D" parent="TexNode"]
+pause_mode = 2
+
+[node name="Obj_X" type="Node2D" parent="TexNode/ItemNode"]
+show_behind_parent = true
+position = Vector2( -18, -51 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Obj_Y" type="Node2D" parent="TexNode/ItemNode"]
+show_behind_parent = true
+position = Vector2( 24, -51 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="DeviceBoxCo2Mid" type="Sprite" parent="TexNode/ItemNode"]
+position = Vector2( -1, -69 )
+scale = Vector2( 1.1, 1 )
+texture = ExtResource( 3 )
+
+[node name="Obj_A" type="Node2D" parent="TexNode/ItemNode"]
+position = Vector2( -23, -13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Obj_B" type="Node2D" parent="TexNode/ItemNode"]
+position = Vector2( 19, -13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="bodyfront" type="Sprite" parent="TexNode"]
+pause_mode = 2
+use_parent_material = true
+position = Vector2( 0, -47 )
+scale = Vector2( 1.1, 1 )
+texture = ExtResource( 4 )
+
+[node name="IconNode" parent="TexNode" instance=ExtResource( 2 )]
+pause_mode = 2
+visible = false
+position = Vector2( 20, 13 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="AniNode" type="Node2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 5 )
+
+[node name="A" parent="." instance=ExtResource( 9 )]
+margin_left = -15.0
+margin_top = -35.0
+margin_right = -15.0
+margin_bottom = -35.0
+bool_Small = true
+Info_Str = "BUT-搬运"
+OnBut = false
+
+[node name="But" type="Node2D" parent="."]
+position = Vector2( 0, -12 )
+
+[node name="A" parent="But" instance=ExtResource( 9 )]
+margin_left = -22.0
+margin_top = 10.0
+margin_right = -22.0
+margin_bottom = 10.0
+bool_Small = true
+OnBut = false
+
+[node name="B" parent="But" instance=ExtResource( 9 )]
+margin_left = 22.0
+margin_top = 10.0
+margin_right = 22.0
+margin_bottom = 10.0
+bool_Small = true
+OnBut = false
+
+[node name="X" parent="But" instance=ExtResource( 9 )]
+margin_left = -22.0
+margin_top = -50.0
+margin_right = -22.0
+margin_bottom = -50.0
+bool_Small = true
+OnBut = false
+
+[node name="Y" parent="But" instance=ExtResource( 9 )]
+margin_left = 22.0
+margin_top = -50.0
+margin_right = 22.0
+margin_bottom = -50.0
+bool_Small = true
+OnBut = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

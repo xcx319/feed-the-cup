@@ -1,0 +1,154 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=1]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_9.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_workboard.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_top.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_2.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_2.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_1.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Item/item_pack.sprites/item_deco_lime.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_lime_single_1.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_4.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_1.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_2.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_5.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_3.tres" type="Texture" id=17]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=19]
+
+[node name="青桔" type="Node2D"]
+
+[node name="151" type="RichTextLabel" parent="."]
+margin_left = -389.0
+margin_top = 209.0
+margin_right = 369.0
+margin_bottom = 377.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "青桔切开小口，放在杯子里作为装饰。"
+text = "青桔切开小口，放在杯子里作为装饰。"
+script = ExtResource( 1 )
+LabelTEXT = "信息-文字说明-151"
+Center_Bool = true
+
+[node name="DeviceWorkboard" type="Sprite" parent="."]
+position = Vector2( -251, 88 )
+texture = ExtResource( 5 )
+
+[node name="FruitLemonSingle4" type="Sprite" parent="DeviceWorkboard"]
+position = Vector2( -65, -19 )
+texture = ExtResource( 12 )
+
+[node name="UiIconInfo0" type="Sprite" parent="DeviceWorkboard"]
+position = Vector2( -20, -4 )
+texture = ExtResource( 3 )
+
+[node name="DeviceWorkboard2" type="Sprite" parent="."]
+position = Vector2( 10, 88 )
+texture = ExtResource( 5 )
+
+[node name="ItemDecoLime" type="Sprite" parent="DeviceWorkboard2"]
+position = Vector2( -9, 18 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 11 )
+
+[node name="ItemDecoLime2" type="Sprite" parent="DeviceWorkboard2"]
+position = Vector2( -13, 27 )
+rotation = 0.261799
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 11 )
+
+[node name="ItemDecoLime3" type="Sprite" parent="DeviceWorkboard2"]
+position = Vector2( 19.4584, 16 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 11 )
+
+[node name="ItemDecoLime4" type="Sprite" parent="DeviceWorkboard2"]
+position = Vector2( 19, 29 )
+rotation = 0.523598
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 11 )
+
+[node name="ItemDecoLime5" type="Sprite" parent="DeviceWorkboard2"]
+position = Vector2( 3, 38 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 11 )
+
+[node name="UiIconInfo1" type="Sprite" parent="."]
+position = Vector2( -122, 119 )
+texture = ExtResource( 4 )
+
+[node name="UiIconInfo9" type="Sprite" parent="UiIconInfo1"]
+position = Vector2( 0, -44 )
+texture = ExtResource( 2 )
+
+[node name="X" parent="." instance=ExtResource( 19 )]
+margin_left = -139.0
+margin_top = 162.0
+margin_right = -139.0
+margin_bottom = 162.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-加工"
+OnBut = false
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( -131, -66 )
+
+[node name="UiIconInfo2" type="Sprite" parent="Node2D"]
+position = Vector2( 262, 186 )
+texture = ExtResource( 4 )
+
+[node name="Cup" type="Node2D" parent="Node2D"]
+position = Vector2( 350, 164 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="Node2D/Cup"]
+texture = ExtResource( 9 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="Node2D/Cup"]
+modulate = Color( 0.458824, 0.909804, 1, 0.556863 )
+position = Vector2( 1.14285, 0.571419 )
+texture = ExtResource( 10 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="Node2D/Cup"]
+modulate = Color( 0.458824, 0.909804, 1, 0.556863 )
+position = Vector2( 1.14285, 0.571419 )
+texture = ExtResource( 6 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="Node2D/Cup"]
+modulate = Color( 0.458824, 0.909804, 1, 0.556863 )
+position = Vector2( 1.14285, 6.28568 )
+texture = ExtResource( 7 )
+
+[node name="ItemDecoLemon" type="Sprite" parent="Node2D/Cup"]
+position = Vector2( 22.8571, -2.85715 )
+rotation = 2.35619
+texture = ExtResource( 11 )
+
+[node name="UiProcupCup2" type="Sprite" parent="Node2D/Cup"]
+texture = ExtResource( 8 )
+
+[node name="GuestBigbottlePop1" type="Sprite" parent="Node2D/Cup"]
+position = Vector2( -11.4286, 42.8571 )
+rotation = -0.261799
+texture = ExtResource( 14 )
+
+[node name="GuestBigbottlePop2" type="Sprite" parent="Node2D/Cup"]
+position = Vector2( 17.1429, 24.2857 )
+texture = ExtResource( 15 )
+
+[node name="GuestBigbottlePop3" type="Sprite" parent="Node2D/Cup"]
+position = Vector2( -5.28571, 26.6429 )
+texture = ExtResource( 17 )
+
+[node name="GuestBigbottlePop5" type="Sprite" parent="Node2D/Cup"]
+position = Vector2( -8.14285, 20.9286 )
+texture = ExtResource( 16 )
+
+[node name="GuestBigbottlePop4" type="Sprite" parent="Node2D/Cup"]
+position = Vector2( 8.57144, 40 )
+texture = ExtResource( 13 )

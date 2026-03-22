@@ -1,0 +1,584 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Resources/Devices/table/Device_table_1.png" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_waste.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_leg_run_4.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_beer_baselayer_2.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_beer_6.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_clean_dirty.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_beer_baselayer_4.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_beer_4.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_beer_baselayer_6.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_beer_2.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_body_form_3.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_2.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_arm_hold_2.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_leg_stand_1.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_10.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_1.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_little_body_base_2.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_little_body_decorative_1.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_little_body_decorative_3.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_little_body_base_1.tres" type="Texture" id=26]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=27]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=28]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_talk.tres" type="Texture" id=29]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_dinnerplate.tres" type="Texture" id=30]
+
+[sub_resource type="Shader" id=319]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=320]
+resource_local_to_scene = true
+shader = SubResource( 319 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[node name="收取杯子" type="Node2D"]
+position = Vector2( 537, 141 )
+
+[node name="232" type="RichTextLabel" parent="."]
+margin_left = -448.0
+margin_top = 163.0
+margin_right = 356.0
+margin_bottom = 329.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "顾客喝完饮品后会示意你过来收拾。
+长时间没有处理的话，顾客离开时会将脏杯子放在活动区域的盘子上，如果盘子已经放满则扔在地上。"
+text = "顾客喝完饮品后会示意你过来收拾。
+长时间没有处理的话，顾客离开时会将脏杯子放在活动区域的盘子上，如果盘子已经放满则扔在地上。"
+script = ExtResource( 27 )
+LabelTEXT = "信息-文字说明-232"
+Center_Bool = true
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2( -187, -26 )
+
+[node name="cos2" type="Node2D" parent="1"]
+light_mask = 0
+position = Vector2( -199, 169 )
+scale = Vector2( 1.1, 1.1 )
+
+[node name="All_note" type="Node2D" parent="1/cos2"]
+
+[node name="Body_note" type="Node2D" parent="1/cos2/All_note"]
+position = Vector2( 0, -24 )
+rotation = -0.018176
+scale = Vector2( 0.983333, 1.01667 )
+
+[node name="Body" type="Node2D" parent="1/cos2/All_note/Body_note"]
+
+[node name="CupBody" type="Node2D" parent="1/cos2/All_note/Body_note/Body"]
+position = Vector2( 0, -24 )
+
+[node name="BodyBase1" type="Sprite" parent="1/cos2/All_note/Body_note/Body/CupBody"]
+modulate = Color( 0.941176, 0.647059, 0.666667, 1 )
+texture = ExtResource( 23 )
+
+[node name="Decorate1" type="Sprite" parent="1/cos2/All_note/Body_note/Body/CupBody"]
+modulate = Color( 1, 0.894118, 0.933333, 1 )
+texture = ExtResource( 24 )
+
+[node name="Decorate2" type="Sprite" parent="1/cos2/All_note/Body_note/Body/CupBody"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 25 )
+
+[node name="BodyBase2" type="Sprite" parent="1/cos2/All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 26 )
+
+[node name="F1" type="Sprite" parent="1/cos2/All_note/Body_note/Body/CupBody"]
+modulate = Color( 0.701961, 0.133333, 0.133333, 1 )
+position = Vector2( 0, 12 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 17 )
+
+[node name="CupFace" type="Node2D" parent="1/cos2/All_note/Body_note/Body"]
+position = Vector2( 0, -14 )
+
+[node name="L" type="Node2D" parent="1/cos2/All_note/Body_note/Body/CupFace"]
+position = Vector2( -10, 0 )
+
+[node name="Eye" type="Sprite" parent="1/cos2/All_note/Body_note/Body/CupFace/L"]
+texture = ExtResource( 22 )
+
+[node name="Ball" type="Sprite" parent="1/cos2/All_note/Body_note/Body/CupFace/L"]
+position = Vector2( 4, 0 )
+texture = ExtResource( 18 )
+
+[node name="R" type="Node2D" parent="1/cos2/All_note/Body_note/Body/CupFace"]
+position = Vector2( 8, 0 )
+scale = Vector2( -1, 1 )
+
+[node name="Eye" type="Sprite" parent="1/cos2/All_note/Body_note/Body/CupFace/R"]
+texture = ExtResource( 22 )
+
+[node name="Ball" type="Sprite" parent="1/cos2/All_note/Body_note/Body/CupFace/R"]
+texture = ExtResource( 18 )
+
+[node name="Arm_Hold" type="Node2D" parent="1/cos2/All_note/Body_note"]
+position = Vector2( 20, -33 )
+
+[node name="Arm" type="Sprite" parent="1/cos2/All_note/Body_note/Arm_Hold"]
+texture = ExtResource( 19 )
+offset = Vector2( 4, -17 )
+
+[node name="Weapon_note" type="Node2D" parent="1/cos2/All_note/Body_note/Arm_Hold"]
+show_behind_parent = true
+position = Vector2( 20, 50 )
+
+[node name="cup3" type="Node2D" parent="1/cos2/All_note/Body_note/Arm_Hold/Weapon_note"]
+position = Vector2( -2.65555, -25.5952 )
+rotation = -0.261799
+scale = Vector2( 0.6, 0.6 )
+
+[node name="ItemGlasscupBeer2" type="Sprite" parent="1/cos2/All_note/Body_note/Arm_Hold/Weapon_note/cup3"]
+position = Vector2( 1, -31 )
+texture = ExtResource( 15 )
+
+[node name="ItemGlasscupBeerBaselayer2" type="Sprite" parent="1/cos2/All_note/Body_note/Arm_Hold/Weapon_note/cup3"]
+position = Vector2( 1, -31 )
+texture = ExtResource( 9 )
+
+[node name="ItemGlasscupCleanDirty" type="Sprite" parent="1/cos2/All_note/Body_note/Arm_Hold/Weapon_note/cup3"]
+position = Vector2( 0.560303, -2.73831 )
+texture = ExtResource( 11 )
+
+[node name="Legs" type="Node2D" parent="1/cos2/All_note"]
+show_behind_parent = true
+
+[node name="Leg_L" type="Node2D" parent="1/cos2/All_note/Legs"]
+position = Vector2( -7, -27 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="1/cos2/All_note/Legs/Leg_L"]
+self_modulate = Color( 0.509804, 0.509804, 0.509804, 1 )
+texture = ExtResource( 20 )
+offset = Vector2( -6, 0 )
+
+[node name="Leg_R" type="Node2D" parent="1/cos2/All_note/Legs"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="1/cos2/All_note/Legs/Leg_R"]
+self_modulate = Color( 0.509804, 0.509804, 0.509804, 1 )
+texture = ExtResource( 20 )
+offset = Vector2( -6, 0 )
+
+[node name="UiPoptipIdeaTalk" type="Sprite" parent="1/cos2"]
+self_modulate = Color( 0.0509804, 0.8, 0.0627451, 1 )
+position = Vector2( 33.6364, -104.545 )
+texture = ExtResource( 29 )
+
+[node name="UiPoptipIdea10" type="Sprite" parent="1/cos2"]
+self_modulate = Color( 1, 0.639216, 0.360784, 1 )
+position = Vector2( 33.6364, -109.091 )
+texture = ExtResource( 21 )
+
+[node name="2" type="Node2D" parent="."]
+
+[node name="table" type="Node2D" parent="2"]
+position = Vector2( -27, 8 )
+
+[node name="L" type="Sprite" parent="2/table"]
+position = Vector2( 2, 87 )
+texture = ExtResource( 1 )
+offset = Vector2( -25, -30 )
+hframes = 2
+vframes = 8
+frame = 8
+
+[node name="R" type="Sprite" parent="2/table"]
+position = Vector2( 2, 87 )
+texture = ExtResource( 1 )
+offset = Vector2( 25, -30 )
+flip_h = true
+hframes = 2
+vframes = 8
+frame = 8
+
+[node name="ItemDinnerplate" type="Sprite" parent="2/table"]
+position = Vector2( 2, 13 )
+texture = ExtResource( 30 )
+
+[node name="CUPM1" type="Node2D" parent="2/table"]
+pause_mode = 2
+material = SubResource( 320 )
+position = Vector2( -19, -31 )
+scale = Vector2( 0.6, 0.6 )
+__meta__ = {
+"_editor_description_": "SCALE 0.57"
+}
+
+[node name="baseLayer" type="Node2D" parent="2/table/CUPM1"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+
+[node name="Cup_M" type="Sprite" parent="2/table/CUPM1/baseLayer"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+texture = ExtResource( 12 )
+
+[node name="Tex" type="Node2D" parent="2/table/CUPM1"]
+pause_mode = 2
+use_parent_material = true
+
+[node name="Front" type="Node2D" parent="2/table/CUPM1/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="CupF_M" type="Sprite" parent="2/table/CUPM1/Tex/Front"]
+pause_mode = 2
+use_parent_material = true
+texture = ExtResource( 13 )
+
+[node name="DrinkTop" type="Node2D" parent="2/table/CUPM1/Tex"]
+pause_mode = 2
+show_behind_parent = true
+position = Vector2( 1, -22 )
+scale = Vector2( 1.1, 1.1 )
+
+[node name="ItemGlasscupCleanDirty" type="Sprite" parent="2/table/CUPM1"]
+position = Vector2( 0.560303, -2.73831 )
+texture = ExtResource( 11 )
+
+[node name="CUPL1" type="Node2D" parent="2/table"]
+pause_mode = 2
+material = SubResource( 320 )
+position = Vector2( 20, -32.6482 )
+scale = Vector2( 0.6, 0.6 )
+__meta__ = {
+"_editor_description_": "SCALE 0.57"
+}
+
+[node name="baseLayer" type="Node2D" parent="2/table/CUPL1"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+
+[node name="Cup_L" type="Sprite" parent="2/table/CUPL1/baseLayer"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+texture = ExtResource( 14 )
+
+[node name="Tex" type="Node2D" parent="2/table/CUPL1"]
+pause_mode = 2
+use_parent_material = true
+
+[node name="Front" type="Node2D" parent="2/table/CUPL1/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="CupF_L" type="Sprite" parent="2/table/CUPL1/Tex/Front"]
+pause_mode = 2
+use_parent_material = true
+texture = ExtResource( 10 )
+
+[node name="ItemGlasscupCleanDirty" type="Sprite" parent="2/table/CUPL1"]
+position = Vector2( 0.560303, -2.73831 )
+texture = ExtResource( 11 )
+
+[node name="cup3" type="Node2D" parent="2/table"]
+position = Vector2( -13, 15 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="ItemGlasscupBeer2" type="Sprite" parent="2/table/cup3"]
+position = Vector2( 1, -31 )
+texture = ExtResource( 15 )
+
+[node name="ItemGlasscupBeerBaselayer2" type="Sprite" parent="2/table/cup3"]
+position = Vector2( 1, -31 )
+texture = ExtResource( 9 )
+
+[node name="ItemGlasscupCleanDirty" type="Sprite" parent="2/table/cup3"]
+position = Vector2( 0.560303, -2.73831 )
+texture = ExtResource( 11 )
+
+[node name="CUPM2" type="Node2D" parent="2/table"]
+pause_mode = 2
+material = SubResource( 320 )
+position = Vector2( 26, -4.64819 )
+scale = Vector2( 0.6, 0.6 )
+__meta__ = {
+"_editor_description_": "SCALE 0.57"
+}
+
+[node name="baseLayer" type="Node2D" parent="2/table/CUPM2"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+
+[node name="Cup_M" type="Sprite" parent="2/table/CUPM2/baseLayer"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+texture = ExtResource( 12 )
+
+[node name="Tex" type="Node2D" parent="2/table/CUPM2"]
+pause_mode = 2
+use_parent_material = true
+
+[node name="Front" type="Node2D" parent="2/table/CUPM2/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="CupF_M" type="Sprite" parent="2/table/CUPM2/Tex/Front"]
+pause_mode = 2
+use_parent_material = true
+texture = ExtResource( 13 )
+
+[node name="DrinkTop" type="Node2D" parent="2/table/CUPM2/Tex"]
+pause_mode = 2
+show_behind_parent = true
+position = Vector2( 1, -22 )
+scale = Vector2( 1.1, 1.1 )
+
+[node name="ItemGlasscupCleanDirty" type="Sprite" parent="2/table/CUPM2"]
+position = Vector2( 0.560303, -2.73831 )
+texture = ExtResource( 11 )
+
+[node name="UiPoptipWaste" type="Sprite" parent="2/table"]
+position = Vector2( 0, -59 )
+texture = ExtResource( 2 )
+
+[node name="cos" type="Node2D" parent="2"]
+light_mask = 0
+position = Vector2( -156, 146 )
+scale = Vector2( 1.1, 1.1 )
+
+[node name="All_note" type="Node2D" parent="2/cos"]
+
+[node name="Body_note" type="Node2D" parent="2/cos/All_note"]
+position = Vector2( 0, -24 )
+rotation = -0.018176
+scale = Vector2( 0.983333, 1.01667 )
+
+[node name="Body" type="Node2D" parent="2/cos/All_note/Body_note"]
+
+[node name="CupBody" type="Node2D" parent="2/cos/All_note/Body_note/Body"]
+position = Vector2( 0, -24 )
+
+[node name="BodyBase1" type="Sprite" parent="2/cos/All_note/Body_note/Body/CupBody"]
+modulate = Color( 0.941176, 0.647059, 0.666667, 1 )
+texture = ExtResource( 23 )
+
+[node name="Decorate1" type="Sprite" parent="2/cos/All_note/Body_note/Body/CupBody"]
+modulate = Color( 1, 0.894118, 0.933333, 1 )
+texture = ExtResource( 24 )
+
+[node name="Decorate2" type="Sprite" parent="2/cos/All_note/Body_note/Body/CupBody"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 25 )
+
+[node name="BodyBase2" type="Sprite" parent="2/cos/All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 26 )
+
+[node name="F1" type="Sprite" parent="2/cos/All_note/Body_note/Body/CupBody"]
+modulate = Color( 0.701961, 0.133333, 0.133333, 1 )
+position = Vector2( 0, 12 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 17 )
+
+[node name="CupFace" type="Node2D" parent="2/cos/All_note/Body_note/Body"]
+position = Vector2( 0, -14 )
+
+[node name="L" type="Node2D" parent="2/cos/All_note/Body_note/Body/CupFace"]
+position = Vector2( -10, 0 )
+
+[node name="Eye" type="Sprite" parent="2/cos/All_note/Body_note/Body/CupFace/L"]
+texture = ExtResource( 22 )
+
+[node name="Ball" type="Sprite" parent="2/cos/All_note/Body_note/Body/CupFace/L"]
+position = Vector2( 4, 0 )
+texture = ExtResource( 18 )
+
+[node name="R" type="Node2D" parent="2/cos/All_note/Body_note/Body/CupFace"]
+position = Vector2( 8, 0 )
+scale = Vector2( -1, 1 )
+
+[node name="Eye" type="Sprite" parent="2/cos/All_note/Body_note/Body/CupFace/R"]
+texture = ExtResource( 22 )
+
+[node name="Ball" type="Sprite" parent="2/cos/All_note/Body_note/Body/CupFace/R"]
+texture = ExtResource( 18 )
+
+[node name="Arm_Hold" type="Node2D" parent="2/cos/All_note/Body_note"]
+position = Vector2( 20, -33 )
+
+[node name="Arm" type="Sprite" parent="2/cos/All_note/Body_note/Arm_Hold"]
+texture = ExtResource( 19 )
+offset = Vector2( 4, -17 )
+
+[node name="Weapon_note" type="Node2D" parent="2/cos/All_note/Body_note/Arm_Hold"]
+show_behind_parent = true
+position = Vector2( 20, 50 )
+
+[node name="cup3" type="Node2D" parent="2/cos/All_note/Body_note/Arm_Hold/Weapon_note"]
+position = Vector2( -2.65555, -25.5952 )
+rotation = -0.261799
+scale = Vector2( 0.6, 0.6 )
+
+[node name="ItemGlasscupBeer2" type="Sprite" parent="2/cos/All_note/Body_note/Arm_Hold/Weapon_note/cup3"]
+position = Vector2( 1, -31 )
+texture = ExtResource( 15 )
+
+[node name="ItemGlasscupBeerBaselayer2" type="Sprite" parent="2/cos/All_note/Body_note/Arm_Hold/Weapon_note/cup3"]
+position = Vector2( 1, -31 )
+texture = ExtResource( 9 )
+
+[node name="ItemGlasscupCleanDirty" type="Sprite" parent="2/cos/All_note/Body_note/Arm_Hold/Weapon_note/cup3"]
+position = Vector2( 0.560303, -2.73831 )
+texture = ExtResource( 11 )
+
+[node name="Legs" type="Node2D" parent="2/cos/All_note"]
+show_behind_parent = true
+
+[node name="Leg_L" type="Node2D" parent="2/cos/All_note/Legs"]
+position = Vector2( -7, -27 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="2/cos/All_note/Legs/Leg_L"]
+self_modulate = Color( 0.509804, 0.509804, 0.509804, 1 )
+texture = ExtResource( 20 )
+offset = Vector2( -6, 0 )
+
+[node name="Leg_R" type="Node2D" parent="2/cos/All_note/Legs"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="2/cos/All_note/Legs/Leg_R"]
+self_modulate = Color( 0.509804, 0.509804, 0.509804, 1 )
+texture = ExtResource( 20 )
+offset = Vector2( -6, 0 )
+
+[node name="TotuInfo1" type="Sprite" parent="2"]
+position = Vector2( -89, 37 )
+rotation = -0.785397
+texture = ExtResource( 28 )
+
+[node name="cos" type="Node2D" parent="."]
+light_mask = 0
+position = Vector2( 258, 141 )
+scale = Vector2( 1.1, 1.1 )
+
+[node name="All_note" type="Node2D" parent="cos"]
+position = Vector2( -24.5455, -0.909088 )
+
+[node name="Body_note" type="Node2D" parent="cos/All_note"]
+position = Vector2( 0, -24 )
+rotation = -0.018176
+scale = Vector2( 0.983333, 1.01667 )
+
+[node name="Body" type="Node2D" parent="cos/All_note/Body_note"]
+
+[node name="CupBody" type="Node2D" parent="cos/All_note/Body_note/Body"]
+position = Vector2( 0, -24 )
+
+[node name="BodyBase1" type="Sprite" parent="cos/All_note/Body_note/Body/CupBody"]
+modulate = Color( 0.941176, 0.647059, 0.666667, 1 )
+texture = ExtResource( 23 )
+
+[node name="Decorate1" type="Sprite" parent="cos/All_note/Body_note/Body/CupBody"]
+modulate = Color( 1, 0.894118, 0.933333, 1 )
+texture = ExtResource( 24 )
+
+[node name="Decorate2" type="Sprite" parent="cos/All_note/Body_note/Body/CupBody"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 25 )
+
+[node name="BodyBase2" type="Sprite" parent="cos/All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 26 )
+
+[node name="CupFace" type="Node2D" parent="cos/All_note/Body_note/Body"]
+position = Vector2( 0, -14 )
+
+[node name="R" type="Node2D" parent="cos/All_note/Body_note/Body/CupFace"]
+position = Vector2( 10.3698, -3.42993 )
+scale = Vector2( -1, 1 )
+
+[node name="Eye" type="Sprite" parent="cos/All_note/Body_note/Body/CupFace/R"]
+texture = ExtResource( 22 )
+
+[node name="Ball" type="Sprite" parent="cos/All_note/Body_note/Body/CupFace/R"]
+texture = ExtResource( 18 )
+
+[node name="Arm_Hold" type="Node2D" parent="cos/All_note/Body_note"]
+position = Vector2( 20, -33 )
+
+[node name="Weapon_note" type="Node2D" parent="cos/All_note/Body_note/Arm_Hold"]
+show_behind_parent = true
+position = Vector2( 20, 50 )
+
+[node name="Legs" type="Node2D" parent="cos/All_note"]
+show_behind_parent = true
+
+[node name="Leg_L" type="Node2D" parent="cos/All_note/Legs"]
+position = Vector2( -5.45459, -21.8182 )
+scale = Vector2( -1, 1 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="cos/All_note/Legs/Leg_L"]
+self_modulate = Color( 0.509804, 0.509804, 0.509804, 1 )
+texture = ExtResource( 3 )
+offset = Vector2( -6, 0 )
+
+[node name="Leg_R" type="Node2D" parent="cos/All_note/Legs"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="cos/All_note/Legs/Leg_R"]
+self_modulate = Color( 0.509804, 0.509804, 0.509804, 1 )
+rotation = 0.785397
+texture = ExtResource( 20 )
+offset = Vector2( -6, 0 )
+
+[node name="cup3" type="Node2D" parent="cos"]
+position = Vector2( -85.4545, -20 )
+scale = Vector2( 0.545455, 0.545455 )
+
+[node name="ItemGlasscupBeer2" type="Sprite" parent="cos/cup3"]
+position = Vector2( 1, -31 )
+texture = ExtResource( 15 )
+
+[node name="ItemGlasscupBeerBaselayer2" type="Sprite" parent="cos/cup3"]
+position = Vector2( 1, -31 )
+texture = ExtResource( 9 )
+
+[node name="ItemGlasscupCleanDirty" type="Sprite" parent="cos/cup3"]
+position = Vector2( 0.560303, -2.73831 )
+texture = ExtResource( 11 )
+
+[node name="UiPoptipWaste" type="Sprite" parent="cos/cup3"]
+position = Vector2( -1.66663, -63.3333 )
+scale = Vector2( 1.6, 1.6 )
+texture = ExtResource( 2 )

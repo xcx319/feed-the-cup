@@ -1,0 +1,1848 @@
+[gd_scene load_steps=70 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_left.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_frame_white.tres" type="Texture" id=2]
+[ext_resource path="res://TscnAndGd/UI/Buttons/RewardChooseButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://TscnAndGd/UI/Buttons/RewardShowButton.tscn" type="PackedScene" id=4]
+[ext_resource path="res://TscnAndGd/UI/Info/Scroll_Theme.tres" type="Theme" id=5]
+[ext_resource path="res://Language/Fonts/Base_l_outline.tres" type="DynamicFont" id=6]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=7]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=8]
+[ext_resource path="res://TscnAndGd/UI/InGame/CardInfoUI.gd" type="Script" id=9]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_wolf_head_front.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_difficulty_light.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_light.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_5.png" type="Texture" id=14]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_skill_63.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_skill_83.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_D_Sand.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_Menu.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_menu_lock_2.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_menu_lock_1.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_skill_101.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut.tres" type="Texture" id=22]
+[ext_resource path="res://Language/Fonts/Base_l.tres" type="DynamicFont" id=23]
+[ext_resource path="res://TscnAndGd/Buttons/LogicBut.tscn" type="PackedScene" id=24]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_skill_11.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_skill_90.tres" type="Texture" id=26]
+[ext_resource path="res://TscnAndGd/UI/InGame/黑幕.tscn" type="PackedScene" id=27]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_D_Jade.tres" type="Texture" id=28]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_skill_3.tres" type="Texture" id=29]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_debuff_47.tres" type="Texture" id=30]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_grey.tres" type="Texture" id=31]
+
+[sub_resource type="StyleBoxEmpty" id=25]
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 88, 88 )
+margin_left = 25.0
+margin_right = 25.0
+margin_top = 25.0
+margin_bottom = 25.0
+modulate_color = Color( 1, 0.588235, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=26]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="StyleBoxTexture" id=186]
+texture = ExtResource( 14 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 0.823529, 0.588235, 0.392157 )
+
+[sub_resource type="StyleBoxTexture" id=187]
+texture = ExtResource( 14 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 0.588235, 0, 0.784314 )
+
+[sub_resource type="StyleBoxEmpty" id=188]
+
+[sub_resource type="StyleBoxEmpty" id=189]
+
+[sub_resource type="StyleBoxEmpty" id=190]
+
+[sub_resource type="StyleBoxTexture" id=192]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 1, 0.823529, 0.588235, 1 )
+
+[sub_resource type="StyleBoxTexture" id=191]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 1, 0.588235, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=193]
+
+[sub_resource type="StyleBoxTexture" id=195]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+
+[sub_resource type="StyleBoxTexture" id=194]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="Animation" id=236]
+resource_name = "1"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer/1/NinePatchRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -50 ), Vector2( 0, -40 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HBoxContainer/2/NinePatchRect:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HBoxContainer/3/NinePatchRect:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HBoxContainer/4/NinePatchRect:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HBoxContainer/5/NinePatchRect:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HBoxContainer/6/NinePatchRect:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("HBoxContainer/7/NinePatchRect:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("HBoxContainer/8/NinePatchRect:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("HBoxContainer/9/NinePatchRect:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=237]
+resource_name = "2"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer/1/NinePatchRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HBoxContainer/2/NinePatchRect:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -50 ), Vector2( 0, -40 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HBoxContainer/3/NinePatchRect:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HBoxContainer/4/NinePatchRect:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HBoxContainer/5/NinePatchRect:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HBoxContainer/6/NinePatchRect:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("HBoxContainer/7/NinePatchRect:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("HBoxContainer/8/NinePatchRect:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("HBoxContainer/9/NinePatchRect:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=238]
+resource_name = "3"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer/1/NinePatchRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HBoxContainer/2/NinePatchRect:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HBoxContainer/3/NinePatchRect:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -50 ), Vector2( 0, -40 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HBoxContainer/4/NinePatchRect:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HBoxContainer/5/NinePatchRect:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HBoxContainer/6/NinePatchRect:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("HBoxContainer/7/NinePatchRect:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("HBoxContainer/8/NinePatchRect:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("HBoxContainer/9/NinePatchRect:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=239]
+resource_name = "4"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer/1/NinePatchRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HBoxContainer/2/NinePatchRect:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HBoxContainer/3/NinePatchRect:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HBoxContainer/4/NinePatchRect:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -50 ), Vector2( 0, -40 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HBoxContainer/5/NinePatchRect:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HBoxContainer/6/NinePatchRect:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("HBoxContainer/7/NinePatchRect:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("HBoxContainer/8/NinePatchRect:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("HBoxContainer/9/NinePatchRect:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=240]
+resource_name = "5"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer/1/NinePatchRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HBoxContainer/2/NinePatchRect:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HBoxContainer/3/NinePatchRect:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HBoxContainer/4/NinePatchRect:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HBoxContainer/5/NinePatchRect:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -50 ), Vector2( 0, -40 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HBoxContainer/6/NinePatchRect:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("HBoxContainer/7/NinePatchRect:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("HBoxContainer/8/NinePatchRect:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("HBoxContainer/9/NinePatchRect:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=241]
+resource_name = "6"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer/1/NinePatchRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HBoxContainer/2/NinePatchRect:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HBoxContainer/3/NinePatchRect:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HBoxContainer/4/NinePatchRect:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HBoxContainer/5/NinePatchRect:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HBoxContainer/6/NinePatchRect:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -50 ), Vector2( 0, -40 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("HBoxContainer/7/NinePatchRect:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("HBoxContainer/8/NinePatchRect:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("HBoxContainer/9/NinePatchRect:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=242]
+resource_name = "7"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer/1/NinePatchRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HBoxContainer/2/NinePatchRect:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HBoxContainer/3/NinePatchRect:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HBoxContainer/4/NinePatchRect:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HBoxContainer/5/NinePatchRect:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HBoxContainer/6/NinePatchRect:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("HBoxContainer/7/NinePatchRect:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -50 ), Vector2( 0, -40 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("HBoxContainer/8/NinePatchRect:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("HBoxContainer/9/NinePatchRect:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=243]
+resource_name = "8"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer/1/NinePatchRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HBoxContainer/2/NinePatchRect:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HBoxContainer/3/NinePatchRect:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HBoxContainer/4/NinePatchRect:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HBoxContainer/5/NinePatchRect:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HBoxContainer/6/NinePatchRect:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("HBoxContainer/7/NinePatchRect:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("HBoxContainer/8/NinePatchRect:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -50 ), Vector2( 0, -40 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("HBoxContainer/9/NinePatchRect:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=244]
+resource_name = "9"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("HBoxContainer/1/NinePatchRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HBoxContainer/2/NinePatchRect:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HBoxContainer/3/NinePatchRect:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HBoxContainer/4/NinePatchRect:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HBoxContainer/5/NinePatchRect:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("HBoxContainer/6/NinePatchRect:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("HBoxContainer/7/NinePatchRect:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("HBoxContainer/8/NinePatchRect:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("HBoxContainer/9/NinePatchRect:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -50 ), Vector2( 0, -40 ) ]
+}
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 88, 88 )
+margin_left = 25.0
+margin_right = 25.0
+margin_top = 25.0
+margin_bottom = 25.0
+modulate_color = Color( 1, 1, 1, 0.392157 )
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxTexture" id=101]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 88, 88 )
+margin_left = 25.0
+margin_right = 25.0
+margin_top = 25.0
+margin_bottom = 25.0
+modulate_color = Color( 1, 0.588235, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=235]
+
+[sub_resource type="StyleBoxTexture" id=185]
+texture = ExtResource( 14 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 1, 1, 0.392157 )
+
+[sub_resource type="StyleBoxTexture" id=231]
+texture = ExtResource( 14 )
+region_rect = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="StyleBoxEmpty" id=232]
+
+[sub_resource type="StyleBoxEmpty" id=233]
+
+[sub_resource type="StyleBoxEmpty" id=234]
+
+[sub_resource type="Animation" id=224]
+resource_name = "Reward"
+length = 0.2
+
+[sub_resource type="Animation" id=216]
+resource_name = "hide"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_ESC_true"
+} ]
+}
+
+[sub_resource type="Animation" id=217]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=218]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="CardInfoUI" type="CanvasLayer"]
+layer = 2
+script = ExtResource( 9 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" parent="Control" instance=ExtResource( 27 )]
+
+[node name="BG" type="NinePatchRect" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -740.0
+margin_top = -480.0
+margin_right = 740.0
+margin_bottom = 445.0
+texture = ExtResource( 18 )
+patch_margin_left = 57
+patch_margin_top = 50
+patch_margin_right = 57
+patch_margin_bottom = 50
+
+[node name="LevelName" type="NinePatchRect" parent="Control/BG"]
+self_modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -627.5
+margin_top = 40.0
+margin_right = 627.5
+margin_bottom = 125.0
+texture = ExtResource( 22 )
+patch_margin_left = 43
+patch_margin_right = 44
+
+[node name="Label" type="Label" parent="Control/BG/LevelName"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -719.5
+margin_top = -42.5
+margin_right = 720.5
+margin_bottom = 42.5
+rect_min_size = Vector2( 500, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 6 )
+text = "成就界面"
+align = 1
+valign = 1
+script = ExtResource( 7 )
+LabelTEXT = "Demonic Ability"
+
+[node name="Control" type="Control" parent="Control/BG"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -15.0
+margin_top = 45.0
+margin_right = -15.0
+margin_bottom = 45.0
+
+[node name="InfoControl" type="Control" parent="Control"]
+visible = false
+margin_left = 1063.0
+margin_top = 220.0
+margin_right = 1642.0
+margin_bottom = 938.0
+
+[node name="BG" type="NinePatchRect" parent="Control/InfoControl"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 13 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Name" type="Label" parent="Control/InfoControl"]
+visible = false
+anchor_right = 1.0
+margin_left = 46.0
+margin_top = 11.0
+margin_right = -46.0
+margin_bottom = 125.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 23 )
+text = "NAME"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="BG" type="NinePatchRect" parent="Control/InfoControl/Name"]
+self_modulate = Color( 1, 1, 0, 0.392157 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -38.0
+margin_right = 39.0
+texture = ExtResource( 2 )
+region_rect = Rect2( 2, 3, 0, 0 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="UnlockLabel" type="Label" parent="Control/InfoControl"]
+visible = false
+anchor_right = 1.0
+margin_left = 88.0
+margin_top = 132.0
+margin_right = -47.0
+margin_bottom = 305.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "INFO-解锁条件"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="BG" type="NinePatchRect" parent="Control/InfoControl/UnlockLabel"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -77.0
+margin_top = -1.0
+margin_right = 38.0
+margin_bottom = 3.0
+texture = ExtResource( 12 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="IconMenuLock2" type="Sprite" parent="Control/InfoControl/UnlockLabel/BG"]
+position = Vector2( 51.5, 88.5 )
+texture = ExtResource( 19 )
+offset = Vector2( -11, -13 )
+
+[node name="IconMenuLock1" type="Sprite" parent="Control/InfoControl/UnlockLabel/BG"]
+position = Vector2( 41.5, 100.5 )
+texture = ExtResource( 20 )
+
+[node name="RewardLabel" type="Label" parent="Control/InfoControl"]
+visible = false
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 22.0
+margin_top = -38.0
+margin_right = -21.0
+margin_bottom = 26.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 23 )
+text = "成就奖励"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 7 )
+LabelTEXT = "信息-奖励"
+
+[node name="BG" type="NinePatchRect" parent="Control/InfoControl/RewardLabel"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -9.0
+margin_top = 70.0
+margin_right = 9.0
+margin_bottom = 321.0
+texture = ExtResource( 12 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="Sprite" type="Sprite" parent="Control/InfoControl/RewardLabel"]
+position = Vector2( 268, 262 )
+texture = ExtResource( 10 )
+
+[node name="Label" type="Label" parent="Control/InfoControl/RewardLabel"]
+margin_top = 75.0
+margin_right = 536.0
+margin_bottom = 181.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "解锁新角色
+（可在“镜子”处更换）"
+align = 1
+valign = 1
+
+[node name="Info" type="Control" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -5.0
+margin_right = -5.0
+
+[node name="Control" type="Control" parent="Control/Info"]
+margin_top = -25.0
+margin_right = 40.0
+margin_bottom = 15.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Info/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -507.0
+margin_top = -311.0
+margin_right = 473.0
+margin_bottom = -211.0
+custom_constants/separation = 10
+
+[node name="1" parent="Control/Info/Control/HBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 100.0
+margin_bottom = 100.0
+focus_mode = 0
+custom_styles/hover = SubResource( 25 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = false
+_SHOWBOOL = true
+
+[node name="NinePatchRect" parent="Control/Info/Control/HBoxContainer/1" index="0"]
+self_modulate = Color( 0, 0.564706, 1, 1 )
+
+[node name="Icon" parent="Control/Info/Control/HBoxContainer/1/NinePatchRect/Control" index="0"]
+texture = ExtResource( 25 )
+
+[node name="+" parent="Control/Info/Control/HBoxContainer/1/NinePatchRect/Control" index="3"]
+visible = false
+
+[node name="2" parent="Control/Info/Control/HBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 110.0
+margin_right = 210.0
+margin_bottom = 100.0
+focus_mode = 0
+custom_styles/hover = SubResource( 25 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = false
+_SHOWBOOL = true
+
+[node name="NinePatchRect" parent="Control/Info/Control/HBoxContainer/2" index="0"]
+self_modulate = Color( 0.470588, 0.2, 0.619608, 1 )
+
+[node name="Icon" parent="Control/Info/Control/HBoxContainer/2/NinePatchRect/Control" index="0"]
+texture = ExtResource( 21 )
+
+[node name="+" parent="Control/Info/Control/HBoxContainer/2/NinePatchRect/Control" index="3"]
+visible = false
+
+[node name="3" parent="Control/Info/Control/HBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 220.0
+margin_right = 320.0
+margin_bottom = 100.0
+focus_mode = 0
+custom_styles/hover = SubResource( 25 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = false
+_SHOWBOOL = true
+
+[node name="Icon" parent="Control/Info/Control/HBoxContainer/3/NinePatchRect/Control" index="0"]
+texture = ExtResource( 15 )
+
+[node name="+" parent="Control/Info/Control/HBoxContainer/3/NinePatchRect/Control" index="3"]
+visible = false
+
+[node name="4" parent="Control/Info/Control/HBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 330.0
+margin_right = 430.0
+margin_bottom = 100.0
+focus_mode = 0
+custom_styles/hover = SubResource( 25 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = false
+_SHOWBOOL = true
+
+[node name="NinePatchRect" parent="Control/Info/Control/HBoxContainer/4" index="0"]
+self_modulate = Color( 0, 1, 0.835294, 1 )
+
+[node name="Icon" parent="Control/Info/Control/HBoxContainer/4/NinePatchRect/Control" index="0"]
+texture = ExtResource( 28 )
+
+[node name="+" parent="Control/Info/Control/HBoxContainer/4/NinePatchRect/Control" index="3"]
+visible = false
+
+[node name="5" parent="Control/Info/Control/HBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 440.0
+margin_right = 540.0
+margin_bottom = 100.0
+focus_mode = 0
+custom_styles/hover = SubResource( 25 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = false
+_SHOWBOOL = true
+
+[node name="NinePatchRect" parent="Control/Info/Control/HBoxContainer/5" index="0"]
+self_modulate = Color( 1, 0.494118, 0.996078, 1 )
+
+[node name="Icon" parent="Control/Info/Control/HBoxContainer/5/NinePatchRect/Control" index="0"]
+texture = ExtResource( 26 )
+
+[node name="+" parent="Control/Info/Control/HBoxContainer/5/NinePatchRect/Control" index="3"]
+visible = false
+
+[node name="6" parent="Control/Info/Control/HBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 550.0
+margin_right = 650.0
+margin_bottom = 100.0
+focus_mode = 0
+custom_styles/hover = SubResource( 25 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = false
+_SHOWBOOL = true
+
+[node name="NinePatchRect" parent="Control/Info/Control/HBoxContainer/6" index="0"]
+self_modulate = Color( 0.698039, 1, 0, 1 )
+
+[node name="Icon" parent="Control/Info/Control/HBoxContainer/6/NinePatchRect/Control" index="0"]
+texture = ExtResource( 30 )
+
+[node name="7" parent="Control/Info/Control/HBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 660.0
+margin_right = 760.0
+margin_bottom = 100.0
+focus_mode = 0
+custom_styles/hover = SubResource( 25 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = false
+_SHOWBOOL = true
+
+[node name="NinePatchRect" parent="Control/Info/Control/HBoxContainer/7" index="0"]
+self_modulate = Color( 0.984314, 1, 0.129412, 1 )
+
+[node name="Icon" parent="Control/Info/Control/HBoxContainer/7/NinePatchRect/Control" index="0"]
+texture = ExtResource( 16 )
+
+[node name="+" parent="Control/Info/Control/HBoxContainer/7/NinePatchRect/Control" index="3"]
+visible = false
+
+[node name="8" parent="Control/Info/Control/HBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 770.0
+margin_right = 870.0
+margin_bottom = 100.0
+focus_mode = 0
+custom_styles/hover = SubResource( 25 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = false
+_SHOWBOOL = true
+
+[node name="NinePatchRect" parent="Control/Info/Control/HBoxContainer/8" index="0"]
+self_modulate = Color( 1, 0.678431, 0, 1 )
+
+[node name="Icon" parent="Control/Info/Control/HBoxContainer/8/NinePatchRect/Control" index="0"]
+texture = ExtResource( 29 )
+
+[node name="+" parent="Control/Info/Control/HBoxContainer/8/NinePatchRect/Control" index="3"]
+visible = false
+
+[node name="9" parent="Control/Info/Control/HBoxContainer" instance=ExtResource( 4 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 880.0
+margin_right = 980.0
+margin_bottom = 100.0
+focus_mode = 0
+custom_styles/hover = SubResource( 25 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = false
+_SHOWBOOL = true
+
+[node name="NinePatchRect" parent="Control/Info/Control/HBoxContainer/9" index="0"]
+self_modulate = Color( 1, 0.227451, 0.227451, 1 )
+
+[node name="Icon" parent="Control/Info/Control/HBoxContainer/9/NinePatchRect/Control" index="0"]
+texture = ExtResource( 17 )
+
+[node name="+" parent="Control/Info/Control/HBoxContainer/9/NinePatchRect/Control" index="3"]
+visible = false
+
+[node name="L1" parent="Control/Info/Control" instance=ExtResource( 24 )]
+margin_left = -582.0
+margin_top = -317.0
+margin_right = -492.0
+margin_bottom = -227.0
+rect_min_size = Vector2( 90, 90 )
+rect_pivot_offset = Vector2( 45, 45 )
+custom_styles/hover = SubResource( 186 )
+custom_styles/pressed = SubResource( 187 )
+custom_styles/focus = SubResource( 188 )
+custom_styles/disabled = SubResource( 189 )
+custom_styles/normal = SubResource( 190 )
+ButType = 2
+_butType = "R1"
+_ActionModeBool = true
+
+[node name="L1" parent="Control/Info/Control/L1" instance=ExtResource( 8 )]
+margin_left = 45.0
+margin_top = 45.0
+margin_right = 45.0
+margin_bottom = 45.0
+bool_Small = true
+bool_Static = true
+
+[node name="R1" parent="Control/Info/Control" instance=ExtResource( 24 )]
+margin_left = 498.0
+margin_top = -317.0
+margin_right = 588.0
+margin_bottom = -227.0
+custom_styles/hover = SubResource( 192 )
+custom_styles/pressed = SubResource( 191 )
+custom_styles/focus = SubResource( 193 )
+custom_styles/disabled = SubResource( 195 )
+custom_styles/normal = SubResource( 194 )
+ButType = 2
+_butType = "R1"
+_ActionModeBool = true
+
+[node name="R1" parent="Control/Info/Control/R1" instance=ExtResource( 8 )]
+margin_left = 45.0
+margin_top = 45.0
+margin_right = 45.0
+margin_bottom = 45.0
+bool_Small = true
+bool_Static = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/Info/Control"]
+autoplay = "1"
+anims/1 = SubResource( 236 )
+anims/2 = SubResource( 237 )
+anims/3 = SubResource( 238 )
+anims/4 = SubResource( 239 )
+anims/5 = SubResource( 240 )
+anims/6 = SubResource( 241 )
+anims/7 = SubResource( 242 )
+anims/8 = SubResource( 243 )
+anims/9 = SubResource( 244 )
+
+[node name="BG" type="NinePatchRect" parent="Control/Info"]
+anchor_left = 0.068
+anchor_top = 0.309
+anchor_right = 0.35
+anchor_bottom = 0.657
+margin_left = -668.0
+margin_top = -270.0
+margin_right = 688.0
+margin_bottom = 399.0
+mouse_filter = 0
+texture = ExtResource( 31 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Scroll" type="ScrollContainer" parent="Control/Info/BG"]
+margin_left = 21.0
+margin_top = 17.0
+margin_right = 1338.0
+margin_bottom = 653.0
+theme = ExtResource( 5 )
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="Grid" type="GridContainer" parent="Control/Info/BG/Scroll"]
+margin_right = 320.0
+margin_bottom = 400.0
+columns = 4
+
+[node name="1" parent="Control/Info/BG/Scroll/Grid" instance=ExtResource( 3 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 320.0
+margin_bottom = 400.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 101 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 235 )
+
+[node name="ButControl" type="Control" parent="Control"]
+anchor_top = 0.907
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 0.439941
+margin_right = 1.0
+
+[node name="BackBut" parent="Control/ButControl" instance=ExtResource( 24 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 42.5
+margin_top = -42.5
+margin_right = 127.5
+margin_bottom = 42.5
+custom_styles/hover = SubResource( 185 )
+custom_styles/pressed = SubResource( 231 )
+custom_styles/focus = SubResource( 232 )
+custom_styles/disabled = SubResource( 233 )
+custom_styles/normal = SubResource( 234 )
+_ActionModeBool = true
+
+[node name="B" parent="Control/ButControl/BackBut" instance=ExtResource( 8 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-返回"
+
+[node name="ApplyBut" parent="Control/ButControl" instance=ExtResource( 24 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -127.5
+margin_top = -42.5
+margin_right = -42.5
+margin_bottom = 42.5
+custom_styles/hover = SubResource( 185 )
+custom_styles/pressed = SubResource( 231 )
+custom_styles/focus = SubResource( 232 )
+custom_styles/disabled = SubResource( 233 )
+custom_styles/normal = SubResource( 234 )
+_ActionModeBool = true
+
+[node name="X" parent="Control/ButControl/ApplyBut" instance=ExtResource( 8 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-切换"
+
+[node name="Ani" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/Reward = SubResource( 224 )
+anims/hide = SubResource( 216 )
+anims/init = SubResource( 217 )
+anims/show = SubResource( 218 )
+
+[connection signal="pressed" from="Control/Info/Control/HBoxContainer/1" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="Control/Info/Control/HBoxContainer/2" to="." method="_on_2_pressed"]
+[connection signal="pressed" from="Control/Info/Control/HBoxContainer/3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="Control/Info/Control/HBoxContainer/4" to="." method="_on_4_pressed"]
+[connection signal="pressed" from="Control/Info/Control/HBoxContainer/5" to="." method="_on_5_pressed"]
+[connection signal="pressed" from="Control/Info/Control/HBoxContainer/6" to="." method="_on_6_pressed"]
+[connection signal="pressed" from="Control/Info/Control/HBoxContainer/7" to="." method="_on_7_pressed"]
+[connection signal="pressed" from="Control/Info/Control/HBoxContainer/8" to="." method="_on_8_pressed"]
+[connection signal="pressed" from="Control/Info/Control/HBoxContainer/9" to="." method="_on_9_pressed"]
+[connection signal="pressed" from="Control/Info/BG/Scroll/Grid/1" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="Control/ButControl/BackBut" to="." method="call_closed"]
+[connection signal="pressed" from="Control/ButControl/ApplyBut" to="." method="_on_But_pressed"]
+
+[editable path="Control/Info/Control/HBoxContainer/1"]
+[editable path="Control/Info/Control/HBoxContainer/2"]
+[editable path="Control/Info/Control/HBoxContainer/3"]
+[editable path="Control/Info/Control/HBoxContainer/4"]
+[editable path="Control/Info/Control/HBoxContainer/5"]
+[editable path="Control/Info/Control/HBoxContainer/6"]
+[editable path="Control/Info/Control/HBoxContainer/7"]
+[editable path="Control/Info/Control/HBoxContainer/8"]
+[editable path="Control/Info/Control/HBoxContainer/9"]

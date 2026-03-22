@@ -1,0 +1,154 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_cream_open.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_blueberry.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_milk_open.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_rum_top.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_yogurt.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_blueberry_top.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_cheery_top.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_yogurt_top.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_rum.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_cheery.tres" type="Texture" id=10]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_icecream_rum.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_icecream_cheery.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_icecream_blueberry.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_icecream_yogurt.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_8.png" type="Texture" id=16]
+
+[node name="冰淇淋口味2" type="Node2D"]
+position = Vector2( 14, 55 )
+
+[node name="220" type="RichTextLabel" parent="."]
+margin_left = -375.0
+margin_top = 71.0
+margin_right = 398.0
+margin_bottom = 222.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "你可以分别使用冷冻蓝莓汁，冷冻樱桃汁，酸奶和朗姆酒制作对应的冰淇淋。"
+text = "你可以分别使用冷冻蓝莓汁，冷冻樱桃汁，酸奶和朗姆酒制作对应的冰淇淋。"
+script = ExtResource( 11 )
+LabelTEXT = "信息-文字说明-220"
+Center_Bool = true
+
+[node name="5" type="Node2D" parent="."]
+position = Vector2( -58, 4 )
+
+[node name="ParticleCircle8" type="Sprite" parent="5"]
+self_modulate = Color( 0.745098, 0.196078, 0.196078, 1 )
+show_behind_parent = true
+position = Vector2( -7, -18 )
+scale = Vector2( 1.51351, 1.51351 )
+texture = ExtResource( 16 )
+
+[node name="MaterialBottleMilk" type="Sprite" parent="5"]
+position = Vector2( -29, -10 )
+texture = ExtResource( 3 )
+
+[node name="MaterialBottleCream" type="Sprite" parent="5"]
+position = Vector2( 14, -11 )
+texture = ExtResource( 1 )
+
+[node name="MaterialSugarWhitecube" type="Sprite" parent="5"]
+position = Vector2( -9, 11 )
+texture = ExtResource( 10 )
+
+[node name="MaterialBottleVanillaTop" type="Sprite" parent="5/MaterialSugarWhitecube"]
+position = Vector2( 0, -29 )
+texture = ExtResource( 7 )
+
+[node name="IconIcecreamPistachio" type="Sprite" parent="5"]
+position = Vector2( -9, -78 )
+texture = ExtResource( 13 )
+
+[node name="6" type="Node2D" parent="."]
+position = Vector2( 94, 5 )
+
+[node name="MaterialBottleMilk" type="Sprite" parent="6"]
+position = Vector2( -29, -10 )
+texture = ExtResource( 3 )
+
+[node name="MaterialBottleCream" type="Sprite" parent="6"]
+position = Vector2( 14, -11 )
+texture = ExtResource( 1 )
+
+[node name="MaterialPowderCoco" type="Sprite" parent="6"]
+position = Vector2( -8, 11 )
+texture = ExtResource( 5 )
+
+[node name="MaterialBottleYogurtTop" type="Sprite" parent="6/MaterialPowderCoco"]
+position = Vector2( 0, -32 )
+texture = ExtResource( 8 )
+
+[node name="IconIcecreamCoco" type="Sprite" parent="6"]
+position = Vector2( -5, -79 )
+texture = ExtResource( 15 )
+
+[node name="ParticleCircle8" type="Sprite" parent="6"]
+self_modulate = Color( 0.878431, 0.654902, 1, 1 )
+show_behind_parent = true
+position = Vector2( -7, -18 )
+scale = Vector2( 1.51351, 1.51351 )
+texture = ExtResource( 16 )
+
+[node name="7" type="Node2D" parent="."]
+position = Vector2( 253, 4 )
+
+[node name="MaterialBottleMilk" type="Sprite" parent="7"]
+position = Vector2( -29, -10 )
+texture = ExtResource( 3 )
+
+[node name="MaterialBottleCream" type="Sprite" parent="7"]
+position = Vector2( 14, -11 )
+texture = ExtResource( 1 )
+
+[node name="MaterialPowderMocha" type="Sprite" parent="7"]
+position = Vector2( -9, 12 )
+texture = ExtResource( 9 )
+
+[node name="MaterialBottleRumTop" type="Sprite" parent="7/MaterialPowderMocha"]
+position = Vector2( -1, -31 )
+texture = ExtResource( 4 )
+
+[node name="IconIcecreamMocha" type="Sprite" parent="7"]
+position = Vector2( -10, -79 )
+texture = ExtResource( 12 )
+
+[node name="ParticleCircle8" type="Sprite" parent="7"]
+self_modulate = Color( 1, 0.752941, 0.513726, 1 )
+show_behind_parent = true
+position = Vector2( -7, -18 )
+scale = Vector2( 1.51351, 1.51351 )
+texture = ExtResource( 16 )
+
+[node name="8" type="Node2D" parent="."]
+position = Vector2( -214, 3 )
+
+[node name="MaterialBottleMilk" type="Sprite" parent="8"]
+position = Vector2( -29, -10 )
+texture = ExtResource( 3 )
+
+[node name="MaterialBottleCream" type="Sprite" parent="8"]
+position = Vector2( 14, -11 )
+texture = ExtResource( 1 )
+
+[node name="IconIcecreamMocha" type="Sprite" parent="8"]
+position = Vector2( -10, -79 )
+texture = ExtResource( 14 )
+
+[node name="ParticleCircle8" type="Sprite" parent="8"]
+self_modulate = Color( 0.239216, 0.345098, 0.760784, 1 )
+show_behind_parent = true
+position = Vector2( -7, -18 )
+scale = Vector2( 1.51351, 1.51351 )
+texture = ExtResource( 16 )
+
+[node name="MaterialSugarWhitecube" type="Sprite" parent="8"]
+position = Vector2( -9, 11 )
+texture = ExtResource( 2 )
+
+[node name="MaterialBottleVanillaTop" type="Sprite" parent="8/MaterialSugarWhitecube"]
+position = Vector2( 0, -30 )
+texture = ExtResource( 6 )

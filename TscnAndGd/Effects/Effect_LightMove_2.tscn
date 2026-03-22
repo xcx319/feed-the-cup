@@ -1,0 +1,158 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Resources/Outdoor/outdoor2_pack.sprites/gym_light_2.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Effects/Single/Single/light_trapezoid_2.png" type="Texture" id=8]
+
+[sub_resource type="Animation" id=1]
+resource_name = "init"
+length = 21.0
+loop = true
+tracks/0/type = "animation"
+tracks/0/path = NodePath("Loop")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "loopin", "show", "loopout", "back", "loopin" ),
+"times": PoolRealArray( 0, 3, 5, 17, 18 )
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "back"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Main:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 44.9999, -0.2, 0.53764, 0.4, -6.99064, 0, -0.25, 0, 0.4, 1.41126 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "loopin"
+length = 3.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Main:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.2, 0.53764, 1.5, -13.2426, 0, -1, 1.70724, 0.25, 0 ),
+"times": PoolRealArray( 0, 3 )
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "loopout"
+length = 6.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Main:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 44.9999, -0.2, 0.53764, 1, 1.52925, 53, -1.3, 5.18572, 0.776006, -4.42609, 45, -0.523993, -1.54044, 0.25, 0 ),
+"times": PoolRealArray( 0, 4.3, 6 )
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "show"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Main:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.4, 1.41126, 50, -0.3, -0.135391, 0.2, 0.315338, 44.9999, -0.2, 0.53764, 1, 1.52925 ),
+"times": PoolRealArray( 0, 1.5, 2 )
+}
+
+[sub_resource type="CanvasItemMaterial" id=6]
+blend_mode = 1
+
+[sub_resource type="Animation" id=7]
+resource_name = "1"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("GymLight1:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.5, 5, 7.6, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -30.0, 0.0, -30.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("GymLight1/LightTrapezoid2:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.9, 6.6, 9.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.403922, 1, 0.756863, 1 ), Color( 1, 0, 0.94902, 1 ), Color( 0.403922, 0.972549, 1, 1 ), Color( 0.403922, 1, 0.756863, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("GymLight1/LightTrapezoid2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.6, 1.3, 1.8, 2.5, 3.1, 3.8, 4.4, 5.1, 5.7, 6.4, 6.8, 7.5, 8.1, 8.8, 9.1, 9.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.556863 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.556863 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.556863 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.556863 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.556863 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.556863 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.556863 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.556863 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Effect_LightMove" type="Node2D"]
+
+[node name="Texture" type="Node2D" parent="."]
+rotation = 1.5708
+
+[node name="Ani" type="AnimationPlayer" parent="Texture"]
+autoplay = "init"
+anims/init = SubResource( 1 )
+
+[node name="Loop" type="AnimationPlayer" parent="Texture"]
+anims/back = SubResource( 2 )
+anims/loopin = SubResource( 3 )
+anims/loopout = SubResource( 4 )
+anims/show = SubResource( 5 )
+
+[node name="Main" type="Node2D" parent="Texture"]
+
+[node name="Light2" type="Node2D" parent="Texture/Main"]
+position = Vector2( -25.4714, 24.5196 )
+rotation = 2.09439
+
+[node name="GymLight1" type="Sprite" parent="Texture/Main/Light2"]
+texture = ExtResource( 1 )
+offset = Vector2( 0, 10 )
+
+[node name="LightTrapezoid2" type="Sprite" parent="Texture/Main/Light2/GymLight1"]
+self_modulate = Color( 0.403922, 1, 0.756863, 1 )
+material = SubResource( 6 )
+position = Vector2( -40, 25 )
+rotation = 1.0472
+scale = Vector2( 1.5, 3 )
+texture = ExtResource( 8 )
+offset = Vector2( -2.94629, 55.5121 )
+
+[node name="act" type="AnimationPlayer" parent="Texture/Main/Light2"]
+autoplay = "1"
+anims/1 = SubResource( 7 )

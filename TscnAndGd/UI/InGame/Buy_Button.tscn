@@ -1,0 +1,597 @@
+[gd_scene load_steps=47 format=2]
+
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=1]
+[ext_resource path="res://TscnAndGd/Buttons/NoFocusButton.gd" type="Script" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_8.tres" type="Texture" id=3]
+[ext_resource path="res://TscnAndGd/UI/InGame/IconNode.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_coin.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_9.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_frame_small.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_left.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_right.tres" type="Texture" id=10]
+[ext_resource path="res://TscnAndGd/UI/InGame/Buy_Button.gd" type="Script" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_button_special_blank_dark.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_difficulty_light.tres" type="Texture" id=13]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=14]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_button_special_blank_orange.tres" type="Texture" id=15]
+
+[sub_resource type="StyleBoxTexture" id=40]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 176, 81 )
+margin_left = 156.0
+margin_right = 155.0
+margin_top = 18.0
+margin_bottom = 19.0
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="StyleBoxTexture" id=38]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 176, 81 )
+margin_left = 155.0
+margin_right = 157.0
+margin_top = 17.0
+margin_bottom = 16.0
+
+[sub_resource type="StyleBoxEmpty" id=41]
+
+[sub_resource type="StyleBoxEmpty" id=39]
+
+[sub_resource type="StyleBoxTexture" id=82]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 88, 88 )
+margin_left = 23.0
+margin_right = 23.0
+margin_top = 25.0
+margin_bottom = 26.0
+modulate_color = Color( 0.992157, 1, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=84]
+
+[sub_resource type="StyleBoxTexture" id=83]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 88, 88 )
+margin_left = 23.0
+margin_right = 23.0
+margin_top = 25.0
+margin_bottom = 26.0
+modulate_color = Color( 1, 0.588235, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=85]
+
+[sub_resource type="StyleBoxEmpty" id=86]
+
+[sub_resource type="Animation" id=90]
+resource_name = "press"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.8, 0.8 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="StyleBoxTexture" id=80]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=44]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxEmpty" id=45]
+
+[sub_resource type="StyleBoxTexture" id=78]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="StyleBoxTexture" id=46]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=81]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=69]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=79]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="Animation" id=91]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("CurNode/curNum:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=92]
+resource_name = "red"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("CurNode/curNum:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=89]
+resource_name = "hide"
+length = 0.2
+
+[sub_resource type="Animation" id=59]
+resource_name = "init"
+length = 0.1
+
+[sub_resource type="Animation" id=60]
+resource_name = "show"
+length = 0.2
+
+[sub_resource type="Animation" id=71]
+resource_name = "low"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../CurNode/curNum:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=72]
+resource_name = "normal"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../CurNode/curNum:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=74]
+resource_name = "none"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../SentNode/SentNum:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=75]
+resource_name = "sent"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../SentNode/SentNum:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=76]
+resource_name = "init"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("../CurNode/curNum/MaxNum:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=77]
+resource_name = "show"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../CurNode/curNum/MaxNum:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../SentNode/MaxLabel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=87]
+resource_name = "Base"
+length = 0.1
+tracks/0/type = "method"
+tracks/0/path = NodePath("../Button/Label")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "按钮-订货" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Button:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Button/Sprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 15 ) ]
+}
+
+[sub_resource type="Animation" id=88]
+resource_name = "Cancel"
+length = 0.1
+tracks/0/type = "method"
+tracks/0/path = NodePath("../Button/Label")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "按钮-订货取消" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Button:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Button/Sprite:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 12 ) ]
+}
+
+[node name="1" type="Button"]
+margin_right = 555.0
+margin_bottom = 81.0
+rect_min_size = Vector2( 815, 81 )
+custom_styles/hover = SubResource( 40 )
+custom_styles/pressed = SubResource( 38 )
+custom_styles/focus = SubResource( 41 )
+custom_styles/normal = SubResource( 39 )
+toggle_mode = true
+expand_icon = true
+script = ExtResource( 11 )
+
+[node name="IconNode" parent="." instance=ExtResource( 4 )]
+position = Vector2( 53, 40 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 623.0
+margin_top = 2.0
+margin_right = 813.0
+margin_bottom = 77.0
+rect_min_size = Vector2( 190, 75 )
+rect_pivot_offset = Vector2( 95, 37 )
+custom_styles/hover = SubResource( 82 )
+custom_styles/pressed = SubResource( 84 )
+custom_styles/focus = SubResource( 83 )
+custom_styles/disabled = SubResource( 85 )
+custom_styles/normal = SubResource( 86 )
+disabled = true
+
+[node name="Sprite" type="NinePatchRect" parent="Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 12 )
+patch_margin_left = 30
+patch_margin_top = 21
+patch_margin_right = 24
+patch_margin_bottom = 28
+
+[node name="Label" type="Label" parent="Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -7.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "取消配送"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 14 )
+LabelTEXT = "按钮-订货"
+
+[node name="Ani" type="AnimationPlayer" parent="Button"]
+anims/press = SubResource( 90 )
+
+[node name="InfoNode" type="Node2D" parent="."]
+position = Vector2( 5, 0 )
+
+[node name="Label" type="RichTextLabel" parent="InfoNode"]
+margin_left = 103.0
+margin_right = 401.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 270, 80 )
+mouse_filter = 2
+input_pass_on_modal_close_click = false
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "一桶液态果糖，需要将其加入果糖机中。"
+meta_underlined = false
+tab_size = 1
+text = "一桶液态果糖，需要将其加入果糖机中。"
+fit_content_height = true
+scroll_active = false
+scroll_following = true
+deselect_on_focus_loss_enabled = false
+
+[node name="SellNode" type="Node2D" parent="."]
+position = Vector2( 455, 40 )
+
+[node name="Sprite" type="Sprite" parent="SellNode"]
+position = Vector2( 45, 0 )
+texture = ExtResource( 5 )
+
+[node name="SellLabel" type="Label" parent="SellNode"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+margin_left = -35.0
+margin_top = -17.0
+margin_right = 35.0
+margin_bottom = 13.0
+rect_pivot_offset = Vector2( 35, 15 )
+custom_fonts/font = ExtResource( 1 )
+text = "9999"
+align = 1
+valign = 1
+
+[node name="Plus" type="Sprite" parent="SellNode"]
+position = Vector2( 75, -0.5 )
+texture = ExtResource( 3 )
+flip_h = true
+flip_v = true
+
+[node name="Minus" type="Sprite" parent="SellNode"]
+visible = false
+position = Vector2( 75, -0.5 )
+texture = ExtResource( 7 )
+flip_v = true
+
+[node name="NumNode" type="Node2D" parent="."]
+visible = false
+position = Vector2( 735, 38 )
+
+[node name="bg" type="Sprite" parent="NumNode"]
+texture = ExtResource( 8 )
+
+[node name="NumLabel" type="Label" parent="NumNode"]
+margin_left = -25.0
+margin_top = -15.0
+margin_right = 25.0
+margin_bottom = 15.0
+rect_pivot_offset = Vector2( 25, 15 )
+text = "+0"
+align = 1
+valign = 1
+
+[node name="L" type="Button" parent="NumNode"]
+visible = false
+margin_left = -60.0
+margin_top = -16.0
+margin_right = -28.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 32, 34 )
+focus_mode = 0
+mouse_filter = 2
+custom_styles/hover = SubResource( 80 )
+custom_styles/pressed = SubResource( 44 )
+custom_styles/focus = SubResource( 45 )
+custom_styles/disabled = SubResource( 78 )
+custom_styles/normal = SubResource( 46 )
+disabled = true
+script = ExtResource( 2 )
+
+[node name="R" type="Button" parent="NumNode"]
+visible = false
+margin_left = 28.0
+margin_top = -16.0
+margin_right = 60.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 32, 34 )
+rect_pivot_offset = Vector2( 16, 17 )
+focus_mode = 0
+mouse_filter = 2
+custom_styles/hover = SubResource( 81 )
+custom_styles/pressed = SubResource( 69 )
+custom_styles/focus = SubResource( 45 )
+custom_styles/disabled = SubResource( 79 )
+custom_styles/normal = SubResource( 69 )
+disabled = true
+text = "+6"
+script = ExtResource( 2 )
+
+[node name="MaxLabel" type="Label" parent="NumNode"]
+margin_left = -60.0
+margin_top = 17.0
+margin_right = 60.0
+margin_bottom = 38.0
+text = "MAX"
+align = 1
+valign = 1
+
+[node name="CurNode" type="Node2D" parent="."]
+
+[node name="curNum" type="Label" parent="CurNode"]
+self_modulate = Color( 1, 0, 0, 1 )
+margin_left = 569.0
+margin_top = 27.0
+margin_right = 599.0
+margin_bottom = 52.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+
+[node name="MaxNum" type="Label" parent="CurNode/curNum"]
+visible = false
+margin_left = 30.0
+margin_right = 60.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "/10"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CurNode/curNum"]
+root_node = NodePath("../../..")
+autoplay = "red"
+anims/init = SubResource( 91 )
+anims/red = SubResource( 92 )
+
+[node name="SentNode" type="Node2D" parent="."]
+visible = false
+
+[node name="SentNum" type="Label" parent="SentNode"]
+self_modulate = Color( 1, 0, 0, 1 )
+margin_left = 604.0
+margin_top = 27.0
+margin_right = 634.0
+margin_bottom = 48.0
+text = "无"
+align = 1
+
+[node name="MaxLabel" type="Label" parent="SentNode"]
+visible = false
+margin_left = 559.0
+margin_top = 55.0
+margin_right = 679.0
+margin_bottom = 76.0
+text = "MAX"
+align = 1
+valign = 1
+
+[node name="Node" type="Node" parent="."]
+
+[node name="BuyAni" type="AnimationPlayer" parent="Node"]
+root_node = NodePath("../..")
+autoplay = "init"
+anims/hide = SubResource( 89 )
+anims/init = SubResource( 59 )
+anims/show = SubResource( 60 )
+
+[node name="NumAni" type="AnimationPlayer" parent="Node"]
+autoplay = "normal"
+anims/low = SubResource( 71 )
+anims/normal = SubResource( 72 )
+
+[node name="SentAni" type="AnimationPlayer" parent="Node"]
+autoplay = "none"
+anims/none = SubResource( 74 )
+anims/sent = SubResource( 75 )
+
+[node name="DevAni" type="AnimationPlayer" parent="Node"]
+autoplay = "init"
+anims/init = SubResource( 76 )
+anims/show = SubResource( 77 )
+
+[node name="ButAni" type="AnimationPlayer" parent="Node"]
+anims/Base = SubResource( 87 )
+anims/Cancel = SubResource( 88 )
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="pressed" from="." to="." method="_on_self_pressed"]
+[connection signal="toggled" from="." to="." method="_on_self_toggled"]
+[connection signal="button_down" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="NumNode/L" to="." method="_on_Reduce_pressed"]
+[connection signal="pressed" from="NumNode/R" to="." method="_on_Plus_pressed"]

@@ -1,0 +1,254 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_Freezer_table_base.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_Freezer_table_cover.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_Freezer_table_door_1.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_Freezer_table_door_2.tres" type="Texture" id=4]
+[ext_resource path="res://TscnAndGd/Objects/Devices/Shelf_OnTable.gd" type="Script" id=5]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/store_shelffreezer_back.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_Freezer_table_shelf.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/store_shelffreezer_base.tres" type="Texture" id=8]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=9]
+
+[sub_resource type="Animation" id=3]
+resource_name = "OpenLeft"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Front/Door/DeviceFreezerTableDoor1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 45, 0 ), Vector2( 45, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Front/Door/DeviceFreezerTableDoor2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 44, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "OpenRight"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Front/Door/DeviceFreezerTableDoor1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Front/Door/DeviceFreezerTableDoor2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 44, 0 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 44, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Off"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Light/DeviceSwitchlightGreen:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "On"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Light/DeviceSwitchlightGreen:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 50, 20 )
+
+[node name="Freezer" type="Area2D"]
+use_parent_material = true
+collision_layer = 384
+collision_mask = 3584
+script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": "FreezerOnTable"
+}
+
+[node name="Back" type="Node2D" parent="."]
+show_behind_parent = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Back"]
+margin_left = -46.0
+margin_top = -112.0
+margin_right = 48.0
+margin_bottom = 26.0
+texture = ExtResource( 1 )
+patch_margin_top = 9
+patch_margin_bottom = 46
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Layer" type="Node2D" parent="."]
+position = Vector2( 0, 18 )
+
+[node name="DeviceFreezerTableShelf" type="Sprite" parent="Layer"]
+position = Vector2( 0, -84 )
+texture = ExtResource( 7 )
+
+[node name="Obj_A" type="Node2D" parent="."]
+show_behind_parent = true
+position = Vector2( -22, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Obj_B" type="Node2D" parent="."]
+show_behind_parent = true
+position = Vector2( 22, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Obj_X" type="Node2D" parent="."]
+position = Vector2( -22, -70 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Obj_Y" type="Node2D" parent="."]
+position = Vector2( 22, -70 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Front" type="Node2D" parent="."]
+use_parent_material = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Front"]
+use_parent_material = true
+margin_left = -50.0
+margin_top = -164.0
+margin_right = 50.0
+margin_bottom = 36.0
+texture = ExtResource( 2 )
+patch_margin_top = 63
+patch_margin_bottom = 34
+
+[node name="Door" type="Node2D" parent="Front"]
+position = Vector2( -23, -50 )
+
+[node name="DeviceFreezerTableDoor1" type="Sprite" parent="Front/Door"]
+texture = ExtResource( 3 )
+
+[node name="DeviceFreezerTableDoor2" type="Sprite" parent="Front/Door"]
+position = Vector2( 44, 0 )
+texture = ExtResource( 4 )
+
+[node name="Light" type="Node2D" parent="."]
+position = Vector2( -25, 19 )
+
+[node name="DeviceSwitchlightGreen" type="Sprite" parent="Light"]
+position = Vector2( 0, 4 )
+texture = ExtResource( 6 )
+
+[node name="AniNode" type="Node2D" parent="."]
+
+[node name="Act" type="AnimationPlayer" parent="AniNode"]
+anims/OpenLeft = SubResource( 3 )
+anims/OpenRight = SubResource( 4 )
+
+[node name="TurnAni" type="AnimationPlayer" parent="AniNode"]
+anims/Off = SubResource( 6 )
+anims/On = SubResource( 7 )
+
+[node name="Timer" type="Timer" parent="AniNode"]
+wait_time = 5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 16 )
+shape = SubResource( 5 )
+
+[node name="A" parent="." instance=ExtResource( 9 )]
+margin_left = -15.0
+margin_top = -35.0
+margin_right = -15.0
+margin_bottom = -35.0
+bool_Small = true
+Info_Str = "BUT-搬运"
+OnBut = false
+
+[node name="But" type="Node2D" parent="."]
+visible = false
+position = Vector2( 0, -12 )
+
+[node name="A" parent="But" instance=ExtResource( 9 )]
+margin_left = -22.0
+margin_top = 10.0
+margin_right = -22.0
+margin_bottom = 10.0
+bool_Small = true
+OnBut = false
+
+[node name="B" parent="But" instance=ExtResource( 9 )]
+margin_left = 22.0
+margin_top = 10.0
+margin_right = 22.0
+margin_bottom = 10.0
+bool_Small = true
+OnBut = false
+
+[node name="X" parent="But" instance=ExtResource( 9 )]
+margin_left = -22.0
+margin_top = -50.0
+margin_right = -22.0
+margin_bottom = -50.0
+bool_Small = true
+OnBut = false
+
+[node name="Y" parent="But" instance=ExtResource( 9 )]
+margin_left = 22.0
+margin_top = -50.0
+margin_right = 22.0
+margin_bottom = -50.0
+bool_Small = true
+OnBut = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="AniNode/Timer" to="." method="_on_Timer_timeout"]

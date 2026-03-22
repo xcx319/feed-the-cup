@@ -1,0 +1,168 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://TscnAndGd/Effects/shaders/teleport-effect.tres" type="Shader" id=1]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_switchlight_red.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Item/item_pack.sprites/item_pot_boba.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_bobamachine_front_s.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_bobamachine_close.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_bobamachine_box.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_bobamachine_open.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_bobamachine_ui_4.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_sugar_whitecube.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_sugar_blackcube.tres" type="Texture" id=10]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=11]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=12]
+
+[sub_resource type="ShaderMaterial" id=269]
+shader = ExtResource( 1 )
+shader_param/progress = 0.194118
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = 0.15
+shader_param/color = Color( 1, 0.54902, 0, 1 )
+
+[node name="双色珍珠" type="Node2D"]
+
+[node name="129" type="RichTextLabel" parent="."]
+margin_left = 114.0
+margin_top = 445.0
+margin_right = 852.0
+margin_bottom = 621.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "黑糖珍珠和琥珀珍珠的做法是一样的，区别在于最后一步时，加入的糖不同。
+黑糖珍珠需要黑糖，而琥珀珍珠需要白糖。"
+text = "黑糖珍珠和琥珀珍珠的做法是一样的，区别在于最后一步时，加入的糖不同。
+黑糖珍珠需要黑糖，而琥珀珍珠需要白糖。"
+script = ExtResource( 11 )
+LabelTEXT = "信息-文字说明-129"
+Center_Bool = true
+
+[node name="Boba4" type="Node2D" parent="."]
+material = SubResource( 269 )
+use_parent_material = true
+position = Vector2( 359, 343 )
+scale = Vector2( 1, 1.03333 )
+
+[node name="back" type="Node2D" parent="Boba4"]
+use_parent_material = true
+position = Vector2( 0, -30 )
+
+[node name="Machine" type="Sprite" parent="Boba4/back"]
+use_parent_material = true
+texture = ExtResource( 6 )
+
+[node name="Cover" type="Sprite" parent="Boba4/back"]
+use_parent_material = true
+texture = ExtResource( 7 )
+
+[node name="InsideNode" type="Node2D" parent="Boba4"]
+use_parent_material = true
+position = Vector2( 0, -30 )
+
+[node name="ItemNode" type="Node2D" parent="Boba4/InsideNode"]
+position = Vector2( 0, 8 )
+
+[node name="Item" type="Sprite" parent="Boba4/InsideNode/ItemNode"]
+modulate = Color( 0.435294, 0.286275, 0.286275, 1 )
+use_parent_material = true
+position = Vector2( 0, 0.709625 )
+texture = ExtResource( 3 )
+
+[node name="front" type="Node2D" parent="Boba4"]
+use_parent_material = true
+position = Vector2( 0, -30 )
+
+[node name="Front" type="Sprite" parent="Boba4/front"]
+use_parent_material = true
+texture = ExtResource( 4 )
+
+[node name="Cover" type="Sprite" parent="Boba4/front"]
+visible = false
+use_parent_material = true
+texture = ExtResource( 5 )
+
+[node name="Effects" type="Node2D" parent="Boba4/front"]
+position = Vector2( 7, 10.129 )
+
+[node name="DeviceSwitchlightRed" type="Sprite" parent="Boba4/front/Effects"]
+use_parent_material = true
+position = Vector2( 21, 23 )
+texture = ExtResource( 2 )
+
+[node name="DeviceBobamachineUi4" type="Sprite" parent="Boba4/front/Effects"]
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -7, 27.6129 )
+texture = ExtResource( 8 )
+
+[node name="MaterialSugarBlackcube" type="Sprite" parent="Boba4"]
+position = Vector2( -155, -16.4517 )
+texture = ExtResource( 10 )
+
+[node name="Boba5" type="Node2D" parent="."]
+material = SubResource( 269 )
+use_parent_material = true
+position = Vector2( 710, 343 )
+scale = Vector2( 1, 1.03333 )
+
+[node name="back" type="Node2D" parent="Boba5"]
+use_parent_material = true
+position = Vector2( 0, -30 )
+
+[node name="Machine" type="Sprite" parent="Boba5/back"]
+use_parent_material = true
+texture = ExtResource( 6 )
+
+[node name="Cover" type="Sprite" parent="Boba5/back"]
+use_parent_material = true
+texture = ExtResource( 7 )
+
+[node name="InsideNode" type="Node2D" parent="Boba5"]
+use_parent_material = true
+position = Vector2( 0, -30 )
+
+[node name="ItemNode" type="Node2D" parent="Boba5/InsideNode"]
+position = Vector2( 0, 8 )
+
+[node name="Item" type="Sprite" parent="Boba5/InsideNode/ItemNode"]
+modulate = Color( 0.913725, 0.694118, 0.223529, 1 )
+use_parent_material = true
+position = Vector2( 0, 0.709625 )
+texture = ExtResource( 3 )
+
+[node name="front" type="Node2D" parent="Boba5"]
+use_parent_material = true
+position = Vector2( 0, -30 )
+
+[node name="Front" type="Sprite" parent="Boba5/front"]
+use_parent_material = true
+texture = ExtResource( 4 )
+
+[node name="Cover" type="Sprite" parent="Boba5/front"]
+visible = false
+use_parent_material = true
+texture = ExtResource( 5 )
+
+[node name="Effects" type="Node2D" parent="Boba5/front"]
+position = Vector2( 7, 10.129 )
+
+[node name="DeviceSwitchlightRed" type="Sprite" parent="Boba5/front/Effects"]
+use_parent_material = true
+position = Vector2( 21, 23 )
+texture = ExtResource( 2 )
+
+[node name="DeviceBobamachineUi4" type="Sprite" parent="Boba5/front/Effects"]
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -7, 27.6129 )
+texture = ExtResource( 8 )
+
+[node name="MaterialSugarWhitecube" type="Sprite" parent="Boba5"]
+position = Vector2( -162, -17.4194 )
+texture = ExtResource( 9 )
+
+[node name="TotuInfo2" type="Sprite" parent="."]
+position = Vector2( 270, 332 )
+texture = ExtResource( 12 )
+
+[node name="TotuInfo3" type="Sprite" parent="."]
+position = Vector2( 619, 331 )
+texture = ExtResource( 12 )

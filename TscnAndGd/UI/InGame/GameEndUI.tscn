@@ -1,0 +1,1581 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://Sounds/Effect/气泡.wav" type="AudioStream" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_coin.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_app_star.tres" type="Texture" id=3]
+[ext_resource path="res://Language/Fonts/cn_font_logo.tres" type="DynamicFont" id=4]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=5]
+[ext_resource path="res://TscnAndGd/UI/InGame/DayControl.tscn" type="PackedScene" id=6]
+[ext_resource path="res://TscnAndGd/UI/InGame/GameEndUI.gd" type="Script" id=7]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_app_nostar.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_money.tres" type="Texture" id=9]
+[ext_resource path="res://TscnAndGd/UI/Info/CurChoose.tscn" type="PackedScene" id=10]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=11]
+[ext_resource path="res://Language/Fonts/Base_l.tres" type="DynamicFont" id=12]
+[ext_resource path="res://TscnAndGd/UI/InGame/Popular.gd" type="Script" id=13]
+[ext_resource path="res://Resources/UI/Main/Demo_BG.png" type="Texture" id=14]
+
+[sub_resource type="StyleBoxFlat" id=105]
+bg_color = Color( 0.0156863, 0.0156863, 0.0156863, 0.784314 )
+
+[sub_resource type="DynamicFontData" id=95]
+font_path = "res://Language/Fonts/simhei.ttf"
+
+[sub_resource type="DynamicFont" id=100]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 95 )
+
+[sub_resource type="StyleBoxEmpty" id=107]
+
+[sub_resource type="StyleBoxEmpty" id=108]
+
+[sub_resource type="StyleBoxEmpty" id=109]
+
+[sub_resource type="StyleBoxEmpty" id=110]
+
+[sub_resource type="StyleBoxEmpty" id=111]
+
+[sub_resource type="Animation" id=96]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("BG/Mission/Control/Fail:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BG/Mission/Control/Complete:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ false ],
+"method": "call_show_switch"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("BG/UnlockLevel:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("DemoEnd:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=97]
+resource_name = "show"
+length = 3.0
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ false ],
+"method": "call_show_switch"
+}, {
+"args": [ true ],
+"method": "call_show_switch"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BG/Mission/BigWin:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 0.64 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 286, 0 ), Vector2( 286, 0 ), Vector2( 286, -140 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BG/Mission/BigWin:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.18, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1.4, 1.4 ), Vector2( 1, 1 ) ]
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("BG/Mission/BigWin:rect_rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.1, 20.7355, 0, -0.06, -17.1731, 0.12, 17.4795, 0, -0.1, -16.2428, 0.08, 13.0607, 0, -0.16, -11.5915, 0.08, 6.31626, 0, -0.1, -10.4286, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.16, 0.32, 0.5, 0.64 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("BG/Mission/BigLose:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4, 0.64 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 290, -314 ), Vector2( 286, -220 ), Vector2( 286, -220 ) ]
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("BG/Mission/BigLose:rect_rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.44, 15.7353, -8, -0.12, -12.3128, 0.08, 2.5607, -8, -0.08, -1.41151, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.54, 0.64 )
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("BG/Mission/Control:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.64, 0.94 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("BG/InfoControl/Date/Popular:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("BG/InfoControl/Date/DayLabel:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("BG/InfoControl/Date/TotalSellLabel:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 2, 2.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("BG/InfoControl/Date/TotalMoney:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 2.2, 2.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("BG/InfoControl/Date/Popular/HBox/1:rect_scale")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 1.1, 1.3, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 2, 2 ), Vector2( 1, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("BG/InfoControl/Date/Popular/HBox/2:rect_scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 1.2, 1.4, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 2, 2 ), Vector2( 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("BG/InfoControl/Date/Popular/HBox/3:rect_scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 1.3, 1.5, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 2, 2 ), Vector2( 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("BG/InfoControl/Date/Popular/HBox/4:rect_scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 1.4, 1.6, 1.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 2, 2 ), Vector2( 1, 1 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("BG/InfoControl/Date/Popular/HBox/5:rect_scale")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 1.5, 1.7, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 2, 2 ), Vector2( 1, 1 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("BG/InfoControl/Reward/StoreBaseValueLabel:rect_scale")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0, 2.3, 2.4, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/18/type = "bezier"
+tracks/18/path = NodePath("BG/InfoControl/Reward/StoreBaseValueLabel:rect_rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.0619349, 124.744, 0, -0.25, 0, 0.0619349, 124.744, 0, -0.218065, -55.7514, 0.25, 0 ),
+"times": PoolRealArray( 0, 2.3, 2.5 )
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("BG/InfoControl/Reward/Label:rect_scale")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 2.4, 2.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("BG/InfoControl/Reward/RateLabel:rect_scale")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 2.5, 2.6, 2.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/21/type = "bezier"
+tracks/21/path = NodePath("BG/InfoControl/Reward/RateLabel:rect_rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.114276, 157.144, 0, -0.25, 0, 0.114276, 157.144, 0, -0.225724, -111.656, 0.25, 0 ),
+"times": PoolRealArray( 0, 2.5, 2.7 )
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("BG/InfoControl/Reward/Label2:rect_scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0, 2.7, 2.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("BG/InfoControl/Reward/StoreValueLabel:rect_scale")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 2.8, 2.9, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/24/type = "bezier"
+tracks/24/path = NodePath("BG/InfoControl/Reward/StoreValueLabel:rect_rotation")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.274514, -128.456, 0, -0.25, 0, 0.274514, -128.456, 0, -0.245486, 121.144, 0.25, 0 ),
+"times": PoolRealArray( 0, 2.8, 3 )
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("BG/Button:visible")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0, 2.9, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true ]
+}
+
+[sub_resource type="Animation" id=101]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("BG/Mission/Control/Complete:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BG/Mission/Control/Fail:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BG/Mission/BigWin:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BG/Mission/BigLose:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("BG/Mission/Control/Fail:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("BG/Mission/Control/Fail")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-压力过高" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("BG/Mission/BigLose")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-经营失败" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="Animation" id=102]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("BG/Mission/Control/Complete:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BG/Mission/Control/Fail:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BG/Mission/BigLose:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BG/Mission/BigWin:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath("BG/Mission/Control/Fail")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-资金断裂" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("BG/Mission/BigLose")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-经营失败" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="Animation" id=104]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("BG/Mission/Control/Complete:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BG/Mission/Control/Fail:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BG/Mission/BigWin:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BG/Mission/BigLose:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath("BG/Mission/Control/Fail")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("BG/Mission/BigLose")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-放弃" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="Animation" id=103]
+resource_name = "complete"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("BG/Mission/Control/Complete:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BG/Mission/Control/Fail:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BG/Mission/BigLose:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BG/Mission/BigWin:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath("BG/Mission/BigWin")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-通关" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Language/Fonts/猫啃网秀雅圆.ttf"
+
+[sub_resource type="DynamicFont" id=112]
+size = 50
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=113]
+size = 60
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=114]
+size = 40
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=115]
+bg_color = Color( 0.615686, 1, 0.168627, 1 )
+
+[sub_resource type="StyleBoxFlat" id=116]
+bg_color = Color( 0.117647, 0.117647, 0.117647, 1 )
+
+[sub_resource type="Animation" id=117]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=118]
+resource_name = "play"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/Sprite/5:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 1.2, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1000, -465 ), Vector2( 1000, -465 ), Vector2( 300, -465 ), Vector2( 329, -465 ) ]
+}
+tracks/3/type = "audio"
+tracks/3/path = NodePath("Control/Audio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 1 )
+} ],
+"times": PoolRealArray( 1 )
+}
+
+[node name="GameEndUI" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 105 )
+
+[node name="Panel4" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 350.0
+margin_bottom = -230.0
+custom_styles/panel = SubResource( 105 )
+
+[node name="DayControl" parent="." instance=ExtResource( 6 )]
+margin_top = 508.0
+
+[node name="BG" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -604.0
+margin_top = -474.0
+margin_right = 604.0
+margin_bottom = 474.0
+
+[node name="Mission" type="Control" parent="BG"]
+margin_left = -1.0
+margin_top = 385.0
+margin_right = 1208.0
+margin_bottom = 500.0
+
+[node name="BigWin" type="Label" parent="BG/Mission"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -318.5
+margin_top = -197.5
+margin_right = 321.5
+margin_bottom = -68.5
+rect_pivot_offset = Vector2( 309, 71 )
+custom_fonts/font = ExtResource( 4 )
+text = "目标完成"
+align = 1
+valign = 1
+script = ExtResource( 11 )
+LabelTEXT = "信息-通关"
+
+[node name="BigLose" type="Label" parent="BG/Mission"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -318.5
+margin_top = -277.5
+margin_right = 321.5
+margin_bottom = -21.5011
+rect_rotation = -8.0
+rect_pivot_offset = Vector2( 573, 124 )
+custom_colors/font_color = Color( 0.819608, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "放弃任务"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 11 )
+LabelTEXT = "信息-放弃"
+
+[node name="Control" type="Control" parent="BG/Mission"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Fail" type="Label" parent="BG/Mission/Control"]
+visible = false
+margin_left = 332.0
+margin_top = 20.0
+margin_right = 909.0
+margin_bottom = 135.0
+rect_pivot_offset = Vector2( 281, 58 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "无心经营"
+align = 1
+valign = 1
+script = ExtResource( 11 )
+
+[node name="Complete" type="Label" parent="BG/Mission/Control"]
+visible = false
+margin_left = 340.0
+margin_top = 18.0
+margin_right = 858.0
+margin_bottom = 133.0
+rect_pivot_offset = Vector2( 254, 59 )
+custom_colors/font_color = Color( 0, 0.588235, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "资金收益结算。"
+align = 1
+valign = 1
+script = ExtResource( 11 )
+LabelTEXT = "信息-收益结算"
+
+[node name="InfoControl" type="Control" parent="BG"]
+margin_left = -306.0
+margin_top = 147.0
+margin_right = 219.0
+margin_bottom = 904.0
+
+[node name="Date" type="VBoxContainer" parent="BG/InfoControl"]
+margin_left = 31.0
+margin_top = 297.0
+margin_right = 466.0
+margin_bottom = 732.0
+custom_constants/separation = 20
+
+[node name="Popular" type="Label" parent="BG/InfoControl/Date"]
+margin_right = 435.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 158, 0 )
+custom_fonts/font = ExtResource( 12 )
+text = "店铺人气"
+valign = 1
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "信息-最终评级"
+
+[node name="HBox" type="HBoxContainer" parent="BG/InfoControl/Date/Popular"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -160.0
+margin_top = -15.5
+margin_right = 2.0
+margin_bottom = 12.5
+script = ExtResource( 13 )
+
+[node name="1" type="Control" parent="BG/InfoControl/Date/Popular/HBox"]
+margin_right = 26.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+rect_pivot_offset = Vector2( 15, 14 )
+
+[node name="TextureProgress" type="TextureProgress" parent="BG/InfoControl/Date/Popular/HBox/1"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 20.0
+value = 20.0
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 3 )
+
+[node name="2" type="Control" parent="BG/InfoControl/Date/Popular/HBox"]
+margin_left = 34.0
+margin_right = 60.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+rect_pivot_offset = Vector2( 14, 14 )
+
+[node name="TextureProgress" type="TextureProgress" parent="BG/InfoControl/Date/Popular/HBox/2"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 20.0
+value = 20.0
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 3 )
+
+[node name="3" type="Control" parent="BG/InfoControl/Date/Popular/HBox"]
+margin_left = 68.0
+margin_right = 94.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+rect_pivot_offset = Vector2( 15, 13 )
+
+[node name="TextureProgress" type="TextureProgress" parent="BG/InfoControl/Date/Popular/HBox/3"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 20.0
+value = 20.0
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 3 )
+
+[node name="4" type="Control" parent="BG/InfoControl/Date/Popular/HBox"]
+margin_left = 102.0
+margin_right = 128.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+rect_pivot_offset = Vector2( 15, 14 )
+
+[node name="TextureProgress" type="TextureProgress" parent="BG/InfoControl/Date/Popular/HBox/4"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 20.0
+value = 20.0
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 3 )
+
+[node name="5" type="Control" parent="BG/InfoControl/Date/Popular/HBox"]
+margin_left = 136.0
+margin_right = 162.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+rect_pivot_offset = Vector2( 15, 14 )
+
+[node name="TextureProgress" type="TextureProgress" parent="BG/InfoControl/Date/Popular/HBox/5"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 20.0
+value = 20.0
+texture_under = ExtResource( 8 )
+texture_progress = ExtResource( 3 )
+
+[node name="DayLabel" type="Label" parent="BG/InfoControl/Date"]
+margin_top = 61.0
+margin_right = 435.0
+margin_bottom = 102.0
+custom_fonts/font = ExtResource( 12 )
+text = "3"
+align = 2
+
+[node name="Label" type="Label" parent="BG/InfoControl/Date/DayLabel"]
+margin_right = 435.0
+margin_bottom = 41.0
+custom_fonts/font = ExtResource( 12 )
+text = "经营天数"
+script = ExtResource( 11 )
+LabelTEXT = "信息-经营天数"
+
+[node name="TotalSellLabel" type="Label" parent="BG/InfoControl/Date"]
+margin_top = 122.0
+margin_right = 435.0
+margin_bottom = 163.0
+custom_fonts/font = ExtResource( 12 )
+text = "999"
+align = 2
+
+[node name="Label" type="Label" parent="BG/InfoControl/Date/TotalSellLabel"]
+margin_right = 435.0
+margin_bottom = 41.0
+custom_fonts/font = ExtResource( 12 )
+text = "销售总数"
+script = ExtResource( 11 )
+LabelTEXT = "信息-销售总量"
+
+[node name="TotalMoney" type="Label" parent="BG/InfoControl/Date"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+margin_top = 183.0
+margin_right = 435.0
+margin_bottom = 224.0
+rect_min_size = Vector2( 0, 41 )
+custom_fonts/font = ExtResource( 12 )
+text = "99999"
+align = 2
+valign = 1
+
+[node name="Label" type="Label" parent="BG/InfoControl/Date/TotalMoney"]
+margin_right = 435.0
+margin_bottom = 41.0
+custom_fonts/font = ExtResource( 12 )
+text = "总营业额"
+script = ExtResource( 11 )
+LabelTEXT = "信息-总营业额"
+
+[node name="Icon" type="Sprite" parent="BG/InfoControl/Date/TotalMoney"]
+light_mask = 0
+position = Vector2( 460, 20 )
+texture = ExtResource( 2 )
+
+[node name="Reward" type="Control" parent="BG/InfoControl"]
+margin_left = 1350.0
+margin_top = 288.0
+margin_right = 1785.0
+margin_bottom = 552.0
+
+[node name="StoreBaseValueLabel" type="Label" parent="BG/InfoControl/Reward"]
+margin_left = -81.0
+margin_right = 214.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( 130, 36 )
+custom_colors/font_color = Color( 1, 0.564706, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = ExtResource( 12 )
+text = "店铺估值"
+align = 1
+script = ExtResource( 11 )
+LabelTEXT = "信息-总营业额"
+
+[node name="Label" type="Label" parent="BG/InfoControl/Reward/StoreBaseValueLabel"]
+margin_left = 17.0
+margin_top = 46.0
+margin_right = 206.0
+margin_bottom = 89.0
+custom_fonts/font = ExtResource( 12 )
+text = "999999999999"
+align = 2
+valign = 1
+
+[node name="Label" type="Label" parent="BG/InfoControl/Reward"]
+margin_left = 195.0
+margin_top = -46.0
+margin_right = 259.0
+margin_bottom = 82.0
+rect_pivot_offset = Vector2( 33, 78 )
+custom_fonts/font = ExtResource( 4 )
+text = "x"
+
+[node name="RateLabel" type="Label" parent="BG/InfoControl/Reward"]
+margin_left = 323.0
+margin_top = 43.0
+margin_right = 460.0
+margin_bottom = 84.0
+rect_pivot_offset = Vector2( 67, -8 )
+custom_colors/font_color = Color( 1, 0.298039, 0.694118, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "0.01"
+align = 1
+
+[node name="Label" type="Label" parent="BG/InfoControl/Reward/RateLabel"]
+margin_left = -80.0
+margin_top = -45.0
+margin_right = 208.0
+margin_bottom = -4.0
+custom_colors/font_color = Color( 1, 0.564706, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = ExtResource( 12 )
+text = "奖励倍率"
+align = 1
+script = ExtResource( 11 )
+LabelTEXT = "信息-奖励倍率"
+
+[node name="Label2" type="Label" parent="BG/InfoControl/Reward"]
+margin_left = 50.0
+margin_top = 167.0
+margin_right = 114.0
+margin_bottom = 295.0
+rect_pivot_offset = Vector2( 32, 63 )
+custom_fonts/font = ExtResource( 4 )
+text = "="
+
+[node name="StoreValueLabel" type="Label" parent="BG/InfoControl/Reward"]
+margin_left = 144.0
+margin_top = 206.0
+margin_right = 436.0
+margin_bottom = 291.0
+rect_pivot_offset = Vector2( 142, 48 )
+custom_fonts/font = ExtResource( 12 )
+text = "恶魔奖励
+"
+align = 1
+script = ExtResource( 11 )
+LabelTEXT = "信息-通关奖励"
+
+[node name="Label" type="Label" parent="BG/InfoControl/Reward/StoreValueLabel"]
+self_modulate = Color( 1, 0.305882, 0, 1 )
+margin_left = -35.0
+margin_top = 51.0
+margin_right = 200.0
+margin_bottom = 112.0
+custom_fonts/font = ExtResource( 12 )
+text = "0"
+align = 2
+valign = 1
+
+[node name="Icon" type="Sprite" parent="BG/InfoControl/Reward/StoreValueLabel/Label"]
+light_mask = 0
+position = Vector2( 268, 30 )
+texture = ExtResource( 9 )
+
+[node name="First" type="Label" parent="BG/InfoControl/Reward/StoreValueLabel"]
+margin_left = -210.0
+margin_top = -77.0
+margin_right = 85.0
+margin_bottom = -36.0
+rect_pivot_offset = Vector2( 130, 36 )
+custom_colors/font_color = Color( 1, 0.564706, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = ExtResource( 12 )
+text = "店铺估值"
+align = 1
+script = ExtResource( 11 )
+LabelTEXT = "信息-首通奖励"
+
+[node name="Label" type="Label" parent="BG/InfoControl/Reward/StoreValueLabel/First"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -58.0
+margin_top = -21.5
+margin_right = 182.0
+margin_bottom = 21.5
+custom_fonts/font = ExtResource( 12 )
+text = "999999999999"
+align = 1
+valign = 1
+
+[node name="money" type="Control" parent="BG"]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -907.0
+margin_top = 809.0
+margin_right = -907.0
+margin_bottom = 809.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MoneyLabel" type="Label" parent="BG/money"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_right = 165.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 100 )
+text = "99999999"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="BG/money/MoneyLabel"]
+light_mask = 0
+position = Vector2( 190, 20 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="BG/money/MoneyLabel"]
+anchor_right = 1.0
+margin_top = -20.0
+margin_bottom = 1.0
+rect_min_size = Vector2( 200, 0 )
+text = "当前资产"
+align = 1
+valign = 1
+
+[node name="+" type="Label" parent="BG/money/MoneyLabel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -145.0
+margin_top = -20.0
+margin_right = 285.0
+margin_bottom = 1.0
+rect_min_size = Vector2( 430, 0 )
+text = "+"
+align = 1
+valign = 1
+
+[node name="TotalCost" type="Label" parent="BG/money"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = 200.0
+margin_right = 365.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 100 )
+text = "999999"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="BG/money/TotalCost"]
+light_mask = 0
+position = Vector2( 190, 20 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="BG/money/TotalCost"]
+anchor_right = 1.0
+margin_top = -20.0
+margin_right = 35.0
+margin_bottom = 1.0
+text = "总计获得"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="=" type="Label" parent="BG/money/TotalCost"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -145.0
+margin_top = -20.0
+margin_right = 285.0
+margin_bottom = 1.0
+rect_min_size = Vector2( 430, 0 )
+text = "="
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FinalMoney" type="Label" parent="BG/money"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = 400.0
+margin_right = 565.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 100 )
+text = "99999999"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="BG/money/FinalMoney"]
+light_mask = 0
+position = Vector2( 190, 20 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="BG/money/FinalMoney"]
+anchor_top = -0.375
+anchor_right = 1.212
+margin_top = -5.0
+margin_right = 0.0200043
+margin_bottom = 1.0
+text = "最终资产"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UnlockLevel" type="Label" parent="BG"]
+visible = false
+margin_left = 201.0
+margin_top = 721.0
+margin_right = 1097.0
+margin_bottom = 849.0
+custom_colors/font_color = Color( 1, 0.564706, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 8
+custom_fonts/font = ExtResource( 4 )
+text = "已解锁新关卡！"
+
+[node name="Button" type="Button" parent="BG"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -80.0
+margin_top = -58.0
+margin_right = 82.0
+margin_bottom = -9.0
+rect_pivot_offset = Vector2( 84, 26 )
+custom_styles/hover = SubResource( 107 )
+custom_styles/pressed = SubResource( 108 )
+custom_styles/focus = SubResource( 109 )
+custom_styles/disabled = SubResource( 110 )
+custom_styles/normal = SubResource( 111 )
+
+[node name="A" parent="BG/Button" instance=ExtResource( 5 )]
+margin_left = 25.0
+margin_top = 25.0
+margin_right = 25.0
+margin_bottom = 25.0
+bool_Static = true
+Info_Str = "BUT-确定"
+
+[node name="CurChoose" parent="." instance=ExtResource( 10 )]
+
+[node name="Ani" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/init = SubResource( 96 )
+anims/show = SubResource( 97 )
+
+[node name="TypeAni" type="AnimationPlayer" parent="."]
+anims/0 = SubResource( 101 )
+anims/1 = SubResource( 102 )
+anims/2 = SubResource( 104 )
+anims/complete = SubResource( 103 )
+
+[node name="DemoEnd" type="CanvasLayer" parent="."]
+layer = 3
+visible = false
+
+[node name="Control" type="Control" parent="DemoEnd"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Sprite" type="Sprite" parent="DemoEnd/Control"]
+position = Vector2( 960, 540 )
+texture = ExtResource( 14 )
+
+[node name="1" type="Label" parent="DemoEnd/Control/Sprite"]
+margin_left = -891.0
+margin_top = -111.0
+margin_right = -278.0
+margin_bottom = -61.0
+rect_rotation = -11.6585
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 112 )
+text = "More DrinkRecipes and Maps."
+align = 2
+autowrap = true
+script = ExtResource( 11 )
+LabelTEXT = "DEMO_Info_1"
+
+[node name="2" type="Label" parent="DemoEnd/Control/Sprite"]
+margin_left = -950.0
+margin_top = 191.0
+margin_right = -337.0
+margin_bottom = 241.0
+rect_rotation = 20.3165
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 112 )
+text = "服务 & 外卖"
+align = 2
+autowrap = true
+script = ExtResource( 11 )
+LabelTEXT = "DEMO_Info_2"
+
+[node name="3" type="Label" parent="DemoEnd/Control/Sprite"]
+margin_left = -281.0
+margin_top = 516.0
+margin_right = 332.0
+margin_bottom = 566.0
+rect_rotation = -14.3034
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 112 )
+text = "Resist hunger force."
+align = 2
+autowrap = true
+script = ExtResource( 11 )
+LabelTEXT = "DEMO_Info_3"
+
+[node name="4" type="Label" parent="DemoEnd/Control/Sprite"]
+margin_left = 322.0
+margin_top = 368.0
+margin_right = 935.0
+margin_bottom = 418.0
+rect_rotation = 4.95115
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 112 )
+text = "AI assistant automation."
+align = 2
+autowrap = true
+script = ExtResource( 11 )
+LabelTEXT = "DEMO_Info_4"
+
+[node name="5" type="Label" parent="DemoEnd/Control/Sprite"]
+margin_left = 329.0
+margin_top = -465.0
+margin_right = 979.001
+margin_bottom = -337.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 113 )
+text = "Thank you for playing
+Feed the Cups DEMO!"
+autowrap = true
+script = ExtResource( 11 )
+LabelTEXT = "DEMO_Info_5"
+
+[node name="6" type="Label" parent="DemoEnd/Control/Sprite/5"]
+margin_top = 150.0
+margin_right = 753.0
+margin_bottom = 256.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 114 )
+text = "Want to know more?
+Add it to your wishlist now!"
+autowrap = true
+script = ExtResource( 11 )
+LabelTEXT = "DEMO_Info_6"
+
+[node name="Panel" type="Panel" parent="DemoEnd/Control/Sprite/5"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -28.0
+margin_top = -24.0
+margin_right = 76.0
+margin_bottom = 133.0
+custom_styles/panel = SubResource( 115 )
+
+[node name="Shadow" type="Panel" parent="DemoEnd/Control/Sprite/5/Panel"]
+self_modulate = Color( 1, 1, 1, 0.588235 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 18.0
+custom_styles/panel = SubResource( 116 )
+
+[node name="Audio" type="AudioStreamPlayer" parent="DemoEnd/Control"]
+stream = ExtResource( 1 )
+bus = "Effect"
+
+[node name="Button" type="Button" parent="DemoEnd/Control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 794.0
+margin_top = -835.0
+margin_right = 956.0
+margin_bottom = -786.0
+rect_pivot_offset = Vector2( 84, 26 )
+custom_styles/hover = SubResource( 107 )
+custom_styles/pressed = SubResource( 108 )
+custom_styles/focus = SubResource( 109 )
+custom_styles/disabled = SubResource( 110 )
+custom_styles/normal = SubResource( 111 )
+
+[node name="A" parent="DemoEnd/Control/Button" instance=ExtResource( 5 )]
+margin_left = 25.0
+margin_top = 25.0
+margin_right = 25.0
+margin_bottom = 25.0
+bool_Static = true
+Info_Str = "BUT-确定"
+
+[node name="Ani" type="AnimationPlayer" parent="DemoEnd"]
+anims/init = SubResource( 117 )
+anims/play = SubResource( 118 )
+
+[connection signal="pressed" from="BG/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="DemoEnd/Control/Button" to="." method="_on_Button_pressed"]

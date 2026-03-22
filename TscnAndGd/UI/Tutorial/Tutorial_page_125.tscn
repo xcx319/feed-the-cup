@@ -1,0 +1,421 @@
+[gd_scene load_steps=36 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_pressure_1.tres" type="Texture" id=2]
+[ext_resource path="res://Language/Fonts/Base_s.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_pressure_2.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_side_1.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_side_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_side_4.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_hold_1.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_head_side.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_side_3.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_body_front.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_tail_back.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_BB_con_R.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_BB_con_D.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_control_none.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_BB_con_L.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Characters/Guest/Other/character_other_pack.sprites/Clothes_Apron_4_side.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_stink.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_4.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_1.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_2.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_5.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_s.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_3.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_rep.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashItem_1.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashIcon_2.tres" type="Texture" id=27]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_loadsign_2.tres" type="Texture" id=28]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_Trashbin_cover_3.tres" type="Texture" id=29]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_Trashbin_middle.tres" type="Texture" id=30]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_Trashbin_base2.tres" type="Texture" id=31]
+[ext_resource path="res://Resources/Characters/Guest/Other/character_other_pack.sprites/Bugs_eyes.tres" type="Texture" id=32]
+[ext_resource path="res://Resources/Characters/Guest/Other/character_other_pack.sprites/Bugs_wes.tres" type="Texture" id=33]
+[ext_resource path="res://Resources/Characters/Guest/Other/character_other_pack.sprites/Bugs_body.tres" type="Texture" id=34]
+[ext_resource path="res://Resources/Characters/Guest/Other/character_other_pack.sprites/Bugs_legs_1.tres" type="Texture" id=35]
+
+[node name="虫虫" type="Node2D"]
+
+[node name="190" type="RichTextLabel" parent="."]
+margin_left = -322.0
+margin_top = 134.0
+margin_right = 379.0
+margin_bottom = 260.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "虫虫会在垃圾桶附近出现，尽可能保持垃圾桶干净，可能抑制虫虫的数量。"
+text = "虫虫会在垃圾桶附近出现，尽可能保持垃圾桶干净，可能抑制虫虫的数量。"
+script = ExtResource( 1 )
+LabelTEXT = "信息-文字说明-190"
+Center_Bool = true
+
+[node name="191" type="RichTextLabel" parent="."]
+margin_left = -315.0
+margin_top = 419.0
+margin_right = 417.0
+margin_bottom = 622.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "用你的脚掌踩爆它！虫虫的体积很小，没那么容易踩中。
+
+快速改变你的方向，可以使出高频率的剁脚。"
+text = "用你的脚掌踩爆它！虫虫的体积很小，没那么容易踩中。
+
+快速改变你的方向，可以使出高频率的剁脚。"
+script = ExtResource( 1 )
+LabelTEXT = "信息-文字说明-191"
+Center_Bool = true
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2( 21, -27 )
+
+[node name="bugs" type="Node2D" parent="1"]
+position = Vector2( 101, 121 )
+
+[node name="body" type="Sprite" parent="1/bugs"]
+texture = ExtResource( 34 )
+
+[node name="BugsEyes" type="Sprite" parent="1/bugs"]
+position = Vector2( -11, -3 )
+texture = ExtResource( 32 )
+
+[node name="BugsLegs1" type="Sprite" parent="1/bugs"]
+position = Vector2( 7, 1 )
+texture = ExtResource( 35 )
+
+[node name="BugsWes" type="Sprite" parent="1/bugs"]
+position = Vector2( -13, 0 )
+texture = ExtResource( 33 )
+offset = Vector2( -8, -1 )
+
+[node name="bugs2" type="Node2D" parent="1"]
+position = Vector2( -213, 127 )
+rotation = 2.61799
+
+[node name="body" type="Sprite" parent="1/bugs2"]
+texture = ExtResource( 34 )
+
+[node name="BugsEyes" type="Sprite" parent="1/bugs2"]
+position = Vector2( -11, -3 )
+texture = ExtResource( 32 )
+
+[node name="BugsLegs1" type="Sprite" parent="1/bugs2"]
+position = Vector2( 7, 1 )
+texture = ExtResource( 35 )
+
+[node name="BugsWes" type="Sprite" parent="1/bugs2"]
+position = Vector2( -13, 0 )
+texture = ExtResource( 33 )
+offset = Vector2( -8, -1 )
+
+[node name="TexNode2" type="Node2D" parent="1"]
+position = Vector2( -157, 118 )
+
+[node name="Box" type="Sprite" parent="1/TexNode2"]
+position = Vector2( 245, 177 )
+texture = ExtResource( 23 )
+offset = Vector2( -248, -245 )
+
+[node name="OutdoorTrashItem1" type="Sprite" parent="1/TexNode2/Box"]
+position = Vector2( -207, -198 )
+texture = ExtResource( 26 )
+
+[node name="Trash" type="Node2D" parent="1/TexNode2"]
+position = Vector2( 0, -70 )
+
+[node name="DeviceTrashbinFew" type="Sprite" parent="1/TexNode2/Trash"]
+position = Vector2( -1, 9 )
+texture = ExtResource( 18 )
+offset = Vector2( 0, -30 )
+
+[node name="Texture" type="Node2D" parent="1/TexNode2"]
+position = Vector2( 2, -120 )
+
+[node name="DeviceTrashbinEffect3" type="Sprite" parent="1/TexNode2/Texture"]
+position = Vector2( 1.28571, -37.8571 )
+scale = Vector2( 1, 0.857143 )
+texture = ExtResource( 24 )
+offset = Vector2( 0, -28 )
+
+[node name="DeviceTrashbinEffect4" type="Sprite" parent="1/TexNode2/Texture"]
+position = Vector2( -19.6471, 3.70588 )
+scale = Vector2( 1, 0.788235 )
+texture = ExtResource( 19 )
+offset = Vector2( 0, -28 )
+
+[node name="DeviceTrashbinEffect5" type="Sprite" parent="1/TexNode2/Texture"]
+position = Vector2( 23.1333, -22.3333 )
+scale = Vector2( 1, 0.7 )
+texture = ExtResource( 22 )
+offset = Vector2( 0, -28 )
+
+[node name="flies" type="Node2D" parent="1/TexNode2/Texture"]
+
+[node name="1" type="Sprite" parent="1/TexNode2/Texture/flies"]
+position = Vector2( 21.6258, -20.5319 )
+texture = ExtResource( 21 )
+
+[node name="2" type="Sprite" parent="1/TexNode2/Texture/flies"]
+position = Vector2( -24.9951, -40.1548 )
+texture = ExtResource( 20 )
+
+[node name="TexNode4" type="Node2D" parent="1"]
+position = Vector2( 184, 122 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+
+[node name="OutdoorLoadsign2" type="Sprite" parent="1/TexNode4"]
+self_modulate = Color( 0.172549, 0.286275, 0.188235, 1 )
+position = Vector2( -3, -116 )
+scale = Vector2( 1, -1.5 )
+texture = ExtResource( 28 )
+
+[node name="Inside" type="Node2D" parent="1/TexNode4"]
+
+[node name="OutdoorTrashItem1" type="Sprite" parent="1/TexNode4/Inside"]
+position = Vector2( 2, -93 )
+texture = ExtResource( 26 )
+
+[node name="OutdoorTrashbinBase2" type="Sprite" parent="1/TexNode4"]
+modulate = Color( 0.243137, 0.537255, 0.231373, 1 )
+position = Vector2( -1, -68 )
+texture = ExtResource( 31 )
+
+[node name="OutdoorTrashbinBig" type="Sprite" parent="1/TexNode4"]
+modulate = Color( 0.313726, 0.513726, 0.239216, 1 )
+texture = ExtResource( 30 )
+offset = Vector2( 0, -70 )
+
+[node name="OutdoorTrashbinCover" type="Sprite" parent="1/TexNode4"]
+modulate = Color( 0.419608, 0.682353, 0.286275, 1 )
+position = Vector2( -6, -80 )
+texture = ExtResource( 29 )
+offset = Vector2( 0, -60 )
+
+[node name="OutdoorTrashIcon3" type="Sprite" parent="1/TexNode4"]
+position = Vector2( 0, -38 )
+texture = ExtResource( 27 )
+
+[node name="2" type="Node2D" parent="."]
+position = Vector2( -139, -61 )
+
+[node name="bugs3" type="Node2D" parent="2"]
+position = Vector2( 80, 450 )
+
+[node name="body" type="Sprite" parent="2/bugs3"]
+texture = ExtResource( 34 )
+
+[node name="BugsEyes" type="Sprite" parent="2/bugs3"]
+position = Vector2( -11, -3 )
+texture = ExtResource( 32 )
+
+[node name="BugsLegs1" type="Sprite" parent="2/bugs3"]
+position = Vector2( 7, 1 )
+texture = ExtResource( 35 )
+
+[node name="BugsWes" type="Sprite" parent="2/bugs3"]
+position = Vector2( -13, 0 )
+texture = ExtResource( 33 )
+offset = Vector2( -8, -1 )
+
+[node name="bugs" type="Node2D" parent="2"]
+position = Vector2( 211, 352 )
+rotation = 6.28318
+
+[node name="Icon" type="Sprite" parent="2/bugs"]
+position = Vector2( 185, 46.0009 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 25 )
+
+[node name="UiPoptipIdea8" type="Sprite" parent="2/bugs/Icon"]
+self_modulate = Color( 0.392157, 1, 0.286275, 1 )
+position = Vector2( 37.0001, 1.00037 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 4 )
+
+[node name="die" type="Node2D" parent="2/bugs"]
+position = Vector2( 198, 2.00103 )
+
+[node name="body" type="Sprite" parent="2/bugs/die"]
+scale = Vector2( 1, 1.25 )
+texture = ExtResource( 34 )
+
+[node name="BugsLegs1" type="Sprite" parent="2/bugs/die"]
+position = Vector2( 7, 1 )
+scale = Vector2( 1, 1.5 )
+texture = ExtResource( 35 )
+
+[node name="BugsWes" type="Sprite" parent="2/bugs/die"]
+position = Vector2( -20, 0 )
+texture = ExtResource( 33 )
+offset = Vector2( -8, -1 )
+
+[node name="bugs3" type="Node2D" parent="2/bugs"]
+position = Vector2( 62, 5.00031 )
+rotation = 1.83259
+
+[node name="body" type="Sprite" parent="2/bugs/bugs3"]
+texture = ExtResource( 34 )
+
+[node name="BugsEyes" type="Sprite" parent="2/bugs/bugs3"]
+position = Vector2( -11, -3 )
+texture = ExtResource( 32 )
+
+[node name="BugsLegs1" type="Sprite" parent="2/bugs/bugs3"]
+position = Vector2( 7, 1 )
+texture = ExtResource( 35 )
+
+[node name="BugsWes" type="Sprite" parent="2/bugs/bugs3"]
+position = Vector2( -13, 0 )
+texture = ExtResource( 33 )
+offset = Vector2( -8, -1 )
+
+[node name="UiIconPressure3" type="Sprite" parent="2/bugs"]
+position = Vector2( 52.9997, 47.0002 )
+texture = ExtResource( 2 )
+
+[node name="UiIconPressure4" type="Sprite" parent="2/bugs/UiIconPressure3"]
+modulate = Color( 1, 0.282353, 0.282353, 1 )
+position = Vector2( 30, 0 )
+texture = ExtResource( 4 )
+
+[node name="Bear" type="Node2D" parent="2"]
+position = Vector2( 125, 449 )
+
+[node name="L2" type="Sprite" parent="2/Bear"]
+self_modulate = Color( 1, 1, 1, 0.607843 )
+position = Vector2( 9, -43 )
+rotation = -1.57079
+texture = ExtResource( 5 )
+offset = Vector2( -8, 6 )
+
+[node name="L3" type="Sprite" parent="2/Bear"]
+self_modulate = Color( 1, 1, 1, 0.513726 )
+position = Vector2( 2, -27 )
+rotation = 0.261799
+texture = ExtResource( 7 )
+offset = Vector2( -8, 6 )
+
+[node name="L" type="Sprite" parent="2/Bear"]
+position = Vector2( 8, -26 )
+rotation = -0.261799
+texture = ExtResource( 7 )
+offset = Vector2( -8, 6 )
+
+[node name="R" type="Sprite" parent="2/Bear"]
+self_modulate = Color( 1, 1, 1, 0.501961 )
+position = Vector2( -27, -33 )
+rotation = 1.309
+texture = ExtResource( 10 )
+offset = Vector2( -8, 6 )
+
+[node name="R2" type="Sprite" parent="2/Bear"]
+self_modulate = Color( 1, 1, 1, 0.501961 )
+position = Vector2( -25, -30 )
+rotation = 0.785397
+texture = ExtResource( 10 )
+offset = Vector2( -8, 6 )
+
+[node name="R3" type="Sprite" parent="2/Bear"]
+position = Vector2( -13, -32 )
+rotation = -0.785397
+texture = ExtResource( 6 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="2/Bear"]
+position = Vector2( 0, -25 )
+
+[node name="BodyPose" type="Node2D" parent="2/Bear/Body_note"]
+rotation = 0.0570424
+scale = Vector2( 1.05, 1.05 )
+
+[node name="Body" type="Node2D" parent="2/Bear/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="2/Bear/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+texture = ExtResource( 11 )
+
+[node name="ClothesApron4Side" type="Sprite" parent="2/Bear/Body_note/BodyPose/Body"]
+position = Vector2( -1.05817, -35.235 )
+texture = ExtResource( 17 )
+
+[node name="HeadPose" type="Node2D" parent="2/Bear/Body_note/BodyPose/Body"]
+position = Vector2( -12.304, -65.1188 )
+rotation = -0.261799
+
+[node name="Head" type="Node2D" parent="2/Bear/Body_note/BodyPose/Body/HeadPose"]
+
+[node name="Left" type="Sprite" parent="2/Bear/Body_note/BodyPose/Body/HeadPose/Head"]
+position = Vector2( 0.799194, -0.551575 )
+rotation = -0.174533
+texture = ExtResource( 9 )
+offset = Vector2( 0, -26 )
+
+[node name="Arm_Hold" type="Node2D" parent="2/Bear/Body_note/BodyPose"]
+position = Vector2( 3.57385, -50.3542 )
+rotation = 0.785397
+scale = Vector2( -1, 1 )
+
+[node name="Pose_Hold" type="Node2D" parent="2/Bear/Body_note/BodyPose/Arm_Hold"]
+rotation = 0.0673216
+
+[node name="Arm" type="Sprite" parent="2/Bear/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( -1.24316, -5.62903 )
+rotation = -2.87979
+scale = Vector2( -1, 1 )
+texture = ExtResource( 8 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="2/Bear/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 28, -15 )
+rotation = 0.0534768
+texture = ExtResource( 12 )
+offset = Vector2( 20, -16 )
+
+[node name="Node2D" type="Node2D" parent="2"]
+position = Vector2( -21, -42 )
+
+[node name="UiBbConL2" type="Sprite" parent="2/Node2D"]
+self_modulate = Color( 1, 1, 1, 0.380392 )
+position = Vector2( -50, 388 )
+rotation = -0.785397
+texture = ExtResource( 16 )
+
+[node name="UiBbConL3" type="Sprite" parent="2/Node2D"]
+self_modulate = Color( 1, 1, 1, 0.380392 )
+position = Vector2( 13, 390 )
+rotation = 0.785397
+texture = ExtResource( 13 )
+
+[node name="UiBbConL" type="Sprite" parent="2/Node2D"]
+position = Vector2( -18, 384 )
+texture = ExtResource( 14 )
+
+[node name="UiControlNone4" type="Sprite" parent="2/Node2D"]
+position = Vector2( -16, 432 )
+texture = ExtResource( 15 )
+
+[node name="UiControlNone" type="Sprite" parent="2/Node2D"]
+position = Vector2( -17, 457 )
+texture = ExtResource( 15 )
+
+[node name="UiControlNone2" type="Sprite" parent="2/Node2D"]
+position = Vector2( -43, 457 )
+texture = ExtResource( 15 )
+
+[node name="UiControlNone3" type="Sprite" parent="2/Node2D"]
+position = Vector2( 10, 457 )
+texture = ExtResource( 15 )
+
+[node name="Label2" type="Label" parent="2/Node2D"]
+margin_left = -60.0
+margin_top = 418.0
+margin_right = 65.0
+margin_bottom = 486.0
+custom_fonts/font = ExtResource( 3 )
+text = "        W
+   A   S   D"

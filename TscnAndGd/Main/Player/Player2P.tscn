@@ -1,0 +1,129 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_1.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_2.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_leg_stand_1.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/specialguest_student_hand_1.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/specialguest_mother_5.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_face_4.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_body_front.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_ghost_body_front.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_ghost_leg_back_4.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_devil_head_horn_r.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_face_1.tres" type="Texture" id=11]
+
+[node name="Player2P" type="KinematicBody2D"]
+collision_layer = 4608
+collision_mask = 6272
+__meta__ = {
+"_editor_description_": "2"
+}
+
+[node name="MAIN" type="Node2D" parent="."]
+visible = false
+
+[node name="Left" type="Sprite" parent="MAIN"]
+position = Vector2( -24, -24 )
+texture = ExtResource( 3 )
+
+[node name="Right" type="Sprite" parent="MAIN"]
+position = Vector2( 22, -24 )
+texture = ExtResource( 3 )
+flip_h = true
+
+[node name="BODY" type="Sprite" parent="MAIN"]
+position = Vector2( -2, -49 )
+texture = ExtResource( 7 )
+flip_h = true
+
+[node name="01" type="Sprite" parent="MAIN/BODY"]
+position = Vector2( -13, -10 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="05" type="Sprite" parent="MAIN/BODY/01"]
+position = Vector2( -5, 0 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="02" type="Sprite" parent="MAIN/BODY"]
+position = Vector2( 13, -11 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="05" type="Sprite" parent="MAIN/BODY/02"]
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="04" type="Sprite" parent="MAIN/BODY"]
+position = Vector2( 1, 13 )
+texture = ExtResource( 11 )
+flip_h = true
+
+[node name="MAIN2" type="Node2D" parent="."]
+
+[node name="BODY" type="Sprite" parent="MAIN2"]
+position = Vector2( -2, -49 )
+texture = ExtResource( 8 )
+flip_h = true
+
+[node name="01" type="Sprite" parent="MAIN2/BODY"]
+position = Vector2( -19, 6 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="05" type="Sprite" parent="MAIN2/BODY/01"]
+position = Vector2( -4, 0 )
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="02" type="Sprite" parent="MAIN2/BODY"]
+position = Vector2( 18, 3 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="05" type="Sprite" parent="MAIN2/BODY/02"]
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="03" type="Sprite" parent="MAIN2/BODY"]
+position = Vector2( -1, 11 )
+texture = ExtResource( 1 )
+flip_h = true
+
+[node name="05" type="Sprite" parent="MAIN2/BODY/03"]
+texture = ExtResource( 2 )
+flip_h = true
+
+[node name="04" type="Sprite" parent="MAIN2/BODY"]
+position = Vector2( -28, 35 )
+rotation = 3.99718
+texture = ExtResource( 10 )
+flip_h = true
+
+[node name="08" type="Sprite" parent="MAIN2/BODY"]
+position = Vector2( 26, 34 )
+rotation = 2.31062
+texture = ExtResource( 10 )
+
+[node name="05" type="Sprite" parent="MAIN2/BODY"]
+position = Vector2( -57, 4 )
+rotation = 0.462321
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="06" type="Sprite" parent="MAIN2/BODY"]
+position = Vector2( 1, -9 )
+rotation = 3.0311
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="07" type="Sprite" parent="MAIN2/BODY"]
+position = Vector2( 48, 6 )
+rotation = -0.224816
+texture = ExtResource( 5 )
+
+[node name="Left" type="Sprite" parent="MAIN2"]
+position = Vector2( -1, -18 )
+rotation = 0.958138
+texture = ExtResource( 9 )

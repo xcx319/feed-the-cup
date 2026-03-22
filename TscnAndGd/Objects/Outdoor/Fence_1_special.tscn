@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Stair_fence_3.tres" type="Texture" id=1]
+
+[node name="Fence" type="Node2D"]
+light_mask = 2
+
+[node name="Textnode" type="Node2D" parent="."]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Textnode"]
+margin_left = -5.0
+margin_top = -100.0
+margin_right = 308.0
+margin_bottom = 5.0
+texture = ExtResource( 1 )
+patch_margin_left = 47
+patch_margin_right = 13

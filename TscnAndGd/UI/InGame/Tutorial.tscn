@@ -1,0 +1,2671 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_tips.tres" type="Texture" id=1]
+[ext_resource path="res://TscnAndGd/UI/Info/Scroll_Theme.tres" type="Theme" id=2]
+[ext_resource path="res://TscnAndGd/UI/InGame/Tutorial.gd" type="Script" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_tips_2.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_difficulty_light.tres" type="Texture" id=6]
+[ext_resource path="res://TscnAndGd/UI/Tutorial/Info_1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_decorate_2.tres" type="Texture" id=8]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_frame_white.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_lable.tres" type="Texture" id=11]
+[ext_resource path="res://TscnAndGd/Buttons/LogicBut.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_tips_1.tres" type="Texture" id=13]
+[ext_resource path="res://Language/Fonts/Base_l.tres" type="DynamicFont" id=14]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=15]
+
+[sub_resource type="StyleBoxTexture" id=111]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 88, 88 )
+margin_left = 30.0
+margin_right = 30.0
+margin_top = 30.0
+margin_bottom = 30.0
+modulate_color = Color( 1, 1, 1, 0.588235 )
+
+[sub_resource type="StyleBoxTexture" id=157]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 128, 53 )
+margin_left = 12.5402
+margin_right = 12.0758
+margin_top = 13.0047
+margin_bottom = 12.5402
+
+[sub_resource type="StyleBoxTexture" id=155]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 88, 88 )
+margin_left = 30.0
+margin_right = 30.0
+margin_top = 30.0
+margin_bottom = 30.0
+modulate_color = Color( 1, 0.588235, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=115]
+
+[sub_resource type="StyleBoxTexture" id=113]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 128, 53 )
+
+[sub_resource type="ButtonGroup" id=116]
+
+[node name="Tutorial" type="Control"]
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_min_size = Vector2( 1920, 1080 )
+script = ExtResource( 4 )
+
+[node name="BG" type="NinePatchRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -703.0
+margin_top = -456.0
+margin_right = 707.0
+margin_bottom = 410.0
+texture = ExtResource( 11 )
+patch_margin_left = 80
+patch_margin_top = 60
+patch_margin_right = 80
+patch_margin_bottom = 60
+
+[node name="ListBG" type="NinePatchRect" parent="BG"]
+margin_left = 25.0
+margin_top = 14.0
+margin_right = 395.0
+margin_bottom = 834.0
+texture = ExtResource( 1 )
+patch_margin_top = 98
+patch_margin_bottom = 19
+
+[node name="Scroll" type="ScrollContainer" parent="BG/ListBG"]
+margin_left = 10.0
+margin_top = 140.0
+margin_right = 358.0
+margin_bottom = 778.0
+theme = ExtResource( 2 )
+follow_focus = true
+
+[node name="VBox" type="VBoxContainer" parent="BG/ListBG/Scroll"]
+margin_right = 340.0
+margin_bottom = 7688.0
+custom_constants/separation = -2
+
+[node name="说明1" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_right = 340.0
+margin_bottom = 65.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+pressed = true
+group = SubResource( 116 )
+text = "BUT_说明1"
+
+[node name="说明2" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 63.0
+margin_right = 340.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明2"
+
+[node name="说明3" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 126.0
+margin_right = 340.0
+margin_bottom = 191.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明3"
+
+[node name="说明4" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 189.0
+margin_right = 340.0
+margin_bottom = 254.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明4"
+
+[node name="说明56" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 252.0
+margin_right = 340.0
+margin_bottom = 317.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明56"
+
+[node name="说明57" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 315.0
+margin_right = 340.0
+margin_bottom = 380.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明57"
+
+[node name="说明40" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 378.0
+margin_right = 340.0
+margin_bottom = 443.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明40"
+
+[node name="说明5" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 441.0
+margin_right = 340.0
+margin_bottom = 506.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明5"
+
+[node name="说明6" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 504.0
+margin_right = 340.0
+margin_bottom = 569.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明6"
+
+[node name="说明7" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 567.0
+margin_right = 340.0
+margin_bottom = 632.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明7"
+
+[node name="说明8" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 630.0
+margin_right = 340.0
+margin_bottom = 695.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明8"
+
+[node name="说明9" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 693.0
+margin_right = 340.0
+margin_bottom = 758.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明9"
+
+[node name="说明10" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 756.0
+margin_right = 340.0
+margin_bottom = 821.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明10"
+
+[node name="说明11" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 819.0
+margin_right = 340.0
+margin_bottom = 884.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明11"
+
+[node name="说明12" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 882.0
+margin_right = 340.0
+margin_bottom = 947.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明12"
+
+[node name="说明35" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 945.0
+margin_right = 340.0
+margin_bottom = 1010.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明35"
+
+[node name="说明34" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 1008.0
+margin_right = 340.0
+margin_bottom = 1073.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明34"
+
+[node name="说明13" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 1071.0
+margin_right = 340.0
+margin_bottom = 1136.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明13"
+
+[node name="说明14" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 1134.0
+margin_right = 340.0
+margin_bottom = 1199.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明14"
+
+[node name="说明15" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 1197.0
+margin_right = 340.0
+margin_bottom = 1262.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明15"
+
+[node name="说明16" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 1260.0
+margin_right = 340.0
+margin_bottom = 1325.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明16"
+
+[node name="说明17" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 1323.0
+margin_right = 340.0
+margin_bottom = 1388.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明17"
+
+[node name="说明18" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 1386.0
+margin_right = 340.0
+margin_bottom = 1451.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明18"
+
+[node name="说明19" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 1449.0
+margin_right = 340.0
+margin_bottom = 1514.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明19"
+
+[node name="说明20" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 1512.0
+margin_right = 340.0
+margin_bottom = 1577.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明20"
+
+[node name="说明21" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 1575.0
+margin_right = 340.0
+margin_bottom = 1640.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明21"
+
+[node name="说明22" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 1638.0
+margin_right = 340.0
+margin_bottom = 1703.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明22"
+
+[node name="说明23" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 1701.0
+margin_right = 340.0
+margin_bottom = 1766.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明23"
+
+[node name="说明24" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 1764.0
+margin_right = 340.0
+margin_bottom = 1829.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明24"
+
+[node name="说明25" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 1827.0
+margin_right = 340.0
+margin_bottom = 1892.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明25"
+
+[node name="说明50" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 1890.0
+margin_right = 340.0
+margin_bottom = 1955.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明50"
+
+[node name="说明26" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 1953.0
+margin_right = 340.0
+margin_bottom = 2018.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明26"
+
+[node name="说明27" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 2016.0
+margin_right = 340.0
+margin_bottom = 2081.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明27"
+
+[node name="说明41" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 2079.0
+margin_right = 340.0
+margin_bottom = 2144.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明41"
+
+[node name="说明37" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 2142.0
+margin_right = 340.0
+margin_bottom = 2207.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明37"
+
+[node name="说明30" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 2205.0
+margin_right = 340.0
+margin_bottom = 2270.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明30"
+
+[node name="说明28" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 2268.0
+margin_right = 340.0
+margin_bottom = 2333.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明28"
+
+[node name="说明29" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 2331.0
+margin_right = 340.0
+margin_bottom = 2396.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明29"
+
+[node name="说明31" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 2394.0
+margin_right = 340.0
+margin_bottom = 2459.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明31"
+
+[node name="说明32" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 2457.0
+margin_right = 340.0
+margin_bottom = 2522.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明32"
+
+[node name="说明36" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 2520.0
+margin_right = 340.0
+margin_bottom = 2585.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明36"
+
+[node name="说明38" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 2583.0
+margin_right = 340.0
+margin_bottom = 2648.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明38"
+
+[node name="说明39" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 2646.0
+margin_right = 340.0
+margin_bottom = 2711.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明39"
+
+[node name="说明42" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 2709.0
+margin_right = 340.0
+margin_bottom = 2774.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明42"
+
+[node name="说明43" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 2772.0
+margin_right = 340.0
+margin_bottom = 2837.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明43"
+
+[node name="说明44" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 2835.0
+margin_right = 340.0
+margin_bottom = 2900.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明44"
+
+[node name="说明45" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 2898.0
+margin_right = 340.0
+margin_bottom = 2963.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明45"
+
+[node name="说明46" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 2961.0
+margin_right = 340.0
+margin_bottom = 3026.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明46"
+
+[node name="说明47" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 3024.0
+margin_right = 340.0
+margin_bottom = 3089.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明47"
+
+[node name="说明48" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 3087.0
+margin_right = 340.0
+margin_bottom = 3152.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明48"
+
+[node name="说明49" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 3150.0
+margin_right = 340.0
+margin_bottom = 3215.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明49"
+
+[node name="说明51" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 3213.0
+margin_right = 340.0
+margin_bottom = 3278.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明51"
+
+[node name="说明52" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 3276.0
+margin_right = 340.0
+margin_bottom = 3341.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明52"
+
+[node name="说明53" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 3339.0
+margin_right = 340.0
+margin_bottom = 3404.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明53"
+
+[node name="说明54" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 3402.0
+margin_right = 340.0
+margin_bottom = 3467.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明54"
+
+[node name="说明55" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 3465.0
+margin_right = 340.0
+margin_bottom = 3530.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明55"
+
+[node name="说明90" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 3528.0
+margin_right = 340.0
+margin_bottom = 3593.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明90"
+
+[node name="说明58" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 3591.0
+margin_right = 340.0
+margin_bottom = 3656.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明58"
+
+[node name="说明59" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 3654.0
+margin_right = 340.0
+margin_bottom = 3719.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明59"
+
+[node name="说明60" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 3717.0
+margin_right = 340.0
+margin_bottom = 3782.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明60"
+
+[node name="说明61" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 3780.0
+margin_right = 340.0
+margin_bottom = 3845.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明61"
+
+[node name="说明62" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 3843.0
+margin_right = 340.0
+margin_bottom = 3908.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明62"
+
+[node name="说明63" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 3906.0
+margin_right = 340.0
+margin_bottom = 3971.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明63"
+
+[node name="说明64" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 3969.0
+margin_right = 340.0
+margin_bottom = 4034.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明64"
+
+[node name="说明65" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 4032.0
+margin_right = 340.0
+margin_bottom = 4097.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明65"
+
+[node name="说明66" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 4095.0
+margin_right = 340.0
+margin_bottom = 4160.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明66"
+
+[node name="说明87" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 4158.0
+margin_right = 340.0
+margin_bottom = 4223.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明87"
+
+[node name="说明67" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 4221.0
+margin_right = 340.0
+margin_bottom = 4286.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明67"
+
+[node name="说明68" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 4284.0
+margin_right = 340.0
+margin_bottom = 4349.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明68"
+
+[node name="说明69" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 4347.0
+margin_right = 340.0
+margin_bottom = 4412.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明69"
+
+[node name="说明91" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 4410.0
+margin_right = 340.0
+margin_bottom = 4475.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明91"
+
+[node name="说明92" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 4473.0
+margin_right = 340.0
+margin_bottom = 4538.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明92"
+
+[node name="说明70" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 4536.0
+margin_right = 340.0
+margin_bottom = 4601.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明70"
+
+[node name="说明71" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 4599.0
+margin_right = 340.0
+margin_bottom = 4664.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明71"
+
+[node name="说明72" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 4662.0
+margin_right = 340.0
+margin_bottom = 4727.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明72"
+
+[node name="说明73" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 4725.0
+margin_right = 340.0
+margin_bottom = 4790.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明73"
+
+[node name="说明74" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 4788.0
+margin_right = 340.0
+margin_bottom = 4853.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明74"
+
+[node name="说明75" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 4851.0
+margin_right = 340.0
+margin_bottom = 4916.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明75"
+
+[node name="说明76" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 4914.0
+margin_right = 340.0
+margin_bottom = 4979.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明76"
+
+[node name="说明77" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 4977.0
+margin_right = 340.0
+margin_bottom = 5042.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明77"
+
+[node name="说明78" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 5040.0
+margin_right = 340.0
+margin_bottom = 5105.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明78"
+
+[node name="说明79" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 5103.0
+margin_right = 340.0
+margin_bottom = 5168.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明79"
+
+[node name="说明80" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 5166.0
+margin_right = 340.0
+margin_bottom = 5231.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明80"
+
+[node name="说明81" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 5229.0
+margin_right = 340.0
+margin_bottom = 5294.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明81"
+
+[node name="说明82" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 5292.0
+margin_right = 340.0
+margin_bottom = 5357.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明82"
+
+[node name="说明83" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 5355.0
+margin_right = 340.0
+margin_bottom = 5420.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明83"
+
+[node name="说明84" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 5418.0
+margin_right = 340.0
+margin_bottom = 5483.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明84"
+
+[node name="说明85" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 5481.0
+margin_right = 340.0
+margin_bottom = 5546.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明85"
+
+[node name="说明86" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 5544.0
+margin_right = 340.0
+margin_bottom = 5609.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明86"
+
+[node name="说明88" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 5607.0
+margin_right = 340.0
+margin_bottom = 5672.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明88"
+
+[node name="说明89" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 5670.0
+margin_right = 340.0
+margin_bottom = 5735.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明89"
+
+[node name="说明93" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 5733.0
+margin_right = 340.0
+margin_bottom = 5798.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明93"
+
+[node name="说明94" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 5796.0
+margin_right = 340.0
+margin_bottom = 5861.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明94"
+
+[node name="说明95" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 5859.0
+margin_right = 340.0
+margin_bottom = 5924.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明95"
+
+[node name="说明96" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 5922.0
+margin_right = 340.0
+margin_bottom = 5987.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明96"
+
+[node name="说明97" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 5985.0
+margin_right = 340.0
+margin_bottom = 6050.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明97"
+
+[node name="说明98" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 6048.0
+margin_right = 340.0
+margin_bottom = 6113.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明98"
+
+[node name="说明99" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 6111.0
+margin_right = 340.0
+margin_bottom = 6176.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明99"
+
+[node name="说明103" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 6174.0
+margin_right = 340.0
+margin_bottom = 6239.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明103"
+
+[node name="说明100" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 6237.0
+margin_right = 340.0
+margin_bottom = 6302.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明100"
+
+[node name="说明101" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 6300.0
+margin_right = 340.0
+margin_bottom = 6365.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明101
+"
+
+[node name="说明102" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 6363.0
+margin_right = 340.0
+margin_bottom = 6428.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明102"
+
+[node name="说明104" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 6426.0
+margin_right = 340.0
+margin_bottom = 6491.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明104"
+
+[node name="说明105" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 6489.0
+margin_right = 340.0
+margin_bottom = 6554.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明105"
+
+[node name="说明106" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 6552.0
+margin_right = 340.0
+margin_bottom = 6617.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明106"
+
+[node name="说明107" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 6615.0
+margin_right = 340.0
+margin_bottom = 6680.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明107"
+
+[node name="说明108" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 6678.0
+margin_right = 340.0
+margin_bottom = 6743.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明108"
+
+[node name="说明109" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 6741.0
+margin_right = 340.0
+margin_bottom = 6806.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明109"
+
+[node name="说明110" type="Button" parent="BG/ListBG/Scroll/VBox"]
+visible = false
+margin_top = 5481.0
+margin_right = 340.0
+margin_bottom = 5546.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明110"
+
+[node name="说明33" type="Button" parent="BG/ListBG/Scroll/VBox"]
+visible = false
+margin_top = 2205.0
+margin_right = 340.0
+margin_bottom = 2270.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_说明33"
+
+[node name="顾客1" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 6804.0
+margin_right = 340.0
+margin_bottom = 6869.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_顾客1"
+
+[node name="顾客2" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 6867.0
+margin_right = 340.0
+margin_bottom = 6932.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_顾客2"
+
+[node name="顾客3" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 6930.0
+margin_right = 340.0
+margin_bottom = 6995.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_顾客3"
+
+[node name="顾客4" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 6993.0
+margin_right = 340.0
+margin_bottom = 7058.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_顾客4"
+
+[node name="顾客5" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 7056.0
+margin_right = 340.0
+margin_bottom = 7121.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_顾客5"
+
+[node name="顾客6" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 7119.0
+margin_right = 340.0
+margin_bottom = 7184.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_顾客6"
+
+[node name="顾客7" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 7182.0
+margin_right = 340.0
+margin_bottom = 7247.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_顾客7"
+
+[node name="顾客8" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 7245.0
+margin_right = 340.0
+margin_bottom = 7310.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_顾客8"
+
+[node name="顾客9" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 7308.0
+margin_right = 340.0
+margin_bottom = 7373.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_顾客9"
+
+[node name="顾客10" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 7371.0
+margin_right = 340.0
+margin_bottom = 7436.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_顾客10"
+
+[node name="顾客11" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 7434.0
+margin_right = 340.0
+margin_bottom = 7499.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_顾客11"
+
+[node name="顾客12" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 7497.0
+margin_right = 340.0
+margin_bottom = 7562.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_顾客12"
+
+[node name="顾客13" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 7560.0
+margin_right = 340.0
+margin_bottom = 7625.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_顾客13"
+
+[node name="顾客14" type="Button" parent="BG/ListBG/Scroll/VBox"]
+margin_top = 7623.0
+margin_right = 340.0
+margin_bottom = 7688.0
+rect_min_size = Vector2( 340, 65 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 111 )
+custom_styles/pressed = SubResource( 157 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 115 )
+custom_styles/normal = SubResource( 113 )
+toggle_mode = true
+group = SubResource( 116 )
+text = "BUT_顾客14"
+
+[node name="Label" type="Label" parent="BG/ListBG"]
+anchor_left = -0.007
+anchor_top = 0.115
+anchor_right = 0.98
+anchor_bottom = 0.187
+margin_left = 2.59
+margin_top = -39.7
+margin_right = 0.399994
+margin_bottom = 1.14
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 14 )
+text = "信息-说明列表"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+script = ExtResource( 15 )
+LabelTEXT = "信息-说明列表"
+
+[node name="UiPanelDecorate2" type="Sprite" parent="BG/ListBG"]
+position = Vector2( 184.5, -9.5 )
+texture = ExtResource( 8 )
+
+[node name="InfoBG" type="NinePatchRect" parent="BG"]
+self_modulate = Color( 0.647059, 0.623529, 0.560784, 0 )
+anchor_left = 0.654
+anchor_top = 0.481
+anchor_right = 0.654
+anchor_bottom = 0.481
+margin_left = -508.14
+margin_top = -404.546
+margin_right = 446.86
+margin_bottom = 420.454
+texture = ExtResource( 10 )
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="Control" type="Control" parent="BG/InfoBG"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="Info" parent="BG/InfoBG/Control" instance=ExtResource( 7 )]
+
+[node name="ButControl" type="Control" parent="BG"]
+anchor_top = 0.907
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 70.889
+margin_bottom = 79.0
+
+[node name="BackBut" parent="BG/ButControl" instance=ExtResource( 12 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 42.5
+margin_top = -42.5
+margin_right = 127.5
+margin_bottom = 42.5
+
+[node name="B" parent="BG/ButControl/BackBut" instance=ExtResource( 9 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-返回"
+
+[node name="ApplyBut" parent="BG/ButControl" instance=ExtResource( 12 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -127.5
+margin_top = -42.5
+margin_right = -42.5
+margin_bottom = 42.5
+
+[node name="A" parent="BG/ButControl/ApplyBut" instance=ExtResource( 9 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-确定"
+
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明1" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明2" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明3" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明4" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明56" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明57" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明40" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明5" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明6" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明7" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明8" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明9" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明10" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明11" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明12" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明35" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明34" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明13" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明14" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明15" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明16" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明17" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明18" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明19" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明20" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明21" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明22" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明23" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明24" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明25" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明50" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明26" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明27" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明41" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明37" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明30" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明28" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明29" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明31" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明32" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明36" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明38" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明39" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明42" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明43" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明44" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明45" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明46" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明47" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明48" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明49" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明51" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明52" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明53" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明54" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明55" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明90" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明58" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明59" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明60" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明61" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明62" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明63" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明64" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明65" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明66" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明87" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明67" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明68" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明69" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明91" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明92" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明70" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明71" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明72" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明73" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明74" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明75" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明76" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明77" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明78" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明79" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明80" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明81" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明82" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明83" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明84" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明85" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明86" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明88" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明89" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明93" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明94" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明95" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明96" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明97" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明98" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明99" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明103" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明100" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明101" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明102" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明104" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明105" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明106" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明107" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明108" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明109" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明110" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/说明33" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/顾客1" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/顾客2" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/顾客3" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/顾客4" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/顾客5" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/顾客6" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/顾客7" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/顾客8" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/顾客9" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/顾客10" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/顾客11" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/顾客12" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/顾客13" to="." method="_on_toggled"]
+[connection signal="toggled" from="BG/ListBG/Scroll/VBox/顾客14" to="." method="_on_toggled"]
+[connection signal="pressed" from="BG/ButControl/BackBut" to="." method="_on_BackBut_pressed"]
+[connection signal="pressed" from="BG/ButControl/ApplyBut" to="." method="_on_ApplyBut_pressed"]

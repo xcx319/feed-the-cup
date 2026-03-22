@@ -1,0 +1,297 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_ice.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_water_all.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_strawberry_single_1.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_strawberry_single_3.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_2.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_top.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_1.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_2.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_frame_line.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_cuptip_1.tres" type="Texture" id=11]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=12]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_port_water_full.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_Break_mixcup.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_mix_6.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_Break_mixcup_back.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_Break_base_s.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_Break_stick.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_Break_top.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_ice_3.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=22]
+
+[node name="破壁机3" type="Node2D"]
+position = Vector2( 953, 434 )
+
+[node name="203" type="RichTextLabel" parent="."]
+margin_left = -339.0
+margin_top = 103.0
+margin_right = 421.0
+margin_bottom = 283.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "制作非沙冰类型的果汁时，按配比将水果块和液体倒入破壁机打碎，可以直接打成常温的果汁。
+注意此类饮品不要将冰块加入破壁机。
+"
+text = "制作非沙冰类型的果汁时，按配比将水果块和液体倒入破壁机打碎，可以直接打成常温的果汁。
+注意此类饮品不要将冰块加入破壁机。
+"
+script = ExtResource( 12 )
+LabelTEXT = "信息-文字说明-203"
+Center_Bool = true
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2( -2, -27 )
+
+[node name="要求" type="Node2D" parent="1"]
+position = Vector2( -131, 10 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="1/要求"]
+margin_left = -136.0
+margin_top = -93.0
+margin_right = 128.0
+margin_bottom = 101.0
+texture = ExtResource( 11 )
+patch_margin_left = 15
+patch_margin_top = 12
+patch_margin_right = 20
+patch_margin_bottom = 25
+
+[node name="line" type="Sprite" parent="1/要求/NinePatchRect"]
+position = Vector2( 112, 89.5 )
+texture = ExtResource( 10 )
+
+[node name="line2" type="Sprite" parent="1/要求/NinePatchRect"]
+position = Vector2( 178, 143 )
+rotation = 1.5708
+scale = Vector2( 1, 0.6 )
+texture = ExtResource( 10 )
+
+[node name="IconLiquidBottleOrange" type="Sprite" parent="1/要求/NinePatchRect"]
+position = Vector2( 147, 39 )
+texture = ExtResource( 3 )
+
+[node name="IconLiquidBottleOrange2" type="Sprite" parent="1/要求/NinePatchRect"]
+position = Vector2( 137, 161 )
+texture = ExtResource( 3 )
+
+[node name="IconLiquidNumber2" type="Sprite" parent="1/要求/NinePatchRect"]
+position = Vector2( 193, 39 )
+texture = ExtResource( 2 )
+
+[node name="IconLiquidMix11" type="Sprite" parent="1/要求/NinePatchRect"]
+position = Vector2( 192, 96 )
+texture = ExtResource( 16 )
+
+[node name="Cup2" type="Node2D" parent="1/要求"]
+position = Vector2( -96, 8 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="1/要求/Cup2"]
+texture = ExtResource( 9 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="1/要求/Cup2"]
+self_modulate = Color( 1, 0.309804, 0.403922, 0.909804 )
+texture = ExtResource( 8 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="1/要求/Cup2"]
+self_modulate = Color( 1, 0.309804, 0.403922, 0.909804 )
+texture = ExtResource( 6 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="1/要求/Cup2"]
+self_modulate = Color( 1, 0.309804, 0.403922, 0.909804 )
+position = Vector2( 0, 6 )
+texture = ExtResource( 7 )
+
+[node name="UiProcupCup2" type="Sprite" parent="1/要求/Cup2"]
+texture = ExtResource( 5 )
+
+[node name="FruitStrawberrySingle3" type="Sprite" parent="1/要求/Cup2"]
+position = Vector2( 2, 39 )
+texture = ExtResource( 4 )
+
+[node name="ItemIce3" type="Sprite" parent="1/要求/Cup2"]
+position = Vector2( 0, 9 )
+texture = ExtResource( 21 )
+
+[node name="UiIconStateCold" type="Sprite" parent="1/要求"]
+position = Vector2( -45, -62 )
+texture = ExtResource( 1 )
+
+[node name="Cup3" type="Node2D" parent="1"]
+position = Vector2( 82, -57 )
+rotation = 0.523598
+scale = Vector2( 0.8, 0.8 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="1/Cup3"]
+texture = ExtResource( 9 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="1/Cup3"]
+self_modulate = Color( 0.611765, 0.886275, 1, 0.729412 )
+texture = ExtResource( 8 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="1/Cup3"]
+self_modulate = Color( 0.611765, 0.886275, 1, 0.729412 )
+position = Vector2( 1.5, 24 )
+scale = Vector2( 0.886793, 1 )
+texture = ExtResource( 7 )
+
+[node name="UiProcupCup2" type="Sprite" parent="1/Cup3"]
+texture = ExtResource( 5 )
+
+[node name="ItemIce3" type="Sprite" parent="1/Cup3"]
+position = Vector2( 1.26196, 39.6859 )
+texture = ExtResource( 4 )
+
+[node name="TotuInfo6" type="Sprite" parent="1"]
+position = Vector2( 139, -42 )
+rotation = -0.261799
+texture = ExtResource( 14 )
+
+[node name="Break" type="Node2D" parent="1"]
+position = Vector2( 175, 5 )
+
+[node name="base" type="Sprite" parent="1/Break"]
+position = Vector2( 2, 64 )
+texture = ExtResource( 18 )
+
+[node name="Cup" type="Node2D" parent="1/Break"]
+use_parent_material = true
+
+[node name="Back" type="Sprite" parent="1/Break/Cup"]
+texture = ExtResource( 17 )
+
+[node name="Water" type="Sprite" parent="1/Break/Cup"]
+visible = false
+position = Vector2( 0, 20 )
+scale = Vector2( 1.2, 0.3 )
+texture = ExtResource( 13 )
+offset = Vector2( 0, -27 )
+
+[node name="Top" type="Sprite" parent="1/Break/Cup"]
+position = Vector2( 41, -25 )
+rotation = 0.785397
+texture = ExtResource( 20 )
+offset = Vector2( -24, 1 )
+
+[node name="DeviceBreakStick" type="Sprite" parent="1/Break/Cup/Top"]
+show_behind_parent = true
+position = Vector2( -23, -9 )
+texture = ExtResource( 19 )
+offset = Vector2( 0, 10 )
+
+[node name="front" type="Sprite" parent="1/Break/Cup"]
+texture = ExtResource( 15 )
+
+[node name="211" type="RichTextLabel" parent="."]
+margin_left = -343.0
+margin_top = 440.0
+margin_right = 411.0
+margin_bottom = 595.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "将果肉完全打成液态，倒入杯子里再加冰块。
+有些饮品在使用破壁机后，还需要再额外加入水果小料。"
+text = "将果肉完全打成液态，倒入杯子里再加冰块。
+有些饮品在使用破壁机后，还需要再额外加入水果小料。"
+script = ExtResource( 12 )
+LabelTEXT = "信息-文字说明-211"
+Center_Bool = true
+
+[node name="2" type="Node2D" parent="."]
+position = Vector2( 56, 68 )
+
+[node name="Cup" type="Node2D" parent="2"]
+use_parent_material = true
+position = Vector2( -221, 267 )
+rotation = 0.785397
+scale = Vector2( -1.2, 1.2 )
+
+[node name="Back" type="Sprite" parent="2/Cup"]
+texture = ExtResource( 17 )
+
+[node name="Water" type="Sprite" parent="2/Cup"]
+self_modulate = Color( 0.878431, 0.486275, 0.486275, 1 )
+position = Vector2( 0, 16.1692 )
+scale = Vector2( 1.2, 0.683084 )
+texture = ExtResource( 13 )
+offset = Vector2( 0, -27 )
+
+[node name="Top" type="Sprite" parent="2/Cup"]
+position = Vector2( 41, -25 )
+rotation = 0.785397
+texture = ExtResource( 20 )
+offset = Vector2( -24, 1 )
+
+[node name="DeviceBreakStick" type="Sprite" parent="2/Cup/Top"]
+show_behind_parent = true
+position = Vector2( -23, -9 )
+texture = ExtResource( 19 )
+offset = Vector2( 0, 10 )
+
+[node name="front" type="Sprite" parent="2/Cup"]
+texture = ExtResource( 15 )
+
+[node name="Cup2" type="Node2D" parent="2"]
+position = Vector2( -146, 307 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="2/Cup2"]
+texture = ExtResource( 9 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="2/Cup2"]
+self_modulate = Color( 1, 0.309804, 0.403922, 0.909804 )
+texture = ExtResource( 8 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="2/Cup2"]
+self_modulate = Color( 1, 0.309804, 0.403922, 0.909804 )
+texture = ExtResource( 6 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="2/Cup2"]
+self_modulate = Color( 1, 0.309804, 0.403922, 0.909804 )
+position = Vector2( 0, 6 )
+texture = ExtResource( 7 )
+
+[node name="UiProcupCup2" type="Sprite" parent="2/Cup2"]
+texture = ExtResource( 5 )
+
+[node name="Cup3" type="Node2D" parent="2"]
+position = Vector2( 71, 306 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="2/Cup3"]
+texture = ExtResource( 9 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="2/Cup3"]
+self_modulate = Color( 1, 0.309804, 0.403922, 0.909804 )
+texture = ExtResource( 8 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="2/Cup3"]
+self_modulate = Color( 1, 0.309804, 0.403922, 0.909804 )
+texture = ExtResource( 6 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="2/Cup3"]
+self_modulate = Color( 1, 0.309804, 0.403922, 0.909804 )
+position = Vector2( 0, 6 )
+texture = ExtResource( 7 )
+
+[node name="UiProcupCup2" type="Sprite" parent="2/Cup3"]
+texture = ExtResource( 5 )
+
+[node name="FruitStrawberrySingle3" type="Sprite" parent="2/Cup3"]
+position = Vector2( -1.25, 41.25 )
+texture = ExtResource( 4 )
+
+[node name="ItemIce3" type="Sprite" parent="2/Cup3"]
+position = Vector2( 1.25, 10 )
+texture = ExtResource( 21 )
+
+[node name="TotuInfo1" type="Sprite" parent="2"]
+position = Vector2( -158, 274 )
+texture = ExtResource( 14 )
+
+[node name="TotuInfo2" type="Sprite" parent="2"]
+position = Vector2( -37, 328 )
+texture = ExtResource( 22 )

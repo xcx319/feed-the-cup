@@ -1,0 +1,104 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://TscnAndGd/Effects/NumberEffect.tscn" type="PackedScene" id=1]
+[ext_resource path="res://TscnAndGd/Effects/NumberEffect.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Ui_Jackpot_2.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Ui_Jackpot_1.tres" type="Texture" id=4]
+
+[node name="Jackpot" type="Node2D"]
+visible = false
+position = Vector2( 365, 363 )
+
+[node name="UiJackpot2" type="Sprite" parent="."]
+self_modulate = Color( 0.219608, 0.219608, 0.219608, 1 )
+texture = ExtResource( 3 )
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+self_modulate = Color( 0.607843, 1, 0.513726, 1 )
+margin_left = -281.0
+margin_top = -36.0
+margin_right = 281.0
+margin_bottom = 36.0
+value = 80.0
+texture_progress = ExtResource( 3 )
+
+[node name="UiJackpot1" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+
+[node name="JackAccount" type="Node2D" parent="."]
+position = Vector2( -50, -98 )
+
+[node name="Scroll" type="ScrollContainer" parent="JackAccount"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = -39.0
+margin_right = 218.0
+margin_bottom = 65.0
+mouse_filter = 2
+
+[node name="HBOX" type="HBoxContainer" parent="JackAccount/Scroll"]
+pause_mode = 2
+margin_right = 346.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 346, 0 )
+rect_pivot_offset = Vector2( 37, 104 )
+mouse_filter = 2
+custom_constants/separation = -6
+alignment = 2
+
+[node name="10000" type="Control" parent="JackAccount/Scroll/HBOX" instance=ExtResource( 1 )]
+pause_mode = 2
+margin_right = 74.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 74, 104 )
+mouse_filter = 2
+script = ExtResource( 2 )
+TYPE = 1
+cur_Bit = 4
+
+[node name="1000" type="Control" parent="JackAccount/Scroll/HBOX" instance=ExtResource( 1 )]
+pause_mode = 2
+margin_left = 68.0
+margin_right = 142.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 74, 104 )
+mouse_filter = 2
+script = ExtResource( 2 )
+TYPE = 1
+cur_Bit = 3
+
+[node name="100" type="Control" parent="JackAccount/Scroll/HBOX" instance=ExtResource( 1 )]
+pause_mode = 2
+margin_left = 136.0
+margin_right = 210.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 74, 104 )
+mouse_filter = 2
+script = ExtResource( 2 )
+TYPE = 1
+cur_Bit = 2
+
+[node name="10" type="Control" parent="JackAccount/Scroll/HBOX" instance=ExtResource( 1 )]
+pause_mode = 2
+margin_left = 204.0
+margin_right = 278.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 74, 104 )
+mouse_filter = 2
+script = ExtResource( 2 )
+TYPE = 1
+cur_Bit = 1
+
+[node name="1" type="Control" parent="JackAccount/Scroll/HBOX" instance=ExtResource( 1 )]
+pause_mode = 2
+margin_left = 272.0
+margin_right = 346.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 74, 104 )
+mouse_filter = 2
+script = ExtResource( 2 )
+TYPE = 1

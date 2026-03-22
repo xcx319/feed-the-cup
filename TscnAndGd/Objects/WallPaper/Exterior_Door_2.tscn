@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Door_frame_1.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Maps/Tmap_wallpaper_brick.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 3, 260, 100, 240 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 3, 260, 200, 240 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 3, 254, 200, 240 )
+
+[node name="ExteriorDoor" type="Node2D"]
+
+[node name="TexNode" type="Node2D" parent="."]
+
+[node name="MainWall" type="Node2D" parent="TexNode"]
+
+[node name="Floor1" type="Node2D" parent="TexNode/MainWall"]
+modulate = Color( 0.670588, 0.627451, 0.603922, 1 )
+
+[node name="Sprite_open" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 50, 0 )
+texture = SubResource( 1 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite_open2" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 300, 0 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 2 )
+offset = Vector2( 0, -118 )
+
+[node name="Floor2" type="Node2D" parent="TexNode/MainWall"]
+position = Vector2( 0, -200 )
+
+[node name="Sprite_open" type="Sprite" parent="TexNode/MainWall/Floor2"]
+position = Vector2( 100, 0 )
+texture = SubResource( 3 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite_open2" type="Sprite" parent="TexNode/MainWall/Floor2"]
+position = Vector2( 300, 0 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 3 )
+offset = Vector2( 0, -118 )
+
+[node name="DoorFrame2" type="Sprite" parent="TexNode/MainWall"]
+position = Vector2( 150, -100 )
+scale = Vector2( 1, 0.9 )
+texture = ExtResource( 1 )

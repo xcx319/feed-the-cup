@@ -1,0 +1,222 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Main/LoadingUI.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Loading/Loading_pack.sprites/Loading_car_bus.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Loading/Loading_pack.sprites/Loading_car_bear.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Loading/Loading_pack.sprites/Loading_car_w1.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Loading/Loading_pack.sprites/Loading_car_2.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Loading/Loading_pack.sprites/Loading_car_bus_door.tres" type="Texture" id=6]
+[ext_resource path="res://TscnAndGd/UI/Tutorial/Tutorial_page_4.tscn" type="PackedScene" id=7]
+[ext_resource path="res://TscnAndGd/UI/Tutorial/Tutorial_page_3.tscn" type="PackedScene" id=8]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=9]
+[ext_resource path="res://Language/Fonts/Base_s.tres" type="DynamicFont" id=10]
+[ext_resource path="res://Language/Fonts/Base_m_outline.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut _2.tres" type="Texture" id=12]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../..:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "play"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texture/w2:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Texture/w1:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Texture:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.5, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -5 ), Vector2( 0, 0 ), Vector2( 0, -5 ), Vector2( 0, 0 ), Vector2( 0, -5 ), Vector2( 0, 0 ), Vector2( 0, -5 ), Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Texture/LoadingCarBear:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.4, 0.5, 0.7, 0.8, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -24, -13 ), Vector2( -24, -11 ), Vector2( -24, -13 ), Vector2( -24, -11 ), Vector2( -24, -13 ), Vector2( -24, -11 ), Vector2( -24, -13 ), Vector2( -24, -11 ), Vector2( -24, -13 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../..:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[node name="LoadingUI" type="CanvasLayer"]
+pause_mode = 2
+layer = 5
+script = ExtResource( 1 )
+
+[node name="Control" type="Control" parent="."]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" type="Panel" parent="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -861.0
+margin_top = 373.0
+margin_right = 899.0
+margin_bottom = 413.0
+rect_min_size = Vector2( 1000, 40 )
+rect_pivot_offset = Vector2( 500, 20 )
+value = 50.0
+
+[node name="Car" type="Node2D" parent="Control"]
+position = Vector2( 977, 822 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Texture" type="Node2D" parent="Control/Car"]
+
+[node name="w2" type="Sprite" parent="Control/Car/Texture"]
+position = Vector2( 100, 65 )
+texture = ExtResource( 5 )
+
+[node name="w1" type="Sprite" parent="Control/Car/Texture"]
+position = Vector2( -114, 65 )
+texture = ExtResource( 4 )
+
+[node name="LoadingCarBus" type="Sprite" parent="Control/Car/Texture"]
+texture = ExtResource( 2 )
+
+[node name="CarDoor" type="Sprite" parent="Control/Car/Texture/LoadingCarBus"]
+position = Vector2( 47, 4 )
+texture = ExtResource( 6 )
+
+[node name="LoadingCarBear" type="Sprite" parent="Control/Car/Texture"]
+position = Vector2( -24, -13 )
+texture = ExtResource( 3 )
+
+[node name="Ani" type="AnimationPlayer" parent="Control/Car"]
+autoplay = "init"
+anims/init = SubResource( 2 )
+anims/play = SubResource( 1 )
+
+[node name="Tips2" type="Label" parent="Control"]
+margin_left = 129.0
+margin_top = 958.0
+margin_right = 1822.0
+margin_bottom = 1053.0
+custom_fonts/font = ExtResource( 10 )
+text = "更多Tips可以在主选单中的【游戏说明】中查看哦。"
+align = 1
+autowrap = true
+script = ExtResource( 9 )
+LabelTEXT = "信息-更多Tips"
+
+[node name="Con" type="Node2D" parent="Control"]
+
+[node name="Tips2" type="Label" parent="Control/Con"]
+margin_left = 192.0
+margin_top = 189.0
+margin_right = 835.0
+margin_bottom = 242.0
+custom_fonts/font = ExtResource( 11 )
+text = "推荐使用手柄游戏"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 9 )
+LabelTEXT = "信息-推荐手柄"
+
+[node name="BG" type="NinePatchRect" parent="Control/Con/Tips2"]
+self_modulate = Color( 0.34902, 0.34902, 0.34902, 1 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -38.0
+margin_right = 41.0
+texture = ExtResource( 12 )
+patch_margin_left = 43
+patch_margin_right = 43
+
+[node name="Tips3" type="Label" parent="Control/Con"]
+margin_left = 1124.0
+margin_top = 188.0
+margin_right = 1761.0
+margin_bottom = 241.0
+custom_fonts/font = ExtResource( 11 )
+text = "键盘键位可在【按键设置】中更改"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 9 )
+LabelTEXT = "信息-推荐键位"
+
+[node name="BG" type="NinePatchRect" parent="Control/Con/Tips3"]
+self_modulate = Color( 0.34902, 0.34902, 0.34902, 1 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -38.0
+margin_right = 35.0
+texture = ExtResource( 12 )
+patch_margin_left = 43
+patch_margin_right = 43
+
+[node name="Controller" parent="Control/Con" instance=ExtResource( 8 )]
+position = Vector2( 281, 499 )
+
+[node name="Keyborad" parent="Control/Con" instance=ExtResource( 7 )]
+position = Vector2( 1206, 498 )

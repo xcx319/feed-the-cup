@@ -1,0 +1,233 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_idle_0.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_head_front.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_sugar_liquid.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_tail_back.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_hold_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_idle_1.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_body_front.tres" type="Texture" id=8]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=9]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_2.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_2.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_check.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_check_wrong.tres" type="Texture" id=15]
+
+
+[node name="放地上" type="Node2D"]
+position = Vector2( 23, -551 )
+
+[node name="Label13" type="RichTextLabel" parent="."]
+margin_left = -354.0
+margin_top = 468.0
+margin_right = 308.0
+margin_bottom = 543.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "杂物可以暂时放地上，但是{术语_杯子}不可以。                        1"
+text = "杂物可以暂时放地上，但是{术语_杯子}不可以。                        1"
+script = ExtResource( 9 )
+LabelTEXT = "信息-文字说明-13"
+
+[node name="Bear1" type="Node2D" parent="."]
+position = Vector2( -242, 449 )
+
+[node name="Leg_L" type="Node2D" parent="Bear1"]
+position = Vector2( -7, -27 )
+
+[node name="L" type="Sprite" parent="Bear1/Leg_L"]
+texture = ExtResource( 1 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="Bear1"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="R" type="Sprite" parent="Bear1/Leg_R"]
+texture = ExtResource( 1 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="Bear1"]
+show_behind_parent = true
+position = Vector2( 0, -25 )
+rotation = -0.0441624
+scale = Vector2( 1.025, 1.015 )
+
+[node name="BodyPose" type="Node2D" parent="Bear1/Body_note"]
+
+[node name="Body" type="Node2D" parent="Bear1/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="Bear1/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+texture = ExtResource( 8 )
+
+[node name="HeadPose" type="Node2D" parent="Bear1/Body_note/BodyPose/Body"]
+position = Vector2( 0, -70 )
+
+[node name="Head" type="Node2D" parent="Bear1/Body_note/BodyPose/Body/HeadPose"]
+rotation = 0.131937
+
+[node name="Down" type="Sprite" parent="Bear1/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 2 )
+offset = Vector2( 0, -26 )
+
+[node name="Arm_Hold" type="Node2D" parent="Bear1/Body_note/BodyPose"]
+position = Vector2( 22, -47 )
+rotation = -0.785397
+
+[node name="Pose_Hold" type="Node2D" parent="Bear1/Body_note/BodyPose/Arm_Hold"]
+
+[node name="Arm" type="Sprite" parent="Bear1/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+scale = Vector2( -1, 1 )
+texture = ExtResource( 6 )
+offset = Vector2( -10, 3 )
+
+[node name="Weapon_note" type="Node2D" parent="Bear1/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 39.2444, 10.8922 )
+rotation = 0.785397
+
+[node name="DeviceBoxBody3" type="Sprite" parent="Bear1/Body_note/BodyPose/Arm_Hold/Pose_Hold/Weapon_note"]
+texture = ExtResource( 3 )
+
+[node name="Arm" type="Node2D" parent="Bear1/Body_note/BodyPose"]
+position = Vector2( -22.5052, -50.2367 )
+scale = Vector2( -1, 1 )
+
+[node name="Pose" type="Node2D" parent="Bear1/Body_note/BodyPose/Arm"]
+rotation = -0.117282
+
+[node name="Arm" type="Sprite" parent="Bear1/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 7 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="Bear1/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 0, -15 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 5 )
+offset = Vector2( 20, -16 )
+
+[node name="DeviceBoxBody2" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0.470588 )
+position = Vector2( -122, 417 )
+texture = ExtResource( 3 )
+
+[node name="UiIconInfo4" type="Sprite" parent="DeviceBoxBody2"]
+position = Vector2( -16, -56 )
+texture = ExtResource( 4 )
+
+[node name="Y" parent="DeviceBoxBody2" instance=ExtResource( 10 )]
+margin_left = -24.0
+margin_top = -96.0
+margin_right = -24.0
+margin_bottom = -96.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-放下"
+OnBut = false
+
+[node name="UiIconStateCheck3" type="Sprite" parent="DeviceBoxBody2"]
+self_modulate = Color( 0.223529, 1, 0.180392, 1 )
+position = Vector2( 40, 0 )
+texture = ExtResource( 14 )
+
+[node name="Bear2" type="Node2D" parent="."]
+position = Vector2( 99, 446 )
+
+[node name="Leg_L" type="Node2D" parent="Bear2"]
+position = Vector2( -7, -27 )
+
+[node name="L" type="Sprite" parent="Bear2/Leg_L"]
+texture = ExtResource( 1 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="Bear2"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="R" type="Sprite" parent="Bear2/Leg_R"]
+texture = ExtResource( 1 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="Bear2"]
+show_behind_parent = true
+position = Vector2( 0, -25 )
+rotation = -0.0441624
+scale = Vector2( 1.025, 1.015 )
+
+[node name="BodyPose" type="Node2D" parent="Bear2/Body_note"]
+
+[node name="Body" type="Node2D" parent="Bear2/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="Bear2/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+texture = ExtResource( 8 )
+
+[node name="HeadPose" type="Node2D" parent="Bear2/Body_note/BodyPose/Body"]
+position = Vector2( 0, -70 )
+
+[node name="Head" type="Node2D" parent="Bear2/Body_note/BodyPose/Body/HeadPose"]
+rotation = 0.131937
+
+[node name="Down" type="Sprite" parent="Bear2/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 2 )
+offset = Vector2( 0, -26 )
+
+[node name="Arm_Hold" type="Node2D" parent="Bear2/Body_note/BodyPose"]
+position = Vector2( 22, -47 )
+
+[node name="Pose_Hold" type="Node2D" parent="Bear2/Body_note/BodyPose/Arm_Hold"]
+rotation = -0.0846485
+
+[node name="Arm" type="Sprite" parent="Bear2/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+scale = Vector2( -1, 1 )
+texture = ExtResource( 6 )
+offset = Vector2( -10, 3 )
+
+[node name="Weapon_note" type="Node2D" parent="Bear2/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 35.2219, -1.72686 )
+
+[node name="Cup6" type="Node2D" parent="Bear2/Body_note/BodyPose/Arm_Hold/Pose_Hold/Weapon_note"]
+rotation = 0.129245
+scale = Vector2( 0.5, 0.5 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="Bear2/Body_note/BodyPose/Arm_Hold/Pose_Hold/Weapon_note/Cup6"]
+texture = ExtResource( 12 )
+
+[node name="UiProcupCup2" type="Sprite" parent="Bear2/Body_note/BodyPose/Arm_Hold/Pose_Hold/Weapon_note/Cup6"]
+texture = ExtResource( 13 )
+
+[node name="Arm" type="Node2D" parent="Bear2/Body_note/BodyPose"]
+position = Vector2( -22.5052, -50.2367 )
+scale = Vector2( -1, 1 )
+
+[node name="Pose" type="Node2D" parent="Bear2/Body_note/BodyPose/Arm"]
+rotation = -0.117282
+
+[node name="Arm" type="Sprite" parent="Bear2/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 7 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="Bear2/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 0, -15 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 5 )
+offset = Vector2( 20, -16 )
+
+[node name="UiIconStateCheckWrong3" type="Sprite" parent="Bear2"]
+self_modulate = Color( 0.976471, 0.105882, 0.105882, 1 )
+position = Vector2( 120, -24 )
+texture = ExtResource( 15 )
+
+[node name="UiIconInfo5" type="Sprite" parent="Bear2"]
+position = Vector2( 100, -56 )
+texture = ExtResource( 4 )

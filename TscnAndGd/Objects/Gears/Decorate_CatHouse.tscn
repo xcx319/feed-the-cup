@@ -1,0 +1,81 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_box_back.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_box_front_1.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_box_open.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_box_body.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Decorate/Decorate_pack.sprites/Decorate_CatHouse_1.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Decorate/Decorate_pack.sprites/Decorate_CatHouse_2.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Decorate/Decorate_pack.sprites/Decorate_CatHouse_top.tres" type="Texture" id=8]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_CatToy.tscn" type="PackedScene" id=9]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_CatJar.tscn" type="PackedScene" id=10]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_CatMat.tscn" type="PackedScene" id=11]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_CatBowl.tscn" type="PackedScene" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 46, 27 )
+
+[node name="Decorate_CatHouse" type="StaticBody2D"]
+collision_layer = 128
+collision_mask = 5120
+
+[node name="Texture1" type="Node2D" parent="."]
+position = Vector2( -1, -8 )
+
+[node name="DeviceBoxBack" type="Sprite" parent="Texture1"]
+position = Vector2( 2, -21 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 2 )
+
+[node name="DeviceBoxOpen" type="Sprite" parent="Texture1"]
+position = Vector2( 2, -21 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 4 )
+
+[node name="Decorate_CatMat" parent="." instance=ExtResource( 11 )]
+position = Vector2( -3, -21 )
+
+[node name="Texture2" type="Node2D" parent="."]
+position = Vector2( -1, -8 )
+scale = Vector2( 1, -1 )
+
+[node name="DeviceBoxFront1" type="Sprite" parent="Texture2"]
+position = Vector2( 2, 21 )
+texture = ExtResource( 3 )
+
+[node name="DeviceBoxBody" type="Sprite" parent="Texture2"]
+position = Vector2( 7, 119 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 5 )
+
+[node name="DeviceBoxBody2" type="Sprite" parent="Texture2"]
+position = Vector2( -1, 166 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 5 )
+
+[node name="DecorateCatHouse1" type="Sprite" parent="Texture2"]
+position = Vector2( 22, 82 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 6 )
+
+[node name="DecorateCatHouse2" type="Sprite" parent="Texture2"]
+position = Vector2( 1, 128 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 7 )
+
+[node name="Decorate_CatToy" parent="." instance=ExtResource( 9 )]
+position = Vector2( -22, -64 )
+
+[node name="DecorateCatHouseTop" type="Sprite" parent="."]
+position = Vector2( -1, -143 )
+texture = ExtResource( 8 )
+
+[node name="Decorate_CatJar" parent="." instance=ExtResource( 10 )]
+position = Vector2( -39, 41 )
+
+[node name="Decorate_CatBowl" parent="." instance=ExtResource( 12 )]
+position = Vector2( 25, 32 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 10 )
+shape = SubResource( 1 )

@@ -1,0 +1,459 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Resources/Maps/Tmap_wallpaper.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_body_base_2.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_body_base_1.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Balcony_5.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Balcony_4.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Balcony_item_1.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Exterior_wall_Ivy_3.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Exterior_wall_Ivy_1.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_chair_1.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_cup_2.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_4.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_cup_3.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_6.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_1.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_chair_2.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_cup_1.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_3.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_2.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_8.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_7.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_5.tres" type="Texture" id=21]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 2, 260, 200, 240 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 220, 260, 100, 240 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 245, 260, 150, 240 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 2, 260, 50, 240 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+
+[node name="ExteriorWall" type="Node2D"]
+
+[node name="TexNode" type="Node2D" parent="."]
+
+[node name="MainWall" type="Node2D" parent="TexNode"]
+
+[node name="people" type="Node2D" parent="TexNode/MainWall"]
+
+[node name="1" type="Node2D" parent="TexNode/MainWall/people"]
+position = Vector2( 325, -325 )
+
+[node name="WorkChair1" type="Sprite" parent="TexNode/MainWall/people/1"]
+position = Vector2( -75, 0 )
+texture = ExtResource( 9 )
+
+[node name="WorkDesk1" type="Sprite" parent="TexNode/MainWall/people/1"]
+texture = ExtResource( 14 )
+
+[node name="WorkDesk4" type="Sprite" parent="TexNode/MainWall/people/1"]
+position = Vector2( 0, -25 )
+texture = ExtResource( 11 )
+
+[node name="8" type="Node2D" parent="TexNode/MainWall/people"]
+position = Vector2( 75, -725 )
+scale = Vector2( -1, 1 )
+
+[node name="WorkChair1" type="Sprite" parent="TexNode/MainWall/people/8"]
+position = Vector2( -75, 0 )
+texture = ExtResource( 9 )
+
+[node name="WorkDesk1" type="Sprite" parent="TexNode/MainWall/people/8"]
+texture = ExtResource( 14 )
+
+[node name="2" type="Node2D" parent="TexNode/MainWall/people"]
+position = Vector2( 325, -125 )
+
+[node name="WorkChair3" type="Sprite" parent="TexNode/MainWall/people/2"]
+position = Vector2( -95, 5 )
+texture = ExtResource( 15 )
+
+[node name="WorkDesk2" type="Sprite" parent="TexNode/MainWall/people/2"]
+texture = ExtResource( 14 )
+
+[node name="WorkDesk3" type="Sprite" parent="TexNode/MainWall/people/2"]
+position = Vector2( 0, -25 )
+texture = ExtResource( 18 )
+
+[node name="GuestMarkcupBodyBase2" type="Sprite" parent="TexNode/MainWall/people/2"]
+self_modulate = Color( 0.6, 0.6, 0.6, 1 )
+position = Vector2( -71.7626, -18.3644 )
+rotation = 0.20944
+texture = ExtResource( 2 )
+
+[node name="GuestMarkcupBodyBase1" type="Sprite" parent="TexNode/MainWall/people/2/GuestMarkcupBodyBase2"]
+texture = ExtResource( 3 )
+
+[node name="WorkCup1" type="Sprite" parent="TexNode/MainWall/people/2"]
+position = Vector2( -37.7626, 5.63556 )
+texture = ExtResource( 16 )
+
+[node name="7" type="Node2D" parent="TexNode/MainWall/people"]
+position = Vector2( 325, -725 )
+
+[node name="WorkChair3" type="Sprite" parent="TexNode/MainWall/people/7"]
+position = Vector2( -95, 5 )
+texture = ExtResource( 15 )
+
+[node name="WorkDesk2" type="Sprite" parent="TexNode/MainWall/people/7"]
+texture = ExtResource( 14 )
+
+[node name="WorkDesk3" type="Sprite" parent="TexNode/MainWall/people/7"]
+position = Vector2( 0, -25 )
+texture = ExtResource( 18 )
+
+[node name="GuestMarkcupBodyBase2" type="Sprite" parent="TexNode/MainWall/people/7"]
+self_modulate = Color( 0.6, 0.6, 0.6, 1 )
+position = Vector2( -71.7626, -18.3644 )
+rotation = 0.20944
+texture = ExtResource( 2 )
+
+[node name="GuestMarkcupBodyBase1" type="Sprite" parent="TexNode/MainWall/people/7/GuestMarkcupBodyBase2"]
+texture = ExtResource( 3 )
+
+[node name="WorkCup1" type="Sprite" parent="TexNode/MainWall/people/7"]
+position = Vector2( -37.7626, 5.63556 )
+texture = ExtResource( 16 )
+
+[node name="3" type="Node2D" parent="TexNode/MainWall/people"]
+position = Vector2( 500, -125 )
+
+[node name="WorkChair3" type="Sprite" parent="TexNode/MainWall/people/3"]
+modulate = Color( 0.729412, 0.509804, 0.509804, 1 )
+position = Vector2( -79, 7 )
+texture = ExtResource( 15 )
+
+[node name="WorkDesk2" type="Sprite" parent="TexNode/MainWall/people/3"]
+texture = ExtResource( 14 )
+
+[node name="WorkDesk3" type="Sprite" parent="TexNode/MainWall/people/3"]
+position = Vector2( 0, -28 )
+texture = ExtResource( 18 )
+
+[node name="GuestMarkcupBodyBase2" type="Sprite" parent="TexNode/MainWall/people/3"]
+self_modulate = Color( 0.447059, 0.490196, 0.603922, 1 )
+position = Vector2( -69, -16 )
+rotation = -0.261799
+texture = ExtResource( 2 )
+
+[node name="GuestMarkcupBodyBase1" type="Sprite" parent="TexNode/MainWall/people/3/GuestMarkcupBodyBase2"]
+texture = ExtResource( 3 )
+
+[node name="WorkCup2" type="Sprite" parent="TexNode/MainWall/people/3"]
+position = Vector2( -37, 2 )
+texture = ExtResource( 10 )
+
+[node name="6" type="Node2D" parent="TexNode/MainWall/people"]
+position = Vector2( 325, -525 )
+
+[node name="WorkChair3" type="Sprite" parent="TexNode/MainWall/people/6"]
+modulate = Color( 0.729412, 0.509804, 0.509804, 1 )
+position = Vector2( -79, 7 )
+texture = ExtResource( 15 )
+
+[node name="WorkDesk2" type="Sprite" parent="TexNode/MainWall/people/6"]
+texture = ExtResource( 14 )
+
+[node name="GuestMarkcupBodyBase2" type="Sprite" parent="TexNode/MainWall/people/6"]
+self_modulate = Color( 0.447059, 0.490196, 0.603922, 1 )
+position = Vector2( -69, -16 )
+rotation = -0.261799
+texture = ExtResource( 2 )
+
+[node name="GuestMarkcupBodyBase1" type="Sprite" parent="TexNode/MainWall/people/6/GuestMarkcupBodyBase2"]
+texture = ExtResource( 3 )
+
+[node name="WorkCup2" type="Sprite" parent="TexNode/MainWall/people/6"]
+position = Vector2( -37, 2 )
+texture = ExtResource( 10 )
+
+[node name="WorkDesk3" type="Sprite" parent="TexNode/MainWall/people/6"]
+position = Vector2( 15, -52 )
+texture = ExtResource( 17 )
+
+[node name="WorkDesk5" type="Sprite" parent="TexNode/MainWall/people/6"]
+position = Vector2( 19, 2 )
+texture = ExtResource( 21 )
+
+[node name="WorkDesk6" type="Sprite" parent="TexNode/MainWall/people/6"]
+position = Vector2( -19, -16 )
+texture = ExtResource( 13 )
+
+[node name="4" type="Node2D" parent="TexNode/MainWall/people"]
+position = Vector2( 425, -525 )
+scale = Vector2( -1, 1 )
+
+[node name="WorkChair3" type="Sprite" parent="TexNode/MainWall/people/4"]
+modulate = Color( 0.694118, 0.694118, 0.694118, 1 )
+position = Vector2( -89, -7 )
+texture = ExtResource( 15 )
+
+[node name="WorkDesk2" type="Sprite" parent="TexNode/MainWall/people/4"]
+texture = ExtResource( 14 )
+
+[node name="GuestMarkcupBodyBase2" type="Sprite" parent="TexNode/MainWall/people/4"]
+self_modulate = Color( 0.682353, 0.65098, 0.533333, 1 )
+position = Vector2( -60.9883, -24.3243 )
+rotation = 0.698132
+texture = ExtResource( 2 )
+
+[node name="GuestMarkcupBodyBase1" type="Sprite" parent="TexNode/MainWall/people/4/GuestMarkcupBodyBase2"]
+texture = ExtResource( 3 )
+
+[node name="WorkCup3" type="Sprite" parent="TexNode/MainWall/people/4"]
+position = Vector2( -35.9883, -7.32435 )
+texture = ExtResource( 12 )
+
+[node name="WorkDesk7" type="Sprite" parent="TexNode/MainWall/people/4"]
+position = Vector2( 18, -43 )
+texture = ExtResource( 20 )
+
+[node name="WorkDesk8" type="Sprite" parent="TexNode/MainWall/people/4"]
+position = Vector2( 6, -30 )
+texture = ExtResource( 19 )
+
+[node name="WorkDesk5" type="Sprite" parent="TexNode/MainWall/people/4"]
+position = Vector2( 13, 5 )
+texture = ExtResource( 21 )
+
+[node name="5" type="Node2D" parent="TexNode/MainWall/people"]
+position = Vector2( 150, -325 )
+
+[node name="WorkChair2" type="Sprite" parent="TexNode/MainWall/people/5"]
+position = Vector2( -44, -2 )
+texture = ExtResource( 15 )
+
+[node name="WorkDesk1" type="Sprite" parent="TexNode/MainWall/people/5"]
+texture = ExtResource( 14 )
+
+[node name="Floor1" type="Node2D" parent="TexNode/MainWall"]
+
+[node name="Sprite_open" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 100, 0 )
+texture = SubResource( 1 )
+offset = Vector2( 0, -118 )
+
+[node name="wL" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 250, 0 )
+texture = SubResource( 4 )
+offset = Vector2( 0, -118 )
+
+[node name="wM" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 375, 0 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 3 )
+offset = Vector2( 0, -118 )
+
+[node name="wR" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 500, 0 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 4 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite_open2" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 575, 0 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 5 )
+offset = Vector2( 0, -118 )
+
+[node name="BalconyItem4" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 140, -97 )
+scale = Vector2( 1.03, 1 )
+texture = ExtResource( 6 )
+
+[node name="Floor2" type="Node2D" parent="TexNode/MainWall"]
+position = Vector2( 0, -200 )
+
+[node name="Sprite_open" type="Sprite" parent="TexNode/MainWall/Floor2"]
+position = Vector2( 500, 0 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 1 )
+offset = Vector2( 0, -118 )
+
+[node name="wL" type="Sprite" parent="TexNode/MainWall/Floor2"]
+position = Vector2( 100, 0 )
+texture = SubResource( 4 )
+offset = Vector2( 0, -118 )
+
+[node name="wM" type="Sprite" parent="TexNode/MainWall/Floor2"]
+position = Vector2( 225, 0 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 3 )
+offset = Vector2( 0, -118 )
+
+[node name="wR" type="Sprite" parent="TexNode/MainWall/Floor2"]
+position = Vector2( 350, 0 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 4 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite_open2" type="Sprite" parent="TexNode/MainWall/Floor2"]
+position = Vector2( 25, 0 )
+texture = SubResource( 5 )
+offset = Vector2( 0, -118 )
+
+[node name="BalconyItem1" type="Sprite" parent="TexNode/MainWall/Floor2"]
+position = Vector2( 462, -101 )
+scale = Vector2( 1.03, 1 )
+texture = ExtResource( 6 )
+
+[node name="Floor3" type="Node2D" parent="TexNode/MainWall"]
+position = Vector2( 0, -400 )
+
+[node name="Sprite_open" type="Sprite" parent="TexNode/MainWall/Floor3"]
+position = Vector2( 100, 0 )
+texture = SubResource( 1 )
+offset = Vector2( 0, -118 )
+
+[node name="wL" type="Sprite" parent="TexNode/MainWall/Floor3"]
+position = Vector2( 250, 0 )
+texture = SubResource( 4 )
+offset = Vector2( 0, -118 )
+
+[node name="wM" type="Sprite" parent="TexNode/MainWall/Floor3"]
+position = Vector2( 375, 0 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 3 )
+offset = Vector2( 0, -118 )
+
+[node name="wR" type="Sprite" parent="TexNode/MainWall/Floor3"]
+position = Vector2( 500, 0 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 4 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite_open2" type="Sprite" parent="TexNode/MainWall/Floor3"]
+position = Vector2( 575, 0 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 5 )
+offset = Vector2( 0, -118 )
+
+[node name="BalconyItem2" type="Sprite" parent="TexNode/MainWall/Floor3"]
+position = Vector2( 144, -97 )
+scale = Vector2( 1.03, 1 )
+texture = ExtResource( 6 )
+
+[node name="Floor4" type="Node2D" parent="TexNode/MainWall"]
+position = Vector2( 0, -600 )
+
+[node name="Sprite_open" type="Sprite" parent="TexNode/MainWall/Floor4"]
+position = Vector2( 500, 0 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 1 )
+offset = Vector2( 0, -118 )
+
+[node name="wL" type="Sprite" parent="TexNode/MainWall/Floor4"]
+position = Vector2( 100, 0 )
+texture = SubResource( 4 )
+offset = Vector2( 0, -118 )
+
+[node name="wM" type="Sprite" parent="TexNode/MainWall/Floor4"]
+position = Vector2( 225, 0 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 3 )
+offset = Vector2( 0, -118 )
+
+[node name="wR" type="Sprite" parent="TexNode/MainWall/Floor4"]
+position = Vector2( 350, 0 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 4 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite_open2" type="Sprite" parent="TexNode/MainWall/Floor4"]
+position = Vector2( 25, 0 )
+texture = SubResource( 5 )
+offset = Vector2( 0, -118 )
+
+[node name="BalconyItem3" type="Sprite" parent="TexNode/MainWall/Floor4"]
+position = Vector2( 468, -104 )
+scale = Vector2( 1.03, 1 )
+texture = ExtResource( 6 )
+
+[node name="ExteriorWallIvy1" type="Sprite" parent="TexNode/MainWall"]
+position = Vector2( 152, -195 )
+texture = ExtResource( 8 )
+
+[node name="ExteriorWallIvy3" type="Sprite" parent="TexNode/MainWall/ExteriorWallIvy1"]
+position = Vector2( -14, 6 )
+texture = ExtResource( 7 )
+
+[node name="Web" type="Node2D" parent="TexNode/MainWall"]
+position = Vector2( 0, -1000 )
+scale = Vector2( 1.03, 1 )
+
+[node name="Panel" type="Panel" parent="TexNode/MainWall/Web"]
+modulate = Color( 0.607843, 0.588235, 0.588235, 1 )
+margin_left = 5.0
+margin_right = 579.0
+margin_bottom = 200.0
+mouse_filter = 2
+custom_styles/panel = SubResource( 6 )
+
+[node name="L" type="Sprite" parent="TexNode/MainWall/Web"]
+position = Vector2( 6.31818, 72 )
+scale = Vector2( 1, 1.2 )
+texture = ExtResource( 4 )
+
+[node name="R" type="Sprite" parent="TexNode/MainWall/Web"]
+position = Vector2( 578.182, 75 )
+rotation = 3.14159
+scale = Vector2( 1, -1.2 )
+texture = ExtResource( 4 )
+
+[node name="Balcony4" type="Sprite" parent="TexNode/MainWall/Web"]
+position = Vector2( 75.3182, 171 )
+texture = ExtResource( 5 )
+
+[node name="Balcony6" type="Sprite" parent="TexNode/MainWall/Web"]
+position = Vector2( 75, -17 )
+texture = ExtResource( 5 )
+
+[node name="Balcony5" type="Sprite" parent="TexNode/MainWall/Web"]
+position = Vector2( 220.818, 171 )
+texture = ExtResource( 5 )
+
+[node name="Balcony7" type="Sprite" parent="TexNode/MainWall/Web"]
+position = Vector2( 220, -17 )
+texture = ExtResource( 5 )
+
+[node name="Balcony8" type="Sprite" parent="TexNode/MainWall/Web"]
+position = Vector2( 363.818, 171 )
+texture = ExtResource( 5 )
+
+[node name="Balcony9" type="Sprite" parent="TexNode/MainWall/Web"]
+position = Vector2( 365, -17 )
+texture = ExtResource( 5 )
+
+[node name="Balcony10" type="Sprite" parent="TexNode/MainWall/Web"]
+position = Vector2( 509.318, 171 )
+texture = ExtResource( 5 )
+
+[node name="Balcony11" type="Sprite" parent="TexNode/MainWall/Web"]
+position = Vector2( 510, -17 )
+texture = ExtResource( 5 )

@@ -1,0 +1,464 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_10.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_5.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cupline_6.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_4.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_3.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_6.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_2.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_2.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_top.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_1.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_2.tres" type="Texture" id=13]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_6.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_6.tres" type="Texture" id=16]
+
+[node name="雪克杯" type="Node2D"]
+position = Vector2( 0, -104 )
+
+[node name="X" parent="." instance=ExtResource( 14 )]
+margin_left = -75.0
+margin_top = 25.0
+margin_right = -75.0
+margin_bottom = 25.0
+bool_Hold = true
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-按住搅拌"
+OnBut = false
+
+[node name="UiIconInfo11" type="Sprite" parent="."]
+position = Vector2( -17, -84 )
+texture = ExtResource( 2 )
+
+[node name="UiIconInfo3" type="Sprite" parent="."]
+position = Vector2( -17, -24 )
+texture = ExtResource( 3 )
+
+[node name="TexNode2" type="Node2D" parent="."]
+position = Vector2( 118, -24 )
+__meta__ = {
+"_editor_description_": "SCALE 0.57"
+}
+
+[node name="Tex" type="Node2D" parent="TexNode2"]
+
+[node name="baseLayer" type="Node2D" parent="TexNode2/Tex"]
+
+[node name="Cup_L" type="Sprite" parent="TexNode2/Tex/baseLayer"]
+texture = ExtResource( 8 )
+
+[node name="Layer" type="Node2D" parent="TexNode2/Tex"]
+modulate = Color( 1, 0.968627, 0.47451, 0.596078 )
+
+[node name="Layer1" type="TextureProgress" parent="TexNode2/Tex/Layer"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 12 )
+fill_mode = 3
+
+[node name="Layer2" type="TextureProgress" parent="TexNode2/Tex/Layer"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 9 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Layer3" type="TextureProgress" parent="TexNode2/Tex/Layer"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 7 )
+fill_mode = 3
+
+[node name="Layer4" type="TextureProgress" parent="TexNode2/Tex/Layer"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Layer5" type="TextureProgress" parent="TexNode2/Tex/Layer"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Layer6" type="TextureProgress" parent="TexNode2/Tex/Layer"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 16 )
+fill_mode = 3
+
+[node name="Layer0" type="Sprite" parent="TexNode2/Tex/Layer"]
+position = Vector2( -3.8147e-06, -45 )
+texture = ExtResource( 11 )
+offset = Vector2( 1, 0 )
+
+[node name="Front" type="Node2D" parent="TexNode2/Tex"]
+
+[node name="CupF_L" type="Sprite" parent="TexNode2/Tex/Front"]
+texture = ExtResource( 15 )
+
+[node name="Line" type="Node2D" parent="TexNode2/Tex"]
+position = Vector2( 35, 10 )
+
+[node name="Line_L" type="Sprite" parent="TexNode2/Tex/Line"]
+texture = ExtResource( 5 )
+
+[node name="TexNode3" type="Node2D" parent="."]
+position = Vector2( -152, -24 )
+__meta__ = {
+"_editor_description_": "SCALE 0.57"
+}
+
+[node name="Tex" type="Node2D" parent="TexNode3"]
+
+[node name="baseLayer" type="Node2D" parent="TexNode3/Tex"]
+
+[node name="Cup_L" type="Sprite" parent="TexNode3/Tex/baseLayer"]
+texture = ExtResource( 8 )
+
+[node name="Layer" type="Node2D" parent="TexNode3/Tex"]
+
+[node name="Layer1" type="TextureProgress" parent="TexNode3/Tex/Layer"]
+modulate = Color( 0.584314, 0.901961, 1, 0.686275 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 12 )
+fill_mode = 3
+
+[node name="Layer2" type="TextureProgress" parent="TexNode3/Tex/Layer"]
+modulate = Color( 0.584314, 0.901961, 1, 0.686275 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 9 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Layer3" type="TextureProgress" parent="TexNode3/Tex/Layer"]
+modulate = Color( 0.584314, 0.901961, 1, 0.686275 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 7 )
+fill_mode = 3
+
+[node name="Layer4" type="TextureProgress" parent="TexNode3/Tex/Layer"]
+modulate = Color( 1, 0.980392, 0.482353, 0.843137 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Layer5" type="TextureProgress" parent="TexNode3/Tex/Layer"]
+modulate = Color( 1, 0.980392, 0.482353, 0.843137 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Layer6" type="TextureProgress" parent="TexNode3/Tex/Layer"]
+modulate = Color( 1, 0.980392, 0.482353, 0.843137 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 16 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Layer0" type="Sprite" parent="TexNode3/Tex/Layer"]
+modulate = Color( 1, 0.980392, 0.482353, 0.843137 )
+position = Vector2( -3.8147e-06, -45 )
+texture = ExtResource( 11 )
+offset = Vector2( 1, 0 )
+
+[node name="Front" type="Node2D" parent="TexNode3/Tex"]
+
+[node name="CupF_L" type="Sprite" parent="TexNode3/Tex/Front"]
+texture = ExtResource( 15 )
+
+[node name="Line" type="Node2D" parent="TexNode3/Tex"]
+position = Vector2( 35, 10 )
+
+[node name="Line_L" type="Sprite" parent="TexNode3/Tex/Line"]
+visible = false
+texture = ExtResource( 5 )
+
+[node name="UiIconInfo0" type="Sprite" parent="."]
+position = Vector2( -47, 197 )
+texture = ExtResource( 1 )
+
+[node name="Cup3" type="Node2D" parent="."]
+position = Vector2( -7, 232 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="Cup3"]
+texture = ExtResource( 10 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="Cup3"]
+self_modulate = Color( 0.980392, 1, 0.792157, 0.784314 )
+texture = ExtResource( 12 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="Cup3"]
+self_modulate = Color( 0.980392, 1, 0.792157, 0.784314 )
+texture = ExtResource( 9 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="Cup3"]
+self_modulate = Color( 0.980392, 1, 0.792157, 0.784314 )
+position = Vector2( 0, 6 )
+texture = ExtResource( 11 )
+
+[node name="UiProcupCup2" type="Sprite" parent="Cup3"]
+texture = ExtResource( 13 )
+
+[node name="Cup4" type="Node2D" parent="."]
+position = Vector2( 53, 232 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="Cup4"]
+texture = ExtResource( 10 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="Cup4"]
+self_modulate = Color( 0.980392, 1, 0.792157, 0.784314 )
+texture = ExtResource( 12 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="Cup4"]
+self_modulate = Color( 0.980392, 1, 0.792157, 0.784314 )
+texture = ExtResource( 9 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="Cup4"]
+self_modulate = Color( 0.980392, 1, 0.792157, 0.784314 )
+position = Vector2( 0, 6 )
+texture = ExtResource( 11 )
+
+[node name="UiProcupCup2" type="Sprite" parent="Cup4"]
+texture = ExtResource( 13 )
+
+[node name="Cup5" type="Node2D" parent="."]
+position = Vector2( 113, 232 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="Cup5"]
+texture = ExtResource( 10 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="Cup5"]
+self_modulate = Color( 0.980392, 1, 0.792157, 0.784314 )
+texture = ExtResource( 12 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="Cup5"]
+self_modulate = Color( 0.980392, 1, 0.792157, 0.784314 )
+texture = ExtResource( 9 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="Cup5"]
+self_modulate = Color( 0.980392, 1, 0.792157, 0.784314 )
+position = Vector2( 0, 6 )
+texture = ExtResource( 11 )
+
+[node name="UiProcupCup2" type="Sprite" parent="Cup5"]
+texture = ExtResource( 13 )
+
+[node name="TexNode" type="Node2D" parent="."]
+position = Vector2( -142, 192 )
+rotation = 0.523599
+__meta__ = {
+"_editor_description_": "SCALE 0.57"
+}
+
+[node name="Tex" type="Node2D" parent="TexNode"]
+
+[node name="baseLayer" type="Node2D" parent="TexNode/Tex"]
+
+[node name="Cup_L" type="Sprite" parent="TexNode/Tex/baseLayer"]
+texture = ExtResource( 8 )
+
+[node name="Layer" type="Node2D" parent="TexNode/Tex"]
+modulate = Color( 1, 0.968627, 0.47451, 0.596078 )
+
+[node name="Layer1" type="TextureProgress" parent="TexNode/Tex/Layer"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 12 )
+fill_mode = 3
+
+[node name="Layer2" type="TextureProgress" parent="TexNode/Tex/Layer"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 9 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Layer3" type="TextureProgress" parent="TexNode/Tex/Layer"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 7 )
+fill_mode = 3
+
+[node name="Layer4" type="TextureProgress" parent="TexNode/Tex/Layer"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Layer5" type="TextureProgress" parent="TexNode/Tex/Layer"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 4 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Layer6" type="TextureProgress" parent="TexNode/Tex/Layer"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 16 )
+fill_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Layer0" type="Sprite" parent="TexNode/Tex/Layer"]
+position = Vector2( -3.8147e-06, -45 )
+texture = ExtResource( 11 )
+offset = Vector2( 1, 0 )
+
+[node name="Front" type="Node2D" parent="TexNode/Tex"]
+
+[node name="CupF_L" type="Sprite" parent="TexNode/Tex/Front"]
+texture = ExtResource( 15 )
+
+[node name="Line" type="Node2D" parent="TexNode/Tex"]
+position = Vector2( 35, 10 )
+
+[node name="Line_L" type="Sprite" parent="TexNode/Tex/Line"]
+visible = false
+texture = ExtResource( 5 )

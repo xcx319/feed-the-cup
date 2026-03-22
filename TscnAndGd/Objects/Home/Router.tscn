@@ -1,0 +1,2309 @@
+[gd_scene load_steps=81 format=2]
+
+[ext_resource path="res://Resources/Home/home_pack.sprites/Home_router.tres" type="Texture" id=1]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_cuptip_1.tres" type="Texture" id=3]
+[ext_resource path="res://TscnAndGd/Objects/Home/Router.gd" type="Script" id=4]
+[ext_resource path="res://TscnAndGd/Buttons/LogicBut.tscn" type="PackedScene" id=5]
+[ext_resource path="res://TscnAndGd/UI/InGame/黑幕.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Language/Fonts/Base_l_outline.tres" type="DynamicFont" id=7]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip.tres" type="Texture" id=9]
+[ext_resource path="res://Language/Fonts/Base_m_outline.tres" type="DynamicFont" id=10]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_5.png" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_Menu.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_tips_1.tres" type="Texture" id=14]
+[ext_resource path="res://TscnAndGd/UI/Info/Scroll_Theme.tres" type="Theme" id=15]
+[ext_resource path="res://TscnAndGd/Effects/shaders/teleport-effect.tres" type="Shader" id=16]
+[ext_resource path="res://Resources/Home/home_pack.sprites/Home_router_p1.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Home/home_pack.sprites/Home_router_p3.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Home/home_pack.sprites/Home_router_p2.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Home/home_pack.sprites/Home_hand_7.tres" type="Texture" id=20]
+[ext_resource path="res://Language/Fonts/Base_m.tres" type="DynamicFont" id=21]
+[ext_resource path="res://Resources/Home/home_pack.sprites/Home_hand_12.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Home/home_pack.sprites/Home_router_p4.tres" type="Texture" id=23]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_But.gd" type="Script" id=24]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_dark.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_multy.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_high.tres" type="Texture" id=27]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_button_special_blank_orange.tres" type="Texture" id=28]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_button_special_blank_dark.tres" type="Texture" id=29]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_phone.tres" type="Texture" id=30]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_control_none.tres" type="Texture" id=31]
+[ext_resource path="res://TscnAndGd/UI/Buttons/button_base.gd" type="Script" id=32]
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 16 )
+shader_param/progress = 0.0
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = 0.15
+shader_param/color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="Animation" id=198]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=199]
+resource_name = "show"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.29952, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Sprite:material:shader_param/color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.498039, 0, 1 ), Color( 0.392157, 0.392157, 0.392157, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=200]
+resource_name = "show_init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Sprite:material:shader_param/color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 24.9999, 50 )
+
+[sub_resource type="Animation" id=191]
+resource_name = "未连接网络"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Main/Connect/Connect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Main/UIControl/CheckBox:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Main/Connect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Main/Connect:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Main/Connect/Connect:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=192]
+resource_name = "连接网络"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Main/Connect/Connect:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Main/UIControl/CheckBox:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Main/FriendUI:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Main/FriendUI:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Main/Connect:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=195]
+resource_name = "Invite"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Main:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Main/FriendUI:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Main/Connect:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Main/FriendUI:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("..")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_Load"
+} ]
+}
+
+[sub_resource type="Animation" id=197]
+resource_name = "hide"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Main:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("..")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ false ],
+"method": "call_used"
+}, {
+"args": [  ],
+"method": "call_CanControl"
+} ]
+}
+
+[sub_resource type="Animation" id=193]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("..")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ false ],
+"method": "call_used"
+} ]
+}
+
+[sub_resource type="Animation" id=196]
+resource_name = "join"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Main:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("..")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ true ],
+"method": "call_used"
+} ]
+}
+
+[sub_resource type="Animation" id=194]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Main:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("..")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ true ],
+"method": "call_used"
+} ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Main/TelePhoneUI:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="DynamicFontData" id=190]
+font_path = "res://Language/Fonts/simhei.ttf"
+
+[sub_resource type="DynamicFont" id=94]
+size = 32
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 190 )
+
+[sub_resource type="StyleBoxTexture" id=185]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 1, 1, 0.392157 )
+
+[sub_resource type="StyleBoxTexture" id=186]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="StyleBoxEmpty" id=187]
+
+[sub_resource type="StyleBoxEmpty" id=188]
+
+[sub_resource type="StyleBoxEmpty" id=189]
+
+[sub_resource type="StyleBoxTexture" id=218]
+texture = ExtResource( 31 )
+region_rect = Rect2( 0, 0, 30, 30 )
+margin_left = 10.0
+margin_right = 10.0
+margin_top = 10.0
+margin_bottom = 10.0
+modulate_color = Color( 1, 0.784314, 0.588235, 1 )
+
+[sub_resource type="StyleBoxTexture" id=219]
+texture = ExtResource( 31 )
+region_rect = Rect2( 0, 0, 30, 30 )
+margin_left = 10.0
+margin_right = 10.0
+margin_top = 10.0
+margin_bottom = 10.0
+modulate_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="StyleBoxTexture" id=220]
+texture = ExtResource( 31 )
+region_rect = Rect2( 0, 0, 30, 30 )
+margin_left = 10.0
+margin_right = 10.0
+margin_top = 10.0
+margin_bottom = 10.0
+modulate_color = Color( 1, 1, 0.392157, 0.784314 )
+
+[sub_resource type="StyleBoxTexture" id=221]
+texture = ExtResource( 31 )
+region_rect = Rect2( 0, 0, 30, 30 )
+margin_left = 10.0
+margin_right = 10.0
+margin_top = 10.0
+margin_bottom = 10.0
+modulate_color = Color( 0.313726, 0.313726, 0.313726, 1 )
+
+[sub_resource type="StyleBoxTexture" id=222]
+texture = ExtResource( 31 )
+region_rect = Rect2( 0, 0, 30, 30 )
+margin_left = 10.0
+margin_right = 10.0
+margin_top = 10.0
+margin_bottom = 10.0
+modulate_color = Color( 1, 1, 1, 0.784314 )
+
+[sub_resource type="ButtonGroup" id=223]
+
+[sub_resource type="StyleBoxTexture" id=224]
+texture = ExtResource( 31 )
+region_rect = Rect2( 0, 0, 30, 30 )
+margin_left = 10.0
+margin_right = 10.0
+margin_top = 10.0
+margin_bottom = 10.0
+modulate_color = Color( 0.784314, 1, 1, 0.784314 )
+
+[sub_resource type="StyleBoxTexture" id=214]
+texture = ExtResource( 28 )
+region_rect = Rect2( 0, 0, 85, 74 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id=215]
+texture = ExtResource( 28 )
+region_rect = Rect2( 0, 0, 85, 74 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id=216]
+texture = ExtResource( 29 )
+region_rect = Rect2( 0, 0, 85, 74 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id=217]
+texture = ExtResource( 28 )
+region_rect = Rect2( 0, 0, 85, 74 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+modulate_color = Color( 1, 1, 1, 0.784314 )
+
+[sub_resource type="StyleBoxTexture" id=209]
+texture = ExtResource( 25 )
+region_rect = Rect2( 0, 0, 90, 93 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+modulate_color = Color( 0.784314, 1, 0.992157, 1 )
+
+[sub_resource type="StyleBoxTexture" id=210]
+texture = ExtResource( 25 )
+region_rect = Rect2( 0, 0, 90, 93 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+modulate_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="StyleBoxTexture" id=211]
+texture = ExtResource( 25 )
+region_rect = Rect2( 0, 0, 90, 93 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+modulate_color = Color( 0.784314, 1, 0.992157, 1 )
+
+[sub_resource type="StyleBoxTexture" id=212]
+texture = ExtResource( 25 )
+region_rect = Rect2( 0, 0, 90, 93 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+modulate_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+
+[sub_resource type="StyleBoxTexture" id=213]
+texture = ExtResource( 25 )
+region_rect = Rect2( 0, 0, 90, 93 )
+margin_left = 20.0
+margin_right = 20.0
+margin_top = 20.0
+margin_bottom = 20.0
+modulate_color = Color( 1, 0.882353, 0.447059, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=23]
+
+[sub_resource type="StyleBoxEmpty" id=24]
+
+[sub_resource type="StyleBoxEmpty" id=25]
+
+[sub_resource type="Animation" id=201]
+resource_name = "hide"
+length = 0.5
+step = 0.05
+tracks/0/type = "animation"
+tracks/0/path = NodePath("AniNode/Loop")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "hide" ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=202]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "animation"
+tracks/0/path = NodePath("AniNode/Loop")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=203]
+resource_name = "show"
+length = 3.0
+step = 0.02
+tracks/0/type = "animation"
+tracks/0/path = NodePath("AniNode/Loop")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "show", "showloop" ),
+"times": PoolRealArray( 0, 1.5 )
+}
+
+[sub_resource type="Animation" id=204]
+resource_name = "hide"
+length = 0.5
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("TexNode/Sprite/R:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -45, -0.25, 0, 0.25, 0, -15, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("TexNode/Sprite/L:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -25, -0.25, 0, 0.25, 23.7252, 0, -0.25, 33.998, 0.3, 0.469428 ),
+"times": PoolRealArray( 0, 0.4 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("TexNode:scale:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.1, -0.00607592, 1.05, -0.1, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2, 0.5 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("TexNode:scale:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.1, 0.0242962, 0.9, -0.1, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2, 0.5 )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TexNode/Sprite/L:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("TexNode/Sprite/L/HandL:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("TexNode/Sprite/R/HandR:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"update": 1,
+"values": [  ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("TexNode/Sprite/R:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("TexNode/Sprite/HomeRouterP3:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( -40, -0.25, 0, 0.2, 45.3146, 0, -0.15, 11.3226, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("TexNode/Sprite/HomeRouterP4:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( -30, -0.25, 0, 0.3, 37.7316, 0, -0.15, 17.422, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("TexNode/Sprite/HomeRouterP4:scale:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("TexNode/Sprite/HomeRouterP4:scale:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 1.1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4 )
+}
+
+[sub_resource type="Animation" id=205]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite/L:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Sprite/R:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("TexNode/Sprite/HomeRouterP3:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("TexNode/Sprite/HomeRouterP4:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("TexNode/Sprite/HomeRouterP4:scale:x")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("TexNode/Sprite/HomeRouterP4:scale:y")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=206]
+resource_name = "show"
+length = 1.5
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.36, 0.64 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.05, 0.95 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("TexNode/Sprite/L:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 15, -0.25, 0, 0.48, 13.3661, -25, -0.2, -8.5728, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("TexNode/Sprite/R:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( -30, -0.25, 0, 0.58, 24.8939, -30, -0.25, 0, 0.58, 24.8939, -45, -0.112236, 11.3594, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1.34 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TexNode/Sprite/R/HandR:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 20 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TexNode/Sprite/L/HandL:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 22 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("TexNode/Sprite/L:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.26 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("TexNode/Sprite/R:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5, 0.76 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("TexNode/Sprite/HomeRouterP3:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.386115, 8.50686, -40, -0.373885, -10.2166, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("TexNode/Sprite/HomeRouterP4:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.4, 13.1582, -30, -0.38, -9.55726, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("TexNode/Sprite/HomeRouterP4:scale:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("TexNode/Sprite/HomeRouterP4:scale:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1.1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="Animation" id=207]
+resource_name = "showloop"
+length = 2.0
+loop = true
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.38, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.05, 0.95 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("TexNode/Sprite/L:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -25, -0.16, -33.2332, 0.9, 24.023, -25, -0.96, -21.4677, 0.72, -11.6337 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("TexNode/Sprite/R:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( -45, -0.24, -32.3999, 0.34, -33.4522, -45, -1.58, -10.7768, 1.36, 7.26938 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TexNode/Sprite/R/HandR:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 20 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TexNode/Sprite/L/HandL:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 22 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("TexNode/Sprite/L:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("TexNode/Sprite/R:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("TexNode/Sprite/HomeRouterP3:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( -40, -0.25, 0, 0.92, 23.8588, -40, -0.9, -22.692, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("TexNode/Sprite/HomeRouterP1:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.4, -376.434, -360, -1.28, 6.03046, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("TexNode/Sprite/HomeRouterP4:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( -30, -0.25, 0, 0.46, 14.6686, -30, -0.42, -13.6272, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("TexNode/Sprite/HomeRouterP4:scale:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("TexNode/Sprite/HomeRouterP4:scale:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 1.1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="RectangleShape2D" id=208]
+extents = Vector2( 142.5, 123.125 )
+
+[node name="Router" type="StaticBody2D"]
+collision_layer = 128
+collision_mask = 5120
+script = ExtResource( 4 )
+
+[node name="TexNode" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="TexNode"]
+material = SubResource( 3 )
+position = Vector2( 0, -29 )
+texture = ExtResource( 1 )
+
+[node name="HomeRouterP4" type="Sprite" parent="TexNode/Sprite"]
+use_parent_material = true
+position = Vector2( -26, -1 )
+texture = ExtResource( 23 )
+offset = Vector2( -6, -23 )
+
+[node name="HomeRouterP3" type="Sprite" parent="TexNode/Sprite"]
+use_parent_material = true
+position = Vector2( -44, -8 )
+texture = ExtResource( 18 )
+offset = Vector2( 42.4334, -47.0416 )
+
+[node name="HomeRouterP2" type="Sprite" parent="TexNode/Sprite"]
+use_parent_material = true
+position = Vector2( -2, -57 )
+texture = ExtResource( 19 )
+
+[node name="HomeRouterP1" type="Sprite" parent="TexNode/Sprite"]
+use_parent_material = true
+position = Vector2( 0, -24 )
+rotation = -4.04497
+texture = ExtResource( 17 )
+offset = Vector2( 0, -1 )
+
+[node name="Ani" type="AnimationPlayer" parent="TexNode/Sprite"]
+root_node = NodePath("../../..")
+autoplay = "show_init"
+anims/init = SubResource( 198 )
+anims/show = SubResource( 199 )
+anims/show_init = SubResource( 200 )
+
+[node name="L" type="Node2D" parent="TexNode/Sprite"]
+modulate = Color( 1, 1, 1, 0 )
+use_parent_material = true
+position = Vector2( -45, -8 )
+rotation = 0.261799
+
+[node name="HandL" type="Sprite" parent="TexNode/Sprite/L"]
+use_parent_material = true
+texture = ExtResource( 22 )
+offset = Vector2( -5, -30 )
+
+[node name="R" type="Node2D" parent="TexNode/Sprite"]
+modulate = Color( 1, 1, 1, 0 )
+use_parent_material = true
+position = Vector2( 48, -5 )
+rotation = -0.523599
+
+[node name="HandR" type="Sprite" parent="TexNode/Sprite/R"]
+use_parent_material = true
+texture = ExtResource( 20 )
+offset = Vector2( 0, -28 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 4.62234e-05, -9.05991e-05 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 3
+visible = false
+
+[node name="TypeAni" type="AnimationPlayer" parent="CanvasLayer"]
+autoplay = "连接网络"
+"anims/未连接网络" = SubResource( 191 )
+"anims/连接网络" = SubResource( 192 )
+
+[node name="Ani" type="AnimationPlayer" parent="CanvasLayer"]
+autoplay = "init"
+anims/Invite = SubResource( 195 )
+anims/hide = SubResource( 197 )
+anims/init = SubResource( 193 )
+anims/join = SubResource( 196 )
+anims/show = SubResource( 194 )
+
+[node name="Panel" parent="CanvasLayer" instance=ExtResource( 6 )]
+
+[node name="Main" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 2
+
+[node name="BG" type="NinePatchRect" parent="CanvasLayer/Main"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -740.0
+margin_top = -480.0
+margin_right = 740.0
+margin_bottom = 445.0
+texture = ExtResource( 13 )
+patch_margin_left = 57
+patch_margin_top = 50
+patch_margin_right = 57
+patch_margin_bottom = 50
+
+[node name="LevelName" type="NinePatchRect" parent="CanvasLayer/Main/BG"]
+self_modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -627.5
+margin_top = 40.0
+margin_right = 627.5
+margin_bottom = 125.0
+texture = ExtResource( 12 )
+patch_margin_left = 43
+patch_margin_right = 44
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/Main/BG/LevelName"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -629.5
+margin_top = -43.5
+margin_right = 630.5
+margin_bottom = 43.5
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "好友合作"
+align = 1
+valign = 1
+script = ExtResource( 8 )
+LabelTEXT = "信息-好友合作"
+
+[node name="Label" type="Label" parent="CanvasLayer/Main/BG/LevelName"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -719.5
+margin_top = 77.5
+margin_right = -29.5
+margin_bottom = 132.5
+custom_fonts/font = SubResource( 94 )
+text = "关卡名字"
+align = 1
+valign = 1
+script = ExtResource( 8 )
+LabelTEXT = "信息-关卡选择"
+
+[node name="ButControl" type="Control" parent="CanvasLayer/Main"]
+anchor_top = 0.907
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.439941
+
+[node name="BackBut" parent="CanvasLayer/Main/ButControl" instance=ExtResource( 5 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = -45.0
+margin_right = 95.0
+margin_bottom = 45.0
+custom_styles/hover = SubResource( 185 )
+custom_styles/pressed = SubResource( 186 )
+custom_styles/focus = SubResource( 187 )
+custom_styles/disabled = SubResource( 188 )
+custom_styles/normal = SubResource( 189 )
+_ActionModeBool = true
+
+[node name="B" parent="CanvasLayer/Main/ButControl/BackBut" instance=ExtResource( 2 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-返回"
+
+[node name="RefreshBut" parent="CanvasLayer/Main/ButControl" instance=ExtResource( 5 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -185.0
+margin_top = -45.0
+margin_right = -95.0
+margin_bottom = 45.0
+focus_mode = 2
+custom_styles/hover = SubResource( 185 )
+custom_styles/pressed = SubResource( 186 )
+custom_styles/focus = SubResource( 187 )
+custom_styles/disabled = SubResource( 188 )
+custom_styles/normal = SubResource( 189 )
+_ActionModeBool = true
+
+[node name="Y" parent="CanvasLayer/Main/ButControl/RefreshBut" instance=ExtResource( 2 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-刷新"
+
+[node name="FriendUI" type="Control" parent="CanvasLayer/Main"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -79.0
+margin_top = -311.0
+margin_right = 671.0
+margin_bottom = 389.0
+rect_min_size = Vector2( 750, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="InfoBG" type="NinePatchRect" parent="CanvasLayer/Main/FriendUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 9 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Scroll" type="ScrollContainer" parent="CanvasLayer/Main/FriendUI/InfoBG"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 71.0
+margin_bottom = -6.0
+theme = ExtResource( 15 )
+follow_focus = true
+
+[node name="VBox" type="VBoxContainer" parent="CanvasLayer/Main/FriendUI/InfoBG/Scroll"]
+
+[node name="BG" type="NinePatchRect" parent="CanvasLayer/Main/FriendUI"]
+anchor_right = 1.0
+margin_bottom = 70.0
+texture = ExtResource( 14 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="Label" type="Label" parent="CanvasLayer/Main/FriendUI/BG"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 10 )
+text = "好友列表"
+align = 1
+valign = 1
+script = ExtResource( 8 )
+LabelTEXT = "信息-好友列表"
+
+[node name="TelePhoneUI" type="Control" parent="CanvasLayer/Main"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -79.0
+margin_top = -311.0
+margin_right = 671.0
+margin_bottom = 389.0
+rect_min_size = Vector2( 750, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="InfoBG" type="NinePatchRect" parent="CanvasLayer/Main/TelePhoneUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 9 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Scroll" type="ScrollContainer" parent="CanvasLayer/Main/TelePhoneUI/InfoBG"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 71.0
+margin_bottom = -6.0
+theme = ExtResource( 15 )
+follow_focus = true
+
+[node name="VBox" type="VBoxContainer" parent="CanvasLayer/Main/TelePhoneUI/InfoBG/Scroll"]
+
+[node name="BG" type="NinePatchRect" parent="CanvasLayer/Main/TelePhoneUI"]
+anchor_right = 1.0
+margin_bottom = 70.0
+texture = ExtResource( 14 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="Label" type="Label" parent="CanvasLayer/Main/TelePhoneUI/BG"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 10 )
+text = "打电话"
+align = 1
+valign = 1
+script = ExtResource( 8 )
+LabelTEXT = "信息-打电话"
+
+[node name="PhoneBG" type="NinePatchRect" parent="CanvasLayer/Main/TelePhoneUI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -150.0
+margin_right = 250.0
+margin_bottom = 150.0
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -156.0
+margin_top = -174.0
+margin_right = 153.0
+margin_bottom = -123.0
+focus_mode = 0
+custom_fonts/font = ExtResource( 21 )
+align = 1
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -158.0
+margin_top = -90.0
+margin_right = 158.0
+margin_bottom = 292.0
+columns = 3
+
+[node name="1" type="Button" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer"]
+margin_right = 100.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 100, 70 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath("../2")
+focus_neighbour_bottom = NodePath("../4")
+focus_next = NodePath("../2")
+focus_previous = NodePath(".")
+custom_fonts/font = ExtResource( 10 )
+custom_styles/hover = SubResource( 218 )
+custom_styles/pressed = SubResource( 219 )
+custom_styles/focus = SubResource( 220 )
+custom_styles/disabled = SubResource( 221 )
+custom_styles/normal = SubResource( 222 )
+group = SubResource( 223 )
+text = "1"
+script = ExtResource( 32 )
+
+[node name="2" type="Button" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer"]
+margin_left = 108.0
+margin_right = 208.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 100, 70 )
+focus_neighbour_left = NodePath("../1")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath("../3")
+focus_neighbour_bottom = NodePath("../5")
+focus_next = NodePath("../3")
+focus_previous = NodePath("../1")
+custom_fonts/font = ExtResource( 10 )
+custom_styles/hover = SubResource( 218 )
+custom_styles/pressed = SubResource( 219 )
+custom_styles/focus = SubResource( 220 )
+custom_styles/disabled = SubResource( 221 )
+custom_styles/normal = SubResource( 222 )
+group = SubResource( 223 )
+text = "2"
+script = ExtResource( 32 )
+
+[node name="3" type="Button" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer"]
+margin_left = 216.0
+margin_right = 316.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 100, 70 )
+focus_neighbour_left = NodePath("../2")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../6")
+focus_next = NodePath("../4")
+focus_previous = NodePath("../2")
+custom_fonts/font = ExtResource( 10 )
+custom_styles/hover = SubResource( 218 )
+custom_styles/pressed = SubResource( 219 )
+custom_styles/focus = SubResource( 220 )
+custom_styles/disabled = SubResource( 221 )
+custom_styles/normal = SubResource( 222 )
+group = SubResource( 223 )
+text = "3"
+script = ExtResource( 32 )
+
+[node name="4" type="Button" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer"]
+margin_top = 78.0
+margin_right = 100.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 100, 70 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../1")
+focus_neighbour_right = NodePath("../5")
+focus_neighbour_bottom = NodePath("../7")
+focus_next = NodePath("../5")
+focus_previous = NodePath("../3")
+custom_fonts/font = ExtResource( 10 )
+custom_styles/hover = SubResource( 218 )
+custom_styles/pressed = SubResource( 219 )
+custom_styles/focus = SubResource( 220 )
+custom_styles/disabled = SubResource( 221 )
+custom_styles/normal = SubResource( 222 )
+group = SubResource( 223 )
+text = "4"
+script = ExtResource( 32 )
+
+[node name="5" type="Button" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer"]
+margin_left = 108.0
+margin_top = 78.0
+margin_right = 208.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 100, 70 )
+focus_neighbour_left = NodePath("../4")
+focus_neighbour_top = NodePath("../2")
+focus_neighbour_right = NodePath("../6")
+focus_neighbour_bottom = NodePath("../8")
+focus_next = NodePath("../6")
+focus_previous = NodePath("../4")
+custom_fonts/font = ExtResource( 10 )
+custom_styles/hover = SubResource( 218 )
+custom_styles/pressed = SubResource( 219 )
+custom_styles/focus = SubResource( 220 )
+custom_styles/disabled = SubResource( 221 )
+custom_styles/normal = SubResource( 222 )
+group = SubResource( 223 )
+text = "5"
+script = ExtResource( 32 )
+
+[node name="6" type="Button" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer"]
+margin_left = 216.0
+margin_top = 78.0
+margin_right = 316.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 100, 70 )
+focus_neighbour_left = NodePath("../5")
+focus_neighbour_top = NodePath("../3")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../9")
+focus_next = NodePath("../7")
+focus_previous = NodePath("../5")
+custom_fonts/font = ExtResource( 10 )
+custom_styles/hover = SubResource( 218 )
+custom_styles/pressed = SubResource( 219 )
+custom_styles/focus = SubResource( 220 )
+custom_styles/disabled = SubResource( 221 )
+custom_styles/normal = SubResource( 222 )
+group = SubResource( 223 )
+text = "6"
+script = ExtResource( 32 )
+
+[node name="7" type="Button" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer"]
+margin_top = 156.0
+margin_right = 100.0
+margin_bottom = 226.0
+rect_min_size = Vector2( 100, 70 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../4")
+focus_neighbour_right = NodePath("../8")
+focus_neighbour_bottom = NodePath("../C")
+focus_next = NodePath("../8")
+focus_previous = NodePath("../6")
+custom_fonts/font = ExtResource( 10 )
+custom_styles/hover = SubResource( 218 )
+custom_styles/pressed = SubResource( 219 )
+custom_styles/focus = SubResource( 220 )
+custom_styles/disabled = SubResource( 221 )
+custom_styles/normal = SubResource( 222 )
+group = SubResource( 223 )
+text = "7"
+script = ExtResource( 32 )
+
+[node name="8" type="Button" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer"]
+margin_left = 108.0
+margin_top = 156.0
+margin_right = 208.0
+margin_bottom = 226.0
+rect_min_size = Vector2( 100, 70 )
+focus_neighbour_left = NodePath("../7")
+focus_neighbour_top = NodePath("../5")
+focus_neighbour_right = NodePath("../9")
+focus_neighbour_bottom = NodePath("../0")
+focus_next = NodePath("../9")
+focus_previous = NodePath("../7")
+custom_fonts/font = ExtResource( 10 )
+custom_styles/hover = SubResource( 218 )
+custom_styles/pressed = SubResource( 219 )
+custom_styles/focus = SubResource( 220 )
+custom_styles/disabled = SubResource( 221 )
+custom_styles/normal = SubResource( 222 )
+group = SubResource( 223 )
+text = "8"
+script = ExtResource( 32 )
+
+[node name="9" type="Button" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer"]
+margin_left = 216.0
+margin_top = 156.0
+margin_right = 316.0
+margin_bottom = 226.0
+rect_min_size = Vector2( 100, 70 )
+focus_neighbour_left = NodePath("../8")
+focus_neighbour_top = NodePath("../6")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../D")
+focus_next = NodePath("../C")
+focus_previous = NodePath("../8")
+custom_fonts/font = ExtResource( 10 )
+custom_styles/hover = SubResource( 218 )
+custom_styles/pressed = SubResource( 219 )
+custom_styles/focus = SubResource( 220 )
+custom_styles/disabled = SubResource( 221 )
+custom_styles/normal = SubResource( 222 )
+group = SubResource( 223 )
+text = "9"
+script = ExtResource( 32 )
+
+[node name="C" type="Button" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer"]
+margin_top = 234.0
+margin_right = 100.0
+margin_bottom = 304.0
+rect_min_size = Vector2( 100, 70 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../7")
+focus_neighbour_right = NodePath("../0")
+focus_neighbour_bottom = NodePath("../../Call")
+focus_next = NodePath("../0")
+focus_previous = NodePath("../9")
+custom_fonts/font = ExtResource( 10 )
+custom_styles/hover = SubResource( 218 )
+custom_styles/pressed = SubResource( 219 )
+custom_styles/focus = SubResource( 220 )
+custom_styles/disabled = SubResource( 221 )
+custom_styles/normal = SubResource( 222 )
+group = SubResource( 223 )
+text = "C"
+script = ExtResource( 32 )
+
+[node name="0" type="Button" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer"]
+margin_left = 108.0
+margin_top = 234.0
+margin_right = 208.0
+margin_bottom = 304.0
+rect_min_size = Vector2( 100, 70 )
+focus_neighbour_left = NodePath("../C")
+focus_neighbour_top = NodePath("../8")
+focus_neighbour_right = NodePath("../D")
+focus_neighbour_bottom = NodePath("../../Call")
+focus_next = NodePath("../D")
+focus_previous = NodePath("../C")
+custom_fonts/font = ExtResource( 10 )
+custom_styles/hover = SubResource( 218 )
+custom_styles/pressed = SubResource( 219 )
+custom_styles/focus = SubResource( 220 )
+custom_styles/disabled = SubResource( 221 )
+custom_styles/normal = SubResource( 222 )
+group = SubResource( 223 )
+text = "0"
+script = ExtResource( 32 )
+
+[node name="D" type="Button" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer"]
+margin_left = 216.0
+margin_top = 234.0
+margin_right = 316.0
+margin_bottom = 304.0
+rect_min_size = Vector2( 100, 70 )
+focus_neighbour_left = NodePath("../0")
+focus_neighbour_top = NodePath("../9")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../../Back")
+focus_next = NodePath("../../Call")
+focus_previous = NodePath("../0")
+custom_fonts/font = ExtResource( 10 )
+custom_styles/hover = SubResource( 218 )
+custom_styles/pressed = SubResource( 219 )
+custom_styles/focus = SubResource( 220 )
+custom_styles/disabled = SubResource( 221 )
+custom_styles/normal = SubResource( 222 )
+group = SubResource( 223 )
+text = "←"
+script = ExtResource( 32 )
+
+[node name="Label" type="Label" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG"]
+anchor_right = 1.0
+margin_top = -109.0
+margin_bottom = -25.0
+custom_fonts/font = ExtResource( 7 )
+text = "输入号码"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 8 )
+LabelTEXT = "信息-输入号码"
+
+[node name="Call" type="Button" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG"]
+margin_left = 92.0
+margin_top = 372.0
+margin_right = 299.0
+margin_bottom = 442.0
+rect_min_size = Vector2( 100, 70 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../GridContainer/C")
+focus_neighbour_right = NodePath("../Back")
+focus_neighbour_bottom = NodePath(".")
+focus_next = NodePath("../Back")
+focus_previous = NodePath("../GridContainer/D")
+custom_styles/hover = SubResource( 218 )
+custom_styles/pressed = SubResource( 219 )
+custom_styles/focus = SubResource( 220 )
+custom_styles/disabled = SubResource( 221 )
+custom_styles/normal = SubResource( 224 )
+disabled = true
+group = SubResource( 223 )
+text = "Call"
+icon = ExtResource( 30 )
+script = ExtResource( 32 )
+
+[node name="Back" type="Button" parent="CanvasLayer/Main/TelePhoneUI/PhoneBG"]
+margin_left = 308.0
+margin_top = 372.0
+margin_right = 408.0
+margin_bottom = 442.0
+rect_min_size = Vector2( 70, 70 )
+focus_neighbour_left = NodePath("../Call")
+focus_neighbour_top = NodePath("../GridContainer/D")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath("../Call")
+custom_styles/hover = SubResource( 218 )
+custom_styles/pressed = SubResource( 219 )
+custom_styles/focus = SubResource( 220 )
+custom_styles/disabled = SubResource( 221 )
+custom_styles/normal = SubResource( 222 )
+group = SubResource( 223 )
+text = "Back"
+script = ExtResource( 32 )
+
+[node name="LobbyUI" type="Control" parent="CanvasLayer/Main"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -660.0
+margin_top = -311.0
+margin_right = -90.0
+margin_bottom = 389.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="InfoBG" type="NinePatchRect" parent="CanvasLayer/Main/LobbyUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 9 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Scroll" type="ScrollContainer" parent="CanvasLayer/Main/LobbyUI/InfoBG"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 74.0
+margin_right = -6.0
+margin_bottom = -190.0
+
+[node name="VBox" type="VBoxContainer" parent="CanvasLayer/Main/LobbyUI/InfoBG/Scroll"]
+
+[node name="LOBBYBG" type="NinePatchRect" parent="CanvasLayer/Main/LobbyUI/InfoBG"]
+self_modulate = Color( 0.384314, 1, 0.972549, 1 )
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -276.0
+texture = ExtResource( 9 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="INFO" type="Label" parent="CanvasLayer/Main/LobbyUI/InfoBG/LOBBYBG"]
+margin_left = -28.0
+margin_top = 259.0
+margin_right = 1348.0
+margin_bottom = 322.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "双人同屏时不可乱入"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 8 )
+LabelTEXT = "信息-合作时不可加入"
+
+[node name="LobbyID" type="Label" parent="CanvasLayer/Main/LobbyUI/InfoBG/LOBBYBG"]
+margin_left = 293.0
+margin_top = 83.0
+margin_right = 551.0
+margin_bottom = 108.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "109775242690709975"
+align = 1
+valign = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Main/LobbyUI/InfoBG/LOBBYBG/LobbyID"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -16.0
+margin_bottom = 15.0
+texture = ExtResource( 27 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="JoinInfo" type="Label" parent="CanvasLayer/Main/LobbyUI/InfoBG/LOBBYBG"]
+margin_left = 4.0
+margin_top = 71.0
+margin_right = 293.0
+margin_bottom = 120.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "房间电话号码"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 8 )
+LabelTEXT = "信息-房间号"
+
+[node name="PhoneButton" type="Button" parent="CanvasLayer/Main/LobbyUI/InfoBG/LOBBYBG"]
+margin_left = 17.0
+margin_top = 164.0
+margin_right = 554.0
+margin_bottom = 229.0
+rect_pivot_offset = Vector2( 268, 32 )
+focus_mode = 0
+custom_styles/hover = SubResource( 214 )
+custom_styles/pressed = SubResource( 215 )
+custom_styles/disabled = SubResource( 216 )
+custom_styles/normal = SubResource( 217 )
+script = ExtResource( 32 )
+
+[node name="R1" parent="CanvasLayer/Main/LobbyUI/InfoBG/LOBBYBG/PhoneButton" instance=ExtResource( 2 )]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -105.0
+margin_top = -3.5
+margin_right = -105.0
+margin_bottom = -3.5
+ZINDEX = 0
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+
+[node name="Label" type="Label" parent="CanvasLayer/Main/LobbyUI/InfoBG/LOBBYBG/PhoneButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -8.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "打电话"
+align = 1
+valign = 1
+script = ExtResource( 8 )
+LabelTEXT = "信息-打电话"
+
+[node name="BG" type="NinePatchRect" parent="CanvasLayer/Main/LobbyUI"]
+anchor_right = 1.0
+margin_bottom = 70.0
+texture = ExtResource( 14 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="Label" type="Label" parent="CanvasLayer/Main/LobbyUI/BG"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 10 )
+text = "房间信息"
+align = 1
+valign = 1
+script = ExtResource( 8 )
+LabelTEXT = "信息-房间信息"
+
+[node name="Number" type="Label" parent="CanvasLayer/Main/LobbyUI"]
+margin_left = 468.0
+margin_top = 19.0
+margin_right = 532.0
+margin_bottom = 50.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 21 )
+text = "1/4"
+
+[node name="INFO" type="Label" parent="CanvasLayer/Main/LobbyUI/Number"]
+visible = false
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -451.0
+margin_top = -15.5
+margin_right = -4.0
+margin_bottom = 15.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 21 )
+text = "人数上限 : "
+align = 2
+script = ExtResource( 8 )
+LabelTEXT = "信息-房间人数"
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/Main/LobbyUI/Number"]
+position = Vector2( 65, 16 )
+texture = ExtResource( 26 )
+
+[node name="UIControl" type="Control" parent="CanvasLayer/Main"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -187.0
+margin_top = 213.0
+margin_right = -187.0
+margin_bottom = 213.0
+
+[node name="CheckBox" type="CheckBox" parent="CanvasLayer/Main/UIControl"]
+margin_left = -87.0
+margin_top = -86.0
+margin_right = -24.0
+margin_bottom = -38.0
+pressed = true
+expand_icon = true
+
+[node name="L1" parent="CanvasLayer/Main/UIControl/CheckBox" instance=ExtResource( 2 )]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+ZINDEX = 0
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+Info_Str = "按钮-好友乱入"
+
+[node name="CANJOIN" type="Label" parent="CanvasLayer/Main/UIControl/CheckBox"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -413.5
+margin_top = -10.0
+margin_right = -123.5
+margin_bottom = 55.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "可否加入"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 8 )
+LabelTEXT = "信息-公开房间"
+
+[node name="Connect" type="Control" parent="CanvasLayer/Main"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -109.0
+
+[node name="BG1" type="NinePatchRect" parent="CanvasLayer/Main/Connect"]
+pause_mode = 2
+self_modulate = Color( 1, 1, 1, 0.784314 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -315.0
+margin_top = -258.0
+margin_right = 316.0
+margin_bottom = 92.0
+texture = ExtResource( 3 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Label" type="Label" parent="CanvasLayer/Main/Connect/BG1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -145.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 21 )
+text = "没有链接到网络"
+align = 1
+valign = 1
+script = ExtResource( 8 )
+LabelTEXT = "网络-未连接"
+
+[node name="Connect" type="Button" parent="CanvasLayer/Main/Connect"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -294.0
+margin_top = -50.0
+margin_right = 290.0
+margin_bottom = 50.0
+rect_min_size = Vector2( 0, 100 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 209 )
+custom_styles/pressed = SubResource( 210 )
+custom_styles/focus = SubResource( 211 )
+custom_styles/disabled = SubResource( 212 )
+custom_styles/normal = SubResource( 213 )
+text = "网络-重新连接"
+script = ExtResource( 24 )
+
+[node name="Button" type="Button" parent="."]
+margin_top = -121.0
+margin_bottom = -96.0
+focus_mode = 0
+mouse_filter = 2
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/focus = SubResource( 23 )
+custom_styles/disabled = SubResource( 24 )
+custom_styles/normal = SubResource( 25 )
+enabled_focus_mode = 0
+
+[node name="A" parent="Button" instance=ExtResource( 2 )]
+margin_top = -4.0
+margin_bottom = -4.0
+bool_Small = true
+TopInfo = "信息-联网合作"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="CreateTimer" type="Timer" parent="."]
+wait_time = 0.05
+
+[node name="AniNode" type="Node2D" parent="."]
+
+[node name="Ani" type="AnimationPlayer" parent="AniNode"]
+root_node = NodePath("../..")
+autoplay = "init"
+anims/hide = SubResource( 201 )
+anims/init = SubResource( 202 )
+anims/show = SubResource( 203 )
+
+[node name="Loop" type="AnimationPlayer" parent="AniNode"]
+root_node = NodePath("../..")
+autoplay = "init"
+anims/hide = SubResource( 204 )
+anims/init = SubResource( 205 )
+anims/show = SubResource( 206 )
+anims/showloop = SubResource( 207 )
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -0.5, -21.875 )
+shape = SubResource( 208 )
+
+[connection signal="pressed" from="CanvasLayer/Main/ButControl/BackBut" to="." method="_on_BackBut_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main/ButControl/RefreshBut" to="." method="_on_RefreshBut_pressed"]
+[connection signal="text_changed" from="CanvasLayer/Main/TelePhoneUI/PhoneBG/LineEdit" to="." method="_on_LineEdit_text_changed"]
+[connection signal="pressed" from="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer/1" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer/2" to="." method="_on_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer/3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer/4" to="." method="_on_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer/5" to="." method="_on_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer/6" to="." method="_on_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer/7" to="." method="_on_7_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer/8" to="." method="_on_8_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer/9" to="." method="_on_9_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer/C" to="." method="_on_C_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer/0" to="." method="_on_0_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main/TelePhoneUI/PhoneBG/GridContainer/D" to="." method="_on_D_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main/TelePhoneUI/PhoneBG/Call" to="." method="_on_Call_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main/TelePhoneUI/PhoneBG/Back" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main/LobbyUI/InfoBG/LOBBYBG/PhoneButton" to="." method="_on_JoinButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Main/Connect/Connect" to="." method="_on_Connect_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="CreateTimer" to="." method="_on_CreateTimer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

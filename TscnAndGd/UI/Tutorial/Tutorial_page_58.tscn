@@ -1,0 +1,207 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://TscnAndGd/Effects/shaders/teleport-effect.tres" type="Shader" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_warning_1.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_warning_0.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_fix_2.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_switchlight_red.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_5.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_6.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_icemachine_ice_1.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_icemachine_box.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_icemachine_base_s.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_icemachine_close.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=12]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=13]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=14]
+
+[sub_resource type="ShaderMaterial" id=268]
+shader = ExtResource( 1 )
+shader_param/progress = 0.0
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = 0.15
+shader_param/color = Color( 0, 0, 0, 1 )
+
+[node name="设备故障" type="Node2D"]
+position = Vector2( 275, 246 )
+
+[node name="ice" type="Node2D" parent="."]
+material = SubResource( 268 )
+use_parent_material = true
+position = Vector2( -41, 89 )
+
+[node name="box" type="Sprite" parent="ice"]
+position = Vector2( 1, 34 )
+texture = ExtResource( 9 )
+offset = Vector2( 0, -80 )
+
+[node name="IceGroup" type="Node2D" parent="ice"]
+position = Vector2( 0, -96 )
+
+[node name="DeviceIcemachineIce1" type="Sprite" parent="ice/IceGroup"]
+use_parent_material = true
+position = Vector2( 20, 78 )
+texture = ExtResource( 8 )
+
+[node name="front" type="Sprite" parent="ice"]
+use_parent_material = true
+texture = ExtResource( 10 )
+offset = Vector2( 0, -90 )
+
+[node name="Effect" type="Node2D" parent="ice"]
+position = Vector2( -38, 20 )
+
+[node name="light" type="Sprite" parent="ice/Effect"]
+use_parent_material = true
+position = Vector2( 18, -124 )
+texture = ExtResource( 5 )
+
+[node name="Ui" type="Sprite" parent="ice"]
+position = Vector2( -3, -96 )
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 6 )
+offset = Vector2( 0, -16 )
+
+[node name="TextureProgress" type="TextureProgress" parent="ice/Ui"]
+modulate = Color( 1, 0, 0, 1 )
+margin_left = -3.0
+margin_top = -33.0
+margin_right = 3.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 16 )
+max_value = 60.0
+value = 10.0
+texture_progress = ExtResource( 7 )
+fill_mode = 3
+tint_progress = Color( 1, 0.654902, 0, 1 )
+
+[node name="cover" type="Sprite" parent="ice"]
+position = Vector2( 0, -93 )
+texture = ExtResource( 11 )
+
+[node name="97" type="RichTextLabel" parent="."]
+margin_left = -112.0
+margin_top = 125.0
+margin_right = 503.0
+margin_bottom = 257.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "设备有时会发生故障，需要手动修理。"
+text = "设备有时会发生故障，需要手动修理。"
+script = ExtResource( 13 )
+LabelTEXT = "信息-文字说明-97"
+Center_Bool = true
+
+[node name="Tool" type="Node2D" parent="."]
+position = Vector2( -43, -39 )
+
+[node name="Texture" type="Node2D" parent="Tool"]
+
+[node name="UiPoptipWarning1" type="Sprite" parent="Tool/Texture"]
+position = Vector2( 0, -28 )
+texture = ExtResource( 2 )
+
+[node name="TextureProgress" type="TextureProgress" parent="Tool/Texture/UiPoptipWarning1"]
+modulate = Color( 0.0784314, 1, 0, 1 )
+margin_left = -30.0
+margin_top = -27.0
+margin_right = 29.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 16 )
+texture_progress = ExtResource( 2 )
+fill_mode = 3
+
+[node name="UiPoptipWarning0" type="Sprite" parent="Tool/Texture/UiPoptipWarning1"]
+texture = ExtResource( 3 )
+
+[node name="Fix" type="Node2D" parent="Tool/Texture"]
+position = Vector2( -27, -30 )
+scale = Vector2( -1, 1 )
+
+[node name="EffectFix" type="Sprite" parent="Tool/Texture/Fix"]
+rotation = -1.5708
+texture = ExtResource( 4 )
+offset = Vector2( -5, -19 )
+
+[node name="Tool2" type="Node2D" parent="."]
+position = Vector2( 184, 36 )
+
+[node name="Texture" type="Node2D" parent="Tool2"]
+
+[node name="UiPoptipWarning1" type="Sprite" parent="Tool2/Texture"]
+position = Vector2( 0, -28 )
+texture = ExtResource( 2 )
+
+[node name="TextureProgress" type="TextureProgress" parent="Tool2/Texture/UiPoptipWarning1"]
+modulate = Color( 1, 0.796078, 0, 1 )
+margin_left = -30.0
+margin_top = -27.0
+margin_right = 29.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 16 )
+value = 30.0
+texture_progress = ExtResource( 2 )
+fill_mode = 3
+
+[node name="UiPoptipWarning0" type="Sprite" parent="Tool2/Texture/UiPoptipWarning1"]
+self_modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 3 )
+
+[node name="Fix" type="Node2D" parent="Tool2/Texture"]
+position = Vector2( -27, -30 )
+scale = Vector2( -1, 1 )
+
+[node name="EffectFix" type="Sprite" parent="Tool2/Texture/Fix"]
+rotation = -1.57385
+texture = ExtResource( 4 )
+offset = Vector2( -5, -19 )
+
+[node name="Texture" type="Node2D" parent="."]
+position = Vector2( 400, 37 )
+
+[node name="UiPoptipWarning1" type="Sprite" parent="Texture"]
+position = Vector2( 0, -28 )
+texture = ExtResource( 2 )
+
+[node name="TextureProgress" type="TextureProgress" parent="Texture/UiPoptipWarning1"]
+modulate = Color( 0.0784314, 1, 0, 1 )
+margin_left = -30.0
+margin_top = -27.0
+margin_right = 29.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 16 )
+value = 95.0
+texture_progress = ExtResource( 2 )
+fill_mode = 3
+
+[node name="UiPoptipWarning0" type="Sprite" parent="Texture/UiPoptipWarning1"]
+self_modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 3 )
+
+[node name="Fix" type="Node2D" parent="Texture"]
+position = Vector2( -27, -30 )
+scale = Vector2( -1, 1 )
+
+[node name="EffectFix" type="Sprite" parent="Texture/Fix"]
+rotation = -1.5708
+texture = ExtResource( 4 )
+offset = Vector2( -5, -19 )
+
+[node name="IconMenuArrow3" type="Sprite" parent="."]
+position = Vector2( 81, 16 )
+texture = ExtResource( 12 )
+
+[node name="IconMenuArrow4" type="Sprite" parent="."]
+position = Vector2( 289, 13 )
+texture = ExtResource( 12 )
+
+[node name="Y" parent="." instance=ExtResource( 14 )]
+margin_left = 117.0
+margin_top = 75.0
+margin_right = 117.0
+margin_bottom = 75.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-修理"
+OnBut = false

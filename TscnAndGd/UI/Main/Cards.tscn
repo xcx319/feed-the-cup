@@ -1,0 +1,69 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Main/Cards.gd" type="Script" id=1]
+[ext_resource path="res://Language/Fonts/Base_m_outline.tres" type="DynamicFont" id=2]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=5]
+[ext_resource path="res://TscnAndGd/Buttons/LogicBut.tscn" type="PackedScene" id=6]
+[ext_resource path="res://TscnAndGd/UI/Buttons/ChallengeButton.tscn" type="PackedScene" id=7]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=8]
+[ext_resource path="res://TscnAndGd/UI/InGame/DayControl.tscn" type="PackedScene" id=10]
+[ext_resource path="res://TscnAndGd/UI/Info/CurChoose.tscn" type="PackedScene" id=11]
+
+[sub_resource type="ButtonGroup" id=192]
+
+[node name="Cards" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 1 )
+
+[node name="Back" parent="." instance=ExtResource( 6 )]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -42.5
+margin_top = -85.0
+margin_right = 42.5
+margin_bottom = 0.0
+
+[node name="B" parent="Back" instance=ExtResource( 5 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-返回"
+
+[node name="1" parent="." instance=ExtResource( 7 )]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 1438.0
+margin_top = -255.0
+margin_right = 1918.0
+margin_bottom = 345.0
+focus_mode = 0
+mouse_filter = 2
+group = SubResource( 192 )
+
+[node name="Title" type="Label" parent="1"]
+anchor_top = -0.07
+anchor_right = 1.0
+anchor_bottom = 0.03
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "当前拥有卷轴"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+script = ExtResource( 8 )
+LabelTEXT = "信息-当前卷轴"
+
+[node name="DayControl" parent="." instance=ExtResource( 10 )]
+
+[node name="CurChoose" parent="." instance=ExtResource( 11 )]
+
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]

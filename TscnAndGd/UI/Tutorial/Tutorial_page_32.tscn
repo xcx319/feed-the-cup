@@ -1,0 +1,141 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_lemon_slice_4.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_lemon_slice_1.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_lemon_slice_3.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_lemon_slice_5.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_lemon_slice_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_2.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_5.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_3.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_4.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_1.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_time_night.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_workboard.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_s.tres" type="Texture" id=15]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=16]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_6.png" type="Texture" id=17]
+
+[node name="菜板腐败" type="Node2D"]
+position = Vector2( 18, -10 )
+
+[node name="Label41" type="RichTextLabel" parent="."]
+margin_left = -132.0
+margin_top = 184.0
+margin_right = 569.0
+margin_bottom = 326.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "切开并放在常温下的水果，隔夜会腐败。
+需要把砧板清理干净再使用。"
+text = "切开并放在常温下的水果，隔夜会腐败。
+需要把砧板清理干净再使用。"
+script = ExtResource( 16 )
+LabelTEXT = "信息-文字说明-41"
+Center_Bool = true
+
+[node name="DeviceWorkboard4" type="Sprite" parent="."]
+position = Vector2( 29, 48 )
+texture = ExtResource( 13 )
+
+[node name="FruitLemonSlice1" type="Sprite" parent="DeviceWorkboard4"]
+position = Vector2( -9.5, 28.5 )
+texture = ExtResource( 2 )
+
+[node name="FruitLemonSlice2" type="Sprite" parent="DeviceWorkboard4"]
+position = Vector2( -4.5, 28.5 )
+texture = ExtResource( 6 )
+
+[node name="FruitLemonSlice3" type="Sprite" parent="DeviceWorkboard4"]
+position = Vector2( 0.5, 28.5 )
+texture = ExtResource( 3 )
+
+[node name="FruitLemonSlice4" type="Sprite" parent="DeviceWorkboard4"]
+position = Vector2( 5.5, 28.5 )
+texture = ExtResource( 1 )
+
+[node name="FruitLemonSlice5" type="Sprite" parent="DeviceWorkboard4"]
+position = Vector2( 10.5, 28.5 )
+texture = ExtResource( 4 )
+
+[node name="DeviceWorkboard5" type="Sprite" parent="."]
+position = Vector2( 342, 15 )
+rotation = 0.261799
+texture = ExtResource( 13 )
+
+[node name="FruitLemonSlice1" type="Sprite" parent="DeviceWorkboard5"]
+position = Vector2( -9.5, 28.5 )
+texture = ExtResource( 2 )
+
+[node name="FruitLemonSlice2" type="Sprite" parent="DeviceWorkboard5"]
+position = Vector2( -4.5, 28.5 )
+texture = ExtResource( 6 )
+
+[node name="FruitLemonSlice3" type="Sprite" parent="DeviceWorkboard5"]
+position = Vector2( 0.5, 28.5 )
+texture = ExtResource( 3 )
+
+[node name="FruitLemonSlice4" type="Sprite" parent="DeviceWorkboard5"]
+position = Vector2( 5.5, 28.5 )
+texture = ExtResource( 1 )
+
+[node name="FruitLemonSlice5" type="Sprite" parent="DeviceWorkboard5"]
+position = Vector2( 10.5, 28.5 )
+texture = ExtResource( 4 )
+
+[node name="Texture" type="Node2D" parent="DeviceWorkboard5"]
+position = Vector2( 0, 30 )
+rotation = -0.261799
+
+[node name="DeviceTrashbinEffect3" type="Sprite" parent="DeviceWorkboard5/Texture"]
+position = Vector2( 1.28571, -37.8571 )
+scale = Vector2( 1, 0.857143 )
+texture = ExtResource( 9 )
+offset = Vector2( 0, -28 )
+
+[node name="DeviceTrashbinEffect4" type="Sprite" parent="DeviceWorkboard5/Texture"]
+position = Vector2( -19.6471, 3.70588 )
+scale = Vector2( 1, 0.788235 )
+texture = ExtResource( 10 )
+offset = Vector2( 0, -28 )
+
+[node name="DeviceTrashbinEffect5" type="Sprite" parent="DeviceWorkboard5/Texture"]
+position = Vector2( 23.1333, -22.3333 )
+scale = Vector2( 1, 0.7 )
+texture = ExtResource( 8 )
+offset = Vector2( 0, -28 )
+
+[node name="flies" type="Node2D" parent="DeviceWorkboard5/Texture"]
+
+[node name="1" type="Sprite" parent="DeviceWorkboard5/Texture/flies"]
+position = Vector2( 21.6258, -20.5319 )
+texture = ExtResource( 7 )
+
+[node name="2" type="Sprite" parent="DeviceWorkboard5/Texture/flies"]
+position = Vector2( -24.9951, -40.1548 )
+texture = ExtResource( 11 )
+
+[node name="UiIconInfo8" type="Sprite" parent="."]
+position = Vector2( 192, 79 )
+texture = ExtResource( 5 )
+
+[node name="ParticleCircle5" type="Sprite" parent="UiIconInfo8"]
+self_modulate = Color( 0.113725, 0.12549, 0.27451, 1 )
+position = Vector2( -5, -55 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 17 )
+
+[node name="UiIconTimeNight" type="Sprite" parent="UiIconInfo8/ParticleCircle5"]
+position = Vector2( 4, 1 )
+scale = Vector2( 1.8, 1.8 )
+texture = ExtResource( 12 )
+
+[node name="ItemTrashbag" type="Sprite" parent="."]
+position = Vector2( 432, 109 )
+texture = ExtResource( 15 )
+
+[node name="UiIconInfo9" type="Sprite" parent="ItemTrashbag"]
+position = Vector2( -38, -45 )
+texture = ExtResource( 14 )

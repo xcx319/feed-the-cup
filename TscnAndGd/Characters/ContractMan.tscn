@@ -1,0 +1,2229 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/ContractMan_show_1.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_leg_stand_1.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/ContractMan_show_2.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_2.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/ContractMan_show_3.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/ContractMan_lie_1.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_3.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_arm_idle_1.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/ContractMan_lie_2.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/ContractMan_idle_1.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_1.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/ContractMan_lie_3.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/ContractMan_lie_6.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/ContractMan_lie_5.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/ContractMan_lie_4.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_leg_stand_2.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_arm_act_1.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_arm_act_3.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_explode_typeB_2.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_explode_typeB_4.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_explode_typeB_3.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_leg_sit_1.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_explode_typeB_1.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_voice_2.tres" type="Texture" id=27]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_voice_3.tres" type="Texture" id=28]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_voice_1.tres" type="Texture" id=29]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_5.png" type="Texture" id=30]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_arm_hold_1.tres" type="Texture" id=31]
+
+[sub_resource type="Animation" id=64]
+resource_name = "Die"
+length = 3.0
+step = 0.025
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Hold:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.075 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -100 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_L/LegStand_L:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 18 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_R/LegStand_R:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 18 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Hold/Arm:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.175 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 31 ), ExtResource( 20 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Other/Arm:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.175 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 31 ), ExtResource( 20 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Effect/EffectExplodeTypeB1:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 2.05, 2.1, 2.15, 2.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 25 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 22 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Effect/EffectExplodeTypeB1:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 2, 2.05, 2.2, 2.25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 0.627451, 0.298039, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Effect/EffectVoice1:texture")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2, 2.05, 2.1, 2.15, 2.2, 2.25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 29 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 28 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Effect/EffectVoice1:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 2, 2.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.6, 1.6 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Effect/EffectVoice1:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 2, 2.05, 2.25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 0.607843, 0.188235, 1 ), Color( 1, 0.607843, 0.188235, 0 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Effect/ParticleCircle5:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 2, 2.05, 2.25, 2.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/12/type = "bezier"
+tracks/12/path = NodePath("SpriteTex/Top_note/All_note/Body_note:rotation_degrees")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.525, -13.4531, 0, -0.425, 14.3435, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/13/type = "bezier"
+tracks/13/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_L:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.55, 18.5875, 0, -0.55, -15.7396, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_R:rotation_degrees")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.65, 28.3553, 0, -0.7, -28.5773, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("SpriteTex/Top_note/All_note/Body_note:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Effect:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Other:rotation_degrees")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("SpriteTex/Top_note/All_note/Legs:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 2, 2.175 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Hold:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 2, 2.175 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Other:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 2, 2.175 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 2.075 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/ContractManIdle1:modulate")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 2, 2.175 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L/Ball:texture")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ) ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L/Ball:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R/Ball:texture")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ) ]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R/Ball:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=54]
+resource_name = "Fall"
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_L/LegStand_L:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_R/LegStand_R:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("SpriteTex/Top_note/All_note/Body_note:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 1, 8.00292 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_L:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_R:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L/Ball:texture")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R/Ball:texture")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L/Ball:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Vector2( 4, 0 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R/Ball:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Hold/Arm:texture")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ) ]
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Hold:rotation_degrees")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_L:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -7, -27 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_R:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 7, -27 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Effect:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Other:rotation_degrees")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Hold:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Other:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("SpriteTex/Top_note/All_note/Legs:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page1:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0, 0.1, 0.58 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 14, -95 ), Vector2( 14, -95 ), Vector2( 4, 30 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page1:texture")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 0.1, 0.34, 0.58 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 6 ) ]
+}
+tracks/25/type = "bezier"
+tracks/25/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page1:rotation_degrees")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.1, 0.277756, 0, -0.25, 0, 0.2, -26.5, 0, -0.18, 28.5, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.58 )
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page2:texture")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 0, 0.16, 0.4, 0.64 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 10 ) ]
+}
+tracks/27/type = "bezier"
+tracks/27/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page2:rotation_degrees")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.3, -25.5094, 0, -0.22, 24.3904, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.16, 0.64 )
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page2:position")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"times": PoolRealArray( 0, 0.16, 0.64 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 14, -95 ), Vector2( 14, -95 ), Vector2( 2, 34 ) ]
+}
+tracks/29/type = "value"
+tracks/29/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page3:texture")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"times": PoolRealArray( 0, 0.32, 0.56, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 6 ) ]
+}
+tracks/30/type = "value"
+tracks/30/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page3:position")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = {
+"times": PoolRealArray( 0, 0.32, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 14, -95 ), Vector2( 14, -95 ), Vector2( -2, 30 ) ]
+}
+tracks/31/type = "value"
+tracks/31/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page4:texture")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/keys = {
+"times": PoolRealArray( 0, 0.52, 0.76, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 10 ) ]
+}
+tracks/32/type = "value"
+tracks/32/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page4:position")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/keys = {
+"times": PoolRealArray( 0, 0.52, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 14, -95 ), Vector2( 14, -95 ), Vector2( -5, 31 ) ]
+}
+tracks/33/type = "bezier"
+tracks/33/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page4:rotation_degrees")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.2, -16.6346, 0, -0.24, 16.5203, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.52, 1 )
+}
+tracks/34/type = "bezier"
+tracks/34/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page3:rotation_degrees")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.24, -11.6111, 0, -0.16, 15.1807, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.32, 0.8 )
+}
+tracks/35/type = "value"
+tracks/35/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages:visible")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/36/type = "value"
+tracks/36/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages:position")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/37/type = "value"
+tracks/37/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/ContractManIdle1:modulate")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/38/type = "value"
+tracks/38/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page1:visible")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/39/type = "value"
+tracks/39/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page2:visible")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/keys = {
+"times": PoolRealArray( 0, 0.12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/40/type = "value"
+tracks/40/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page3:visible")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/keys = {
+"times": PoolRealArray( 0, 0.24 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/41/type = "value"
+tracks/41/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page4:visible")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/keys = {
+"times": PoolRealArray( 0, 0.44 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=38]
+resource_name = "Idle"
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 0.5, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.1, 1.1 ), Vector2( 1.05, 1.05 ), Vector2( 1.1, 1.1 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_L/LegStand_L:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_R/LegStand_R:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("SpriteTex/Top_note/All_note/Body_note:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.7, -13.5456, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_L:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_R:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L/Ball:texture")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R/Ball:texture")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L/Ball:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4, 0 ), Vector2( 4, 0 ), Vector2( 1, -5 ), Vector2( 1, -5 ), Vector2( 4, 0 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R/Ball:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, -5 ), Vector2( 1, -5 ), Vector2( 0, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Hold/Arm:texture")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 19 ) ]
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Hold:rotation_degrees")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.1, -40.0561, 0, -0.1, -28.945, 0.1, -33.1116, 0, -0.1, -33.8061, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2, 0.5, 0.8 )
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_L:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -7, -27 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_R:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 7, -27 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Effect:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Other/Arm:texture")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 31 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Other:rotation_degrees")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("SpriteTex/Top_note/All_note/Legs:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Hold:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Other:modulate")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace:visible")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/ContractManIdle1:modulate")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=55]
+resource_name = "Up"
+length = 3.0
+step = 0.025
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Hold:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.9, 1.05, 1.5, 2.925 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -100 ), Vector2( 0, -100 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_L/LegStand_L:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.5, 2.925 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 24 ), ExtResource( 18 ), ExtResource( 2 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_R/LegStand_R:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.5, 2.925 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 24 ), ExtResource( 18 ), ExtResource( 2 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Hold/Arm:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 20 ), ExtResource( 31 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Other/Arm:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 20 ), ExtResource( 31 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Effect/EffectExplodeTypeB1:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1.025, 1.075, 1.125, 1.175 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 25 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 22 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Effect/EffectExplodeTypeB1:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.975, 1.025, 1.175, 1.225 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 0.627451, 0.298039, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Effect/EffectVoice1:texture")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.975, 1.025, 1.075, 1.125, 1.175, 1.225 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 29 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 28 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Effect/EffectVoice1:scale")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.975, 1.225 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.6, 1.6 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Effect/EffectVoice1:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.975, 1.025, 1.225 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 0.607843, 0.188235, 1 ), Color( 1, 0.607843, 0.188235, 0 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Effect/ParticleCircle5:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.975, 1.025, 1.225, 1.275 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/12/type = "bezier"
+tracks/12/path = NodePath("SpriteTex/Top_note/All_note/Body_note:rotation_degrees")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.55, -26.9028, 0, -0.45, 25.8436, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.475, 2.925 )
+}
+tracks/13/type = "bezier"
+tracks/13/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_L:rotation_degrees")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.55, 18.5875, 0, -0.55, -15.7396, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.475, 2.925 )
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_R:rotation_degrees")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.65, 28.3553, 0, -0.7, -28.5773, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.475, 2.925 )
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("SpriteTex/Top_note/All_note/Body_note:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 2.9, 2.95, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.2, 0.8 ), Vector2( 1, 1 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Effect:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Other:rotation_degrees")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("SpriteTex/Top_note/All_note/Legs:modulate")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 1, 1.075 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Hold:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 1, 1.075 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Other:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0, 1, 1.075 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 1.225 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page1:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 4, 30 ) ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page2:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2, 34 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page3:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -2, 30 ) ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page4:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -5, 31 ) ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page1:texture")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 0, 0.425, 0.575, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 14 ) ]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page2:texture")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"times": PoolRealArray( 0, 0.275, 0.375, 0.475 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 15 ) ]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page3:texture")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"times": PoolRealArray( 0, 0.15, 0.25, 0.35 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 14 ) ]
+}
+tracks/29/type = "value"
+tracks/29/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page4:texture")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.325 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 15 ) ]
+}
+tracks/30/type = "value"
+tracks/30/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages:visible")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = {
+"times": PoolRealArray( 0, 1.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/31/type = "value"
+tracks/31/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages:position")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/keys = {
+"times": PoolRealArray( 0, 0.9, 0.95 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 6, -48 ) ]
+}
+tracks/32/type = "value"
+tracks/32/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/ContractManIdle1:modulate")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/keys = {
+"times": PoolRealArray( 0, 1, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/33/type = "value"
+tracks/33/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L/Ball:texture")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/34/type = "value"
+tracks/34/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L/Ball:position")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/keys = {
+"times": PoolRealArray( 0, 1.5, 1.8, 2.95, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2, -5 ), Vector2( 2, -5 ), Vector2( 2, 4 ), Vector2( 2, 4 ), Vector2( 4, 0 ) ]
+}
+tracks/35/type = "value"
+tracks/35/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R/Ball:position")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/keys = {
+"times": PoolRealArray( 0, 1.5, 1.8, 2.925, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2, -5 ), Vector2( 2, -5 ), Vector2( 1, 4 ), Vector2( 1, 4 ), Vector2( 0, 0 ) ]
+}
+tracks/36/type = "value"
+tracks/36/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R/Ball:texture")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/37/type = "value"
+tracks/37/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page1:visible")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/38/type = "value"
+tracks/38/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page2:visible")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/39/type = "value"
+tracks/39/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page3:visible")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/40/type = "value"
+tracks/40/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page4:visible")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=62]
+resource_name = "init"
+length = 0.1
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_L/LegStand_L:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_R/LegStand_R:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("SpriteTex/Top_note/All_note/Body_note:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 1, 8.00292 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_L:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_R:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L/Ball:texture")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R/Ball:texture")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L/Ball:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Vector2( 4, 0 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R/Ball:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Hold/Arm:texture")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ) ]
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Hold:rotation_degrees")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_L:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -7, -27 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("SpriteTex/Top_note/All_note/Legs/Leg_R:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 7, -27 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("Effect:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Other:rotation_degrees")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Hold:modulate")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Arm_Other:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("SpriteTex/Top_note/All_note/Legs:modulate")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page4:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 85, -155 ) ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page3:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 85, -155 ) ]
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page2:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 85, -155 ) ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page1:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 85, -155 ) ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page1:texture")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/27/type = "value"
+tracks/27/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page2:texture")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/28/type = "value"
+tracks/28/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page3:texture")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/29/type = "value"
+tracks/29/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages/Page4:texture")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/30/type = "value"
+tracks/30/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages:visible")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/31/type = "value"
+tracks/31/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages:position")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/32/type = "value"
+tracks/32/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace:visible")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/33/type = "value"
+tracks/33/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/CupBody/ContractManIdle1:modulate")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="CanvasItemMaterial" id=57]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=58]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=59]
+blend_mode = 1
+
+[node name="ContractMan" type="Node2D"]
+light_mask = 0
+
+[node name="ActAni" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/Die = SubResource( 64 )
+anims/Fall = SubResource( 54 )
+anims/Idle = SubResource( 38 )
+anims/Up = SubResource( 55 )
+anims/init = SubResource( 62 )
+
+[node name="SpriteTex" type="Node2D" parent="."]
+
+[node name="Top_note" type="Node2D" parent="SpriteTex"]
+light_mask = 0
+
+[node name="All_note" type="Node2D" parent="SpriteTex/Top_note"]
+
+[node name="Body_note" type="Node2D" parent="SpriteTex/Top_note/All_note"]
+position = Vector2( 0, -28 )
+rotation = -0.0469681
+
+[node name="Body" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note"]
+
+[node name="CupBody" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note/Body"]
+position = Vector2( 0, -24 )
+
+[node name="Pages" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody"]
+visible = false
+
+[node name="Page1" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages"]
+position = Vector2( 4, 30 )
+texture = ExtResource( 6 )
+
+[node name="Page2" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages"]
+position = Vector2( 2, 34 )
+texture = ExtResource( 10 )
+
+[node name="Page3" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages"]
+position = Vector2( -2, 30 )
+texture = ExtResource( 6 )
+
+[node name="Page4" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody/Pages"]
+position = Vector2( -5, 31 )
+texture = ExtResource( 10 )
+
+[node name="ContractManIdle1" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody"]
+position = Vector2( 0, -11 )
+texture = ExtResource( 11 )
+
+[node name="CupFace" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody"]
+position = Vector2( -1, -19 )
+
+[node name="L" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace"]
+position = Vector2( -10, 0 )
+
+[node name="Eye" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L"]
+texture = ExtResource( 12 )
+
+[node name="Ball" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L"]
+position = Vector2( 4, 0 )
+texture = ExtResource( 4 )
+
+[node name="R" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace"]
+position = Vector2( 8, 0 )
+scale = Vector2( -1, 1 )
+
+[node name="Eye" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R"]
+texture = ExtResource( 12 )
+
+[node name="Ball" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R"]
+texture = ExtResource( 4 )
+
+[node name="Arm_Hold" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note"]
+position = Vector2( 28, -44 )
+
+[node name="Arm" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Arm_Hold"]
+modulate = Color( 0.929412, 0.929412, 0.929412, 1 )
+texture = ExtResource( 19 )
+offset = Vector2( 4, -17 )
+
+[node name="Arm_Other" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note"]
+position = Vector2( -32, -42 )
+scale = Vector2( -1, 1 )
+
+[node name="Arm" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Arm_Other"]
+modulate = Color( 0.815686, 0.815686, 0.815686, 1 )
+texture = ExtResource( 31 )
+offset = Vector2( 4, -17 )
+
+[node name="Legs" type="Node2D" parent="SpriteTex/Top_note/All_note"]
+
+[node name="Leg_L" type="Node2D" parent="SpriteTex/Top_note/All_note/Legs"]
+position = Vector2( -7, -27 )
+rotation = 0.0985198
+
+[node name="LegStand_L" type="Sprite" parent="SpriteTex/Top_note/All_note/Legs/Leg_L"]
+self_modulate = Color( 0.254902, 0.176471, 0.0980392, 1 )
+texture = ExtResource( 2 )
+offset = Vector2( -6, 0 )
+
+[node name="Leg_R" type="Node2D" parent="SpriteTex/Top_note/All_note/Legs"]
+show_behind_parent = true
+position = Vector2( 7, -27 )
+rotation = 0.141547
+scale = Vector2( -1, 1 )
+
+[node name="LegStand_R" type="Sprite" parent="SpriteTex/Top_note/All_note/Legs/Leg_R"]
+self_modulate = Color( 0.254902, 0.176471, 0.0980392, 1 )
+texture = ExtResource( 2 )
+offset = Vector2( -6, 0 )
+
+[node name="Effect" type="Node2D" parent="."]
+visible = false
+
+[node name="EffectExplodeTypeB1" type="Sprite" parent="Effect"]
+modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 57 )
+position = Vector2( 1, -163 )
+texture = ExtResource( 22 )
+
+[node name="EffectVoice1" type="Sprite" parent="Effect"]
+modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 58 )
+position = Vector2( -3, -179 )
+texture = ExtResource( 29 )
+
+[node name="ParticleCircle5" type="Sprite" parent="Effect"]
+modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 59 )
+position = Vector2( -1, -168 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 30 )

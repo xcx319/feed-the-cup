@@ -1,0 +1,88 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resources/Outdoor/outdoor2_pack.sprites/gym_light_base.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Outdoor/outdoor2_pack.sprites/gym_light_3.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Outdoor/outdoor2_pack.sprites/gym_light_shelf_2.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Outdoor/outdoor2_pack.sprites/gym_light_shelf_1.tres" type="Texture" id=6]
+
+[node name="GymScaffoldLight" type="Node2D"]
+light_mask = 2
+
+[node name="Textnode" type="Node2D" parent="."]
+position = Vector2( 0, -350 )
+
+[node name="Node2D" type="Node2D" parent="Textnode"]
+
+[node name="GymLightShelf1" type="Sprite" parent="Textnode/Node2D"]
+texture = ExtResource( 6 )
+offset = Vector2( -94, 0 )
+
+[node name="GymLightShelf2" type="Sprite" parent="Textnode/Node2D"]
+position = Vector2( -161, 84 )
+texture = ExtResource( 4 )
+
+[node name="GymLightShelf3" type="Sprite" parent="Textnode/Node2D"]
+position = Vector2( -161, 182 )
+texture = ExtResource( 4 )
+
+[node name="GymLightShelf4" type="Sprite" parent="Textnode/Node2D"]
+position = Vector2( -161, 279 )
+texture = ExtResource( 4 )
+
+[node name="Node2D2" type="Node2D" parent="Textnode"]
+scale = Vector2( -1, 1 )
+
+[node name="GymLightShelf1" type="Sprite" parent="Textnode/Node2D2"]
+texture = ExtResource( 6 )
+offset = Vector2( -94, 0 )
+
+[node name="GymLightShelf2" type="Sprite" parent="Textnode/Node2D2"]
+position = Vector2( -161, 84 )
+texture = ExtResource( 4 )
+
+[node name="GymLightShelf3" type="Sprite" parent="Textnode/Node2D2"]
+position = Vector2( -161, 182 )
+texture = ExtResource( 4 )
+
+[node name="GymLightShelf4" type="Sprite" parent="Textnode/Node2D2"]
+position = Vector2( -161, 279 )
+texture = ExtResource( 4 )
+
+[node name="Light1" type="Node2D" parent="Textnode"]
+position = Vector2( -89, 32 )
+
+[node name="base1" type="Sprite" parent="Textnode/Light1"]
+texture = ExtResource( 1 )
+offset = Vector2( 0.999985, 36 )
+
+[node name="GymLight1" type="Sprite" parent="Textnode/Light1"]
+position = Vector2( 5, 71 )
+rotation = 0.349066
+texture = ExtResource( 2 )
+offset = Vector2( 0, 10 )
+
+[node name="Light2" type="Node2D" parent="Textnode"]
+position = Vector2( -1, 32 )
+
+[node name="base1" type="Sprite" parent="Textnode/Light2"]
+texture = ExtResource( 1 )
+offset = Vector2( 0.999985, 36 )
+
+[node name="GymLight1" type="Sprite" parent="Textnode/Light2"]
+position = Vector2( 5, 71 )
+rotation = -0.463184
+texture = ExtResource( 2 )
+offset = Vector2( 0, 10 )
+
+[node name="Light3" type="Node2D" parent="Textnode"]
+position = Vector2( 87, 33 )
+
+[node name="base1" type="Sprite" parent="Textnode/Light3"]
+texture = ExtResource( 1 )
+offset = Vector2( 0.999985, 36 )
+
+[node name="GymLight1" type="Sprite" parent="Textnode/Light3"]
+position = Vector2( 5, 71 )
+rotation = -0.230383
+texture = ExtResource( 2 )
+offset = Vector2( 0, 10 )

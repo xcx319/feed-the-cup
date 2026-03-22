@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Resources/Decorate/Decorate_pack.sprites/Decorate_hangshelf_base.tres" type="Texture" id=3]
+
+[node name="Decorate_ShelfOnWall" type="Node2D"]
+
+[node name="Texture" type="Node2D" parent="."]
+position = Vector2( 0, -140 )
+
+[node name="DecorateHangshelfBase" type="Sprite" parent="Texture"]
+position = Vector2( 0, 7 )
+texture = ExtResource( 3 )

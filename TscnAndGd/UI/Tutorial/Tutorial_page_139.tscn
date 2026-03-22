@@ -1,0 +1,270 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Resources/Item/item_pack.sprites/item_ingredient_browny_1.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Item/item_pack.sprites/item_ingredient_browny.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_2.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_2.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_2.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_1.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_particle_0.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Item/item_pack.sprites/item_deco_icecream.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/item_supercup_waterlayer_top.tres" type="Texture" id=9]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=10]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_number_2.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_icecream_pistachio.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_box_square_front.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_Mixer_front_s.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_Mixer_base.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_Mixer_knife_1.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_cuptip_1.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_frame_line.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_workboard.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_9.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_box_square.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_cook_browny_clean.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_Extra_browny.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_cook_browny.tres" type="Texture" id=26]
+
+[node name="搅拌冰淇淋" type="Node2D"]
+position = Vector2( 955, 676 )
+
+[node name="209" type="RichTextLabel" parent="."]
+margin_left = -353.0
+margin_top = 49.0
+margin_right = 440.0
+margin_bottom = 209.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "将布朗尼蛋糕切成小块，可以作为小料加入冰淇淋。
+将小料和冰淇淋加入杯子，再放入冰淇淋搅拌机里搅拌。
+小料会被打碎，均匀的分布在冰淇淋中。"
+text = "将布朗尼蛋糕切成小块，可以作为小料加入冰淇淋。
+将小料和冰淇淋加入杯子，再放入冰淇淋搅拌机里搅拌。
+小料会被打碎，均匀的分布在冰淇淋中。"
+script = ExtResource( 10 )
+LabelTEXT = "信息-文字说明-209"
+Center_Bool = true
+
+[node name="要求" type="Node2D" parent="."]
+position = Vector2( -218, -49 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="要求"]
+margin_left = -136.0
+margin_top = -88.0
+margin_right = 109.0
+margin_bottom = 93.0
+texture = ExtResource( 19 )
+patch_margin_left = 15
+patch_margin_top = 12
+patch_margin_right = 20
+patch_margin_bottom = 25
+
+[node name="line" type="Sprite" parent="要求/NinePatchRect"]
+position = Vector2( 112, 83 )
+scale = Vector2( 1, 0.902857 )
+texture = ExtResource( 20 )
+
+[node name="line2" type="Sprite" parent="要求/NinePatchRect"]
+position = Vector2( 115.161, 130 )
+rotation = 1.5708
+scale = Vector2( 1, 0.678771 )
+texture = ExtResource( 20 )
+offset = Vector2( 0, -88 )
+
+[node name="IconExtraCoconut" type="Sprite" parent="要求/NinePatchRect"]
+position = Vector2( 138, 148 )
+texture = ExtResource( 25 )
+
+[node name="IconLiquidBottleOrange" type="Sprite" parent="要求/NinePatchRect"]
+position = Vector2( 145, 40 )
+texture = ExtResource( 14 )
+
+[node name="IconLiquidNumber2" type="Sprite" parent="要求/NinePatchRect"]
+position = Vector2( 146, 79 )
+texture = ExtResource( 13 )
+
+[node name="Cup2" type="Node2D" parent="要求"]
+position = Vector2( -96, 8 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="要求/Cup2"]
+texture = ExtResource( 4 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="要求/Cup2"]
+self_modulate = Color( 0.811765, 0.992157, 0.345098, 1 )
+texture = ExtResource( 6 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="要求/Cup2"]
+self_modulate = Color( 0.811765, 0.992157, 0.345098, 1 )
+texture = ExtResource( 5 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="要求/Cup2"]
+self_modulate = Color( 0.811765, 0.992157, 0.345098, 1 )
+position = Vector2( 0, 6 )
+texture = ExtResource( 8 )
+
+[node name="ItemIngredientCoconutjelly" type="Sprite" parent="要求/Cup2"]
+position = Vector2( 0, 40 )
+texture = ExtResource( 1 )
+
+[node name="UiProcupCup2" type="Sprite" parent="要求/Cup2"]
+texture = ExtResource( 3 )
+
+[node name="UiIconStateCold" type="Sprite" parent="要求"]
+position = Vector2( -45, -62 )
+texture = ExtResource( 7 )
+
+[node name="TexNode" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2( 131, 9 )
+
+[node name="box" type="Sprite" parent="TexNode"]
+use_parent_material = true
+position = Vector2( 0, -3 )
+texture = ExtResource( 17 )
+offset = Vector2( 0, -26 )
+
+[node name="DrinkCupNode" type="Node2D" parent="TexNode"]
+position = Vector2( 0, -8 )
+
+[node name="Front" type="Node2D" parent="TexNode"]
+position = Vector2( 0, -104 )
+
+[node name="Knife" type="Node2D" parent="TexNode/Front"]
+position = Vector2( 2, 16 )
+
+[node name="DeviceMixerKnife1" type="Sprite" parent="TexNode/Front/Knife"]
+position = Vector2( 0, 20 )
+texture = ExtResource( 18 )
+
+[node name="DeviceMixerFrontS" type="Sprite" parent="TexNode/Front"]
+texture = ExtResource( 16 )
+
+[node name="TotuInfo1" type="Sprite" parent="TexNode"]
+position = Vector2( -49, -26 )
+rotation = -0.523598
+texture = ExtResource( 11 )
+
+[node name="Cup2" type="Node2D" parent="."]
+position = Vector2( 14, -45 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="Cup2"]
+texture = ExtResource( 4 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="Cup2"]
+self_modulate = Color( 0.811765, 0.992157, 0.345098, 1 )
+texture = ExtResource( 6 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="Cup2"]
+self_modulate = Color( 0.811765, 0.992157, 0.345098, 1 )
+texture = ExtResource( 5 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="Cup2"]
+self_modulate = Color( 0.811765, 0.992157, 0.345098, 1 )
+position = Vector2( 0.999992, 6 )
+scale = Vector2( 0.838709, 1 )
+texture = ExtResource( 9 )
+
+[node name="ItemIngredientCoconutjelly" type="Sprite" parent="Cup2"]
+position = Vector2( 0, 40 )
+texture = ExtResource( 2 )
+
+[node name="UiProcupCup2" type="Sprite" parent="Cup2"]
+texture = ExtResource( 3 )
+
+[node name="Cup3" type="Node2D" parent="."]
+position = Vector2( 359, -40 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="Cup3"]
+texture = ExtResource( 4 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="Cup3"]
+self_modulate = Color( 0.811765, 0.992157, 0.345098, 1 )
+texture = ExtResource( 6 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="Cup3"]
+self_modulate = Color( 0.811765, 0.992157, 0.345098, 1 )
+texture = ExtResource( 5 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="Cup3"]
+self_modulate = Color( 0.811765, 0.992157, 0.345098, 1 )
+position = Vector2( 0, 6 )
+texture = ExtResource( 8 )
+
+[node name="ItemIngredientCoconutjelly" type="Sprite" parent="Cup3"]
+position = Vector2( 0, 40 )
+texture = ExtResource( 1 )
+
+[node name="UiProcupCup2" type="Sprite" parent="Cup3"]
+texture = ExtResource( 3 )
+
+[node name="TotuInfo2" type="Sprite" parent="."]
+position = Vector2( 250, -21 )
+texture = ExtResource( 12 )
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 106, 23 )
+
+[node name="DeviceWorkboard" type="Sprite" parent="Node2D"]
+position = Vector2( -248, -262 )
+texture = ExtResource( 21 )
+
+[node name="MaterialCookBrownyClean" type="Sprite" parent="Node2D/DeviceWorkboard"]
+position = Vector2( 1, 16 )
+texture = ExtResource( 24 )
+
+[node name="MaterialCookBrowny" type="Sprite" parent="Node2D/DeviceWorkboard/MaterialCookBrownyClean"]
+position = Vector2( -81, -19 )
+texture = ExtResource( 26 )
+
+[node name="TotuInfo1" type="Sprite" parent="Node2D/DeviceWorkboard/MaterialCookBrownyClean"]
+position = Vector2( -36, -15 )
+rotation = -0.261799
+texture = ExtResource( 11 )
+
+[node name="DeviceWorkboard2" type="Sprite" parent="Node2D"]
+position = Vector2( -38, -263 )
+texture = ExtResource( 21 )
+
+[node name="ItemIngredientBrowny" type="Sprite" parent="Node2D/DeviceWorkboard2"]
+position = Vector2( -11, 20 )
+texture = ExtResource( 2 )
+
+[node name="ItemIngredientBrowny2" type="Sprite" parent="Node2D/DeviceWorkboard2"]
+position = Vector2( 13, 24 )
+texture = ExtResource( 2 )
+
+[node name="ItemIngredientBrowny3" type="Sprite" parent="Node2D/DeviceWorkboard2"]
+position = Vector2( -3, 34 )
+texture = ExtResource( 2 )
+
+[node name="TotuInfo2" type="Sprite" parent="Node2D"]
+position = Vector2( -136, -228 )
+texture = ExtResource( 12 )
+
+[node name="TotuInfo9" type="Sprite" parent="Node2D/TotuInfo2"]
+position = Vector2( -3, -35 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 22 )
+
+[node name="TotuInfo3" type="Sprite" parent="Node2D"]
+position = Vector2( 52, -230 )
+texture = ExtResource( 12 )
+
+[node name="Square_Back" type="Sprite" parent="Node2D"]
+use_parent_material = true
+position = Vector2( 140.5, -233 )
+texture = ExtResource( 23 )
+
+[node name="ItemIngredientBrowny2" type="Sprite" parent="Node2D/Square_Back"]
+position = Vector2( 3.5, -10 )
+texture = ExtResource( 2 )
+
+[node name="ItemIngredientBrowny3" type="Sprite" parent="Node2D/Square_Back"]
+position = Vector2( -3.5, 5 )
+texture = ExtResource( 2 )
+
+[node name="Square_Front" type="Sprite" parent="Node2D/Square_Back"]
+use_parent_material = true
+texture = ExtResource( 15 )

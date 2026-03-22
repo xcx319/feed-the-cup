@@ -1,0 +1,794 @@
+[gd_scene load_steps=36 format=2]
+
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_6.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_cuptip_1.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_2.png" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_5.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_cold.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_BeerBarrel_Wood_2.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_BeerBarrel_Wood_head.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_top.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_2.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_1.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_beer_baselayer_2.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_foam_1.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_beer_2.tres" type="Texture" id=16]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=17]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_beer_2.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_beer_1.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_4.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_3.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_foam_2.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_beer_baselayer_4.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_beer_4.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_beer_6.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_foam_3.tres" type="Texture" id=27]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_beer_baselayer_6.tres" type="Texture" id=28]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_beer_3.tres" type="Texture" id=29]
+
+[sub_resource type="Shader" id=279]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=321]
+resource_local_to_scene = true
+shader = SubResource( 279 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=322]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=323]
+resource_local_to_scene = true
+shader = SubResource( 322 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=324]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=325]
+resource_local_to_scene = true
+shader = SubResource( 324 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=319]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=320]
+resource_local_to_scene = true
+shader = SubResource( 319 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[node name="啤酒泡" type="Node2D"]
+position = Vector2( 482, 160 )
+
+[node name="要求2" type="Node2D" parent="."]
+position = Vector2( -116, 27 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="要求2"]
+margin_left = -136.0
+margin_top = -103.0
+margin_right = 16.0
+margin_bottom = 99.0
+texture = ExtResource( 3 )
+patch_margin_left = 15
+patch_margin_top = 12
+patch_margin_right = 20
+patch_margin_bottom = 25
+
+[node name="CUP3" type="Node2D" parent="要求2"]
+pause_mode = 2
+material = SubResource( 321 )
+position = Vector2( -87, 11 )
+__meta__ = {
+"_editor_description_": "SCALE 0.57"
+}
+
+[node name="baseLayer" type="Node2D" parent="要求2/CUP3"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+
+[node name="Cup_S" type="Sprite" parent="要求2/CUP3/baseLayer"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+texture = ExtResource( 14 )
+
+[node name="Tex" type="Node2D" parent="要求2/CUP3"]
+pause_mode = 2
+use_parent_material = true
+
+[node name="Layer" type="Node2D" parent="要求2/CUP3/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="Layer1" type="TextureProgress" parent="要求2/CUP3/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 11 )
+fill_mode = 3
+
+[node name="Layer2" type="TextureProgress" parent="要求2/CUP3/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 45.0
+texture_progress = ExtResource( 10 )
+fill_mode = 3
+
+[node name="Layer0" type="Sprite" parent="要求2/CUP3/Tex/Layer"]
+pause_mode = 2
+position = Vector2( 0, 7 )
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 9 )
+offset = Vector2( 1, 0 )
+
+[node name="Front" type="Node2D" parent="要求2/CUP3/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="CupF_S" type="Sprite" parent="要求2/CUP3/Tex/Front"]
+pause_mode = 2
+use_parent_material = true
+texture = ExtResource( 16 )
+
+[node name="DrinkTop" type="Node2D" parent="要求2/CUP3/Tex"]
+pause_mode = 2
+show_behind_parent = true
+position = Vector2( 0, 10 )
+scale = Vector2( 0.9, 0.9 )
+
+[node name="Top" type="Sprite" parent="要求2/CUP3/Tex/DrinkTop"]
+pause_mode = 2
+use_parent_material = true
+position = Vector2( 0, 19 )
+texture = ExtResource( 15 )
+
+[node name="UiIconStateCold" type="Sprite" parent="要求2"]
+position = Vector2( -29, -72 )
+texture = ExtResource( 6 )
+
+[node name="UiIconStateBeer1" type="Sprite" parent="要求2"]
+position = Vector2( -29, -40 )
+texture = ExtResource( 20 )
+
+[node name="ParticleCircle3" type="Sprite" parent="要求2"]
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -28, -38 )
+scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 4 )
+
+[node name="要求3" type="Node2D" parent="."]
+position = Vector2( 76, 28 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="要求3"]
+margin_left = -136.0
+margin_top = -103.0
+margin_right = 20.0
+margin_bottom = 99.0
+texture = ExtResource( 3 )
+patch_margin_left = 15
+patch_margin_top = 12
+patch_margin_right = 20
+patch_margin_bottom = 25
+
+[node name="CUPM1" type="Node2D" parent="要求3"]
+pause_mode = 2
+material = SubResource( 323 )
+position = Vector2( -88, 9 )
+__meta__ = {
+"_editor_description_": "SCALE 0.57"
+}
+
+[node name="baseLayer" type="Node2D" parent="要求3/CUPM1"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+
+[node name="Cup_M" type="Sprite" parent="要求3/CUPM1/baseLayer"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+texture = ExtResource( 24 )
+
+[node name="Tex" type="Node2D" parent="要求3/CUPM1"]
+pause_mode = 2
+use_parent_material = true
+
+[node name="Layer" type="Node2D" parent="要求3/CUPM1/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="Layer1" type="TextureProgress" parent="要求3/CUPM1/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 31.0
+texture_progress = ExtResource( 11 )
+fill_mode = 3
+
+[node name="Layer2" type="TextureProgress" parent="要求3/CUPM1/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 10 )
+fill_mode = 3
+
+[node name="Layer3" type="TextureProgress" parent="要求3/CUPM1/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 22 )
+fill_mode = 3
+
+[node name="Layer4" type="TextureProgress" parent="要求3/CUPM1/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 21 )
+fill_mode = 3
+
+[node name="Layer0" type="Sprite" parent="要求3/CUPM1/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+position = Vector2( -1, -21 )
+scale = Vector2( 1.1, 1.05 )
+texture = ExtResource( 9 )
+offset = Vector2( 1, 0 )
+
+[node name="Front" type="Node2D" parent="要求3/CUPM1/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="CupF_M" type="Sprite" parent="要求3/CUPM1/Tex/Front"]
+pause_mode = 2
+use_parent_material = true
+texture = ExtResource( 25 )
+
+[node name="DrinkTop" type="Node2D" parent="要求3/CUPM1/Tex"]
+pause_mode = 2
+show_behind_parent = true
+position = Vector2( 1, -22 )
+scale = Vector2( 1.1, 1.1 )
+
+[node name="Top" type="Sprite" parent="要求3/CUPM1/Tex/DrinkTop"]
+pause_mode = 2
+use_parent_material = true
+position = Vector2( 0, 19 )
+texture = ExtResource( 23 )
+
+[node name="UiIconStateCold" type="Sprite" parent="要求3"]
+position = Vector2( -29, -72 )
+texture = ExtResource( 6 )
+
+[node name="UiIconStateBeer1" type="Sprite" parent="要求3"]
+position = Vector2( -29, -40 )
+texture = ExtResource( 19 )
+
+[node name="ParticleCircle3" type="Sprite" parent="要求3"]
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -28, -38 )
+scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 4 )
+
+[node name="要求4" type="Node2D" parent="."]
+position = Vector2( 253, 30 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="要求4"]
+margin_left = -136.0
+margin_top = -103.0
+margin_right = 20.0
+margin_bottom = 99.0
+texture = ExtResource( 3 )
+patch_margin_left = 15
+patch_margin_top = 12
+patch_margin_right = 20
+patch_margin_bottom = 25
+
+[node name="CUPL1" type="Node2D" parent="要求4"]
+pause_mode = 2
+material = SubResource( 325 )
+position = Vector2( -88, 7 )
+__meta__ = {
+"_editor_description_": "SCALE 0.57"
+}
+
+[node name="baseLayer" type="Node2D" parent="要求4/CUPL1"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+
+[node name="Cup_L" type="Sprite" parent="要求4/CUPL1/baseLayer"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+texture = ExtResource( 28 )
+
+[node name="Tex" type="Node2D" parent="要求4/CUPL1"]
+pause_mode = 2
+use_parent_material = true
+
+[node name="Layer" type="Node2D" parent="要求4/CUPL1/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="Layer1" type="TextureProgress" parent="要求4/CUPL1/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 31.0
+texture_progress = ExtResource( 11 )
+fill_mode = 3
+
+[node name="Layer2" type="TextureProgress" parent="要求4/CUPL1/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 10 )
+fill_mode = 3
+
+[node name="Layer3" type="TextureProgress" parent="要求4/CUPL1/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 22 )
+fill_mode = 3
+
+[node name="Layer4" type="TextureProgress" parent="要求4/CUPL1/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 21 )
+fill_mode = 3
+
+[node name="Layer5" type="TextureProgress" parent="要求4/CUPL1/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 78.0
+texture_progress = ExtResource( 5 )
+fill_mode = 3
+
+[node name="Layer6" type="TextureProgress" parent="要求4/CUPL1/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 87.0
+texture_progress = ExtResource( 2 )
+fill_mode = 3
+
+[node name="Layer0" type="Sprite" parent="要求4/CUPL1/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+position = Vector2( 0, -46 )
+scale = Vector2( 1.1, 1.05 )
+texture = ExtResource( 9 )
+offset = Vector2( 1, 0 )
+
+[node name="Front" type="Node2D" parent="要求4/CUPL1/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="CupF_L" type="Sprite" parent="要求4/CUPL1/Tex/Front"]
+pause_mode = 2
+use_parent_material = true
+texture = ExtResource( 26 )
+
+[node name="DrinkTop" type="Node2D" parent="要求4/CUPL1/Tex"]
+pause_mode = 2
+show_behind_parent = true
+position = Vector2( 0, -41 )
+scale = Vector2( 1.1, 1.1 )
+
+[node name="Top" type="Sprite" parent="要求4/CUPL1/Tex/DrinkTop"]
+pause_mode = 2
+use_parent_material = true
+position = Vector2( 0, 19 )
+texture = ExtResource( 27 )
+
+[node name="UiIconStateCold" type="Sprite" parent="要求4"]
+position = Vector2( -29, -72 )
+texture = ExtResource( 6 )
+
+[node name="UiIconStateBeer1" type="Sprite" parent="要求4"]
+position = Vector2( -29, -40 )
+texture = ExtResource( 29 )
+
+[node name="ParticleCircle3" type="Sprite" parent="要求4"]
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -28, -38 )
+scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 4 )
+
+[node name="229" type="RichTextLabel" parent="."]
+margin_left = -371.0
+margin_top = 402.0
+margin_right = 418.0
+margin_bottom = 580.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "顾客会对啤酒泡的含量有精确的要求。
+打开酒桶的酒嘴后，在合适的时机手动关闭酒嘴，按照要求制作啤酒，才可获得好评。"
+text = "顾客会对啤酒泡的含量有精确的要求。
+打开酒桶的酒嘴后，在合适的时机手动关闭酒嘴，按照要求制作啤酒，才可获得好评。"
+script = ExtResource( 17 )
+LabelTEXT = "信息-文字说明-229"
+Center_Bool = true
+
+[node name="啤酒泡" type="Node2D" parent="."]
+position = Vector2( -258, -267 )
+
+[node name="3" type="Node2D" parent="啤酒泡"]
+position = Vector2( 229, 469 )
+
+[node name="DeviceBeerBarrelWood2" type="Sprite" parent="啤酒泡/3"]
+position = Vector2( -116, 40 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 7 )
+
+[node name="CUP1" type="Node2D" parent="啤酒泡/3/DeviceBeerBarrelWood2"]
+pause_mode = 2
+material = SubResource( 320 )
+position = Vector2( 8.33331, 62.5 )
+rotation = -0.261799
+scale = Vector2( 0.7, 0.7 )
+__meta__ = {
+"_editor_description_": "SCALE 0.57"
+}
+
+[node name="baseLayer" type="Node2D" parent="啤酒泡/3/DeviceBeerBarrelWood2/CUP1"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+
+[node name="Cup_S" type="Sprite" parent="啤酒泡/3/DeviceBeerBarrelWood2/CUP1/baseLayer"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+texture = ExtResource( 14 )
+
+[node name="Tex" type="Node2D" parent="啤酒泡/3/DeviceBeerBarrelWood2/CUP1"]
+pause_mode = 2
+use_parent_material = true
+
+[node name="Front" type="Node2D" parent="啤酒泡/3/DeviceBeerBarrelWood2/CUP1/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="CupF_S" type="Sprite" parent="啤酒泡/3/DeviceBeerBarrelWood2/CUP1/Tex/Front"]
+pause_mode = 2
+use_parent_material = true
+texture = ExtResource( 16 )
+
+[node name="DeviceBeerBarrelWoodHead" type="Sprite" parent="啤酒泡/3/DeviceBeerBarrelWood2"]
+position = Vector2( 1, 47 )
+texture = ExtResource( 8 )
+
+[node name="Y" parent="啤酒泡/3/DeviceBeerBarrelWood2" instance=ExtResource( 1 )]
+margin_left = 70.8333
+margin_top = 0.833344
+margin_right = 70.8333
+margin_bottom = 0.833344
+rect_scale = Vector2( 0.85, 0.85 )
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-开启"
+OnBut = false
+
+[node name="DeviceBeerBarrelWood3" type="Sprite" parent="啤酒泡/3"]
+position = Vector2( 157, 36 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 7 )
+
+[node name="CUP2" type="Node2D" parent="啤酒泡/3/DeviceBeerBarrelWood3"]
+pause_mode = 2
+material = SubResource( 320 )
+position = Vector2( 12.5, 60.8333 )
+rotation = -0.261799
+scale = Vector2( 0.833333, 0.833333 )
+__meta__ = {
+"_editor_description_": "SCALE 0.57"
+}
+
+[node name="baseLayer" type="Node2D" parent="啤酒泡/3/DeviceBeerBarrelWood3/CUP2"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+
+[node name="Cup_S" type="Sprite" parent="啤酒泡/3/DeviceBeerBarrelWood3/CUP2/baseLayer"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+texture = ExtResource( 14 )
+
+[node name="Tex" type="Node2D" parent="啤酒泡/3/DeviceBeerBarrelWood3/CUP2"]
+pause_mode = 2
+use_parent_material = true
+
+[node name="Layer" type="Node2D" parent="啤酒泡/3/DeviceBeerBarrelWood3/CUP2/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="Layer1" type="TextureProgress" parent="啤酒泡/3/DeviceBeerBarrelWood3/CUP2/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 11 )
+fill_mode = 3
+
+[node name="Layer2" type="TextureProgress" parent="啤酒泡/3/DeviceBeerBarrelWood3/CUP2/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 1, 1, 1, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 45.0
+texture_progress = ExtResource( 10 )
+fill_mode = 3
+
+[node name="Layer0" type="Sprite" parent="啤酒泡/3/DeviceBeerBarrelWood3/CUP2/Tex/Layer"]
+pause_mode = 2
+position = Vector2( 0, 7 )
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 9 )
+offset = Vector2( 1, 0 )
+
+[node name="Front" type="Node2D" parent="啤酒泡/3/DeviceBeerBarrelWood3/CUP2/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="CupF_S" type="Sprite" parent="啤酒泡/3/DeviceBeerBarrelWood3/CUP2/Tex/Front"]
+pause_mode = 2
+use_parent_material = true
+texture = ExtResource( 16 )
+
+[node name="DrinkTop" type="Node2D" parent="啤酒泡/3/DeviceBeerBarrelWood3/CUP2/Tex"]
+pause_mode = 2
+visible = false
+show_behind_parent = true
+position = Vector2( 0, 10 )
+scale = Vector2( 0.9, 0.9 )
+
+[node name="Top" type="Sprite" parent="啤酒泡/3/DeviceBeerBarrelWood3/CUP2/Tex/DrinkTop"]
+pause_mode = 2
+use_parent_material = true
+position = Vector2( 0, 19 )
+texture = ExtResource( 15 )
+
+[node name="DeviceBeerBarrelWoodHead" type="Sprite" parent="啤酒泡/3/DeviceBeerBarrelWood3"]
+position = Vector2( 1, 47 )
+texture = ExtResource( 8 )
+
+[node name="Y" parent="啤酒泡/3/DeviceBeerBarrelWood3" instance=ExtResource( 1 )]
+margin_left = 71.6666
+margin_top = 7.5
+margin_right = 71.6666
+margin_bottom = 7.5
+rect_scale = Vector2( 0.85, 0.85 )
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-关闭"
+OnBut = false
+
+[node name="TotuInfo2" type="Sprite" parent="啤酒泡/3"]
+position = Vector2( 13, 80 )
+texture = ExtResource( 18 )

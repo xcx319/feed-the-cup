@@ -1,0 +1,105 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_eggroll_white.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_eggroll_icecream_1.tres" type="Texture" id=3]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=4]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_mint_slice_1.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_mint_single_1.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_mint_slice_2.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_mint_slice_4.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_mint_slice_3.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Item/item_pack.sprites/item_deco_mint.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_workboard.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_9.tres" type="Texture" id=16]
+
+[node name="薄荷叶" type="Node2D"]
+
+[node name="224" type="RichTextLabel" parent="."]
+margin_left = -343.0
+margin_top = 176.0
+margin_right = 377.0
+margin_bottom = 333.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "将薄荷枝放在菜板上，拆解成薄荷叶，装饰在冰淇淋上。"
+text = "将薄荷枝放在菜板上，拆解成薄荷叶，装饰在冰淇淋上。"
+script = ExtResource( 4 )
+LabelTEXT = "信息-文字说明-224"
+Center_Bool = true
+
+[node name="Big5" type="Node2D" parent="."]
+pause_mode = 2
+show_behind_parent = true
+position = Vector2( 148, 61 )
+
+[node name="FruitMintSingle5" type="Sprite" parent="Big5"]
+position = Vector2( -315, -16 )
+texture = ExtResource( 8 )
+
+[node name="DeviceWorkboard" type="Sprite" parent="Big5"]
+position = Vector2( -226, 13 )
+texture = ExtResource( 15 )
+offset = Vector2( 7, -35 )
+
+[node name="FruitMintSingle4" type="Sprite" parent="Big5/DeviceWorkboard"]
+position = Vector2( -6, -8 )
+texture = ExtResource( 7 )
+
+[node name="FruitMintSlice2" type="Sprite" parent="Big5/DeviceWorkboard"]
+position = Vector2( 1, -4 )
+texture = ExtResource( 9 )
+
+[node name="FruitMintSlice3" type="Sprite" parent="Big5/DeviceWorkboard"]
+position = Vector2( 19, -11 )
+texture = ExtResource( 11 )
+
+[node name="FruitMintSlice4" type="Sprite" parent="Big5/DeviceWorkboard"]
+position = Vector2( 19, -2 )
+texture = ExtResource( 10 )
+
+[node name="TotuInfo5" type="Sprite" parent="Big5"]
+position = Vector2( -94, 7 )
+texture = ExtResource( 13 )
+
+[node name="TotuInfo9" type="Sprite" parent="Big5"]
+position = Vector2( -195, -34 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 16 )
+
+[node name="TotuInfo6" type="Sprite" parent="Big5"]
+position = Vector2( -267, -17 )
+rotation = -0.261799
+texture = ExtResource( 14 )
+
+[node name="Small2" type="Node2D" parent="Big5"]
+pause_mode = 2
+show_behind_parent = true
+position = Vector2( -13, -19 )
+
+[node name="Cup_L" type="Sprite" parent="Big5/Small2"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+position = Vector2( 0, 28.0702 )
+texture = ExtResource( 2 )
+
+[node name="Layer1" type="TextureProgress" parent="Big5/Small2"]
+pause_mode = 2
+self_modulate = Color( 0.792157, 1, 0.964706, 0.909804 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -22.0
+margin_top = -28.0
+margin_right = 22.0
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 22, 28 )
+value = 100.0
+texture_progress = ExtResource( 3 )
+fill_mode = 3
+
+[node name="FruitMintSingle4" type="Sprite" parent="Big5/Small2"]
+position = Vector2( 20, 6 )
+texture = ExtResource( 12 )

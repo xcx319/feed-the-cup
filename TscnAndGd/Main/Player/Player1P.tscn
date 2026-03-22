@@ -1,0 +1,512 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://TscnAndGd/Main/Player/Player1P.gd" type="Script" id=1]
+[ext_resource path="res://TscnAndGd/Main/Player/Stat.gd" type="Script" id=2]
+[ext_resource path="res://TscnAndGd/Main/Player/Stain.gd" type="Script" id=3]
+[ext_resource path="res://TscnAndGd/Main/Player/Control.gd" type="Script" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_4.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_3.tres" type="Texture" id=6]
+[ext_resource path="res://TscnAndGd/Main/Player/Pressure.gd" type="Script" id=7]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_3.png" type="Texture" id=8]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_bloodsplash_typeA_1.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_bloodsplash_typeA_3.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_bloodsplash_typeA_4.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_bloodsplash_typeA_2.tres" type="Texture" id=12]
+[ext_resource path="res://TscnAndGd/Main/Player/RigidBody2D.gd" type="Script" id=13]
+
+[sub_resource type="CircleShape2D" id=182]
+radius = 16.0
+
+[sub_resource type="DynamicFontData" id=180]
+font_path = "res://Language/Fonts/simhei.ttf"
+
+[sub_resource type="DynamicFont" id=181]
+size = 20
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 180 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "full"
+length = 0.3
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("PressureNode/TextureProgress:tint_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.886275, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PressureNode/EffectNode/EffectBloodsplashTypeA1:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.08, 0.16, 0.24 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 11 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("PressureNode/EffectNode/EffectBloodsplashTypeA1:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.18, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "green"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("PressureNode/TextureProgress:tint_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.168627, 0.882353, 0.172549, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PressureNode/EffectNode/EffectBloodsplashTypeA1:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "red"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("PressureNode/TextureProgress:tint_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.392157, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PressureNode/EffectNode/EffectBloodsplashTypeA1:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "yellow"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("PressureNode/TextureProgress:tint_progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("PressureNode/EffectNode/EffectBloodsplashTypeA1:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "hide"
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureProgress:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureProgress:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("TextureProgress:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "down"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:cast_to")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 50 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:cast_to")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "left"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:cast_to")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "right"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:cast_to")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 50, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:cast_to")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -50 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "0"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "信息-等待2" ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "init"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[node name="Player1P" type="KinematicBody2D"]
+collision_layer = 512
+collision_mask = 2176
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "1"
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource( 182 )
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+node_a = NodePath("..")
+node_b = NodePath("../RigidBody2D")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+collision_layer = 0
+collision_mask = 2176
+script = ExtResource( 13 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+rotation = 1.5708
+shape = SubResource( 182 )
+
+[node name="LogicNode" type="Node" parent="."]
+
+[node name="Stat" type="Node" parent="LogicNode"]
+script = ExtResource( 2 )
+
+[node name="Control" type="Node" parent="LogicNode"]
+script = ExtResource( 4 )
+
+[node name="Stain" type="Node" parent="LogicNode"]
+script = ExtResource( 3 )
+
+[node name="MixTimer" type="Timer" parent="LogicNode"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Shadow" type="Sprite" parent="."]
+self_modulate = Color( 0.784314, 0.196078, 0.196078, 0.588235 )
+show_behind_parent = true
+scale = Vector2( 0.65, 0.3 )
+texture = ExtResource( 8 )
+
+[node name="PressureNode" type="Node2D" parent="."]
+z_index = 1
+script = ExtResource( 7 )
+
+[node name="TextureProgress" type="TextureProgress" parent="PressureNode"]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+margin_left = 50.0
+margin_top = -128.0
+margin_right = 76.0
+margin_bottom = -31.0
+rect_scale = Vector2( 0.8, 0.8 )
+max_value = 106.0
+texture_under = ExtResource( 6 )
+texture_progress = ExtResource( 5 )
+fill_mode = 3
+tint_progress = Color( 0.168627, 0.882353, 0.172549, 1 )
+
+[node name="Label" type="Label" parent="PressureNode/TextureProgress"]
+margin_left = 7.0
+margin_top = 90.0
+margin_right = 17.0
+margin_bottom = 111.0
+custom_fonts/font = SubResource( 181 )
+text = "/"
+align = 1
+valign = 1
+
+[node name="Max" type="Label" parent="PressureNode/TextureProgress/Label"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -10.5
+margin_right = 30.0
+margin_bottom = 10.5
+custom_fonts/font = SubResource( 181 )
+text = "100"
+valign = 1
+
+[node name="Cur" type="Label" parent="PressureNode/TextureProgress/Label"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -63.0
+margin_top = -10.5
+margin_bottom = 10.5
+custom_fonts/font = SubResource( 181 )
+text = "50"
+align = 2
+valign = 1
+
+[node name="PreAni" type="AnimationPlayer" parent="PressureNode"]
+root_node = NodePath("../..")
+autoplay = "green"
+anims/full = SubResource( 8 )
+anims/green = SubResource( 9 )
+anims/red = SubResource( 10 )
+anims/yellow = SubResource( 11 )
+
+[node name="PreProAni" type="AnimationPlayer" parent="PressureNode"]
+autoplay = "init"
+anims/hide = SubResource( 12 )
+anims/init = SubResource( 13 )
+anims/show = SubResource( 14 )
+
+[node name="Timer" type="Timer" parent="PressureNode"]
+wait_time = 3.0
+one_shot = true
+
+[node name="EffectNode" type="Node2D" parent="PressureNode"]
+position = Vector2( 60, -124 )
+
+[node name="EffectBloodsplashTypeA1" type="Sprite" parent="PressureNode/EffectNode"]
+self_modulate = Color( 1, 0, 0, 0 )
+texture = ExtResource( 9 )
+offset = Vector2( 6, 18 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true
+exclude_parent = false
+collision_mask = 2176
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="RayCast2D"]
+autoplay = "init"
+anims/down = SubResource( 2 )
+anims/init = SubResource( 3 )
+anims/left = SubResource( 4 )
+anims/right = SubResource( 5 )
+anims/up = SubResource( 6 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, -60 )
+current = true
+limit_left = -700
+limit_top = -100
+limit_right = 2300
+limit_bottom = 2000
+limit_smoothed = true
+smoothing_enabled = true
+smoothing_speed = 1.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="EffectNode" type="Node2D" parent="."]
+position = Vector2( 55, -172 )
+z_index = 2
+
+[node name="InfoLabel" type="Label" parent="."]
+visible = false
+margin_left = -128.0
+margin_top = -216.0
+margin_right = 128.0
+margin_bottom = -104.0
+text = "信息-等待2"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Ani" type="AnimationPlayer" parent="InfoLabel"]
+autoplay = "init"
+anims/0 = SubResource( 15 )
+anims/2 = SubResource( 16 )
+anims/init = SubResource( 17 )
+
+[connection signal="timeout" from="LogicNode/MixTimer" to="." method="_on_MixTimer_timeout"]
+[connection signal="timeout" from="PressureNode/Timer" to="PressureNode" method="_on_Timer_timeout"]

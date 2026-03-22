@@ -1,0 +1,202 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=4]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_2.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_arm_act_1.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_1.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_arm_idle_1.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/MenuMan_idle_1.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_leg_stand_2.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/icon_text_coin.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_talk.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_head_front.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_body_front.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Characters/Guest/Other/character_other_pack.sprites/Clothes_Hat_1_front.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_work_2.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_idle_0.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_idle_1.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_tail_back.tres" type="Texture" id=23]
+
+[node name="降压" type="Node2D"]
+position = Vector2( -101, 173 )
+
+[node name="Top_note" type="Node2D" parent="."]
+light_mask = 0
+position = Vector2( 174, -10 )
+
+[node name="All_note" type="Node2D" parent="Top_note"]
+
+[node name="Leg_L" type="Node2D" parent="Top_note/All_note"]
+position = Vector2( -7, -27 )
+
+[node name="L" type="Sprite" parent="Top_note/All_note/Leg_L"]
+texture = ExtResource( 22 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="Top_note/All_note"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="R" type="Sprite" parent="Top_note/All_note/Leg_R"]
+texture = ExtResource( 21 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="Top_note/All_note"]
+position = Vector2( 0, -25 )
+
+[node name="BodyPose" type="Node2D" parent="Top_note/All_note/Body_note"]
+
+[node name="Body" type="Node2D" parent="Top_note/All_note/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="Top_note/All_note/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+texture = ExtResource( 18 )
+
+[node name="HeadPose" type="Node2D" parent="Top_note/All_note/Body_note/BodyPose/Body"]
+position = Vector2( 0, -68 )
+
+[node name="Head" type="Node2D" parent="Top_note/All_note/Body_note/BodyPose/Body/HeadPose"]
+
+[node name="Down" type="Sprite" parent="Top_note/All_note/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 17 )
+offset = Vector2( 0, -26 )
+
+[node name="Front" type="Sprite" parent="Top_note/All_note/Body_note/BodyPose/Body/HeadPose/Head"]
+use_parent_material = true
+position = Vector2( 0, -31 )
+texture = ExtResource( 19 )
+
+[node name="Arm_Hold" type="Node2D" parent="Top_note/All_note/Body_note/BodyPose"]
+position = Vector2( 20, -47 )
+
+[node name="Pose_Hold" type="Node2D" parent="Top_note/All_note/Body_note/BodyPose/Arm_Hold"]
+
+[node name="Arm" type="Sprite" parent="Top_note/All_note/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 1, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 20 )
+offset = Vector2( -10, 3 )
+
+[node name="Arm" type="Node2D" parent="Top_note/All_note/Body_note/BodyPose"]
+position = Vector2( -20, -47 )
+scale = Vector2( -1, 1 )
+
+[node name="Pose" type="Node2D" parent="Top_note/All_note/Body_note/BodyPose/Arm"]
+
+[node name="Arm" type="Sprite" parent="Top_note/All_note/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 20 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="Top_note/All_note/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 0, -15 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 23 )
+offset = Vector2( 20, -16 )
+
+[node name="SpriteTex" type="Node2D" parent="."]
+position = Vector2( 24, -23 )
+
+[node name="Top_note" type="Node2D" parent="SpriteTex"]
+light_mask = 0
+
+[node name="All_note" type="Node2D" parent="SpriteTex/Top_note"]
+
+[node name="Body_note" type="Node2D" parent="SpriteTex/Top_note/All_note"]
+position = Vector2( 0, -17 )
+
+[node name="Body" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note"]
+
+[node name="CupBody" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note/Body"]
+position = Vector2( 0, -34 )
+
+[node name="BodyBase" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 10 )
+
+[node name="CupFace" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody"]
+position = Vector2( 1, -6 )
+
+[node name="L" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace"]
+position = Vector2( -10, 0 )
+
+[node name="Eye" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L"]
+texture = ExtResource( 7 )
+
+[node name="Ball" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/L"]
+position = Vector2( 1, -5 )
+texture = ExtResource( 5 )
+
+[node name="R" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace"]
+position = Vector2( 8, 0 )
+scale = Vector2( -1, 1 )
+
+[node name="Eye" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R"]
+texture = ExtResource( 7 )
+
+[node name="Ball" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/CupBody/CupFace/R"]
+position = Vector2( 1, -5 )
+texture = ExtResource( 5 )
+
+[node name="Arm_Hold" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note"]
+position = Vector2( 33, -47 )
+
+[node name="Arm" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Arm_Hold"]
+modulate = Color( 0.929412, 0.929412, 0.929412, 1 )
+texture = ExtResource( 6 )
+offset = Vector2( 4, -17 )
+
+[node name="Arm_Other" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note"]
+show_behind_parent = true
+position = Vector2( -28, -44 )
+scale = Vector2( -1, 1 )
+
+[node name="Arm" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Arm_Other"]
+modulate = Color( 0.815686, 0.815686, 0.815686, 1 )
+texture = ExtResource( 8 )
+offset = Vector2( 4, -17 )
+
+[node name="Legs" type="Node2D" parent="SpriteTex/Top_note/All_note"]
+
+[node name="Leg_L" type="Node2D" parent="SpriteTex/Top_note/All_note/Legs"]
+position = Vector2( -7, -27 )
+
+[node name="LegStand_L" type="Sprite" parent="SpriteTex/Top_note/All_note/Legs/Leg_L"]
+self_modulate = Color( 0.254902, 0.176471, 0.0980392, 1 )
+texture = ExtResource( 11 )
+offset = Vector2( -6, 0 )
+
+[node name="Leg_R" type="Node2D" parent="SpriteTex/Top_note/All_note/Legs"]
+show_behind_parent = true
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="LegStand_R" type="Sprite" parent="SpriteTex/Top_note/All_note/Legs/Leg_R"]
+self_modulate = Color( 0.254902, 0.176471, 0.0980392, 1 )
+texture = ExtResource( 11 )
+offset = Vector2( -6, 0 )
+
+[node name="UiPoptipIdeaTalk" type="Sprite" parent="."]
+position = Vector2( -41, -135 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 15 )
+
+[node name="IconTextCoin" type="Sprite" parent="UiPoptipIdeaTalk"]
+position = Vector2( 3, -11 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 12 )
+
+[node name="100" type="RichTextLabel" parent="."]
+margin_left = -220.0
+margin_top = 27.0
+margin_right = 483.0
+margin_bottom = 147.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "购买手册人提供的装备，有时可以获得一些{术语_压力}保护措施。"
+text = "购买手册人提供的装备，有时可以获得一些{术语_压力}保护措施。"
+script = ExtResource( 4 )
+LabelTEXT = "信息-文字说明-100"
+Center_Bool = true

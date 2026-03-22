@@ -1,0 +1,483 @@
+[gd_scene load_steps=47 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_tips_1.tres" type="Texture" id=1]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=2]
+[ext_resource path="res://TscnAndGd/UI/Info/SkillInfo.gd" type="Script" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_light.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_menu_lock_2.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_menu_lock_1.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_ghost_2.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_wolf_3.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_fox_3.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_bg.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_ghost_3.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_fox_2.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_bear_2.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_wolf_2.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_beaver_2.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_bear_3.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_beaver_3.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_14.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_slime_2.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_slime_3.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_panda_2.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_panda_3.tres" type="Texture" id=22]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=23]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_crocodile_2.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_crocodile_3.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_crocodile_4.tres" type="Texture" id=26]
+
+[sub_resource type="Animation" id=10]
+resource_name = "不粘"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 17 ) ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "修理"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 24 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "利爪"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "发呆"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "小心"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "强卖"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 22 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "抗压"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 16 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "拖地减压"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 19 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "握力"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 13 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "无"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 18 ) ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "无法下单"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 26 ) ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "木讷"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 25 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "熟练"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 12 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "爆发力"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 14 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "穿越"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 11 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "补充"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 20 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "迎宾"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 15 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "销售"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 21 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Lock"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BG:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BG/Lock:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BG/Control/NinePatchRect/Icon:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Unlock"
+tracks/0/type = "value"
+tracks/0/path = NodePath("BG:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BG/Lock:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BG/Control/NinePatchRect/Icon:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[node name="0" type="Control"]
+margin_right = 823.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 0, 100 )
+script = ExtResource( 3 )
+
+[node name="BG" type="NinePatchRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 3.0
+texture = ExtResource( 1 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="Control" type="Control" parent="BG"]
+margin_left = -6.0
+margin_top = -3.0
+margin_right = 94.0
+margin_bottom = 97.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="BG/Control"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="CsIconBg" type="Sprite" parent="BG/Control/NinePatchRect"]
+position = Vector2( 50, 50 )
+texture = ExtResource( 10 )
+
+[node name="Icon" type="Sprite" parent="BG/Control/NinePatchRect"]
+visible = false
+position = Vector2( 50, 50 )
+texture = ExtResource( 26 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BG/Control/NinePatchRect/Icon"]
+"anims/不粘" = SubResource( 10 )
+"anims/修理" = SubResource( 20 )
+"anims/利爪" = SubResource( 11 )
+"anims/发呆" = SubResource( 12 )
+"anims/小心" = SubResource( 13 )
+"anims/强卖" = SubResource( 18 )
+"anims/抗压" = SubResource( 5 )
+"anims/拖地减压" = SubResource( 17 )
+"anims/握力" = SubResource( 7 )
+"anims/无" = SubResource( 8 )
+"anims/无法下单" = SubResource( 21 )
+"anims/木讷" = SubResource( 22 )
+"anims/熟练" = SubResource( 9 )
+"anims/爆发力" = SubResource( 14 )
+"anims/穿越" = SubResource( 6 )
+"anims/补充" = SubResource( 16 )
+"anims/迎宾" = SubResource( 15 )
+"anims/销售" = SubResource( 19 )
+
+[node name="Lock" type="Node2D" parent="BG"]
+position = Vector2( 45, 55 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="BG/Lock"]
+position = Vector2( 0, -19 )
+texture = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="BG/Lock"]
+texture = ExtResource( 6 )
+
+[node name="Label" type="RichTextLabel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 101.0
+margin_top = -18.0
+margin_right = -6.0
+margin_bottom = 5.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+script = ExtResource( 23 )
+Center_Bool = true
+InCenter = true
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 101.0
+margin_top = 8.0
+margin_right = -6.0
+margin_bottom = -6.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "111"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 2 )
+
+[node name="TypeAni" type="AnimationPlayer" parent="."]
+anims/Lock = SubResource( 4 )
+anims/Unlock = SubResource( 3 )

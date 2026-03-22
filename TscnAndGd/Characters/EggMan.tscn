@@ -1,0 +1,1579 @@
+[gd_scene load_steps=54 format=2]
+
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/EggMan_front_color.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/EggMan_animal_7.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/EggMan_front_1.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/EggMan_animal_5.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/EggMan_animal_1.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/EggMan_buttom_1.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/EggMan_animal_2.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/EggMan_animal_3.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/EggMan_animal_6.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Characters/ItemMan/ItemMan_pack.sprites/EggMan_animal_4.tres" type="Texture" id=10]
+[ext_resource path="res://TscnAndGd/Characters/EggMan.gd" type="Script" id=11]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_bear_1.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_slime_4.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_ghost_3.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_panda_1.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_wolf_4.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_fox_1.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_beaver_4.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_explode_typeB_2.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_explode_typeB_4.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_explode_typeB_3.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_explode_typeB_1.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_voice_2.tres" type="Texture" id=27]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_voice_3.tres" type="Texture" id=28]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_voice_1.tres" type="Texture" id=29]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_5.png" type="Texture" id=30]
+
+[sub_resource type="Animation" id=64]
+resource_name = "Die"
+length = 3.0
+step = 0.025
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.075 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -150 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Effect/EffectExplodeTypeB1:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2.05, 2.1, 2.15, 2.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 25 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 22 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Effect/EffectExplodeTypeB1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 2.05, 2.2, 2.25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 0.627451, 0.298039, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Effect/EffectVoice1:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2, 2.05, 2.1, 2.15, 2.2, 2.25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 29 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 28 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Effect/EffectVoice1:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 2, 2.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.6, 1.6 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Effect/EffectVoice1:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 2, 2.05, 2.25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 0.607843, 0.188235, 1 ), Color( 1, 0.607843, 0.188235, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Effect/ParticleCircle5:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 2, 2.05, 2.25, 2.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("SpriteTex/Top_note/All_note/Body_note:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.525, -13.4531, 0, -0.425, 14.3435, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("SpriteTex/Top_note/All_note/Body_note:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Effect:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("SpriteTex/Top_note:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 2.15 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=38]
+resource_name = "Idle1"
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Body_note:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.35, -12.2267, 0, -0.35, 10.2981, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Effect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SpriteTex/Top_note:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=65]
+resource_name = "Idle2"
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.55, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -25 ), Vector2( 0, 0 ), Vector2( 0, -11 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.4, 0.5, 0.75, 0.85 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.9, 1.1 ), Vector2( 1, 1 ), Vector2( 1.2, 0.8 ), Vector2( 0.95, 1.05 ), Vector2( 1.2, 0.8 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Body_note:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.35, -12.2267, 0, -0.35, 10.2981, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.85 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Effect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SpriteTex/Top_note:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.75, 0.85 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 3 ), Vector2( 0, -4 ), Vector2( 0, 3 ), Vector2( 0, -3 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=66]
+resource_name = "Idle3"
+length = 1.3
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.65, 0.8, 0.95, 1.05 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 0.8 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.2, 0.8 ), Vector2( 0.95, 1.05 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Body_note:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.35, -12.2267, 0, -0.35, 10.2981, 0.25, 0 ),
+"times": PoolRealArray( 0, 1.25 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Effect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SpriteTex/Top_note:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=75]
+resource_name = "Idle4"
+length = 2.0
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Body_note:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, -27.7358, -30, -0.1, 0, 0.1, -0.1, 0, -0.15, 75.042, 0.1, -49.6158, 0, -0.149554, 28.8055, 0.200446, -17.5221, 0, -0.149554, 14.8514, 0.150445, -13.894, 0, -0.0995545, 9.8279, 0.0504454, -6.07975, 0, -0.0495545, 4.24627, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 0.8, 1.15, 1.5, 1.75, 1.9 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Effect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SpriteTex/Top_note:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=76]
+resource_name = "Idle5"
+length = 1.8
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.55, 0.7, 0.9, 1.1, 1.3, 1.45, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 10, -10 ), Vector2( 20, 0 ), Vector2( 20, -5 ), Vector2( 20, 0 ), Vector2( 20, 0 ), Vector2( 10, -10 ), Vector2( 0, 0 ), Vector2( 0, -5 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.05, 0.15, 0.3, 0.4, 0.5, 0.75, 0.85, 0.9, 0.95, 1.05, 1.2, 1.3, 1.4, 1.65, 1.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 0.8 ), Vector2( 0.9, 1.1 ), Vector2( 1, 1 ), Vector2( 1.2, 0.8 ), Vector2( 0.95, 1.05 ), Vector2( 1.2, 0.8 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.2, 0.8 ), Vector2( 0.9, 1.1 ), Vector2( 1, 1 ), Vector2( 1.2, 0.8 ), Vector2( 0.95, 1.05 ), Vector2( 1.2, 0.8 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Body_note:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.3, 36.0703, 0, -0.4, -14.7313, 0.25, 0, 0, -0.25, 0, 0.3, -29.2075, 0, -0.35, 16.2468, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.85, 0.9, 1.75 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Effect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SpriteTex/Top_note:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.75, 0.85, 0.9, 1, 1.2, 1.4, 1.65, 1.75 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 3 ), Vector2( 0, -4 ), Vector2( 0, 3 ), Vector2( 0, -3 ), Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, 3 ), Vector2( 0, -4 ), Vector2( 0, 3 ), Vector2( 0, -3 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=67]
+resource_name = "Jump"
+length = 0.6
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -25 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.3, 0.35, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.2, 0.8 ), Vector2( 0.9, 1.1 ), Vector2( 1, 1 ), Vector2( 1.1, 0.9 ), Vector2( 1, 1 ), Vector2( 1.2, 0.8 ) ]
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Body_note:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.35, -16.6673, 0, -0.35, 14.1802, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Effect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SpriteTex/Top_note:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 3 ), Vector2( 0, -4 ), Vector2( 0, 3 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=55]
+resource_name = "Show"
+step = 0.025
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.525, 0.825 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -150 ), Vector2( 0, -150 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Effect/EffectExplodeTypeB1:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.05, 0.1, 0.15, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 25 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 22 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Effect/EffectExplodeTypeB1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.05, 0.2, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 0.627451, 0.298039, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Effect/EffectVoice1:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 29 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 28 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Effect/EffectVoice1:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.6, 1.6 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Effect/EffectVoice1:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.05, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 0.607843, 0.188235, 1 ), Color( 1, 0.607843, 0.188235, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Effect/ParticleCircle5:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.05, 0.25, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("SpriteTex/Top_note/All_note/Body_note:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.275, -1.07232, 0, -0.05, 4.41887, 0.05, -10.3843, 10, -0.075, -1.86574, 0.2, 0.0324059, 0, -0.25, 0, 0.025, 10.5785, 0, -0.025, -8.67505, 0.025, 8.42884, 0, -0.025, -7.83388, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.45, 0.8, 0.9, 1 )
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("SpriteTex/Top_note/All_note/Body_note:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.525, 0.7, 0.8, 0.85, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.8, 1.2 ), Vector2( 1, 1 ), Vector2( 1.3, 0.7 ), Vector2( 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Effect:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("SpriteTex/Top_note:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/12/type = "method"
+tracks/12/path = NodePath(".")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_start"
+} ]
+}
+
+[sub_resource type="Animation" id=62]
+resource_name = "init"
+length = 0.1
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Body_note:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 1, 8.00292 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Effect:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SpriteTex/Top_note:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=68]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Color:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.823529, 0.45098, 1, 0.317647 ) ]
+}
+
+[sub_resource type="Animation" id=69]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Color:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.458824, 1, 0.976471, 0.317647 ) ]
+}
+
+[sub_resource type="Animation" id=70]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Color:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.937255, 1, 0.458824, 0.317647 ) ]
+}
+
+[sub_resource type="Animation" id=71]
+resource_name = "3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Color:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.458824, 0.678431, 1, 0.317647 ) ]
+}
+
+[sub_resource type="Animation" id=72]
+resource_name = "4"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Color:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.286275, 0.427451, 0.317647 ) ]
+}
+
+[sub_resource type="Animation" id=73]
+resource_name = "5"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Color:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.466667, 1, 0.45098, 0.317647 ) ]
+}
+
+[sub_resource type="Animation" id=74]
+resource_name = "6"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Color:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.894118, 0.45098, 0.317647 ) ]
+}
+
+[sub_resource type="Animation" id=79]
+resource_name = "史莱姆强化"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 13 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Color:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.14902, 1, 0, 0.317647 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=80]
+resource_name = "幽灵强化"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 14 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Color:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.172549, 1, 0.972549, 0.317647 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=81]
+resource_name = "河狸强化"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 18 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Color:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.423529, 0.203922, 0.00392157, 0.317647 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=82]
+resource_name = "灰狼强化"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 16 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Color:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.517647, 0.768627, 0.976471, 0.317647 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=78]
+resource_name = "熊熊强化"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 12 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Color:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.572549, 0, 0.317647 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.8, 0.8 ) ]
+}
+
+[sub_resource type="Animation" id=83]
+resource_name = "熊猫强化"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 15 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Color:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.317647 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=84]
+resource_name = "狐狸强化"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 17 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Color:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.317647, 0, 0.317647 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SpriteTex/Top_note/All_note/Body_note/Body/EggBody/Animal:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="CanvasItemMaterial" id=57]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=58]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=59]
+blend_mode = 1
+
+[sub_resource type="CircleShape2D" id=77]
+
+[node name="EggMan" type="KinematicBody2D"]
+light_mask = 0
+script = ExtResource( 11 )
+
+[node name="ActAni" type="AnimationPlayer" parent="."]
+autoplay = "Show"
+anims/Die = SubResource( 64 )
+anims/Idle1 = SubResource( 38 )
+anims/Idle2 = SubResource( 65 )
+anims/Idle3 = SubResource( 66 )
+anims/Idle4 = SubResource( 75 )
+anims/Idle5 = SubResource( 76 )
+anims/Jump = SubResource( 67 )
+anims/Show = SubResource( 55 )
+anims/init = SubResource( 62 )
+
+[node name="Type" type="AnimationPlayer" parent="."]
+anims/0 = SubResource( 68 )
+anims/1 = SubResource( 69 )
+anims/2 = SubResource( 70 )
+anims/3 = SubResource( 71 )
+anims/4 = SubResource( 72 )
+anims/5 = SubResource( 73 )
+anims/6 = SubResource( 74 )
+"anims/史莱姆强化" = SubResource( 79 )
+"anims/幽灵强化" = SubResource( 80 )
+"anims/河狸强化" = SubResource( 81 )
+"anims/灰狼强化" = SubResource( 82 )
+"anims/熊熊强化" = SubResource( 78 )
+"anims/熊猫强化" = SubResource( 83 )
+"anims/狐狸强化" = SubResource( 84 )
+
+[node name="SpriteTex" type="Node2D" parent="."]
+
+[node name="Top_note" type="Node2D" parent="SpriteTex"]
+light_mask = 0
+
+[node name="All_note" type="Node2D" parent="SpriteTex/Top_note"]
+
+[node name="Body_note" type="Node2D" parent="SpriteTex/Top_note/All_note"]
+
+[node name="Body" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note"]
+
+[node name="EggBody" type="Node2D" parent="SpriteTex/Top_note/All_note/Body_note/Body"]
+position = Vector2( 0, -24 )
+
+[node name="Back" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/EggBody"]
+texture = ExtResource( 6 )
+
+[node name="Animal" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/EggBody"]
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 2 )
+
+[node name="Color" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/EggBody"]
+self_modulate = Color( 0.823529, 0.45098, 1, 0.317647 )
+texture = ExtResource( 1 )
+
+[node name="EggManFront1" type="Sprite" parent="SpriteTex/Top_note/All_note/Body_note/Body/EggBody"]
+texture = ExtResource( 3 )
+
+[node name="Effect" type="Node2D" parent="."]
+
+[node name="EffectExplodeTypeB1" type="Sprite" parent="Effect"]
+modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 57 )
+position = Vector2( 1, -163 )
+texture = ExtResource( 22 )
+
+[node name="EffectVoice1" type="Sprite" parent="Effect"]
+modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 58 )
+position = Vector2( -3, -179 )
+texture = ExtResource( 29 )
+
+[node name="ParticleCircle5" type="Sprite" parent="Effect"]
+modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 59 )
+position = Vector2( -1, -168 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 30 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 77 )

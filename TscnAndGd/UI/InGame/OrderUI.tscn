@@ -1,0 +1,1630 @@
+[gd_scene load_steps=88 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_cuptip_1.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_8.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_order_bg.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_Extra_redbean.tres" type="Texture" id=4]
+[ext_resource path="res://Language/Fonts/Base_special_W.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_Extra_chestnut.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_deco_cream_berry.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_number_2.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_none.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_syrup_chocolate_up.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_deco_lime.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_cold.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_Extra_bobabrown.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_sweetfree.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_mix_4.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_pop_1.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_pop_2.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_sweet.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_pop_3.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_order_number_bg.tres" type="Texture" id=20]
+[ext_resource path="res://TscnAndGd/UI/InGame/OrderUI.gd" type="Script" id=21]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_frame_line.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_beer_1.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_beer_3.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_beer_2.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_hot.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_ice.tres" type="Texture" id=27]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_particle_1.tres" type="Texture" id=29]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_particle_0.tres" type="Texture" id=30]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_sweetchoco.tres" type="Texture" id=32]
+
+[sub_resource type="Animation" id=191]
+resource_name = "normal"
+
+[sub_resource type="Animation" id=31]
+resource_name = "pickup"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_queue_free"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -250 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.588235, 1, 0.588235, 0.901961 ) ]
+}
+
+[sub_resource type="Animation" id=32]
+resource_name = "pickup_ready"
+length = 0.3
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.588235, 1, 0.588235, 0.901961 ) ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "refund"
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_queue_free"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0, -250 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.588235, 0.588235, 0.901961 ) ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "shake"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -2, -2 ), Vector2( 0, 0 ), Vector2( 2, -2 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "show"
+length = 0.3
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -250 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TexNode/Sprite:rect_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 135, 220 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TexNode/Sprite/line:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:rect_size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 135, 220 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath(".:rect_min_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 135, 220 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("TexNode/Sprite/line2:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("TexNode/Formula:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=189]
+resource_name = "check"
+length = 0.3
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 135, 220 ), Vector2( 320, 220 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Sprite/line:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rect_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 135, 220 ), Vector2( 320, 220 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:rect_min_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 135, 220 ), Vector2( 320, 220 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TexNode:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("TexNode/Sprite/line2:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("TexNode/Sprite/line2:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("TexNode/Formula:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=190]
+resource_name = "normal"
+length = 0.2
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.08, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 320, 220 ), Vector2( 320, 220 ), Vector2( 135, 220 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Sprite/line:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rect_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.08, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 320, 210 ), Vector2( 320, 210 ), Vector2( 135, 210 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:rect_min_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.08, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 320, 210 ), Vector2( 320, 210 ), Vector2( 135, 210 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TexNode:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("TexNode/Sprite/line2:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.08 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("TexNode/Sprite/line2:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("TexNode/Formula:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.08 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=177]
+resource_name = "1"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite:material:shader_param/aura_width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 3.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Sprite:material:shader_param/aura_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=178]
+resource_name = "2"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite:material:shader_param/aura_width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 2.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Sprite:material:shader_param/aura_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0.498039, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=179]
+resource_name = "init"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite:material:shader_param/aura_width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=182]
+resource_name = "0"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite/D_BG:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.54902, 0.117647, 1 ) ]
+}
+
+[sub_resource type="Animation" id=183]
+resource_name = "1"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite/D_BG:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.321569, 1, 0.839216, 1 ) ]
+}
+
+[sub_resource type="Animation" id=184]
+resource_name = "2"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite/D_BG:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 0.121569, 1 ) ]
+}
+
+[sub_resource type="Animation" id=185]
+resource_name = "3"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite/D_BG:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0.294118, 0.854902, 1 ) ]
+}
+
+[sub_resource type="Animation" id=186]
+resource_name = "4"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite/D_BG:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.2, 0.407843, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=187]
+resource_name = "5"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite/D_BG:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.701961, 0.415686, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=291]
+resource_name = "6"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite/D_BG:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.341176, 1, 0.521569, 1 ) ]
+}
+
+[sub_resource type="Animation" id=292]
+resource_name = "7"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite/D_BG:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.682353, 0.482353, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=293]
+resource_name = "8"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite/D_BG:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.14902, 0.74902, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=188]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite/D_BG:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=197]
+resource_name = "DrinkCup"
+length = 0.1
+
+[sub_resource type="Animation" id=297]
+resource_name = "EggRoll"
+length = 0.1
+
+[sub_resource type="Animation" id=198]
+resource_name = "SodaCan"
+length = 0.1
+
+[sub_resource type="Animation" id=294]
+resource_name = "SuperCup"
+length = 0.1
+
+[sub_resource type="Shader" id=174]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=175]
+resource_local_to_scene = true
+shader = SubResource( 174 )
+shader_param/aura_width = 1.0
+shader_param/aura_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="Animation" id=18]
+resource_name = "hide"
+length = 0.2
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "init"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "show"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "Cold"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/celcuis:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bg/tiplist/celcuis:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 27 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "Hot"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/celcuis:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bg/tiplist/celcuis:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 26 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "Normal"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/celcuis:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bg/tiplist/celcuis:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 12 ) ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "init"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/celcuis:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=295]
+resource_name = "粗冰"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/celcuis:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bg/tiplist/celcuis:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 30 ) ]
+}
+
+[sub_resource type="Animation" id=296]
+resource_name = "细冰"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/celcuis:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bg/tiplist/celcuis:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 29 ) ]
+}
+
+[sub_resource type="Animation" id=298]
+resource_name = "Choco"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/sweet:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bg/tiplist/sweet:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 32 ) ]
+}
+
+[sub_resource type="Animation" id=192]
+resource_name = "free"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/sweet:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bg/tiplist/sweet:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 14 ) ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "init"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/sweet:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "nosugar"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/sweet:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "sugar"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/sweet:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bg/tiplist/sweet:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 18 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "init"
+length = 0.1
+
+[sub_resource type="Animation" id=9]
+resource_name = "layer1"
+length = 0.2
+step = 0.02
+
+[sub_resource type="Animation" id=10]
+resource_name = "layer2"
+length = 0.2
+step = 0.02
+
+[sub_resource type="Animation" id=11]
+resource_name = "layer3"
+length = 0.2
+step = 0.02
+
+[sub_resource type="Animation" id=12]
+resource_name = "layer4"
+length = 0.2
+step = 0.02
+
+[sub_resource type="Animation" id=13]
+resource_name = "layer5"
+length = 0.2
+step = 0.02
+
+[sub_resource type="Animation" id=22]
+resource_name = "redtea"
+length = 0.1
+
+[sub_resource type="Animation" id=193]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/pop:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=194]
+resource_name = "pop1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/pop:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 16 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bg/tiplist/pop:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=195]
+resource_name = "pop2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/pop:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 17 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bg/tiplist/pop:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=196]
+resource_name = "pop3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/pop:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 19 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bg/tiplist/pop:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=300]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/BEER:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 23 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bg/tiplist/BEER:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=301]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/BEER:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 25 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bg/tiplist/BEER:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=302]
+resource_name = "3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/BEER:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 24 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bg/tiplist/BEER:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=299]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("bg/tiplist/BEER:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ null ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("bg/tiplist/BEER:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=110]
+resource_name = "init"
+length = 0.1
+
+[node name="OrderUI" type="Control"]
+margin_right = 320.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 320, 220 )
+mouse_filter = 2
+script = ExtResource( 21 )
+
+[node name="OrderUIAni" type="AnimationPlayer" parent="."]
+autoplay = "show"
+anims/normal = SubResource( 191 )
+anims/pickup = SubResource( 31 )
+anims/pickup_ready = SubResource( 32 )
+anims/refund = SubResource( 24 )
+anims/shake = SubResource( 29 )
+anims/show = SubResource( 23 )
+
+[node name="OrderAni" type="AnimationPlayer" parent="."]
+anims/check = SubResource( 189 )
+anims/normal = SubResource( 190 )
+
+[node name="OutLineAni" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/1 = SubResource( 177 )
+anims/2 = SubResource( 178 )
+anims/init = SubResource( 179 )
+
+[node name="BGAni" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/0 = SubResource( 182 )
+anims/1 = SubResource( 183 )
+anims/2 = SubResource( 184 )
+anims/3 = SubResource( 185 )
+anims/4 = SubResource( 186 )
+anims/5 = SubResource( 187 )
+anims/6 = SubResource( 291 )
+anims/7 = SubResource( 292 )
+anims/8 = SubResource( 293 )
+anims/init = SubResource( 188 )
+
+[node name="TypeAni" type="AnimationPlayer" parent="."]
+autoplay = "DrinkCup"
+anims/DrinkCup = SubResource( 197 )
+anims/EggRoll = SubResource( 297 )
+anims/SodaCan = SubResource( 198 )
+anims/SuperCup = SubResource( 294 )
+
+[node name="TexNode" type="Node2D" parent="."]
+
+[node name="RefundTimeBar" type="TextureProgress" parent="TexNode"]
+margin_left = 10.0
+margin_top = 194.0
+margin_right = 66.0
+margin_bottom = 206.0
+rect_scale = Vector2( 2, 2 )
+max_value = 200.0
+value = 180.0
+texture_under = ExtResource( 2 )
+texture_progress = ExtResource( 2 )
+tint_under = Color( 0, 0, 0, 1 )
+tint_progress = Color( 0, 1, 0, 1 )
+
+[node name="Timer" type="Timer" parent="TexNode/RefundTimeBar"]
+autostart = true
+
+[node name="Sprite" type="NinePatchRect" parent="TexNode"]
+material = SubResource( 175 )
+margin_top = -8.0
+margin_right = 320.0
+margin_bottom = 212.0
+texture = ExtResource( 1 )
+patch_margin_left = 22
+patch_margin_top = 16
+patch_margin_right = 20
+patch_margin_bottom = 29
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TexNode/Sprite"]
+show_behind_parent = true
+use_parent_material = true
+margin_top = 202.0
+margin_right = 132.0
+margin_bottom = 237.0
+rect_pivot_offset = Vector2( 25, 0 )
+texture = ExtResource( 20 )
+patch_margin_left = 27
+patch_margin_top = 4
+patch_margin_right = 34
+patch_margin_bottom = 20
+__meta__ = {
+"_editor_description_": "1"
+}
+
+[node name="D_BG" type="NinePatchRect" parent="TexNode/Sprite"]
+self_modulate = Color( 1, 0.54902, 0.117647, 1 )
+margin_left = 7.0
+margin_top = 2.0
+margin_right = 127.0
+margin_bottom = 87.0
+texture = ExtResource( 3 )
+region_rect = Rect2( -1.44137, -1.10733, 66.8294, 68.732 )
+patch_margin_left = 9
+patch_margin_top = 18
+patch_margin_right = 7
+patch_margin_bottom = 37
+
+[node name="IDLabel" type="Label" parent="TexNode/Sprite"]
+margin_left = 16.0
+margin_top = 7.0
+margin_right = 71.0
+margin_bottom = 48.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "1"
+valign = 1
+
+[node name="CupInfo" type="Node2D" parent="TexNode/Sprite"]
+modulate = Color( 1, 1, 1, 0.5 )
+
+[node name="CupInfoAni" type="AnimationPlayer" parent="TexNode/Sprite/CupInfo"]
+autoplay = "show"
+anims/hide = SubResource( 18 )
+anims/init = SubResource( 19 )
+anims/show = SubResource( 20 )
+
+[node name="CupCelciusAni" type="AnimationPlayer" parent="TexNode/Sprite/CupInfo"]
+autoplay = "init"
+anims/Cold = SubResource( 14 )
+anims/Hot = SubResource( 15 )
+anims/Normal = SubResource( 16 )
+anims/init = SubResource( 21 )
+"anims/粗冰" = SubResource( 295 )
+"anims/细冰" = SubResource( 296 )
+
+[node name="CupSweetAni" type="AnimationPlayer" parent="TexNode/Sprite/CupInfo"]
+autoplay = "init"
+anims/Choco = SubResource( 298 )
+anims/free = SubResource( 192 )
+anims/init = SubResource( 26 )
+anims/nosugar = SubResource( 27 )
+anims/sugar = SubResource( 28 )
+
+[node name="CupWaterAni" type="AnimationPlayer" parent="TexNode/Sprite/CupInfo"]
+autoplay = "init"
+anims/init = SubResource( 8 )
+anims/layer1 = SubResource( 9 )
+anims/layer2 = SubResource( 10 )
+anims/layer3 = SubResource( 11 )
+anims/layer4 = SubResource( 12 )
+anims/layer5 = SubResource( 13 )
+anims/redtea = SubResource( 22 )
+
+[node name="CupPopAni" type="AnimationPlayer" parent="TexNode/Sprite/CupInfo"]
+autoplay = "init"
+anims/init = SubResource( 193 )
+anims/pop1 = SubResource( 194 )
+anims/pop2 = SubResource( 195 )
+anims/pop3 = SubResource( 196 )
+
+[node name="BeerAni" type="AnimationPlayer" parent="TexNode/Sprite/CupInfo"]
+autoplay = "init"
+anims/1 = SubResource( 300 )
+anims/2 = SubResource( 301 )
+anims/3 = SubResource( 302 )
+anims/init = SubResource( 299 )
+
+[node name="bg" type="Sprite" parent="TexNode/Sprite/CupInfo"]
+position = Vector2( 65, 120 )
+
+[node name="tiplist" type="Node2D" parent="TexNode/Sprite/CupInfo/bg"]
+
+[node name="celcuis" type="Sprite" parent="TexNode/Sprite/CupInfo/bg/tiplist"]
+position = Vector2( 41, -90 )
+texture = ExtResource( 27 )
+
+[node name="sweet" type="Sprite" parent="TexNode/Sprite/CupInfo/bg/tiplist"]
+position = Vector2( 41, -60 )
+texture = ExtResource( 32 )
+
+[node name="pop" type="Sprite" parent="TexNode/Sprite/CupInfo/bg/tiplist"]
+position = Vector2( 41, -30 )
+texture = ExtResource( 16 )
+
+[node name="BEER" type="Sprite" parent="TexNode/Sprite/CupInfo/bg/tiplist"]
+position = Vector2( 41, 0 )
+texture = ExtResource( 23 )
+
+[node name="line" type="Sprite" parent="TexNode/Sprite"]
+position = Vector2( 123, 103 )
+scale = Vector2( 1, 1.2 )
+texture = ExtResource( 22 )
+
+[node name="line2" type="Sprite" parent="TexNode/Sprite"]
+position = Vector2( 130, 168 )
+rotation = 1.5708
+texture = ExtResource( 22 )
+offset = Vector2( 0, -88 )
+
+[node name="Formula" type="Node2D" parent="TexNode"]
+light_mask = 0
+position = Vector2( 130, 0 )
+
+[node name="FormulaAni" type="AnimationPlayer" parent="TexNode/Formula"]
+anims/init = SubResource( 110 )
+
+[node name="SpriteTex" type="Node2D" parent="TexNode/Formula"]
+
+[node name="Top_note" type="Node2D" parent="TexNode/Formula/SpriteTex"]
+light_mask = 0
+
+[node name="Element" type="Node2D" parent="TexNode/Formula/SpriteTex/Top_note"]
+position = Vector2( 30, 13 )
+
+[node name="1" type="Sprite" parent="TexNode/Formula/SpriteTex/Top_note/Element"]
+position = Vector2( 20, 30 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 9 )
+
+[node name="2" type="Sprite" parent="TexNode/Formula/SpriteTex/Top_note/Element"]
+position = Vector2( 20, 78 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 9 )
+
+[node name="3" type="Sprite" parent="TexNode/Formula/SpriteTex/Top_note/Element"]
+position = Vector2( 68, 30 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 9 )
+
+[node name="4" type="Sprite" parent="TexNode/Formula/SpriteTex/Top_note/Element"]
+position = Vector2( 68, 78 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 8 )
+
+[node name="5" type="Sprite" parent="TexNode/Formula/SpriteTex/Top_note/Element"]
+position = Vector2( 116, 30 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 9 )
+
+[node name="6" type="Sprite" parent="TexNode/Formula/SpriteTex/Top_note/Element"]
+position = Vector2( 116, 78 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 8 )
+
+[node name="Act" type="Node2D" parent="TexNode/Formula/SpriteTex/Top_note"]
+position = Vector2( 0, 129 )
+
+[node name="UiAct1" type="Sprite" parent="TexNode/Formula/SpriteTex/Top_note/Act"]
+position = Vector2( 98, 0 )
+texture = ExtResource( 15 )
+
+[node name="UiAct2" type="Sprite" parent="TexNode/Formula/SpriteTex/Top_note/Act"]
+position = Vector2( 14, -49 )
+texture = ExtResource( 10 )
+
+[node name="Condiment" type="Node2D" parent="TexNode/Formula/SpriteTex/Top_note"]
+position = Vector2( 0, 20 )
+
+[node name="1" type="Sprite" parent="TexNode/Formula/SpriteTex/Top_note/Condiment"]
+position = Vector2( 120, 132 )
+texture = ExtResource( 11 )
+
+[node name="2" type="Sprite" parent="TexNode/Formula/SpriteTex/Top_note/Condiment"]
+position = Vector2( 158, 130 )
+texture = ExtResource( 7 )
+
+[node name="Extra" type="Node2D" parent="TexNode/Formula/SpriteTex/Top_note"]
+position = Vector2( 0, 179 )
+
+[node name="1" type="Sprite" parent="TexNode/Formula/SpriteTex/Top_note/Extra"]
+position = Vector2( 15, 0 )
+texture = ExtResource( 13 )
+
+[node name="2" type="Sprite" parent="TexNode/Formula/SpriteTex/Top_note/Extra"]
+position = Vector2( 51, 0 )
+texture = ExtResource( 6 )
+
+[node name="3" type="Sprite" parent="TexNode/Formula/SpriteTex/Top_note/Extra"]
+position = Vector2( 86, 0 )
+texture = ExtResource( 4 )
+
+[node name="4" type="Sprite" parent="TexNode/Formula/SpriteTex/Top_note/Extra"]
+position = Vector2( 122, 0 )
+texture = ExtResource( 4 )
+
+[node name="5" type="Sprite" parent="TexNode/Formula/SpriteTex/Top_note/Extra"]
+position = Vector2( 159, 0 )
+texture = ExtResource( 4 )
+
+[node name="CUPNODE" type="Node2D" parent="TexNode"]
+position = Vector2( 48, 180 )
+scale = Vector2( 1.8, 1.8 )
+
+[connection signal="timeout" from="TexNode/RefundTimeBar/Timer" to="." method="_on_RefundTimer_timeout"]

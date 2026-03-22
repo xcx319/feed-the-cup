@@ -1,0 +1,5403 @@
+[gd_scene load_steps=183 format=2]
+
+[ext_resource path="res://Resources/Maps/Single/Indoor/Tmap_floor_indoor_1.png" type="Texture" id=1]
+[ext_resource path="res://TscnAndGd/Objects/Devices/WaterPort.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/Maps/logic_indoor.png" type="Texture" id=3]
+[ext_resource path="res://TscnAndGd/Objects/Devices/SugarMachine.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Resources/Maps/logic_black.png" type="Texture" id=5]
+[ext_resource path="res://Resources/Maps/Tmap_floor_outside.png" type="Texture" id=6]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Tree_1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Tree_4.tscn" type="PackedScene" id=8]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Tree_5.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Resources/Maps/Tmap_wallpaper.png" type="Texture" id=10]
+[ext_resource path="res://TscnAndGd/Main/Level/NewLevel.gd" type="Script" id=11]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Tree_3.tscn" type="PackedScene" id=12]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Tree_2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Tree_6.tscn" type="PackedScene" id=14]
+[ext_resource path="res://TscnAndGd/Main/Level/DayChange.gd" type="Script" id=15]
+[ext_resource path="res://TscnAndGd/Objects/WallPaper/Door_Roll_Open_2.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Resources/Maps/logic_road.png" type="Texture" id=17]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Umbrella_4.tscn" type="PackedScene" id=18]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Trashbin_Normal_re.tscn" type="PackedScene" id=19]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/BusStation.tscn" type="PackedScene" id=20]
+[ext_resource path="res://TscnAndGd/Objects/Devices/OrderTab.tscn" type="PackedScene" id=21]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/FlowerPot_5.tscn" type="PackedScene" id=22]
+[ext_resource path="res://TscnAndGd/Objects/Devices/DeviceMopPool.tscn" type="PackedScene" id=23]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Trashbin_Normal.tscn" type="PackedScene" id=24]
+[ext_resource path="res://TscnAndGd/Objects/Devices/WaterTank_S_Steel.tscn" type="PackedScene" id=25]
+[ext_resource path="res://TscnAndGd/Objects/Devices/TeaPort.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Resources/Effects/Single/Single/light_square_1.png" type="Texture" id=27]
+[ext_resource path="res://Resources/Effects/Single/Single/light_trapezoid_1.png" type="Texture" id=28]
+[ext_resource path="res://TscnAndGd/Objects/Devices/HotWaterMachine.tscn" type="PackedScene" id=29]
+[ext_resource path="res://Resources/Maps/logic_white.png" type="Texture" id=30]
+[ext_resource path="res://TscnAndGd/Objects/Devices/Trashbin.tscn" type="PackedScene" id=31]
+[ext_resource path="res://TscnAndGd/Objects/Devices/InductionCooker.tscn" type="PackedScene" id=32]
+[ext_resource path="res://TscnAndGd/Objects/Devices/CupHolder_L.tscn" type="PackedScene" id=33]
+[ext_resource path="res://TscnAndGd/Objects/Devices/WorkBench.tscn" type="PackedScene" id=34]
+[ext_resource path="res://TscnAndGd/Objects/Devices/IceMachine.tscn" type="PackedScene" id=35]
+[ext_resource path="res://TscnAndGd/Objects/Devices/WorkBench_Immovable.tscn" type="PackedScene" id=36]
+[ext_resource path="res://TscnAndGd/Objects/Devices/Shelf.tscn" type="PackedScene" id=38]
+[ext_resource path="res://TscnAndGd/Objects/WallPaper/Door_Roll_Open_3.tscn" type="PackedScene" id=39]
+[ext_resource path="res://TscnAndGd/Objects/Devices/PhoneOnWall.tscn" type="PackedScene" id=41]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/FlowerPot_4.tscn" type="PackedScene" id=45]
+[ext_resource path="res://Resources/Maps/Single/Street/Tmap_floor_street_9.png" type="Texture" id=46]
+[ext_resource path="res://TscnAndGd/Objects/WallPaper/Door_Roll_Open_5.tscn" type="PackedScene" id=47]
+[ext_resource path="res://TscnAndGd/Objects/WallPaper/Door_Roll_Open_4.tscn" type="PackedScene" id=48]
+[ext_resource path="res://Resources/Maps/Single/Street/Tmap_floor_street_5.png" type="Texture" id=50]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/FoodCar_1.tscn" type="PackedScene" id=51]
+[ext_resource path="res://TscnAndGd/Objects/Devices/FreezerOnTable.tscn" type="PackedScene" id=52]
+[ext_resource path="res://TscnAndGd/Objects/WallPaper/Door_Roll_Open_1.tscn" type="PackedScene" id=53]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/FoodCar_2.tscn" type="PackedScene" id=56]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/FoodCar_4.tscn" type="PackedScene" id=57]
+[ext_resource path="res://Resources/Maps/Single/Street/Tmap_floor_street_6.png" type="Texture" id=59]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_OrderTab_3.tscn" type="PackedScene" id=65]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_Clean.tscn" type="PackedScene" id=69]
+[ext_resource path="res://Resources/Decorate/Decorate_pack.sprites/tabletext_1.tres" type="Texture" id=74]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/OutdoorChair_2.tscn" type="PackedScene" id=75]
+[ext_resource path="res://TscnAndGd/Objects/WallPaper/Door_Roll_Auto_5.tscn" type="PackedScene" id=76]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashItem_a12.tres" type="Texture" id=83]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashItem_a1.tres" type="Texture" id=85]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashItem_a11.tres" type="Texture" id=86]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashItem_a16.tres" type="Texture" id=88]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashItem_a8.tres" type="Texture" id=89]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashItem_a6.tres" type="Texture" id=90]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashItem_a10.tres" type="Texture" id=92]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashItem_a13.tres" type="Texture" id=93]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashItem_a5.tres" type="Texture" id=94]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashItem_a2.tres" type="Texture" id=95]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Lamp_2.tscn" type="PackedScene" id=96]
+[ext_resource path="res://TscnAndGd/Objects/Devices/FreezerBox.tscn" type="PackedScene" id=97]
+[ext_resource path="res://TscnAndGd/Objects/Devices/ElecBox.tscn" type="PackedScene" id=98]
+[ext_resource path="res://Resources/Decorate/Decorate_pack.sprites/tabletext_2.tres" type="Texture" id=99]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_OrderTab_2.tscn" type="PackedScene" id=100]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_OrderTab_1.tscn" type="PackedScene" id=101]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_StoreShelf.tscn" type="PackedScene" id=102]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_FaCai.tscn" type="PackedScene" id=103]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_CatHouse.tscn" type="PackedScene" id=104]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_OrderTab_4.tscn" type="PackedScene" id=105]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_Board.tscn" type="PackedScene" id=106]
+
+[sub_resource type="Shader" id=76]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}"
+
+[sub_resource type="ShaderMaterial" id=362]
+resource_local_to_scene = true
+shader = SubResource( 76 )
+shader_param/outline_width = 2.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=23]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=363]
+resource_local_to_scene = true
+shader = SubResource( 23 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=368]
+resource_local_to_scene = true
+shader = SubResource( 23 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=364]
+resource_local_to_scene = true
+shader = SubResource( 23 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=366]
+resource_local_to_scene = true
+shader = SubResource( 23 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=173]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=496]
+resource_local_to_scene = true
+shader = SubResource( 173 )
+shader_param/aura_width = 0.0
+shader_param/aura_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=466]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=369]
+resource_local_to_scene = true
+shader = SubResource( 466 )
+shader_param/outline_width = 3.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=309]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=401]
+resource_local_to_scene = true
+shader = SubResource( 309 )
+shader_param/aura_width = 0.0
+shader_param/aura_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=370]
+resource_local_to_scene = true
+shader = SubResource( 466 )
+shader_param/outline_width = 3.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Animation" id=468]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=469]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=470]
+resource_name = "3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=471]
+resource_name = "4"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=472]
+resource_name = "5"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 9 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 9 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 98 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 97 ) ]
+}
+
+[sub_resource type="Animation" id=473]
+resource_name = "6"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 92 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 91 ) ]
+}
+
+[sub_resource type="Animation" id=474]
+resource_name = "7"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 13 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 13 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 46, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=475]
+resource_name = "8"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 14 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 14 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 15 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 15 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 46, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=476]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=477]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("wrong:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("true:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../But:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=478]
+resource_name = "true"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("true:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("true:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=479]
+resource_name = "wrong"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("wrong:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("wrong:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=480]
+resource_name = "init"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/outline_width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Connect/L/OutLine_L:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TexNode/Connect/R/OutLine_R:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=481]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/outline_width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 2.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Connect/L/OutLine_L:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TexNode/Connect/R/OutLine_R:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=371]
+resource_local_to_scene = true
+shader = SubResource( 466 )
+shader_param/outline_width = 3.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=372]
+resource_local_to_scene = true
+shader = SubResource( 466 )
+shader_param/outline_width = 3.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=500]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=501]
+resource_local_to_scene = true
+shader = SubResource( 500 )
+shader_param/outline_width = 3.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Animation" id=502]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=503]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=504]
+resource_name = "3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=505]
+resource_name = "4"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=506]
+resource_name = "5"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 9 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 9 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 98 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 97 ) ]
+}
+
+[sub_resource type="Animation" id=507]
+resource_name = "6"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 92 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 91 ) ]
+}
+
+[sub_resource type="Animation" id=508]
+resource_name = "7"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 13 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 13 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 46, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=509]
+resource_name = "8"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 14 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 14 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 15 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 15 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 46, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=510]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=511]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("wrong:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("true:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../But:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=512]
+resource_name = "true"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("true:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("true:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=513]
+resource_name = "wrong"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("wrong:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("wrong:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Shader" id=497]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=514]
+resource_local_to_scene = true
+shader = SubResource( 497 )
+shader_param/aura_width = 1.0
+shader_param/aura_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Animation" id=515]
+resource_name = "init"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/outline_width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Connect/L/OutLine_L:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TexNode/Connect/R/OutLine_R:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=516]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/outline_width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 2.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Connect/L/OutLine_L:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TexNode/Connect/R/OutLine_R:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=517]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=518]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 3 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=519]
+resource_name = "3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 4 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=520]
+resource_name = "4"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 6 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 7 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=521]
+resource_name = "5"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 9 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 9 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 98 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 97 ) ]
+}
+
+[sub_resource type="Animation" id=522]
+resource_name = "6"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 10 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 11 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 92 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 91 ) ]
+}
+
+[sub_resource type="Animation" id=523]
+resource_name = "7"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 12 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 13 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 13 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 46, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=524]
+resource_name = "8"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Single/L:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 14 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Single/R:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 14 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 15 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/R:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 15 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 46, -111 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=525]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Connect/R/OutLine_R:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Connect/R/OutLine_R:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 45, -111 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Connect/L/OutLine_L:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, -112 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Connect/L/OutLine_L:rect_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 163 ) ]
+}
+
+[sub_resource type="Animation" id=526]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("wrong:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("true:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../But:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=527]
+resource_name = "true"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("true:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("true:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=528]
+resource_name = "wrong"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("wrong:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("wrong:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=529]
+resource_name = "init"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/outline_width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Connect/L/OutLine_L:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TexNode/Connect/R/OutLine_R:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=530]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:material:shader_param/outline_width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 2.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Connect/L/OutLine_L:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TexNode/Connect/R/OutLine_R:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=373]
+resource_local_to_scene = true
+shader = SubResource( 466 )
+shader_param/outline_width = 3.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=176]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=374]
+resource_local_to_scene = true
+shader = SubResource( 176 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=375]
+resource_local_to_scene = true
+shader = SubResource( 466 )
+shader_param/outline_width = 3.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=376]
+resource_local_to_scene = true
+shader = SubResource( 176 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=379]
+resource_local_to_scene = true
+shader = SubResource( 466 )
+shader_param/outline_width = 3.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=304]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=380]
+resource_local_to_scene = true
+shader = SubResource( 304 )
+shader_param/aura_width = 1.0
+shader_param/aura_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=467]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=387]
+resource_local_to_scene = true
+shader = SubResource( 467 )
+shader_param/outline_width = 3.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=298]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=531]
+resource_local_to_scene = true
+shader = SubResource( 298 )
+shader_param/outline_width = 3.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="AtlasTexture" id=59]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 2, 10, 100, 240 )
+
+[sub_resource type="AtlasTexture" id=60]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 2, 10, 200, 240 )
+
+[sub_resource type="AtlasTexture" id=61]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 18, 10, 200, 240 )
+
+[sub_resource type="AtlasTexture" id=62]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 458, 10, 54, 240 )
+
+[sub_resource type="AtlasTexture" id=63]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 514, 18, 52, 190 )
+
+[sub_resource type="AtlasTexture" id=64]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 404, 48, 52, 202 )
+
+[sub_resource type="AtlasTexture" id=65]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 460, 510, 50, 180 )
+
+[sub_resource type="AtlasTexture" id=66]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 514, 510, 52, 50 )
+
+[sub_resource type="AtlasTexture" id=67]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 350, 510, 50, 240 )
+
+[sub_resource type="AtlasTexture" id=447]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 0, 510, 200, 240 )
+
+[sub_resource type="AtlasTexture" id=68]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 7, 510, 300, 240 )
+
+[sub_resource type="AtlasTexture" id=69]
+flags = 4
+atlas = ExtResource( 10 )
+region = Rect2( 0, 510, 100, 240 )
+
+[sub_resource type="Shader" id=325]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=397]
+resource_local_to_scene = true
+shader = SubResource( 325 )
+shader_param/aura_width = 1.0
+shader_param/aura_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=361]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}"
+
+[sub_resource type="ShaderMaterial" id=396]
+resource_local_to_scene = true
+shader = SubResource( 361 )
+shader_param/outline_width = 2.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=498]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}"
+
+[sub_resource type="ShaderMaterial" id=499]
+resource_local_to_scene = true
+shader = SubResource( 498 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="TileSet" id=446]
+0/name = "Tmap_floor_street_5.png 0"
+0/texture = ExtResource( 50 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 100, 100 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Tmap_floor_street_5.png 1"
+1/texture = ExtResource( 50 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 100, 0, 100, 100 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="TileSet" id=54]
+0/name = "Tmap_floor_street_5.png 0"
+0/texture = ExtResource( 50 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 100, 100 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Tmap_floor_street_5.png 1"
+1/texture = ExtResource( 50 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 100, 0, 100, 100 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="TileSet" id=400]
+9/name = "Tmap_floor_street_9.png 9"
+9/texture = ExtResource( 46 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 100, 0, 100, 100 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "Tmap_floor_street_9.png 10"
+10/texture = ExtResource( 46 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 100, 100, 100 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+19/name = "Tmap_floor_indoor_1.png 19"
+19/texture = ExtResource( 1 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 0, 0, 100, 100 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+20/name = "Tmap_floor_indoor_1.png 20"
+20/texture = ExtResource( 1 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 100, 0, 100, 100 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 0, 0 )
+20/navigation_offset = Vector2( 0, 0 )
+20/shape_offset = Vector2( 0, 0 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape_one_way = false
+20/shape_one_way_margin = 0.0
+20/shapes = [  ]
+20/z_index = 0
+21/name = "Tmap_floor_street_5.png 21"
+21/texture = ExtResource( 50 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 0, 0, 100, 100 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 0, 0 )
+21/navigation_offset = Vector2( 0, 0 )
+21/shape_offset = Vector2( 0, 0 )
+21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+21/shape_one_way = false
+21/shape_one_way_margin = 0.0
+21/shapes = [  ]
+21/z_index = 0
+22/name = "Tmap_floor_street_5.png 22"
+22/texture = ExtResource( 50 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 100, 0, 100, 100 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 0, 0 )
+22/navigation_offset = Vector2( 0, 0 )
+22/shape_offset = Vector2( 0, 0 )
+22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+22/shape_one_way = false
+22/shape_one_way_margin = 0.0
+22/shapes = [  ]
+22/z_index = 0
+
+[sub_resource type="TileSet" id=399]
+0/name = "Tmap_floor_outside.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( -25, -25 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 150, 150 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Tmap_floor_outside.png 1"
+1/texture = ExtResource( 6 )
+1/tex_offset = Vector2( -25, -25 )
+1/modulate = Color( 1, 0.760784, 0.760784, 1 )
+1/region = Rect2( 150, 0, 150, 150 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Tmap_floor_outside.png 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( -25, -25 )
+2/modulate = Color( 1, 0.921569, 0.709804, 1 )
+2/region = Rect2( 300, 0, 150, 150 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Tmap_floor_outside.png 3"
+3/texture = ExtResource( 6 )
+3/tex_offset = Vector2( -25, -25 )
+3/modulate = Color( 0.701961, 0.788235, 0.878431, 1 )
+3/region = Rect2( 450, 0, 150, 150 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+
+[sub_resource type="TileSet" id=532]
+0/name = "logic_indoor.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 100, 100 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=57]
+0/name = "Tmap_floor_street_6.png 0"
+0/texture = ExtResource( 59 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 100, 100 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=52]
+points = PoolVector2Array( 55, 55, 5, 55, 5, 5, 55, 5 )
+
+[sub_resource type="TileSet" id=53]
+0/name = "Tmap_floor_outside.png 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 405, 355, 60, 60 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 52 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 52 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "Tmap_floor_outside.png 1"
+1/texture = ExtResource( 6 )
+1/tex_offset = Vector2( 25, -25 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 400, 440, 100, 10 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="TileSet" id=58]
+0/name = "logic_road.png 0"
+0/texture = ExtResource( 17 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 100, 100 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Tmap_floor_outside.png 1"
+1/texture = ExtResource( 6 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 400, 250, 100, 100 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Tmap_floor_outside.png 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 600, 250, 100, 100 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Tmap_floor_outside.png 3"
+3/texture = ExtResource( 6 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 480, 250, 100, 100 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Tmap_floor_outside.png 4"
+4/texture = ExtResource( 6 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 700, 250, 100, 100 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 100, 100, 0, 100, 0, 0, 100, 0 )
+
+[sub_resource type="TileSet" id=9]
+0/name = "logic_black.png 0"
+0/texture = ExtResource( 5 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 100, 100 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 8 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="TileSet" id=70]
+0/name = "logic_white.png 0"
+0/texture = ExtResource( 30 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 0.642944, 0.0859375, 0.588235 )
+0/region = Rect2( 0, 0, 20, 20 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "logic_white.png 1"
+1/texture = ExtResource( 30 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 0.792157, 0.792157, 0.792157, 0.588235 )
+1/region = Rect2( 20, 0, 20, 20 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "logic_white.png 2"
+2/texture = ExtResource( 30 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 0, 1, 0, 1 )
+2/region = Rect2( 40, 0, 20, 20 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "logic_white.png 3"
+3/texture = ExtResource( 30 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 0.419608, 0.878431, 1, 1 )
+3/region = Rect2( 60, 0, 20, 20 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "logic_white.png 4"
+4/texture = ExtResource( 30 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 0.647059, 1, 0.909804, 1 )
+4/region = Rect2( 80, 0, 20, 20 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "logic_white.png 5"
+5/texture = ExtResource( 30 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 0, 0, 1, 1 )
+5/region = Rect2( 0, 20, 20, 20 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "logic_white.png 6"
+6/texture = ExtResource( 30 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 20, 20, 20, 20 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "logic_white.png 7"
+7/texture = ExtResource( 30 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 40, 20, 20, 20 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "logic_white.png 8"
+8/texture = ExtResource( 30 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 60, 20, 20, 20 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "logic_white.png 9"
+9/texture = ExtResource( 30 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 80, 20, 20, 20 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "logic_white.png 10"
+10/texture = ExtResource( 30 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 0, 40, 20, 20 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "logic_white.png 11"
+11/texture = ExtResource( 30 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 20, 40, 20, 20 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "logic_white.png 12"
+12/texture = ExtResource( 30 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 40, 40, 20, 20 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "logic_white.png 13"
+13/texture = ExtResource( 30 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 60, 40, 20, 20 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "logic_white.png 14"
+14/texture = ExtResource( 30 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 80, 40, 20, 20 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "logic_white.png 15"
+15/texture = ExtResource( 30 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 0, 60, 20, 20 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "logic_white.png 16"
+16/texture = ExtResource( 30 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 20, 60, 20, 20 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "logic_white.png 17"
+17/texture = ExtResource( 30 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 40, 60, 20, 20 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "logic_white.png 18"
+18/texture = ExtResource( 30 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 60, 60, 20, 20 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "logic_white.png 19"
+19/texture = ExtResource( 30 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 80, 60, 20, 20 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+
+[sub_resource type="Animation" id=280]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("DayLight:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DayLight:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=281]
+resource_name = "show"
+length = 40.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("DayLight:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DayLight:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 40 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.196078, 0.196078, 0.196078, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 16 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_OpenLight"
+} ]
+}
+
+[node name="2_3" type="Node2D"]
+script = ExtResource( 11 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Players" type="YSort" parent="YSort"]
+
+[node name="NPCs" type="YSort" parent="YSort"]
+
+[node name="Items" type="YSort" parent="YSort"]
+
+[node name="Building" type="YSort" parent="YSort"]
+
+[node name="Devices" type="YSort" parent="YSort"]
+
+[node name="Trashbin" parent="YSort/Devices" instance=ExtResource( 31 )]
+material = SubResource( 362 )
+position = Vector2( 1350, 650 )
+
+[node name="Trashbin2" parent="YSort/Devices" instance=ExtResource( 31 )]
+material = SubResource( 362 )
+position = Vector2( 550, 450 )
+
+[node name="order" parent="YSort/Devices" instance=ExtResource( 36 )]
+material = SubResource( 363 )
+position = Vector2( 550, 625 )
+Tex = 7
+
+[node name="OrderTab" parent="YSort/Devices/order/ObjNode" index="0" instance=ExtResource( 21 )]
+
+[node name="CupHolder" parent="YSort/Devices" instance=ExtResource( 36 )]
+material = SubResource( 368 )
+position = Vector2( 650, 625 )
+Tex = 7
+
+[node name="CupHolder2" parent="YSort/Devices/CupHolder/ObjNode" index="0" instance=ExtResource( 33 )]
+
+[node name="pick1" parent="YSort/Devices" instance=ExtResource( 36 )]
+material = SubResource( 364 )
+position = Vector2( 1050, 625 )
+CanPutDev = false
+Tex = 7
+
+[node name="pick2" parent="YSort/Devices" instance=ExtResource( 36 )]
+material = SubResource( 366 )
+position = Vector2( 1150, 625 )
+CanPutDev = false
+Tex = 7
+
+[node name="pick3" parent="YSort/Devices" instance=ExtResource( 36 )]
+material = SubResource( 366 )
+position = Vector2( 950, 625 )
+Tex = 7
+
+[node name="pick4" parent="YSort/Devices" instance=ExtResource( 36 )]
+material = SubResource( 366 )
+position = Vector2( 750, 625 )
+Tex = 7
+
+[node name="pick5" parent="YSort/Devices" instance=ExtResource( 36 )]
+material = SubResource( 366 )
+position = Vector2( 850, 625 )
+Tex = 7
+
+[node name="Freezer" parent="YSort/Devices" instance=ExtResource( 97 )]
+material = SubResource( 496 )
+position = Vector2( 350, 550 )
+
+[node name="water" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 369 )
+position = Vector2( 750, 425 )
+Tex = 6
+
+[node name="Watertank" parent="YSort/Devices/water/ObjNode" index="0" instance=ExtResource( 25 )]
+material = SubResource( 401 )
+
+[node name="Induction1" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 370 )
+position = Vector2( 250, 625 )
+Tex = 6
+
+[node name="InductionCooker" parent="YSort/Devices/Induction1/ObjNode" index="0" instance=ExtResource( 32 )]
+
+[node name="Induction2" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 370 )
+position = Vector2( 350, 625 )
+Tex = 6
+
+[node name="TypeAni" parent="YSort/Devices/Induction2/TexNode" index="2"]
+anims/1 = SubResource( 468 )
+anims/2 = SubResource( 469 )
+anims/3 = SubResource( 470 )
+anims/4 = SubResource( 471 )
+anims/5 = SubResource( 472 )
+anims/6 = SubResource( 473 )
+anims/7 = SubResource( 474 )
+anims/8 = SubResource( 475 )
+anims/RESET = SubResource( 476 )
+
+[node name="TakeAni" parent="YSort/Devices/Induction2/TexNode/TakeNode" index="2"]
+anims/init = SubResource( 477 )
+anims/true = SubResource( 478 )
+anims/wrong = SubResource( 479 )
+
+[node name="InductionCooker" parent="YSort/Devices/Induction2/ObjNode" index="0" instance=ExtResource( 32 )]
+
+[node name="OutLineAni" parent="YSort/Devices/Induction2" index="9"]
+anims/init = SubResource( 480 )
+anims/show = SubResource( 481 )
+
+[node name="sugar" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 371 )
+position = Vector2( 250, 525 )
+Tex = 6
+
+[node name="SugerMachine" parent="YSort/Devices/sugar/ObjNode" index="0" instance=ExtResource( 4 )]
+
+[node name="Ice" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 372 )
+position = Vector2( 1150, 425 )
+Tex = 6
+
+[node name="IceMachine" parent="YSort/Devices/Ice/ObjNode" index="0" instance=ExtResource( 35 )]
+
+[node name="teaport1" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 501 )
+position = Vector2( 150, 625 )
+Tex = 6
+
+[node name="TypeAni" parent="YSort/Devices/teaport1/TexNode" index="2"]
+anims/1 = SubResource( 502 )
+anims/2 = SubResource( 503 )
+anims/3 = SubResource( 504 )
+anims/4 = SubResource( 505 )
+anims/5 = SubResource( 506 )
+anims/6 = SubResource( 507 )
+anims/7 = SubResource( 508 )
+anims/8 = SubResource( 509 )
+anims/RESET = SubResource( 510 )
+
+[node name="TakeAni" parent="YSort/Devices/teaport1/TexNode/TakeNode" index="2"]
+anims/init = SubResource( 511 )
+anims/true = SubResource( 512 )
+anims/wrong = SubResource( 513 )
+
+[node name="Teaport" parent="YSort/Devices/teaport1/ObjNode" index="0" instance=ExtResource( 26 )]
+material = SubResource( 514 )
+
+[node name="OutLineAni" parent="YSort/Devices/teaport1" index="9"]
+anims/init = SubResource( 515 )
+anims/show = SubResource( 516 )
+
+[node name="teaport2" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 501 )
+position = Vector2( 50, 625 )
+Tex = 6
+
+[node name="TypeAni" parent="YSort/Devices/teaport2/TexNode" index="2"]
+anims/1 = SubResource( 517 )
+anims/2 = SubResource( 518 )
+anims/3 = SubResource( 519 )
+anims/4 = SubResource( 520 )
+anims/5 = SubResource( 521 )
+anims/6 = SubResource( 522 )
+anims/7 = SubResource( 523 )
+anims/8 = SubResource( 524 )
+anims/RESET = SubResource( 525 )
+
+[node name="TakeAni" parent="YSort/Devices/teaport2/TexNode/TakeNode" index="2"]
+anims/init = SubResource( 526 )
+anims/true = SubResource( 527 )
+anims/wrong = SubResource( 528 )
+
+[node name="Teaport" parent="YSort/Devices/teaport2/ObjNode" index="0" instance=ExtResource( 26 )]
+material = SubResource( 514 )
+
+[node name="OutLineAni" parent="YSort/Devices/teaport2" index="9"]
+anims/init = SubResource( 529 )
+anims/show = SubResource( 530 )
+
+[node name="port1" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 373 )
+position = Vector2( 150, 525 )
+Tex = 6
+
+[node name="Waterport" parent="YSort/Devices/port1/ObjNode" index="0" instance=ExtResource( 2 )]
+material = SubResource( 374 )
+
+[node name="port2" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 375 )
+position = Vector2( 50, 525 )
+Tex = 6
+
+[node name="Waterport" parent="YSort/Devices/port2/ObjNode" index="0" instance=ExtResource( 2 )]
+material = SubResource( 376 )
+
+[node name="hot" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 379 )
+position = Vector2( 1050, 425 )
+Tex = 6
+
+[node name="HotWaterMachine" parent="YSort/Devices/hot/ObjNode" index="0" instance=ExtResource( 29 )]
+
+[node name="Shelf1" parent="YSort/Devices" instance=ExtResource( 38 )]
+material = SubResource( 380 )
+position = Vector2( 650, 450 )
+
+[node name="Shelf2" parent="YSort/Devices" instance=ExtResource( 38 )]
+material = SubResource( 380 )
+position = Vector2( 1350, 450 )
+
+[node name="FreezerOntable" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 387 )
+position = Vector2( 850, 425 )
+Tex = 6
+
+[node name="Freezer" parent="YSort/Devices/FreezerOntable/ObjNode" index="0" instance=ExtResource( 52 )]
+
+[node name="DeviceMopPool" parent="YSort/Devices" instance=ExtResource( 23 )]
+position = Vector2( 1350, 725 )
+
+[node name="E1" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 531 )
+position = Vector2( 1250, 425 )
+Tex = 6
+
+[node name="E2" parent="YSort/Devices" instance=ExtResource( 34 )]
+material = SubResource( 531 )
+position = Vector2( 950, 425 )
+Tex = 6
+
+[node name="Outdoor" type="YSort" parent="YSort"]
+
+[node name="BusStation" parent="YSort/Outdoor" instance=ExtResource( 20 )]
+position = Vector2( -275, 775 )
+
+[node name="Flower" parent="YSort/Outdoor" instance=ExtResource( 45 )]
+position = Vector2( -150, 775 )
+
+[node name="Flower2" parent="YSort/Outdoor" instance=ExtResource( 22 )]
+position = Vector2( -350, 775 )
+
+[node name="OutdoorChair" parent="YSort/Outdoor" instance=ExtResource( 75 )]
+position = Vector2( -100, 400 )
+
+[node name="OutdoorChair2" parent="YSort/Outdoor" instance=ExtResource( 75 )]
+position = Vector2( -87, 625 )
+
+[node name="FoodCar" parent="YSort/Outdoor" instance=ExtResource( 51 )]
+position = Vector2( 250, 1175 )
+scale = Vector2( 1.2, 1.2 )
+
+[node name="FoodCar2" parent="YSort/Outdoor" instance=ExtResource( 56 )]
+position = Vector2( -225, 1175 )
+scale = Vector2( 1.2, 1.2 )
+
+[node name="FoodCar4" parent="YSort/Outdoor" instance=ExtResource( 57 )]
+position = Vector2( 1250, 1175 )
+scale = Vector2( 1.2, 1.2 )
+
+[node name="Umbrella" parent="YSort/Outdoor" instance=ExtResource( 18 )]
+position = Vector2( 250, 1175 )
+
+[node name="Umbrella4" parent="YSort/Outdoor" instance=ExtResource( 18 )]
+position = Vector2( 1250, 1175 )
+
+[node name="Lamp" parent="YSort/Outdoor" instance=ExtResource( 96 )]
+position = Vector2( -225, 850 )
+
+[node name="Lamp2" parent="YSort/Outdoor" instance=ExtResource( 96 )]
+position = Vector2( 875, 1200 )
+
+[node name="Lamp3" parent="YSort/Outdoor" instance=ExtResource( 96 )]
+position = Vector2( 1675, 700 )
+
+[node name="WallPaper" type="YSort" parent="YSort"]
+light_mask = 0
+
+[node name="backwall" type="Node2D" parent="YSort/WallPaper"]
+position = Vector2( 725, 400 )
+
+[node name="1" type="Sprite" parent="YSort/WallPaper/backwall"]
+position = Vector2( 650, 0 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 59 )
+offset = Vector2( 0, -118 )
+
+[node name="2" type="Sprite" parent="YSort/WallPaper/backwall"]
+position = Vector2( -650, 0 )
+texture = SubResource( 60 )
+offset = Vector2( 0, -118 )
+
+[node name="3" type="Sprite" parent="YSort/WallPaper/backwall"]
+position = Vector2( 300, 0 )
+texture = SubResource( 61 )
+offset = Vector2( 0, -118 )
+
+[node name="4" type="Sprite" parent="YSort/WallPaper/backwall"]
+position = Vector2( 500, 0 )
+texture = SubResource( 61 )
+offset = Vector2( 0, -118 )
+
+[node name="6" type="Sprite" parent="YSort/WallPaper/backwall"]
+position = Vector2( -300, 0 )
+texture = SubResource( 61 )
+offset = Vector2( 0, -118 )
+
+[node name="7" type="Sprite" parent="YSort/WallPaper/backwall"]
+position = Vector2( -100, 0 )
+texture = SubResource( 61 )
+offset = Vector2( 0, -118 )
+
+[node name="8" type="Sprite" parent="YSort/WallPaper/backwall"]
+position = Vector2( 100, 0 )
+texture = SubResource( 61 )
+offset = Vector2( 0, -118 )
+
+[node name="9" type="Sprite" parent="YSort/WallPaper/backwall"]
+position = Vector2( -475, 0 )
+texture = SubResource( 61 )
+offset = Vector2( 0, -118 )
+
+[node name="Coner1" type="Node2D" parent="YSort/WallPaper"]
+position = Vector2( 1425, 850 )
+
+[node name="CornerBack2" type="Sprite" parent="YSort/WallPaper/Coner1"]
+position = Vector2( 0, -450 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 62 )
+offset = Vector2( 0, -118 )
+
+[node name="CornerBack3" type="Sprite" parent="YSort/WallPaper/Coner1"]
+position = Vector2( 0, -325 )
+scale = Vector2( 1, 1.5 )
+texture = SubResource( 63 )
+
+[node name="CornerBack6" type="Sprite" parent="YSort/WallPaper/Coner1"]
+position = Vector2( 0, -175 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 64 )
+offset = Vector2( 0, -98 )
+
+[node name="G3" type="Sprite" parent="YSort/WallPaper/Coner1"]
+position = Vector2( 0, -250 )
+texture = SubResource( 65 )
+
+[node name="G2" type="Sprite" parent="YSort/WallPaper/Coner1"]
+position = Vector2( 0, -175 )
+texture = SubResource( 66 )
+
+[node name="G1" type="Sprite" parent="YSort/WallPaper/Coner1"]
+scale = Vector2( 1, 0.8 )
+texture = SubResource( 67 )
+offset = Vector2( 0, -118 )
+
+[node name="Coner2" type="Node2D" parent="YSort/WallPaper"]
+position = Vector2( -25, 850 )
+scale = Vector2( -1, 1 )
+
+[node name="CornerBack2" type="Sprite" parent="YSort/WallPaper/Coner2"]
+position = Vector2( 0, -450 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 62 )
+offset = Vector2( 0, -118 )
+
+[node name="CornerBack3" type="Sprite" parent="YSort/WallPaper/Coner2"]
+position = Vector2( 0, -325 )
+scale = Vector2( 1, 1.5 )
+texture = SubResource( 63 )
+
+[node name="CornerBack6" type="Sprite" parent="YSort/WallPaper/Coner2"]
+position = Vector2( 0, -175 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 64 )
+offset = Vector2( 0, -98 )
+
+[node name="G3" type="Sprite" parent="YSort/WallPaper/Coner2"]
+position = Vector2( 0, -250 )
+texture = SubResource( 65 )
+
+[node name="G2" type="Sprite" parent="YSort/WallPaper/Coner2"]
+position = Vector2( 0, -175 )
+texture = SubResource( 66 )
+
+[node name="G1" type="Sprite" parent="YSort/WallPaper/Coner2"]
+scale = Vector2( 1, 0.8 )
+texture = SubResource( 67 )
+offset = Vector2( 0, -118 )
+
+[node name="Glass" type="Node2D" parent="YSort/WallPaper"]
+position = Vector2( 1325, 850 )
+scale = Vector2( 1, 0.8 )
+
+[node name="glass2" type="Sprite" parent="YSort/WallPaper/Glass"]
+position = Vector2( -25, 0 )
+texture = SubResource( 447 )
+offset = Vector2( 0, -118 )
+
+[node name="glass3" type="Sprite" parent="YSort/WallPaper/Glass"]
+position = Vector2( -1175, 0 )
+texture = SubResource( 68 )
+offset = Vector2( 0, -118 )
+
+[node name="glass4" type="Sprite" parent="YSort/WallPaper/Glass"]
+position = Vector2( -975, 0 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 69 )
+offset = Vector2( 0, -118 )
+
+[node name="Door_Roll1" parent="YSort/WallPaper" instance=ExtResource( 53 )]
+position = Vector2( 900, 701 )
+
+[node name="Door_Roll3" parent="YSort/WallPaper" instance=ExtResource( 39 )]
+position = Vector2( 500, 701 )
+
+[node name="Door_Roll4" parent="YSort/WallPaper" instance=ExtResource( 48 )]
+position = Vector2( 700, 701 )
+
+[node name="Door_RollL" parent="YSort/WallPaper" instance=ExtResource( 47 )]
+position = Vector2( 413, 815 )
+
+[node name="Door_RollR" parent="YSort/WallPaper" instance=ExtResource( 76 )]
+position = Vector2( 1185, 820 )
+scale = Vector2( -1, 1 )
+
+[node name="Door_Roll" parent="YSort/WallPaper" instance=ExtResource( 16 )]
+position = Vector2( 1100, 701 )
+
+[node name="Updates" type="YSort" parent="YSort"]
+
+[node name="Other" type="YSort" parent="YSort"]
+
+[node name="PhoneOnWall" parent="YSort/Other" instance=ExtResource( 41 )]
+material = SubResource( 397 )
+position = Vector2( 450, 401 )
+
+[node name="Shadow1" type="Sprite" parent="YSort/Other"]
+self_modulate = Color( 0.0666667, 0.172549, 0.254902, 0.494118 )
+light_mask = 0
+position = Vector2( 150, 500 )
+scale = Vector2( 4.6, 1.3 )
+texture = ExtResource( 27 )
+offset = Vector2( 0, 40 )
+
+[node name="Shadow2" type="Sprite" parent="YSort/Other"]
+self_modulate = Color( 0.0666667, 0.172549, 0.254902, 0.494118 )
+light_mask = 0
+position = Vector2( 1000.63, 400 )
+scale = Vector2( 8.65, 1.3 )
+texture = ExtResource( 27 )
+offset = Vector2( 0, 40 )
+
+[node name="Shadow3" type="Sprite" parent="YSort/Other"]
+self_modulate = Color( 0.0666667, 0.172549, 0.254902, 0.494118 )
+light_mask = 0
+position = Vector2( 850, 600 )
+scale = Vector2( 10, 1.3 )
+texture = ExtResource( 27 )
+offset = Vector2( 0, 40 )
+
+[node name="Shadow4" type="Sprite" parent="YSort/Other"]
+self_modulate = Color( 0.0666667, 0.172549, 0.254902, 0.494118 )
+light_mask = 0
+position = Vector2( 198.75, 600 )
+scale = Vector2( 5.96667, 1.3 )
+texture = ExtResource( 27 )
+offset = Vector2( 0, 40 )
+
+[node name="ElecBox" parent="YSort/Other" instance=ExtResource( 98 )]
+position = Vector2( 25, 875 )
+
+[node name="Tabletext_order" type="Sprite" parent="YSort/Other"]
+position = Vector2( 550, 700 )
+z_index = -4
+texture = ExtResource( 99 )
+offset = Vector2( 0, 25 )
+
+[node name="Tabletext_pickup" type="Sprite" parent="YSort/Other"]
+position = Vector2( 1100, 700 )
+z_index = -4
+texture = ExtResource( 74 )
+offset = Vector2( 0, 25 )
+
+[node name="Trashbin" parent="YSort/Other" instance=ExtResource( 24 )]
+material = SubResource( 396 )
+position = Vector2( 850, 1050 )
+
+[node name="Trashbin2" parent="YSort/Other" instance=ExtResource( 19 )]
+material = SubResource( 499 )
+position = Vector2( 725, 1075 )
+
+[node name="Chair" type="YSort" parent="YSort"]
+
+[node name="OutdoorTrashItemA8" type="Sprite" parent="YSort/Chair"]
+position = Vector2( 650, 1050 )
+texture = ExtResource( 89 )
+
+[node name="OutdoorTrashItemA6" type="Sprite" parent="YSort/Chair"]
+position = Vector2( 589.5, 973 )
+texture = ExtResource( 94 )
+
+[node name="OutdoorTrashItemA12" type="Sprite" parent="YSort/Chair"]
+position = Vector2( 1100, 1100 )
+texture = ExtResource( 86 )
+
+[node name="OutdoorTrashItemA13" type="Sprite" parent="YSort/Chair"]
+position = Vector2( -25, 1125 )
+texture = ExtResource( 83 )
+
+[node name="OutdoorTrashItemA16" type="Sprite" parent="YSort/Chair"]
+position = Vector2( 880.5, 1032.5 )
+texture = ExtResource( 88 )
+
+[node name="OutdoorTrashItemA20" type="Sprite" parent="YSort/Chair"]
+position = Vector2( 1425, 1075 )
+texture = ExtResource( 93 )
+
+[node name="OutdoorTrashItemA21" type="Sprite" parent="YSort/Chair"]
+position = Vector2( 400, 1125 )
+texture = ExtResource( 88 )
+
+[node name="OutdoorTrashItemA15" type="Sprite" parent="YSort/Chair"]
+position = Vector2( -325, 1075 )
+texture = ExtResource( 92 )
+
+[node name="OutdoorTrashItemA18" type="Sprite" parent="YSort/Chair"]
+position = Vector2( 700, 1125 )
+texture = ExtResource( 90 )
+
+[node name="OutdoorTrashItemA1" type="Sprite" parent="YSort/Chair"]
+position = Vector2( 1375, 1100 )
+texture = ExtResource( 85 )
+
+[node name="OutdoorTrashItemA23" type="Sprite" parent="YSort/Chair"]
+position = Vector2( 100, 1125 )
+texture = ExtResource( 95 )
+
+[node name="Tree" type="YSort" parent="YSort"]
+
+[node name="Tree" parent="YSort/Tree" instance=ExtResource( 7 )]
+position = Vector2( 1175, 200 )
+
+[node name="Tree3" parent="YSort/Tree" instance=ExtResource( 12 )]
+position = Vector2( 900, 175 )
+
+[node name="Tree5" parent="YSort/Tree" instance=ExtResource( 9 )]
+position = Vector2( 1675, 225 )
+
+[node name="Tree6" parent="YSort/Tree" instance=ExtResource( 14 )]
+position = Vector2( 1400, 300 )
+
+[node name="Tree7" parent="YSort/Tree" instance=ExtResource( 7 )]
+position = Vector2( 1550, 250 )
+
+[node name="Tree8" parent="YSort/Tree" instance=ExtResource( 13 )]
+position = Vector2( 525, 175 )
+
+[node name="Tree9" parent="YSort/Tree" instance=ExtResource( 12 )]
+position = Vector2( 150, 150 )
+
+[node name="Tree10" parent="YSort/Tree" instance=ExtResource( 8 )]
+position = Vector2( 675, 300 )
+
+[node name="Tree11" parent="YSort/Tree" instance=ExtResource( 9 )]
+position = Vector2( 425, 250 )
+
+[node name="Tree12" parent="YSort/Tree" instance=ExtResource( 14 )]
+position = Vector2( 1050, 325 )
+
+[node name="Tree14" parent="YSort/Tree" instance=ExtResource( 13 )]
+position = Vector2( -25, 275 )
+
+[node name="Tree22" parent="YSort/Tree" instance=ExtResource( 8 )]
+position = Vector2( 1250, 300 )
+
+[node name="Decorate" type="YSort" parent="YSort"]
+
+[node name="Decorate_OrderTab1" parent="YSort/Decorate" instance=ExtResource( 101 )]
+position = Vector2( 1050, 650 )
+
+[node name="Decorate_OrderTab2" parent="YSort/Decorate" instance=ExtResource( 100 )]
+position = Vector2( 900, 650 )
+
+[node name="Decorate_OrderTab3" parent="YSort/Decorate" instance=ExtResource( 65 )]
+position = Vector2( 550, 700 )
+
+[node name="Decorate_OrderTab4" parent="YSort/Decorate" instance=ExtResource( 105 )]
+position = Vector2( 775, 700 )
+
+[node name="Decorate_StoreShelf" parent="YSort/Decorate" instance=ExtResource( 102 )]
+position = Vector2( 650, 500 )
+
+[node name="Decorate_Clean" parent="YSort/Decorate" instance=ExtResource( 69 )]
+position = Vector2( 950, 500 )
+scale = Vector2( -1, 1 )
+
+[node name="Decorate_Board" parent="YSort/Decorate" instance=ExtResource( 106 )]
+position = Vector2( -125, 875 )
+
+[node name="Decorate_FaCai" parent="YSort/Decorate" instance=ExtResource( 103 )]
+position = Vector2( 1450, 875 )
+
+[node name="Decorate_CatHouse" parent="YSort/Decorate" instance=ExtResource( 104 )]
+position = Vector2( 1525, 525 )
+
+[node name="MapNode" type="Node2D" parent="."]
+
+[node name="StreetMain" type="TileMap" parent="MapNode"]
+z_index = -5
+tile_set = SubResource( 446 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 589817, 0, 0, 589818, 0, 0, 589819, 0, 0, 589820, 1, 0, 589821, 0, 0, 655353, 0, 0, 655354, 0, 0, 655355, 0, 0, 655356, 0, 0, 655357, 0, 0, 655358, 0, 0, 655359, 0, 0, 589824, 1, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 1, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 1, 0, 589840, 1, 0, 589841, 0, 0, 589842, 0, 0, 720892, 0, 0, 720893, 0, 0, 720894, 0, 0, 720895, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 1, 0, 655365, 0, 0, 655369, 0, 0, 655370, 1, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 786431, 0, 0, 720896, 1, 0, 720900, 0, 0, 720901, 1, 0, 720905, 0, 0, 720906, 0, 0, 720910, 1, 0, 720911, 0, 0, 720912, 1, 0, 851967, 0, 0, 786432, 0, 0, 786436, 0, 0, 786437, 0, 0, 786441, 0, 0, 786442, 0, 0, 786446, 0, 0, 786447, 0, 0, 917503, 0, 0, 851968, 1, 0, 851972, 0, 0, 851973, 0, 0, 851977, 0, 0, 851978, 0, 0, 851982, 1, 0, 851983, 0, 0 )
+
+[node name="Street" type="TileMap" parent="MapNode"]
+z_index = -5
+tile_set = SubResource( 54 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 458756, 0, 0, 458757, 1, 0, 458758, 0, 0, 458759, 0, 0, 458760, 1, 0, 458761, 0, 0, 458762, 0, 0, 458763, 1, 0, 524292, 0, 0, 524293, 1, 0, 524294, 0, 0, 524295, 1, 0, 524296, 0, 0, 524297, 0, 0, 524298, 1, 0, 524299, 0, 0 )
+
+[node name="D_Down" type="TileMap" parent="MapNode"]
+z_index = -5
+tile_set = SubResource( 400 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( -65537, -1610612727, 0, -131072, -1610612727, 0, -131071, -1610612727, 0, -131070, -1610612727, 0, -131069, -1610612727, 0, -131068, -1610612727, 0, -131067, -1610612727, 0, -131066, -1610612727, 0, -131065, -1610612727, 0, -131064, -1610612727, 0, -131063, -1610612727, 0, -131062, -1610612727, 0, -131061, -1610612727, 0, -131060, -1610612727, 0, -131059, -1610612727, 0, -131058, -1610612727, 0, -131057, -1610612727, 0, -5, -1073741815, 0, -4, -1073741814, 0, -3, -1073741815, 0, -2, -1073741814, 0, -1, -1073741815, 0, -65536, -1073741815, 0, -65535, -1073741815, 0, -65534, 9, 0, -65533, -1073741815, 0, -65532, 9, 0, -65531, -1073741815, 0, -65530, 9, 0, -65529, -1073741815, 0, -65528, -1073741815, 0, -65527, 9, 0, -65526, 9, 0, -65525, 9, 0, -65524, 9, 0, -65523, 9, 0, -65522, 9, 0, -65521, 9, 0, -65520, 9, 0, 65531, 9, 0, 65532, -1073741814, 0, 65533, 9, 0, 65534, -1073741814, 0, 131067, 9, 0, 131068, -1073741814, 0, 131069, 9, 0, 131070, -1073741814, 0, 196603, 9, 0, 196604, -1073741814, 0, 196605, 9, 0, 196606, -1073741814, 0, 262139, 9, 0, 262140, -1073741814, 0, 262141, 9, 0, 262142, -1073741814, 0, 262143, -1610612727, 0, 196608, -2147483640, 0, 196609, -536870904, 0, 196610, -536870905, 0, 196611, -536870905, 0, 196612, -536870904, 0, 196613, -536870905, 0, 196614, -536870905, 0, 196615, -536870904, 0, 196616, -536870905, 0, 196617, -2147483640, 0, 196618, -536870905, 0, 196619, 1073741832, 0, 196620, -536870905, 0, 196621, -536870905, 0, 196622, -536870905, 0, 196623, -536870905, 0, 196624, 12, 0, 196625, 12, 0, 196626, 11, 0, 327675, 9, 0, 327676, -1073741814, 0, 327677, 9, 0, 327678, -1073741814, 0, 327679, -1610612727, 0, 262144, 19, 0, 262145, 20, 0, 262146, 19, 0, 262147, 20, 0, 262148, 19, 0, 262149, 20, 0, 262150, 19, 0, 262151, 20, 0, 262152, 19, 0, 262153, 20, 0, 262154, 19, 0, 262155, 20, 0, 262156, 19, 0, 262157, 20, 0, 262158, 21, 0, 262159, 21, 0, 262160, 21, 0, 393211, 10, 0, 393212, 10, 0, 393213, 10, 0, 393214, 10, 0, 393215, -1610612727, 0, 327680, 19, 0, 327681, 20, 0, 327682, 19, 0, 327683, 20, 0, 327684, 19, 0, 327685, 20, 0, 327686, 19, 0, 327687, 20, 0, 327688, 19, 0, 327689, 20, 0, 327690, 19, 0, 327691, 20, 0, 327692, 19, 0, 327693, 20, 0, 327694, 21, 0, 327695, 22, 0, 327696, 21, 0, 458747, 9, 0, 458748, 9, 0, 458749, 9, 0, 458750, 9, 0, 458751, -1610612727, 0, 393216, 19, 0, 393217, 20, 0, 393218, 19, 0, 393219, 20, 0, 393220, 19, 0, 393221, 20, 0, 393222, 19, 0, 393223, 20, 0, 393224, 19, 0, 393225, 20, 0, 393226, 19, 0, 393227, 20, 0, 393228, 19, 0, 393229, 20, 0, 393230, 21, 0, 393231, 21, 0, 393232, 22, 0, 524283, 9, 0, 524284, 9, 0, 524285, 9, 0, 524286, 9, 0, 524287, -1073741815, 0, 458752, 19, 0, 458753, 20, 0, 458754, 19, 0, 458755, 20, 0, 458764, 19, 0, 458765, 20, 0, 458766, 21, 0, 458767, 21, 0, 458768, 21, 0, 589822, 21, 0, 589823, 21, 0, 524288, 21, 0, 524289, 22, 0, 524290, 21, 0, 524291, 22, 0, 524300, 22, 0, 524301, 21, 0, 524302, 22, 0, 524303, 21, 0, 524304, 21, 0, 720897, 21, 0, 720898, 21, 0, 720899, 21, 0, 720900, 11, 0, 720901, 11, 0, 720906, 11, 0, 720907, 21, 0, 720908, 21, 0, 720909, 21, 0, 720910, 11, 0, 786433, 536870933, 0, 786434, 536870933, 0, 786435, 536870933, 0, 786438, 536870933, 0, 786439, 536870933, 0, 786440, 536870933, 0, 786443, 536870933, 0, 786444, 536870933, 0, 786445, 536870933, 0 )
+
+[node name="D_Grass" type="TileMap" parent="MapNode"]
+modulate = Color( 0.658824, 0.717647, 0.639216, 1 )
+z_index = -5
+tile_set = SubResource( 399 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 65535, 2, 0, 0, 2, 0, 1, 2, 0, 2, 1, 0, 3, 2, 0, 4, 2, 0, 5, 2, 0, 6, 1, 0, 7, 1, 0, 8, 3, 0, 9, 1, 0, 10, 0, 0, 11, 3, 0, 12, 1, 0, 13, 3, 0, 14, 0, 0, 15, 3, 0, 16, 1, 0, 131071, 3, 0, 65536, 1, 0, 65537, 2, 0, 65538, 1, 0, 65539, 3, 0, 65540, 2, 0, 65541, 3, 0, 65542, 2, 0, 65543, 2, 0, 65544, 2, 0, 65545, 3, 0, 65546, 2, 0, 65547, 2, 0, 65548, 2, 0, 65549, 2, 0, 65550, 2, 0, 65551, 0, 0, 65552, 0, 0, 196607, 1, 0, 131072, 2, 0, 131073, 1, 0, 131074, 0, 0, 131075, 3, 0, 131076, 2, 0, 131077, 1, 0, 131078, 1, 0, 131079, 3, 0, 131080, 1, 0, 131081, 2, 0, 131082, 3, 0, 131083, 1, 0, 131084, 0, 0, 131085, 1, 0, 131086, 1, 0, 131087, 1, 0, 131088, 0, 0, 196622, 1, 0, 196623, 2, 0, 196624, 2, 0, 655366, 3, 0, 655367, 2, 0, 655368, 1, 0, 786428, 2, 0, 786429, 0, 0, 786430, 3, 0, 786431, 1, 0, 720902, 1, 0, 720903, 0, 0, 720904, 3, 0 )
+
+[node name="Floor" type="TileMap" parent="MapNode"]
+visible = false
+z_index = -5
+tile_set = SubResource( 532 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 393220, 0, 0, 393228, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458764, 0, 0 )
+
+[node name="NPCFloor" type="TileMap" parent="MapNode"]
+visible = false
+modulate = Color( 0.494118, 0.576471, 1, 1 )
+z_index = -5
+tile_set = SubResource( 57 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0 )
+
+[node name="Wall" type="TileMap" parent="MapNode"]
+z_index = -5
+tile_set = SubResource( 53 )
+cell_size = Vector2( 50, 50 )
+cell_quadrant_size = 10
+cell_custom_transform = Transform2D( 50, 0, 0, 50, 0, 0 )
+centered_textures = true
+collision_layer = 128
+collision_mask = 5120
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 524287, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 458768, 0, 0, 458769, 0, 0, 458770, 0, 0, 458771, 0, 0, 458772, 0, 0, 458773, 0, 0, 458774, 0, 0, 458775, 0, 0, 458776, 0, 0, 458777, 0, 0, 458778, 0, 0, 458779, 0, 0, 458780, -2147483648, 0, 589823, 0, 0, 524316, -2147483648, 0, 655359, 0, 0, 589852, -2147483648, 0, 720895, 0, 0, 655388, -2147483648, 0, 786431, 0, 0, 720924, -2147483648, 0, 851967, 0, 0, 786460, -2147483648, 0, 917503, 0, 0, 851996, -2147483648, 0, 983039, 0, 0, 917512, 1, 0, 917514, 1, 0, 917516, 1, 0, 917518, 1, 0, 917520, 1, 0, 917522, 1, 0, 917524, 1, 0, 917526, 1, 0, 917532, -2147483648, 0, 1048575, 0, 0, 983068, 0, 0, 1114111, 0, 0, 1048576, 0, 0, 1048577, 0, 0, 1048578, 0, 0, 1048579, 0, 0, 1048580, 0, 0, 1048581, 0, 0, 1048582, 0, 0, 1048583, 0, 0, 1048600, 0, 0, 1048601, 0, 0, 1048602, 0, 0, 1048603, 0, 0, 1048604, 0, 0 )
+
+[node name="Delivery" type="TileMap" parent="MapNode"]
+modulate = Color( 1, 1, 1, 0.588235 )
+z_index = -5
+tile_set = SubResource( 58 )
+cell_size = Vector2( 100, 100 )
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 458758, 1, 0, 458759, 3, 0, 458760, 3, 0, 458761, -1610612735, 0, 524294, -1073741823, 0, 524295, 1610612739, 0, 524296, 1610612739, 0, 524297, 1610612737, 0 )
+
+[node name="World" type="TileMap" parent="MapNode"]
+visible = false
+modulate = Color( 1, 1, 1, 0.435294 )
+z_index = -5
+tile_set = SubResource( 9 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 10
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+collision_layer = 0
+collision_mask = 512
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( -327663, 1, 0, -327662, 1, 0, -327661, 1, 0, -327660, 1, 0, -327659, 1, 0, -262127, 1, 0, -262126, 1, 0, -262125, 1, 0, -262124, 1, 0, -262123, 1, 0, -196591, 1, 0, -196590, 1, 0, -196589, 1, 0, -196588, 1, 0, -196587, 1, 0, 21, 1, 0, 65553, 1, 0, 65554, 1, 0, 65557, 1, 0, 131086, 0, 0, 131087, 0, 0, 131088, 0, 0, 131089, 0, 0, 262143, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196625, 0, 0, 196626, 1, 0, 327679, 0, 0, 262161, 0, 0, 262162, 1, 0, 393215, 0, 0, 327697, 0, 0, 327698, 1, 0, 458751, 0, 0, 393233, 0, 0, 524283, -2147483648, 0, 524284, -2147483648, 0, 524285, 0, 0, 524286, 0, 0, 524287, 0, 0, 458769, 0, 0, 458770, 1, 0, 589819, -2147483648, 0, 524305, 0, 0, 524306, 1, 0, 655355, -2147483648, 0, 589841, 0, 0, 589842, 1, 0, 720891, -2147483648, 0, 655377, 0, 0, 655378, 1, 0, 786427, -2147483648, 0, 720913, 0, 0, 720914, 1, 0, 851963, -2147483648, 0, 851964, 0, 0, 851965, 0, 0, 851966, 0, 0, 851967, 0, 0, 786432, 0, 0, 786433, 0, 0, 786434, 0, 0, 786435, 0, 0, 786436, 0, 0, 786437, 0, 0, 786438, 0, 0, 786439, 0, 0, 786440, 0, 0, 786441, 0, 0, 786442, 0, 0, 786443, 0, 0, 786444, 0, 0, 786445, 0, 0, 786446, 0, 0, 786447, 0, 0, 786448, 0, 0, 786449, 0, 0, 786450, 1, 0 )
+
+[node name="Audio" type="TileMap" parent="MapNode"]
+visible = false
+z_index = -5
+tile_set = SubResource( 70 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+centered_textures = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( 196623, 2, 0, 196624, 2, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 1, 0, 262159, 1, 0, 262160, -1610612735, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 1, 0, 327695, 1, 0, 327696, -1610612735, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 1, 0, 393231, 1, 0, 393232, -1610612735, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 0, 0, 458765, 0, 0, 458766, -1610612735, 0, 458767, -1610612735, 0, 458768, -1610612735, 0, 589820, 1, 0, 589821, 1, 0, 589822, -2147483647, 0, 589823, -1610612735, 0, 524288, -1610612735, 0, 524289, -1610612735, 0, 524290, -1610612735, 0, 524291, -1610612735, 0, 524292, -1610612735, 0, 524293, -1610612735, 0, 524294, -1610612735, 0, 524295, -1610612735, 0, 524296, -1610612735, 0, 524297, -1610612735, 0, 524298, -1610612735, 0, 524299, -1610612735, 0, 524300, -1610612735, 0, 524301, -1610612735, 0, 524302, -1610612735, 0, 524303, -1610612735, 0, 524304, -1610612735, 0, 655356, 1, 0, 655357, 1, 0, 655358, 1, 0, 655359, 1, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1610612737, 0, 589830, 1610612737, 0, 589831, 1610612737, 0, 589832, 1610612737, 0, 589833, 1610612737, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1610612737, 0, 589838, 1610612737, 0, 589839, 1610612737, 0, 589840, 1610612737, 0, 720892, 1, 0, 720893, 1, 0, 720894, 1, 0, 720895, 1, 0, 655360, 1, 0, 655361, 1, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 1610612737, 0, 655366, 1610612737, 0, 655367, 1610612737, 0, 655368, 1610612737, 0, 655369, 1610612737, 0, 655370, 1, 0, 655371, 1, 0, 655372, 1, 0, 655373, 1610612737, 0, 655374, 1610612737, 0, 655375, 1610612737, 0, 655376, 1610612737, 0, 786428, 2, 0, 786429, 1610612738, 0, 786430, 1610612738, 0, 786431, 1610612738, 0, 720896, -1610612735, 0, 720897, -1610612735, 0, 720898, 1610612737, 0, 720899, 1610612737, 0, 720900, 1610612737, 0, 720901, 1, 0, 720902, 2, 0, 720903, 2, 0, 720904, 2, 0, 720905, 1, 0, 720906, 1610612737, 0, 720907, -1610612735, 0, 720908, -1610612735, 0, 720909, -1610612735, 0, 720910, -1610612735, 0, 720911, -1610612735, 0, 720912, -1610612735, 0 )
+
+[node name="CameraShow" type="Camera2D" parent="."]
+position = Vector2( 700, 575 )
+zoom = Vector2( 2, 2 )
+
+[node name="PlayerPos2D" type="Node2D" parent="."]
+
+[node name="1" type="Position2D" parent="PlayerPos2D"]
+position = Vector2( 960, 785 )
+
+[node name="2" type="Position2D" parent="PlayerPos2D"]
+position = Vector2( 1060, 785 )
+
+[node name="3" type="Position2D" parent="PlayerPos2D"]
+position = Vector2( 1010, 868 )
+
+[node name="4" type="Position2D" parent="PlayerPos2D"]
+position = Vector2( 1110, 868 )
+
+[node name="DeliverPos" type="Node2D" parent="."]
+
+[node name="1" type="Position2D" parent="DeliverPos"]
+position = Vector2( 550, 1350 )
+
+[node name="CameraPos2D" type="Node2D" parent="."]
+
+[node name="LeftTop" type="Position2D" parent="CameraPos2D"]
+position = Vector2( -375, -75 )
+
+[node name="RightBottom" type="Position2D" parent="CameraPos2D"]
+position = Vector2( 1675, 1150 )
+
+[node name="Pos2DNode" type="Node2D" parent="."]
+
+[node name="1" type="Position2D" parent="Pos2DNode"]
+position = Vector2( 1850, 950 )
+
+[node name="2" type="Position2D" parent="Pos2DNode"]
+position = Vector2( -650, 950 )
+
+[node name="3" type="Position2D" parent="Pos2DNode"]
+position = Vector2( 50, 1350 )
+
+[node name="4" type="Position2D" parent="Pos2DNode"]
+position = Vector2( 1450, 1350 )
+
+[node name="5" type="Position2D" parent="Pos2DNode"]
+position = Vector2( 450, 1350 )
+
+[node name="6" type="Position2D" parent="Pos2DNode"]
+position = Vector2( 950, 1350 )
+
+[node name="LightNode" type="Node2D" parent="."]
+visible = false
+
+[node name="Room" type="Light2D" parent="LightNode"]
+light_mask = 0
+position = Vector2( 725.001, 500 )
+scale = Vector2( 22, 8.66667 )
+texture = ExtResource( 27 )
+mode = 2
+shadow_item_cull_mask = 0
+
+[node name="Down" type="Light2D" parent="LightNode"]
+light_mask = 0
+position = Vector2( 712.5, 837.5 )
+scale = Vector2( 18.75, 2.75 )
+texture = ExtResource( 28 )
+mode = 2
+shadow_item_cull_mask = 0
+
+[node name="DayLight" type="CanvasModulate" parent="."]
+visible = false
+light_mask = 0
+color = Color( 0.196078, 0.196078, 0.196078, 1 )
+script = ExtResource( 15 )
+
+[node name="Ani" type="AnimationPlayer" parent="DayLight"]
+root_node = NodePath("../..")
+anims/init = SubResource( 280 )
+anims/show = SubResource( 281 )
+
+[node name="CameraNode" type="Node2D" parent="."]
+position = Vector2( 650, 700 )
+
+[node name="Camera2D" type="Camera2D" parent="CameraNode"]
+position = Vector2( 50, -50 )
+current = true
+limit_smoothed = true
+smoothing_enabled = true
+smoothing_speed = 1.0
+
+[editable path="YSort/Devices/order"]
+[editable path="YSort/Devices/CupHolder"]
+[editable path="YSort/Devices/water"]
+[editable path="YSort/Devices/Induction1"]
+[editable path="YSort/Devices/Induction2"]
+[editable path="YSort/Devices/sugar"]
+[editable path="YSort/Devices/Ice"]
+[editable path="YSort/Devices/teaport1"]
+[editable path="YSort/Devices/teaport2"]
+[editable path="YSort/Devices/port1"]
+[editable path="YSort/Devices/port2"]
+[editable path="YSort/Devices/hot"]
+[editable path="YSort/Devices/FreezerOntable"]

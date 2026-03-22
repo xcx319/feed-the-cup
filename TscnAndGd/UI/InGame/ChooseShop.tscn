@@ -1,0 +1,2845 @@
+[gd_scene load_steps=114 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_Menu.tres" type="Texture" id=1]
+[ext_resource path="res://TscnAndGd/UI/InGame/ChooseShop.gd" type="Script" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_frame.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_coin.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_X.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_Y.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_right.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_left.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_up.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_down.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_light.tres" type="Texture" id=13]
+[ext_resource path="res://TscnAndGd/UI/InGame/黑幕.tscn" type="PackedScene" id=14]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=15]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_app_star.tres" type="Texture" id=17]
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=18]
+[ext_resource path="res://TscnAndGd/Buttons/DifficultButton.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Language/Fonts/Base_l_outline.tres" type="DynamicFont" id=20]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_5.png" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_high.tres" type="Texture" id=22]
+[ext_resource path="res://Language/Fonts/Base_m_outline.tres" type="DynamicFont" id=24]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_menu_point.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_menu_daily_2.tres" type="Texture" id=26]
+[ext_resource path="res://TscnAndGd/Buttons/NoFocusButton.gd" type="Script" id=27]
+[ext_resource path="res://TscnAndGd/Buttons/LogicBut.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_cup_group_2.tres" type="Texture" id=29]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_say.tres" type="Texture" id=30]
+[ext_resource path="res://TscnAndGd/Buttons/Devil_Icon.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Language/Fonts/Base_m.tres" type="DynamicFont" id=32]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_app_nostar.tres" type="Texture" id=33]
+[ext_resource path="res://Sounds/Effect/气泡1.wav" type="AudioStream" id=34]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_devil_head3_front.tres" type="Texture" id=35]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_devil_head_side.tres" type="Texture" id=36]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_devil_head_back.tres" type="Texture" id=37]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_devil_leg_idle_1.tres" type="Texture" id=38]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_devil_leg_idle_0.tres" type="Texture" id=39]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_devil_body_front.tres" type="Texture" id=40]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_devil_tail_back.tres" type="Texture" id=41]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_devil_head3_horn_r.tres" type="Texture" id=42]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_devil_arm_hold_2.tres" type="Texture" id=43]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_devil_arm_idle_1.tres" type="Texture" id=44]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_devil_head3_horn_l.tres" type="Texture" id=45]
+[ext_resource path="res://TscnAndGd/UI/Tutorial/Tutorial_DevilDialogue.gd" type="Script" id=46]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_money.tres" type="Texture" id=47]
+[ext_resource path="res://Language/Fonts/Base_special_W.tres" type="DynamicFont" id=48]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Language/Fonts/simhei.ttf"
+
+[sub_resource type="DynamicFont" id=94]
+size = 32
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 1 )
+
+[sub_resource type="StyleBoxTexture" id=96]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=148]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="StyleBoxTexture" id=149]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=97]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=117]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="StyleBoxTexture" id=150]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=98]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=151]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="StyleBoxTexture" id=152]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=99]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=153]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="StyleBoxTexture" id=154]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=100]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 30, 30 )
+
+[sub_resource type="StyleBoxTexture" id=155]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 30, 30 )
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="StyleBoxTexture" id=156]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 30, 30 )
+
+[sub_resource type="StyleBoxTexture" id=101]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 30, 30 )
+
+[sub_resource type="StyleBoxTexture" id=157]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 30, 30 )
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="Animation" id=176]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -1200 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_UI_hide"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=91]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -1200 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=92]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -1200 ), Vector2( 0, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=269]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=270]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.588235, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=289]
+resource_name = "-1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "?" ]
+}
+
+[sub_resource type="Animation" id=258]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=259]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.25098, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=260]
+resource_name = "3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.501961, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=261]
+resource_name = "4"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.74902, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=262]
+resource_name = "5"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=263]
+resource_name = "6"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.74902, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=264]
+resource_name = "7"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.501961, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=265]
+resource_name = "8"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.25098, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=266]
+resource_name = "9"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=288]
+resource_name = "-1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=267]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=268]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.588235, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=319]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=320]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.588235, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=286]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=287]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.588235, 0, 1 ) ]
+}
+
+[sub_resource type="ButtonGroup" id=184]
+
+[sub_resource type="StyleBoxTexture" id=141]
+texture = ExtResource( 21 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 0.823529, 0.588235, 0.392157 )
+
+[sub_resource type="StyleBoxTexture" id=142]
+texture = ExtResource( 21 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 0.588235, 0, 0.784314 )
+
+[sub_resource type="StyleBoxEmpty" id=118]
+
+[sub_resource type="StyleBoxEmpty" id=119]
+
+[sub_resource type="StyleBoxEmpty" id=120]
+
+[sub_resource type="StyleBoxTexture" id=292]
+texture = ExtResource( 21 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 1, 1, 0.392157 )
+
+[sub_resource type="StyleBoxTexture" id=293]
+texture = ExtResource( 21 )
+region_rect = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="StyleBoxEmpty" id=294]
+
+[sub_resource type="StyleBoxEmpty" id=295]
+
+[sub_resource type="StyleBoxEmpty" id=296]
+
+[sub_resource type="DynamicFontData" id=190]
+font_path = "res://Language/Fonts/猫啃网秀雅圆.ttf"
+
+[sub_resource type="DynamicFont" id=191]
+size = 50
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 190 )
+
+[sub_resource type="Animation" id=233]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=234]
+resource_name = "play"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 120 ), Vector2( 0, 100 ), Vector2( 0, 120 ) ]
+}
+
+[sub_resource type="Animation" id=240]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "animation"
+tracks/0/path = NodePath("Loop")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "hide" ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=285]
+length = 0.1
+tracks/0/type = "animation"
+tracks/0/path = NodePath("Loop")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("Main/GuideNode/Ani")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=257]
+resource_name = "第二关可选难度"
+length = 2.2
+tracks/0/type = "method"
+tracks/0/path = NodePath("Main/Info/Label")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "新手引导-可选难度" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("Loop")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "show" ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "animation"
+tracks/2/path = NodePath("Main/GuideNode/Ani")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": PoolStringArray( "init", "play" ),
+"times": PoolRealArray( 0, 0.2 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Main/GuideNode:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Main/GuideNode:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 500, -1000 ) ]
+}
+
+[sub_resource type="Animation" id=255]
+resource_name = "选择第二关"
+length = 2.2
+tracks/0/type = "method"
+tracks/0/path = NodePath("Main/Info/Label")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "新手引导-选择第二关" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("Loop")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "show" ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "animation"
+tracks/2/path = NodePath("Main/GuideNode/Ani")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": PoolStringArray( "init", "play" ),
+"times": PoolRealArray( 0, 0.2 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Main/GuideNode:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Main/GuideNode:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 500, -1000 ) ]
+}
+
+[sub_resource type="Animation" id=256]
+resource_name = "选择难度"
+length = 2.2
+tracks/0/type = "method"
+tracks/0/path = NodePath("Main/Info/Label")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "新手引导-选择难度" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("Loop")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "show" ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "animation"
+tracks/2/path = NodePath("Main/GuideNode/Ani")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": PoolStringArray( "init", "play" ),
+"times": PoolRealArray( 0, 0.2 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Main/GuideNode:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -90.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Main/GuideNode:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 800, -250 ) ]
+}
+
+[sub_resource type="Animation" id=225]
+resource_name = "10s"
+length = 10.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Main/Devil:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Main/Info:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Main/Info:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4, 0.45, 9.7, 9.75, 9.85 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1.1 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1.1 ), Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Main/Devil:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 9.75, 9.85, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 49, 160 ), Vector2( 49, 5 ), Vector2( 49, 5 ), Vector2( 49, 22 ), Vector2( 49, 160 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Main/Devil:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4, 9.75, 9.85, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 0.6, 0.6 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Main/Devil:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -15.0, -15.0, 5.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=229]
+resource_name = "5s"
+length = 5.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Main/Devil:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Main/Info:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Main/Info:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4, 0.45, 4.7, 4.75, 4.85 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1.1 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1.1 ), Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Main/Devil:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 4.75, 4.85, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 49, 160 ), Vector2( 49, 5 ), Vector2( 49, 5 ), Vector2( 49, 22 ), Vector2( 49, 160 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Main/Devil:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4, 4.75, 4.85, 5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 0.6, 0.6 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Main/Devil:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -15.0, -15.0, 5.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=230]
+resource_name = "hide"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Main/Devil:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Main/Info:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Main/Info:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.25, 0.35 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1, 1.1 ), Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Main/Devil:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.25, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 47, 5 ), Vector2( 47, 5 ), Vector2( 47, -15 ), Vector2( 49, 160 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Main/Devil:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.25, 0.35, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 0.6, 0.6 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Main/Devil:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=227]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Main/Info:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Main/Devil:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=231]
+resource_name = "show"
+length = 0.5
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("Main/Devil:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Main/Info:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Main/Info:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4, 0.45 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1.1 ), Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Main/Devil:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 49, 160 ), Vector2( 47, 5 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Main/Devil:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Main/Devil:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -15.0, -15.0, 5.0, 0.0 ]
+}
+tracks/6/type = "audio"
+tracks/6/path = NodePath("AudioStreamPlayer")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 34 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[node name="ChooseShop" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 2
+script = ExtResource( 2 )
+
+[node name="Panel" parent="." instance=ExtResource( 14 )]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+focus_mode = 2
+
+[node name="BG" type="NinePatchRect" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -740.0
+margin_top = -480.0
+margin_right = 740.0
+margin_bottom = 445.0
+texture = ExtResource( 1 )
+patch_margin_left = 57
+patch_margin_top = 50
+patch_margin_right = 57
+patch_margin_bottom = 50
+
+[node name="LevelName" type="NinePatchRect" parent="Control/BG"]
+self_modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -627.5
+margin_top = 40.0
+margin_right = 627.5
+margin_bottom = 125.0
+texture = ExtResource( 6 )
+patch_margin_left = 43
+patch_margin_right = 44
+
+[node name="TitleLabel" type="Label" parent="Control/BG/LevelName"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -629.5
+margin_top = -43.5
+margin_right = 630.5
+margin_bottom = 43.5
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 20 )
+text = "关卡选择"
+align = 1
+valign = 1
+script = ExtResource( 15 )
+LabelTEXT = "信息-关卡选择信息"
+
+[node name="Label" type="Label" parent="Control/BG/LevelName"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -719.5
+margin_top = 77.5
+margin_right = -29.5
+margin_bottom = 132.5
+custom_fonts/font = SubResource( 94 )
+text = "关卡名字"
+align = 1
+valign = 1
+script = ExtResource( 15 )
+LabelTEXT = "信息-关卡选择"
+
+[node name="ViewportBG" type="NinePatchRect" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = -325.0
+margin_right = 685.0
+margin_bottom = 390.0
+texture = ExtResource( 3 )
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="ViewportContainer" type="ViewportContainer" parent="Control/ViewportBG"]
+show_behind_parent = true
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 705.0
+margin_bottom = 705.0
+rect_min_size = Vector2( 700, 700 )
+mouse_filter = 2
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="Control/ViewportBG/ViewportContainer"]
+size = Vector2( 700, 700 )
+handle_input_locally = false
+usage = 0
+render_target_update_mode = 3
+
+[node name="Func" type="NinePatchRect" parent="Control/ViewportBG"]
+visible = false
+self_modulate = Color( 0, 1, 1, 0.392157 )
+show_behind_parent = true
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = -55.0
+margin_right = -5.0
+margin_bottom = -10.0
+rect_pivot_offset = Vector2( 0, 25 )
+mouse_filter = 0
+texture = ExtResource( 13 )
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/ViewportBG/Func"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 77
+
+[node name="UPbut" type="Button" parent="Control/ViewportBG/Func/HBoxContainer"]
+margin_right = 40.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 40, 40 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 96 )
+custom_styles/pressed = SubResource( 96 )
+custom_styles/focus = SubResource( 96 )
+custom_styles/disabled = SubResource( 148 )
+custom_styles/normal = SubResource( 149 )
+script = ExtResource( 27 )
+
+[node name="Label" type="Label" parent="Control/ViewportBG/Func/HBoxContainer/UPbut"]
+show_behind_parent = true
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = -20.0
+margin_right = 45.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+text = "UP"
+align = 1
+valign = 1
+
+[node name="DOWNbut" type="Button" parent="Control/ViewportBG/Func/HBoxContainer"]
+margin_left = 117.0
+margin_right = 157.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 40, 40 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 97 )
+custom_styles/pressed = SubResource( 97 )
+custom_styles/disabled = SubResource( 117 )
+custom_styles/normal = SubResource( 150 )
+enabled_focus_mode = 0
+script = ExtResource( 27 )
+
+[node name="Label" type="Label" parent="Control/ViewportBG/Func/HBoxContainer/DOWNbut"]
+show_behind_parent = true
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = -20.0
+margin_right = 45.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+text = "DOWN"
+align = 1
+valign = 1
+
+[node name="LEFTbut" type="Button" parent="Control/ViewportBG/Func/HBoxContainer"]
+margin_left = 234.0
+margin_right = 274.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 40, 40 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 98 )
+custom_styles/pressed = SubResource( 98 )
+custom_styles/disabled = SubResource( 151 )
+custom_styles/normal = SubResource( 152 )
+enabled_focus_mode = 0
+script = ExtResource( 27 )
+
+[node name="Label" type="Label" parent="Control/ViewportBG/Func/HBoxContainer/LEFTbut"]
+show_behind_parent = true
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = -20.0
+margin_right = 45.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+text = "LEFT"
+align = 1
+valign = 1
+
+[node name="RIGHTbut" type="Button" parent="Control/ViewportBG/Func/HBoxContainer"]
+margin_left = 351.0
+margin_right = 391.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 40, 40 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 99 )
+custom_styles/pressed = SubResource( 99 )
+custom_styles/disabled = SubResource( 153 )
+custom_styles/normal = SubResource( 154 )
+enabled_focus_mode = 0
+script = ExtResource( 27 )
+
+[node name="Label" type="Label" parent="Control/ViewportBG/Func/HBoxContainer/RIGHTbut"]
+show_behind_parent = true
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = -20.0
+margin_right = 55.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+text = "RIGHT"
+align = 1
+valign = 1
+
+[node name="IN" type="Button" parent="Control/ViewportBG/Func/HBoxContainer"]
+margin_left = 468.0
+margin_right = 508.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 40, 40 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 100 )
+custom_styles/pressed = SubResource( 100 )
+custom_styles/disabled = SubResource( 155 )
+custom_styles/normal = SubResource( 100 )
+enabled_focus_mode = 0
+script = ExtResource( 27 )
+
+[node name="Label" type="Label" parent="Control/ViewportBG/Func/HBoxContainer/IN"]
+show_behind_parent = true
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = -20.0
+margin_right = 65.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+text = "ZOOM -"
+align = 1
+valign = 1
+
+[node name="OUT" type="Button" parent="Control/ViewportBG/Func/HBoxContainer"]
+margin_left = 585.0
+margin_right = 625.0
+margin_bottom = 45.0
+rect_min_size = Vector2( 40, 40 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 156 )
+custom_styles/pressed = SubResource( 101 )
+custom_styles/disabled = SubResource( 157 )
+custom_styles/normal = SubResource( 101 )
+enabled_focus_mode = 0
+script = ExtResource( 27 )
+
+[node name="Label" type="Label" parent="Control/ViewportBG/Func/HBoxContainer/OUT"]
+show_behind_parent = true
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = -20.0
+margin_right = 65.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+text = "ZOOM +"
+align = 1
+valign = 1
+
+[node name="Ani" type="AnimationPlayer" parent="Control"]
+root_node = NodePath("../..")
+autoplay = "init"
+anims/hide = SubResource( 176 )
+anims/init = SubResource( 91 )
+anims/show = SubResource( 92 )
+
+[node name="InfoBG" type="NinePatchRect" parent="Control"]
+margin_left = 237.0
+margin_top = 326.0
+margin_right = 931.0
+margin_bottom = 682.0
+texture = ExtResource( 13 )
+patch_margin_left = 22
+patch_margin_top = 28
+patch_margin_right = 25
+patch_margin_bottom = 32
+
+[node name="BaseInfo1" type="VBoxContainer" parent="Control/InfoBG"]
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 21.0
+margin_top = -54.2
+margin_right = -467.0
+margin_bottom = -134.0
+rect_min_size = Vector2( 150, 0 )
+custom_constants/separation = 20
+
+[node name="CostMoney" type="Label" parent="Control/InfoBG/BaseInfo1"]
+margin_right = 206.0
+margin_bottom = 25.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-开店本金"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "UI-开店本金"
+
+[node name="Label" type="Label" parent="Control/InfoBG/BaseInfo1/CostMoney"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -8.5
+margin_right = 64.0
+margin_bottom = 12.5
+rect_min_size = Vector2( 174, 0 )
+custom_fonts/font = ExtResource( 18 )
+text = "50000"
+align = 2
+valign = 1
+
+[node name="MoneyIcon" type="Sprite" parent="Control/InfoBG/BaseInfo1/CostMoney/Label"]
+position = Vector2( 200, 10 )
+texture = ExtResource( 5 )
+
+[node name="DailyRent" type="Label" parent="Control/InfoBG/BaseInfo1"]
+margin_top = 45.0
+margin_right = 206.0
+margin_bottom = 70.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-每日租金"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "UI-每日租金"
+
+[node name="Label" type="Label" parent="Control/InfoBG/BaseInfo1/DailyRent"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -10.5
+margin_right = 64.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 174, 0 )
+custom_fonts/font = ExtResource( 18 )
+text = "500"
+align = 2
+valign = 1
+
+[node name="MoneyIcon" type="Sprite" parent="Control/InfoBG/BaseInfo1/DailyRent/Label"]
+position = Vector2( 200, 10 )
+texture = ExtResource( 5 )
+
+[node name="DayCount" type="Label" parent="Control/InfoBG/BaseInfo1"]
+margin_top = 90.0
+margin_right = 206.0
+margin_bottom = 115.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "营业周期"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "UI-营业周期"
+
+[node name="Label" type="Label" parent="Control/InfoBG/BaseInfo1/DayCount"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -10.5
+margin_right = 64.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 174, 0 )
+custom_fonts/font = ExtResource( 18 )
+text = "50000"
+align = 2
+valign = 1
+
+[node name="Icon" type="Sprite" parent="Control/InfoBG/BaseInfo1/DayCount/Label"]
+position = Vector2( 200, 10 )
+texture = ExtResource( 26 )
+
+[node name="人流量" type="Label" parent="Control/InfoBG/BaseInfo1"]
+visible = false
+margin_top = 135.0
+margin_right = 200.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 158, 0 )
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/InfoBG/BaseInfo1/人流量"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -10.5
+margin_right = 160.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 200, 0 )
+text = "较低"
+align = 2
+valign = 1
+
+[node name="Sell" type="Label" parent="Control/InfoBG/BaseInfo1"]
+visible = false
+margin_top = 180.0
+margin_right = 200.0
+margin_bottom = 205.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-产品类型"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "UI-产品类型"
+
+[node name="HBox" type="HBoxContainer" parent="Control/InfoBG/BaseInfo1/Sell"]
+margin_left = 170.0
+margin_top = 10.0
+margin_right = 334.0
+margin_bottom = 10.0
+custom_constants/separation = 20
+
+[node name="PeakTime" type="Label" parent="Control/InfoBG/BaseInfo1"]
+visible = false
+margin_top = 225.0
+margin_right = 200.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 158, 0 )
+text = "UI-高峰时间"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/InfoBG/BaseInfo1/PeakTime"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -10.5
+margin_right = 160.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 200, 0 )
+text = "下午"
+align = 2
+valign = 1
+
+[node name="Reward" type="Label" parent="Control/InfoBG/BaseInfo1"]
+margin_top = 135.0
+margin_right = 206.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-高峰时间"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-奖励倍率"
+
+[node name="Label" type="Label" parent="Control/InfoBG/BaseInfo1/Reward"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -10.5
+margin_right = 64.0
+margin_bottom = 14.5
+rect_min_size = Vector2( 174, 0 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 18 )
+text = "5%"
+align = 2
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/InfoBG/BaseInfo1/Reward/Label"]
+autoplay = "0"
+anims/0 = SubResource( 269 )
+anims/1 = SubResource( 270 )
+
+[node name="Sprite" type="Sprite" parent="Control/InfoBG/BaseInfo1/Reward/Label"]
+position = Vector2( 200, 12 )
+texture = ExtResource( 47 )
+
+[node name="Popular" type="Label" parent="Control/InfoBG/BaseInfo1"]
+margin_top = 180.0
+margin_right = 206.0
+margin_bottom = 205.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-店铺人气"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-初始评级"
+
+[node name="HBox" type="HBoxContainer" parent="Control/InfoBG/BaseInfo1/Popular"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -46.0
+margin_top = -2.0
+margin_right = 100.0
+margin_bottom = 26.0
+custom_constants/separation = 4
+
+[node name="1" type="Control" parent="Control/InfoBG/BaseInfo1/Popular/HBox"]
+margin_right = 26.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+
+[node name="TextureProgress" type="TextureProgress" parent="Control/InfoBG/BaseInfo1/Popular/HBox/1"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 2.0
+texture_under = ExtResource( 33 )
+texture_progress = ExtResource( 17 )
+
+[node name="2" type="Control" parent="Control/InfoBG/BaseInfo1/Popular/HBox"]
+margin_left = 30.0
+margin_right = 56.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+
+[node name="TextureProgress" type="TextureProgress" parent="Control/InfoBG/BaseInfo1/Popular/HBox/2"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 2.0
+value = 2.0
+texture_under = ExtResource( 33 )
+texture_progress = ExtResource( 17 )
+
+[node name="3" type="Control" parent="Control/InfoBG/BaseInfo1/Popular/HBox"]
+margin_left = 60.0
+margin_right = 86.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+
+[node name="TextureProgress" type="TextureProgress" parent="Control/InfoBG/BaseInfo1/Popular/HBox/3"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 2.0
+value = 2.0
+texture_under = ExtResource( 33 )
+texture_progress = ExtResource( 17 )
+
+[node name="4" type="Control" parent="Control/InfoBG/BaseInfo1/Popular/HBox"]
+margin_left = 90.0
+margin_right = 116.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+
+[node name="TextureProgress" type="TextureProgress" parent="Control/InfoBG/BaseInfo1/Popular/HBox/4"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 2.0
+value = 2.0
+texture_under = ExtResource( 33 )
+texture_progress = ExtResource( 17 )
+
+[node name="5" type="Control" parent="Control/InfoBG/BaseInfo1/Popular/HBox"]
+margin_left = 120.0
+margin_right = 146.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+
+[node name="TextureProgress" type="TextureProgress" parent="Control/InfoBG/BaseInfo1/Popular/HBox/5"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 2.0
+value = 2.0
+texture_under = ExtResource( 33 )
+texture_progress = ExtResource( 17 )
+
+[node name="Unit" type="Label" parent="Control/InfoBG/BaseInfo1/Popular"]
+visible = false
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 340.0
+margin_top = -10.5
+margin_right = 395.0
+margin_bottom = 10.5
+text = "日"
+
+[node name="Label" type="Label" parent="Control/InfoBG/BaseInfo1/Popular/Unit"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -235.0
+margin_top = -10.5
+margin_right = -61.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 174, 0 )
+text = "50000"
+align = 2
+valign = 1
+
+[node name="BaseInfo2" type="VBoxContainer" parent="Control/InfoBG"]
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 352.0
+margin_top = -54.2
+margin_right = -129.0
+margin_bottom = -134.0
+rect_min_size = Vector2( 200, 0 )
+custom_constants/separation = 20
+
+[node name="OpeningHours" type="Label" parent="Control/InfoBG/BaseInfo2"]
+margin_right = 213.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-营业时间"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-营业时间"
+
+[node name="Label" type="Label" parent="Control/InfoBG/BaseInfo2/OpeningHours"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -10.5
+margin_right = 100.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 200, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "11:00 ~ 23:00"
+align = 2
+valign = 1
+
+[node name="Traffic" type="Label" parent="Control/InfoBG/BaseInfo2"]
+margin_top = 45.0
+margin_right = 213.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-人流量"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-人流量"
+
+[node name="Label" type="Label" parent="Control/InfoBG/BaseInfo2/Traffic"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -10.5
+margin_right = 100.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 200, 0 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 18 )
+text = "?"
+align = 2
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/InfoBG/BaseInfo2/Traffic/Label"]
+anims/-1 = SubResource( 289 )
+anims/1 = SubResource( 258 )
+anims/2 = SubResource( 259 )
+anims/3 = SubResource( 260 )
+anims/4 = SubResource( 261 )
+anims/5 = SubResource( 262 )
+anims/6 = SubResource( 263 )
+anims/7 = SubResource( 264 )
+anims/8 = SubResource( 265 )
+anims/9 = SubResource( 266 )
+
+[node name="PeakTime" type="Label" parent="Control/InfoBG/BaseInfo2"]
+margin_top = 90.0
+margin_right = 213.0
+margin_bottom = 115.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-高峰时间"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-高峰时间"
+
+[node name="Label" type="Label" parent="Control/InfoBG/BaseInfo2/PeakTime"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -10.5
+margin_right = 100.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 200, 0 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 18 )
+text = "下午"
+align = 2
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/InfoBG/BaseInfo2/PeakTime/Label"]
+anims/-1 = SubResource( 288 )
+anims/0 = SubResource( 267 )
+anims/1 = SubResource( 268 )
+
+[node name="RewardMax" type="Label" parent="Control/InfoBG/BaseInfo2"]
+margin_top = 135.0
+margin_right = 213.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "奖励上限"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-奖励上限"
+
+[node name="Label" type="Label" parent="Control/InfoBG/BaseInfo2/RewardMax"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -10.5
+margin_right = 64.0
+margin_bottom = 14.5
+rect_min_size = Vector2( 174, 0 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 18 )
+text = "5000"
+align = 2
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/InfoBG/BaseInfo2/RewardMax/Label"]
+autoplay = "0"
+anims/0 = SubResource( 319 )
+anims/1 = SubResource( 320 )
+
+[node name="Sprite" type="Sprite" parent="Control/InfoBG/BaseInfo2/RewardMax/Label"]
+position = Vector2( 200, 12 )
+texture = ExtResource( 47 )
+
+[node name="RewardGet" type="Label" parent="Control/InfoBG/BaseInfo2"]
+margin_top = 180.0
+margin_right = 213.0
+margin_bottom = 205.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "奖励上限"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-通关奖励"
+
+[node name="Label" type="Label" parent="Control/InfoBG/BaseInfo2/RewardGet"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -10.5
+margin_right = 64.0
+margin_bottom = 14.5
+rect_min_size = Vector2( 174, 0 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 18 )
+text = "5000"
+align = 2
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/InfoBG/BaseInfo2/RewardGet/Label"]
+autoplay = "0"
+anims/0 = SubResource( 286 )
+anims/1 = SubResource( 287 )
+
+[node name="Sprite" type="Sprite" parent="Control/InfoBG/BaseInfo2/RewardGet/Label"]
+position = Vector2( 200, 12 )
+texture = ExtResource( 47 )
+
+[node name="Title" type="Label" parent="Control/InfoBG"]
+margin_left = 18.0
+margin_top = 365.0
+margin_right = 655.0
+margin_bottom = 394.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 48 )
+text = "关卡特点"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "信息-关卡特点"
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Control/InfoBG/Title"]
+self_modulate = Color( 0.207843, 0.207843, 0.207843, 1 )
+margin_left = -12.0
+margin_top = 35.0
+margin_right = 671.0
+margin_bottom = 245.0
+texture = ExtResource( 4 )
+patch_margin_left = 23
+patch_margin_top = 28
+patch_margin_right = 23
+patch_margin_bottom = 24
+
+[node name="GamePlay" type="VBoxContainer" parent="Control/InfoBG"]
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 12.0
+margin_top = 339.8
+margin_right = -11.0
+margin_bottom = 270.0
+custom_constants/separation = 5
+
+[node name="1" type="Label" parent="Control/InfoBG/GamePlay"]
+margin_right = 671.0
+margin_bottom = 118.0
+text = "关卡进度不会保存
+111
+111
+111"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="Label" parent="Control/InfoBG/GamePlay"]
+margin_top = 123.0
+margin_right = 671.0
+margin_bottom = 148.0
+text = "222"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3" type="Label" parent="Control/InfoBG/GamePlay"]
+margin_top = 153.0
+margin_right = 671.0
+margin_bottom = 178.0
+text = "333"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4" type="Label" parent="Control/InfoBG/GamePlay"]
+margin_top = 183.0
+margin_right = 671.0
+margin_bottom = 208.0
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Customer" type="Label" parent="Control/InfoBG"]
+margin_left = 22.0
+margin_top = 277.0
+margin_right = 180.0
+margin_bottom = 302.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-顾客类型"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "UI-顾客类型"
+
+[node name="HBox" type="HBoxContainer" parent="Control/InfoBG/Customer"]
+margin_left = 170.0
+margin_top = 60.0
+margin_right = 334.0
+margin_bottom = 60.0
+rect_scale = Vector2( 0.8, 0.8 )
+
+[node name="通关信息" type="NinePatchRect" parent="Control"]
+self_modulate = Color( 0.470588, 1, 1, 0.784314 )
+margin_left = 940.0
+margin_top = 222.0
+margin_right = 1638.0
+margin_bottom = 332.0
+texture = ExtResource( 13 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="BaseInfo1" type="VBoxContainer" parent="Control/通关信息"]
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = -5.0
+margin_right = -457.0
+margin_bottom = -23.0
+rect_min_size = Vector2( 150, 0 )
+custom_constants/separation = 20
+
+[node name="HighMoney" type="Label" parent="Control/通关信息/BaseInfo1"]
+margin_right = 211.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "最高收入"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-最高收入"
+
+[node name="Label" type="Label" parent="Control/通关信息/BaseInfo1/HighMoney"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -12.5
+margin_right = 48.0
+margin_bottom = 12.5
+rect_min_size = Vector2( 100, 0 )
+custom_colors/font_color = Color( 1, 0.784314, 0, 1 )
+custom_fonts/font = ExtResource( 18 )
+text = "0"
+align = 2
+valign = 1
+
+[node name="MoneyIcon" type="Sprite" parent="Control/通关信息/BaseInfo1/HighMoney/Label"]
+position = Vector2( 174, 12.4 )
+texture = ExtResource( 5 )
+
+[node name="DevelLevel" type="Label" parent="Control/通关信息/BaseInfo1"]
+margin_top = 45.0
+margin_right = 211.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "通关最高难度"
+valign = 1
+script = ExtResource( 15 )
+LabelTEXT = "UI-通关信息"
+
+[node name="HBox" type="HBoxContainer" parent="Control/通关信息/BaseInfo1/DevelLevel"]
+margin_left = 319.0
+margin_top = 10.0
+margin_right = 483.0
+margin_bottom = 38.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_constants/separation = 20
+
+[node name="0" parent="Control/通关信息/BaseInfo1/DevelLevel/HBox" instance=ExtResource( 31 )]
+margin_top = 0.0
+margin_bottom = 28.0
+
+[node name="BaseInfo2" type="VBoxContainer" parent="Control/通关信息"]
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 379.0
+margin_top = -6.0
+margin_right = -110.0
+margin_bottom = -69.0
+rect_min_size = Vector2( 200, 0 )
+custom_constants/separation = 20
+
+[node name="test" type="Label" parent="Control/通关信息/BaseInfo2"]
+visible = false
+margin_right = 223.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "最高销量"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "UI-最高销量"
+
+[node name="HBox" type="HBoxContainer" parent="Control/通关信息/BaseInfo2/test"]
+margin_left = 170.0
+margin_top = 10.0
+margin_right = 334.0
+margin_bottom = 10.0
+custom_constants/separation = 20
+
+[node name="SellTotal" type="Label" parent="Control/通关信息/BaseInfo2"]
+margin_right = 209.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "最高销量"
+valign = 1
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-最高销量"
+
+[node name="Label" type="Label" parent="Control/通关信息/BaseInfo2/SellTotal"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -12.5
+margin_right = 48.0
+margin_bottom = 12.5
+rect_min_size = Vector2( 100, 0 )
+custom_colors/font_color = Color( 1, 0.784314, 0, 1 )
+custom_fonts/font = ExtResource( 18 )
+text = "0"
+align = 2
+valign = 1
+
+[node name="Icon" type="Sprite" parent="Control/通关信息/BaseInfo2/SellTotal/Label"]
+position = Vector2( 174, 23.4 )
+texture = ExtResource( 29 )
+flip_v = true
+
+[node name="Difficulty" type="Control" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -665.0
+margin_top = 201.0
+margin_right = -92.0
+margin_bottom = 326.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Difficulty"]
+anchor_left = 0.03
+anchor_right = 0.732
+anchor_bottom = 0.96
+margin_left = 0.0500011
+margin_top = 22.0
+margin_right = 0.0199585
+margin_bottom = -10.0
+custom_constants/separation = 61
+
+[node name="1" parent="Control/Difficulty/HBoxContainer" instance=ExtResource( 19 )]
+pressed = true
+group = SubResource( 184 )
+TYPE = 1
+
+[node name="2" parent="Control/Difficulty/HBoxContainer" instance=ExtResource( 19 )]
+margin_left = 149.0
+margin_right = 237.0
+group = SubResource( 184 )
+TYPE = 2
+
+[node name="3" parent="Control/Difficulty/HBoxContainer" instance=ExtResource( 19 )]
+margin_left = 298.0
+margin_right = 386.0
+group = SubResource( 184 )
+TYPE = 3
+
+[node name="4" parent="Control/Difficulty/HBoxContainer" instance=ExtResource( 19 )]
+margin_left = 447.0
+margin_right = 535.0
+group = SubResource( 184 )
+TYPE = 4
+
+[node name="L" parent="Control/Difficulty" instance=ExtResource( 28 )]
+margin_left = -65.0
+margin_top = 25.0
+margin_right = 25.0
+margin_bottom = 115.0
+custom_styles/hover = SubResource( 141 )
+custom_styles/pressed = SubResource( 142 )
+custom_styles/focus = SubResource( 118 )
+custom_styles/disabled = SubResource( 119 )
+custom_styles/normal = SubResource( 120 )
+
+[node name="L" parent="Control/Difficulty/L" instance=ExtResource( 16 )]
+margin_left = 45.0
+margin_top = 45.0
+margin_right = 45.0
+margin_bottom = 45.0
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+
+[node name="R" parent="Control/Difficulty" instance=ExtResource( 28 )]
+margin_left = 560.0
+margin_top = 25.0
+margin_right = 650.0
+margin_bottom = 115.0
+custom_styles/hover = SubResource( 141 )
+custom_styles/pressed = SubResource( 142 )
+custom_styles/focus = SubResource( 118 )
+custom_styles/disabled = SubResource( 119 )
+custom_styles/normal = SubResource( 120 )
+
+[node name="R" parent="Control/Difficulty/R" instance=ExtResource( 16 )]
+margin_left = 45.0
+margin_top = 45.0
+margin_right = 45.0
+margin_bottom = 45.0
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+
+[node name="ButControl" type="Control" parent="Control"]
+anchor_top = 0.907
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.439941
+
+[node name="BackBut" parent="Control/ButControl" instance=ExtResource( 28 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 42.5
+margin_top = -42.5
+margin_right = 127.5
+margin_bottom = 42.5
+custom_styles/hover = SubResource( 292 )
+custom_styles/pressed = SubResource( 293 )
+custom_styles/focus = SubResource( 294 )
+custom_styles/disabled = SubResource( 295 )
+custom_styles/normal = SubResource( 296 )
+_ActionModeBool = true
+
+[node name="B" parent="Control/ButControl/BackBut" instance=ExtResource( 16 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-返回"
+
+[node name="ApplyBut" parent="Control/ButControl" instance=ExtResource( 28 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -127.5
+margin_top = -42.5
+margin_right = -42.5
+margin_bottom = 42.5
+custom_styles/hover = SubResource( 292 )
+custom_styles/pressed = SubResource( 293 )
+custom_styles/focus = SubResource( 294 )
+custom_styles/disabled = SubResource( 295 )
+custom_styles/normal = SubResource( 296 )
+_ActionModeBool = true
+
+[node name="A" parent="Control/ButControl/ApplyBut" instance=ExtResource( 16 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+ButPlayer = 1
+bool_Hold = true
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-确定"
+
+[node name="Choose" type="Control" parent="Control"]
+margin_left = 1048.0
+margin_top = 807.0
+margin_right = 1048.0
+margin_bottom = 807.0
+
+[node name="HBox" type="VBoxContainer" parent="Control/Choose"]
+margin_left = -77.0
+margin_top = -405.0
+margin_right = -49.0
+margin_bottom = 100.0
+custom_constants/separation = 26
+alignment = 2
+
+[node name="0" parent="Control/Choose/HBox" instance=ExtResource( 31 )]
+margin_top = 369.0
+margin_bottom = 397.0
+
+[node name="1" parent="Control/Choose/HBox" instance=ExtResource( 31 )]
+margin_top = 423.0
+margin_bottom = 451.0
+
+[node name="2" parent="Control/Choose/HBox" instance=ExtResource( 31 )]
+margin_top = 477.0
+margin_bottom = 505.0
+
+[node name="DownBut" parent="Control/Choose" instance=ExtResource( 28 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 380.0
+margin_top = 55.0
+margin_right = 430.0
+margin_bottom = 105.0
+rect_min_size = Vector2( 50, 50 )
+focus_mode = 2
+custom_styles/hover = SubResource( 292 )
+custom_styles/pressed = SubResource( 293 )
+custom_styles/focus = SubResource( 294 )
+custom_styles/disabled = SubResource( 295 )
+custom_styles/normal = SubResource( 296 )
+_ActionModeBool = true
+
+[node name="DOWN" parent="Control/Choose/DownBut" instance=ExtResource( 16 )]
+margin_left = 25.0
+margin_top = 25.0
+margin_right = 25.0
+margin_bottom = 25.0
+ZINDEX = 0
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-降低难度"
+
+[node name="UpBut" parent="Control/Choose" instance=ExtResource( 28 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 150.0
+margin_top = 55.0
+margin_right = 200.0
+margin_bottom = 105.0
+rect_min_size = Vector2( 50, 50 )
+focus_mode = 2
+custom_styles/hover = SubResource( 292 )
+custom_styles/pressed = SubResource( 293 )
+custom_styles/focus = SubResource( 294 )
+custom_styles/disabled = SubResource( 295 )
+custom_styles/normal = SubResource( 296 )
+_ActionModeBool = true
+
+[node name="UP" parent="Control/Choose/UpBut" instance=ExtResource( 16 )]
+margin_left = 25.0
+margin_top = 25.0
+margin_right = 25.0
+margin_bottom = 25.0
+ZINDEX = 0
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-提高难度"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/Choose"]
+visible = false
+self_modulate = Color( 0.470588, 1, 1, 0.784314 )
+show_behind_parent = true
+margin_left = -106.0
+margin_top = 51.0
+margin_right = 590.0
+margin_bottom = 111.0
+texture = ExtResource( 13 )
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="Label" type="Label" parent="Control/Choose"]
+visible = false
+margin_left = -11.0
+margin_top = 51.0
+margin_right = 190.0
+margin_bottom = 108.0
+custom_fonts/font = ExtResource( 24 )
+text = "选择难度"
+valign = 1
+script = ExtResource( 15 )
+LabelTEXT = "信息-难度选择"
+
+[node name="DemoLabel" type="Label" parent="Control"]
+visible = false
+margin_left = 968.0
+margin_top = 721.0
+margin_right = 1608.0
+margin_bottom = 891.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = SubResource( 191 )
+text = "Demo版本无法进入该关卡>_<"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "DEMO_NoIn"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/DemoLabel"]
+self_modulate = Color( 0.294118, 1, 1, 0.588235 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -29.0
+margin_top = -29.0
+margin_right = 33.0
+margin_bottom = 36.0
+texture = ExtResource( 22 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="DevilDialogue" type="Control" parent="."]
+pause_mode = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 46 )
+
+[node name="Main" type="Control" parent="DevilDialogue"]
+pause_mode = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+
+[node name="Info" type="Control" parent="DevilDialogue/Main"]
+pause_mode = 2
+visible = false
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -731.0
+margin_right = 246.0
+rect_pivot_offset = Vector2( 42, 536.364 )
+
+[node name="BG1" type="NinePatchRect" parent="DevilDialogue/Main/Info"]
+pause_mode = 2
+self_modulate = Color( 1, 1, 1, 0.784314 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -706.0
+margin_right = 251.0
+margin_bottom = -223.0
+texture = ExtResource( 30 )
+patch_margin_left = 68
+patch_margin_top = 15
+patch_margin_right = 27
+patch_margin_bottom = 37
+
+[node name="Label" type="Label" parent="DevilDialogue/Main/Info"]
+pause_mode = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 27.0
+margin_top = -692.0
+margin_right = 238.0
+margin_bottom = -254.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 32 )
+text = "第一批货物已经运送到了店里，可以将他们取出放入货架
+"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+script = ExtResource( 15 )
+
+[node name="Devil" type="Node2D" parent="DevilDialogue/Main"]
+pause_mode = 2
+visible = false
+light_mask = 0
+position = Vector2( 47, 5 )
+
+[node name="All_note" type="Node2D" parent="DevilDialogue/Main/Devil"]
+scale = Vector2( 1.4, 1.4 )
+
+[node name="Leg_L" type="Node2D" parent="DevilDialogue/Main/Devil/All_note"]
+position = Vector2( -7, -27 )
+
+[node name="L" type="Sprite" parent="DevilDialogue/Main/Devil/All_note/Leg_L"]
+texture = ExtResource( 39 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="DevilDialogue/Main/Devil/All_note"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="R" type="Sprite" parent="DevilDialogue/Main/Devil/All_note/Leg_R"]
+texture = ExtResource( 38 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="DevilDialogue/Main/Devil/All_note"]
+position = Vector2( 0, -25 )
+
+[node name="BodyPose" type="Node2D" parent="DevilDialogue/Main/Devil/All_note/Body_note"]
+
+[node name="Body" type="Node2D" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+texture = ExtResource( 40 )
+
+[node name="HeadPose" type="Node2D" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose/Body"]
+position = Vector2( 0, -63 )
+
+[node name="Head" type="Node2D" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose/Body/HeadPose"]
+
+[node name="Up" type="Sprite" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose/Body/HeadPose/Head"]
+visible = false
+texture = ExtResource( 37 )
+offset = Vector2( 0, -26 )
+
+[node name="Down" type="Sprite" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 35 )
+offset = Vector2( 0, -26 )
+
+[node name="Left" type="Sprite" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose/Body/HeadPose/Head"]
+visible = false
+texture = ExtResource( 36 )
+offset = Vector2( 0, -26 )
+flip_h = true
+
+[node name="HornL" type="Sprite" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose/Body/HeadPose/Head"]
+position = Vector2( -14, -47 )
+texture = ExtResource( 45 )
+offset = Vector2( -5, -16 )
+
+[node name="HornR" type="Sprite" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose/Body/HeadPose/Head"]
+position = Vector2( 14, -46 )
+texture = ExtResource( 42 )
+offset = Vector2( 5, -16 )
+
+[node name="Arm_Hold" type="Node2D" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose"]
+position = Vector2( 19, -47 )
+
+[node name="Pose_Hold" type="Node2D" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose/Arm_Hold"]
+
+[node name="Arm" type="Sprite" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+scale = Vector2( -1, 1 )
+texture = ExtResource( 43 )
+offset = Vector2( -10, 3 )
+
+[node name="Weapon_note" type="Node2D" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 30, 39 )
+
+[node name="Arm" type="Node2D" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose"]
+position = Vector2( -19, -47 )
+scale = Vector2( -1, 1 )
+
+[node name="Pose" type="Node2D" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose/Arm"]
+
+[node name="Arm" type="Sprite" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 44 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="DevilDialogue/Main/Devil/All_note/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 0, -15 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 41 )
+offset = Vector2( 20, -16 )
+
+[node name="GuideNode" type="Node2D" parent="DevilDialogue/Main"]
+visible = false
+position = Vector2( 800, -250 )
+rotation = -1.5708
+
+[node name="Sprite" type="Sprite" parent="DevilDialogue/Main/GuideNode"]
+position = Vector2( 0, 116 )
+rotation = 1.5708
+texture = ExtResource( 25 )
+
+[node name="Ani" type="AnimationPlayer" parent="DevilDialogue/Main/GuideNode"]
+autoplay = "init"
+anims/init = SubResource( 233 )
+anims/play = SubResource( 234 )
+
+[node name="Ani" type="AnimationPlayer" parent="DevilDialogue"]
+pause_mode = 2
+autoplay = "init"
+anims/hide = SubResource( 240 )
+anims/init = SubResource( 285 )
+"anims/第二关可选难度" = SubResource( 257 )
+"anims/选择第二关" = SubResource( 255 )
+"anims/选择难度" = SubResource( 256 )
+
+[node name="Loop" type="AnimationPlayer" parent="DevilDialogue"]
+pause_mode = 2
+anims/10s = SubResource( 225 )
+anims/5s = SubResource( 229 )
+anims/hide = SubResource( 230 )
+anims/init = SubResource( 227 )
+anims/show = SubResource( 231 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DevilDialogue"]
+pause_mode = 2
+stream = ExtResource( 34 )
+bus = "Effect"
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="Control/ViewportBG/Func/HBoxContainer/UPbut" to="." method="_on_UPbut_pressed"]
+[connection signal="pressed" from="Control/ViewportBG/Func/HBoxContainer/DOWNbut" to="." method="_on_DOWNbut_pressed"]
+[connection signal="pressed" from="Control/ViewportBG/Func/HBoxContainer/LEFTbut" to="." method="_on_LEFTbut_pressed"]
+[connection signal="pressed" from="Control/ViewportBG/Func/HBoxContainer/RIGHTbut" to="." method="_on_RIGHTbut_pressed"]
+[connection signal="pressed" from="Control/ViewportBG/Func/HBoxContainer/IN" to="." method="_on_IN_pressed"]
+[connection signal="pressed" from="Control/ViewportBG/Func/HBoxContainer/OUT" to="." method="_on_OUT_pressed"]
+[connection signal="pressed" from="Control/Difficulty/HBoxContainer/1" to="." method="_on_Difficulty_pressed"]
+[connection signal="pressed" from="Control/Difficulty/HBoxContainer/2" to="." method="_on_Difficulty_pressed"]
+[connection signal="pressed" from="Control/Difficulty/HBoxContainer/3" to="." method="_on_Difficulty_pressed"]
+[connection signal="pressed" from="Control/Difficulty/HBoxContainer/4" to="." method="_on_Difficulty_pressed"]
+[connection signal="pressed" from="Control/Difficulty/L" to="." method="_on_L_pressed"]
+[connection signal="pressed" from="Control/Difficulty/R" to="." method="_on_R_pressed"]
+[connection signal="pressed" from="Control/ButControl/BackBut" to="." method="_on_BackBut_pressed"]
+[connection signal="button_down" from="Control/ButControl/ApplyBut" to="." method="_on_Apply_button_down"]
+[connection signal="button_up" from="Control/ButControl/ApplyBut" to="." method="_on_Apply_button_up"]
+[connection signal="pressed" from="Control/Choose/DownBut" to="." method="_on_DownBut_pressed"]
+[connection signal="pressed" from="Control/Choose/UpBut" to="." method="_on_UpBut_pressed"]
+
+[editable path="Control/Difficulty/L"]
+[editable path="Control/Difficulty/R"]

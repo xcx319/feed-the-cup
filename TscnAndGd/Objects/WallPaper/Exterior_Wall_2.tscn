@@ -1,0 +1,148 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Resources/Maps/Tmap_wallexterior.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Exterior_top_2.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Maps/Tmap_wallpaper.png" type="Texture" id=7]
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 2, 260, 200, 240 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 2, 260, 50, 240 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 12, 260, 100, 240 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 311, 210, 104, 204 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 206, 210, 104, 204 )
+
+[node name="ExteriorWall" type="Node2D"]
+
+[node name="TexNode" type="Node2D" parent="."]
+
+[node name="MainWall" type="Node2D" parent="TexNode"]
+
+[node name="Floor1" type="Node2D" parent="TexNode/MainWall"]
+
+[node name="Sprite_open" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 400, 0 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 4 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite_open3" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 775, 0 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 5 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite_open4" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 725, 0 )
+texture = SubResource( 5 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite_open2" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 100, 0 )
+texture = SubResource( 4 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite_open5" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 250, 0 )
+texture = SubResource( 7 )
+offset = Vector2( 0, -118 )
+
+[node name="Loof3" type="Node2D" parent="TexNode/MainWall"]
+modulate = Color( 0.639216, 0.556863, 0.556863, 1 )
+position = Vector2( 0, -439 )
+scale = Vector2( 1, 0.7 )
+
+[node name="Loof1" type="Sprite" parent="TexNode/MainWall/Loof3"]
+position = Vector2( 50, -100 )
+texture = SubResource( 8 )
+
+[node name="Loof2" type="Sprite" parent="TexNode/MainWall/Loof3"]
+position = Vector2( 150, -100 )
+texture = SubResource( 8 )
+
+[node name="Loof3" type="Sprite" parent="TexNode/MainWall/Loof3"]
+position = Vector2( 250, -100 )
+texture = SubResource( 8 )
+
+[node name="Loof4" type="Sprite" parent="TexNode/MainWall/Loof3"]
+position = Vector2( 350, -100 )
+texture = SubResource( 8 )
+
+[node name="Loof5" type="Sprite" parent="TexNode/MainWall/Loof3"]
+position = Vector2( 450, -100 )
+texture = SubResource( 8 )
+
+[node name="Loof6" type="Sprite" parent="TexNode/MainWall/Loof3"]
+position = Vector2( 550, -100 )
+texture = SubResource( 8 )
+
+[node name="Loof7" type="Sprite" parent="TexNode/MainWall/Loof3"]
+position = Vector2( 650, -100 )
+texture = SubResource( 8 )
+
+[node name="Loof8" type="Sprite" parent="TexNode/MainWall/Loof3"]
+position = Vector2( 750, -100 )
+texture = SubResource( 8 )
+
+[node name="Loof1" type="Node2D" parent="TexNode/MainWall"]
+position = Vector2( 0, -200 )
+scale = Vector2( 1, 1.2 )
+
+[node name="Loof1" type="Sprite" parent="TexNode/MainWall/Loof1"]
+position = Vector2( 50, -100 )
+texture = SubResource( 3 )
+
+[node name="Loof2" type="Sprite" parent="TexNode/MainWall/Loof1"]
+position = Vector2( 150, -100 )
+texture = SubResource( 3 )
+
+[node name="Loof3" type="Sprite" parent="TexNode/MainWall/Loof1"]
+position = Vector2( 250, -100 )
+texture = SubResource( 3 )
+
+[node name="Loof4" type="Sprite" parent="TexNode/MainWall/Loof1"]
+position = Vector2( 350, -100 )
+texture = SubResource( 3 )
+
+[node name="Loof5" type="Sprite" parent="TexNode/MainWall/Loof1"]
+position = Vector2( 450, -100 )
+texture = SubResource( 3 )
+
+[node name="Loof6" type="Sprite" parent="TexNode/MainWall/Loof1"]
+position = Vector2( 550, -100 )
+texture = SubResource( 3 )
+
+[node name="Loof7" type="Sprite" parent="TexNode/MainWall/Loof1"]
+position = Vector2( 650, -100 )
+texture = SubResource( 3 )
+
+[node name="Loof8" type="Sprite" parent="TexNode/MainWall/Loof1"]
+position = Vector2( 750, -100 )
+texture = SubResource( 3 )
+
+[node name="ExteriorTop9" type="Sprite" parent="TexNode/MainWall/Loof1"]
+position = Vector2( 650, -100 )
+texture = ExtResource( 5 )
+
+[node name="ExteriorTop10" type="Sprite" parent="TexNode/MainWall/Loof1"]
+position = Vector2( 150, -100 )
+texture = ExtResource( 5 )

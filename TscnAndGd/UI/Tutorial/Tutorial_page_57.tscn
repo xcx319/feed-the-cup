@@ -1,0 +1,155 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://TscnAndGd/Effects/shaders/teleport-effect.tres" type="Shader" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_warning_3.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/ElecBox_back.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_switchlight_red.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_5.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_6.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/ElecBox_door_close.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_icemachine_ice_1.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_icemachine_box.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_icemachine_base_s.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_icemachine_close.tres" type="Texture" id=11]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=15]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_fix_2.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_warning_1.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_warning_0.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=21]
+
+[sub_resource type="ShaderMaterial" id=268]
+shader = ExtResource( 1 )
+shader_param/progress = 0.0
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = 0.15
+shader_param/color = Color( 0, 0, 0, 1 )
+
+[node name="停电" type="Node2D"]
+position = Vector2( 277, 277 )
+
+[node name="96" type="RichTextLabel" parent="."]
+margin_left = -109.0
+margin_top = 175.0
+margin_right = 511.0
+margin_bottom = 351.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "商铺偶尔会发生停电，停电时所有电器都会无法使用，只能等待电力恢复。
+提前备好要用的物料，可以一定程度上减少停电带来的影响。"
+text = "商铺偶尔会发生停电，停电时所有电器都会无法使用，只能等待电力恢复。
+提前备好要用的物料，可以一定程度上减少停电带来的影响。"
+script = ExtResource( 15 )
+LabelTEXT = "信息-文字说明-96"
+Center_Bool = true
+
+[node name="ice" type="Node2D" parent="."]
+material = SubResource( 268 )
+use_parent_material = true
+position = Vector2( -36, 93 )
+
+[node name="box" type="Sprite" parent="ice"]
+position = Vector2( 1, 34 )
+texture = ExtResource( 9 )
+offset = Vector2( 0, -80 )
+
+[node name="IceGroup" type="Node2D" parent="ice"]
+position = Vector2( 0, -96 )
+
+[node name="DeviceIcemachineIce1" type="Sprite" parent="ice/IceGroup"]
+use_parent_material = true
+position = Vector2( 20, 78 )
+texture = ExtResource( 8 )
+
+[node name="front" type="Sprite" parent="ice"]
+use_parent_material = true
+texture = ExtResource( 10 )
+offset = Vector2( 0, -90 )
+
+[node name="Effect" type="Node2D" parent="ice"]
+position = Vector2( -38, 20 )
+
+[node name="light" type="Sprite" parent="ice/Effect"]
+use_parent_material = true
+position = Vector2( 18, -124 )
+texture = ExtResource( 4 )
+
+[node name="Ui" type="Sprite" parent="ice"]
+position = Vector2( -3, -96 )
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 5 )
+offset = Vector2( 0, -16 )
+
+[node name="TextureProgress" type="TextureProgress" parent="ice/Ui"]
+modulate = Color( 1, 0, 0, 1 )
+margin_left = -3.0
+margin_top = -33.0
+margin_right = 3.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 16 )
+max_value = 60.0
+value = 10.0
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+tint_progress = Color( 1, 0.654902, 0, 1 )
+
+[node name="cover" type="Sprite" parent="ice"]
+position = Vector2( 0, -93 )
+texture = ExtResource( 11 )
+
+[node name="UiPoptipWarning3" type="Sprite" parent="ice"]
+self_modulate = Color( 1, 0, 0, 1 )
+light_mask = 16
+position = Vector2( 0, -145 )
+texture = ExtResource( 2 )
+
+[node name="Texture" type="Node2D" parent="."]
+position = Vector2( 401, 96 )
+
+[node name="Node2D2" type="Node2D" parent="Texture"]
+position = Vector2( -201, -3 )
+
+[node name="DeviceElecBoxBack" type="Sprite" parent="Texture/Node2D2"]
+position = Vector2( 0, -65 )
+texture = ExtResource( 3 )
+
+[node name="DeviceElecBoxFront" type="Sprite" parent="Texture/Node2D2"]
+position = Vector2( -1, -49 )
+texture = ExtResource( 7 )
+
+[node name="UiPoptipWarning1" type="Sprite" parent="Texture/Node2D2"]
+position = Vector2( 2, -160 )
+texture = ExtResource( 19 )
+
+[node name="UiPoptipWarning0" type="Sprite" parent="Texture/Node2D2/UiPoptipWarning1"]
+position = Vector2( -1, 0 )
+texture = ExtResource( 20 )
+
+[node name="EffectFix" type="Sprite" parent="Texture/Node2D2/UiPoptipWarning1"]
+position = Vector2( -41, 15 )
+rotation = -2.35619
+scale = Vector2( 1, -1 )
+texture = ExtResource( 18 )
+offset = Vector2( -5, -19 )
+
+[node name="Node2D" type="Node2D" parent="Texture"]
+position = Vector2( 23, -4 )
+
+[node name="DeviceElecBoxBack" type="Sprite" parent="Texture/Node2D"]
+position = Vector2( 0, -65 )
+texture = ExtResource( 3 )
+
+[node name="UiPoptipWarning1" type="Sprite" parent="Texture/Node2D"]
+self_modulate = Color( 0.384314, 1, 0.380392, 1 )
+position = Vector2( 2, -160 )
+texture = ExtResource( 19 )
+
+[node name="EffectFix" type="Sprite" parent="Texture/Node2D/UiPoptipWarning1"]
+position = Vector2( -25, -4 )
+rotation = -1.57079
+scale = Vector2( 1, -1 )
+texture = ExtResource( 18 )
+offset = Vector2( -5, -19 )
+
+[node name="IconMenuArrow2" type="Sprite" parent="Texture"]
+position = Vector2( -85, -54 )
+texture = ExtResource( 21 )

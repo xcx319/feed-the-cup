@@ -1,0 +1,296 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Head_Object",
+"language": "GDScript",
+"path": "res://TscnAndGd/Objects/Head_Object_Script.gd"
+}, {
+"base": "Node",
+"class": "Statistics",
+"language": "GDScript",
+"path": "res://TscnAndGd/Main/Player/Stat.gd"
+} ]
+_global_script_class_icons={
+"Head_Object": "",
+"Statistics": ""
+}
+
+[application]
+
+config/name="Feed The Cups"
+run/main_scene="res://TscnAndGd/UI/Main/Start.tscn"
+config/use_custom_user_dir=true
+run/low_processor_mode_sleep_usec=30000
+config/icon="res://Icon_256_png.png"
+
+[autoload]
+
+SteamLogic="*res://TscnAndGd/Logics/SystemLogic/SteamLogic.tscn"
+GameLogic="*res://TscnAndGd/Logics/GameLogic/GameLogic.tscn"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/borderless=0
+window/size/fullscreen=1
+window/size/test_width=1280.0
+window/size/test_height=720.0
+window/dpi/allow_hidpi=true
+window/vsync/vsync_via_compositor=true
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[editor_plugins]
+
+enabled=PoolStringArray(  )
+
+[global]
+
+"show mini"=false
+phys=false
+mono=true
+render=false
+RESET=false
+re=false
+"调试"=true
+rced=false
+theme=false
+
+[gui]
+
+theme/use_hidpi=true
+theme/custom_font="res://Language/Fonts/Base.tres"
+
+[input]
+
+ui_accept={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_select={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_cancel={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_focus_next={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_focus_prev={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_left={
+"deadzone": 0.1,
+"events": [  ]
+}
+ui_right={
+"deadzone": 0.1,
+"events": [  ]
+}
+ui_up={
+"deadzone": 0.1,
+"events": [  ]
+}
+ui_down={
+"deadzone": 0.1,
+"events": [  ]
+}
+ui_1={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":49,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_2={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":50,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_3={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":51,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_4={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":52,"unicode":0,"echo":false,"script":null)
+ ]
+}
+1P_A={
+"deadzone": 0.5,
+"events": [  ]
+}
+1P_B={
+"deadzone": 0.5,
+"events": [  ]
+}
+1P_X={
+"deadzone": 0.5,
+"events": [  ]
+}
+1P_Y={
+"deadzone": 0.5,
+"events": [  ]
+}
+1P_L1={
+"deadzone": 0.5,
+"events": [  ]
+}
+1P_L2={
+"deadzone": 0.5,
+"events": [  ]
+}
+1P_L3={
+"deadzone": 0.5,
+"events": [  ]
+}
+1P_R1={
+"deadzone": 0.5,
+"events": [  ]
+}
+1P_R2={
+"deadzone": 0.5,
+"events": [  ]
+}
+1P_R3={
+"deadzone": 0.5,
+"events": [  ]
+}
+1P_BACK={
+"deadzone": 0.5,
+"events": [  ]
+}
+1P_START={
+"deadzone": 0.5,
+"events": [  ]
+}
+1P_up={
+"deadzone": 0.5,
+"events": [  ]
+}
+1P_down={
+"deadzone": 0.5,
+"events": [  ]
+}
+1P_left={
+"deadzone": 0.5,
+"events": [  ]
+}
+1P_right={
+"deadzone": 0.5,
+"events": [  ]
+}
+2P_A={
+"deadzone": 0.5,
+"events": [  ]
+}
+2P_B={
+"deadzone": 0.5,
+"events": [  ]
+}
+2P_X={
+"deadzone": 0.5,
+"events": [  ]
+}
+2P_Y={
+"deadzone": 0.5,
+"events": [  ]
+}
+2P_L1={
+"deadzone": 0.5,
+"events": [  ]
+}
+2P_L2={
+"deadzone": 0.5,
+"events": [  ]
+}
+2P_L3={
+"deadzone": 0.5,
+"events": [  ]
+}
+2P_R1={
+"deadzone": 0.5,
+"events": [  ]
+}
+2P_R2={
+"deadzone": 0.5,
+"events": [  ]
+}
+2P_R3={
+"deadzone": 0.5,
+"events": [  ]
+}
+2P_BACK={
+"deadzone": 0.5,
+"events": [  ]
+}
+2P_START={
+"deadzone": 0.5,
+"events": [  ]
+}
+2P_up={
+"deadzone": 0.5,
+"events": [  ]
+}
+2P_down={
+"deadzone": 0.5,
+"events": [  ]
+}
+2P_left={
+"deadzone": 0.5,
+"events": [  ]
+}
+2P_right={
+"deadzone": 0.5,
+"events": [  ]
+}
+
+[layer_names]
+
+2d_physics/layer_2="PlayerBase"
+2d_physics/layer_3="无人机"
+2d_physics/layer_4="FootPrint"
+2d_physics/layer_5="Stain"
+2d_physics/layer_8="Interact Object"
+2d_physics/layer_9="Item"
+2d_physics/layer_10="Player"
+2d_physics/layer_11="NPC"
+2d_physics/layer_12="Staff"
+2d_physics/layer_13="PlayerBody"
+2d_physics/layer_14="SPECIALNPC"
+2d_physics/layer_20="NPCLeave"
+
+[locale]
+
+test="zh"
+fallback="zh"
+translations=PoolStringArray(  )
+locale_filter=[ 0, [ "en", "zh" ] ]
+
+[physics]
+
+common/physics_jitter_fix=0.0
+
+[rendering]
+
+quality/intended_usage/framebuffer_allocation=0
+quality/intended_usage/framebuffer_allocation.mobile=0
+environment/default_environment="res://default_env.tres"
+
+[steam]
+
+initialization/app_id=2336220
+initialization/embed_callbacks=true

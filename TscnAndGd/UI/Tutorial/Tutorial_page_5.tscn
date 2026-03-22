@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_Symbol_3.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_Symbol_combo.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_Symbol_0.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_Symbol_1.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_Symbol_max.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_rep.tres" type="Texture" id=8]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=12]
+
+[node name="连击" type="Node2D"]
+
+[node name="Label6" type="RichTextLabel" parent="."]
+margin_left = -386.0
+margin_top = -161.0
+margin_right = 426.0
+margin_bottom = 93.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "{术语_COMBO}：
+连续{术语_完美出杯}，能够获得连击，任何失误都可能断开连击。
+售出饮品时，每一个{术语_COMBO}都可以提升你获得的{术语_声望值}（上限是10）。
+维持10以上的{术语_COMBO}，{术语_声望值}就可以获得最大提升。"
+text = "{术语_COMBO}：
+连续{术语_完美出杯}，能够获得连击，任何失误都可能断开连击。
+售出饮品时，每一个{术语_COMBO}都可以提升你获得的{术语_声望值}（上限是10）。
+维持10以上的{术语_COMBO}，{术语_声望值}就可以获得最大提升。"
+script = ExtResource( 12 )
+LabelTEXT = "信息-文字说明-6"
+Center_Bool = true
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2( -272, -640 )
+
+[node name="BG" type="NinePatchRect" parent="Node2D2"]
+self_modulate = Color( 0, 0, 0, 0.784314 )
+margin_left = 50.0
+margin_top = 400.0
+margin_right = 517.0
+margin_bottom = 456.0
+texture = ExtResource( 3 )
+patch_margin_left = 42
+patch_margin_right = 42
+
+[node name="UiSymbolCombo" type="Sprite" parent="Node2D2/BG"]
+modulate = Color( 1, 0.74902, 0, 1 )
+position = Vector2( 193.5, 2 )
+texture = ExtResource( 2 )
+
+[node name="UiSymbol3" type="Sprite" parent="Node2D2/BG"]
+modulate = Color( 1, 0.74902, 0, 1 )
+position = Vector2( 343.5, -23 )
+texture = ExtResource( 1 )
+
+[node name="Node2D3" type="Node2D" parent="."]
+visible = false
+position = Vector2( -426, -256 )
+
+[node name="BG" type="NinePatchRect" parent="Node2D3"]
+self_modulate = Color( 0, 0, 0, 0.784314 )
+margin_left = 50.0
+margin_top = 400.0
+margin_right = 517.0
+margin_bottom = 456.0
+texture = ExtResource( 3 )
+patch_margin_left = 42
+patch_margin_right = 42
+
+[node name="UiSymbolCombo" type="Sprite" parent="Node2D3/BG"]
+modulate = Color( 1, 0.74902, 0, 1 )
+position = Vector2( 193.5, 2 )
+texture = ExtResource( 2 )
+
+[node name="UiSymbol3" type="Sprite" parent="Node2D3/BG"]
+modulate = Color( 1, 0.74902, 0, 1 )
+position = Vector2( 391, -24 )
+texture = ExtResource( 4 )
+
+[node name="UiSymbol4" type="Sprite" parent="Node2D3/BG"]
+modulate = Color( 1, 0.74902, 0, 1 )
+position = Vector2( 334, -23 )
+texture = ExtResource( 5 )
+
+[node name="TotuInfo2" type="Sprite" parent="Node2D3"]
+position = Vector2( 572, 404 )
+texture = ExtResource( 6 )
+
+[node name="UiIconRep" type="Sprite" parent="Node2D3"]
+position = Vector2( 685.5, 410 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 8 )
+
+[node name="UiSymbolMax" type="Sprite" parent="Node2D3"]
+position = Vector2( 688.5, 349 )
+texture = ExtResource( 7 )

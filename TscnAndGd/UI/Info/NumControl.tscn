@@ -1,0 +1,178 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Resources/Effects/Single/Single/Effect_Fonts_3.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Effects/Single/Single/Effect_Fonts_2.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Effects/Single/Single/Effect_Fonts_1.png" type="Texture" id=3]
+[ext_resource path="res://TscnAndGd/UI/Info/NumControl.gd" type="Script" id=4]
+[ext_resource path="res://Resources/Effects/Single/Single/Effect_Fonts_4.png" type="Texture" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "High"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.392157, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Low"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.690196, 0.705882, 0.705882, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Normal"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.784314, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Reduce"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "Tip"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "L"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "M"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "S"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "S_elec"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+
+[node name="Control" type="Control"]
+margin_right = 20.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 20, 28 )
+script = ExtResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 1, 0.784314, 0, 1 )
+texture = ExtResource( 3 )
+offset = Vector2( 10, 14 )
+hframes = 12
+frame = 2
+
+[node name="Ani" type="AnimationPlayer" parent="Sprite"]
+autoplay = "Normal"
+anims/High = SubResource( 1 )
+anims/Low = SubResource( 2 )
+anims/Normal = SubResource( 3 )
+anims/Reduce = SubResource( 4 )
+anims/Tip = SubResource( 8 )
+
+[node name="Type" type="AnimationPlayer" parent="Sprite"]
+anims/L = SubResource( 5 )
+anims/M = SubResource( 6 )
+anims/S = SubResource( 7 )
+anims/S_elec = SubResource( 9 )

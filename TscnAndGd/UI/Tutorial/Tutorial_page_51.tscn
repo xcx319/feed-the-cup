@@ -1,0 +1,141 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_32.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashItem_a6.tres" type="Texture" id=2]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=3]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_body_front.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_hold_2.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_head_side.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_idle_0.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_tail_back.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_idle_1.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_idle_1.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashItem_a7.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashItem_a8.tres" type="Texture" id=13]
+
+[node name="捡垃圾" type="Node2D"]
+position = Vector2( 40.5, 11 )
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2( -83.5, -26 )
+
+[node name="OutdoorTrashItemA6" type="Sprite" parent="1"]
+position = Vector2( 104.5, 41.5 )
+texture = ExtResource( 2 )
+
+[node name="UiPoptipIdea32" type="Sprite" parent="1"]
+position = Vector2( 109.5, 1.5 )
+texture = ExtResource( 1 )
+
+[node name="OutdoorTrashItemA7" type="Sprite" parent="1"]
+position = Vector2( -95.5, 5.5 )
+texture = ExtResource( 12 )
+
+[node name="UiPoptipIdea33" type="Sprite" parent="1"]
+position = Vector2( -90.5, -34.5 )
+texture = ExtResource( 1 )
+
+[node name="OutdoorTrashItemA8" type="Sprite" parent="1"]
+position = Vector2( 211.5, 11.5 )
+texture = ExtResource( 13 )
+
+[node name="UiPoptipIdea34" type="Sprite" parent="1"]
+position = Vector2( 216.5, -28.5 )
+texture = ExtResource( 1 )
+
+[node name="Bear" type="Node2D" parent="1"]
+position = Vector2( 40, 52 )
+scale = Vector2( -1, 1 )
+
+[node name="Leg_L" type="Node2D" parent="1/Bear"]
+show_behind_parent = true
+position = Vector2( -7, -32 )
+
+[node name="L" type="Sprite" parent="1/Bear/Leg_L"]
+texture = ExtResource( 10 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="1/Bear"]
+position = Vector2( 7, -27 )
+rotation = -0.261799
+
+[node name="R" type="Sprite" parent="1/Bear/Leg_R"]
+texture = ExtResource( 7 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="1/Bear"]
+show_behind_parent = true
+position = Vector2( 0, -25 )
+rotation = -0.523598
+
+[node name="BodyPose" type="Node2D" parent="1/Bear/Body_note"]
+rotation = 0.261799
+scale = Vector2( 1.05, 1.05 )
+
+[node name="Body" type="Node2D" parent="1/Bear/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="1/Bear/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+texture = ExtResource( 4 )
+
+[node name="HeadPose" type="Node2D" parent="1/Bear/Body_note/BodyPose/Body"]
+position = Vector2( 0, -70 )
+rotation = -0.106039
+
+[node name="Head" type="Node2D" parent="1/Bear/Body_note/BodyPose/Body/HeadPose"]
+position = Vector2( -10.2217, 3.31733 )
+rotation = -0.261799
+
+[node name="Left" type="Sprite" parent="1/Bear/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 6 )
+offset = Vector2( 0, -26 )
+
+[node name="Arm_Hold" type="Node2D" parent="1/Bear/Body_note/BodyPose"]
+position = Vector2( 0, -44 )
+scale = Vector2( -1, 1 )
+
+[node name="Pose_Hold" type="Node2D" parent="1/Bear/Body_note/BodyPose/Arm_Hold"]
+rotation = 0.523598
+
+[node name="Arm" type="Sprite" parent="1/Bear/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 1, 0 )
+texture = ExtResource( 9 )
+offset = Vector2( -10, 3 )
+
+[node name="Arm" type="Node2D" parent="1/Bear/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( -10, -50 )
+scale = Vector2( -1, 1 )
+
+[node name="Pose" type="Node2D" parent="1/Bear/Body_note/BodyPose/Arm"]
+position = Vector2( 7.94071, 0.557396 )
+rotation = 0.0799599
+
+[node name="Arm" type="Sprite" parent="1/Bear/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 5 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="1/Bear/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 28, -15 )
+rotation = 0.0534768
+texture = ExtResource( 8 )
+offset = Vector2( 20, -16 )
+
+[node name="225" type="RichTextLabel" parent="."]
+margin_left = -380.0
+margin_top = 73.0
+margin_right = 395.0
+margin_bottom = 278.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "游乐园管理要求店铺做好“门前三包”。
+一不小心冰淇淋球就会掉在地上，你需要将它们打扫干净。"
+text = "游乐园管理要求店铺做好“门前三包”。
+一不小心冰淇淋球就会掉在地上，你需要将它们打扫干净。"
+script = ExtResource( 3 )
+LabelTEXT = "信息-文字说明-225"
+Center_Bool = true

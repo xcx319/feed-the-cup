@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_s.tres" type="Texture" id=1]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_box_back.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_box_open.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_box_body_thrash.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_box_front_1.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=8]
+
+[node name="拆箱子" type="Node2D"]
+position = Vector2( -20, 510 )
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( -189, 0 )
+
+[node name="DeviceBoxFront" type="Sprite" parent="Node2D"]
+texture = ExtResource( 3 )
+
+[node name="DeviceBoxOpen" type="Sprite" parent="Node2D"]
+texture = ExtResource( 4 )
+
+[node name="DeviceBoxFront1" type="Sprite" parent="Node2D"]
+texture = ExtResource( 6 )
+
+[node name="X" parent="." instance=ExtResource( 2 )]
+margin_left = -109.0
+margin_top = -39.0
+margin_right = -109.0
+margin_bottom = -39.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-拆"
+OnBut = false
+
+[node name="UiIconInfo1" type="Sprite" parent="."]
+position = Vector2( -65, 10 )
+texture = ExtResource( 8 )
+
+[node name="UiIconInfo2" type="Sprite" parent="."]
+position = Vector2( 125, 10 )
+texture = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 34, -4 )
+texture = ExtResource( 5 )
+
+[node name="DeviceTrashbinS" type="Sprite" parent="."]
+position = Vector2( 232, 7 )
+texture = ExtResource( 1 )

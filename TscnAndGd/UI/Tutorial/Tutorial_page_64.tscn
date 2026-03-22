@@ -1,0 +1,490 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_switchlight_green.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_inductioncooker_s.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_milkpot_back.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_milkpot_spoon.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_milk_open.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_milkpot_water.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_cook_cheeze.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_milkpot_front.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_milkpot_water_up.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_cook_cheeze_clean.tres" type="Texture" id=10]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=11]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_5.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_waterport20.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_waterport20_empty.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_port_water_full.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_act_1.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_teawork_hot.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_check_wrong.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_pot_cheeze.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_bg.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_8.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_thermometer_temperature.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_thermometer_bg.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_pressure_2.tres" type="Texture" id=27]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_check.tres" type="Texture" id=30]
+
+[node name="生酪牛奶" type="Node2D"]
+
+[node name="109" type="RichTextLabel" parent="."]
+margin_left = 77.0
+margin_top = 273.0
+margin_right = 846.0
+margin_bottom = 414.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "牛奶锅中倒入一整盒牛奶，再加入芝士，放到电磁炉上加热。
+待温度变{术语_热}后，必须要一边加热一边{术语_搅拌}，不可以加热到{术语_沸腾}，否则会糊锅！"
+text = "牛奶锅中倒入一整盒牛奶，再加入芝士，放到电磁炉上加热。
+待温度变{术语_热}后，必须要一边加热一边{术语_搅拌}，不可以加热到{术语_沸腾}，否则会糊锅！"
+script = ExtResource( 11 )
+LabelTEXT = "信息-文字说明-109"
+Center_Bool = true
+
+[node name="110" type="RichTextLabel" parent="."]
+margin_left = 88.0
+margin_top = 618.0
+margin_right = 844.0
+margin_bottom = 783.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "如果温度过高，快要{术语_沸腾}还没有完成搅拌，可以先将锅拿下来降温。
+待温度降低后继续加热搅拌直到完成，做好后倒入{术语_量杯}，芝士牛奶就做好了。"
+text = "如果温度过高，快要{术语_沸腾}还没有完成搅拌，可以先将锅拿下来降温。
+待温度降低后继续加热搅拌直到完成，做好后倒入{术语_量杯}，芝士牛奶就做好了。"
+script = ExtResource( 11 )
+LabelTEXT = "信息-文字说明-110"
+Center_Bool = true
+
+[node name="TexNode3" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2( 216, 213 )
+
+[node name="back" type="Sprite" parent="TexNode3"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 3 )
+
+[node name="Milk_down" type="Sprite" parent="TexNode3"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 6 )
+
+[node name="Item" type="Sprite" parent="TexNode3"]
+position = Vector2( 0, -10 )
+texture = ExtResource( 10 )
+
+[node name="ItemMilkpotSpoon" type="Sprite" parent="TexNode3"]
+position = Vector2( 24, -30 )
+rotation = 0.261799
+texture = ExtResource( 4 )
+offset = Vector2( -2, 15 )
+
+[node name="Milk_up" type="Sprite" parent="TexNode3"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 9 )
+
+[node name="Front" type="Sprite" parent="TexNode3"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 8 )
+
+[node name="TotuInfo1" type="Sprite" parent="TexNode3"]
+position = Vector2( -18.4615, -40 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 12 )
+
+[node name="Bag" type="Sprite" parent="TexNode3"]
+position = Vector2( 61.5385, -74.6154 )
+texture = ExtResource( 7 )
+
+[node name="TotuInfo2" type="Sprite" parent="TexNode3"]
+position = Vector2( 18.4614, -54.6154 )
+scale = Vector2( -0.7, 0.7 )
+texture = ExtResource( 12 )
+
+[node name="MaterialBottleMilkOpen" type="Sprite" parent="TexNode3"]
+position = Vector2( -68.4615, -60.7692 )
+rotation = 0.261799
+texture = ExtResource( 5 )
+
+[node name="TexNode6" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2( 480, 206 )
+
+[node name="DeviceInductioncookerS" type="Sprite" parent="TexNode6"]
+position = Vector2( -4, 3 )
+texture = ExtResource( 2 )
+
+[node name="DeviceSwitchlightGreen" type="Sprite" parent="TexNode6/DeviceInductioncookerS"]
+position = Vector2( 21, 26 )
+texture = ExtResource( 1 )
+
+[node name="back" type="Sprite" parent="TexNode6"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 3 )
+
+[node name="Milk_down" type="Sprite" parent="TexNode6"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 6 )
+
+[node name="Item" type="Sprite" parent="TexNode6"]
+position = Vector2( 0, -10 )
+texture = ExtResource( 10 )
+
+[node name="ItemMilkpotSpoon" type="Sprite" parent="TexNode6"]
+position = Vector2( 20.7692, -34.6154 )
+rotation = 0.261799
+texture = ExtResource( 4 )
+offset = Vector2( -2, 15 )
+
+[node name="Milk_up" type="Sprite" parent="TexNode6"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 9 )
+
+[node name="Front" type="Sprite" parent="TexNode6"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 8 )
+
+[node name="UiTeaworkCold" type="Sprite" parent="TexNode6"]
+position = Vector2( -3.0769, -63.8462 )
+texture = ExtResource( 19 )
+
+[node name="TexNode4" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2( 729, 211 )
+
+[node name="DeviceInductioncookerS" type="Sprite" parent="TexNode4"]
+position = Vector2( -4, 3 )
+texture = ExtResource( 2 )
+
+[node name="DeviceSwitchlightGreen" type="Sprite" parent="TexNode4/DeviceInductioncookerS"]
+position = Vector2( 21, 26 )
+texture = ExtResource( 1 )
+
+[node name="back" type="Sprite" parent="TexNode4"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 3 )
+
+[node name="Milk_down" type="Sprite" parent="TexNode4"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 6 )
+
+[node name="Item" type="Sprite" parent="TexNode4"]
+position = Vector2( 0, -10 )
+texture = ExtResource( 10 )
+
+[node name="ItemMilkpotSpoon" type="Sprite" parent="TexNode4"]
+position = Vector2( -4.00002, -39 )
+rotation = -0.261799
+texture = ExtResource( 4 )
+offset = Vector2( -2, 15 )
+
+[node name="Milk_up" type="Sprite" parent="TexNode4"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 9 )
+
+[node name="Front" type="Sprite" parent="TexNode4"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 8 )
+
+[node name="TotuInfo5" type="Sprite" parent="TexNode4"]
+position = Vector2( -119, -72 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 14 )
+
+[node name="MixUi" type="Node2D" parent="TexNode4"]
+position = Vector2( -2, -53 )
+
+[node name="TPBG" type="TextureProgress" parent="TexNode4/MixUi"]
+margin_left = -18.0
+margin_top = -62.0
+margin_right = 38.0
+margin_bottom = -21.0
+rect_scale = Vector2( 0.85, 0.85 )
+rect_pivot_offset = Vector2( 0, 16 )
+max_value = 60.0
+value = 20.0
+texture_under = ExtResource( 18 )
+texture_progress = ExtResource( 18 )
+fill_mode = 3
+tint_progress = Color( 0.0901961, 1, 0, 1 )
+
+[node name="UiProgressBg" type="Sprite" parent="TexNode4/MixUi"]
+position = Vector2( -1, -10 )
+texture = ExtResource( 23 )
+
+[node name="TextureProgress" type="TextureProgress" parent="TexNode4/MixUi"]
+margin_left = -29.0
+margin_top = -17.0
+margin_right = 27.0
+margin_bottom = -5.0
+rect_pivot_offset = Vector2( 0, 16 )
+value = 20.0
+texture_under = ExtResource( 24 )
+texture_progress = ExtResource( 24 )
+tint_under = Color( 0.960784, 0.976471, 0.113725, 1 )
+tint_progress = Color( 1, 0, 0, 1 )
+
+[node name="TotuInfo3" type="Sprite" parent="."]
+position = Vector2( 350, 204 )
+texture = ExtResource( 13 )
+
+[node name="TotuInfo2" type="Sprite" parent="."]
+position = Vector2( 604, 199 )
+texture = ExtResource( 13 )
+
+[node name="TexNode7" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2( 201, 537 )
+
+[node name="DeviceInductioncookerS" type="Sprite" parent="TexNode7"]
+position = Vector2( -89, -7 )
+texture = ExtResource( 2 )
+
+[node name="DeviceSwitchlightGreen" type="Sprite" parent="TexNode7/DeviceInductioncookerS"]
+position = Vector2( 21, 26 )
+texture = ExtResource( 1 )
+
+[node name="UiIconStateCheckWrong" type="Sprite" parent="TexNode7/DeviceInductioncookerS"]
+modulate = Color( 1, 0.00784314, 0.00784314, 1 )
+position = Vector2( 30, 37 )
+texture = ExtResource( 21 )
+
+[node name="back" type="Sprite" parent="TexNode7"]
+use_parent_material = true
+position = Vector2( -21, -22 )
+texture = ExtResource( 3 )
+
+[node name="Milk_down" type="Sprite" parent="TexNode7"]
+position = Vector2( -20, -23 )
+texture = ExtResource( 6 )
+
+[node name="Item" type="Sprite" parent="TexNode7"]
+position = Vector2( -18, -33 )
+texture = ExtResource( 10 )
+
+[node name="ItemMilkpotSpoon" type="Sprite" parent="TexNode7"]
+position = Vector2( 3, -57 )
+rotation = 0.261799
+texture = ExtResource( 4 )
+offset = Vector2( -2, 15 )
+
+[node name="Milk_up" type="Sprite" parent="TexNode7"]
+position = Vector2( -20, -23 )
+texture = ExtResource( 9 )
+
+[node name="Front" type="Sprite" parent="TexNode7"]
+use_parent_material = true
+position = Vector2( -21, -22 )
+texture = ExtResource( 8 )
+
+[node name="MixUi" type="Node2D" parent="TexNode7"]
+position = Vector2( -20, -75 )
+
+[node name="UiProgressBg" type="Sprite" parent="TexNode7/MixUi"]
+position = Vector2( -1, -10 )
+texture = ExtResource( 23 )
+
+[node name="TextureProgress" type="TextureProgress" parent="TexNode7/MixUi"]
+margin_left = -29.0
+margin_top = -17.0
+margin_right = 27.0
+margin_bottom = -5.0
+rect_pivot_offset = Vector2( 0, 16 )
+value = 80.0
+texture_under = ExtResource( 24 )
+texture_progress = ExtResource( 24 )
+tint_under = Color( 0.960784, 0.976471, 0.113725, 1 )
+tint_progress = Color( 1, 0, 0, 1 )
+
+[node name="TexNode8" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2( 370, 515 )
+
+[node name="back" type="Sprite" parent="TexNode8"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 3 )
+
+[node name="Milk_down" type="Sprite" parent="TexNode8"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 6 )
+
+[node name="Item" type="Sprite" parent="TexNode8"]
+position = Vector2( 0, -10 )
+texture = ExtResource( 10 )
+
+[node name="ItemMilkpotSpoon" type="Sprite" parent="TexNode8"]
+position = Vector2( 21, -34 )
+rotation = 0.261799
+texture = ExtResource( 4 )
+offset = Vector2( -2, 15 )
+
+[node name="Milk_up" type="Sprite" parent="TexNode8"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 9 )
+
+[node name="Front" type="Sprite" parent="TexNode8"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 8 )
+
+[node name="MixUi" type="Node2D" parent="TexNode8"]
+position = Vector2( -2, -52 )
+
+[node name="UiProgressBg" type="Sprite" parent="TexNode8/MixUi"]
+position = Vector2( -1, -10 )
+texture = ExtResource( 23 )
+
+[node name="TextureProgress" type="TextureProgress" parent="TexNode8/MixUi"]
+margin_left = -29.0
+margin_top = -17.0
+margin_right = 27.0
+margin_bottom = -5.0
+rect_pivot_offset = Vector2( 0, 16 )
+value = 30.0
+texture_under = ExtResource( 24 )
+texture_progress = ExtResource( 24 )
+tint_under = Color( 0.960784, 0.976471, 0.113725, 1 )
+tint_progress = Color( 1, 0, 0, 1 )
+
+[node name="TotuInfo4" type="Sprite" parent="."]
+position = Vector2( 278, 524 )
+texture = ExtResource( 13 )
+
+[node name="UiIconThermometerTemperature" type="Sprite" parent="TotuInfo4"]
+position = Vector2( -4, -32 )
+texture = ExtResource( 25 )
+
+[node name="UiIconThermometerBg" type="Sprite" parent="TotuInfo4/UiIconThermometerTemperature"]
+texture = ExtResource( 26 )
+
+[node name="UiIconPressure2" type="Sprite" parent="TotuInfo4/UiIconThermometerTemperature"]
+self_modulate = Color( 0, 0.776471, 1, 1 )
+position = Vector2( 14, 4 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 27 )
+
+[node name="TexNode9" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2( 555, 540 )
+
+[node name="back" type="Sprite" parent="TexNode9"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 3 )
+
+[node name="Milk_down" type="Sprite" parent="TexNode9"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 6 )
+
+[node name="Item" type="Sprite" parent="TexNode9"]
+position = Vector2( 0, -10 )
+texture = ExtResource( 10 )
+
+[node name="ItemMilkpotSpoon" type="Sprite" parent="TexNode9"]
+position = Vector2( 21, -34 )
+rotation = 0.261799
+texture = ExtResource( 4 )
+offset = Vector2( -2, 15 )
+
+[node name="Milk_up" type="Sprite" parent="TexNode9"]
+position = Vector2( -2, 0 )
+texture = ExtResource( 9 )
+
+[node name="Front" type="Sprite" parent="TexNode9"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 8 )
+
+[node name="MixUi" type="Node2D" parent="TexNode9"]
+position = Vector2( -2, -52 )
+
+[node name="UiProgressBg" type="Sprite" parent="TexNode9/MixUi"]
+position = Vector2( -1, -10 )
+texture = ExtResource( 23 )
+
+[node name="TextureProgress" type="TextureProgress" parent="TexNode9/MixUi"]
+margin_left = -29.0
+margin_top = -17.0
+margin_right = 27.0
+margin_bottom = -5.0
+rect_pivot_offset = Vector2( 0, 16 )
+value = 50.0
+texture_under = ExtResource( 24 )
+texture_progress = ExtResource( 24 )
+tint_under = Color( 0.960784, 0.976471, 0.113725, 1 )
+tint_progress = Color( 1, 0, 0, 1 )
+
+[node name="TPBG" type="TextureProgress" parent="TexNode9/MixUi"]
+margin_left = -18.0
+margin_top = -62.0
+margin_right = 38.0
+margin_bottom = -21.0
+rect_scale = Vector2( 0.85, 0.85 )
+rect_pivot_offset = Vector2( 0, 16 )
+max_value = 60.0
+value = 40.0
+texture_under = ExtResource( 18 )
+texture_progress = ExtResource( 18 )
+fill_mode = 3
+tint_progress = Color( 0.0901961, 1, 0, 1 )
+
+[node name="TexNode5" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2( 721, 490 )
+rotation = 0.785397
+
+[node name="back" type="Sprite" parent="TexNode5"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 3 )
+
+[node name="Milk_down" type="Sprite" parent="TexNode5"]
+modulate = Color( 1, 0.886275, 0.501961, 1 )
+position = Vector2( -2, 5.90678 )
+scale = Vector2( 1, 0.818253 )
+texture = ExtResource( 6 )
+
+[node name="Front" type="Sprite" parent="TexNode5"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 8 )
+
+[node name="Port4" type="Node2D" parent="TexNode5"]
+position = Vector2( 71.4178, -7.77808 )
+rotation = -0.785397
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="TexNode5/Port4"]
+texture = ExtResource( 16 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="TexNode5/Port4"]
+modulate = Color( 0.996078, 0.854902, 0.301961, 1 )
+position = Vector2( 0.769226, 16.923 )
+scale = Vector2( 1, 0.405925 )
+texture = ExtResource( 17 )
+
+[node name="ItemWaterport20" type="Sprite" parent="TexNode5/Port4"]
+texture = ExtResource( 15 )
+
+[node name="IconLiquidPotCheeze" type="Sprite" parent="TexNode5/Port4"]
+position = Vector2( -1.00006, -49 )
+texture = ExtResource( 22 )
+
+[node name="UiIconStateCheck" type="Sprite" parent="TexNode5"]
+modulate = Color( 0.262745, 0.94902, 0, 1 )
+position = Vector2( 110.309, -29.6983 )
+rotation = -0.785397
+texture = ExtResource( 30 )
+
+[node name="TotuInfo5" type="Sprite" parent="."]
+position = Vector2( 654, 540 )
+texture = ExtResource( 13 )

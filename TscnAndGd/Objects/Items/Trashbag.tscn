@@ -1,0 +1,170 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://TscnAndGd/Objects/Devices/Control_Info.tscn" type="PackedScene" id=1]
+[ext_resource path="res://TscnAndGd/Objects/Items/Trashbag.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_trashbag.tres" type="Texture" id=3]
+[ext_resource path="res://TscnAndGd/Effects/Effect_flies.tscn" type="PackedScene" id=4]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_check_pass.tres" type="Texture" id=6]
+
+[sub_resource type="Animation" id=174]
+resource_name = "init"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TexNode:material:shader_param/aura_width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=175]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TexNode:material:shader_param/aura_width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=176]
+resource_name = "flies"
+length = 2.0
+loop = true
+tracks/0/type = "animation"
+tracks/0/path = NodePath("../TexNode/Effect_flies/Ani")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "OverDay" ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Shader" id=173]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=172]
+resource_local_to_scene = true
+shader = SubResource( 173 )
+shader_param/aura_width = 0.0
+shader_param/aura_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="CapsuleShape2D" id=177]
+radius = 25.0
+height = 52.0
+
+[node name="Trashbag" type="Area2D"]
+collision_layer = 384
+collision_mask = 3584
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": "ITEM"
+}
+
+[node name="AniNode" type="Node2D" parent="."]
+
+[node name="OutLineAni" type="AnimationPlayer" parent="AniNode"]
+autoplay = "init"
+anims/init = SubResource( 174 )
+anims/show = SubResource( 175 )
+
+[node name="Flies" type="AnimationPlayer" parent="AniNode"]
+autoplay = "flies"
+anims/flies = SubResource( 176 )
+
+[node name="TexNode" type="Node2D" parent="."]
+material = SubResource( 172 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="Tex" type="Sprite" parent="TexNode"]
+use_parent_material = true
+position = Vector2( 0, -25 )
+texture = ExtResource( 3 )
+
+[node name="Effect_flies" parent="TexNode" instance=ExtResource( 4 )]
+position = Vector2( 0, -34.6154 )
+
+[node name="Control_Info" parent="." instance=ExtResource( 1 )]
+
+[node name="But" type="VBoxContainer" parent="."]
+margin_left = -20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = 120.0
+custom_constants/separation = 28
+
+[node name="A" parent="But" instance=ExtResource( 5 )]
+bool_Small = true
+Info_Str = "BUT-拿"
+OnBut = false
+
+[node name="Y" parent="But" instance=ExtResource( 5 )]
+visible = false
+margin_top = 28.0
+margin_bottom = 28.0
+bool_Small = true
+Info_Str = "BUT-放下"
+OnBut = false
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 0, -26 )
+z_index = 1
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource( 177 )
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

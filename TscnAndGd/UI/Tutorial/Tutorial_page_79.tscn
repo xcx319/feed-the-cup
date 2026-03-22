@@ -1,0 +1,151 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_steam_1.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_port_water_full.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_steam_2.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_2.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_4.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_4.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_1.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_4.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_top.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_3.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_barrel_shelf.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_barrel_back.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_barrel_top.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_barrel_front.tres" type="Texture" id=14]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=15]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_tea_oolong.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=17]
+
+[node name="茶桶特点" type="Node2D"]
+
+[node name="121" type="RichTextLabel" parent="."]
+margin_left = 154.0
+margin_top = 667.0
+margin_right = 819.0
+margin_bottom = 823.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "持杯子在茶桶下方，点击一次就可将杯子装满，要注意先加入其他的配料，否则会没有空间。"
+text = "持杯子在茶桶下方，点击一次就可将杯子装满，要注意先加入其他的配料，否则会没有空间。"
+script = ExtResource( 15 )
+LabelTEXT = "信息-文字说明-121"
+Center_Bool = true
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2( 311, 454 )
+
+[node name="BT" type="Node2D" parent="Node2D2"]
+position = Vector2( 88, 230 )
+
+[node name="ItemBarrelShelf" type="Sprite" parent="Node2D2/BT"]
+position = Vector2( 0, -103 )
+texture = ExtResource( 11 )
+
+[node name="B2" type="Node2D" parent="Node2D2/BT"]
+use_parent_material = true
+position = Vector2( 18, -135 )
+
+[node name="ItemBarrelTopBack" type="Sprite" parent="Node2D2/BT/B2"]
+position = Vector2( 0, -14 )
+texture = ExtResource( 12 )
+offset = Vector2( 0, -21 )
+
+[node name="liquid" type="Sprite" parent="Node2D2/BT/B2"]
+modulate = Color( 0.533333, 0.360784, 0.00784314, 1 )
+position = Vector2( 2.11596e-06, 0.617296 )
+scale = Vector2( 1.6, 0.90027 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, -27 )
+
+[node name="front" type="Sprite" parent="Node2D2/BT/B2"]
+use_parent_material = true
+position = Vector2( 0, -14 )
+texture = ExtResource( 14 )
+offset = Vector2( 0, -21 )
+
+[node name="ItemBarrelTop" type="Sprite" parent="Node2D2/BT/B2"]
+position = Vector2( 24, -76 )
+texture = ExtResource( 13 )
+offset = Vector2( -23.5, 1 )
+
+[node name="IconNode" type="Node2D" parent="Node2D2/BT/B2"]
+position = Vector2( 0, -37 )
+
+[node name="Icon" type="Sprite" parent="Node2D2/BT/B2/IconNode"]
+position = Vector2( 0, 3 )
+texture = ExtResource( 16 )
+
+[node name="Temp" type="Node2D" parent="Node2D2/BT/B2"]
+position = Vector2( 0, -37 )
+
+[node name="ItemSteam1" type="Sprite" parent="Node2D2/BT/B2/Temp"]
+self_modulate = Color( 1, 1, 1, 0.833333 )
+position = Vector2( 4, -21 )
+scale = Vector2( 0.8, 1.08333 )
+texture = ExtResource( 1 )
+offset = Vector2( 4.76837e-07, -49.0656 )
+
+[node name="ItemSteam2" type="Sprite" parent="Node2D2/BT/B2/Temp"]
+self_modulate = Color( 1, 1, 1, 0.788235 )
+position = Vector2( 1, 34 )
+scale = Vector2( 0.6375, 0.825 )
+texture = ExtResource( 3 )
+offset = Vector2( -23.5449, -116.998 )
+
+[node name="Cup4" type="Node2D" parent="Node2D2"]
+position = Vector2( 88, 163 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="Node2D2/Cup4"]
+texture = ExtResource( 8 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="Node2D2/Cup4"]
+self_modulate = Color( 1, 0.870588, 0.32549, 1 )
+texture = ExtResource( 7 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="Node2D2/Cup4"]
+self_modulate = Color( 1, 0.870588, 0.32549, 1 )
+position = Vector2( 1.66665, 23.3334 )
+scale = Vector2( 0.880503, 1 )
+texture = ExtResource( 9 )
+
+[node name="UiProcupCup2" type="Sprite" parent="Node2D2/Cup4"]
+texture = ExtResource( 6 )
+
+[node name="Cup2" type="Node2D" parent="Node2D2"]
+position = Vector2( 275, 120 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="Node2D2/Cup2"]
+texture = ExtResource( 8 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="Node2D2/Cup2"]
+self_modulate = Color( 1, 0.870588, 0.32549, 1 )
+texture = ExtResource( 7 )
+
+[node name="UiProcupWaterlayer3" type="Sprite" parent="Node2D2/Cup2"]
+self_modulate = Color( 0.533333, 0.552941, 0.101961, 0.784314 )
+texture = ExtResource( 10 )
+
+[node name="UiProcupWaterlayer4" type="Sprite" parent="Node2D2/Cup2"]
+self_modulate = Color( 0.533333, 0.552941, 0.101961, 0.784314 )
+texture = ExtResource( 5 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="Node2D2/Cup2"]
+self_modulate = Color( 0.533333, 0.552941, 0.101961, 0.784314 )
+texture = ExtResource( 4 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="Node2D2/Cup2"]
+self_modulate = Color( 0.533333, 0.552941, 0.101961, 0.784314 )
+position = Vector2( 1.19995, -24 )
+texture = ExtResource( 9 )
+
+[node name="UiProcupCup2" type="Sprite" parent="Node2D2/Cup2"]
+texture = ExtResource( 6 )
+
+[node name="IconMenuArrow3" type="Sprite" parent="Node2D2"]
+position = Vector2( 316, -133 )
+texture = ExtResource( 17 )
+offset = Vector2( -124, 262 )

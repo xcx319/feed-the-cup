@@ -1,0 +1,290 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_TicketMachine_front.tres" type="Texture" id=2]
+[ext_resource path="res://TscnAndGd/Effects/WarningNode.tscn" type="PackedScene" id=3]
+[ext_resource path="res://TscnAndGd/Objects/Devices/TicketMachine.gd" type="Script" id=4]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_TicketMachine_6.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_TicketMachine_1.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_TicketMachine_3.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_TicketMachine_2.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_TicketMachine_4.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_TicketMachine_5.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_cuptip.tres" type="Texture" id=11]
+[ext_resource path="res://Sounds/Buttons/效果点击3轻单击.wav" type="AudioStream" id=12]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=13]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 34, 30 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TexNode/T:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../TexNode:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "ticket"
+length = 0.2
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TexNode/T:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../TexNode/T/T2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../TexNode/T/T1:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.06, 0.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../TexNode:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.06, 0.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 0.8 ), Vector2( 1, 1 ) ]
+}
+tracks/4/type = "audio"
+tracks/4/path = NodePath("../AudioStreamPlayer2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 12 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "use"
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TexNode/T:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../TexNode/T/T2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.15, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../TexNode/T/T1:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.05, 0.1, 0.15, 0.2, 0.25, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../TexNode/T/T2:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.19 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ), ExtResource( 5 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../TexNode:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.05, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 0.8 ), Vector2( 1, 1 ) ]
+}
+tracks/5/type = "audio"
+tracks/5/path = NodePath("../AudioStreamPlayer2D")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 12 )
+} ],
+"times": PoolRealArray( 0.15 )
+}
+
+[node name="TicketMachine" type="Area2D"]
+collision_layer = 384
+collision_mask = 3584
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 5 )
+shape = SubResource( 1 )
+
+[node name="TexNode" type="Node2D" parent="."]
+position = Vector2( 0, 25 )
+scale = Vector2( 1.06667, 0.933333 )
+
+[node name="Box" type="Sprite" parent="TexNode"]
+position = Vector2( 0, -27 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="TexNode"]
+margin_left = -40.0
+margin_top = -88.0
+margin_right = 40.0
+margin_bottom = -63.0
+custom_fonts/font = ExtResource( 1 )
+text = "IDNum"
+align = 1
+valign = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="TexNode/Label"]
+show_behind_parent = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -14.5
+margin_right = 48.0
+margin_bottom = 65.5
+rect_scale = Vector2( 0.8, 0.5 )
+texture = ExtResource( 11 )
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 65
+
+[node name="T" type="Node2D" parent="TexNode"]
+position = Vector2( 0, -27 )
+
+[node name="T1" type="Sprite" parent="TexNode/T"]
+position = Vector2( 8, 12 )
+texture = ExtResource( 6 )
+
+[node name="T2" type="Sprite" parent="TexNode/T"]
+position = Vector2( 8, 12 )
+texture = ExtResource( 10 )
+
+[node name="AniNode" type="Node" parent="."]
+
+[node name="Use" type="AnimationPlayer" parent="AniNode"]
+autoplay = "init"
+anims/init = SubResource( 2 )
+anims/ticket = SubResource( 3 )
+anims/use = SubResource( 4 )
+
+[node name="WarningNode" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, -96 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 12 )
+
+[node name="But" type="VBoxContainer" parent="."]
+margin_left = -34.0
+margin_top = 10.0
+margin_right = -34.0
+margin_bottom = 110.0
+custom_constants/separation = 28
+
+[node name="A" parent="But" instance=ExtResource( 13 )]
+bool_Small = true
+Info_Str = "BUT-贴标签"
+OnBut = false
+
+[node name="X" parent="But" instance=ExtResource( 13 )]
+margin_top = 28.0
+margin_bottom = 28.0
+bool_Small = true
+Info_Str = "BUT-往后"
+OnBut = false
+
+[node name="Y" parent="But" instance=ExtResource( 13 )]
+margin_top = 56.0
+margin_bottom = 56.0
+bool_Small = true
+Info_Str = "BUT-往前"
+OnBut = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

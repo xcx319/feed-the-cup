@@ -1,0 +1,354 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_watertank.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_water_all.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_watertank_pipe.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_port_water_full.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_bg.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_waterport20_empty.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_teawork_hot.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_waterport20.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_inductioncooker_s.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_switchlight_green.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_milkpot_water.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_8.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_milkpot_back.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_milkpot_front.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_milkpot_spoon.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_milkpot_water_up.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_sugar_blackcube.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_sugar_whitecube.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Devices/table/Device_table_1.png" type="Texture" id=19]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_5.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_act_1.tres" type="Texture" id=23]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=24]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_pot_brownsugar.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_pot_whitesugar.tres" type="Texture" id=26]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=27]
+
+[node name="熬糖水" type="Node2D"]
+position = Vector2( 993, 542 )
+
+[node name="184" type="RichTextLabel" parent="."]
+margin_left = -344.0
+margin_top = -113.0
+margin_right = 359.0
+margin_bottom = 26.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "在小锅里加水和糖，与制作芝士牛奶类似，加热熬制的时候需要持续搅拌。"
+text = "在小锅里加水和糖，与制作芝士牛奶类似，加热熬制的时候需要持续搅拌。"
+script = ExtResource( 24 )
+LabelTEXT = "信息-文字说明-184"
+Center_Bool = true
+
+[node name="185" type="RichTextLabel" parent="."]
+margin_left = -362.0
+margin_top = 191.0
+margin_right = 341.0
+margin_bottom = 319.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "使用白糖可制作普通的糖水，用黑糖则是黑糖糖水。"
+text = "使用白糖可制作普通的糖水，用黑糖则是黑糖糖水。"
+script = ExtResource( 24 )
+LabelTEXT = "信息-文字说明-185"
+Center_Bool = true
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2( 5, -28 )
+
+[node name="WorkBench2" type="Node2D" parent="1"]
+position = Vector2( -289, -145 )
+
+[node name="L" type="Sprite" parent="1/WorkBench2"]
+texture = ExtResource( 19 )
+offset = Vector2( -25, -30 )
+hframes = 2
+vframes = 8
+frame = 10
+
+[node name="R" type="Sprite" parent="1/WorkBench2"]
+texture = ExtResource( 19 )
+offset = Vector2( 25, -30 )
+flip_h = true
+hframes = 2
+vframes = 8
+frame = 10
+
+[node name="DeviceWatertank" type="Sprite" parent="1/WorkBench2"]
+position = Vector2( 2, -41 )
+texture = ExtResource( 1 )
+
+[node name="DeviceWatertankPipe" type="Sprite" parent="1/WorkBench2"]
+position = Vector2( 26.5, -124.5 )
+texture = ExtResource( 3 )
+
+[node name="water" type="Sprite" parent="1/WorkBench2"]
+position = Vector2( -3, -75 )
+texture = ExtResource( 2 )
+
+[node name="TexNode3" type="Node2D" parent="1"]
+use_parent_material = true
+position = Vector2( -199, -181 )
+
+[node name="back" type="Sprite" parent="1/TexNode3"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 13 )
+
+[node name="Milk_down" type="Sprite" parent="1/TexNode3"]
+self_modulate = Color( 0.309804, 0.933333, 1, 0.572549 )
+position = Vector2( -2, 0 )
+texture = ExtResource( 11 )
+
+[node name="Front" type="Sprite" parent="1/TexNode3"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 14 )
+
+[node name="TotuInfo1" type="Sprite" parent="1/TexNode3"]
+position = Vector2( -23, -24 )
+rotation = -0.523598
+texture = ExtResource( 21 )
+
+[node name="TexNode6" type="Node2D" parent="1"]
+use_parent_material = true
+position = Vector2( 28, -193 )
+
+[node name="DeviceInductioncookerS" type="Sprite" parent="1/TexNode6"]
+position = Vector2( -4, 3 )
+texture = ExtResource( 9 )
+
+[node name="DeviceSwitchlightGreen" type="Sprite" parent="1/TexNode6/DeviceInductioncookerS"]
+position = Vector2( 21, 26 )
+texture = ExtResource( 10 )
+
+[node name="back" type="Sprite" parent="1/TexNode6"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 13 )
+
+[node name="Milk_down" type="Sprite" parent="1/TexNode6"]
+self_modulate = Color( 0.309804, 0.933333, 1, 0.572549 )
+position = Vector2( -2, 0 )
+texture = ExtResource( 11 )
+
+[node name="ItemMilkpotSpoon" type="Sprite" parent="1/TexNode6"]
+position = Vector2( 20.7692, -34.6154 )
+rotation = 0.261799
+texture = ExtResource( 15 )
+offset = Vector2( -2, 15 )
+
+[node name="Milk_up" type="Sprite" parent="1/TexNode6"]
+self_modulate = Color( 0.309804, 0.933333, 1, 0.572549 )
+position = Vector2( -2, 0 )
+texture = ExtResource( 16 )
+
+[node name="Front" type="Sprite" parent="1/TexNode6"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 14 )
+
+[node name="UiTeaworkCold" type="Sprite" parent="1/TexNode6"]
+position = Vector2( -3.0769, -63.8462 )
+texture = ExtResource( 7 )
+
+[node name="Bag" type="Sprite" parent="1/TexNode6"]
+position = Vector2( -59.0229, -65 )
+texture = ExtResource( 18 )
+
+[node name="TotuInfo2" type="Sprite" parent="1/TexNode6"]
+position = Vector2( -31, -33 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 21 )
+
+[node name="TexNode4" type="Node2D" parent="1"]
+use_parent_material = true
+position = Vector2( 277, -188 )
+
+[node name="DeviceInductioncookerS" type="Sprite" parent="1/TexNode4"]
+position = Vector2( -4, 3 )
+texture = ExtResource( 9 )
+
+[node name="DeviceSwitchlightGreen" type="Sprite" parent="1/TexNode4/DeviceInductioncookerS"]
+position = Vector2( 21, 26 )
+texture = ExtResource( 10 )
+
+[node name="back" type="Sprite" parent="1/TexNode4"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 13 )
+
+[node name="Milk_down" type="Sprite" parent="1/TexNode4"]
+self_modulate = Color( 0.933333, 0.807843, 0.647059, 0.831373 )
+position = Vector2( -2, 0 )
+texture = ExtResource( 11 )
+
+[node name="ItemMilkpotSpoon" type="Sprite" parent="1/TexNode4"]
+position = Vector2( -4.00002, -39 )
+rotation = -0.261799
+texture = ExtResource( 15 )
+offset = Vector2( -2, 15 )
+
+[node name="Milk_up" type="Sprite" parent="1/TexNode4"]
+self_modulate = Color( 0.423529, 0.819608, 0.937255, 0.831373 )
+position = Vector2( -2, 0 )
+texture = ExtResource( 16 )
+
+[node name="Front" type="Sprite" parent="1/TexNode4"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 14 )
+
+[node name="TotuInfo5" type="Sprite" parent="1/TexNode4"]
+position = Vector2( -119, -72 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 22 )
+
+[node name="MixUi" type="Node2D" parent="1/TexNode4"]
+position = Vector2( -2, -53 )
+
+[node name="TPBG" type="TextureProgress" parent="1/TexNode4/MixUi"]
+margin_left = -18.0
+margin_top = -62.0
+margin_right = 38.0
+margin_bottom = -21.0
+rect_scale = Vector2( 0.85, 0.85 )
+rect_pivot_offset = Vector2( 0, 16 )
+max_value = 60.0
+value = 20.0
+texture_under = ExtResource( 23 )
+texture_progress = ExtResource( 23 )
+fill_mode = 3
+tint_progress = Color( 0.0901961, 1, 0, 1 )
+
+[node name="UiProgressBg" type="Sprite" parent="1/TexNode4/MixUi"]
+position = Vector2( -1, -10 )
+texture = ExtResource( 5 )
+
+[node name="TextureProgress" type="TextureProgress" parent="1/TexNode4/MixUi"]
+margin_left = -29.0
+margin_top = -17.0
+margin_right = 27.0
+margin_bottom = -5.0
+rect_pivot_offset = Vector2( 0, 16 )
+value = 20.0
+texture_under = ExtResource( 12 )
+texture_progress = ExtResource( 12 )
+tint_under = Color( 0.960784, 0.976471, 0.113725, 1 )
+tint_progress = Color( 1, 0, 0, 1 )
+
+[node name="TotuInfo3" type="Sprite" parent="1"]
+position = Vector2( -102, -195 )
+texture = ExtResource( 20 )
+
+[node name="TotuInfo2" type="Sprite" parent="1"]
+position = Vector2( 152, -200 )
+texture = ExtResource( 20 )
+
+[node name="MaterialSugarBlackcube" type="Sprite" parent="."]
+position = Vector2( 100, 56 )
+texture = ExtResource( 17 )
+
+[node name="TotuInfo3" type="Sprite" parent="MaterialSugarBlackcube"]
+position = Vector2( 98, 21 )
+texture = ExtResource( 20 )
+
+[node name="TexNode6" type="Node2D" parent="MaterialSugarBlackcube"]
+use_parent_material = true
+position = Vector2( 31, 40 )
+
+[node name="back" type="Sprite" parent="MaterialSugarBlackcube/TexNode6"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 13 )
+
+[node name="Milk_down" type="Sprite" parent="MaterialSugarBlackcube/TexNode6"]
+self_modulate = Color( 0.309804, 0.933333, 1, 0.572549 )
+position = Vector2( -2, 0 )
+texture = ExtResource( 11 )
+
+[node name="Front" type="Sprite" parent="MaterialSugarBlackcube/TexNode6"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 14 )
+
+[node name="Port3" type="Node2D" parent="MaterialSugarBlackcube"]
+position = Vector2( 172, 38 )
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="MaterialSugarBlackcube/Port3"]
+texture = ExtResource( 6 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="MaterialSugarBlackcube/Port3"]
+modulate = Color( 0.168627, 0.101961, 0.0431373, 0.796078 )
+position = Vector2( -1.34775, 9.08914 )
+scale = Vector2( 1, 0.630251 )
+texture = ExtResource( 4 )
+
+[node name="ItemWaterport20" type="Sprite" parent="MaterialSugarBlackcube/Port3"]
+texture = ExtResource( 8 )
+
+[node name="IconLiquidWaterHot" type="Sprite" parent="MaterialSugarBlackcube/Port3"]
+position = Vector2( -2, -54 )
+texture = ExtResource( 25 )
+
+[node name="MaterialSugarWhitecube" type="Sprite" parent="."]
+position = Vector2( -275, 55 )
+texture = ExtResource( 18 )
+offset = Vector2( -9, 2 )
+
+[node name="TotuInfo3" type="Sprite" parent="MaterialSugarWhitecube"]
+position = Vector2( 98.5, 32 )
+texture = ExtResource( 20 )
+
+[node name="TexNode6" type="Node2D" parent="MaterialSugarWhitecube"]
+use_parent_material = true
+position = Vector2( 31, 40 )
+
+[node name="back" type="Sprite" parent="MaterialSugarWhitecube/TexNode6"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 13 )
+
+[node name="Milk_down" type="Sprite" parent="MaterialSugarWhitecube/TexNode6"]
+self_modulate = Color( 0.309804, 0.933333, 1, 0.572549 )
+position = Vector2( -2, 0 )
+texture = ExtResource( 11 )
+
+[node name="Front" type="Sprite" parent="MaterialSugarWhitecube/TexNode6"]
+use_parent_material = true
+position = Vector2( -3, 1 )
+texture = ExtResource( 14 )
+
+[node name="Port3" type="Node2D" parent="MaterialSugarWhitecube"]
+position = Vector2( 168, 40 )
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="MaterialSugarWhitecube/Port3"]
+texture = ExtResource( 6 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="MaterialSugarWhitecube/Port3"]
+modulate = Color( 0.878431, 0.733333, 0.458824, 1 )
+position = Vector2( -1.34775, 9.08914 )
+scale = Vector2( 1, 0.630251 )
+texture = ExtResource( 4 )
+
+[node name="ItemWaterport20" type="Sprite" parent="MaterialSugarWhitecube/Port3"]
+modulate = Color( 0.878431, 0.733333, 0.458824, 1 )
+texture = ExtResource( 8 )
+
+[node name="IconLiquidWaterHot" type="Sprite" parent="MaterialSugarWhitecube/Port3"]
+position = Vector2( -2, -54 )
+texture = ExtResource( 26 )
+
+[node name="X" parent="." instance=ExtResource( 27 )]
+margin_left = 103.0
+margin_top = -178.0
+margin_right = 103.0
+margin_bottom = -178.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-搅拌"
+OnBut = false

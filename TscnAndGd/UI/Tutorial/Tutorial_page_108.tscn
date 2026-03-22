@@ -1,0 +1,446 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_waterport20_empty.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_port_water_full.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_2.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_5.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_waterport20.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_6.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_3.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_5.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_1.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_4.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_juice_cucumber.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_juicer_s.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_juicer_top_5.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_juicer_trash_0.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_cucumber_single_1.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_juicer_top_4.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_juicer_top_3.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_juicer_top_2.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_1.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_2.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_2.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_2.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_top.tres" type="Texture" id=23]
+[ext_resource path="res://TscnAndGd/Effects/shaders/teleport-effect.tres" type="Shader" id=24]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_6.png" type="Texture" id=25]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_time_night.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=27]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=28]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=29]
+
+[sub_resource type="ShaderMaterial" id=253]
+shader = ExtResource( 24 )
+shader_param/progress = 0.0
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = 0.15
+shader_param/color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=254]
+shader = ExtResource( 24 )
+shader_param/progress = 0.0
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = 0.15
+shader_param/color = Color( 0, 0, 0, 1 )
+
+[node name="榨汁机" type="Node2D"]
+
+[node name="169" type="RichTextLabel" parent="."]
+margin_left = -336.0
+margin_top = -148.0
+margin_right = 367.0
+margin_bottom = -24.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "将蔬果放入榨汁机，等待榨汁完成后就可以用杯子接出。"
+text = "将蔬果放入榨汁机，等待榨汁完成后就可以用杯子接出。"
+script = ExtResource( 29 )
+LabelTEXT = "信息-文字说明-169"
+Center_Bool = true
+
+[node name="170" type="RichTextLabel" parent="."]
+margin_left = -349.0
+margin_top = 186.0
+margin_right = 354.0
+margin_bottom = 346.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "蔬果汁也可用{术语_量杯}接出，未接出的蔬果汁隔夜后会{术语_腐坏}。"
+text = "蔬果汁也可用{术语_量杯}接出，未接出的蔬果汁隔夜后会{术语_腐坏}。"
+script = ExtResource( 29 )
+LabelTEXT = "信息-文字说明-170"
+Center_Bool = true
+
+[node name="1" type="Node2D" parent="."]
+material = SubResource( 253 )
+use_parent_material = true
+position = Vector2( -117, -192 )
+
+[node name="Trash" type="Node2D" parent="1"]
+use_parent_material = true
+position = Vector2( -32, -38 )
+
+[node name="DeviceJuicerTrash0" type="Sprite" parent="1/Trash"]
+use_parent_material = true
+position = Vector2( 0, 16 )
+texture = ExtResource( 14 )
+
+[node name="Back" type="Node2D" parent="1"]
+use_parent_material = true
+position = Vector2( 0, 14 )
+
+[node name="DeviceJuicerTop5" type="Sprite" parent="1/Back"]
+use_parent_material = true
+position = Vector2( 7.11632, -113 )
+texture = ExtResource( 13 )
+
+[node name="DeviceJuicerTop4" type="Sprite" parent="1/Back"]
+use_parent_material = true
+position = Vector2( 4, -112 )
+texture = ExtResource( 16 )
+
+[node name="DeviceJuicerTop3" type="Sprite" parent="1/Back"]
+use_parent_material = true
+position = Vector2( 9, -120 )
+texture = ExtResource( 17 )
+
+[node name="Top" type="Sprite" parent="1/Back"]
+use_parent_material = true
+position = Vector2( 7, -112 )
+texture = ExtResource( 18 )
+
+[node name="ItemNode" type="Node2D" parent="1"]
+position = Vector2( 0, -114.542 )
+
+[node name="DeviceJuicer" type="Sprite" parent="1"]
+use_parent_material = true
+position = Vector2( 7, -49 )
+texture = ExtResource( 12 )
+
+[node name="UINode" type="Node2D" parent="1"]
+
+[node name="Fruit" type="Sprite" parent="1"]
+position = Vector2( -87, -94 )
+rotation = -0.785397
+texture = ExtResource( 15 )
+offset = Vector2( 10, 0 )
+
+[node name="TotuInfo3" type="Sprite" parent="1"]
+position = Vector2( -34, -107 )
+rotation = -0.523598
+texture = ExtResource( 27 )
+
+[node name="TotuInfo3" type="Sprite" parent="."]
+position = Vector2( -21, -241 )
+texture = ExtResource( 28 )
+
+[node name="2" type="Node2D" parent="."]
+material = SubResource( 253 )
+use_parent_material = true
+position = Vector2( 76, -189 )
+
+[node name="Trash" type="Node2D" parent="2"]
+use_parent_material = true
+position = Vector2( -32, -38 )
+
+[node name="DeviceJuicerTrash0" type="Sprite" parent="2/Trash"]
+use_parent_material = true
+position = Vector2( 0, 16 )
+texture = ExtResource( 14 )
+
+[node name="Back" type="Node2D" parent="2"]
+use_parent_material = true
+position = Vector2( 0, 14 )
+
+[node name="DeviceJuicerTop5" type="Sprite" parent="2/Back"]
+use_parent_material = true
+position = Vector2( 7.11632, -113 )
+texture = ExtResource( 13 )
+
+[node name="DeviceJuicerTop4" type="Sprite" parent="2/Back"]
+use_parent_material = true
+position = Vector2( 4, -112 )
+texture = ExtResource( 16 )
+
+[node name="DeviceJuicerTop3" type="Sprite" parent="2/Back"]
+use_parent_material = true
+position = Vector2( 9, -120 )
+texture = ExtResource( 17 )
+
+[node name="Top" type="Sprite" parent="2/Back"]
+use_parent_material = true
+position = Vector2( 7, -112 )
+texture = ExtResource( 18 )
+
+[node name="ItemNode" type="Node2D" parent="2"]
+position = Vector2( 0, -114.542 )
+
+[node name="Fruit" type="Sprite" parent="2/ItemNode"]
+position = Vector2( -1.5, 0 )
+rotation = 0.261799
+texture = ExtResource( 15 )
+offset = Vector2( 10, 0 )
+
+[node name="DeviceJuicer" type="Sprite" parent="2"]
+use_parent_material = true
+position = Vector2( 7, -49 )
+texture = ExtResource( 12 )
+
+[node name="WaterPosition" type="Node2D" parent="2"]
+position = Vector2( 0, -26 )
+
+[node name="water" type="Sprite" parent="2/WaterPosition"]
+modulate = Color( 0, 0.423529, 0.0235294, 1 )
+position = Vector2( 0, 30 )
+rotation = 3.14159
+scale = Vector2( 0.2, 1e-05 )
+texture = ExtResource( 2 )
+offset = Vector2( 1, -28 )
+
+[node name="UINode2" type="Node2D" parent="2"]
+
+[node name="Ui" type="Sprite" parent="2/UINode2"]
+position = Vector2( 25, 4 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -16 )
+
+[node name="TextureProgress" type="TextureProgress" parent="2/UINode2/Ui"]
+margin_left = -3.0
+margin_top = -33.0
+margin_right = 3.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 16 )
+max_value = 10.0
+value = 5.0
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+tint_progress = Color( 0, 0.6, 0.0352941, 1 )
+
+[node name="IconLiquid" type="Sprite" parent="2/UINode2"]
+position = Vector2( 7, -58 )
+texture = ExtResource( 11 )
+
+[node name="Cup4" type="Node2D" parent="2"]
+position = Vector2( 83, -9 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="2/Cup4"]
+texture = ExtResource( 22 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="2/Cup4"]
+self_modulate = Color( 0, 0.6, 0.0352941, 1 )
+texture = ExtResource( 19 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="2/Cup4"]
+self_modulate = Color( 0, 0.6, 0.0352941, 1 )
+texture = ExtResource( 20 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="2/Cup4"]
+self_modulate = Color( 0, 0.6, 0.0352941, 1 )
+position = Vector2( 0, 6 )
+texture = ExtResource( 23 )
+
+[node name="UiProcupCup2" type="Sprite" parent="2/Cup4"]
+texture = ExtResource( 21 )
+
+[node name="TotuInfo3" type="Sprite" parent="2"]
+position = Vector2( 69, -36 )
+texture = ExtResource( 27 )
+
+[node name="4" type="Node2D" parent="."]
+material = SubResource( 254 )
+use_parent_material = true
+position = Vector2( -133, 140 )
+
+[node name="Trash" type="Node2D" parent="4"]
+use_parent_material = true
+position = Vector2( -32, -38 )
+
+[node name="DeviceJuicerTrash0" type="Sprite" parent="4/Trash"]
+use_parent_material = true
+position = Vector2( 0, 16 )
+texture = ExtResource( 14 )
+
+[node name="Back" type="Node2D" parent="4"]
+use_parent_material = true
+position = Vector2( 0, 14 )
+
+[node name="DeviceJuicerTop5" type="Sprite" parent="4/Back"]
+use_parent_material = true
+position = Vector2( 7.11632, -113 )
+texture = ExtResource( 13 )
+
+[node name="DeviceJuicerTop4" type="Sprite" parent="4/Back"]
+use_parent_material = true
+position = Vector2( 4, -112 )
+texture = ExtResource( 16 )
+
+[node name="DeviceJuicerTop3" type="Sprite" parent="4/Back"]
+use_parent_material = true
+position = Vector2( 9, -120 )
+texture = ExtResource( 17 )
+
+[node name="Top" type="Sprite" parent="4/Back"]
+use_parent_material = true
+position = Vector2( 7, -112 )
+texture = ExtResource( 18 )
+
+[node name="DeviceJuicer" type="Sprite" parent="4"]
+use_parent_material = true
+position = Vector2( 7, -49 )
+texture = ExtResource( 12 )
+
+[node name="UINode" type="Node2D" parent="4"]
+
+[node name="Ui" type="Sprite" parent="4/UINode"]
+position = Vector2( 25, 4 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -16 )
+
+[node name="TextureProgress" type="TextureProgress" parent="4/UINode/Ui"]
+margin_left = -3.0
+margin_top = -33.0
+margin_right = 3.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 16 )
+max_value = 10.0
+value = 8.0
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+tint_progress = Color( 0, 0.6, 0.0352941, 1 )
+
+[node name="IconLiquid" type="Sprite" parent="4/UINode"]
+position = Vector2( 7, -58 )
+texture = ExtResource( 11 )
+
+[node name="TotuInfo3" type="Sprite" parent="4"]
+position = Vector2( 72, -45 )
+texture = ExtResource( 27 )
+
+[node name="Port3" type="Node2D" parent="4"]
+position = Vector2( 84, -8 )
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="4/Port3"]
+texture = ExtResource( 1 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="4/Port3"]
+modulate = Color( 0, 0.6, 0.0352941, 1 )
+position = Vector2( -1.34775, 9.08914 )
+scale = Vector2( 1, 0.630251 )
+texture = ExtResource( 2 )
+
+[node name="ItemWaterport20" type="Sprite" parent="4/Port3"]
+texture = ExtResource( 5 )
+
+[node name="5" type="Node2D" parent="."]
+material = SubResource( 254 )
+use_parent_material = true
+position = Vector2( 150, 141 )
+
+[node name="Trash" type="Node2D" parent="5"]
+use_parent_material = true
+position = Vector2( -32, -38 )
+
+[node name="DeviceJuicerTrash0" type="Sprite" parent="5/Trash"]
+use_parent_material = true
+position = Vector2( 0, 16 )
+texture = ExtResource( 14 )
+
+[node name="Back" type="Node2D" parent="5"]
+use_parent_material = true
+position = Vector2( 0, 14 )
+
+[node name="DeviceJuicerTop5" type="Sprite" parent="5/Back"]
+use_parent_material = true
+position = Vector2( 7.11632, -113 )
+texture = ExtResource( 13 )
+
+[node name="DeviceJuicerTop4" type="Sprite" parent="5/Back"]
+use_parent_material = true
+position = Vector2( 4, -112 )
+texture = ExtResource( 16 )
+
+[node name="DeviceJuicerTop3" type="Sprite" parent="5/Back"]
+use_parent_material = true
+position = Vector2( 9, -120 )
+texture = ExtResource( 17 )
+
+[node name="Top" type="Sprite" parent="5/Back"]
+use_parent_material = true
+position = Vector2( 7, -112 )
+texture = ExtResource( 18 )
+
+[node name="DeviceJuicer" type="Sprite" parent="5"]
+use_parent_material = true
+position = Vector2( 7, -49 )
+texture = ExtResource( 12 )
+
+[node name="UINode" type="Node2D" parent="5"]
+
+[node name="Ui" type="Sprite" parent="5/UINode"]
+position = Vector2( 25, 4 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -16 )
+
+[node name="TextureProgress" type="TextureProgress" parent="5/UINode/Ui"]
+margin_left = -3.0
+margin_top = -33.0
+margin_right = 3.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 16 )
+max_value = 10.0
+value = 8.0
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+tint_progress = Color( 0, 0.6, 0.0352941, 1 )
+
+[node name="IconLiquid" type="Sprite" parent="5/UINode"]
+position = Vector2( 7, -58 )
+texture = ExtResource( 11 )
+
+[node name="Texture" type="Node2D" parent="5"]
+position = Vector2( 2, -106 )
+
+[node name="DeviceTrashbinEffect3" type="Sprite" parent="5/Texture"]
+position = Vector2( 1.42857, -30.2857 )
+scale = Vector2( 1, 0.785714 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -28 )
+
+[node name="DeviceTrashbinEffect4" type="Sprite" parent="5/Texture"]
+position = Vector2( -19.1765, 10.6471 )
+scale = Vector2( 1, 0.705882 )
+texture = ExtResource( 10 )
+offset = Vector2( 0, -28 )
+
+[node name="DeviceTrashbinEffect5" type="Sprite" parent="5/Texture"]
+position = Vector2( 22.6, -17 )
+scale = Vector2( 1, 0.64 )
+texture = ExtResource( 8 )
+offset = Vector2( 0, -28 )
+
+[node name="flies" type="Node2D" parent="5/Texture"]
+
+[node name="1" type="Sprite" parent="5/Texture/flies"]
+position = Vector2( 22.4181, -24.6138 )
+texture = ExtResource( 3 )
+
+[node name="2" type="Sprite" parent="5/Texture/flies"]
+position = Vector2( -26.598, -38.2026 )
+texture = ExtResource( 9 )
+
+[node name="3" type="Sprite" parent="5/Texture/flies"]
+position = Vector2( 6.83904, -75.4526 )
+texture = ExtResource( 3 )
+
+[node name="ParticleCircle5" type="Sprite" parent="5"]
+self_modulate = Color( 0.113725, 0.12549, 0.27451, 1 )
+position = Vector2( -60, -84 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 25 )
+
+[node name="UiIconTimeNight" type="Sprite" parent="5/ParticleCircle5"]
+position = Vector2( 4, 1 )
+scale = Vector2( 1.8, 1.8 )
+texture = ExtResource( 26 )

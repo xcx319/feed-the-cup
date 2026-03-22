@@ -1,0 +1,224 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Resources/Item/item_pack.sprites/item_teabag_big_tea.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_inductioncooker_s.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_teawork_hot_icon.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_teawork_burn_icon.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_check_wrong.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_check.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_pot_back.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_milkpot_water.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_pot_front.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Item/item_pack.sprites/item_teabag_big_empty.tres" type="Texture" id=10]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=11]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=12]
+[ext_resource path="res://TscnAndGd/Effects/shaders/teleport-effect.tres" type="Shader" id=13]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_teawork_hot.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_teawork_burn.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_steam_2.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_steam_1.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_tea_green.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_tea_red.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_tea_oolong.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_tea_white.tres" type="Texture" id=21]
+
+[sub_resource type="ShaderMaterial" id=270]
+shader = ExtResource( 13 )
+shader_param/progress = 0.0
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = 0.15
+shader_param/color = Color( 0, 0, 0, 1 )
+
+[node name="绿茶" type="Node2D"]
+
+[node name="126" type="RichTextLabel" parent="."]
+margin_left = 99.0
+margin_top = 464.0
+margin_right = 851.0
+margin_bottom = 590.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "泡制绿茶需要的温度较低，不可以将水煮至{术语_沸腾}。
+制作绿茶时要及时将废茶包取出，避免茶汤变得过于苦涩。"
+text = "泡制绿茶需要的温度较低，不可以将水煮至{术语_沸腾}。
+制作绿茶时要及时将废茶包取出，避免茶汤变得过于苦涩。"
+script = ExtResource( 11 )
+LabelTEXT = "信息-文字说明-126"
+Center_Bool = true
+
+[node name="Step" type="Node2D" parent="."]
+position = Vector2( 480, 447 )
+
+[node name="1" type="Node2D" parent="Step"]
+material = SubResource( 270 )
+use_parent_material = true
+position = Vector2( -9, -80 )
+
+[node name="UiTeaworkBurn" type="Sprite" parent="Step/1"]
+position = Vector2( 1, -86 )
+texture = ExtResource( 15 )
+
+[node name="UiTeaworkBurnIcon" type="Sprite" parent="Step/1/UiTeaworkBurn"]
+texture = ExtResource( 4 )
+
+[node name="DeviceInductioncookerS2" type="Sprite" parent="Step/1"]
+position = Vector2( -0.5, -7.8474 )
+scale = Vector2( 1, 0.980921 )
+texture = ExtResource( 2 )
+
+[node name="back" type="Node2D" parent="Step/1"]
+use_parent_material = true
+position = Vector2( 0, -30 )
+
+[node name="Machine" type="Sprite" parent="Step/1/back"]
+use_parent_material = true
+texture = ExtResource( 7 )
+
+[node name="InsideNode" type="Node2D" parent="Step/1"]
+use_parent_material = true
+position = Vector2( 0, -31 )
+
+[node name="Water" type="Sprite" parent="Step/1/InsideNode"]
+modulate = Color( 0.423529, 0.788235, 0.909804, 0.803922 )
+use_parent_material = true
+position = Vector2( -1, -2.99999 )
+texture = ExtResource( 8 )
+
+[node name="front" type="Node2D" parent="Step/1"]
+use_parent_material = true
+position = Vector2( 0, -30 )
+
+[node name="Front" type="Sprite" parent="Step/1/front"]
+use_parent_material = true
+texture = ExtResource( 9 )
+
+[node name="Steam2" type="Node2D" parent="Step/1"]
+position = Vector2( 4, -64 )
+
+[node name="MaterialCookSago" type="Sprite" parent="Step/1"]
+position = Vector2( 78, -86 )
+texture = ExtResource( 10 )
+
+[node name="ItemTeabagBigTea" type="Sprite" parent="Step/1/MaterialCookSago"]
+modulate = Color( 0.101961, 0.588235, 0.027451, 1 )
+show_behind_parent = true
+position = Vector2( -1, 1 )
+texture = ExtResource( 1 )
+
+[node name="TotuInfo1" type="Sprite" parent="Step/1"]
+position = Vector2( 32, -67 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 12 )
+
+[node name="Steam3" type="Node2D" parent="Step/1"]
+position = Vector2( 3, -71 )
+
+[node name="ItemSteam1" type="Sprite" parent="Step/1/Steam3"]
+position = Vector2( 6, -48 )
+texture = ExtResource( 17 )
+
+[node name="ItemSteam2" type="Sprite" parent="Step/1/Steam3"]
+position = Vector2( -21, -25 )
+texture = ExtResource( 16 )
+
+[node name="UiIconStateCheckWrong" type="Sprite" parent="Step/1"]
+modulate = Color( 0.898039, 0, 0, 1 )
+position = Vector2( 79, 3 )
+texture = ExtResource( 5 )
+
+[node name="2" type="Node2D" parent="Step"]
+material = SubResource( 270 )
+use_parent_material = true
+position = Vector2( 201, -66 )
+
+[node name="UiTeaworkBurn" type="Sprite" parent="Step/2"]
+position = Vector2( 1, -86 )
+texture = ExtResource( 14 )
+
+[node name="UiTeaworkBurnIcon" type="Sprite" parent="Step/2/UiTeaworkBurn"]
+texture = ExtResource( 3 )
+
+[node name="back" type="Node2D" parent="Step/2"]
+use_parent_material = true
+position = Vector2( 0, -30 )
+
+[node name="Machine" type="Sprite" parent="Step/2/back"]
+use_parent_material = true
+texture = ExtResource( 7 )
+
+[node name="InsideNode" type="Node2D" parent="Step/2"]
+use_parent_material = true
+position = Vector2( 0, -31 )
+
+[node name="Water" type="Sprite" parent="Step/2/InsideNode"]
+modulate = Color( 0.423529, 0.788235, 0.909804, 0.803922 )
+use_parent_material = true
+position = Vector2( -1, -2.99999 )
+texture = ExtResource( 8 )
+
+[node name="front" type="Node2D" parent="Step/2"]
+use_parent_material = true
+position = Vector2( 0, -30 )
+
+[node name="Front" type="Sprite" parent="Step/2/front"]
+use_parent_material = true
+texture = ExtResource( 9 )
+
+[node name="Steam2" type="Node2D" parent="Step/2"]
+position = Vector2( 4, -64 )
+
+[node name="MaterialCookSago" type="Sprite" parent="Step/2"]
+position = Vector2( 78, -86 )
+texture = ExtResource( 10 )
+
+[node name="ItemTeabagBigTea" type="Sprite" parent="Step/2/MaterialCookSago"]
+modulate = Color( 0.101961, 0.588235, 0.027451, 1 )
+show_behind_parent = true
+position = Vector2( -1, 1 )
+texture = ExtResource( 1 )
+
+[node name="TotuInfo1" type="Sprite" parent="Step/2"]
+position = Vector2( 32, -67 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 12 )
+
+[node name="UiIconStateCheck" type="Sprite" parent="Step/2"]
+modulate = Color( 0.188235, 1, 0.0980392, 1 )
+position = Vector2( 74, -8 )
+texture = ExtResource( 6 )
+
+[node name="Node2D" type="Node2D" parent="Step"]
+
+[node name="IconLiquidTeaGreen" type="Sprite" parent="Step/Node2D"]
+position = Vector2( -255, -62 )
+texture = ExtResource( 18 )
+
+[node name="IconLiquidTeaOolong" type="Sprite" parent="Step/Node2D"]
+position = Vector2( -256, -138 )
+texture = ExtResource( 20 )
+
+[node name="IconLiquidTeaRed" type="Sprite" parent="Step/Node2D"]
+position = Vector2( -286, -139 )
+texture = ExtResource( 19 )
+
+[node name="UiTeaworkBurn" type="Sprite" parent="Step/Node2D"]
+position = Vector2( -203, -137 )
+rotation = 1.5708
+texture = ExtResource( 15 )
+
+[node name="UiTeaworkBurnIcon" type="Sprite" parent="Step/Node2D"]
+position = Vector2( -195, -130 )
+texture = ExtResource( 4 )
+
+[node name="UiTeaworkHot" type="Sprite" parent="Step/Node2D"]
+position = Vector2( -204, -61 )
+rotation = 1.5708
+texture = ExtResource( 14 )
+
+[node name="UiTeaworkHotIcon" type="Sprite" parent="Step/Node2D"]
+position = Vector2( -197, -53 )
+texture = ExtResource( 3 )
+
+[node name="IconLiquidTeaWhite" type="Sprite" parent="Step/Node2D"]
+position = Vector2( -287, -62 )
+texture = ExtResource( 21 )

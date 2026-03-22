@@ -1,0 +1,26 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type canvas_item;
+
+uniform sampler2D image;
+uniform float amount: hint_range(0.0, 1.0, 0.01);
+uniform bool clip = false;
+uniform float clipAtAmount: hint_range(0.01, 1.0, 0.01) = 0.1; //Works if clip = true
+
+void fragment() {
+	COLOR = texture(TEXTURE, UV);
+	vec4 color = texture(image, UV);
+	if(clip)
+	{
+		if(color.r * amount > clipAtAmount)
+		{
+			COLOR.a -= 1.0;
+		}
+	}
+	else
+	{
+		COLOR.a -= color.r * amount;
+	}
+	
+}"

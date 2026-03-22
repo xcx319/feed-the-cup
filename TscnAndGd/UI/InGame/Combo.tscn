@@ -1,0 +1,452 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/InGame/Skill_Show.tscn" type="PackedScene" id=1]
+[ext_resource path="res://TscnAndGd/Effects/NumberEffect.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_Symbol_combo.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_Symbol_max.tres" type="Texture" id=5]
+[ext_resource path="res://TscnAndGd/UI/InGame/Combo.gd" type="Script" id=6]
+[ext_resource path="res://Sounds/Effect/特效错误惊讶.wav" type="AudioStream" id=7]
+
+[sub_resource type="Animation" id=75]
+resource_name = "break"
+length = 0.7
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("NinePatchRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NinePatchRect:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.06, 0.14, 0.2, 0.28, 0.36, 0.46, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -444, -40 ), Vector2( -509, -97 ), Vector2( -500, -42 ), Vector2( -518, -65 ), Vector2( -470, -43 ), Vector2( -474, -78 ), Vector2( -444, -40 ), Vector2( 0, -40 ) ]
+}
+tracks/2/type = "audio"
+tracks/2/path = NodePath("BreakAudio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 7 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=72]
+resource_name = "combo"
+length = 0.4
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("NinePatchRect/ScrollContainer:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.16, 0.26, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.8, 0.8 ), Vector2( 0.8, 0.8 ), Vector2( 0.9, 1.2 ), Vector2( 0.8, 0.8 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NinePatchRect:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.16, 0.26, 0.34, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -444, -40 ), Vector2( -444, -80 ), Vector2( -444, -40 ), Vector2( -444, -50 ), Vector2( -444, -40 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("NinePatchRect:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.16, 0.22, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0.337255, 1, 0.454902, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=73]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("NinePatchRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -40 ) ]
+}
+
+[sub_resource type="Animation" id=74]
+resource_name = "show"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("NinePatchRect:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.25, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -40 ), Vector2( -470, -40 ), Vector2( -444, -40 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NinePatchRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("NinePatchRect/ScrollContainer:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.8, 0.8 ), Vector2( 0.8, 0.8 ) ]
+}
+
+[sub_resource type="Animation" id=85]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("ScrollContainer/HBoxContainer/1:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 74, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ScrollContainer/HBoxContainer/10:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ScrollContainer/HBoxContainer/100:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=86]
+resource_name = "10"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("ScrollContainer/HBoxContainer/1:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 110, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ScrollContainer/HBoxContainer/10:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ScrollContainer/HBoxContainer/100:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ScrollContainer/HBoxContainer/10:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 37, 0 ) ]
+}
+
+[sub_resource type="Animation" id=87]
+resource_name = "100"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("ScrollContainer/HBoxContainer/10:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ScrollContainer/HBoxContainer/100:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ScrollContainer/HBoxContainer/100:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ScrollContainer/HBoxContainer/10:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 68, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ScrollContainer/HBoxContainer/1:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 136, 0 ) ]
+}
+
+[sub_resource type="Animation" id=88]
+resource_name = "Max"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("NinePatchRect/Max:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NinePatchRect/Max:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("NinePatchRect/Max:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -28 ), Vector2( 181, -28 ) ]
+}
+
+[sub_resource type="Animation" id=89]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("NinePatchRect/Max:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[node name="Combo" type="Control"]
+pause_mode = 2
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -444.0
+margin_top = -40.0
+margin_right = 23.0
+texture = ExtResource( 3 )
+patch_margin_left = 42
+patch_margin_right = 42
+
+[node name="Max" type="Sprite" parent="NinePatchRect"]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 0.196078, 0, 1 )
+position = Vector2( 0, -28 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="NinePatchRect"]
+modulate = Color( 1, 0.784314, 0, 1 )
+position = Vector2( 120, 10 )
+texture = ExtResource( 4 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="NinePatchRect"]
+modulate = Color( 1, 0.784314, 0, 1 )
+margin_left = 197.0
+margin_top = -63.0
+margin_right = 413.0
+margin_bottom = 41.0
+rect_scale = Vector2( 0.8, 0.8 )
+rect_pivot_offset = Vector2( 107.25, 103.438 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect/ScrollContainer"]
+margin_right = 210.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 210, 0 )
+rect_pivot_offset = Vector2( 37, 104 )
+custom_constants/separation = -6
+alignment = 1
+
+[node name="100" parent="NinePatchRect/ScrollContainer/HBoxContainer" instance=ExtResource( 2 )]
+visible = false
+cur_Bit = 2
+
+[node name="10" parent="NinePatchRect/ScrollContainer/HBoxContainer" instance=ExtResource( 2 )]
+visible = false
+margin_left = 37.0
+margin_right = 111.0
+cur_Bit = 1
+
+[node name="1" parent="NinePatchRect/ScrollContainer/HBoxContainer" instance=ExtResource( 2 )]
+margin_left = 68.0
+margin_right = 142.0
+
+[node name="ComboAni" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/break = SubResource( 75 )
+anims/combo = SubResource( 72 )
+anims/init = SubResource( 73 )
+anims/show = SubResource( 74 )
+
+[node name="ComboSetAni" type="AnimationPlayer" parent="."]
+root_node = NodePath("../NinePatchRect")
+autoplay = "1"
+anims/1 = SubResource( 85 )
+anims/10 = SubResource( 86 )
+anims/100 = SubResource( 87 )
+
+[node name="SkillVBox" parent="." instance=ExtResource( 1 )]
+margin_left = -450.0
+margin_top = -180.0
+margin_right = -194.0
+margin_bottom = -60.0
+
+[node name="BreakAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -10.0
+bus = "Effect"
+
+[node name="MaxAni" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/Max = SubResource( 88 )
+anims/init = SubResource( 89 )

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://TscnAndGd/Logics/SystemLogic/SteamLogic.gd" type="Script" id=1]
+[ext_resource path="res://TscnAndGd/UI/Steam/JoinUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TscnAndGd/Logics/SystemLogic/RichPresence.gd" type="Script" id=3]
+
+[node name="SteamLogic" type="Node"]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="LatencyTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="Join" parent="." instance=ExtResource( 2 )]
+layer = 4
+
+[node name="RichPresence" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[connection signal="timeout" from="LatencyTimer" to="." method="call_Latency"]

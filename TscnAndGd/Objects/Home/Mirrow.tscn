@@ -1,0 +1,4495 @@
+[gd_scene load_steps=222 format=2]
+
+[ext_resource path="res://Resources/Home/home_pack.sprites/Home_mirrow_base.tres" type="Texture" id=1]
+[ext_resource path="res://TscnAndGd/Objects/Home/Mirrow.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Home/home_pack.sprites/Home_mirrow_front.tres" type="Texture" id=3]
+[ext_resource path="res://Language/Fonts/Base_m.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Language/Fonts/Base_s_outline.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_menu_lock_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.png" type="Texture" id=7]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_circle_bg.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_circle_white.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_menu_lock_1.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_cuptip_1.tres" type="Texture" id=11]
+[ext_resource path="res://TscnAndGd/UI/Info/SkillInfo.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Resources/Home/home_pack.sprites/Home_mirrow_eye_0.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Home/home_pack.sprites/Home_mirrow_eye_1.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_4.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_tips_1.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Home/home_pack.sprites/Home_mirrow_eye_2.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_5.png" type="Texture" id=18]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_high.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_light.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_Menu.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_head_front.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_frame_white.tres" type="Texture" id=24]
+[ext_resource path="res://Language/Fonts/Base_l_outline.tres" type="DynamicFont" id=25]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_strong.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_difficulty_light.tres" type="Texture" id=27]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip.tres" type="Texture" id=28]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_head4_front.tres" type="Texture" id=29]
+[ext_resource path="res://TscnAndGd/Buttons/LogicBut.tscn" type="PackedScene" id=30]
+[ext_resource path="res://TscnAndGd/UI/InGame/黑幕.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_fox_head_front.tres" type="Texture" id=32]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_wolf_head_front.tres" type="Texture" id=33]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=34]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_head3_front.tres" type="Texture" id=35]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_head2_front.tres" type="Texture" id=36]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_fox_head4_front.tres" type="Texture" id=37]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_fox_head2_front.tres" type="Texture" id=38]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=39]
+[ext_resource path="res://TscnAndGd/Main/NPC/StaffControl.gd" type="Script" id=40]
+[ext_resource path="res://TscnAndGd/Main/Player/Stat.gd" type="Script" id=41]
+[ext_resource path="res://TscnAndGd/Main/Player/Skill.gd" type="Script" id=42]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_fox_head3_front.tres" type="Texture" id=43]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_wolf_head4_front.tres" type="Texture" id=44]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_wolf_head3_front.tres" type="Texture" id=45]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_wolf_head2_front.tres" type="Texture" id=46]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_crocodile_head_front.tres" type="Texture" id=47]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_beaver_head_front.tres" type="Texture" id=48]
+[ext_resource path="res://TscnAndGd/Effects/shaders/teleport-effect.tres" type="Shader" id=49]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_panda_head_front.tres" type="Texture" id=50]
+[ext_resource path="res://Resources/Home/home_pack.sprites/Home_hand_3.tres" type="Texture" id=51]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_ghost_head_front.tres" type="Texture" id=52]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_slime_head_front.tres" type="Texture" id=53]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_speed.tres" type="Texture" id=54]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_pressure_1.tres" type="Texture" id=55]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_2.tres" type="Texture" id=56]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_exp.tres" type="Texture" id=57]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/icon_text_car.tres" type="Texture" id=58]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/icon_text_coin.tres" type="Texture" id=59]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/icon_text_money.tres" type="Texture" id=60]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/icon_text_cup.tres" type="Texture" id=61]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/icon_text_net.tres" type="Texture" id=62]
+[ext_resource path="res://Resources/Home/home_pack.sprites/Home_hand_4.tres" type="Texture" id=63]
+[ext_resource path="res://Resources/Home/home_pack.sprites/Home_hand_5.tres" type="Texture" id=64]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_beaver_head2_front.tres" type="Texture" id=65]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_beaver_head3_front.tres" type="Texture" id=66]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_slime_1.tres" type="Texture" id=67]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_slime_head4_front.tres" type="Texture" id=68]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_slime_head3_front.tres" type="Texture" id=69]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_ghost_head2_front.tres" type="Texture" id=70]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_beaver_head4_front.tres" type="Texture" id=71]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_ghost_head3_front.tres" type="Texture" id=72]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_slime_0.tres" type="Texture" id=73]
+[ext_resource path="res://TscnAndGd/UI/Info/SkillInfo.gd" type="Script" id=74]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_ghost_head4_front.tres" type="Texture" id=75]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_slime_head2_front.tres" type="Texture" id=76]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_bear_1.tres" type="Texture" id=77]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_bg.tres" type="Texture" id=78]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_wolf_0.tres" type="Texture" id=79]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_fox_1.tres" type="Texture" id=80]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_wolf_1.tres" type="Texture" id=81]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_beaver_0.tres" type="Texture" id=82]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_bear_0.tres" type="Texture" id=83]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_14.tres" type="Texture" id=84]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_beaver_1.tres" type="Texture" id=85]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_panda_head4_front.tres" type="Texture" id=86]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_panda_head2_front.tres" type="Texture" id=87]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_panda_head3_front.tres" type="Texture" id=88]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_crocodile_head3_front.tres" type="Texture" id=89]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_crocodile_head4_front.tres" type="Texture" id=90]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff2_pack.sprites/character_crocodile_head2_front.tres" type="Texture" id=91]
+[ext_resource path="res://Language/Fonts/Base_s.tres" type="DynamicFont" id=92]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_fox_0.tres" type="Texture" id=93]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_ghost_0.tres" type="Texture" id=94]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_ghost_1.tres" type="Texture" id=95]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_bear_4.tres" type="Texture" id=96]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_beaver_4.tres" type="Texture" id=97]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_fox_4.tres" type="Texture" id=98]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_wolf_4.tres" type="Texture" id=99]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_ghost_4.tres" type="Texture" id=100]
+[ext_resource path="res://Language/Fonts/Base_special_W.tres" type="DynamicFont" id=101]
+[ext_resource path="res://Language/Fonts/Base_special_B.tres" type="DynamicFont" id=102]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_slime_4.tres" type="Texture" id=103]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_panda_1.tres" type="Texture" id=104]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_panda_4.tres" type="Texture" id=105]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_panda_0.tres" type="Texture" id=106]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=107]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_menu_daily_7.tres" type="Texture" id=108]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_crocodile_0.tres" type="Texture" id=109]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_crocodile_1.tres" type="Texture" id=110]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/CSIcon_crocodile_4.tres" type="Texture" id=111]
+
+[sub_resource type="ShaderMaterial" id=288]
+shader = ExtResource( 49 )
+shader_param/progress = 0.0
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = 0.15
+shader_param/color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="Animation" id=289]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=290]
+resource_name = "show"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.5, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Sprite:material:shader_param/color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.498039, 0, 1 ), Color( 0.701961, 0.701961, 0.701961, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=291]
+resource_name = "show_init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite:material:shader_param/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Sprite:material:shader_param/color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=241]
+resource_name = "Lock"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=242]
+resource_name = "UnLock"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=178]
+resource_name = "init"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=179]
+resource_name = "show"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="AtlasTexture" id=176]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 621, 799, 56, 12 )
+
+[sub_resource type="StyleBoxTexture" id=177]
+texture = SubResource( 176 )
+region_rect = Rect2( 0, 0, 56, 16 )
+modulate_color = Color( 1, 1, 1, 0 )
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=180]
+
+[sub_resource type="StyleBoxEmpty" id=181]
+
+[sub_resource type="StyleBoxEmpty" id=182]
+
+[sub_resource type="StyleBoxEmpty" id=183]
+
+[sub_resource type="StyleBoxEmpty" id=184]
+
+[sub_resource type="StyleBoxEmpty" id=185]
+
+[sub_resource type="StyleBoxEmpty" id=186]
+
+[sub_resource type="StyleBoxEmpty" id=187]
+
+[sub_resource type="StyleBoxEmpty" id=188]
+
+[sub_resource type="StyleBoxEmpty" id=189]
+
+[sub_resource type="Animation" id=232]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.392157, 0.392157, 1 ) ]
+}
+
+[sub_resource type="Animation" id=233]
+resource_name = "green"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.392157, 1, 0.392157, 1 ) ]
+}
+
+[sub_resource type="Animation" id=234]
+resource_name = "red"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.392157, 0.392157, 1 ) ]
+}
+
+[sub_resource type="Animation" id=236]
+resource_name = "green"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.392157, 1, 0.392157, 1 ) ]
+}
+
+[sub_resource type="Animation" id=237]
+resource_name = "red"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.392157, 0.392157, 1 ) ]
+}
+
+[sub_resource type="Animation" id=239]
+resource_name = "green"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.392157, 1, 0.392157, 1 ) ]
+}
+
+[sub_resource type="Animation" id=240]
+resource_name = "red"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.392157, 0.392157, 1 ) ]
+}
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="StyleBoxEmpty" id=16]
+
+[sub_resource type="StyleBoxEmpty" id=23]
+
+[sub_resource type="StyleBoxEmpty" id=24]
+
+[sub_resource type="StyleBoxEmpty" id=25]
+
+[sub_resource type="RectangleShape2D" id=246]
+extents = Vector2( 100, 120 )
+
+[sub_resource type="Animation" id=297]
+resource_name = "hide"
+length = 1.2
+step = 0.05
+tracks/0/type = "animation"
+tracks/0/path = NodePath("AniNode/Loop")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "hide" ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=298]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "animation"
+tracks/0/path = NodePath("AniNode/Loop")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=299]
+resource_name = "show"
+length = 4.0
+step = 0.02
+tracks/0/type = "animation"
+tracks/0/path = NodePath("AniNode/Loop")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "show", "showloop" ),
+"times": PoolRealArray( 0, 1.5 )
+}
+
+[sub_resource type="Animation" id=293]
+resource_name = "hide"
+length = 1.2
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("TexNode/Sprite/R:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -20, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("TexNode/Sprite/L:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 20, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TexNode/Sprite/Eye/R/HomeMirrowEye2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TexNode/Sprite/Eye/L/HomeMirrowEye2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("TexNode/Sprite/Eye/R:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, -15, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("TexNode/Sprite/Eye/L:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 15, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("TexNode/Sprite/Eye:position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("TexNode/Sprite/Eye:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( -124, -0.25, 0, 0.25, 0, -110, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("TexNode:scale:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.1, -0.00607592, 0.95, -0.1, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2, 0.6 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("TexNode:scale:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.1, 0.0242962, 1.05, -0.1, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2, 0.6 )
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("TexNode/Sprite/Eye:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("TexNode/Sprite/L:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("TexNode/Sprite/L/HandL:texture")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 51 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("TexNode/Sprite/R/HandR:texture")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 51 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("TexNode/Sprite/R:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/15/type = "bezier"
+tracks/15/path = NodePath("TexNode:rotation_degrees")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=294]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite/Eye:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Sprite/L:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TexNode/Sprite/R:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("TexNode:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=295]
+resource_name = "show"
+length = 1.5
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite/Eye/L/HomeMirrowEye1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.82, 0.92 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -7 ), Vector2( 3, 0 ), Vector2( 0, 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Sprite/Eye/R/HomeMirrowEye1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.82, 0.92 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -7 ), Vector2( 3, 0 ), Vector2( 0, 5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TexNode:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.12, 0.76, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.9, 1.05 ), Vector2( 0.9, 1.05 ), Vector2( 1.05, 0.95 ), Vector2( 1, 1 ) ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("TexNode/Sprite/L:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.5, -90.1161, -120, -0.38, 26.8837, 0.2, -45.7688, -225, -0.162472, -45.7932, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.76, 1.2 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("TexNode/Sprite/R:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.24, 69.2306, 120, -0.25, 0, 0.215056, 40.5365, 225, -0.129483, 34.8253, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.76, 1.2 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("TexNode/Sprite/Eye/R/HomeMirrowEye2:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.76 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("TexNode/Sprite/Eye/L/HomeMirrowEye2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.76 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("TexNode/Sprite/Eye:position:x")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.2 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("TexNode/Sprite/Eye:position:y")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( -124, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.2 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("TexNode/Sprite/Eye/L:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.2 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("TexNode/Sprite/Eye/R:rotation_degrees")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.2 )
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("TexNode/Sprite/R/HandR:texture")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.16, 0.28, 0.4, 0.52, 0.64, 0.76, 0.88, 1.02 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 51 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 51 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("TexNode/Sprite/L/HandL:texture")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.16, 0.28, 0.4, 0.52, 0.64, 0.76, 0.88, 1.02 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 51 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 51 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("TexNode/Sprite/L:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.16 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("TexNode/Sprite/R:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.16 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("TexNode/Sprite/Eye:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 0.16 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("TexNode:rotation_degrees")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=296]
+resource_name = "showloop"
+length = 2.0
+loop = true
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("TexNode/Sprite/Eye/L/HomeMirrowEye1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.24, 0.54, 1, 1.24, 1.54 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 5 ), Vector2( 2.5, 3 ), Vector2( 0, 5 ), Vector2( 0, 5 ), Vector2( 2.5, 3 ), Vector2( 0, 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TexNode/Sprite/Eye/R/HomeMirrowEye1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.24, 0.54, 1, 1.24, 1.54 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 5 ), Vector2( 2.5, 3 ), Vector2( 0, 5 ), Vector2( 0, 5 ), Vector2( 2.5, 3 ), Vector2( 0, 5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("TexNode:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.24, 0.54, 1, 1.24, 1.54 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.98, 1.02 ), Vector2( 1.02, 0.98 ), Vector2( 1, 1 ), Vector2( 0.98, 1.02 ), Vector2( 1.02, 0.98 ) ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("TexNode/Sprite/L:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( -225, -0.162472, -45.7932, 0.44, 48.6216, -225, -0.34, -12.4047, 0.24, 20.8438, -225, -0.3, -17.9293, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("TexNode/Sprite/R:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 225, -0.129483, 34.8253, 0.32, -24.9232, 225, -0.24, 23.2402, 0.42, -61.0343, 225, -0.32, 18.1324, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("TexNode/Sprite/Eye/R/HomeMirrowEye2:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("TexNode/Sprite/Eye/L/HomeMirrowEye2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("TexNode/Sprite/Eye:position:x")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("TexNode/Sprite/Eye:position:y")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( -124, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("TexNode/Sprite/Eye/L:rotation_degrees")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("TexNode/Sprite/Eye/R:rotation_degrees")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("TexNode/Sprite/R/HandR:texture")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.12, 0.24, 0.36, 0.5, 1, 1.12, 1.24, 1.36, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 64 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 51 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 51 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("TexNode/Sprite/L/HandL:texture")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.12, 0.24, 0.36, 0.5, 1, 1.12, 1.24, 1.36, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 63 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 51 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 51 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("TexNode/Sprite/L:modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("TexNode/Sprite/R:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("TexNode/Sprite/Eye:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("TexNode:rotation_degrees")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.3, -9.32111, 0, -0.48, 7.98196, 0.25, 0 ),
+"times": PoolRealArray( 0, 2 )
+}
+
+[sub_resource type="Animation" id=317]
+resource_name = "冲刺"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 99 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../..:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=321]
+resource_name = "卖萌"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 105 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../..:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=318]
+resource_name = "吞食"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 103 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../..:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=312]
+resource_name = "投掷"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 96 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../..:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=314]
+resource_name = "搓手手"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 97 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../..:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=313]
+resource_name = "无"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 84 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../..:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=324]
+resource_name = "无法下单"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 111 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../..:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=316]
+resource_name = "穿墙"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 100 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../..:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=315]
+resource_name = "饮用"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 98 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../..:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=282]
+resource_name = "green"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=283]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=284]
+resource_name = "red"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=285]
+resource_name = "green"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=286]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=287]
+resource_name = "red"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=325]
+resource_name = "威慑"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 110 ) ]
+}
+
+[sub_resource type="Animation" id=300]
+resource_name = "强壮"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 77 ) ]
+}
+
+[sub_resource type="Animation" id=319]
+resource_name = "拖地"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 67 ) ]
+}
+
+[sub_resource type="Animation" id=322]
+resource_name = "揽客"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 104 ) ]
+}
+
+[sub_resource type="Animation" id=301]
+resource_name = "敏捷"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 81 ) ]
+}
+
+[sub_resource type="Animation" id=310]
+resource_name = "无"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 84 ) ]
+}
+
+[sub_resource type="Animation" id=302]
+resource_name = "灵巧"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 80 ) ]
+}
+
+[sub_resource type="Animation" id=303]
+resource_name = "点单"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 85 ) ]
+}
+
+[sub_resource type="Animation" id=304]
+resource_name = "虚体"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 95 ) ]
+}
+
+[sub_resource type="Animation" id=326]
+resource_name = "囤积癖"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 109 ) ]
+}
+
+[sub_resource type="Animation" id=323]
+resource_name = "完美主义"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 106 ) ]
+}
+
+[sub_resource type="Animation" id=305]
+resource_name = "打滑"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 79 ) ]
+}
+
+[sub_resource type="Animation" id=311]
+resource_name = "无"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 84 ) ]
+}
+
+[sub_resource type="Animation" id=306]
+resource_name = "无尺码"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 94 ) ]
+}
+
+[sub_resource type="Animation" id=307]
+resource_name = "湿润"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 82 ) ]
+}
+
+[sub_resource type="Animation" id=308]
+resource_name = "笨重"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 83 ) ]
+}
+
+[sub_resource type="Animation" id=320]
+resource_name = "肌无力"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 73 ) ]
+}
+
+[sub_resource type="Animation" id=309]
+resource_name = "脆弱"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 93 ) ]
+}
+
+[sub_resource type="StyleBoxEmpty" id=275]
+
+[sub_resource type="Theme" id=276]
+HScrollBar/styles/scroll = SubResource( 275 )
+
+[sub_resource type="StyleBoxEmpty" id=271]
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 27 )
+region_rect = Rect2( 0, 0, 88, 88 )
+margin_left = 25.0
+margin_right = 25.0
+margin_top = 25.0
+margin_bottom = 25.0
+modulate_color = Color( 1, 0.588235, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=272]
+
+[sub_resource type="StyleBoxEmpty" id=270]
+
+[sub_resource type="StyleBoxEmpty" id=8]
+
+[sub_resource type="ButtonGroup" id=267]
+
+[sub_resource type="StyleBoxEmpty" id=250]
+
+[sub_resource type="StyleBoxEmpty" id=26]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="Animation" id=251]
+resource_name = "1"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ScrollContainer/HBoxContainer/0/NinePatchRect/Control/Icon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 23 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ScrollContainer/HBoxContainer/1/NinePatchRect/Control/Icon:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 33 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ScrollContainer/HBoxContainer/2/NinePatchRect/Control/Icon:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 32 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ScrollContainer/HBoxContainer/3/NinePatchRect/Control/Icon:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 48 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ScrollContainer/HBoxContainer/4/NinePatchRect/Control/Icon:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 52 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ScrollContainer/HBoxContainer/7/NinePatchRect/Control/Icon:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 47 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ScrollContainer/HBoxContainer/6/NinePatchRect/Control/Icon:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 50 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ScrollContainer/HBoxContainer/5/NinePatchRect/Control/Icon:texture")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 53 ) ]
+}
+
+[sub_resource type="Animation" id=259]
+resource_name = "2"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ScrollContainer/HBoxContainer/0/NinePatchRect/Control/Icon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 36 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ScrollContainer/HBoxContainer/1/NinePatchRect/Control/Icon:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 46 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ScrollContainer/HBoxContainer/2/NinePatchRect/Control/Icon:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 38 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ScrollContainer/HBoxContainer/3/NinePatchRect/Control/Icon:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 65 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ScrollContainer/HBoxContainer/4/NinePatchRect/Control/Icon:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 70 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ScrollContainer/HBoxContainer/7/NinePatchRect/Control/Icon:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 91 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ScrollContainer/HBoxContainer/6/NinePatchRect/Control/Icon:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 87 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ScrollContainer/HBoxContainer/5/NinePatchRect/Control/Icon:texture")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 76 ) ]
+}
+
+[sub_resource type="Animation" id=260]
+resource_name = "3"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ScrollContainer/HBoxContainer/0/NinePatchRect/Control/Icon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 35 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ScrollContainer/HBoxContainer/1/NinePatchRect/Control/Icon:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 45 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ScrollContainer/HBoxContainer/2/NinePatchRect/Control/Icon:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 43 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ScrollContainer/HBoxContainer/3/NinePatchRect/Control/Icon:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 66 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ScrollContainer/HBoxContainer/4/NinePatchRect/Control/Icon:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 72 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ScrollContainer/HBoxContainer/7/NinePatchRect/Control/Icon:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 89 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ScrollContainer/HBoxContainer/6/NinePatchRect/Control/Icon:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 88 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ScrollContainer/HBoxContainer/5/NinePatchRect/Control/Icon:texture")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 69 ) ]
+}
+
+[sub_resource type="Animation" id=261]
+resource_name = "4"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ScrollContainer/HBoxContainer/0/NinePatchRect/Control/Icon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 29 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ScrollContainer/HBoxContainer/1/NinePatchRect/Control/Icon:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 44 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ScrollContainer/HBoxContainer/2/NinePatchRect/Control/Icon:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 37 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ScrollContainer/HBoxContainer/3/NinePatchRect/Control/Icon:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 71 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("ScrollContainer/HBoxContainer/4/NinePatchRect/Control/Icon:texture")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 75 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("ScrollContainer/HBoxContainer/7/NinePatchRect/Control/Icon:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 90 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("ScrollContainer/HBoxContainer/6/NinePatchRect/Control/Icon:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 86 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("ScrollContainer/HBoxContainer/5/NinePatchRect/Control/Icon:texture")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 68 ) ]
+}
+
+[sub_resource type="StyleBoxTexture" id=252]
+texture = ExtResource( 18 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 1, 1, 0.392157 )
+
+[sub_resource type="StyleBoxTexture" id=253]
+texture = ExtResource( 18 )
+region_rect = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="StyleBoxEmpty" id=254]
+
+[sub_resource type="StyleBoxEmpty" id=255]
+
+[sub_resource type="StyleBoxEmpty" id=256]
+
+[sub_resource type="DynamicFontData" id=190]
+font_path = "res://Language/Fonts/猫啃网秀雅圆.ttf"
+
+[sub_resource type="DynamicFont" id=191]
+size = 50
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 190 )
+
+[sub_resource type="Animation" id=257]
+resource_name = "Lock"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=258]
+resource_name = "UnLock"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=281]
+resource_name = "init"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=280]
+resource_name = "wrong"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=264]
+resource_name = "hide"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_CanControl"
+} ]
+}
+
+[sub_resource type="Animation" id=265]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=266]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=273]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Control/ButControl/BackBut/B:ButPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Control/ButControl/ApplyBut/A:ButPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Control/Choose/SliderNode/L/LEFT:ButPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Control/Choose/SliderNode/R/RIGHT:ButPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+
+[sub_resource type="Animation" id=274]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Control/ButControl/BackBut/B:ButPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Control/ButControl/ApplyBut/A:ButPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Control/Choose/SliderNode/L/LEFT:ButPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Control/Choose/SliderNode/R/RIGHT:ButPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 2 ]
+}
+
+[sub_resource type="Animation" id=277]
+resource_name = "Lock"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Control/Info/Lock:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("../Control/Choose/TexNode/LogicNode/C/LogicNode/UnlockAni")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "Lock" ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Control/Info/VBoxContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("../Control/Info/Lock/UnlockInfo")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-查看解锁" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Control/InfoControl/BaseInfo:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Control/InfoControl/UnLockInfo:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=278]
+resource_name = "Player2"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Control/Info/Lock:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("../Control/Choose/TexNode/LogicNode/C/LogicNode/UnlockAni")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "UnLock" ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Control/Info/VBoxContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("../Control/Info/Lock/UnlockInfo")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-玩家2锁" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Control/InfoControl/BaseInfo/BaseInfo/Title:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Control/InfoControl/BaseInfo:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Control/InfoControl/UnLockInfo:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=279]
+resource_name = "UnLock"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Control/Info/Lock:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("../Control/Choose/TexNode/LogicNode/C/LogicNode/UnlockAni")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "UnLock" ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Control/Info/VBoxContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Control/InfoControl/BaseInfo/BaseInfo/Title:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Control/InfoControl/BaseInfo:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Control/InfoControl/UnLockInfo:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64, 12 )
+
+[node name="Mirrow" type="StaticBody2D"]
+collision_layer = 128
+collision_mask = 5120
+script = ExtResource( 2 )
+
+[node name="TexNode" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="TexNode"]
+material = SubResource( 288 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -110 )
+
+[node name="Ani" type="AnimationPlayer" parent="TexNode/Sprite"]
+root_node = NodePath("../../..")
+autoplay = "init"
+anims/init = SubResource( 289 )
+anims/show = SubResource( 290 )
+anims/show_init = SubResource( 291 )
+
+[node name="Eye" type="Node2D" parent="TexNode/Sprite"]
+modulate = Color( 1, 1, 1, 0 )
+use_parent_material = true
+position = Vector2( 0, -124 )
+
+[node name="L" type="Sprite" parent="TexNode/Sprite/Eye"]
+use_parent_material = true
+position = Vector2( -20, 3 )
+texture = ExtResource( 13 )
+
+[node name="HomeMirrowEye1" type="Sprite" parent="TexNode/Sprite/Eye/L"]
+use_parent_material = true
+position = Vector2( 0, 5 )
+texture = ExtResource( 14 )
+
+[node name="HomeMirrowEye2" type="Sprite" parent="TexNode/Sprite/Eye/L"]
+use_parent_material = true
+texture = ExtResource( 17 )
+
+[node name="R" type="Sprite" parent="TexNode/Sprite/Eye"]
+use_parent_material = true
+position = Vector2( 19, 2 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 13 )
+
+[node name="HomeMirrowEye1" type="Sprite" parent="TexNode/Sprite/Eye/R"]
+use_parent_material = true
+position = Vector2( 0, 5 )
+texture = ExtResource( 14 )
+
+[node name="HomeMirrowEye2" type="Sprite" parent="TexNode/Sprite/Eye/R"]
+use_parent_material = true
+texture = ExtResource( 17 )
+
+[node name="front" type="Sprite" parent="TexNode/Sprite"]
+use_parent_material = true
+texture = ExtResource( 3 )
+offset = Vector2( 0, -110 )
+
+[node name="L" type="Node2D" parent="TexNode/Sprite"]
+modulate = Color( 1, 1, 1, 0 )
+use_parent_material = true
+position = Vector2( -55, -105 )
+rotation = 0.349066
+scale = Vector2( -1, 1 )
+
+[node name="HandL" type="Sprite" parent="TexNode/Sprite/L"]
+use_parent_material = true
+texture = ExtResource( 51 )
+offset = Vector2( -1, 31 )
+
+[node name="R" type="Node2D" parent="TexNode/Sprite"]
+modulate = Color( 1, 1, 1, 0 )
+use_parent_material = true
+position = Vector2( 56, -105 )
+rotation = -0.349066
+
+[node name="HandR" type="Sprite" parent="TexNode/Sprite/R"]
+use_parent_material = true
+texture = ExtResource( 51 )
+offset = Vector2( -3, 33 )
+
+[node name="LogicNode" type="Node2D" parent="TexNode"]
+
+[node name="C" type="Node2D" parent="TexNode/LogicNode"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 0, -10 )
+
+[node name="LogicNode" type="Node" parent="TexNode/LogicNode/C"]
+
+[node name="Stat" type="Node" parent="TexNode/LogicNode/C/LogicNode"]
+script = ExtResource( 41 )
+
+[node name="Control" type="Node" parent="TexNode/LogicNode/C/LogicNode"]
+script = ExtResource( 40 )
+
+[node name="Skill" type="Node" parent="TexNode/LogicNode/C/LogicNode"]
+script = ExtResource( 42 )
+
+[node name="UnlockAni" type="AnimationPlayer" parent="TexNode/LogicNode/C/LogicNode"]
+anims/Lock = SubResource( 241 )
+anims/UnLock = SubResource( 242 )
+
+[node name="TexFront" type="Node2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+
+[node name="InfoNode" type="Node2D" parent="."]
+visible = false
+position = Vector2( 0, -30 )
+z_index = 1
+
+[node name="NinePatchRect" type="NinePatchRect" parent="InfoNode"]
+margin_left = -250.0
+margin_top = -495.0
+margin_right = 250.0
+margin_bottom = -230.0
+texture = ExtResource( 11 )
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 19
+patch_margin_bottom = 26
+
+[node name="Ani" type="AnimationPlayer" parent="InfoNode"]
+autoplay = "init"
+anims/init = SubResource( 178 )
+anims/show = SubResource( 179 )
+
+[node name="SliderNode" type="Node2D" parent="InfoNode"]
+position = Vector2( 0, -14 )
+
+[node name="HSlider" type="HSlider" parent="InfoNode/SliderNode"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -170.0
+margin_top = -267.0
+margin_right = 170.0
+margin_bottom = -251.0
+custom_icons/tick = ExtResource( 9 )
+custom_icons/grabber = ExtResource( 8 )
+custom_styles/slider = SubResource( 177 )
+custom_styles/grabber_area_highlight = SubResource( 3 )
+custom_styles/grabber_area = SubResource( 4 )
+min_value = 1.0
+max_value = 2.0
+value = 1.0
+tick_count = 3
+ticks_on_borders = true
+
+[node name="L" type="Button" parent="InfoNode/SliderNode"]
+margin_left = -215.0
+margin_top = -275.0
+margin_right = -195.0
+margin_bottom = -248.0
+custom_styles/hover = SubResource( 180 )
+custom_styles/pressed = SubResource( 181 )
+custom_styles/focus = SubResource( 182 )
+custom_styles/disabled = SubResource( 183 )
+custom_styles/normal = SubResource( 184 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="LEFT" parent="InfoNode/SliderNode/L" instance=ExtResource( 34 )]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 8.0
+margin_bottom = 16.0
+bool_Small = true
+bool_Static = true
+OnBut = false
+
+[node name="R" type="Button" parent="InfoNode/SliderNode"]
+margin_left = 200.0
+margin_top = -275.0
+margin_right = 220.0
+margin_bottom = -248.0
+custom_styles/hover = SubResource( 185 )
+custom_styles/pressed = SubResource( 186 )
+custom_styles/focus = SubResource( 187 )
+custom_styles/disabled = SubResource( 188 )
+custom_styles/normal = SubResource( 189 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RIGHT" parent="InfoNode/SliderNode/R" instance=ExtResource( 34 )]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 8.0
+margin_bottom = 16.0
+bool_Small = true
+bool_Static = true
+OnBut = false
+
+[node name="BASE" type="Label" parent="InfoNode"]
+margin_left = -235.0
+margin_top = -480.0
+margin_right = 235.0
+margin_bottom = -449.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "信息-角色特点"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 39 )
+LabelTEXT = "信息-角色特点"
+
+[node name="INFO_1" type="Label" parent="InfoNode"]
+margin_left = -235.0
+margin_top = -440.0
+margin_right = 235.0
+margin_bottom = -390.0
+custom_colors/font_color = Color( 1, 0.392157, 0.392157, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "1232141rewfw fewe 123wd
+2"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="Ani" type="AnimationPlayer" parent="InfoNode/INFO_1"]
+anims/RESET = SubResource( 232 )
+anims/green = SubResource( 233 )
+anims/red = SubResource( 234 )
+
+[node name="INFO_2" type="Label" parent="InfoNode"]
+margin_left = -235.0
+margin_top = -390.0
+margin_right = 235.0
+margin_bottom = -340.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "1
+2"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="Ani" type="AnimationPlayer" parent="InfoNode/INFO_2"]
+anims/green = SubResource( 236 )
+anims/red = SubResource( 237 )
+
+[node name="INFO_3" type="Label" parent="InfoNode"]
+margin_left = -235.0
+margin_top = -340.0
+margin_right = 235.0
+margin_bottom = -290.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "1
+2"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="Ani" type="AnimationPlayer" parent="InfoNode/INFO_3"]
+anims/green = SubResource( 239 )
+anims/red = SubResource( 240 )
+
+[node name="Lock" type="Node2D" parent="InfoNode"]
+position = Vector2( 0, -355 )
+
+[node name="IconMenuLock2" type="Sprite" parent="InfoNode/Lock"]
+position = Vector2( 10, -7 )
+texture = ExtResource( 6 )
+offset = Vector2( -11, -13 )
+
+[node name="IconMenuLock1" type="Sprite" parent="InfoNode/Lock"]
+position = Vector2( 0, -1 )
+texture = ExtResource( 10 )
+
+[node name="Button" type="Button" parent="."]
+margin_top = -185.0
+margin_bottom = -160.0
+focus_mode = 0
+mouse_filter = 2
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/focus = SubResource( 23 )
+custom_styles/disabled = SubResource( 24 )
+custom_styles/normal = SubResource( 25 )
+enabled_focus_mode = 0
+
+[node name="A" parent="Button" instance=ExtResource( 34 )]
+margin_top = -32.0
+margin_bottom = -32.0
+bool_Small = true
+TopInfo = "信息-变更角色"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, 103 )
+shape = SubResource( 246 )
+
+[node name="AniNode" type="Node2D" parent="."]
+
+[node name="Ani" type="AnimationPlayer" parent="AniNode"]
+root_node = NodePath("../..")
+autoplay = "init"
+anims/hide = SubResource( 297 )
+anims/init = SubResource( 298 )
+anims/show = SubResource( 299 )
+
+[node name="Loop" type="AnimationPlayer" parent="AniNode"]
+root_node = NodePath("../..")
+autoplay = "init"
+anims/hide = SubResource( 293 )
+anims/init = SubResource( 294 )
+anims/show = SubResource( 295 )
+anims/showloop = SubResource( 296 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+visible = false
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" parent="CanvasLayer/Control" instance=ExtResource( 31 )]
+
+[node name="BG" type="NinePatchRect" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -740.0
+margin_top = -480.0
+margin_right = 740.0
+margin_bottom = 445.0
+texture = ExtResource( 22 )
+patch_margin_left = 57
+patch_margin_top = 50
+patch_margin_right = 57
+patch_margin_bottom = 50
+
+[node name="LevelName" type="NinePatchRect" parent="CanvasLayer/Control/BG"]
+self_modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -627.5
+margin_top = 40.0
+margin_right = 627.5
+margin_bottom = 125.0
+texture = ExtResource( 21 )
+patch_margin_left = 43
+patch_margin_right = 44
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/BG/LevelName"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -719.5
+margin_top = -42.5
+margin_right = 720.5
+margin_bottom = 42.5
+rect_min_size = Vector2( 500, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 25 )
+text = "选择角色"
+align = 1
+valign = 1
+script = ExtResource( 39 )
+LabelTEXT = "信息-选择角色"
+
+[node name="InfoControl" type="Control" parent="CanvasLayer/Control"]
+margin_left = 736.0
+margin_top = 208.0
+margin_right = 1636.0
+margin_bottom = 938.0
+
+[node name="BG" type="NinePatchRect" parent="CanvasLayer/Control/InfoControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 20 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="UnLockInfo" type="Control" parent="CanvasLayer/Control/InfoControl"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 323.0
+margin_bottom = -35.0
+
+[node name="BG2" type="NinePatchRect" parent="CanvasLayer/Control/InfoControl/UnLockInfo"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = -89.0
+margin_right = -30.0
+margin_bottom = 2.0
+texture = ExtResource( 28 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/InfoControl/UnLockInfo"]
+margin_left = 39.0
+margin_top = 17.0
+margin_right = 862.0
+margin_bottom = 420.0
+custom_constants/separation = 0
+
+[node name="0" parent="CanvasLayer/Control/InfoControl/UnLockInfo/VBoxContainer" instance=ExtResource( 12 )]
+visible = false
+margin_bottom = 100.0
+
+[node name="1" parent="CanvasLayer/Control/InfoControl/UnLockInfo/VBoxContainer" instance=ExtResource( 12 )]
+margin_bottom = 100.0
+
+[node name="2" parent="CanvasLayer/Control/InfoControl/UnLockInfo/VBoxContainer" instance=ExtResource( 12 )]
+margin_top = 100.0
+margin_bottom = 200.0
+
+[node name="3" parent="CanvasLayer/Control/InfoControl/UnLockInfo/VBoxContainer" instance=ExtResource( 12 )]
+visible = false
+margin_top = 200.0
+margin_bottom = 300.0
+
+[node name="Skill" type="Control" parent="CanvasLayer/Control/InfoControl/UnLockInfo"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 39.0
+margin_top = 219.0
+margin_right = -33.0
+margin_bottom = 2.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/InfoControl/UnLockInfo/Skill"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_right = -5.0
+margin_bottom = -8.0
+texture = ExtResource( 16 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Name2" type="Label" parent="CanvasLayer/Control/InfoControl/UnLockInfo/Skill"]
+visible = false
+anchor_right = 1.0
+margin_top = 10.0
+margin_bottom = 58.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "角色信息"
+align = 1
+valign = 1
+script = ExtResource( 39 )
+LabelTEXT = "信息-主动技能"
+
+[node name="ColdTime" type="Label" parent="CanvasLayer/Control/InfoControl/UnLockInfo/Skill"]
+visible = false
+anchor_right = 1.0
+margin_left = 667.0
+margin_top = 16.0
+margin_right = -87.0
+margin_bottom = 66.0
+rect_min_size = Vector2( 0, 50 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "-"
+align = 1
+valign = 1
+script = ExtResource( 39 )
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/Control/InfoControl/UnLockInfo/Skill/ColdTime"]
+self_modulate = Color( 1, 0.588235, 0, 1 )
+position = Vector2( -14, 25 )
+texture = ExtResource( 15 )
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/InfoControl/UnLockInfo/Skill/ColdTime"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -25.0
+margin_right = 102.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 0, 50 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "秒"
+valign = 1
+script = ExtResource( 39 )
+LabelTEXT = "信息-秒"
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/InfoControl/UnLockInfo/Skill"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 105.0
+margin_right = -15.0
+margin_bottom = -16.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+script = ExtResource( 107 )
+Center_Bool = true
+InCenter = true
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/InfoControl/UnLockInfo/Skill"]
+margin_left = 2.0
+margin_top = 22.0
+margin_right = 102.0
+margin_bottom = 122.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/InfoControl/UnLockInfo/Skill/Control"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 20 )
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="CsIconBg" type="Sprite" parent="CanvasLayer/Control/InfoControl/UnLockInfo/Skill/Control/NinePatchRect"]
+self_modulate = Color( 0.419608, 1, 0.980392, 1 )
+position = Vector2( 50, 50 )
+texture = ExtResource( 78 )
+
+[node name="Icon" type="Sprite" parent="CanvasLayer/Control/InfoControl/UnLockInfo/Skill/Control/NinePatchRect"]
+position = Vector2( 50, 50 )
+texture = ExtResource( 108 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/InfoControl/UnLockInfo/Skill/Control/NinePatchRect/Icon"]
+"anims/冲刺" = SubResource( 317 )
+"anims/卖萌" = SubResource( 321 )
+"anims/吞食" = SubResource( 318 )
+"anims/投掷" = SubResource( 312 )
+"anims/搓手手" = SubResource( 314 )
+"anims/无" = SubResource( 313 )
+"anims/无法下单" = SubResource( 324 )
+"anims/穿墙" = SubResource( 316 )
+"anims/饮用" = SubResource( 315 )
+
+[node name="R1" parent="CanvasLayer/Control/InfoControl/UnLockInfo/Skill/Control" instance=ExtResource( 34 )]
+margin_left = 25.0
+margin_top = 99.0
+margin_right = 25.0
+margin_bottom = 99.0
+bool_Small = true
+bool_Static = true
+Info_Str = "信息-R1键"
+
+[node name="BaseInfo" type="Control" parent="CanvasLayer/Control/InfoControl"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -410.0
+
+[node name="PressureLabel" type="Label" parent="CanvasLayer/Control/InfoControl/BaseInfo"]
+margin_left = -163.0
+margin_top = 80.0
+margin_right = -83.0
+margin_bottom = 109.0
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 102 )
+text = "25"
+align = 1
+
+[node name="UiIconPressure1" type="Sprite" parent="CanvasLayer/Control/InfoControl/BaseInfo/PressureLabel"]
+position = Vector2( -1, 16 )
+texture = ExtResource( 55 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/InfoControl/BaseInfo/PressureLabel"]
+autoplay = "init"
+anims/green = SubResource( 282 )
+anims/init = SubResource( 283 )
+anims/red = SubResource( 284 )
+
+[node name="SpeedLabel" type="Label" parent="CanvasLayer/Control/InfoControl/BaseInfo"]
+margin_left = -162.0
+margin_top = 133.0
+margin_right = -82.0
+margin_bottom = 162.0
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 102 )
+text = "50"
+align = 1
+
+[node name="UiIconSpeed" type="Sprite" parent="CanvasLayer/Control/InfoControl/BaseInfo/SpeedLabel"]
+position = Vector2( -2, 15 )
+texture = ExtResource( 54 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/InfoControl/BaseInfo/SpeedLabel"]
+autoplay = "init"
+anims/green = SubResource( 285 )
+anims/init = SubResource( 286 )
+anims/red = SubResource( 287 )
+
+[node name="MassLabel" type="Label" parent="CanvasLayer/Control/InfoControl/BaseInfo"]
+margin_left = -161.0
+margin_top = 183.0
+margin_right = -81.0
+margin_bottom = 208.0
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 102 )
+text = "5"
+align = 1
+
+[node name="UiIconStrong" type="Sprite" parent="CanvasLayer/Control/InfoControl/BaseInfo/MassLabel"]
+position = Vector2( -2, 13 )
+texture = ExtResource( 26 )
+
+[node name="BaseInfo" type="Control" parent="CanvasLayer/Control/InfoControl/BaseInfo"]
+margin_left = 30.0
+margin_top = 20.0
+margin_right = 870.0
+margin_bottom = 228.0
+
+[node name="DEMOLabel" type="Label" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo"]
+visible = false
+margin_left = -495.0
+margin_top = 683.0
+margin_right = -25.0
+margin_bottom = 719.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 101 )
+text = "Cannot be upgraded in the DEMO version."
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 39 )
+LabelTEXT = "DEMO_NoUp"
+
+[node name="Title" type="Control" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo"]
+margin_left = 4.0
+margin_right = 837.0
+margin_bottom = 204.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/Title"]
+self_modulate = Color( 0, 0, 0, 0.313726 )
+margin_left = -4.0
+margin_top = 67.0
+margin_right = 254.0
+margin_bottom = 199.0
+texture = ExtResource( 24 )
+patch_margin_left = 32
+patch_margin_top = 40
+patch_margin_right = 32
+patch_margin_bottom = 31
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/Title"]
+self_modulate = Color( 0, 0, 0, 0.313726 )
+margin_left = 258.0
+margin_top = 1.0
+margin_right = 834.0
+margin_bottom = 199.0
+texture = ExtResource( 24 )
+patch_margin_left = 32
+patch_margin_top = 40
+patch_margin_right = 32
+patch_margin_bottom = 31
+
+[node name="Character" type="Label" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/Title"]
+margin_left = 286.0
+margin_top = 29.0
+margin_right = 818.0
+margin_bottom = 180.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 92 )
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 39 )
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/Title"]
+margin_left = 14.0
+margin_top = 10.0
+margin_right = 245.0
+margin_bottom = 60.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 101 )
+text = "Bear"
+align = 1
+valign = 1
+script = ExtResource( 39 )
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/Title"]
+margin_left = -18.0
+margin_top = 44.0
+margin_right = 272.0
+margin_bottom = 161.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 101 )
+text = "初级店员"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="EXPLabel" type="Label" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/Title"]
+margin_left = 13.0
+margin_top = 164.0
+margin_right = 302.0
+margin_bottom = 195.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "355/9999"
+align = 1
+
+[node name="TextureProgress" type="TextureProgress" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/Title/EXPLabel"]
+margin_left = -1.0
+margin_top = -42.5
+margin_right = 286.0
+margin_bottom = -3.5
+rect_pivot_offset = Vector2( 0, 16 )
+max_value = 1000.0
+value = 900.0
+texture_under = ExtResource( 56 )
+texture_progress = ExtResource( 56 )
+tint_under = Color( 0.235294, 0.235294, 0.235294, 1 )
+tint_progress = Color( 1, 0.741176, 0.188235, 1 )
+nine_patch_stretch = true
+
+[node name="UiIconExp" type="Sprite" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/Title/EXPLabel"]
+position = Vector2( 140, -32.5 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 57 )
+
+[node name="0" type="Control" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo"]
+margin_left = 9.0
+margin_top = 221.0
+margin_right = 419.0
+margin_bottom = 321.0
+rect_min_size = Vector2( 0, 100 )
+script = ExtResource( 74 )
+
+[node name="BG" type="NinePatchRect" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/0"]
+self_modulate = Color( 0, 1, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 3.0
+texture = ExtResource( 16 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/0/BG"]
+margin_left = -6.0
+margin_top = -3.0
+margin_right = 94.0
+margin_bottom = 97.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/0/BG/Control"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 20 )
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="CsIconBg" type="Sprite" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/0/BG/Control/NinePatchRect"]
+position = Vector2( 50, 50 )
+texture = ExtResource( 78 )
+
+[node name="Icon" type="Sprite" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/0/BG/Control/NinePatchRect"]
+position = Vector2( 50, 50 )
+texture = ExtResource( 108 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/0/BG/Control/NinePatchRect/Icon"]
+"anims/威慑" = SubResource( 325 )
+"anims/强壮" = SubResource( 300 )
+"anims/拖地" = SubResource( 319 )
+"anims/揽客" = SubResource( 322 )
+"anims/敏捷" = SubResource( 301 )
+"anims/无" = SubResource( 310 )
+"anims/灵巧" = SubResource( 302 )
+"anims/点单" = SubResource( 303 )
+"anims/虚体" = SubResource( 304 )
+
+[node name="Lock" type="Node2D" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/0/BG"]
+visible = false
+position = Vector2( 45, 55 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite2" type="Sprite" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/0/BG/Lock"]
+position = Vector2( 0, -19 )
+texture = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/0/BG/Lock"]
+texture = ExtResource( 10 )
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/0"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 82.0
+margin_top = -17.0
+margin_bottom = 5.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+script = ExtResource( 107 )
+Center_Bool = true
+InCenter = true
+
+[node name="1" type="Control" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo"]
+margin_left = 423.0
+margin_top = 221.0
+margin_right = 833.0
+margin_bottom = 321.0
+rect_min_size = Vector2( 0, 100 )
+script = ExtResource( 74 )
+
+[node name="BG" type="NinePatchRect" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/1"]
+self_modulate = Color( 1, 0, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 3.0
+texture = ExtResource( 16 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/1/BG"]
+margin_left = -6.0
+margin_top = -3.0
+margin_right = 94.0
+margin_bottom = 97.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/1/BG/Control"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 20 )
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="CsIconBg" type="Sprite" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/1/BG/Control/NinePatchRect"]
+self_modulate = Color( 0.85098, 0.694118, 0.694118, 1 )
+position = Vector2( 50, 50 )
+texture = ExtResource( 78 )
+
+[node name="Icon" type="Sprite" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/1/BG/Control/NinePatchRect"]
+position = Vector2( 50, 50 )
+texture = ExtResource( 108 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/1/BG/Control/NinePatchRect/Icon"]
+"anims/囤积癖" = SubResource( 326 )
+"anims/完美主义" = SubResource( 323 )
+"anims/打滑" = SubResource( 305 )
+"anims/无" = SubResource( 311 )
+"anims/无尺码" = SubResource( 306 )
+"anims/湿润" = SubResource( 307 )
+"anims/笨重" = SubResource( 308 )
+"anims/肌无力" = SubResource( 320 )
+"anims/脆弱" = SubResource( 309 )
+
+[node name="Label" type="RichTextLabel" parent="CanvasLayer/Control/InfoControl/BaseInfo/BaseInfo/1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = -18.0
+margin_right = 1.0
+margin_bottom = 4.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][center]111"
+text = "111"
+script = ExtResource( 107 )
+Center_Bool = true
+InCenter = true
+
+[node name="Info" type="Control" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 2.0
+margin_top = -30.0
+margin_right = 2.0
+margin_bottom = -30.0
+
+[node name="BG" type="NinePatchRect" parent="CanvasLayer/Control/Info"]
+self_modulate = Color( 1, 0.994141, 0.90625, 0.588235 )
+anchor_left = 0.068
+anchor_top = 0.309
+anchor_right = 0.35
+anchor_bottom = 0.657
+margin_left = -693.0
+margin_top = 83.0
+margin_right = -230.0
+margin_bottom = 399.0
+mouse_filter = 0
+texture = ExtResource( 20 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/Info"]
+visible = false
+margin_left = -634.0
+margin_top = 113.0
+margin_right = -323.0
+margin_bottom = 376.0
+custom_constants/separation = 10
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/Control/Info/VBoxContainer"]
+margin_right = 311.0
+margin_bottom = 29.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 101 )
+text = "统计信息"
+align = 1
+script = ExtResource( 39 )
+LabelTEXT = "信息-统计信息"
+
+[node name="占位栏" type="Label" parent="CanvasLayer/Control/Info/VBoxContainer"]
+visible = false
+margin_top = 37.0
+margin_right = 390.0
+margin_bottom = 62.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="EXPLabel" type="Label" parent="CanvasLayer/Control/Info/VBoxContainer"]
+visible = false
+margin_top = 37.0
+margin_right = 390.0
+margin_bottom = 62.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "355/9999"
+align = 1
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Info/VBoxContainer/EXPLabel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -12.5
+margin_right = 425.0
+margin_bottom = 12.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="TextureProgress" type="TextureProgress" parent="CanvasLayer/Control/Info/VBoxContainer/EXPLabel"]
+margin_left = 126.0
+margin_top = -26.0
+margin_right = 266.0
+margin_bottom = -7.0
+rect_pivot_offset = Vector2( 0, 16 )
+max_value = 1000.0
+value = 900.0
+texture_under = ExtResource( 56 )
+texture_progress = ExtResource( 56 )
+tint_under = Color( 0.235294, 0.235294, 0.235294, 1 )
+tint_progress = Color( 1, 0.741176, 0.188235, 1 )
+
+[node name="UiIconExp" type="Sprite" parent="CanvasLayer/Control/Info/VBoxContainer/EXPLabel"]
+position = Vector2( 292, -16 )
+texture = ExtResource( 57 )
+
+[node name="占位栏2" type="Label" parent="CanvasLayer/Control/Info/VBoxContainer"]
+margin_top = 39.0
+margin_right = 311.0
+margin_bottom = 64.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+
+[node name="UseCountLabel" type="Label" parent="CanvasLayer/Control/Info/VBoxContainer"]
+margin_top = 74.0
+margin_right = 311.0
+margin_bottom = 99.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-"
+align = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Info/VBoxContainer/UseCountLabel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -12.5
+margin_right = 425.0
+margin_bottom = 12.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "经营次数"
+script = ExtResource( 39 )
+LabelTEXT = "信息-经营次数"
+
+[node name="IconTextCar" type="Sprite" parent="CanvasLayer/Control/Info/VBoxContainer/UseCountLabel"]
+position = Vector2( 332, 13 )
+texture = ExtResource( 58 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/Info/VBoxContainer/UseCountLabel"]
+self_modulate = Color( 1, 1, 1, 0.627451 )
+margin_left = -11.0
+margin_top = -7.0
+margin_right = 352.0
+margin_bottom = 33.0
+texture = ExtResource( 16 )
+patch_margin_left = 26
+patch_margin_right = 13
+
+[node name="MultplayLabel" type="Label" parent="CanvasLayer/Control/Info/VBoxContainer"]
+margin_top = 109.0
+margin_right = 311.0
+margin_bottom = 134.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-"
+align = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Info/VBoxContainer/MultplayLabel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -12.5
+margin_right = 425.0
+margin_bottom = 12.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "乱入次数"
+script = ExtResource( 39 )
+LabelTEXT = "信息-乱入次数"
+
+[node name="IconTextNet" type="Sprite" parent="CanvasLayer/Control/Info/VBoxContainer/MultplayLabel"]
+position = Vector2( 331, 12 )
+texture = ExtResource( 62 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/Info/VBoxContainer/MultplayLabel"]
+self_modulate = Color( 1, 1, 1, 0.627451 )
+margin_left = -11.0
+margin_top = -7.0
+margin_right = 352.0
+margin_bottom = 33.0
+texture = ExtResource( 16 )
+patch_margin_left = 26
+patch_margin_right = 13
+
+[node name="FeedCupsLabel" type="Label" parent="CanvasLayer/Control/Info/VBoxContainer"]
+margin_top = 144.0
+margin_right = 311.0
+margin_bottom = 169.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-"
+align = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Info/VBoxContainer/FeedCupsLabel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -12.5
+margin_right = 425.0
+margin_bottom = 12.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "服务杯杯"
+script = ExtResource( 39 )
+LabelTEXT = "信息-服务杯杯"
+
+[node name="IconTextCup" type="Sprite" parent="CanvasLayer/Control/Info/VBoxContainer/FeedCupsLabel"]
+position = Vector2( 333, 12 )
+texture = ExtResource( 61 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/Info/VBoxContainer/FeedCupsLabel"]
+self_modulate = Color( 1, 1, 1, 0.627451 )
+margin_left = -11.0
+margin_top = -7.0
+margin_right = 352.0
+margin_bottom = 33.0
+texture = ExtResource( 16 )
+patch_margin_left = 26
+patch_margin_right = 13
+
+[node name="HomeMoneyCountLabel" type="Label" parent="CanvasLayer/Control/Info/VBoxContainer"]
+margin_top = 179.0
+margin_right = 311.0
+margin_bottom = 204.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-"
+align = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Info/VBoxContainer/HomeMoneyCountLabel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -12.5
+margin_right = 425.0
+margin_bottom = 12.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "获得绿票"
+script = ExtResource( 39 )
+LabelTEXT = "信息-获得绿票"
+
+[node name="IconTextMoney" type="Sprite" parent="CanvasLayer/Control/Info/VBoxContainer/HomeMoneyCountLabel"]
+position = Vector2( 333, 13 )
+texture = ExtResource( 60 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/Info/VBoxContainer/HomeMoneyCountLabel"]
+self_modulate = Color( 1, 1, 1, 0.627451 )
+margin_left = -11.0
+margin_top = -7.0
+margin_right = 352.0
+margin_bottom = 33.0
+texture = ExtResource( 16 )
+patch_margin_left = 26
+patch_margin_right = 13
+
+[node name="CupCoinLabel" type="Label" parent="CanvasLayer/Control/Info/VBoxContainer"]
+margin_top = 214.0
+margin_right = 311.0
+margin_bottom = 239.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-"
+align = 2
+
+[node name="Label" type="Label" parent="CanvasLayer/Control/Info/VBoxContainer/CupCoinLabel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -12.5
+margin_right = 425.0
+margin_bottom = 12.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "最高营业额"
+script = ExtResource( 39 )
+LabelTEXT = "信息-最高营业额"
+
+[node name="IconTextCoin" type="Sprite" parent="CanvasLayer/Control/Info/VBoxContainer/CupCoinLabel"]
+position = Vector2( 332, 13 )
+texture = ExtResource( 59 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/Info/VBoxContainer/CupCoinLabel"]
+self_modulate = Color( 1, 1, 1, 0.627451 )
+margin_left = -11.0
+margin_top = -7.0
+margin_right = 352.0
+margin_bottom = 33.0
+texture = ExtResource( 16 )
+patch_margin_left = 26
+patch_margin_right = 13
+
+[node name="Lock" type="Node2D" parent="CanvasLayer/Control/Info"]
+position = Vector2( -463, 166 )
+
+[node name="IconMenuLock2" type="Sprite" parent="CanvasLayer/Control/Info/Lock"]
+position = Vector2( 0, -20 )
+texture = ExtResource( 6 )
+
+[node name="IconMenuLock1" type="Sprite" parent="CanvasLayer/Control/Info/Lock/IconMenuLock2"]
+position = Vector2( 1, 19 )
+texture = ExtResource( 10 )
+
+[node name="UnlockInfo" type="Label" parent="CanvasLayer/Control/Info/Lock"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -197.0
+margin_top = 11.0
+margin_right = 206.0
+margin_bottom = 186.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "在书架查看解锁条件"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 39 )
+
+[node name="Head" type="Control" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -634.0
+margin_top = -81.0
+margin_right = -298.0
+margin_bottom = 19.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Control/Head"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 16.0
+margin_right = 10.0
+margin_bottom = 20.0
+theme = SubResource( 276 )
+follow_focus = true
+scroll_vertical_enabled = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/Head/ScrollContainer"]
+margin_right = 696.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 0, 80 )
+alignment = 1
+
+[node name="0" type="Button" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer"]
+margin_right = 80.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+mouse_filter = 2
+custom_styles/hover = SubResource( 271 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 272 )
+custom_styles/disabled = SubResource( 270 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = true
+group = SubResource( 267 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/0"]
+self_modulate = Color( 0.313726, 0.313726, 0.313726, 0.27451 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -20.0
+rect_min_size = Vector2( 80, 80 )
+texture = ExtResource( 24 )
+region_rect = Rect2( 3, 3, 106, 104 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/0/NinePatchRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+mouse_filter = 2
+
+[node name="Icon" type="Sprite" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/0/NinePatchRect/Control"]
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 23 )
+
+[node name="1" type="Button" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer"]
+margin_left = 88.0
+margin_right = 168.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+mouse_filter = 2
+custom_styles/hover = SubResource( 250 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = true
+group = SubResource( 267 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/1"]
+self_modulate = Color( 0.313726, 0.313726, 0.313726, 0.27451 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -20.0
+rect_min_size = Vector2( 80, 80 )
+texture = ExtResource( 24 )
+region_rect = Rect2( 3, 3, 106, 104 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/1/NinePatchRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+mouse_filter = 2
+
+[node name="Icon" type="Sprite" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/1/NinePatchRect/Control"]
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 33 )
+
+[node name="2" type="Button" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer"]
+margin_left = 176.0
+margin_right = 256.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+mouse_filter = 2
+custom_styles/hover = SubResource( 250 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = true
+group = SubResource( 267 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/2"]
+self_modulate = Color( 0.313726, 0.313726, 0.313726, 0.27451 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = -20.0
+rect_min_size = Vector2( 80, 80 )
+texture = ExtResource( 24 )
+region_rect = Rect2( 3, 3, 106, 104 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/2/NinePatchRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+mouse_filter = 2
+
+[node name="Icon" type="Sprite" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/2/NinePatchRect/Control"]
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 32 )
+
+[node name="3" type="Button" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer"]
+margin_left = 264.0
+margin_right = 344.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+mouse_filter = 2
+custom_styles/hover = SubResource( 250 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = true
+group = SubResource( 267 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/3"]
+self_modulate = Color( 0.313726, 0.313726, 0.313726, 0.27451 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -20.0
+margin_bottom = -20.0
+rect_min_size = Vector2( 80, 80 )
+texture = ExtResource( 24 )
+region_rect = Rect2( 3, 3, 106, 104 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/3/NinePatchRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+mouse_filter = 2
+
+[node name="Icon" type="Sprite" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/3/NinePatchRect/Control"]
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 48 )
+
+[node name="4" type="Button" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer"]
+margin_left = 352.0
+margin_right = 432.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+mouse_filter = 2
+custom_styles/hover = SubResource( 250 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = true
+group = SubResource( 267 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/4"]
+self_modulate = Color( 0.313726, 0.313726, 0.313726, 0.27451 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -20.0
+margin_bottom = -20.0
+rect_min_size = Vector2( 80, 80 )
+texture = ExtResource( 24 )
+region_rect = Rect2( 3, 3, 106, 104 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/4/NinePatchRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+mouse_filter = 2
+
+[node name="Icon" type="Sprite" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/4/NinePatchRect/Control"]
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 52 )
+
+[node name="5" type="Button" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer"]
+margin_left = 440.0
+margin_right = 520.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+mouse_filter = 2
+custom_styles/hover = SubResource( 250 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = true
+group = SubResource( 267 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/5"]
+self_modulate = Color( 0.313726, 0.313726, 0.313726, 0.27451 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -20.0
+margin_bottom = -20.0
+rect_min_size = Vector2( 80, 80 )
+texture = ExtResource( 24 )
+region_rect = Rect2( 3, 3, 106, 104 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/5/NinePatchRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+mouse_filter = 2
+
+[node name="Icon" type="Sprite" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/5/NinePatchRect/Control"]
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 53 )
+
+[node name="6" type="Button" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer"]
+margin_left = 528.0
+margin_right = 608.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+mouse_filter = 2
+custom_styles/hover = SubResource( 250 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = true
+group = SubResource( 267 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/6"]
+self_modulate = Color( 0.313726, 0.313726, 0.313726, 0.27451 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -20.0
+margin_bottom = -20.0
+rect_min_size = Vector2( 80, 80 )
+texture = ExtResource( 24 )
+region_rect = Rect2( 3, 3, 106, 104 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/6/NinePatchRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+mouse_filter = 2
+
+[node name="Icon" type="Sprite" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/6/NinePatchRect/Control"]
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 50 )
+
+[node name="7" type="Button" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer"]
+margin_left = 616.0
+margin_right = 696.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 80, 80 )
+mouse_filter = 2
+custom_styles/hover = SubResource( 250 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 26 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+toggle_mode = true
+group = SubResource( 267 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/7"]
+self_modulate = Color( 0.313726, 0.313726, 0.313726, 0.27451 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -20.0
+margin_bottom = -20.0
+rect_min_size = Vector2( 80, 80 )
+texture = ExtResource( 24 )
+region_rect = Rect2( 3, 3, 106, 104 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Control" type="Control" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/7/NinePatchRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+mouse_filter = 2
+
+[node name="Icon" type="Sprite" parent="CanvasLayer/Control/Head/ScrollContainer/HBoxContainer/7/NinePatchRect/Control"]
+scale = Vector2( 0.9, 0.9 )
+texture = ExtResource( 47 )
+
+[node name="HeadTypeAni" type="AnimationPlayer" parent="CanvasLayer/Control/Head"]
+anims/1 = SubResource( 251 )
+anims/2 = SubResource( 259 )
+anims/3 = SubResource( 260 )
+anims/4 = SubResource( 261 )
+
+[node name="ButControl" type="Control" parent="CanvasLayer/Control"]
+anchor_top = 0.907
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 0.439941
+margin_right = 1.0
+
+[node name="BackBut" parent="CanvasLayer/Control/ButControl" instance=ExtResource( 30 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 42.5
+margin_top = -42.5
+margin_right = 127.5
+margin_bottom = 42.5
+custom_styles/hover = SubResource( 252 )
+custom_styles/pressed = SubResource( 253 )
+custom_styles/focus = SubResource( 254 )
+custom_styles/disabled = SubResource( 255 )
+custom_styles/normal = SubResource( 256 )
+_ActionModeBool = true
+
+[node name="B" parent="CanvasLayer/Control/ButControl/BackBut" instance=ExtResource( 34 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-返回"
+
+[node name="ApplyBut" parent="CanvasLayer/Control/ButControl" instance=ExtResource( 30 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -127.5
+margin_top = -42.5
+margin_right = -42.5
+margin_bottom = 42.5
+custom_styles/hover = SubResource( 252 )
+custom_styles/pressed = SubResource( 253 )
+custom_styles/focus = SubResource( 254 )
+custom_styles/disabled = SubResource( 255 )
+custom_styles/normal = SubResource( 256 )
+_ActionModeBool = true
+
+[node name="A" parent="CanvasLayer/Control/ButControl/ApplyBut" instance=ExtResource( 34 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-确定"
+
+[node name="DemoLabel" type="Label" parent="CanvasLayer/Control"]
+visible = false
+margin_left = 1014.0
+margin_top = 734.0
+margin_right = 1607.0
+margin_bottom = 904.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = SubResource( 191 )
+text = "Demo versions are not eligible to purchase this. 0_o"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 39 )
+LabelTEXT = "DEMO_NoBuy"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control/DemoLabel"]
+self_modulate = Color( 0.294118, 1, 1, 0.588235 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -29.0
+margin_top = -29.0
+margin_right = 33.0
+margin_bottom = 36.0
+texture = ExtResource( 19 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="Choose" type="Node2D" parent="CanvasLayer/Control"]
+position = Vector2( 494, 440 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TexNode" type="Node2D" parent="CanvasLayer/Control/Choose"]
+position = Vector2( -56, -18 )
+
+[node name="base" type="Sprite" parent="CanvasLayer/Control/Choose/TexNode"]
+texture = ExtResource( 1 )
+offset = Vector2( 0, -110 )
+
+[node name="LogicNode" type="Node2D" parent="CanvasLayer/Control/Choose/TexNode"]
+
+[node name="C" type="Node2D" parent="CanvasLayer/Control/Choose/TexNode/LogicNode"]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 0, -10 )
+
+[node name="LogicNode" type="Node" parent="CanvasLayer/Control/Choose/TexNode/LogicNode/C"]
+
+[node name="Stat" type="Node" parent="CanvasLayer/Control/Choose/TexNode/LogicNode/C/LogicNode"]
+script = ExtResource( 41 )
+
+[node name="Control" type="Node" parent="CanvasLayer/Control/Choose/TexNode/LogicNode/C/LogicNode"]
+script = ExtResource( 40 )
+
+[node name="Skill" type="Node" parent="CanvasLayer/Control/Choose/TexNode/LogicNode/C/LogicNode"]
+script = ExtResource( 42 )
+
+[node name="UnlockAni" type="AnimationPlayer" parent="CanvasLayer/Control/Choose/TexNode/LogicNode/C/LogicNode"]
+anims/Lock = SubResource( 257 )
+anims/UnLock = SubResource( 258 )
+
+[node name="front" type="Sprite" parent="CanvasLayer/Control/Choose/TexNode"]
+texture = ExtResource( 3 )
+offset = Vector2( 0, -110 )
+
+[node name="SliderNode" type="Node2D" parent="CanvasLayer/Control/Choose"]
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer/Control/Choose/SliderNode"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -170.0
+margin_top = 123.0
+margin_right = 175.0
+margin_bottom = 139.0
+focus_mode = 0
+mouse_filter = 2
+custom_icons/tick = ExtResource( 9 )
+custom_icons/grabber = ExtResource( 8 )
+custom_styles/slider = SubResource( 177 )
+custom_styles/grabber_area_highlight = SubResource( 3 )
+custom_styles/grabber_area = SubResource( 4 )
+min_value = 1.0
+max_value = 2.0
+value = 1.0
+tick_count = 3
+ticks_on_borders = true
+
+[node name="L" type="Button" parent="CanvasLayer/Control/Choose/SliderNode"]
+margin_left = -205.0
+margin_top = 56.0
+margin_right = -185.0
+margin_bottom = 83.0
+custom_styles/hover = SubResource( 180 )
+custom_styles/pressed = SubResource( 181 )
+custom_styles/focus = SubResource( 182 )
+custom_styles/disabled = SubResource( 183 )
+custom_styles/normal = SubResource( 184 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="LEFT" parent="CanvasLayer/Control/Choose/SliderNode/L" instance=ExtResource( 34 )]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 8.0
+margin_bottom = 16.0
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+OnBut = false
+
+[node name="R" type="Button" parent="CanvasLayer/Control/Choose/SliderNode"]
+margin_left = 197.0
+margin_top = 54.0
+margin_right = 217.0
+margin_bottom = 81.0
+custom_styles/hover = SubResource( 185 )
+custom_styles/pressed = SubResource( 186 )
+custom_styles/focus = SubResource( 187 )
+custom_styles/disabled = SubResource( 188 )
+custom_styles/normal = SubResource( 189 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RIGHT" parent="CanvasLayer/Control/Choose/SliderNode/R" instance=ExtResource( 34 )]
+margin_left = 8.0
+margin_top = 16.0
+margin_right = 8.0
+margin_bottom = 16.0
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+OnBut = false
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -1659.0
+margin_top = 449.0
+margin_right = -1194.0
+margin_bottom = 515.0
+rect_pivot_offset = Vector2( 231, 49 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "You can only change when you on the first day of the level."
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 39 )
+LabelTEXT = "信息-角色不可更换"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/Label"]
+autoplay = "init"
+anims/init = SubResource( 281 )
+anims/wrong = SubResource( 280 )
+
+[node name="AniNode" type="Node" parent="CanvasLayer"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/AniNode"]
+autoplay = "init"
+anims/hide = SubResource( 264 )
+anims/init = SubResource( 265 )
+anims/show = SubResource( 266 )
+
+[node name="PlayerSet" type="AnimationPlayer" parent="CanvasLayer/AniNode"]
+anims/1 = SubResource( 273 )
+anims/2 = SubResource( 274 )
+
+[node name="TypeAni" type="AnimationPlayer" parent="CanvasLayer/AniNode"]
+anims/Lock = SubResource( 277 )
+anims/Player2 = SubResource( 278 )
+anims/UnLock = SubResource( 279 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -4 )
+shape = SubResource( 1 )
+disabled = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="pressed" from="CanvasLayer/Control/ButControl/BackBut" to="." method="_on_BackBut_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/ButControl/ApplyBut" to="." method="_on_ApplyBut_pressed"]

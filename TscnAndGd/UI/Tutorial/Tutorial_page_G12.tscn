@@ -1,0 +1,116 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_2.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_arm_idle_1.tres" type="Texture" id=3]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=4]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_leg_sit_2.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_leg_sit_1.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_1.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_teacup_body_base_1.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_teacup_body_decorative_2.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_teacup_body_form_2.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_teacup_body_base_2.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/GuestSeat_2_t.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/GuestSeat_2_s.tres" type="Texture" id=13]
+
+[node name="TeaCupSeat" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 55, -63 )
+
+[node name="GuestSeat2S" type="Sprite" parent="Node2D"]
+position = Vector2( 505, 364 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 13 )
+
+[node name="GuestSeat2T" type="Sprite" parent="Node2D"]
+position = Vector2( 398, 368 )
+texture = ExtResource( 12 )
+
+[node name="SpriteTex" type="Node2D" parent="Node2D"]
+position = Vector2( 491, 374 )
+
+[node name="Top_note" type="Node2D" parent="Node2D/SpriteTex"]
+light_mask = 0
+
+[node name="All_note" type="Node2D" parent="Node2D/SpriteTex/Top_note"]
+position = Vector2( 0, 35 )
+
+[node name="Body_note" type="Node2D" parent="Node2D/SpriteTex/Top_note/All_note"]
+position = Vector2( 0, -29 )
+
+[node name="Body" type="Node2D" parent="Node2D/SpriteTex/Top_note/All_note/Body_note"]
+
+[node name="CupBody" type="Node2D" parent="Node2D/SpriteTex/Top_note/All_note/Body_note/Body"]
+position = Vector2( 0, -30 )
+
+[node name="Base1" type="Sprite" parent="Node2D/SpriteTex/Top_note/All_note/Body_note/Body/CupBody"]
+modulate = Color( 0.670588, 0.670588, 0.686275, 1 )
+texture = ExtResource( 11 )
+
+[node name="Decorate1" type="Sprite" parent="Node2D/SpriteTex/Top_note/All_note/Body_note/Body/CupBody"]
+modulate = Color( 0.34902, 0.34902, 0.34902, 1 )
+texture = ExtResource( 9 )
+
+[node name="Base2" type="Sprite" parent="Node2D/SpriteTex/Top_note/All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 8 )
+
+[node name="light" type="Sprite" parent="Node2D/SpriteTex/Top_note/All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 10 )
+
+[node name="CupFace" type="Node2D" parent="Node2D/SpriteTex/Top_note/All_note/Body_note/Body"]
+position = Vector2( 0, -30 )
+
+[node name="L" type="Node2D" parent="Node2D/SpriteTex/Top_note/All_note/Body_note/Body/CupFace"]
+position = Vector2( -10, 0 )
+
+[node name="Eye" type="Sprite" parent="Node2D/SpriteTex/Top_note/All_note/Body_note/Body/CupFace/L"]
+texture = ExtResource( 7 )
+
+[node name="Ball" type="Sprite" parent="Node2D/SpriteTex/Top_note/All_note/Body_note/Body/CupFace/L"]
+position = Vector2( 4, 0 )
+texture = ExtResource( 2 )
+
+[node name="Arm_Hold" type="Node2D" parent="Node2D/SpriteTex/Top_note/All_note/Body_note"]
+position = Vector2( 0, -38 )
+
+[node name="Arm" type="Sprite" parent="Node2D/SpriteTex/Top_note/All_note/Body_note/Arm_Hold"]
+texture = ExtResource( 3 )
+offset = Vector2( 4, -17 )
+
+[node name="Weapon_note" type="Node2D" parent="Node2D/SpriteTex/Top_note/All_note/Body_note/Arm_Hold"]
+show_behind_parent = true
+position = Vector2( -65, 32 )
+
+[node name="Legs" type="Node2D" parent="Node2D/SpriteTex/Top_note/All_note"]
+show_behind_parent = true
+
+[node name="Leg_L" type="Node2D" parent="Node2D/SpriteTex/Top_note/All_note/Legs"]
+position = Vector2( -10, -27 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="Node2D/SpriteTex/Top_note/All_note/Legs/Leg_L"]
+self_modulate = Color( 0.254902, 0.176471, 0.0980392, 1 )
+texture = ExtResource( 5 )
+offset = Vector2( -6, 0 )
+
+[node name="Leg_R" type="Node2D" parent="Node2D/SpriteTex/Top_note/All_note/Legs"]
+position = Vector2( -4, -24 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="Node2D/SpriteTex/Top_note/All_note/Legs/Leg_R"]
+self_modulate = Color( 0.254902, 0.176471, 0.0980392, 1 )
+texture = ExtResource( 6 )
+offset = Vector2( -6, 0 )
+
+[node name="131" type="RichTextLabel" parent="."]
+margin_left = 213.0
+margin_top = 411.0
+margin_right = 790.0
+margin_bottom = 598.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "{术语_日式茶杯}会优先在座位上点单，他会给你提供更高的{术语_声望值}。但是如果座位人满了又排着长队，他可能会直接离开。"
+text = "{术语_日式茶杯}会优先在座位上点单，他会给你提供更高的{术语_声望值}。但是如果座位人满了又排着长队，他可能会直接离开。"
+script = ExtResource( 4 )
+LabelTEXT = "信息-文字说明-131"
+Center_Bool = true

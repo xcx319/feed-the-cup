@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_Bush_5.tres" type="Texture" id=1]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Bush_StaticBody.tscn" type="PackedScene" id=4]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/Bush.gd" type="Script" id=5]
+
+[sub_resource type="Animation" id=6]
+resource_name = "idle"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Textnode:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Textnode:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "shake"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Textnode:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 0.9 ), Vector2( 0.9, 1.1 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("../Textnode:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.2, 12.1729, 0, -0.2, -12.9444, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4 )
+}
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 51.0
+height = 44.0
+
+[node name="Bush" type="Area2D"]
+collision_layer = 0
+collision_mask = 512
+script = ExtResource( 5 )
+
+[node name="Textnode" type="Node2D" parent="."]
+position = Vector2( 0, 25 )
+
+[node name="Leaf" type="Sprite" parent="Textnode"]
+texture = ExtResource( 1 )
+offset = Vector2( 0, -40 )
+
+[node name="Aninode" type="Node2D" parent="."]
+
+[node name="Act" type="AnimationPlayer" parent="Aninode"]
+autoplay = "idle"
+anims/idle = SubResource( 6 )
+anims/shake = SubResource( 7 )
+
+[node name="StaticBody2D" parent="." instance=ExtResource( 4 )]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+rotation = 1.5708
+shape = SubResource( 5 )
+
+[connection signal="body_entered" from="." to="." method="_on_Bush_body_entered"]

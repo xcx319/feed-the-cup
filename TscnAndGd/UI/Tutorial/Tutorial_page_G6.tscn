@@ -1,0 +1,351 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_13.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_leg_run_1.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_leg_stand_1.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_leg_run_4.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_arm_act_1.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/specialguest_bad_face_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_glasses_2f.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_hair_2.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_papercup_body_base_1.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_papercup_body_base_2.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_arm_hold_1.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/specialguest_bad_tato.tres" type="Texture" id=12]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=13]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_head_back.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/icon_text_coin.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_ice_3.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_hold_1.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_idle_1.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_body_front.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_tail_back.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_back_3.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/Characters/Guest/Other/character_other_pack.sprites/Clothes_Apron_1_back.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_back_1.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_1.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_top.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_2.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_2.tres" type="Texture" id=27]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_2.tres" type="Texture" id=28]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_shock.tres" type="Texture" id=29]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_talk.tres" type="Texture" id=30]
+
+
+[node name="小混混" type="Node2D"]
+
+[node name="Badguy" type="Node2D" parent="."]
+position = Vector2( 24, 132 )
+
+[node name="65" type="RichTextLabel" parent="Badguy"]
+margin_left = 49.0
+margin_top = 437.0
+margin_right = 802.0
+margin_bottom = 602.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "小混混会来点饮料，但是他会逃单。
+趁他还没有跑掉，赶紧亲自找他算账！"
+text = "小混混会来点饮料，但是他会逃单。
+趁他还没有跑掉，赶紧亲自找他算账！"
+script = ExtResource( 13 )
+LabelTEXT = "信息-文字说明-65"
+Center_Bool = true
+
+[node name="1" type="Node2D" parent="Badguy"]
+position = Vector2( 220, 381 )
+
+[node name="Top_note" type="Node2D" parent="Badguy/1"]
+light_mask = 0
+
+[node name="All_note" type="Node2D" parent="Badguy/1/Top_note"]
+
+[node name="Body_note" type="Node2D" parent="Badguy/1/Top_note/All_note"]
+position = Vector2( 0, -49 )
+
+[node name="Body" type="Node2D" parent="Badguy/1/Top_note/All_note/Body_note"]
+position = Vector2( 0, -15 )
+
+[node name="CupBody" type="Node2D" parent="Badguy/1/Top_note/All_note/Body_note/Body"]
+position = Vector2( 0, -30 )
+
+[node name="BodyBase1" type="Sprite" parent="Badguy/1/Top_note/All_note/Body_note/Body/CupBody"]
+modulate = Color( 0.419608, 0.454902, 0.505882, 1 )
+texture = ExtResource( 10 )
+
+[node name="Decorative2" type="Sprite" parent="Badguy/1/Top_note/All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 12 )
+
+[node name="BodyBase2" type="Sprite" parent="Badguy/1/Top_note/All_note/Body_note/Body/CupBody"]
+modulate = Color( 0.772549, 0.772549, 0.772549, 1 )
+texture = ExtResource( 9 )
+
+[node name="Special" type="Node2D" parent="Badguy/1/Top_note/All_note/Body_note/Body"]
+position = Vector2( 0, 15 )
+
+[node name="special_hair" type="Sprite" parent="Badguy/1/Top_note/All_note/Body_note/Body/Special"]
+position = Vector2( 0.68066, -86.3962 )
+texture = ExtResource( 8 )
+
+[node name="special_face" type="Sprite" parent="Badguy/1/Top_note/All_note/Body_note/Body/Special"]
+position = Vector2( -15, -33 )
+texture = ExtResource( 6 )
+
+[node name="special_glasses" type="Sprite" parent="Badguy/1/Top_note/All_note/Body_note/Body/Special"]
+position = Vector2( 0, -42 )
+texture = ExtResource( 7 )
+
+[node name="Arm_Hold" type="Node2D" parent="Badguy/1/Top_note/All_note/Body_note"]
+position = Vector2( 22, -50 )
+
+[node name="Arm" type="Sprite" parent="Badguy/1/Top_note/All_note/Body_note/Arm_Hold"]
+texture = ExtResource( 5 )
+offset = Vector2( 4, -17 )
+
+[node name="Weapon_note" type="Node2D" parent="Badguy/1/Top_note/All_note/Body_note/Arm_Hold"]
+show_behind_parent = true
+position = Vector2( -32, 50 )
+
+[node name="Legs" type="Node2D" parent="Badguy/1/Top_note/All_note"]
+show_behind_parent = true
+
+[node name="Leg_L" type="Node2D" parent="Badguy/1/Top_note/All_note/Legs"]
+position = Vector2( -7, -27 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="Badguy/1/Top_note/All_note/Legs/Leg_L"]
+texture = ExtResource( 3 )
+offset = Vector2( -6, 0 )
+
+[node name="Leg_R" type="Node2D" parent="Badguy/1/Top_note/All_note/Legs"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="Badguy/1/Top_note/All_note/Legs/Leg_R"]
+texture = ExtResource( 3 )
+offset = Vector2( -6, 0 )
+
+[node name="2" type="Node2D" parent="Badguy"]
+position = Vector2( 595, 365 )
+
+[node name="Top_note" type="Node2D" parent="Badguy/2"]
+light_mask = 0
+
+[node name="All_note" type="Node2D" parent="Badguy/2/Top_note"]
+position = Vector2( 0, -5 )
+
+[node name="Body_note" type="Node2D" parent="Badguy/2/Top_note/All_note"]
+position = Vector2( 0, -49 )
+rotation = -0.0460042
+scale = Vector2( 1.05, 1.03 )
+
+[node name="Body" type="Node2D" parent="Badguy/2/Top_note/All_note/Body_note"]
+position = Vector2( 0, -15 )
+
+[node name="CupBody" type="Node2D" parent="Badguy/2/Top_note/All_note/Body_note/Body"]
+position = Vector2( 0, -30 )
+
+[node name="BodyBase1" type="Sprite" parent="Badguy/2/Top_note/All_note/Body_note/Body/CupBody"]
+modulate = Color( 0.419608, 0.454902, 0.505882, 1 )
+texture = ExtResource( 10 )
+
+[node name="Decorative2" type="Sprite" parent="Badguy/2/Top_note/All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 12 )
+
+[node name="BodyBase2" type="Sprite" parent="Badguy/2/Top_note/All_note/Body_note/Body/CupBody"]
+modulate = Color( 0.772549, 0.772549, 0.772549, 1 )
+texture = ExtResource( 9 )
+
+[node name="Special" type="Node2D" parent="Badguy/2/Top_note/All_note/Body_note/Body"]
+position = Vector2( 0, 15 )
+scale = Vector2( -1, 1 )
+
+[node name="special_hair" type="Sprite" parent="Badguy/2/Top_note/All_note/Body_note/Body/Special"]
+position = Vector2( 0.68066, -86.3962 )
+texture = ExtResource( 8 )
+
+[node name="special_face" type="Sprite" parent="Badguy/2/Top_note/All_note/Body_note/Body/Special"]
+position = Vector2( -15, -33 )
+texture = ExtResource( 6 )
+
+[node name="special_glasses" type="Sprite" parent="Badguy/2/Top_note/All_note/Body_note/Body/Special"]
+position = Vector2( 0, -40.1521 )
+texture = ExtResource( 7 )
+
+[node name="Arm_Hold" type="Node2D" parent="Badguy/2/Top_note/All_note/Body_note"]
+show_behind_parent = true
+position = Vector2( 0, -55 )
+rotation = 0.090681
+scale = Vector2( -1, 1 )
+
+[node name="Arm" type="Sprite" parent="Badguy/2/Top_note/All_note/Body_note/Arm_Hold"]
+position = Vector2( -24.92, 11.1427 )
+texture = ExtResource( 11 )
+offset = Vector2( 4, -17 )
+
+[node name="Weapon_note" type="Node2D" parent="Badguy/2/Top_note/All_note/Body_note/Arm_Hold"]
+position = Vector2( -51.0359, 80.6619 )
+scale = Vector2( -1, 1 )
+
+[node name="Cup2" type="Node2D" parent="Badguy/2/Top_note/All_note/Body_note/Arm_Hold/Weapon_note"]
+position = Vector2( -1.92236, -72.1232 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="Badguy/2/Top_note/All_note/Body_note/Arm_Hold/Weapon_note/Cup2"]
+position = Vector2( 9.71429, 29.4286 )
+texture = ExtResource( 26 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="Badguy/2/Top_note/All_note/Body_note/Arm_Hold/Weapon_note/Cup2"]
+self_modulate = Color( 0.996078, 0.933333, 0.529412, 0.764706 )
+position = Vector2( 9.71429, 29.4286 )
+texture = ExtResource( 24 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="Badguy/2/Top_note/All_note/Body_note/Arm_Hold/Weapon_note/Cup2"]
+self_modulate = Color( 0.996078, 0.933333, 0.529412, 0.764706 )
+position = Vector2( 9.71429, 29.4286 )
+texture = ExtResource( 28 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="Badguy/2/Top_note/All_note/Body_note/Arm_Hold/Weapon_note/Cup2"]
+self_modulate = Color( 0.996078, 0.933333, 0.529412, 0.764706 )
+position = Vector2( 9.71429, 35.4286 )
+texture = ExtResource( 25 )
+
+[node name="UiProcupCup2" type="Sprite" parent="Badguy/2/Top_note/All_note/Body_note/Arm_Hold/Weapon_note/Cup2"]
+position = Vector2( 9.71429, 29.4286 )
+texture = ExtResource( 27 )
+
+[node name="ItemIce3" type="Sprite" parent="Badguy/2/Top_note/All_note/Body_note/Arm_Hold/Weapon_note/Cup2"]
+position = Vector2( 9.71429, 35.4286 )
+texture = ExtResource( 16 )
+
+[node name="Legs" type="Node2D" parent="Badguy/2/Top_note/All_note"]
+show_behind_parent = true
+
+[node name="Leg_L" type="Node2D" parent="Badguy/2/Top_note/All_note/Legs"]
+position = Vector2( -7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="Badguy/2/Top_note/All_note/Legs/Leg_L"]
+texture = ExtResource( 4 )
+offset = Vector2( -6, 0 )
+
+[node name="Leg_R" type="Node2D" parent="Badguy/2/Top_note/All_note/Legs"]
+show_behind_parent = true
+position = Vector2( 7, -29 )
+scale = Vector2( -1, 1 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="Badguy/2/Top_note/All_note/Legs/Leg_R"]
+texture = ExtResource( 2 )
+offset = Vector2( -6, 0 )
+
+[node name="bear" type="Node2D" parent="Badguy"]
+light_mask = 0
+position = Vector2( 525, 399 )
+
+[node name="All_note" type="Node2D" parent="Badguy/bear"]
+position = Vector2( 0, -5 )
+
+[node name="Leg_L" type="Node2D" parent="Badguy/bear/All_note"]
+position = Vector2( -7, -27 )
+
+[node name="L" type="Sprite" parent="Badguy/bear/All_note/Leg_L"]
+texture = ExtResource( 23 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="Badguy/bear/All_note"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="R" type="Sprite" parent="Badguy/bear/All_note/Leg_R"]
+texture = ExtResource( 21 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="Badguy/bear/All_note"]
+show_behind_parent = true
+position = Vector2( 0, -25 )
+
+[node name="BodyPose" type="Node2D" parent="Badguy/bear/All_note/Body_note"]
+rotation = 0.0697114
+scale = Vector2( 1.05, 1.05 )
+
+[node name="Body" type="Node2D" parent="Badguy/bear/All_note/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="Badguy/bear/All_note/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 19 )
+
+[node name="up" type="Sprite" parent="Badguy/bear/All_note/Body_note/BodyPose/Body"]
+use_parent_material = true
+position = Vector2( -0.293396, -31.4716 )
+scale = Vector2( 1.09965, 1 )
+texture = ExtResource( 22 )
+
+[node name="HeadPose" type="Node2D" parent="Badguy/bear/All_note/Body_note/BodyPose/Body"]
+position = Vector2( 0, -68 )
+rotation = 0.0677671
+
+[node name="Head" type="Node2D" parent="Badguy/bear/All_note/Body_note/BodyPose/Body/HeadPose"]
+
+[node name="Up" type="Sprite" parent="Badguy/bear/All_note/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 14 )
+offset = Vector2( 0, -26 )
+
+[node name="Arm_Hold" type="Node2D" parent="Badguy/bear/All_note/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( -22, -47 )
+scale = Vector2( -1, 1 )
+
+[node name="Pose_Hold" type="Node2D" parent="Badguy/bear/All_note/Body_note/BodyPose/Arm_Hold"]
+
+[node name="Arm" type="Sprite" parent="Badguy/bear/All_note/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 1, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 18 )
+offset = Vector2( -10, 3 )
+
+[node name="Weapon_note" type="Node2D" parent="Badguy/bear/All_note/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+show_behind_parent = true
+position = Vector2( 30, 29 )
+scale = Vector2( -1, 1 )
+
+[node name="Arm" type="Node2D" parent="Badguy/bear/All_note/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 22, -47 )
+rotation = -1.0472
+
+[node name="Pose" type="Node2D" parent="Badguy/bear/All_note/Body_note/BodyPose/Arm"]
+rotation = -0.0872588
+
+[node name="Arm" type="Sprite" parent="Badguy/bear/All_note/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 17 )
+offset = Vector2( -10, 3 )
+
+[node name="RIGHT_Node" type="Node2D" parent="Badguy/bear/All_note/Body_note/BodyPose/Arm/Pose"]
+position = Vector2( -15, 5 )
+
+[node name="Tail" type="Sprite" parent="Badguy/bear/All_note/Body_note/BodyPose"]
+position = Vector2( 0, -10 )
+rotation = -0.142347
+texture = ExtResource( 20 )
+offset = Vector2( 20, -16 )
+
+[node name="UiPoptipIdeaShock3" type="Sprite" parent="Badguy"]
+self_modulate = Color( 1, 0.776471, 0.298039, 1 )
+position = Vector2( 677, 200 )
+texture = ExtResource( 29 )
+
+[node name="UiPoptipIdea25" type="Sprite" parent="Badguy/UiPoptipIdeaShock3"]
+position = Vector2( -1, -4 )
+texture = ExtResource( 1 )
+
+[node name="UiPoptipIdeaTalk" type="Sprite" parent="Badguy"]
+position = Vector2( 440, 231 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 30 )
+
+[node name="IconTextCoin" type="Sprite" parent="Badguy/UiPoptipIdeaTalk"]
+position = Vector2( 2, -10 )
+texture = ExtResource( 15 )

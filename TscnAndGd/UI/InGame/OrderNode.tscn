@@ -1,0 +1,455 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://TscnAndGd/Buttons/DifficultButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://TscnAndGd/Buttons/LogicBut.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_coin.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_5.png" type="Texture" id=4]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_Bigbg.tres" type="Texture" id=6]
+[ext_resource path="res://Language/Fonts/猫啃网秀雅圆.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://TscnAndGd/UI/InGame/Buy_Button.tscn" type="PackedScene" id=8]
+[ext_resource path="res://TscnAndGd/UI/InGame/OrderNode.gd" type="Script" id=18]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=22]
+
+[sub_resource type="StyleBoxTexture" id=141]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 0.823529, 0.588235, 0.392157 )
+
+[sub_resource type="StyleBoxTexture" id=142]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 0.588235, 0, 0.784314 )
+
+[sub_resource type="StyleBoxEmpty" id=118]
+
+[sub_resource type="StyleBoxEmpty" id=119]
+
+[sub_resource type="StyleBoxEmpty" id=120]
+
+[sub_resource type="ButtonGroup" id=185]
+
+[sub_resource type="DynamicFont" id=182]
+size = 40
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=191]
+resource_name = "hide"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -850, -0.25, 0, 0, 0, 0, 0, 0, 0, 0 ),
+"times": PoolRealArray( 0, 0.3 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_hide"
+} ]
+}
+
+[sub_resource type="Animation" id=61]
+resource_name = "init"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, 0, 0, 0, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_hide"
+} ]
+}
+
+[sub_resource type="Animation" id=60]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, 0, 0, 0, 0, -850, -0.25, 0, 0, 0 ),
+"times": PoolRealArray( 0, 0.3 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HBoxContainer:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 211.5, 10 ) ]
+}
+
+[sub_resource type="StyleBoxEmpty" id=186]
+
+[sub_resource type="StyleBoxEmpty" id=187]
+
+[sub_resource type="StyleBoxEmpty" id=188]
+
+[sub_resource type="StyleBoxEmpty" id=189]
+
+[sub_resource type="StyleBoxEmpty" id=190]
+
+[node name="OrderNode" type="NinePatchRect"]
+pause_mode = 2
+self_modulate = Color( 1, 1, 1, 0.74902 )
+anchor_left = -0.443
+anchor_bottom = 0.759
+margin_left = 850.56
+margin_right = 850.0
+margin_bottom = -169.72
+rect_min_size = Vector2( 850, 650 )
+texture = ExtResource( 6 )
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
+script = ExtResource( 18 )
+
+[node name="L" parent="." instance=ExtResource( 2 )]
+margin_left = 120.0
+margin_top = 10.0
+margin_right = 210.0
+margin_bottom = 100.0
+
+[node name="L" parent="L" instance=ExtResource( 22 )]
+margin_left = 45.0
+margin_top = 45.0
+margin_right = 45.0
+margin_bottom = 45.0
+ZINDEX = 0
+bool_Static = true
+
+[node name="R" parent="." instance=ExtResource( 2 )]
+margin_left = 640.0
+margin_top = 10.0
+margin_right = 730.0
+margin_bottom = 100.0
+custom_styles/hover = SubResource( 141 )
+custom_styles/pressed = SubResource( 142 )
+custom_styles/focus = SubResource( 118 )
+custom_styles/disabled = SubResource( 119 )
+custom_styles/normal = SubResource( 120 )
+
+[node name="R" parent="R" instance=ExtResource( 22 )]
+margin_left = 45.0
+margin_top = 45.0
+margin_right = 45.0
+margin_bottom = 45.0
+ZINDEX = 0
+bool_Static = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -213.5
+margin_top = 10.0
+margin_right = 213.5
+margin_bottom = 98.0
+rect_pivot_offset = Vector2( 182, 44 )
+custom_constants/separation = 25
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sell_1" parent="HBoxContainer" instance=ExtResource( 1 )]
+pressed = true
+group = SubResource( 185 )
+TYPE = 1
+BASECHECK = true
+
+[node name="Sell_2" parent="HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 113.0
+margin_right = 201.0
+group = SubResource( 185 )
+TYPE = 2
+BASECHECK = true
+
+[node name="Sell_3" parent="HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 226.0
+margin_right = 314.0
+group = SubResource( 185 )
+TYPE = 3
+BASECHECK = true
+
+[node name="Sell_4" parent="HBoxContainer" instance=ExtResource( 1 )]
+margin_left = 339.0
+margin_right = 427.0
+group = SubResource( 185 )
+TYPE = 4
+BASECHECK = true
+
+[node name="OrderScrollCon" type="ScrollContainer" parent="."]
+margin_left = 15.0
+margin_top = 141.0
+margin_right = 840.0
+margin_bottom = 583.0
+rect_min_size = Vector2( 452, 400 )
+follow_focus = true
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="OrderButCon" type="VBoxContainer" parent="OrderScrollCon"]
+margin_right = 825.0
+margin_bottom = 389.0
+rect_pivot_offset = Vector2( 226, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" parent="OrderScrollCon/OrderButCon" instance=ExtResource( 8 )]
+margin_right = 825.0
+
+[node name="Label" type="Label" parent="OrderScrollCon/OrderButCon"]
+margin_top = 89.0
+margin_right = 825.0
+margin_bottom = 389.0
+rect_min_size = Vector2( 825, 300 )
+custom_fonts/font = SubResource( 182 )
+text = "订货数据获取中..."
+align = 1
+valign = 1
+
+[node name="CountSell" type="Control" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -65.0
+
+[node name="moneyicon" type="Sprite" parent="CountSell"]
+light_mask = 0
+position = Vector2( 279, 22 )
+texture = ExtResource( 3 )
+
+[node name="MoneyLabel" type="Label" parent="CountSell"]
+margin_left = 93.9999
+margin_right = 259.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "9999"
+align = 2
+valign = 1
+
+[node name="Label" type="Label" parent="CountSell"]
+margin_left = 10.0
+margin_right = 204.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "今日订金："
+align = 2
+valign = 1
+autowrap = true
+script = ExtResource( 5 )
+LabelTEXT = "信息-今日订金"
+
+[node name="OrderAni" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/hide = SubResource( 191 )
+anims/init = SubResource( 61 )
+anims/show = SubResource( 60 )
+
+[node name="TitleNode" type="Control" parent="."]
+margin_left = 10.0
+margin_top = 100.0
+margin_right = 580.0
+margin_bottom = 140.0
+
+[node name="Label" type="Label" parent="TitleNode"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -10.0
+margin_top = -20.0
+margin_right = 120.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 40 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "物品"
+align = 1
+valign = 1
+script = ExtResource( 5 )
+LabelTEXT = "信息-物品"
+
+[node name="Label2" type="Label" parent="TitleNode"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 419.0
+margin_top = -20.0
+margin_right = 539.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 40 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "卖价"
+align = 1
+valign = 1
+script = ExtResource( 5 )
+LabelTEXT = "信息-卖价"
+
+[node name="Label3" type="Label" parent="TitleNode"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 498.0
+margin_top = -20.0
+margin_right = 678.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 40 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "库存"
+align = 1
+valign = 1
+script = ExtResource( 5 )
+LabelTEXT = "信息-库存"
+
+[node name="Label4" type="Label" parent="TitleNode"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 621.0
+margin_top = -20.0
+margin_right = 835.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 40 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "进货"
+align = 1
+valign = 1
+script = ExtResource( 5 )
+LabelTEXT = "信息-进货文字"
+
+[node name="Label6" type="Label" parent="TitleNode"]
+visible = false
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 530.0
+margin_top = -20.0
+margin_right = 720.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 40 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "配送中"
+align = 1
+valign = 1
+
+[node name="Label5" type="Label" parent="TitleNode"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 110.0
+margin_top = -20.0
+margin_right = 388.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 40 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "说明"
+align = 1
+valign = 1
+script = ExtResource( 5 )
+LabelTEXT = "信息-说明"
+
+[node name="CloseBut" type="Button" parent="."]
+margin_left = 666.0
+margin_top = 574.0
+margin_right = 766.0
+margin_bottom = 624.0
+rect_min_size = Vector2( 120, 50 )
+custom_styles/hover = SubResource( 186 )
+custom_styles/pressed = SubResource( 187 )
+custom_styles/focus = SubResource( 188 )
+custom_styles/disabled = SubResource( 189 )
+custom_styles/normal = SubResource( 190 )
+
+[node name="B" parent="CloseBut" instance=ExtResource( 22 )]
+margin_left = 22.0
+margin_top = 26.0
+margin_right = 22.0
+margin_bottom = 26.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-挂电话"
+OnBut = false
+
+[connection signal="pressed" from="L" to="." method="_on_L_pressed"]
+[connection signal="pressed" from="R" to="." method="_on_R_pressed"]
+[connection signal="toggled" from="HBoxContainer/Sell_1" to="." method="_on_OrderTypeButton_toggled"]
+[connection signal="toggled" from="HBoxContainer/Sell_2" to="." method="_on_OrderTypeButton_toggled"]
+[connection signal="toggled" from="HBoxContainer/Sell_3" to="." method="_on_OrderTypeButton_toggled"]
+[connection signal="toggled" from="HBoxContainer/Sell_4" to="." method="_on_OrderTypeButton_toggled"]
+[connection signal="pressed" from="CloseBut" to="." method="_on_CloseBut_pressed"]
+
+[editable path="L"]
+[editable path="R"]

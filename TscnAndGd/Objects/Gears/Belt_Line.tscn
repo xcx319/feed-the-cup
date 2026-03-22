@@ -1,0 +1,183 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Resources/Decorate/Decorate_pack.sprites/Floor_belt_s1.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Decorate/Decorate_pack.sprites/Floor_belt_s3.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Decorate/Decorate_pack.sprites/Floor_belt_s2.tres" type="Texture" id=3]
+[ext_resource path="res://TscnAndGd/Objects/Gears/AutoMoveArea.gd" type="Script" id=4]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Belt_Line.gd" type="Script" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "auto"
+length = 2.0
+loop = true
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texture/ScrollContainer/L:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 1.02, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -95, 0 ), Vector2( 95, 0 ), Vector2( 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Texture/ScrollContainer/R:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( -95, 0 ), Vector2( -190, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Texture/ScrollContainer/L/FloorBelt1:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 1.02 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Texture/ScrollContainer/R/FloorBelt2:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "D"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texture/Area2D:Direction")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 118 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "L"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texture/Area2D:Direction")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -118, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "R"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texture/Area2D:Direction")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 118, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "U"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Texture/Area2D:Direction")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -118 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 50, 24 )
+
+[node name="Belt_Line" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Ani" type="AnimationPlayer" parent="."]
+autoplay = "auto"
+playback_speed = 1.2
+anims/auto = SubResource( 1 )
+
+[node name="TypeAni" type="AnimationPlayer" parent="."]
+anims/D = SubResource( 3 )
+anims/L = SubResource( 4 )
+anims/R = SubResource( 5 )
+anims/U = SubResource( 6 )
+
+[node name="Texture" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Texture"]
+texture = ExtResource( 1 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Texture"]
+margin_left = -49.0
+margin_top = -40.0
+margin_right = 50.0
+margin_bottom = 39.0
+
+[node name="L" type="Control" parent="Texture/ScrollContainer"]
+
+[node name="FloorBelt1" type="Sprite" parent="Texture/ScrollContainer/L"]
+position = Vector2( 46, 40 )
+texture = ExtResource( 2 )
+
+[node name="R" type="Control" parent="Texture/ScrollContainer"]
+
+[node name="FloorBelt2" type="Sprite" parent="Texture/ScrollContainer/R"]
+position = Vector2( 142, 40 )
+texture = ExtResource( 2 )
+
+[node name="FloorBeltLine" type="Sprite" parent="Texture"]
+texture = ExtResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="Texture"]
+rotation = 3.14159
+collision_layer = 0
+collision_mask = 2816
+script = ExtResource( 4 )
+Direction = Vector2( 0, -118 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Texture/Area2D"]
+position = Vector2( 5.98748e-13, -9.53674e-07 )
+shape = SubResource( 2 )
+
+[connection signal="area_entered" from="Texture/Area2D" to="Texture/Area2D" method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Texture/Area2D" to="Texture/Area2D" method="_on_Area2D_area_exited"]
+[connection signal="body_entered" from="Texture/Area2D" to="Texture/Area2D" method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Texture/Area2D" to="Texture/Area2D" method="_on_Area2D_body_exited"]

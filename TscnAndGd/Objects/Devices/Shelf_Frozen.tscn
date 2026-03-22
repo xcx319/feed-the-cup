@@ -1,0 +1,449 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Resources/Devices/device_pack.sprites/store_shelffrozen_top_close.tres" type="Texture" id=1]
+[ext_resource path="res://TscnAndGd/Objects/Devices/DeviceStat.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/store_shelffrozen_web1.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/store_shelffreezer_back.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/store_shelffrozen_front.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/store_shelffrozen_web2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/store_shelffreezer_base.tres" type="Texture" id=7]
+[ext_resource path="res://TscnAndGd/Objects/Devices/Shelf_Frozen.gd" type="Script" id=8]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/store_shelffrozen_back.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_Freezer_table_shelf.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/store_shelffrozen_top_open.tres" type="Texture" id=13]
+
+[sub_resource type="Shader" id=173]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=172]
+resource_local_to_scene = true
+shader = SubResource( 173 )
+shader_param/aura_width = 0.0
+shader_param/aura_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 100, 50 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 100, 50 )
+
+[sub_resource type="Animation" id=174]
+resource_name = "init"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:material:shader_param/aura_width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=175]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:material:shader_param/aura_width")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=176]
+resource_name = "Off"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TexNode/front/Base:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+
+[sub_resource type="Animation" id=177]
+resource_name = "On"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TexNode/front/Base:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ) ]
+}
+
+[sub_resource type="Animation" id=178]
+resource_name = "close"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TexNode/DoorL:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../TexNode/DoorL:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../TexNode/DoorL:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=179]
+resource_name = "open"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TexNode/DoorL:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 13 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../TexNode/DoorL:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1.2 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../TexNode/DoorL:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=180]
+resource_name = "close"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TexNode/DoorR:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../TexNode/DoorR:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../TexNode/DoorR:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=181]
+resource_name = "open"
+length = 0.3
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TexNode/DoorR:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 13 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../TexNode/DoorR:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1.2 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../TexNode/DoorR:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[node name="Freezer" type="StaticBody2D"]
+material = SubResource( 172 )
+z_as_relative = false
+collision_layer = 128
+collision_mask = 4096
+script = ExtResource( 8 )
+__meta__ = {
+"_editor_description_": "FreezeShelf"
+}
+
+[node name="TexNode" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2( 0, -12 )
+
+[node name="back" type="Sprite" parent="TexNode"]
+use_parent_material = true
+texture = ExtResource( 11 )
+
+[node name="layer3" type="Sprite" parent="TexNode"]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 46, 6 )
+texture = ExtResource( 12 )
+
+[node name="layer4" type="Sprite" parent="TexNode"]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -46, 6 )
+texture = ExtResource( 12 )
+
+[node name="Web" type="Node2D" parent="TexNode"]
+
+[node name="StoreShelffrozenWeb1" type="Sprite" parent="TexNode/Web"]
+position = Vector2( -46, -10 )
+texture = ExtResource( 3 )
+
+[node name="StoreShelffrozenWeb3" type="Sprite" parent="TexNode/Web"]
+position = Vector2( 46, -10 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 3 )
+
+[node name="StoreShelffrozenWeb2" type="Sprite" parent="TexNode/Web"]
+position = Vector2( 0, -22 )
+texture = ExtResource( 6 )
+
+[node name="layer1" type="Sprite" parent="TexNode"]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -46, 33 )
+texture = ExtResource( 12 )
+
+[node name="layer2" type="Sprite" parent="TexNode"]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 46, 33 )
+texture = ExtResource( 12 )
+
+[node name="front" type="Sprite" parent="TexNode"]
+use_parent_material = true
+texture = ExtResource( 5 )
+
+[node name="Base" type="Sprite" parent="TexNode/front"]
+use_parent_material = true
+position = Vector2( -76, 47 )
+texture = ExtResource( 7 )
+
+[node name="Door" type="Node2D" parent="TexNode"]
+use_parent_material = true
+
+[node name="DoorL" type="Sprite" parent="TexNode"]
+show_behind_parent = true
+use_parent_material = true
+position = Vector2( -50, -62 )
+texture = ExtResource( 13 )
+offset = Vector2( 2, 19 )
+
+[node name="DoorR" type="Sprite" parent="TexNode"]
+show_behind_parent = true
+use_parent_material = true
+position = Vector2( 50, -62 )
+texture = ExtResource( 13 )
+offset = Vector2( -2, 19 )
+
+[node name="LogicNode" type="Node" parent="."]
+
+[node name="Stat" type="Node" parent="LogicNode"]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": "Shelf_M_Steel"
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 1 )
+
+[node name="But" type="Node2D" parent="."]
+position = Vector2( 0, 14 )
+
+[node name="A" parent="But" instance=ExtResource( 10 )]
+margin_left = -45.0
+margin_top = -11.0
+margin_right = -45.0
+margin_bottom = -11.0
+bool_Small = true
+OnBut = false
+
+[node name="B" parent="But" instance=ExtResource( 10 )]
+margin_left = 47.0
+margin_top = -11.0
+margin_right = 47.0
+margin_bottom = -11.0
+bool_Small = true
+OnBut = false
+
+[node name="Y" parent="But" instance=ExtResource( 10 )]
+margin_left = 47.0
+margin_top = -91.0
+margin_right = 47.0
+margin_bottom = -91.0
+bool_Small = true
+OnBut = false
+
+[node name="X" parent="But" instance=ExtResource( 10 )]
+margin_left = -45.0
+margin_top = -91.0
+margin_right = -45.0
+margin_bottom = -91.0
+bool_Small = true
+OnBut = false
+
+[node name="CheckArea" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CheckArea"]
+shape = SubResource( 6 )
+
+[node name="AniNode" type="Node" parent="."]
+
+[node name="OutLineAni" type="AnimationPlayer" parent="AniNode"]
+autoplay = "init"
+anims/init = SubResource( 174 )
+anims/show = SubResource( 175 )
+
+[node name="TurnAni" type="AnimationPlayer" parent="AniNode"]
+autoplay = "Off"
+anims/Off = SubResource( 176 )
+anims/On = SubResource( 177 )
+
+[node name="DoorL" type="AnimationPlayer" parent="AniNode"]
+autoplay = "close"
+anims/close = SubResource( 178 )
+anims/open = SubResource( 179 )
+
+[node name="DoorR" type="AnimationPlayer" parent="AniNode"]
+autoplay = "close"
+anims/close = SubResource( 180 )
+anims/open = SubResource( 181 )
+
+[connection signal="area_entered" from="CheckArea" to="." method="_on_CheckArea_area_entered"]

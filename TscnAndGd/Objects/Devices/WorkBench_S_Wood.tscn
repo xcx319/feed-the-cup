@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Resources/Devices/device_pack.png" type="Texture" id=1]
+[ext_resource path="res://TscnAndGd/Objects/Devices/WorkBench.gd" type="Script" id=3]
+[ext_resource path="res://TscnAndGd/Objects/Devices/Control_Info.tscn" type="PackedScene" id=5]
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 7
+atlas = ExtResource( 1 )
+region = Rect2( 305, 1, 100, 166 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 7
+atlas = ExtResource( 1 )
+region = Rect2( 355, 1, 100, 166 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 7
+atlas = ExtResource( 1 )
+region = Rect2( 405, 1, 100, 166 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 7
+atlas = ExtResource( 1 )
+region = Rect2( 305, 1, 50, 166 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 7
+atlas = ExtResource( 1 )
+region = Rect2( 375, 1, 50, 166 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 7
+atlas = ExtResource( 1 )
+region = Rect2( 455, 1, 50, 166 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 50, 50 )
+
+[node name="WorkBench_S_Wood" type="StaticBody2D"]
+collision_layer = 128
+collision_mask = 1536
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": "WorkBench_S_Wood"
+}
+
+[node name="Connect" type="Node2D" parent="."]
+visible = false
+
+[node name="L" type="Sprite" parent="Connect"]
+visible = false
+position = Vector2( 0, -33 )
+texture = SubResource( 2 )
+
+[node name="M" type="Sprite" parent="Connect"]
+visible = false
+position = Vector2( 0, -33 )
+texture = SubResource( 3 )
+
+[node name="R" type="Sprite" parent="Connect"]
+position = Vector2( 0, -33 )
+texture = SubResource( 4 )
+
+[node name="Single" type="Node2D" parent="."]
+
+[node name="L" type="Sprite" parent="Single"]
+position = Vector2( -25, -33 )
+texture = SubResource( 5 )
+
+[node name="M" type="Sprite" parent="Single"]
+position = Vector2( 0, -33 )
+texture = SubResource( 6 )
+
+[node name="R" type="Sprite" parent="Single"]
+position = Vector2( 25, -33 )
+texture = SubResource( 7 )
+
+[node name="Control_Info" parent="." instance=ExtResource( 5 )]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="ObjNode" type="Node2D" parent="."]
+position = Vector2( 0, -75 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+cast_to = Vector2( -51, 0 )

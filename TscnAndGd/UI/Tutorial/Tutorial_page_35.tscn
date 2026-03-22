@@ -1,0 +1,268 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_port_water_half.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_teawork_hot.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_teawork_cold.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_teaport20.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_teaport20_empty.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_teawork_cold_icon.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Item/item_pack.sprites/item_powder_2.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_teawork_hot_icon.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_inductioncooker_s.tres" type="Texture" id=9]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_waterport20_empty.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_powder_instantmilktea.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_instant_coffee.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_5.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=16]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=17]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_waterport20.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_port_water_full.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_instant_milktea.tres" type="Texture" id=20]
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=21]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_powder_instantmilktea_empty.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_switchlight_green.tres" type="Texture" id=23]
+
+[node name="调配速溶" type="Node2D"]
+
+[node name="54" type="RichTextLabel" parent="."]
+margin_left = -133.0
+margin_top = 154.0
+margin_right = 682.0
+margin_bottom = 282.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "在茶壶里加满水，放在电磁炉上加热。
+将速溶粉末也加入，待水热后搅拌均匀。"
+text = "在茶壶里加满水，放在电磁炉上加热。
+将速溶粉末也加入，待水热后搅拌均匀。"
+script = ExtResource( 17 )
+LabelTEXT = "信息-文字说明-54"
+Center_Bool = true
+
+[node name="Teaport3" type="Node2D" parent="."]
+position = Vector2( -40, 80 )
+
+[node name="ItemTeaport20Empty" type="Sprite" parent="Teaport3"]
+texture = ExtResource( 5 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="Teaport3"]
+modulate = Color( 0.576471, 0.788235, 0.992157, 1 )
+texture = ExtResource( 1 )
+
+[node name="ItemTeaport20" type="Sprite" parent="Teaport3"]
+texture = ExtResource( 4 )
+
+[node name="UiTeaworkCold" type="Sprite" parent="Teaport3"]
+position = Vector2( 0.5, -56 )
+texture = ExtResource( 3 )
+
+[node name="UiTeaworkColdIcon" type="Sprite" parent="Teaport3"]
+position = Vector2( 0.5, -56 )
+texture = ExtResource( 6 )
+
+[node name="IconMenuArrow3" type="Sprite" parent="Teaport3"]
+position = Vector2( 96, 0 )
+texture = ExtResource( 14 )
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 96, -96 )
+
+[node name="DeviceInductioncooker" type="Sprite" parent="Node2D"]
+position = Vector2( 72, 192 )
+texture = ExtResource( 9 )
+
+[node name="DeviceSwitchlightGreen" type="Sprite" parent="Node2D/DeviceInductioncooker"]
+position = Vector2( 21, 26 )
+texture = ExtResource( 23 )
+
+[node name="UiIconInfo2" type="Sprite" parent="Node2D"]
+position = Vector2( 256, 128 )
+rotation = -1.309
+scale = Vector2( -1, 1 )
+texture = ExtResource( 16 )
+
+[node name="UiIconInfo3" type="Sprite" parent="Node2D"]
+position = Vector2( 344, 128 )
+rotation = -3.14159
+scale = Vector2( -1, 1 )
+texture = ExtResource( 16 )
+
+[node name="MaterialPowderInstantcoffee" type="Sprite" parent="Node2D"]
+position = Vector2( 232, 80 )
+texture = ExtResource( 12 )
+
+[node name="MaterialPowderInstantcoffee2" type="Sprite" parent="Node2D"]
+position = Vector2( 360, 80 )
+texture = ExtResource( 22 )
+
+[node name="Teaport7" type="Node2D" parent="Node2D"]
+position = Vector2( 295.833, 176.333 )
+
+[node name="ItemTeaport20Empty" type="Sprite" parent="Node2D/Teaport7"]
+texture = ExtResource( 5 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="Node2D/Teaport7"]
+modulate = Color( 0.576471, 0.788235, 0.992157, 1 )
+texture = ExtResource( 1 )
+
+[node name="ItemTeaport20" type="Sprite" parent="Node2D/Teaport7"]
+texture = ExtResource( 4 )
+
+[node name="UiTeaworkHot" type="Sprite" parent="Node2D/Teaport7"]
+position = Vector2( 1.5, -52 )
+texture = ExtResource( 2 )
+
+[node name="UiTeaworkHotIcon" type="Sprite" parent="Node2D/Teaport7"]
+position = Vector2( 1.5, -52 )
+texture = ExtResource( 8 )
+
+[node name="ItemPowder4" type="Sprite" parent="Node2D/Teaport7"]
+position = Vector2( 0, 10 )
+texture = ExtResource( 7 )
+
+[node name="Teaport9" type="Node2D" parent="Node2D"]
+position = Vector2( 72, 176 )
+
+[node name="ItemTeaport20Empty" type="Sprite" parent="Node2D/Teaport9"]
+texture = ExtResource( 5 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="Node2D/Teaport9"]
+modulate = Color( 0.576471, 0.788235, 0.992157, 1 )
+texture = ExtResource( 1 )
+
+[node name="ItemTeaport20" type="Sprite" parent="Node2D/Teaport9"]
+texture = ExtResource( 4 )
+
+[node name="UiTeaworkHot" type="Sprite" parent="Node2D/Teaport9"]
+position = Vector2( 1.5, -52 )
+texture = ExtResource( 2 )
+
+[node name="UiTeaworkHotIcon" type="Sprite" parent="Node2D/Teaport9"]
+position = Vector2( 1.5, -52 )
+texture = ExtResource( 8 )
+
+[node name="ItemPowder4" type="Sprite" parent="Node2D/Teaport9"]
+visible = false
+position = Vector2( 0, 10 )
+texture = ExtResource( 7 )
+
+[node name="Teaport8" type="Node2D" parent="Node2D"]
+position = Vector2( 512, 176 )
+
+[node name="ItemTeaport20Empty" type="Sprite" parent="Node2D/Teaport8"]
+texture = ExtResource( 5 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="Node2D/Teaport8"]
+modulate = Color( 0.827451, 0.598039, 0.545098, 1 )
+texture = ExtResource( 1 )
+
+[node name="ItemTeaport20" type="Sprite" parent="Node2D/Teaport8"]
+texture = ExtResource( 4 )
+
+[node name="IconLiquidInstantCoffee" type="Sprite" parent="Node2D/Teaport8"]
+visible = false
+position = Vector2( 0, -60 )
+texture = ExtResource( 13 )
+
+[node name="IconMenuArrow2" type="Sprite" parent="Node2D"]
+position = Vector2( 432, 176 )
+texture = ExtResource( 14 )
+
+[node name="IconMenuArrow3" type="Sprite" parent="Node2D"]
+position = Vector2( 192, 176 )
+texture = ExtResource( 14 )
+
+[node name="UiIconInfo5" type="Sprite" parent="Node2D"]
+position = Vector2( 440, 112 )
+texture = ExtResource( 15 )
+
+[node name="X" parent="Node2D" instance=ExtResource( 10 )]
+margin_left = 392.0
+margin_top = 216.0
+margin_right = 392.0
+margin_bottom = 216.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-搅拌"
+OnBut = false
+
+[node name="55" type="RichTextLabel" parent="."]
+margin_left = -136.0
+margin_top = 409.0
+margin_right = 683.0
+margin_bottom = 583.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "搅拌好后倒入{术语_量杯}，就完成备料工作了。
+要注意茶壶里的液体是不能直接使用的，必须倒入{术语_量杯}才能按需使用。"
+text = "搅拌好后倒入{术语_量杯}，就完成备料工作了。
+要注意茶壶里的液体是不能直接使用的，必须倒入{术语_量杯}才能按需使用。"
+script = ExtResource( 17 )
+LabelTEXT = "信息-文字说明-55"
+Center_Bool = true
+
+[node name="速溶步骤2" type="Node2D" parent="."]
+position = Vector2( -65, 358 )
+
+[node name="Node2D" type="Node2D" parent="速溶步骤2"]
+position = Vector2( 205, -71 )
+
+[node name="Port" type="Node2D" parent="速溶步骤2/Node2D"]
+position = Vector2( 95, 84 )
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="速溶步骤2/Node2D/Port"]
+texture = ExtResource( 11 )
+
+[node name="ItemWaterport20" type="Sprite" parent="速溶步骤2/Node2D/Port"]
+texture = ExtResource( 18 )
+
+[node name="Teaport9" type="Node2D" parent="速溶步骤2/Node2D"]
+position = Vector2( 50, 37 )
+rotation = 0.523598
+scale = Vector2( -1, 1 )
+
+[node name="ItemTeaport20Empty" type="Sprite" parent="速溶步骤2/Node2D/Teaport9"]
+texture = ExtResource( 5 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="速溶步骤2/Node2D/Teaport9"]
+modulate = Color( 0.827451, 0.598039, 0.545098, 1 )
+texture = ExtResource( 1 )
+
+[node name="ItemTeaport20" type="Sprite" parent="速溶步骤2/Node2D/Teaport9"]
+texture = ExtResource( 4 )
+
+[node name="Port2" type="Node2D" parent="速溶步骤2/Node2D"]
+position = Vector2( 247, 85 )
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="速溶步骤2/Node2D/Port2"]
+texture = ExtResource( 11 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="速溶步骤2/Node2D/Port2"]
+modulate = Color( 0.827451, 0.596078, 0.545098, 1 )
+position = Vector2( 0, 11.5 )
+scale = Vector2( 1, 0.635135 )
+texture = ExtResource( 19 )
+
+[node name="ItemWaterport20" type="Sprite" parent="速溶步骤2/Node2D/Port2"]
+texture = ExtResource( 18 )
+
+[node name="IconLiquidInstantCoffee" type="Sprite" parent="速溶步骤2/Node2D/Port2"]
+position = Vector2( 1, -58 )
+texture = ExtResource( 20 )
+
+[node name="LiquidLabel" type="Label" parent="速溶步骤2/Node2D/Port2/IconLiquidInstantCoffee"]
+margin_left = -40.0
+margin_top = 2.0
+margin_right = 40.0
+margin_bottom = 42.0
+custom_fonts/font = ExtResource( 21 )
+text = "10"
+align = 1
+valign = 1
+
+[node name="IconMenuArrow1" type="Sprite" parent="速溶步骤2/Node2D"]
+position = Vector2( 169.5, 87 )
+texture = ExtResource( 14 )

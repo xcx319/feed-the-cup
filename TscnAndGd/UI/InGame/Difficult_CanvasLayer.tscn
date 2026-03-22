@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://TscnAndGd/Effects/Effect_FlowerRod_1.tscn" type="PackedScene" id=1]
+[ext_resource path="res://TscnAndGd/Effects/Effect_FlowerRod_2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TscnAndGd/Effects/Effect_FlowerRod_3.tscn" type="PackedScene" id=3]
+[ext_resource path="res://TscnAndGd/UI/InGame/Difficult_CanvasLayer.gd" type="Script" id=4]
+[ext_resource path="res://TscnAndGd/Effects/Effect_LightMove_1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://TscnAndGd/Effects/Effect_LightMove_2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://TscnAndGd/Effects/Effect_LightMove_3.tscn" type="PackedScene" id=7]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+layer = 3
+script = ExtResource( 4 )
+
+[node name="Effect_FlowerRod" parent="." instance=ExtResource( 1 )]
+position = Vector2( 56, -11 )
+
+[node name="Effect_FlowerRod2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 438, -2 )
+
+[node name="Effect_FlowerRod3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 876, -11 )
+
+[node name="Effect_LightMove" parent="." instance=ExtResource( 5 )]
+
+[node name="Effect_LightMove2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 700, 0 )
+
+[node name="Effect_LightMove3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 575, 0 )

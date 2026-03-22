@@ -1,0 +1,295 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Buttons/RewardChooseButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://TscnAndGd/Buttons/LogicBut.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TscnAndGd/UI/InGame/EggUI.gd" type="Script" id=3]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=4]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=5]
+[ext_resource path="res://TscnAndGd/Buttons/EggBut.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Language/Fonts/Base_l_outline.tres" type="DynamicFont" id=8]
+[ext_resource path="res://TscnAndGd/UI/Info/Scroll_Theme.tres" type="Theme" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_light.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_5.png" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_Menu.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut.tres" type="Texture" id=16]
+[ext_resource path="res://TscnAndGd/UI/InGame/黑幕.tscn" type="PackedScene" id=17]
+
+[sub_resource type="ButtonGroup" id=192]
+
+[sub_resource type="ButtonGroup" id=193]
+
+[sub_resource type="StyleBoxTexture" id=185]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 1, 1, 0.392157 )
+
+[sub_resource type="StyleBoxTexture" id=186]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="StyleBoxEmpty" id=187]
+
+[sub_resource type="StyleBoxEmpty" id=188]
+
+[sub_resource type="StyleBoxEmpty" id=189]
+
+[sub_resource type="Animation" id=190]
+resource_name = "init"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=191]
+resource_name = "show"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="AchievementRewardUI" type="CanvasLayer"]
+layer = 2
+script = ExtResource( 3 )
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" parent="Control" instance=ExtResource( 17 )]
+
+[node name="BG" type="NinePatchRect" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -740.0
+margin_top = -480.0
+margin_right = 740.0
+margin_bottom = 445.0
+texture = ExtResource( 15 )
+patch_margin_left = 57
+patch_margin_top = 50
+patch_margin_right = 57
+patch_margin_bottom = 50
+
+[node name="LevelName" type="NinePatchRect" parent="Control/BG"]
+self_modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -627.5
+margin_top = 40.0
+margin_right = 627.5
+margin_bottom = 125.0
+texture = ExtResource( 16 )
+patch_margin_left = 43
+patch_margin_right = 44
+
+[node name="Label" type="Label" parent="Control/BG/LevelName"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -719.5
+margin_top = -42.5
+margin_right = 720.5
+margin_bottom = 42.5
+rect_min_size = Vector2( 500, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 8 )
+text = "扭蛋盒"
+align = 1
+valign = 1
+script = ExtResource( 5 )
+LabelTEXT = "信息-扭蛋盒"
+
+[node name="Control" type="Control" parent="Control/BG"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -15.0
+margin_top = 45.0
+margin_right = -15.0
+margin_bottom = 45.0
+
+[node name="Info" type="Control" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -662.0
+margin_top = -325.0
+margin_right = 322.0
+margin_bottom = 175.0
+
+[node name="BG" type="NinePatchRect" parent="Control/Info"]
+self_modulate = Color( 1, 0.994141, 0.90625, 0.588235 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -15.0
+margin_top = -15.0
+margin_right = -2.0
+margin_bottom = 44.0
+mouse_filter = 0
+texture = ExtResource( 12 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Scroll" type="ScrollContainer" parent="Control/Info"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -8.0
+margin_bottom = 36.0
+theme = ExtResource( 10 )
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="Grid" type="GridContainer" parent="Control/Info/Scroll"]
+margin_right = 100.0
+margin_bottom = 100.0
+columns = 9
+
+[node name="EggBut" parent="Control/Info/Scroll/Grid" instance=ExtResource( 6 )]
+group = SubResource( 192 )
+
+[node name="Choose" type="Control" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -681.0
+margin_top = 239.0
+margin_right = 335.0
+margin_bottom = 384.0
+
+[node name="BG" type="NinePatchRect" parent="Control/Choose"]
+self_modulate = Color( 1, 0.994141, 0.90625, 0.588235 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 0
+texture = ExtResource( 12 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Scroll" type="ScrollContainer" parent="Control/Choose"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 98.0
+margin_top = 24.0
+margin_right = -12.0
+margin_bottom = -12.0
+theme = ExtResource( 10 )
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="Grid" type="GridContainer" parent="Control/Choose/Scroll"]
+margin_right = 100.0
+margin_bottom = 100.0
+columns = 7
+
+[node name="EggBut" parent="Control/Choose/Scroll/Grid" instance=ExtResource( 6 )]
+group = SubResource( 193 )
+
+[node name="ButControl" type="Control" parent="Control"]
+anchor_top = 0.907
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 0.439941
+margin_right = 1.0
+
+[node name="BackBut" parent="Control/ButControl" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 42.5
+margin_top = -42.5
+margin_right = 127.5
+margin_bottom = 42.5
+custom_styles/hover = SubResource( 185 )
+custom_styles/pressed = SubResource( 186 )
+custom_styles/focus = SubResource( 187 )
+custom_styles/disabled = SubResource( 188 )
+custom_styles/normal = SubResource( 189 )
+_ActionModeBool = true
+
+[node name="B" parent="Control/ButControl/BackBut" instance=ExtResource( 4 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-返回"
+
+[node name="ApplyBut" parent="Control/ButControl" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -127.5
+margin_top = -42.5
+margin_right = -42.5
+margin_bottom = 42.5
+custom_styles/hover = SubResource( 185 )
+custom_styles/pressed = SubResource( 186 )
+custom_styles/focus = SubResource( 187 )
+custom_styles/disabled = SubResource( 188 )
+custom_styles/normal = SubResource( 189 )
+_ActionModeBool = true
+
+[node name="A" parent="Control/ButControl/ApplyBut" instance=ExtResource( 4 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-确定"
+
+[node name="CurInfo" parent="Control" instance=ExtResource( 1 )]
+margin_left = 1315.0
+margin_top = 293.0
+margin_right = 1314.36
+margin_bottom = 293.4
+focus_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/init = SubResource( 190 )
+anims/show = SubResource( 191 )
+
+[connection signal="pressed" from="Control/ButControl/BackBut" to="." method="_on_BackBut_pressed"]

@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=1]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_menu_daily_3.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_menu_daily_11.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_menu_daily_4.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_menu_daily_9.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_2.png" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_menu_daily_5.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_menu_daily_6.tres" type="Texture" id=8]
+
+[node name="配方双选" type="Node2D"]
+
+[node name="87" type="RichTextLabel" parent="."]
+margin_left = 145.0
+margin_top = 450.0
+margin_right = 852.0
+margin_bottom = 637.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "当加料日到来时，你需要增加顾客自选小料，这次与平时不同，你需要一次性增加2个。"
+text = "当加料日到来时，你需要增加顾客自选小料，这次与平时不同，你需要一次性增加2个。"
+script = ExtResource( 1 )
+LabelTEXT = "信息-文字说明-87"
+Center_Bool = true
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 424, 366 )
+
+[node name="IconMenuDaily3" type="Sprite" parent="Node2D"]
+position = Vector2( 38, -55 )
+texture = ExtResource( 3 )
+
+[node name="IconMenuDaily6" type="Sprite" parent="Node2D"]
+position = Vector2( 176, -59 )
+texture = ExtResource( 2 )
+
+[node name="IconMenuDaily4" type="Sprite" parent="Node2D"]
+position = Vector2( -105, -58 )
+texture = ExtResource( 8 )
+
+[node name="IconMenuDaily5" type="Sprite" parent="Node2D"]
+position = Vector2( -179, -58 )
+texture = ExtResource( 4 )
+
+[node name="IconMenuDaily9" type="Sprite" parent="Node2D"]
+position = Vector2( 323, -57 )
+texture = ExtResource( 5 )
+
+[node name="IconMenuDaily11" type="Sprite" parent="Node2D"]
+position = Vector2( -31, -55 )
+texture = ExtResource( 2 )
+
+[node name="IconMenuDaily12" type="Sprite" parent="Node2D"]
+position = Vector2( 107, -54 )
+texture = ExtResource( 7 )
+
+[node name="IconMenuDaily13" type="Sprite" parent="Node2D"]
+position = Vector2( 252, -56 )
+texture = ExtResource( 7 )
+
+[node name="ParticleCircle2" type="Sprite" parent="Node2D"]
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -104, -55 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 6 )

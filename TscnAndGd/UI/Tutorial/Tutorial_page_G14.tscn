@@ -1,0 +1,447 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_pressure_1.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_pressure_2.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_leg_run_1.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_think.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_water_4.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_leg_run_4.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_2.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bilateral_arm_idle_1.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bilateral_body_base_1.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_1.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_body_form_1.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_arm_hold_2.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bilateral_arm_hold_1.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_Britishcup_leg_run_2.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_little_body_decorative_5.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_little_body_base_1.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_little_body_base_2.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_little_body_decorative_6.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_Britishcup_leg_run_1.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_spoon_1.tres" type="Texture" id=20]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=21]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bilateral_body_base_2.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_ice_3.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bilateral_body_decorative_7.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_1.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_top.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_2.tres" type="Texture" id=27]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_2.tres" type="Texture" id=28]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_2.tres" type="Texture" id=29]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_25.tres" type="Texture" id=30]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_shock.tres" type="Texture" id=31]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_talk.tres" type="Texture" id=32]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/specialguest_mother_1.tres" type="Texture" id=33]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/specialguest_mother_5.tres" type="Texture" id=34]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/specialguest_mother_4.tres" type="Texture" id=35]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_Britishcup_leg_run_3.tres" type="Texture" id=36]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/specialguest_mother_3.tres" type="Texture" id=37]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/specialguest_mother_2.tres" type="Texture" id=38]
+
+[node name="Mother" type="Node2D"]
+
+[node name="66" type="RichTextLabel" parent="."]
+margin_left = 356.0
+margin_top = 153.0
+margin_right = 881.0
+margin_bottom = 331.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "带小孩的顾客很辛苦，等待饮料的期间小孩会不停哭闹！
+如果你为他{术语_跳单出杯}，会得到其他顾客的体谅，你不会因此断掉{术语_COMBO}"
+text = "带小孩的顾客很辛苦，等待饮料的期间小孩会不停哭闹！
+如果你为他{术语_跳单出杯}，会得到其他顾客的体谅，你不会因此断掉{术语_COMBO}"
+script = ExtResource( 21 )
+LabelTEXT = "信息-文字说明-66"
+Center_Bool = true
+
+[node name="67" type="RichTextLabel" parent="."]
+margin_left = 108.0
+margin_top = 539.0
+margin_right = 844.0
+margin_bottom = 696.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "即使其他人的号数在他前面，如果比他先拿到饮料，他也会很不开心，你会因此加一点压力。"
+text = "即使其他人的号数在他前面，如果比他先拿到饮料，他也会很不开心，你会因此加一点压力。"
+script = ExtResource( 21 )
+LabelTEXT = "信息-文字说明-67"
+Center_Bool = true
+
+[node name="All_note" type="Node2D" parent="."]
+position = Vector2( 237, 313 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="Body_note" type="Node2D" parent="All_note"]
+position = Vector2( 0, -38 )
+rotation = -0.0242338
+scale = Vector2( 0.965, 1.035 )
+
+[node name="Body" type="Node2D" parent="All_note/Body_note"]
+
+[node name="CupBody" type="Node2D" parent="All_note/Body_note/Body"]
+position = Vector2( 0, -30 )
+
+[node name="BodyBase1" type="Sprite" parent="All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 22 )
+
+[node name="Decorative1" type="Sprite" parent="All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 24 )
+
+[node name="BodyBase2" type="Sprite" parent="All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 9 )
+
+[node name="GuestSpoon1" type="Sprite" parent="All_note/Body_note/Body/CupBody"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -2, -23 )
+texture = ExtResource( 20 )
+
+[node name="Special" type="Node2D" parent="All_note/Body_note/Body/CupBody"]
+position = Vector2( 0, -12 )
+
+[node name="SpecialguestMother3" type="Sprite" parent="All_note/Body_note/Body/CupBody/Special"]
+position = Vector2( 0, 8 )
+rotation = -0.149727
+texture = ExtResource( 37 )
+offset = Vector2( 0, -30 )
+
+[node name="SpecialguestMother1" type="Sprite" parent="All_note/Body_note/Body/CupBody/Special"]
+position = Vector2( 0, 14 )
+texture = ExtResource( 33 )
+
+[node name="Hand" type="Sprite" parent="All_note/Body_note/Body/CupBody/Special"]
+position = Vector2( 0, 3 )
+texture = ExtResource( 38 )
+
+[node name="Arm_Other" type="Node2D" parent="All_note/Body_note"]
+position = Vector2( -36, -40 )
+scale = Vector2( -1, 1 )
+
+[node name="Arm" type="Sprite" parent="All_note/Body_note/Arm_Other"]
+texture = ExtResource( 8 )
+offset = Vector2( 20, 20 )
+
+[node name="Arm_Hold" type="Node2D" parent="All_note/Body_note"]
+position = Vector2( 36, -40 )
+
+[node name="Arm" type="Sprite" parent="All_note/Body_note/Arm_Hold"]
+texture = ExtResource( 8 )
+offset = Vector2( 20, 20 )
+
+[node name="Legs" type="Node2D" parent="All_note"]
+modulate = Color( 0.266667, 0.266667, 0.266667, 1 )
+show_behind_parent = true
+position = Vector2( 0, -10 )
+
+[node name="Leg_L" type="Node2D" parent="All_note/Legs"]
+position = Vector2( -3, -27 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="All_note/Legs/Leg_L"]
+texture = ExtResource( 36 )
+offset = Vector2( 6, 18 )
+
+[node name="Leg_R" type="Node2D" parent="All_note/Legs"]
+position = Vector2( 3, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="All_note/Legs/Leg_R"]
+texture = ExtResource( 14 )
+offset = Vector2( 6, 18 )
+
+[node name="2" type="Node2D" parent="."]
+position = Vector2( 500, 517 )
+
+[node name="UiPoptipIdeaShock3" type="Sprite" parent="2"]
+self_modulate = Color( 1, 0.776471, 0.298039, 1 )
+position = Vector2( 183, -117 )
+texture = ExtResource( 31 )
+
+[node name="UiPoptipIdea25" type="Sprite" parent="2/UiPoptipIdeaShock3"]
+position = Vector2( -1, -4 )
+texture = ExtResource( 30 )
+
+[node name="UiPoptipIdeaTalk" type="Sprite" parent="2"]
+self_modulate = Color( 1, 0.482353, 0.956863, 1 )
+position = Vector2( 10, -162 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 4 )
+
+[node name="lab" type="Label" parent="2/UiPoptipIdeaTalk"]
+margin_left = 14.0
+margin_top = -19.0
+margin_right = 37.0
+margin_bottom = 6.0
+rect_scale = Vector2( -1, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "5"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="UiIconPressure3" type="Sprite" parent="2"]
+position = Vector2( 243, -119 )
+texture = ExtResource( 1 )
+
+[node name="UiIconPressure4" type="Sprite" parent="2/UiIconPressure3"]
+modulate = Color( 1, 0.282353, 0.282353, 1 )
+position = Vector2( 30, 0 )
+texture = ExtResource( 2 )
+
+[node name="3" type="Node2D" parent="."]
+position = Vector2( 313, 512 )
+
+[node name="Top_note" type="Node2D" parent="3"]
+light_mask = 0
+
+[node name="All_note" type="Node2D" parent="3/Top_note"]
+position = Vector2( 0, -5 )
+
+[node name="Body_note" type="Node2D" parent="3/Top_note/All_note"]
+position = Vector2( 0, -24 )
+rotation = 0.0507779
+scale = Vector2( 1.05, 1.03 )
+
+[node name="Body" type="Node2D" parent="3/Top_note/All_note/Body_note"]
+
+[node name="CupBody" type="Node2D" parent="3/Top_note/All_note/Body_note/Body"]
+position = Vector2( 0, -24 )
+
+[node name="BodyBase1" type="Sprite" parent="3/Top_note/All_note/Body_note/Body/CupBody"]
+modulate = Color( 0.796078, 0.854902, 0.913725, 1 )
+texture = ExtResource( 17 )
+
+[node name="Decorate1" type="Sprite" parent="3/Top_note/All_note/Body_note/Body/CupBody"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 15 )
+
+[node name="Decorate2" type="Sprite" parent="3/Top_note/All_note/Body_note/Body/CupBody"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 18 )
+
+[node name="BodyBase2" type="Sprite" parent="3/Top_note/All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 16 )
+
+[node name="F1" type="Sprite" parent="3/Top_note/All_note/Body_note/Body/CupBody"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 0, 12 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 11 )
+
+[node name="Water_note" type="Node2D" parent="3/Top_note/All_note/Body_note/Body/CupBody"]
+position = Vector2( 0, -14 )
+
+[node name="WaterEff" type="Sprite" parent="3/Top_note/All_note/Body_note/Body/CupBody/Water_note"]
+modulate = Color( 0.462745, 0.701961, 0.819608, 0.643137 )
+texture = ExtResource( 5 )
+offset = Vector2( 14, -6 )
+
+[node name="CupFace" type="Node2D" parent="3/Top_note/All_note/Body_note/Body"]
+position = Vector2( 0, -14 )
+
+[node name="L" type="Node2D" parent="3/Top_note/All_note/Body_note/Body/CupFace"]
+position = Vector2( -10, 0 )
+
+[node name="Eye" type="Sprite" parent="3/Top_note/All_note/Body_note/Body/CupFace/L"]
+texture = ExtResource( 10 )
+
+[node name="Ball" type="Sprite" parent="3/Top_note/All_note/Body_note/Body/CupFace/L"]
+position = Vector2( 4, -2 )
+texture = ExtResource( 7 )
+
+[node name="R" type="Node2D" parent="3/Top_note/All_note/Body_note/Body/CupFace"]
+position = Vector2( 8, 0 )
+scale = Vector2( -1, 1 )
+
+[node name="Eye" type="Sprite" parent="3/Top_note/All_note/Body_note/Body/CupFace/R"]
+texture = ExtResource( 10 )
+
+[node name="Ball" type="Sprite" parent="3/Top_note/All_note/Body_note/Body/CupFace/R"]
+position = Vector2( 0, -2 )
+texture = ExtResource( 7 )
+
+[node name="Arm_Hold" type="Node2D" parent="3/Top_note/All_note/Body_note"]
+position = Vector2( 20, -33 )
+rotation = -0.112041
+
+[node name="Arm" type="Sprite" parent="3/Top_note/All_note/Body_note/Arm_Hold"]
+self_modulate = Color( 0.784314, 0.815686, 0.831373, 1 )
+texture = ExtResource( 12 )
+offset = Vector2( 4, -17 )
+
+[node name="Weapon_note" type="Node2D" parent="3/Top_note/All_note/Body_note/Arm_Hold"]
+position = Vector2( 20, 50 )
+
+[node name="Cup2" type="Node2D" parent="3/Top_note/All_note/Body_note/Arm_Hold/Weapon_note"]
+position = Vector2( -7.15039, -67.8202 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="3/Top_note/All_note/Body_note/Arm_Hold/Weapon_note/Cup2"]
+position = Vector2( 9.71429, 29.4286 )
+texture = ExtResource( 27 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="3/Top_note/All_note/Body_note/Arm_Hold/Weapon_note/Cup2"]
+self_modulate = Color( 0.321569, 0.890196, 1, 0.764706 )
+position = Vector2( 9.71429, 29.4286 )
+texture = ExtResource( 25 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="3/Top_note/All_note/Body_note/Arm_Hold/Weapon_note/Cup2"]
+self_modulate = Color( 0.321569, 0.890196, 1, 0.764706 )
+position = Vector2( 9.71429, 29.4286 )
+texture = ExtResource( 29 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="3/Top_note/All_note/Body_note/Arm_Hold/Weapon_note/Cup2"]
+self_modulate = Color( 0.321569, 0.890196, 1, 0.764706 )
+position = Vector2( 9.71429, 35.4286 )
+texture = ExtResource( 26 )
+
+[node name="UiProcupCup2" type="Sprite" parent="3/Top_note/All_note/Body_note/Arm_Hold/Weapon_note/Cup2"]
+position = Vector2( 9.71429, 29.4286 )
+texture = ExtResource( 28 )
+
+[node name="ItemIce3" type="Sprite" parent="3/Top_note/All_note/Body_note/Arm_Hold/Weapon_note/Cup2"]
+position = Vector2( 9.71429, 35.4286 )
+texture = ExtResource( 23 )
+
+[node name="Legs" type="Node2D" parent="3/Top_note/All_note"]
+show_behind_parent = true
+
+[node name="Leg_L" type="Node2D" parent="3/Top_note/All_note/Legs"]
+position = Vector2( -7, -27 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="3/Top_note/All_note/Legs/Leg_L"]
+self_modulate = Color( 0.784314, 0.815686, 0.831373, 1 )
+texture = ExtResource( 3 )
+offset = Vector2( -6, 0 )
+
+[node name="Leg_R" type="Node2D" parent="3/Top_note/All_note/Legs"]
+show_behind_parent = true
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="3/Top_note/All_note/Legs/Leg_R"]
+self_modulate = Color( 0.784314, 0.815686, 0.831373, 1 )
+texture = ExtResource( 6 )
+offset = Vector2( -6, 0 )
+
+[node name="UiPoptipIdeaTalk2" type="Sprite" parent="3"]
+position = Vector2( -65, -104 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 32 )
+
+[node name="lab" type="Label" parent="3/UiPoptipIdeaTalk2"]
+margin_left = 14.0
+margin_top = -23.0
+margin_right = 37.0
+margin_bottom = 2.0
+rect_scale = Vector2( -1, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "4"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2( 573, 510 )
+
+[node name="All_note" type="Node2D" parent="1"]
+
+[node name="Body_note" type="Node2D" parent="1/All_note"]
+position = Vector2( 0, -38 )
+
+[node name="Body" type="Node2D" parent="1/All_note/Body_note"]
+
+[node name="CupBody" type="Node2D" parent="1/All_note/Body_note/Body"]
+position = Vector2( 0, -30 )
+
+[node name="BodyBase1" type="Sprite" parent="1/All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 22 )
+
+[node name="Decorative1" type="Sprite" parent="1/All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 24 )
+
+[node name="BodyBase2" type="Sprite" parent="1/All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 9 )
+
+[node name="Special" type="Node2D" parent="1/All_note/Body_note/Body/CupBody"]
+position = Vector2( 0, -12 )
+
+[node name="SpecialguestMother3" type="Sprite" parent="1/All_note/Body_note/Body/CupBody/Special"]
+position = Vector2( 0, 8 )
+texture = ExtResource( 35 )
+offset = Vector2( 0, -30 )
+
+[node name="R" type="Sprite" parent="1/All_note/Body_note/Body/CupBody/Special/SpecialguestMother3"]
+show_behind_parent = true
+position = Vector2( 12, -31 )
+rotation = -0.261799
+texture = ExtResource( 34 )
+offset = Vector2( 17, 9 )
+
+[node name="L" type="Sprite" parent="1/All_note/Body_note/Body/CupBody/Special/SpecialguestMother3"]
+show_behind_parent = true
+position = Vector2( -12, -30 )
+rotation = 0.523598
+scale = Vector2( -1, 1 )
+texture = ExtResource( 34 )
+offset = Vector2( 17, 9 )
+
+[node name="SpecialguestMother1" type="Sprite" parent="1/All_note/Body_note/Body/CupBody/Special"]
+position = Vector2( 0, 14 )
+texture = ExtResource( 33 )
+
+[node name="Arm_Other" type="Node2D" parent="1/All_note/Body_note"]
+position = Vector2( -36, -40 )
+scale = Vector2( -1, 1 )
+
+[node name="Arm" type="Sprite" parent="1/All_note/Body_note/Arm_Other"]
+texture = ExtResource( 8 )
+offset = Vector2( 20, 20 )
+
+[node name="Arm_Hold" type="Node2D" parent="1/All_note/Body_note"]
+position = Vector2( 36, -40 )
+
+[node name="Arm" type="Sprite" parent="1/All_note/Body_note/Arm_Hold"]
+texture = ExtResource( 13 )
+offset = Vector2( 20, 20 )
+
+[node name="GuestSpoon2" type="Sprite" parent="1/All_note/Body_note/Arm_Hold"]
+position = Vector2( 28, 17 )
+rotation = 1.5708
+texture = ExtResource( 20 )
+offset = Vector2( -20, 5 )
+
+[node name="Legs" type="Node2D" parent="1/All_note"]
+modulate = Color( 0.266667, 0.266667, 0.266667, 1 )
+show_behind_parent = true
+position = Vector2( 0, -10 )
+
+[node name="Leg_L" type="Node2D" parent="1/All_note/Legs"]
+position = Vector2( -7, -27 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="1/All_note/Legs/Leg_L"]
+texture = ExtResource( 19 )
+offset = Vector2( 6, 18 )
+
+[node name="Leg_R" type="Node2D" parent="1/All_note/Legs"]
+show_behind_parent = true
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="1/All_note/Legs/Leg_R"]
+texture = ExtResource( 14 )
+offset = Vector2( 6, 18 )
+
+[node name="222" type="RichTextLabel" parent="."]
+margin_left = 114.0
+margin_top = 708.0
+margin_right = 806.0
+margin_bottom = 779.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "特殊顾客会给予极高的声望值。"
+text = "特殊顾客会给予极高的声望值。"
+script = ExtResource( 21 )
+LabelTEXT = "信息-文字说明-222"
+Center_Bool = true

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Sub_down_1.tres" type="Texture" id=2]
+
+[node name="SubStation" type="StaticBody2D"]
+light_mask = 2
+collision_layer = 128
+collision_mask = 5120
+
+[node name="Textnode" type="Node2D" parent="."]
+
+[node name="SubDown1" type="Sprite" parent="Textnode"]
+position = Vector2( 0, -175 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -84, -38, -68, -40, -68, -197, 66, -199, 69, -40, 87, -40, 89, -253, -86, -252 )

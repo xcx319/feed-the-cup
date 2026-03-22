@@ -1,0 +1,104 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Resources/Maps/Tmap_wallpaper_brick.png" type="Texture" id=18]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 18 )
+region = Rect2( 3, 260, 200, 240 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 18 )
+region = Rect2( 6, 260, 200, 240 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 18 )
+region = Rect2( 3, 254, 200, 240 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 18 )
+region = Rect2( 6, 254, 200, 240 )
+
+[node name="ExteriorWall" type="Node2D"]
+
+[node name="TexNode" type="Node2D" parent="."]
+
+[node name="MainWall" type="Node2D" parent="TexNode"]
+
+[node name="Floor1" type="Node2D" parent="TexNode/MainWall"]
+modulate = Color( 0.670588, 0.627451, 0.603922, 1 )
+
+[node name="Sprite_open" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 100, 0 )
+texture = SubResource( 1 )
+offset = Vector2( 0, -118 )
+
+[node name="m" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 500, 0 )
+texture = SubResource( 2 )
+offset = Vector2( 0, -118 )
+
+[node name="m2" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 300, 0 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 2 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite_open2" type="Sprite" parent="TexNode/MainWall/Floor1"]
+position = Vector2( 700, 0 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 1 )
+offset = Vector2( 0, -118 )
+
+[node name="Floor2" type="Node2D" parent="TexNode/MainWall"]
+position = Vector2( 0, -200 )
+
+[node name="Sprite_open" type="Sprite" parent="TexNode/MainWall/Floor2"]
+position = Vector2( 100, 0 )
+texture = SubResource( 3 )
+offset = Vector2( 0, -118 )
+
+[node name="m" type="Sprite" parent="TexNode/MainWall/Floor2"]
+position = Vector2( 300, 0 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 4 )
+offset = Vector2( 0, -118 )
+
+[node name="m2" type="Sprite" parent="TexNode/MainWall/Floor2"]
+position = Vector2( 500, 0 )
+texture = SubResource( 4 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite_open2" type="Sprite" parent="TexNode/MainWall/Floor2"]
+position = Vector2( 700, 0 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 3 )
+offset = Vector2( 0, -118 )
+
+[node name="Floor3" type="Node2D" parent="TexNode/MainWall"]
+position = Vector2( 0, -394 )
+
+[node name="Sprite_open" type="Sprite" parent="TexNode/MainWall/Floor3"]
+position = Vector2( 100, 0 )
+texture = SubResource( 3 )
+offset = Vector2( 0, -118 )
+
+[node name="m" type="Sprite" parent="TexNode/MainWall/Floor3"]
+position = Vector2( 300, 0 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 4 )
+offset = Vector2( 0, -118 )
+
+[node name="m2" type="Sprite" parent="TexNode/MainWall/Floor3"]
+position = Vector2( 500, 0 )
+texture = SubResource( 4 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite_open2" type="Sprite" parent="TexNode/MainWall/Floor3"]
+position = Vector2( 700, 0 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 3 )
+offset = Vector2( 0, -118 )

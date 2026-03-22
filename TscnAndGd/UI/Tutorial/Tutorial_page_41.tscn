@@ -1,0 +1,264 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_check_wrong.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_check.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_instant_milktea.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=4]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=5]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_waterport20_empty.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_waterport20.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_port_water_full.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_port_water_half.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_teaport20.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_teaport20_empty.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_2.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_1.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_top.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_2.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_2.tres" type="Texture" id=16]
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=17]
+
+[node name="使用量杯" type="Node2D"]
+position = Vector2( 115, 98 )
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( -58, -20 )
+
+[node name="Port" type="Node2D" parent="Node2D"]
+position = Vector2( 95, 84 )
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="Node2D/Port"]
+texture = ExtResource( 6 )
+
+[node name="ItemWaterport20" type="Sprite" parent="Node2D/Port"]
+texture = ExtResource( 7 )
+
+[node name="Teaport9" type="Node2D" parent="Node2D"]
+position = Vector2( 50, 37 )
+rotation = 0.523598
+scale = Vector2( -1, 1 )
+
+[node name="ItemTeaport20Empty" type="Sprite" parent="Node2D/Teaport9"]
+texture = ExtResource( 11 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="Node2D/Teaport9"]
+modulate = Color( 0.827451, 0.598039, 0.545098, 1 )
+texture = ExtResource( 9 )
+
+[node name="ItemTeaport20" type="Sprite" parent="Node2D/Teaport9"]
+texture = ExtResource( 10 )
+
+[node name="Port2" type="Node2D" parent="Node2D"]
+position = Vector2( 247, 85 )
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="Node2D/Port2"]
+texture = ExtResource( 6 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="Node2D/Port2"]
+modulate = Color( 0.827451, 0.596078, 0.545098, 1 )
+position = Vector2( 0, 11.5 )
+scale = Vector2( 1, 0.635135 )
+texture = ExtResource( 8 )
+
+[node name="ItemWaterport20" type="Sprite" parent="Node2D/Port2"]
+texture = ExtResource( 7 )
+
+[node name="IconLiquidInstantCoffee" type="Sprite" parent="Node2D/Port2"]
+position = Vector2( 1, -58 )
+texture = ExtResource( 3 )
+
+[node name="LiquidLabel" type="Label" parent="Node2D/Port2/IconLiquidInstantCoffee"]
+margin_left = -40.0
+margin_top = 2.0
+margin_right = 40.0
+margin_bottom = 42.0
+custom_fonts/font = ExtResource( 17 )
+text = "10"
+align = 1
+valign = 1
+
+[node name="IconMenuArrow1" type="Sprite" parent="Node2D"]
+position = Vector2( 169.5, 87 )
+texture = ExtResource( 4 )
+
+[node name="Port3" type="Node2D" parent="Node2D"]
+position = Vector2( 425, 86 )
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="Node2D/Port3"]
+texture = ExtResource( 6 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="Node2D/Port3"]
+modulate = Color( 0.827451, 0.596078, 0.545098, 1 )
+position = Vector2( 0, 0.5 )
+scale = Vector2( 1, 0.932432 )
+texture = ExtResource( 8 )
+
+[node name="ItemWaterport20" type="Sprite" parent="Node2D/Port3"]
+texture = ExtResource( 7 )
+
+[node name="IconLiquidInstantCoffee" type="Sprite" parent="Node2D/Port3"]
+position = Vector2( 1, -58 )
+texture = ExtResource( 3 )
+
+[node name="LiquidLabel" type="Label" parent="Node2D/Port3/IconLiquidInstantCoffee"]
+margin_left = -40.0
+margin_top = 2.0
+margin_right = 40.0
+margin_bottom = 42.0
+custom_fonts/font = ExtResource( 17 )
+text = "20"
+align = 1
+valign = 1
+
+[node name="IconMenuArrow2" type="Sprite" parent="Node2D"]
+position = Vector2( 347.5, 88 )
+texture = ExtResource( 4 )
+
+[node name="Label78" type="RichTextLabel" parent="."]
+margin_left = -190.0
+margin_top = 126.0
+margin_right = 551.0
+margin_bottom = 249.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "{术语_茶壶}一次可以制作10份速溶液体。
+{术语_量杯}最多可以容纳20份。"
+text = "{术语_茶壶}一次可以制作10份速溶液体。
+{术语_量杯}最多可以容纳20份。"
+script = ExtResource( 5 )
+LabelTEXT = "信息-文字说明-78"
+Center_Bool = true
+
+[node name="Label79" type="RichTextLabel" parent="."]
+margin_left = -179.0
+margin_top = 429.0
+margin_right = 566.0
+margin_bottom = 543.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "不可以将不同的液体在{术语_量杯}内混合。"
+text = "不可以将不同的液体在{术语_量杯}内混合。"
+script = ExtResource( 5 )
+LabelTEXT = "信息-文字说明-79"
+Center_Bool = true
+
+[node name="2" type="Node2D" parent="."]
+position = Vector2( 148, 346 )
+
+[node name="Teaport10" type="Node2D" parent="2"]
+position = Vector2( 38.5714, -28.5714 )
+rotation = -0.698132
+
+[node name="ItemTeaport20Empty" type="Sprite" parent="2/Teaport10"]
+texture = ExtResource( 11 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="2/Teaport10"]
+modulate = Color( 0.827451, 0.596078, 0.545098, 1 )
+texture = ExtResource( 9 )
+
+[node name="ItemTeaport20" type="Sprite" parent="2/Teaport10"]
+texture = ExtResource( 10 )
+
+[node name="UiIconStateCheckWrong" type="Sprite" parent="2"]
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 73.2143, -18.2143 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 1 )
+
+[node name="cUP" type="Node2D" parent="2"]
+scale = Vector2( 0.5, 0.5 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="2/cUP"]
+texture = ExtResource( 16 )
+
+[node name="UiProcupCup2" type="Sprite" parent="2/cUP"]
+texture = ExtResource( 15 )
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2( -84, 375 )
+
+[node name="Port3" type="Node2D" parent="1"]
+position = Vector2( 61.4286, -58.5714 )
+rotation = -0.698132
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="1/Port3"]
+texture = ExtResource( 6 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="1/Port3"]
+modulate = Color( 0.827451, 0.596078, 0.545098, 1 )
+position = Vector2( -1.34775, 9.08914 )
+scale = Vector2( 1, 0.630251 )
+texture = ExtResource( 8 )
+
+[node name="ItemWaterport20" type="Sprite" parent="1/Port3"]
+texture = ExtResource( 7 )
+
+[node name="UiIconStateCheck" type="Sprite" parent="1"]
+self_modulate = Color( 0, 1, 0.0862745, 1 )
+position = Vector2( 95.7143, -48.5715 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 2 )
+
+[node name="Cup4" type="Node2D" parent="1"]
+position = Vector2( 29, -29 )
+scale = Vector2( 0.5, 0.5 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="1/Cup4"]
+texture = ExtResource( 16 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="1/Cup4"]
+self_modulate = Color( 0.827451, 0.596078, 0.545098, 1 )
+texture = ExtResource( 13 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="1/Cup4"]
+self_modulate = Color( 0.827451, 0.596078, 0.545098, 1 )
+texture = ExtResource( 12 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="1/Cup4"]
+self_modulate = Color( 0.827451, 0.596078, 0.545098, 1 )
+position = Vector2( 0, 6 )
+texture = ExtResource( 14 )
+
+[node name="UiProcupCup2" type="Sprite" parent="1/Cup4"]
+texture = ExtResource( 15 )
+
+[node name="3" type="Node2D" parent="."]
+position = Vector2( 353, 362 )
+
+[node name="Port3" type="Node2D" parent="3"]
+position = Vector2( 61.4286, -58.5714 )
+rotation = -0.698132
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="3/Port3"]
+texture = ExtResource( 6 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="3/Port3"]
+modulate = Color( 0.827451, 0.596078, 0.545098, 1 )
+position = Vector2( -1.34775, 9.08914 )
+scale = Vector2( 1, 0.630251 )
+texture = ExtResource( 8 )
+
+[node name="ItemWaterport20" type="Sprite" parent="3/Port3"]
+texture = ExtResource( 7 )
+
+[node name="Port4" type="Node2D" parent="3"]
+position = Vector2( 16, -13 )
+scale = Vector2( -1, 1 )
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="3/Port4"]
+texture = ExtResource( 6 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="3/Port4"]
+modulate = Color( 0.231373, 0.188235, 0.176471, 1 )
+position = Vector2( -1.34775, 9.08914 )
+scale = Vector2( 1, 0.630251 )
+texture = ExtResource( 8 )
+
+[node name="ItemWaterport20" type="Sprite" parent="3/Port4"]
+texture = ExtResource( 7 )
+
+[node name="UiIconStateCheckWrong" type="Sprite" parent="3"]
+self_modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 98, -15 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 1 )

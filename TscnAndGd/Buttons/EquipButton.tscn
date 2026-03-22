@@ -1,0 +1,248 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Info/CostumeItem.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_light.tres" type="Texture" id=2]
+[ext_resource path="res://TscnAndGd/Buttons/EquipButton.gd" type="Script" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_difficulty_light.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_frame_light.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_21.tres" type="Texture" id=6]
+
+[sub_resource type="StyleBoxTexture" id=266]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 90, 93 )
+margin_left = 25.0
+margin_right = 25.0
+margin_top = 25.0
+margin_bottom = 25.0
+modulate_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="StyleBoxTexture" id=267]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 90, 93 )
+margin_left = 25.0
+margin_right = 25.0
+margin_top = 25.0
+margin_bottom = 25.0
+modulate_color = Color( 1, 1, 0.498039, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=270]
+
+[sub_resource type="StyleBoxTexture" id=269]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 90, 93 )
+margin_left = 25.0
+margin_right = 25.0
+margin_top = 25.0
+margin_bottom = 25.0
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="StyleBoxTexture" id=259]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 90, 93 )
+margin_left = 25.0
+margin_right = 25.0
+margin_top = 25.0
+margin_bottom = 25.0
+
+[sub_resource type="Animation" id=262]
+resource_name = "Classy"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ParticleCircle5:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.27451, 0.721569, 0.27451, 0.392157 ) ]
+}
+
+[sub_resource type="Animation" id=263]
+resource_name = "Common"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ParticleCircle5:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.454902, 0.454902, 0.454902, 0 ) ]
+}
+
+[sub_resource type="Animation" id=264]
+resource_name = "Epic"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ParticleCircle5:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.756863, 0.45098, 1, 0.705882 ) ]
+}
+
+[sub_resource type="Animation" id=265]
+resource_name = "Rare"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ParticleCircle5:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.34902, 0.694118, 1, 0.588235 ) ]
+}
+
+[sub_resource type="Animation" id=273]
+resource_name = "Unique"
+tracks/0/type = "value"
+tracks/0/path = NodePath("ParticleCircle5:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.647059, 0, 0.784314 ) ]
+}
+
+[sub_resource type="Animation" id=271]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=272]
+resource_name = "show"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFontData" id=260]
+font_path = "res://Language/Fonts/猫啃网秀雅圆.ttf"
+
+[sub_resource type="DynamicFont" id=261]
+size = 23
+outline_size = 1
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 260 )
+
+[node name="Button" type="Button"]
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+custom_styles/hover = SubResource( 266 )
+custom_styles/pressed = SubResource( 267 )
+custom_styles/focus = SubResource( 270 )
+custom_styles/disabled = SubResource( 269 )
+custom_styles/normal = SubResource( 259 )
+script = ExtResource( 3 )
+
+[node name="ParticleCircle5" type="Sprite" parent="."]
+modulate = Color( 0.34902, 0.694118, 1, 0.588235 )
+position = Vector2( 50.5, 51.15 )
+scale = Vector2( 0.794643, 0.824107 )
+texture = ExtResource( 5 )
+
+[node name="ANI" type="AnimationPlayer" parent="."]
+autoplay = "Common"
+anims/Classy = SubResource( 262 )
+anims/Common = SubResource( 263 )
+anims/Epic = SubResource( 264 )
+anims/Rare = SubResource( 265 )
+anims/Unique = SubResource( 273 )
+
+[node name="Item" parent="." instance=ExtResource( 1 )]
+position = Vector2( 50, 50 )
+
+[node name="Focus" type="NinePatchRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 0.721569, 0.0627451, 1 )
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 100 )
+texture = ExtResource( 4 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="ANI" type="AnimationPlayer" parent="Focus"]
+autoplay = "init"
+anims/init = SubResource( 271 )
+anims/show = SubResource( 272 )
+
+[node name="NumLabel" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -30.0
+margin_top = -30.0
+margin_right = -6.0
+margin_bottom = -6.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/font_color = Color( 1, 0.588235, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 261 )
+text = "99"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -96.0
+margin_top = -30.0
+margin_right = -72.0
+margin_bottom = -6.0
+rect_min_size = Vector2( 24, 24 )
+custom_colors/font_color = Color( 1, 0.588235, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 261 )
+align = 1
+valign = 1
+
+[node name="UiPoptipIdea21" type="Sprite" parent="Label"]
+position = Vector2( 12, 12 )
+texture = ExtResource( 6 )
+
+[connection signal="focus_entered" from="." to="." method="_on_Button_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_Button_focus_exited"]
+[connection signal="pressed" from="." to="." method="_on_Button_pressed"]

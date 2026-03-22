@@ -1,0 +1,245 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_tree_3.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_tree_base.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_tree_1.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_1_t.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_1_s.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_1_b.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_2_s.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_2_t.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_2_b.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_5_b.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_5_t.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_3_s.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_3_t.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_5_s.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_3_b.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_4_b.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_4_s.tres" type="Texture" id=19]
+
+[sub_resource type="Animation" id=2]
+resource_name = "idle"
+length = 5.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("../Tree:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 2.1, 5.81602, 0, -1.6, -6.51009, 0.25, 0 ),
+"times": PoolRealArray( 0, 5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("../Tree/Main/Main3:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 1.7, -3.22747, 0, -2, 5.10622, 0.25, 0 ),
+"times": PoolRealArray( 0, 5 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("../Tree/Main/Main2:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.8, -3.42127, 0, -1.7, 6.07525, 0.25, 0 ),
+"times": PoolRealArray( 0, 5 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("../Tree/Main/Main4:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 2.3, 5.88145, 0, -1.7, -1.67701, 0.25, 0 ),
+"times": PoolRealArray( 0, 5 )
+}
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 25.0
+
+[node name="FlowerTree" type="StaticBody2D"]
+collision_layer = 128
+collision_mask = 5120
+
+[node name="Tree" type="Node2D" parent="."]
+
+[node name="Main" type="Node2D" parent="Tree"]
+
+[node name="Main4" type="Node2D" parent="Tree/Main"]
+position = Vector2( -12, -175 )
+
+[node name="OutdoorFlowerTreeGroup1S" type="Sprite" parent="Tree/Main/Main4"]
+position = Vector2( 25.5083, 3.9455 )
+texture = ExtResource( 6 )
+
+[node name="Tree" type="Sprite" parent="Tree/Main/Main4"]
+rotation = -0.785397
+texture = ExtResource( 1 )
+offset = Vector2( 23, -93 )
+
+[node name="9" type="Node2D" parent="Tree/Main/Main4"]
+position = Vector2( -11, -97 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+
+[node name="OutdoorFlowerTreeGroup3T" type="Sprite" parent="Tree/Main/Main4/9"]
+position = Vector2( 72, 27 )
+texture = ExtResource( 15 )
+
+[node name="OutdoorFlowerTreeGroup3B" type="Sprite" parent="Tree/Main/Main4/9"]
+position = Vector2( 72, 27 )
+texture = ExtResource( 17 )
+
+[node name="OutdoorFlowerTreeGroup4B" type="Sprite" parent="Tree/Main/Main4"]
+position = Vector2( -60, -118 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 18 )
+
+[node name="Main2" type="Node2D" parent="Tree/Main"]
+position = Vector2( -47, -229 )
+scale = Vector2( -1, 1 )
+
+[node name="Tree" type="Sprite" parent="Tree/Main/Main2"]
+texture = ExtResource( 3 )
+offset = Vector2( -108, -18 )
+
+[node name="OutdoorFlowerTreeGroup5B" type="Sprite" parent="Tree/Main/Main2"]
+position = Vector2( -129, -26.0001 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 11 )
+
+[node name="7" type="Node2D" parent="Tree/Main/Main2"]
+position = Vector2( -93, -39 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+
+[node name="OutdoorFlowerTreeGroup1S" type="Sprite" parent="Tree/Main/Main2/7"]
+position = Vector2( 17.3446, 40.5612 )
+texture = ExtResource( 6 )
+
+[node name="OutdoorFlowerTreeGroup1T" type="Sprite" parent="Tree/Main/Main2/7"]
+position = Vector2( 20.5, -29.5 )
+texture = ExtResource( 5 )
+
+[node name="OutdoorFlowerTreeGroup1B" type="Sprite" parent="Tree/Main/Main2/7"]
+position = Vector2( 20.5, -29.5 )
+texture = ExtResource( 7 )
+
+[node name="8" type="Node2D" parent="Tree/Main/Main2"]
+position = Vector2( 27, 1 )
+rotation = 2.87979
+scale = Vector2( 1, -1 )
+
+[node name="OutdoorFlowerTreeGroup2S" type="Sprite" parent="Tree/Main/Main2/8"]
+position = Vector2( 81, -6 )
+texture = ExtResource( 8 )
+
+[node name="OutdoorFlowerTreeGroup2B" type="Sprite" parent="Tree/Main/Main2/8"]
+position = Vector2( 91.7815, -9.06395 )
+texture = ExtResource( 10 )
+
+[node name="Main1" type="Node2D" parent="Tree/Main"]
+
+[node name="5" type="Node2D" parent="Tree/Main/Main1"]
+position = Vector2( 39, -171 )
+
+[node name="OutdoorFlowerTreeGroup5S" type="Sprite" parent="Tree/Main/Main1/5"]
+position = Vector2( 83, 6 )
+texture = ExtResource( 16 )
+
+[node name="OutdoorFlowerTreeGroup5T" type="Sprite" parent="Tree/Main/Main1/5"]
+position = Vector2( 83, 6 )
+texture = ExtResource( 13 )
+
+[node name="OutdoorFlowerTreeGroup5B" type="Sprite" parent="Tree/Main/Main1/5"]
+position = Vector2( 83, 6 )
+texture = ExtResource( 11 )
+
+[node name="OutdoorFlowerTreeGroup4S2" type="Sprite" parent="Tree/Main/Main1"]
+position = Vector2( 7, -324 )
+texture = ExtResource( 19 )
+
+[node name="Tree" type="Sprite" parent="Tree/Main/Main1"]
+position = Vector2( 1, 0 )
+texture = ExtResource( 2 )
+offset = Vector2( 17, -183 )
+
+[node name="OutdoorFlowerTreeGroup1B" type="Sprite" parent="Tree/Main/Main1"]
+position = Vector2( 35, -353 )
+texture = ExtResource( 7 )
+
+[node name="OutdoorFlowerTreeGroup3S" type="Sprite" parent="Tree/Main/Main1"]
+position = Vector2( -76, -209 )
+texture = ExtResource( 14 )
+
+[node name="OutdoorFlowerTreeGroup3B" type="Sprite" parent="Tree/Main/Main1"]
+position = Vector2( -66, -197 )
+texture = ExtResource( 17 )
+
+[node name="OutdoorFlowerTreeGroup4B2" type="Sprite" parent="Tree/Main/Main1"]
+position = Vector2( 29, -268 )
+texture = ExtResource( 18 )
+
+[node name="OutdoorFlowerTreeGroup5S" type="Sprite" parent="Tree/Main/Main1"]
+position = Vector2( -55, -263 )
+texture = ExtResource( 16 )
+
+[node name="Main3" type="Node2D" parent="Tree/Main"]
+position = Vector2( -15, -134 )
+scale = Vector2( -1, 1 )
+
+[node name="OutdoorFlowerTreeGroup4S" type="Sprite" parent="Tree/Main/Main3"]
+position = Vector2( 33.7341, -14.7292 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 19 )
+
+[node name="OutdoorFlowerTreeGroup1B" type="Sprite" parent="Tree/Main/Main3"]
+position = Vector2( 132, -57 )
+texture = ExtResource( 7 )
+
+[node name="2" type="Node2D" parent="Tree/Main/Main3"]
+position = Vector2( 56, -28 )
+rotation = 0.261799
+
+[node name="OutdoorFlowerTreeGroup2S" type="Sprite" parent="Tree/Main/Main3/2"]
+position = Vector2( 81, -6 )
+texture = ExtResource( 8 )
+
+[node name="OutdoorFlowerTreeGroup2T" type="Sprite" parent="Tree/Main/Main3/2"]
+position = Vector2( 81, -6 )
+texture = ExtResource( 9 )
+
+[node name="OutdoorFlowerTreeGroup2B" type="Sprite" parent="Tree/Main/Main3/2"]
+position = Vector2( 81, -6 )
+texture = ExtResource( 10 )
+
+[node name="OutdoorFlowerTreeGroup2B" type="Sprite" parent="Tree/Main/Main3"]
+position = Vector2( 66.7929, -57.8312 )
+rotation = 0.261799
+texture = ExtResource( 10 )
+
+[node name="OutdoorFlowerTreeGroup5B2" type="Sprite" parent="Tree"]
+position = Vector2( 82.7326, -129.335 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 11 )
+
+[node name="Aninode" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Aninode"]
+autoplay = "idle"
+anims/idle = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )

@@ -1,0 +1,111 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Buttons/RewardChooseButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://TscnAndGd/UI/Buttons/RewardShowButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TscnAndGd/UI/Info/CurChoose.gd" type="Script" id=4]
+
+[sub_resource type="Animation" id=2]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Challenge:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5, 100 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Challenge:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 3, 198 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("ShowInfo:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[node name="CurChoose" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1920.0
+margin_bottom = -1080.0
+script = ExtResource( 4 )
+
+[node name="Reward" type="ScrollContainer" parent="."]
+margin_left = 3.0
+margin_top = 4.0
+margin_right = 1666.0
+margin_bottom = 212.0
+follow_focus = true
+
+[node name="Grid" type="GridContainer" parent="Reward"]
+margin_right = 100.0
+margin_bottom = 100.0
+custom_constants/vseparation = -4
+custom_constants/hseparation = -4
+columns = 17
+
+[node name="Button" parent="Reward/Grid" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 100.0
+margin_bottom = 100.0
+
+[node name="Challenge" type="ScrollContainer" parent="."]
+margin_left = 5.0
+margin_top = 100.0
+margin_right = 1668.0
+margin_bottom = 203.0
+follow_focus = true
+
+[node name="Grid" type="GridContainer" parent="Challenge"]
+margin_right = 100.0
+margin_bottom = 100.0
+custom_constants/vseparation = -4
+custom_constants/hseparation = -4
+columns = 17
+
+[node name="Button2" parent="Challenge/Grid" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 100.0
+margin_bottom = 100.0
+
+[node name="ShowInfo" parent="." instance=ExtResource( 1 )]
+visible = false
+focus_mode = 0
+mouse_filter = 2
+
+[node name="Ani" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/1 = SubResource( 2 )
+anims/2 = SubResource( 3 )
+anims/init = SubResource( 1 )

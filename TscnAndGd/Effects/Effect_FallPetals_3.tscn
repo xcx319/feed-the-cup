@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_single_10.tres" type="Texture" id=1]
+
+[sub_resource type="Animation" id=4]
+resource_name = "1"
+length = 12.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Position:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.9, -6.36623, 0, -0.25, 0, 0.5, 9.13266, 35, -0.5, -1.28264, 0.9, 5.06379, -35, -0.6, -0.2348, 1.4, -3.38576, 15, -0.4, 0.250665, 0.25, 0 ),
+"times": PoolRealArray( 0, 2.7, 4.9, 7.5, 10 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("Position:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( -180, -0.25, 0, 1.1, 0.0603638, -180, -0.25, 0, 2, 25.4933, 0, -1.71, -31.3086, 0.25, 0 ),
+"times": PoolRealArray( 0, 2.7, 10 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("Position:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 1, -1.29025, 0, -0.25, 0, 1.4, 24.2922, 0, -0.6, 7.54734, 1.5, -31.5241, 0, -0.6, -7.10445, 0.6, 14.5244, 0, -0.6, -11.7558, 0.25, 0 ),
+"times": PoolRealArray( 0, 2.7, 4.9, 7.4, 10 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Position:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2.7, 3, 11, 12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="Effect_FallPetals" type="Node2D"]
+
+[node name="Ani" type="AnimationPlayer" parent="."]
+autoplay = "1"
+anims/1 = SubResource( 4 )
+
+[node name="Position" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 15, 0 )
+
+[node name="OutdoorFlowerTreeSingle5" type="Sprite" parent="Position"]
+texture = ExtResource( 1 )

@@ -1,0 +1,364 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/Characters/Guest/Other/character_other_pack.sprites/Clothes_Packbag_3_front.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Characters/Guest/Other/character_other_pack.sprites/Clothes_Hat_1_front.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_goblin_leg_idle_1.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_goblin_body_front.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_goblin_arm_hold_1.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_goblin_head_front.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_goblin_arm_work_3.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_goblin_body_part.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_goblin_leg_idle_0.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_wine_beer_Lager.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_coin.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashIcon_1.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_BeerBarrel_Wood_2.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_BeerBarrel_Wood_head.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_sign.tres" type="Texture" id=16]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=17]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_telephone_1.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/store_beerbarrelshelf_layer.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/store_beerbarrelshelf_leg.tres" type="Texture" id=20]
+
+[sub_resource type="Shader" id=76]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}"
+
+[sub_resource type="ShaderMaterial" id=316]
+resource_local_to_scene = true
+shader = SubResource( 76 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[node name="回收酒桶" type="Node2D"]
+position = Vector2( 322, 341 )
+
+[node name="231" type="RichTextLabel" parent="."]
+margin_left = -222.0
+margin_top = 234.0
+margin_right = 558.0
+margin_bottom = 411.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "啤酒桶可以收纳在酒桶架上，空酒桶不可以扔进垃圾桶。
+每次订新的酒桶时，送货小哥会顺手带走一个空酒桶，并且返还酒桶的押金。
+如果空桶太多，你也可以支付上门费用，直接呼叫回收服务。"
+text = "啤酒桶可以收纳在酒桶架上，空酒桶不可以扔进垃圾桶。
+每次订新的酒桶时，送货小哥会顺手带走一个空酒桶，并且返还酒桶的押金。
+如果空桶太多，你也可以支付上门费用，直接呼叫回收服务。"
+script = ExtResource( 17 )
+LabelTEXT = "信息-文字说明-231"
+Center_Bool = true
+
+[node name="TexNode" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2( -41, 155 )
+
+[node name="Leg4" type="NinePatchRect" parent="TexNode"]
+modulate = Color( 0.803922, 0.803922, 0.803922, 1 )
+use_parent_material = true
+margin_left = 77.0
+margin_top = -125.0
+margin_right = 93.0
+margin_bottom = 10.0
+texture = ExtResource( 20 )
+patch_margin_top = 5
+patch_margin_bottom = 8
+
+[node name="Leg5" type="NinePatchRect" parent="TexNode"]
+modulate = Color( 0.803922, 0.803922, 0.803922, 1 )
+use_parent_material = true
+margin_left = -93.0
+margin_top = -126.0
+margin_right = -77.0
+margin_bottom = 10.0
+texture = ExtResource( 20 )
+patch_margin_top = 12
+patch_margin_bottom = 12
+
+[node name="Leg6" type="NinePatchRect" parent="TexNode"]
+modulate = Color( 0.803922, 0.803922, 0.803922, 1 )
+use_parent_material = true
+margin_left = -8.0
+margin_top = -126.0
+margin_right = 8.0
+margin_bottom = 10.0
+texture = ExtResource( 20 )
+patch_margin_top = 12
+patch_margin_bottom = 12
+
+[node name="layer1" type="Sprite" parent="TexNode"]
+self_modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+position = Vector2( -44, 17 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 19 )
+
+[node name="layer2" type="Sprite" parent="TexNode"]
+self_modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+position = Vector2( -44, -74 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 19 )
+
+[node name="TexNode3" type="Node2D" parent="TexNode"]
+pause_mode = 2
+material = SubResource( 316 )
+position = Vector2( -45, -12 )
+
+[node name="1" type="Sprite" parent="TexNode/TexNode3"]
+pause_mode = 2
+use_parent_material = true
+position = Vector2( 0, 60 )
+texture = ExtResource( 14 )
+offset = Vector2( 0, -61.175 )
+
+[node name="2" type="Sprite" parent="TexNode/TexNode3"]
+pause_mode = 2
+use_parent_material = true
+position = Vector2( 0, 35 )
+texture = ExtResource( 15 )
+offset = Vector2( 0, 10 )
+
+[node name="UI" type="Node2D" parent="TexNode/TexNode3"]
+z_index = 1
+
+[node name="UseTex" type="Sprite" parent="TexNode/TexNode3/UI"]
+position = Vector2( 0, -64 )
+texture = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="TexNode/TexNode3/UI/UseTex"]
+margin_left = -21.0
+margin_top = 18.0
+margin_right = 19.0
+margin_bottom = 43.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="layer3" type="Sprite" parent="TexNode"]
+self_modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+position = Vector2( 43.8, 16.1 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 19 )
+
+[node name="layer4" type="Sprite" parent="TexNode"]
+self_modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+position = Vector2( 44, -74 )
+scale = Vector2( 1.1, 1.1 )
+texture = ExtResource( 19 )
+
+[node name="Leg1" type="NinePatchRect" parent="TexNode"]
+use_parent_material = true
+margin_left = 84.0
+margin_top = -85.0
+margin_right = 100.0
+margin_bottom = 50.0
+texture = ExtResource( 20 )
+patch_margin_top = 5
+patch_margin_bottom = 8
+
+[node name="Leg2" type="NinePatchRect" parent="TexNode"]
+use_parent_material = true
+margin_left = -100.0
+margin_top = -86.0
+margin_right = -84.0
+margin_bottom = 50.0
+texture = ExtResource( 20 )
+patch_margin_top = 12
+patch_margin_bottom = 12
+
+[node name="Leg3" type="NinePatchRect" parent="TexNode"]
+use_parent_material = true
+margin_left = -8.0
+margin_top = -86.0
+margin_right = 8.0
+margin_bottom = 50.0
+texture = ExtResource( 20 )
+patch_margin_top = 12
+patch_margin_bottom = 12
+
+[node name="Boblin2" type="Node2D" parent="."]
+position = Vector2( 345, 193 )
+
+[node name="Leg_L" type="Node2D" parent="Boblin2"]
+position = Vector2( -7, -27 )
+
+[node name="L" type="Sprite" parent="Boblin2/Leg_L"]
+texture = ExtResource( 4 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="Boblin2"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="R" type="Sprite" parent="Boblin2/Leg_R"]
+texture = ExtResource( 10 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="Boblin2"]
+show_behind_parent = true
+position = Vector2( 0, -25 )
+
+[node name="BodyPose" type="Node2D" parent="Boblin2/Body_note"]
+rotation = 0.0427753
+
+[node name="Body" type="Node2D" parent="Boblin2/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="Boblin2/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+texture = ExtResource( 5 )
+
+[node name="Part" type="Sprite" parent="Boblin2/Body_note/BodyPose/Body/BodyBase"]
+position = Vector2( 0, 7 )
+texture = ExtResource( 9 )
+
+[node name="HeadPose" type="Node2D" parent="Boblin2/Body_note/BodyPose/Body"]
+position = Vector2( 0, -65 )
+rotation = 0.0760096
+
+[node name="Head" type="Node2D" parent="Boblin2/Body_note/BodyPose/Body/HeadPose"]
+
+[node name="Down" type="Sprite" parent="Boblin2/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 7 )
+offset = Vector2( 0, -26 )
+
+[node name="ClothesHat1Front" type="Sprite" parent="Boblin2/Body_note/BodyPose/Body/HeadPose"]
+position = Vector2( 2.02185, -35.5496 )
+texture = ExtResource( 3 )
+
+[node name="down" type="Sprite" parent="Boblin2/Body_note/BodyPose/Body"]
+use_parent_material = true
+position = Vector2( 2.58521, -33.1409 )
+texture = ExtResource( 2 )
+
+[node name="Arm_Hold" type="Node2D" parent="Boblin2/Body_note/BodyPose"]
+position = Vector2( 20, -47 )
+rotation = 0.261799
+
+[node name="Pose_Hold" type="Node2D" parent="Boblin2/Body_note/BodyPose/Arm_Hold"]
+rotation = -1.0472
+
+[node name="Arm" type="Sprite" parent="Boblin2/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 1, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 6 )
+offset = Vector2( -10, 3 )
+
+[node name="Weapon_note" type="Node2D" parent="Boblin2/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+visible = false
+position = Vector2( 30, 39 )
+
+[node name="Arm" type="Node2D" parent="Boblin2/Body_note/BodyPose"]
+position = Vector2( -20, -47 )
+rotation = 0.523598
+scale = Vector2( -1, 1 )
+
+[node name="Pose" type="Node2D" parent="Boblin2/Body_note/BodyPose/Arm"]
+rotation = -0.0396903
+
+[node name="Arm" type="Sprite" parent="Boblin2/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 8 )
+offset = Vector2( -10, 3 )
+
+[node name="RIGHT_Node" type="Node2D" parent="Boblin2/Body_note/BodyPose/Arm/Pose"]
+position = Vector2( -15, 5 )
+
+[node name="TexNode2" type="Node2D" parent="Boblin2"]
+pause_mode = 2
+material = SubResource( 316 )
+position = Vector2( 62, -32 )
+
+[node name="1" type="Sprite" parent="Boblin2/TexNode2"]
+pause_mode = 2
+use_parent_material = true
+position = Vector2( 0, 60 )
+texture = ExtResource( 14 )
+offset = Vector2( 0, -61.175 )
+
+[node name="2" type="Sprite" parent="Boblin2/TexNode2"]
+pause_mode = 2
+use_parent_material = true
+position = Vector2( 0, 35 )
+texture = ExtResource( 15 )
+offset = Vector2( 0, 10 )
+
+[node name="UI" type="Node2D" parent="Boblin2/TexNode2"]
+z_index = 1
+
+[node name="UseTex" type="Sprite" parent="Boblin2/TexNode2/UI"]
+position = Vector2( 0, -64 )
+texture = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="Boblin2/TexNode2/UI/UseTex"]
+margin_left = -21.0
+margin_top = 18.0
+margin_right = 19.0
+margin_bottom = 43.0
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="UiIconCoin" type="Sprite" parent="Boblin2"]
+position = Vector2( 129, -145 )
+texture = ExtResource( 12 )
+
+[node name="Label" type="Label" parent="Boblin2/UiIconCoin"]
+margin_left = -54.0
+margin_top = -13.0
+margin_right = -14.0
+margin_bottom = 12.0
+custom_fonts/font = ExtResource( 1 )
+text = "+50"
+align = 1
+valign = 1
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 154, 135 )
+
+[node name="DeviceTelephone2" type="Sprite" parent="Node2D"]
+position = Vector2( 10, 37 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 18 )
+
+[node name="UiPoptipIdeaSign" type="Sprite" parent="Node2D"]
+position = Vector2( 46, -63 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 16 )
+
+[node name="IconSkill60" type="Sprite" parent="Node2D"]
+self_modulate = Color( 0.364706, 0.364706, 0.364706, 1 )
+position = Vector2( 49, -70 )
+texture = ExtResource( 13 )

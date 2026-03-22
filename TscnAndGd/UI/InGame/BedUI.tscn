@@ -1,0 +1,608 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=1]
+[ext_resource path="res://TscnAndGd/UI/InGame/黑幕.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TscnAndGd/UI/Steam/FriendList.tscn" type="PackedScene" id=3]
+[ext_resource path="res://TscnAndGd/Buttons/LogicBut.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_light.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_5.png" type="Texture" id=6]
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_Menu.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut.tres" type="Texture" id=9]
+[ext_resource path="res://Language/Fonts/Base_l.tres" type="DynamicFont" id=10]
+[ext_resource path="res://Language/Fonts/Base_l_outline.tres" type="DynamicFont" id=11]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=12]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=13]
+[ext_resource path="res://Resources/Loading/Loading_pack.sprites/Loading_control_3.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_players_control.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_players_keyboard_1.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_players_keyboard_2.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_dark.tres" type="Texture" id=18]
+
+[sub_resource type="StyleBoxTexture" id=186]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 0.823529, 0.588235, 0.392157 )
+
+[sub_resource type="StyleBoxTexture" id=187]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 0.588235, 0, 0.784314 )
+
+[sub_resource type="StyleBoxEmpty" id=188]
+
+[sub_resource type="StyleBoxEmpty" id=189]
+
+[sub_resource type="StyleBoxEmpty" id=190]
+
+[node name="PlayerSet" type="CanvasLayer"]
+
+[node name="黑幕" parent="." instance=ExtResource( 2 )]
+
+[node name="BG" type="NinePatchRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -506.0
+margin_top = -382.0
+margin_right = 479.0
+margin_bottom = 293.0
+rect_pivot_offset = Vector2( 397, 37 )
+texture = ExtResource( 8 )
+patch_margin_left = 70
+patch_margin_top = 55
+patch_margin_right = 70
+patch_margin_bottom = 55
+
+[node name="P1" type="NinePatchRect" parent="BG"]
+self_modulate = Color( 0.933333, 0.419608, 0.419608, 1 )
+margin_left = 108.0
+margin_top = 196.0
+margin_right = 388.0
+margin_bottom = 576.0
+rect_pivot_offset = Vector2( 120, 35 )
+texture = ExtResource( 5 )
+patch_margin_left = 50
+patch_margin_top = 32
+patch_margin_right = 50
+patch_margin_bottom = 27
+
+[node name="Keyboard" type="NinePatchRect" parent="BG/P1"]
+self_modulate = Color( 0, 0, 0, 0.227451 )
+margin_left = 20.0
+margin_top = 75.0
+margin_right = 260.0
+margin_bottom = 165.0
+rect_pivot_offset = Vector2( 80, 45 )
+texture = ExtResource( 5 )
+patch_margin_left = 23
+patch_margin_top = 29
+patch_margin_right = 22
+patch_margin_bottom = 31
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Control" type="Label" parent="BG/P1/Keyboard"]
+visible = false
+anchor_right = 1.0
+margin_top = 8.0
+margin_bottom = 80.0
+align = 1
+valign = 1
+
+[node name="X" parent="BG/P1/Keyboard/Control" instance=ExtResource( 12 )]
+margin_left = 33.0
+margin_top = 35.0
+margin_right = 33.0
+margin_bottom = 35.0
+IsKeyBoard = true
+bool_Small = true
+bool_Static = true
+
+[node name="Back" type="Label" parent="BG/P1/Keyboard"]
+anchor_right = 1.0
+margin_top = 57.0
+margin_bottom = 82.0
+align = 1
+valign = 1
+
+[node name="Keyboard" type="Sprite" parent="BG/P1/Keyboard"]
+position = Vector2( 133, 44 )
+texture = ExtResource( 16 )
+
+[node name="Joystick1" type="NinePatchRect" parent="BG/P1"]
+self_modulate = Color( 0, 0, 0, 0.227451 )
+margin_left = 20.0
+margin_top = 170.0
+margin_right = 260.0
+margin_bottom = 260.0
+rect_pivot_offset = Vector2( 80, 45 )
+texture = ExtResource( 5 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 15
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Control" type="Label" parent="BG/P1/Joystick1"]
+visible = false
+anchor_right = 1.0
+margin_top = 8.0
+margin_bottom = 80.0
+align = 1
+valign = 1
+
+[node name="LEFT" parent="BG/P1/Joystick1/Control" instance=ExtResource( 12 )]
+margin_left = 30.0
+margin_top = 34.0
+margin_right = 30.0
+margin_bottom = 34.0
+ButSetting = true
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+BUT = 14
+BUT_TYPE = 1
+Info_Str = "BUT-加入控制"
+OnBut = false
+
+[node name="Back" type="Label" parent="BG/P1/Joystick1"]
+anchor_right = 1.0
+margin_top = 55.0
+margin_bottom = 80.0
+align = 1
+valign = 1
+
+[node name="Y" parent="BG/P1/Joystick1/Back" instance=ExtResource( 12 )]
+margin_left = 30.0
+margin_top = 14.0
+margin_right = 30.0
+margin_bottom = 14.0
+ButSetting = true
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+BUT = 3
+BUT_TYPE = 1
+Info_Str = "BUT-退出控制"
+OnBut = false
+
+[node name="Joystick" type="Sprite" parent="BG/P1/Joystick1"]
+position = Vector2( 132, 45 )
+texture = ExtResource( 15 )
+
+[node name="Joystick2_m" type="Sprite" parent="BG/P1/Joystick1"]
+visible = false
+position = Vector2( 340.5, 40.5 )
+texture = ExtResource( 15 )
+
+[node name="Joystick2" type="NinePatchRect" parent="BG/P1"]
+self_modulate = Color( 0, 0, 0, 0.227451 )
+margin_left = 20.0
+margin_top = 265.0
+margin_right = 260.0
+margin_bottom = 355.0
+rect_pivot_offset = Vector2( 80, 45 )
+texture = ExtResource( 5 )
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 15
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Control" type="Label" parent="BG/P1/Joystick2"]
+anchor_right = 1.0
+margin_top = 8.0
+margin_bottom = 80.0
+align = 1
+valign = 1
+
+[node name="LEFT" parent="BG/P1/Joystick2/Control" instance=ExtResource( 12 )]
+margin_left = 30.0
+margin_top = 34.0
+margin_right = 30.0
+margin_bottom = 34.0
+ButSetting = true
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+BUT = 14
+BUT_TYPE = 1
+Info_Str = "BUT-加入控制"
+OnBut = false
+
+[node name="Back" type="Label" parent="BG/P1/Joystick2"]
+anchor_right = 1.0
+margin_top = 55.0
+margin_bottom = 80.0
+align = 1
+valign = 1
+
+[node name="Y" parent="BG/P1/Joystick2/Back" instance=ExtResource( 12 )]
+margin_left = 30.0
+margin_top = 14.0
+margin_right = 30.0
+margin_bottom = 14.0
+ButSetting = true
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+BUT = 3
+BUT_TYPE = 1
+Info_Str = "BUT-退出控制"
+OnBut = false
+
+[node name="Joystick" type="Sprite" parent="BG/P1/Joystick2"]
+show_behind_parent = true
+position = Vector2( 132, 45 )
+texture = ExtResource( 15 )
+
+[node name="Joystick_m" type="Sprite" parent="BG/P1/Joystick2"]
+show_behind_parent = true
+position = Vector2( 340.5, 50.5 )
+texture = ExtResource( 15 )
+
+[node name="Title" type="Label" parent="BG/P1"]
+anchor_right = 1.0
+margin_top = 19.0
+margin_right = -6.0
+margin_bottom = 65.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 10 )
+text = "玩家 1"
+align = 1
+valign = 1
+script = ExtResource( 13 )
+LabelTEXT = "信息-玩家1"
+
+[node name="P2" type="NinePatchRect" parent="BG"]
+self_modulate = Color( 0.580392, 0.8, 1, 1 )
+margin_left = 597.0
+margin_top = 196.0
+margin_right = 877.0
+margin_bottom = 576.0
+rect_pivot_offset = Vector2( 120, 35 )
+texture = ExtResource( 5 )
+patch_margin_left = 50
+patch_margin_top = 31
+patch_margin_right = 50
+patch_margin_bottom = 27
+
+[node name="Keyboard" type="NinePatchRect" parent="BG/P2"]
+self_modulate = Color( 0, 0, 0, 0.227451 )
+margin_left = 20.0
+margin_top = 75.0
+margin_right = 260.0
+margin_bottom = 165.0
+rect_pivot_offset = Vector2( 80, 45 )
+texture = ExtResource( 5 )
+patch_margin_left = 30
+patch_margin_top = 36
+patch_margin_right = 25
+patch_margin_bottom = 29
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="A" type="Label" parent="BG/P2/Keyboard"]
+anchor_right = 1.0
+margin_top = 8.0
+margin_bottom = 80.0
+align = 1
+valign = 1
+
+[node name="X" parent="BG/P2/Keyboard/A" instance=ExtResource( 12 )]
+margin_left = 30.0
+margin_top = 40.0
+margin_right = 30.0
+margin_bottom = 40.0
+ButSetting = true
+ButPlayer = 2
+KeyBoard = true
+IsKeyBoard = true
+bool_Small = true
+bool_Static = true
+BUT = 16777352
+BUT_TYPE = 1
+Info_Str = "BUT-键盘加入控制"
+OnBut = false
+
+[node name="Back" type="Label" parent="BG/P2/Keyboard"]
+visible = false
+anchor_right = 1.0
+margin_top = 57.0
+margin_bottom = 82.0
+align = 1
+valign = 1
+
+[node name="Y" parent="BG/P2/Keyboard/Back" instance=ExtResource( 12 )]
+visible = false
+margin_left = 30.0
+margin_top = 13.5
+margin_right = 30.0
+margin_bottom = 13.5
+ButSetting = true
+ButPlayer = 2
+KeyBoard = true
+IsKeyBoard = true
+bool_Small = true
+bool_Static = true
+BUT = 16777353
+BUT_TYPE = 1
+Info_Str = "BUT-退出控制"
+OnBut = false
+
+[node name="Keyboard" type="Sprite" parent="BG/P2/Keyboard"]
+visible = false
+position = Vector2( 141, 45 )
+texture = ExtResource( 17 )
+
+[node name="Joystick1" type="NinePatchRect" parent="BG/P2"]
+self_modulate = Color( 0, 0, 0, 0.227451 )
+margin_left = 20.0
+margin_top = 170.0
+margin_right = 260.0
+margin_bottom = 260.0
+rect_pivot_offset = Vector2( 80, 45 )
+texture = ExtResource( 5 )
+patch_margin_left = 28
+patch_margin_top = 30
+patch_margin_right = 29
+patch_margin_bottom = 34
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Control" type="Label" parent="BG/P2/Joystick1"]
+anchor_right = 1.0
+margin_top = 8.0
+margin_bottom = 80.0
+align = 1
+valign = 1
+
+[node name="RIGHT" parent="BG/P2/Joystick1/Control" instance=ExtResource( 12 )]
+margin_left = 30.0
+margin_top = 34.0
+margin_right = 30.0
+margin_bottom = 34.0
+ButSetting = true
+ButPlayer = 2
+bool_Small = true
+bool_Static = true
+BUT = 15
+BUT_TYPE = 1
+Info_Str = "BUT-加入控制"
+OnBut = false
+
+[node name="Back" type="Label" parent="BG/P2/Joystick1"]
+anchor_right = 1.0
+margin_top = 55.0
+margin_bottom = 80.0
+align = 1
+valign = 1
+
+[node name="Y" parent="BG/P2/Joystick1/Back" instance=ExtResource( 12 )]
+margin_left = 30.0
+margin_top = 14.0
+margin_right = 30.0
+margin_bottom = 14.0
+ButSetting = true
+ButPlayer = 2
+bool_Small = true
+bool_Static = true
+BUT = 3
+BUT_TYPE = 1
+Info_Str = "BUT-退出控制"
+OnBut = false
+
+[node name="Joystick" type="Sprite" parent="BG/P2/Joystick1"]
+visible = false
+position = Vector2( 137, 45 )
+texture = ExtResource( 15 )
+
+[node name="Joystick2" type="NinePatchRect" parent="BG/P2"]
+self_modulate = Color( 0, 0, 0, 0.227451 )
+margin_left = 20.0
+margin_top = 265.0
+margin_right = 260.0
+margin_bottom = 355.0
+rect_pivot_offset = Vector2( 80, 45 )
+texture = ExtResource( 5 )
+patch_margin_left = 22
+patch_margin_top = 30
+patch_margin_right = 27
+patch_margin_bottom = 31
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Control" type="Label" parent="BG/P2/Joystick2"]
+anchor_right = 1.0
+margin_top = 8.0
+margin_bottom = 80.0
+align = 1
+valign = 1
+
+[node name="RIGHT" parent="BG/P2/Joystick2/Control" instance=ExtResource( 12 )]
+margin_left = 30.0
+margin_top = 34.0
+margin_right = 30.0
+margin_bottom = 34.0
+ButSetting = true
+ButPlayer = 2
+bool_Small = true
+bool_Static = true
+BUT = 15
+BUT_TYPE = 1
+Info_Str = "BUT-加入控制"
+OnBut = false
+
+[node name="Back" type="Label" parent="BG/P2/Joystick2"]
+anchor_right = 1.0
+margin_top = 55.0
+margin_bottom = 80.0
+align = 1
+valign = 1
+
+[node name="Y" parent="BG/P2/Joystick2/Back" instance=ExtResource( 12 )]
+margin_left = 30.0
+margin_top = 14.0
+margin_right = 30.0
+margin_bottom = 14.0
+ButSetting = true
+ButPlayer = 2
+bool_Small = true
+bool_Static = true
+BUT = 3
+BUT_TYPE = 1
+Info_Str = "BUT-退出控制"
+OnBut = false
+
+[node name="Joystick" type="Sprite" parent="BG/P2/Joystick2"]
+position = Vector2( 137, 45 )
+texture = ExtResource( 15 )
+
+[node name="Title" type="Label" parent="BG/P2"]
+anchor_right = 1.0
+margin_top = 18.0
+margin_right = -6.0
+margin_bottom = 66.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 10 )
+text = "玩家 2"
+align = 1
+valign = 1
+script = ExtResource( 13 )
+LabelTEXT = "信息-玩家2"
+
+[node name="LevelName" type="NinePatchRect" parent="BG"]
+self_modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -441.5
+margin_top = 37.0
+margin_right = 454.5
+margin_bottom = 103.0
+texture = ExtResource( 9 )
+patch_margin_left = 43
+patch_margin_right = 44
+
+[node name="Title" type="Label" parent="BG/LevelName"]
+anchor_right = 1.0
+margin_left = 33.0
+margin_top = -1.0
+margin_right = -29.0
+margin_bottom = 64.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 11 )
+text = "信息-玩家设置"
+align = 1
+valign = 1
+script = ExtResource( 13 )
+LabelTEXT = "信息-玩家设置"
+
+[node name="Info" type="Label" parent="BG"]
+anchor_right = 1.0
+margin_left = 46.0
+margin_top = 98.0
+margin_right = -57.0
+margin_bottom = 185.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "信息-玩家设置说明"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 13 )
+LabelTEXT = "信息-玩家设置说明"
+
+[node name="Apply" parent="BG" instance=ExtResource( 4 )]
+margin_left = 416.0
+margin_top = 683.0
+margin_right = 506.0
+margin_bottom = 773.0
+rect_min_size = Vector2( 90, 90 )
+rect_pivot_offset = Vector2( 45, 45 )
+custom_styles/hover = SubResource( 186 )
+custom_styles/pressed = SubResource( 187 )
+custom_styles/focus = SubResource( 188 )
+custom_styles/disabled = SubResource( 189 )
+custom_styles/normal = SubResource( 190 )
+ButType = 3
+
+[node name="B" parent="BG/Apply" instance=ExtResource( 12 )]
+margin_left = 45.0
+margin_top = 45.0
+margin_right = 45.0
+margin_bottom = 45.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-确定"
+
+[node name="MulPlayer" type="Node2D" parent="."]
+position = Vector2( 1750, 448 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MulPlayer"]
+margin_left = -295.0
+margin_top = -134.0
+margin_right = 121.0
+margin_bottom = 318.0
+texture = ExtResource( 18 )
+patch_margin_left = 26
+patch_margin_top = 33
+patch_margin_right = 23
+patch_margin_bottom = 23
+
+[node name="LoadingControl3" type="Sprite" parent="MulPlayer"]
+position = Vector2( -85, -33 )
+texture = ExtResource( 14 )
+
+[node name="P1JoyLabel" type="Label" parent="MulPlayer/LoadingControl3"]
+self_modulate = Color( 1, 0.203922, 0.203922, 1 )
+anchor_right = 0.073
+anchor_bottom = 0.058
+margin_left = -133.0
+margin_top = 63.0
+margin_right = -64.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 7 )
+text = "Player1"
+align = 1
+valign = 1
+
+[node name="P2JoyLabel" type="Label" parent="MulPlayer/LoadingControl3"]
+self_modulate = Color( 0.360784, 0.619608, 1, 1 )
+anchor_right = 0.073
+anchor_bottom = 0.058
+margin_left = 60.0
+margin_top = 63.0
+margin_right = 129.0
+margin_bottom = 88.0
+custom_fonts/font = ExtResource( 7 )
+text = "Player2"
+align = 1
+valign = 1
+
+[node name="Notice" type="RichTextLabel" parent="MulPlayer"]
+margin_left = -267.0
+margin_top = 76.0
+margin_right = 96.0
+margin_bottom = 290.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "双人同屏使用同个键盘时，请注意Player2需要打开右侧小键盘的数字锁定键NumLock。"
+text = "双人同屏使用同个键盘时，请注意Player2需要打开右侧小键盘的数字锁定键NumLock。"
+script = ExtResource( 1 )
+LabelTEXT = "信息-同屏键盘"
+Center_Bool = true
+InCenter = true
+
+[node name="FriendList" parent="." instance=ExtResource( 3 )]

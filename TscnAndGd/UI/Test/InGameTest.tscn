@@ -1,0 +1,124 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Test/InGameTest.gd" type="Script" id=1]
+[ext_resource path="res://TscnAndGd/UI/Test/ItemList.gd" type="Script" id=2]
+[ext_resource path="res://TscnAndGd/UI/InGame/FPS.gd" type="Script" id=3]
+[ext_resource path="res://Language/Fonts/Base_m_outline.tres" type="DynamicFont" id=4]
+
+[node name="Control" type="Control"]
+script = ExtResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 548.0
+margin_top = 28.0
+margin_right = 1548.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 1000, 0 )
+alignment = 2
+
+[node name="Challenge" type="Button" parent="HBoxContainer"]
+margin_right = 116.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+text = "Challenge"
+
+[node name="Reward" type="Button" parent="HBoxContainer"]
+margin_left = 124.0
+margin_right = 224.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+text = "Reward"
+
+[node name="Pre-" type="Button" parent="HBoxContainer"]
+margin_left = 232.0
+margin_right = 332.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+text = "负压"
+
+[node name="Pre0" type="Button" parent="HBoxContainer"]
+margin_left = 340.0
+margin_right = 440.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+text = "无压"
+
+[node name="Pre+" type="Button" parent="HBoxContainer"]
+margin_left = 448.0
+margin_right = 548.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+text = "高压"
+
+[node name="REP+" type="Button" parent="HBoxContainer"]
+margin_left = 556.0
+margin_right = 656.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+text = "REP+"
+
+[node name="Money+" type="Button" parent="HBoxContainer"]
+margin_left = 664.0
+margin_right = 764.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+text = "Money+"
+
+[node name="DayEnd" type="Button" parent="HBoxContainer"]
+margin_left = 772.0
+margin_right = 872.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+text = "DayEnd"
+
+[node name="Time" type="Button" parent="HBoxContainer"]
+margin_left = 880.0
+margin_right = 980.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+toggle_mode = true
+text = "不计时"
+
+[node name="Customer" type="Button" parent="HBoxContainer"]
+margin_left = 988.0
+margin_right = 1091.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 100, 40 )
+toggle_mode = true
+text = "召唤顾客"
+
+[node name="ItemList" type="ItemList" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 508.0
+margin_top = 338.0
+margin_right = 1468.0
+margin_bottom = 850.0
+rect_min_size = Vector2( 960, 512 )
+select_mode = 1
+max_columns = 10
+icon_scale = 0.5
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 13.0
+margin_top = 30.0
+margin_right = 251.0
+margin_bottom = 61.0
+custom_fonts/font = ExtResource( 4 )
+text = "999"
+valign = 1
+script = ExtResource( 3 )
+
+[connection signal="pressed" from="HBoxContainer/Challenge" to="." method="_on_Challenge_pressed"]
+[connection signal="pressed" from="HBoxContainer/Reward" to="." method="_on_Reward_pressed"]
+[connection signal="pressed" from="HBoxContainer/Pre-" to="." method="_on_UnPre_pressed"]
+[connection signal="pressed" from="HBoxContainer/Pre0" to="." method="_on_Pre0_pressed"]
+[connection signal="pressed" from="HBoxContainer/Pre+" to="." method="_on_PreHigh_pressed"]
+[connection signal="pressed" from="HBoxContainer/REP+" to="." method="_on_REP_pressed"]
+[connection signal="pressed" from="HBoxContainer/Money+" to="." method="_on_Money_pressed"]
+[connection signal="pressed" from="HBoxContainer/DayEnd" to="." method="_on_DayEnd_pressed"]
+[connection signal="toggled" from="HBoxContainer/Time" to="." method="_on_Time_toggled"]
+[connection signal="pressed" from="HBoxContainer/Customer" to="." method="_on_Customer_pressed"]

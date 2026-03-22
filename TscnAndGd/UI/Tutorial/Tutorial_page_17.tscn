@@ -1,0 +1,232 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_box_back.tres" type="Texture" id=2]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_orange.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_lemon_top.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/store_shelf_foot.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/store_shelf_leg.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/store_shelf_layer.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/store_shelf_top.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_sugar_liquid.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_box_body.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_box_front_1.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_box_open.tres" type="Texture" id=17]
+
+[node name="整理" type="Node2D"]
+
+[node name="货架" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2( 199, 235 )
+
+[node name="StoreShelfLeg3" type="Sprite" parent="货架"]
+position = Vector2( 38, -108 )
+rotation = -3.14159
+scale = Vector2( 1, -4 )
+texture = ExtResource( 8 )
+
+[node name="StoreShelfLeg4" type="Sprite" parent="货架"]
+position = Vector2( -38, -103 )
+scale = Vector2( 1, 4 )
+texture = ExtResource( 8 )
+
+[node name="foot_R" type="Sprite" parent="货架"]
+use_parent_material = true
+position = Vector2( 46, 43 )
+texture = ExtResource( 7 )
+
+[node name="foot_L" type="Sprite" parent="货架"]
+use_parent_material = true
+position = Vector2( -46, 43 )
+texture = ExtResource( 7 )
+
+[node name="layer1" type="Sprite" parent="货架"]
+self_modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+position = Vector2( 0, 5 )
+texture = ExtResource( 9 )
+
+[node name="layer2" type="Sprite" parent="货架"]
+self_modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+position = Vector2( 0, -54 )
+texture = ExtResource( 9 )
+
+[node name="Node2D5" type="Node2D" parent="货架"]
+position = Vector2( -23.75, -87.5 )
+
+[node name="MaterialBottleOrange" type="Sprite" parent="货架/Node2D5"]
+texture = ExtResource( 5 )
+
+[node name="MaterialBottleLemonTop" type="Sprite" parent="货架/Node2D5"]
+position = Vector2( 0, -25 )
+texture = ExtResource( 6 )
+
+[node name="Node2D6" type="Node2D" parent="货架"]
+position = Vector2( -3.75, -86.25 )
+
+[node name="MaterialBottleOrange" type="Sprite" parent="货架/Node2D6"]
+texture = ExtResource( 5 )
+
+[node name="MaterialBottleLemonTop" type="Sprite" parent="货架/Node2D6"]
+position = Vector2( 0, -25 )
+texture = ExtResource( 6 )
+
+[node name="layer3" type="Sprite" parent="货架"]
+self_modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+position = Vector2( 0, -113 )
+texture = ExtResource( 9 )
+
+[node name="MaterialSugarLiquid" type="Sprite" parent="货架"]
+position = Vector2( -16.25, -140 )
+texture = ExtResource( 12 )
+
+[node name="layer4" type="Sprite" parent="货架"]
+self_modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+position = Vector2( 0, -172 )
+texture = ExtResource( 9 )
+
+[node name="StoreShelfLeg2" type="Sprite" parent="货架"]
+use_parent_material = true
+position = Vector2( 46, -95 )
+rotation = 3.14159
+scale = Vector2( 1, -4 )
+texture = ExtResource( 8 )
+
+[node name="StoreShelfLeg" type="Sprite" parent="货架"]
+use_parent_material = true
+position = Vector2( -46, -95 )
+scale = Vector2( 1, 4 )
+texture = ExtResource( 8 )
+
+[node name="Top" type="Sprite" parent="货架"]
+use_parent_material = true
+position = Vector2( 0, -237 )
+texture = ExtResource( 11 )
+offset = Vector2( 0, 13 )
+
+[node name="X" parent="货架" instance=ExtResource( 3 )]
+margin_left = 67.0
+margin_top = -173.0
+margin_right = 67.0
+margin_bottom = -173.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+OnBut = false
+
+[node name="Y" parent="货架" instance=ExtResource( 3 )]
+margin_left = 66.0
+margin_top = -115.0
+margin_right = 66.0
+margin_bottom = -115.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+OnBut = false
+
+[node name="B" parent="货架" instance=ExtResource( 3 )]
+margin_left = 66.25
+margin_top = -55.0
+margin_right = 66.25
+margin_bottom = -55.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+OnBut = false
+
+[node name="A" parent="货架" instance=ExtResource( 3 )]
+margin_left = 65.0
+margin_right = 65.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+OnBut = false
+
+[node name="UiIconInfo4" type="Sprite" parent="货架"]
+position = Vector2( -103, -35 )
+texture = ExtResource( 1 )
+
+[node name="开箱" type="Node2D" parent="."]
+position = Vector2( -56, 216 )
+
+[node name="body4" type="Sprite" parent="开箱"]
+position = Vector2( -181, -8 )
+texture = ExtResource( 14 )
+
+[node name="Node2D" type="Node2D" parent="开箱"]
+position = Vector2( 40, 0 )
+
+[node name="DeviceBoxFront" type="Sprite" parent="开箱/Node2D"]
+texture = ExtResource( 2 )
+
+[node name="DeviceBoxOpen" type="Sprite" parent="开箱/Node2D"]
+texture = ExtResource( 17 )
+
+[node name="Node2D" type="Node2D" parent="开箱/Node2D"]
+position = Vector2( -16, -3 )
+
+[node name="MaterialBottleOrange" type="Sprite" parent="开箱/Node2D/Node2D"]
+texture = ExtResource( 5 )
+
+[node name="MaterialBottleLemonTop" type="Sprite" parent="开箱/Node2D/Node2D"]
+position = Vector2( 0, -25 )
+texture = ExtResource( 6 )
+
+[node name="Node2D2" type="Node2D" parent="开箱/Node2D"]
+position = Vector2( 16, -3 )
+
+[node name="MaterialBottleOrange" type="Sprite" parent="开箱/Node2D/Node2D2"]
+texture = ExtResource( 5 )
+
+[node name="MaterialBottleLemonTop" type="Sprite" parent="开箱/Node2D/Node2D2"]
+position = Vector2( 0, -25 )
+texture = ExtResource( 6 )
+
+[node name="Node2D3" type="Node2D" parent="开箱/Node2D"]
+position = Vector2( -16, 16 )
+
+[node name="MaterialBottleOrange" type="Sprite" parent="开箱/Node2D/Node2D3"]
+texture = ExtResource( 5 )
+
+[node name="MaterialBottleLemonTop" type="Sprite" parent="开箱/Node2D/Node2D3"]
+position = Vector2( 0, -25 )
+texture = ExtResource( 6 )
+
+[node name="Node2D4" type="Node2D" parent="开箱/Node2D"]
+position = Vector2( 16, 16 )
+
+[node name="MaterialBottleOrange" type="Sprite" parent="开箱/Node2D/Node2D4"]
+texture = ExtResource( 5 )
+
+[node name="MaterialBottleLemonTop" type="Sprite" parent="开箱/Node2D/Node2D4"]
+position = Vector2( 0, -25 )
+texture = ExtResource( 6 )
+
+[node name="DeviceBoxFront1" type="Sprite" parent="开箱/Node2D"]
+texture = ExtResource( 16 )
+
+[node name="X" parent="开箱" instance=ExtResource( 3 )]
+margin_left = -122.0
+margin_top = -88.0
+margin_right = -122.0
+margin_bottom = -88.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-开箱"
+OnBut = false
+
+[node name="UiIconInfo1" type="Sprite" parent="开箱"]
+position = Vector2( -75, -16 )
+texture = ExtResource( 1 )
+
+[node name="X" parent="." instance=ExtResource( 3 )]
+margin_left = 45.0
+margin_top = 126.0
+margin_right = 45.0
+margin_bottom = 126.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-取出"
+OnBut = false

@@ -1,0 +1,230 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=1]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_pop_1.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_2.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_6.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_5.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_sugar_aspartame.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_sugarmachine_free_s.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_sugarmachine_bottom.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_sugarmachine_cover.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_2.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_2.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_top.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_sweetfree.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_cold.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_1.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_sweet.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_6.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_1.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_2.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_5.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_3.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_2.png" type="Texture" id=27]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_cuptip_1.tres" type="Texture" id=28]
+[ext_resource path="res://TscnAndGd/Effects/shaders/teleport-effect.tres" type="Shader" id=31]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=32]
+
+[sub_resource type="ShaderMaterial" id=270]
+shader = ExtResource( 31 )
+shader_param/progress = 0.0
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = 0.15
+shader_param/color = Color( 0, 0, 0, 1 )
+
+[node name="代糖" type="Node2D"]
+position = Vector2( 602, 199 )
+
+[node name="要求" type="Node2D" parent="."]
+position = Vector2( 362, 90 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="要求"]
+margin_left = -136.0
+margin_top = -99.0
+margin_right = 4.0
+margin_bottom = 93.0
+texture = ExtResource( 28 )
+patch_margin_left = 15
+patch_margin_top = 12
+patch_margin_right = 20
+patch_margin_bottom = 25
+
+[node name="Cup2" type="Node2D" parent="要求"]
+position = Vector2( -85, 8 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="要求/Cup2"]
+texture = ExtResource( 4 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="要求/Cup2"]
+self_modulate = Color( 0.592157, 0.964706, 0.203922, 0.513726 )
+texture = ExtResource( 18 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="要求/Cup2"]
+self_modulate = Color( 0.592157, 0.964706, 0.203922, 0.513726 )
+texture = ExtResource( 12 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="要求/Cup2"]
+self_modulate = Color( 0.592157, 0.964706, 0.203922, 0.513726 )
+position = Vector2( -1, 5 )
+texture = ExtResource( 13 )
+
+[node name="UiProcupCup2" type="Sprite" parent="要求/Cup2"]
+texture = ExtResource( 11 )
+
+[node name="GuestBigbottlePop1" type="Sprite" parent="要求/Cup2"]
+position = Vector2( -9, 40.5 )
+texture = ExtResource( 23 )
+
+[node name="GuestBigbottlePop2" type="Sprite" parent="要求/Cup2"]
+position = Vector2( 9, 41.5 )
+texture = ExtResource( 24 )
+
+[node name="GuestBigbottlePop3" type="Sprite" parent="要求/Cup2"]
+position = Vector2( -16, 18.5 )
+texture = ExtResource( 26 )
+
+[node name="GuestBigbottlePop5" type="Sprite" parent="要求/Cup2"]
+position = Vector2( 15, 14.5 )
+texture = ExtResource( 25 )
+
+[node name="GuestBigbottlePop6" type="Sprite" parent="要求/Cup2"]
+position = Vector2( 10, 7.5 )
+texture = ExtResource( 22 )
+
+[node name="UiIconStatePop2" type="Sprite" parent="要求"]
+position = Vector2( -23, -11 )
+texture = ExtResource( 3 )
+
+[node name="UiIconStateCold" type="Sprite" parent="要求"]
+position = Vector2( -23, -73 )
+texture = ExtResource( 17 )
+
+[node name="UiIconStateSweetfree" type="Sprite" parent="要求"]
+position = Vector2( -23, -43 )
+texture = ExtResource( 14 )
+
+[node name="ParticleCircle2" type="Sprite" parent="要求"]
+self_modulate = Color( 0.996078, 0, 0, 1 )
+position = Vector2( -24, -43 )
+texture = ExtResource( 27 )
+
+[node name="2" type="Node2D" parent="."]
+position = Vector2( 102, 233 )
+
+[node name="machine" type="Node2D" parent="2"]
+material = SubResource( 270 )
+use_parent_material = true
+position = Vector2( 120, 171.305 )
+
+[node name="Butt" type="Sprite" parent="2/machine"]
+position = Vector2( 1, 22 )
+texture = ExtResource( 9 )
+
+[node name="MachineFree" type="Sprite" parent="2/machine"]
+use_parent_material = true
+position = Vector2( 0, -60 )
+texture = ExtResource( 8 )
+
+[node name="CoverPosition" type="Node2D" parent="2/machine"]
+
+[node name="Cover" type="Sprite" parent="2/machine/CoverPosition"]
+use_parent_material = true
+position = Vector2( -8, -101 )
+rotation = -0.523598
+texture = ExtResource( 10 )
+
+[node name="UiPosition" type="Node2D" parent="2/machine"]
+position = Vector2( -31, 5 )
+
+[node name="Ui" type="Sprite" parent="2/machine/UiPosition"]
+texture = ExtResource( 6 )
+offset = Vector2( 0, -16 )
+
+[node name="TextureProgress" type="TextureProgress" parent="2/machine/UiPosition/Ui"]
+margin_left = -3.0
+margin_top = -33.0
+margin_right = 3.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 16 )
+max_value = 60.0
+value = 30.0
+texture_progress = ExtResource( 5 )
+fill_mode = 3
+tint_progress = Color( 0.960784, 0.466667, 1, 1 )
+
+[node name="Ui_Free" type="Sprite" parent="2/machine/UiPosition"]
+position = Vector2( 63, 0 )
+texture = ExtResource( 6 )
+offset = Vector2( 0, -16 )
+
+[node name="TextureProgress" type="TextureProgress" parent="2/machine/UiPosition/Ui_Free"]
+margin_left = -3.0
+margin_top = -33.0
+margin_right = 3.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 16 )
+max_value = 60.0
+value = 50.0
+texture_progress = ExtResource( 5 )
+fill_mode = 3
+tint_progress = Color( 0, 1, 0.0980392, 1 )
+
+[node name="MaterialSugarAspartame" type="Sprite" parent="2"]
+position = Vector2( 172, 37.3051 )
+rotation = -0.785397
+texture = ExtResource( 7 )
+
+[node name="TotuInfo2" type="Sprite" parent="2"]
+position = Vector2( 332.5, 78 )
+texture = ExtResource( 2 )
+
+[node name="TotuInfo3" type="Sprite" parent="2"]
+position = Vector2( 332.5, 146 )
+texture = ExtResource( 2 )
+
+[node name="Y" parent="2" instance=ExtResource( 32 )]
+margin_left = 284.0
+margin_top = 193.0
+margin_right = 284.0
+margin_bottom = 193.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-加代糖"
+OnBut = false
+
+[node name="A" parent="2" instance=ExtResource( 32 )]
+margin_left = 281.0
+margin_top = 36.0
+margin_right = 281.0
+margin_bottom = 36.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-加糖"
+OnBut = false
+
+[node name="UiIconStateSweet" type="Sprite" parent="2"]
+position = Vector2( 410, 77 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 19 )
+
+[node name="UiIconStateSweetfree" type="Sprite" parent="2"]
+position = Vector2( 410, 148 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 14 )
+
+[node name="150" type="RichTextLabel" parent="."]
+margin_left = -37.0
+margin_top = 482.0
+margin_right = 797.0
+margin_bottom = 657.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "顾客们开始追求健康，不想有卡路里但是又想要甜味，就需要加入代糖。"
+text = "顾客们开始追求健康，不想有卡路里但是又想要甜味，就需要加入代糖。"
+script = ExtResource( 1 )
+LabelTEXT = "信息-文字说明-150"
+Center_Bool = true

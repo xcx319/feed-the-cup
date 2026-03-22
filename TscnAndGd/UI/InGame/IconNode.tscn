@@ -1,0 +1,6535 @@
+[gd_scene load_steps=310 format=2]
+
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_tealeaf_red.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_tealeaf_green.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_powder_vegfat.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_powder_coco.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_powder_coffeebean.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_powder_mocha.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_powder_instantcoffee.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_powder_instantmilk.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_powder_instantmilktea.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_tealeaf_oolong.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_cup_group_4.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_cup_group_2.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_cup_group_6.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_sugar_liquid.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_teaport20.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_raisins_top.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_redbean.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_chestnut.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_peanut.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_powder_instantsoybean.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_tealeaf_flower.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_tealeaf_dark.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_coconutwater.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_milk.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_honey.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_yogurt.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_lemon.tres" type="Texture" id=27]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_orange.tres" type="Texture" id=28]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_hazelnut_top.tres" type="Texture" id=29]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_osmanthus.tres" type="Texture" id=30]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_syrup_caramel.tres" type="Texture" id=31]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_sugar_blackcube.tres" type="Texture" id=32]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bean_coffeebean.tres" type="Texture" id=33]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_teaport20_empty.tres" type="Texture" id=34]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_waterport20_empty.tres" type="Texture" id=35]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_waterport20.tres" type="Texture" id=36]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_base.tres" type="Texture" id=37]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_cuptpye_L.tres" type="Texture" id=38]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_cuptpye_S.tres" type="Texture" id=39]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_cuptpye_M.tres" type="Texture" id=40]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_splash_top.tres" type="Texture" id=41]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_lemon_single_1.tres" type="Texture" id=42]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_coconutjelly.tres" type="Texture" id=43]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_konjac.tres" type="Texture" id=44]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_raisins.tres" type="Texture" id=45]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_jelly.tres" type="Texture" id=46]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_orange_single_1.tres" type="Texture" id=47]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_honey_top.tres" type="Texture" id=48]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_lemon_top.tres" type="Texture" id=49]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_osmanthus_top.tres" type="Texture" id=50]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_yogurt_top.tres" type="Texture" id=51]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_orange_top.tres" type="Texture" id=52]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_taro_single_3.tres" type="Texture" id=53]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_CDSmilk.tres" type="Texture" id=54]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_cream.tres" type="Texture" id=55]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_syrup_chocolate.tres" type="Texture" id=56]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_syrup_top.tres" type="Texture" id=57]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_konjac_top.tres" type="Texture" id=58]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_passion_single_1.tres" type="Texture" id=59]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_lime_single_2.tres" type="Texture" id=60]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_grapefruit_single_1.tres" type="Texture" id=61]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_splash_coco.tres" type="Texture" id=62]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_splash_berry.tres" type="Texture" id=63]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_sugar_aspartame.tres" type="Texture" id=64]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_sugar_whitecube.tres" type="Texture" id=65]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_cook_sago.tres" type="Texture" id=66]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_cook_boba.tres" type="Texture" id=67]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_icebock.tres" type="Texture" id=68]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_vanilla_top.tres" type="Texture" id=69]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_vanilla.tres" type="Texture" id=70]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_cook_cheeze.tres" type="Texture" id=71]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_cook_mashmallow.tres" type="Texture" id=72]
+[ext_resource path="res://Resources/Characters/Guest/Other/character_other_pack.sprites/Clothes_Packbag_3_back.tres" type="Texture" id=73]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_grape_top.tres" type="Texture" id=74]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_grape.tres" type="Texture" id=75]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_cola.tres" type="Texture" id=76]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_cola_top.tres" type="Texture" id=77]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_lime.tres" type="Texture" id=78]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_lime_top.tres" type="Texture" id=79]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_mint_top.tres" type="Texture" id=80]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_blueorange.tres" type="Texture" id=81]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_blueorange_top.tres" type="Texture" id=82]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_mint.tres" type="Texture" id=83]
+[ext_resource path="res://Resources/Characters/Guest/Other/character_other_pack.sprites/Clothes_Packbag_2_back.tres" type="Texture" id=84]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_lactobacillus.tres" type="Texture" id=85]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_lactobacillus_top.tres" type="Texture" id=86]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_cheery.tres" type="Texture" id=87]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_cheery_top.tres" type="Texture" id=88]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_blueberry.tres" type="Texture" id=89]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_blueberry_top.tres" type="Texture" id=90]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_lychee.tres" type="Texture" id=91]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_lychee_top.tres" type="Texture" id=92]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_sodacan_baselayer_6.tres" type="Texture" id=93]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_sodacan_baselayer_2.tres" type="Texture" id=94]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_sodacan_cup_2.tres" type="Texture" id=95]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_sodacan_cup_4.tres" type="Texture" id=96]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_sodacan_cup_6.tres" type="Texture" id=97]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_sodacan_baselayer_4.tres" type="Texture" id=98]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_none.tres" type="Texture" id=99]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_strawberry_single_1.tres" type="Texture" id=100]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_banana_single_1.tres" type="Texture" id=101]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_pineapple_single_1.tres" type="Texture" id=102]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_melon_single_1.tres" type="Texture" id=103]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_celery_single_1.tres" type="Texture" id=104]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_carrot_single_1.tres" type="Texture" id=105]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_cucumber_single_1.tres" type="Texture" id=106]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_sugarcane_5.tres" type="Texture" id=107]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_grape_single_1.tres" type="Texture" id=108]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_peach_single_1.tres" type="Texture" id=109]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_mango_single_2.tres" type="Texture" id=110]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_bayberry_single_2.tres" type="Texture" id=111]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_ginger_single_3.tres" type="Texture" id=112]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_tealeaf_wolfberry.tres" type="Texture" id=113]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_supercup_cup_4.tres" type="Texture" id=114]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_supercup_baselayer_4.tres" type="Texture" id=115]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_avocado_single_1.tres" type="Texture" id=116]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_dragon_single_1.tres" type="Texture" id=117]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_mulberry_single_1.tres" type="Texture" id=118]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_oat.tres" type="Texture" id=119]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_hazelnut.tres" type="Texture" id=120]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_pistachio_top.tres" type="Texture" id=121]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_pistachio.tres" type="Texture" id=122]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_rum.tres" type="Texture" id=123]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_rum_top.tres" type="Texture" id=124]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_kiwi.tres" type="Texture" id=125]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_kiwi_top.tres" type="Texture" id=126]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_cook_salt.tres" type="Texture" id=127]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_cook_mochi.tres" type="Texture" id=128]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_cook_blackbear.tres" type="Texture" id=129]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_cook_pinkchoco.tres" type="Texture" id=130]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_cook_browny.tres" type="Texture" id=131]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_coconutjelly_top.tres" type="Texture" id=132]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_ricewine.tres" type="Texture" id=133]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_grassjelly_top.tres" type="Texture" id=134]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_grassjelly.tres" type="Texture" id=135]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_rose_top.tres" type="Texture" id=136]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_rose.tres" type="Texture" id=137]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_tealeaf_white.tres" type="Texture" id=138]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_cook_roll_sesame.tres" type="Texture" id=139]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_cook_roll_egg.tres" type="Texture" id=140]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_mint_single_1.tres" type="Texture" id=141]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_sugar_choco.tres" type="Texture" id=142]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_mint_slice_1.tres" type="Texture" id=143]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_BeerBarrel_Wood_1.tres" type="Texture" id=144]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_BeerBarrel_Wood_head.tres" type="Texture" id=145]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_BeerBarrel_Wood_2.tres" type="Texture" id=146]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_BeerBarrel_steel_1.tres" type="Texture" id=147]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_BeerBarrel_steel_4.tres" type="Texture" id=148]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_BeerBarrel_steel_3.tres" type="Texture" id=149]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_BeerBarrel_steel_2.tres" type="Texture" id=150]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_blue.tres" type="Texture" id=151]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_blue_top.tres" type="Texture" id=152]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_cream_top.tres" type="Texture" id=153]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_cream.tres" type="Texture" id=154]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_coffee.tres" type="Texture" id=155]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_coffee_top.tres" type="Texture" id=156]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_brandy.tres" type="Texture" id=157]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_brandy_top.tres" type="Texture" id=158]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_gin.tres" type="Texture" id=159]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_gin_top.tres" type="Texture" id=160]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_red_top.tres" type="Texture" id=161]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_red.tres" type="Texture" id=162]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_tequila.tres" type="Texture" id=163]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_tequila_top.tres" type="Texture" id=164]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_vodka_top.tres" type="Texture" id=165]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_bottle_wine_vodka.tres" type="Texture" id=166]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_egg_single_2.tres" type="Texture" id=167]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_plum.tres" type="Texture" id=168]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_plum_top.tres" type="Texture" id=169]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashIcon_1.tres" type="Texture" id=170]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_gummy.tres" type="Texture" id=171]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_gummy_top.tres" type="Texture" id=172]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_cherry.tres" type="Texture" id=173]
+
+[sub_resource type="Animation" id=207]
+resource_name = "BEER"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 170 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=191]
+resource_name = "Choco"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 142 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=76]
+resource_name = "DrinkCup_L"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 13 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 38 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -30, 8 ) ]
+}
+
+[sub_resource type="Animation" id=77]
+resource_name = "DrinkCup_M"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 11 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 40 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -30, 8 ) ]
+}
+
+[sub_resource type="Animation" id=74]
+resource_name = "DrinkCup_S"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 12 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 39 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -30, 8 ) ]
+}
+
+[sub_resource type="Animation" id=125]
+resource_name = "FreeSugar"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 64 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=144]
+resource_name = "GAS"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 84 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=135]
+resource_name = "ICE"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 73 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=196]
+resource_name = "IPA"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 150 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ null ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 45 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("IconNode/Texture/MainIcon:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("IconNode/Texture:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+
+[sub_resource type="Animation" id=92]
+resource_name = "Sack_coffeebean"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 33 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=149]
+resource_name = "SodaCan_L"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 97 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 93 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+
+[sub_resource type="Animation" id=150]
+resource_name = "SodaCan_M"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 96 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 98 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("IconNode/Texture:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -15 ) ]
+}
+
+[sub_resource type="Animation" id=151]
+resource_name = "SodaCan_S"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 95 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 94 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("IconNode/Texture:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -20 ) ]
+}
+
+[sub_resource type="Animation" id=82]
+resource_name = "Sugar"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 14 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=170]
+resource_name = "SuperCup_M"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 114 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 115 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("IconNode/Texture:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -4 ) ]
+}
+
+[sub_resource type="Animation" id=102]
+resource_name = "TeaPort"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 15 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 34 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=103]
+resource_name = "WaterPort"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 36 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 35 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=183]
+resource_name = "bag_BlackCookie"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 129 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=185]
+resource_name = "bag_BrownieCake"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 131 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=184]
+resource_name = "bag_PinkChocolate"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 130 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=121]
+resource_name = "bag_boba"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 67 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=122]
+resource_name = "bag_brownsugar"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 32 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=132]
+resource_name = "bag_cheeze"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 71 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=188]
+resource_name = "bag_eggroll_black"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 139 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=189]
+resource_name = "bag_eggroll_white"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 140 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=133]
+resource_name = "bag_mashmallow"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 72 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=180]
+resource_name = "bag_mochi"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 128 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=123]
+resource_name = "bag_sago"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 66 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=179]
+resource_name = "bag_salt"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 127 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=124]
+resource_name = "bag_whitesugar"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 65 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=146]
+resource_name = "bottle_blueberry"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 89 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 90 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -28 ) ]
+}
+
+[sub_resource type="Animation" id=147]
+resource_name = "bottle_cheery"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 87 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 88 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -28 ) ]
+}
+
+[sub_resource type="Animation" id=138]
+resource_name = "bottle_grape"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 75 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 74 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -28 ) ]
+}
+
+[sub_resource type="Animation" id=175]
+resource_name = "bottle_hazelnut"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 120 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 29 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -22 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=96]
+resource_name = "bottle_honey"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 25 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 48 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -22 ) ]
+}
+
+[sub_resource type="Animation" id=178]
+resource_name = "bottle_kiwi"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 125 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 126 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -28 ) ]
+}
+
+[sub_resource type="Animation" id=97]
+resource_name = "bottle_lemon"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 27 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 49 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -25 ) ]
+}
+
+[sub_resource type="Animation" id=99]
+resource_name = "bottle_orange"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 28 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 52 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -25 ) ]
+}
+
+[sub_resource type="Animation" id=100]
+resource_name = "bottle_osmanthus"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 30 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 50 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -22 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=176]
+resource_name = "bottle_pistachio"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 122 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 121 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -22 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=186]
+resource_name = "bottle_rose"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 137 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 136 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -22 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=131]
+resource_name = "bottle_vanilla"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 70 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 69 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -22 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=199]
+resource_name = "bottle_wine_blueliqueur"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 151 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 152 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -40 ) ]
+}
+
+[sub_resource type="Animation" id=202]
+resource_name = "bottle_wine_brandy"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 157 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 158 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -34 ) ]
+}
+
+[sub_resource type="Animation" id=201]
+resource_name = "bottle_wine_coffeeliqueur"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 155 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 156 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -43 ) ]
+}
+
+[sub_resource type="Animation" id=200]
+resource_name = "bottle_wine_creamliqueur"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 154 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 153 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -43 ) ]
+}
+
+[sub_resource type="Animation" id=203]
+resource_name = "bottle_wine_gin"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 159 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 160 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -36 ) ]
+}
+
+[sub_resource type="Animation" id=204]
+resource_name = "bottle_wine_redwine"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 162 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 161 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -38 ) ]
+}
+
+[sub_resource type="Animation" id=177]
+resource_name = "bottle_wine_rum"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 123 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 124 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -31 ) ]
+}
+
+[sub_resource type="Animation" id=205]
+resource_name = "bottle_wine_tequila"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 163 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 164 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -36 ) ]
+}
+
+[sub_resource type="Animation" id=206]
+resource_name = "bottle_wine_vodka"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 166 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 165 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -45 ) ]
+}
+
+[sub_resource type="Animation" id=86]
+resource_name = "can_chestnut"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 18 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 37 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=106]
+resource_name = "can_coco"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 43 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 132 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -25 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=83]
+resource_name = "can_grassjelly"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 135 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 134 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -25 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=108]
+resource_name = "can_jelly"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 46 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 37 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=107]
+resource_name = "can_konjac"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 44 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 58 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -25 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=84]
+resource_name = "can_peanut"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 19 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 37 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=109]
+resource_name = "can_raisin"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 45 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 16 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -25 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=85]
+resource_name = "can_redbean"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 17 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 37 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=114]
+resource_name = "can_ricewine"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 133 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 37 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=68]
+resource_name = "coffeemaker_coffee"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=111]
+resource_name = "ice_CDSmilk"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 54 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=94]
+resource_name = "ice_coconutwater"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 23 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=129]
+resource_name = "ice_cream"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 55 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=130]
+resource_name = "ice_icebock"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 68 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=145]
+resource_name = "ice_lactobacillus"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 85 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 86 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -29 ) ]
+}
+
+[sub_resource type="Animation" id=98]
+resource_name = "ice_milk"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 24 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=174]
+resource_name = "ice_oat"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 119 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=101]
+resource_name = "ice_yogurt"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 26 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 51 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -29 ) ]
+}
+
+[sub_resource type="Animation" id=75]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/back:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 99 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=142]
+resource_name = "pop_blueorange"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 81 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 82 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -35 ) ]
+}
+
+[sub_resource type="Animation" id=140]
+resource_name = "pop_cola"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 76 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 77 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -35 ) ]
+}
+
+[sub_resource type="Animation" id=141]
+resource_name = "pop_lime"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 78 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 79 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -35 ) ]
+}
+
+[sub_resource type="Animation" id=148]
+resource_name = "pop_lychee"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 91 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 92 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -35 ) ]
+}
+
+[sub_resource type="Animation" id=143]
+resource_name = "pop_mint"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 83 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 80 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -35 ) ]
+}
+
+[sub_resource type="Animation" id=66]
+resource_name = "powder_coco"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=70]
+resource_name = "powder_instant_coffee"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=71]
+resource_name = "powder_instant_milk"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=72]
+resource_name = "powder_instant_milktea"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=80]
+resource_name = "powder_instant_soybean"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 20 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=69]
+resource_name = "powder_mocha"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=56]
+resource_name = "powder_vegfat"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=88]
+resource_name = "tealeaf_dark"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 22 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=89]
+resource_name = "tealeaf_flower"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 21 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=67]
+resource_name = "tealeaf_green"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=90]
+resource_name = "tealeaf_oolong"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=57]
+resource_name = "tealeaf_red"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=187]
+resource_name = "tealeaf_white"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 138 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=169]
+resource_name = "tealeaf_wolfberry"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 113 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=126]
+resource_name = "上层巧克力"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 56 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 57 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -4, -28 ) ]
+}
+
+[sub_resource type="Animation" id=128]
+resource_name = "上层焦糖"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 31 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 57 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -4, -28 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=181]
+resource_name = "上层麻薯"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 128 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=197]
+resource_name = "世涛"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 149 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ null ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 45 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("IconNode/Texture/MainIcon:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("IconNode/Texture:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+
+[sub_resource type="Animation" id=152]
+resource_name = "凤梨"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 102 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=166]
+resource_name = "奇亚籽"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 46 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 37 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=118]
+resource_name = "奶油顶可可"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 62 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 41 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -26 ) ]
+}
+
+[sub_resource type="Animation" id=119]
+resource_name = "奶油顶草莓"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 63 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 41 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -26 ) ]
+}
+
+[sub_resource type="Animation" id=209]
+resource_name = "小熊软糖"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 171 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 172 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -25 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=195]
+resource_name = "小麦"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 147 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ null ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 45 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("IconNode/Texture/MainIcon:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("IconNode/Texture:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+
+[sub_resource type="Animation" id=193]
+resource_name = "拉格"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 146 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 145 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 45 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("IconNode/Texture/MainIcon:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("IconNode/Texture:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+
+[sub_resource type="Animation" id=112]
+resource_name = "挂壁巧克力"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 56 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 57 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/back:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -4, -28 ) ]
+}
+
+[sub_resource type="Animation" id=127]
+resource_name = "挂壁焦糖"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 31 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 57 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -4, -28 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=182]
+resource_name = "挂壁麻薯"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 128 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=160]
+resource_name = "杨梅"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 111 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=105]
+resource_name = "柠檬"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 42 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=161]
+resource_name = "桃子"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 109 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=171]
+resource_name = "桑葚"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 118 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=110]
+resource_name = "橙子"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 47 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=172]
+resource_name = "火龙果"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 117 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=173]
+resource_name = "牛油果"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 116 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=156]
+resource_name = "甘蔗"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 107 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=168]
+resource_name = "生姜"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 112 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=164]
+resource_name = "白糖水"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 65 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=115]
+resource_name = "百香果"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 59 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=167]
+resource_name = "百香果肉"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 59 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=198]
+resource_name = "皮尔森"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 148 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ null ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 45 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("IconNode/Texture/MainIcon:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("IconNode/Texture:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+
+[sub_resource type="Animation" id=211]
+resource_name = "糖渍樱桃"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 173 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 37 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=157]
+resource_name = "胡萝卜"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 105 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=194]
+resource_name = "艾尔"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 144 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 145 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 45 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("IconNode/Texture/MainIcon:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("IconNode/Texture:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ) ]
+}
+
+[sub_resource type="Animation" id=137]
+resource_name = "芋头"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 53 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=162]
+resource_name = "芒果"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 110 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=134]
+resource_name = "芝士"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 71 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=136]
+resource_name = "芝士牛奶"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 71 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=153]
+resource_name = "草莓"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 100 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=163]
+resource_name = "葡萄"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 108 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=192]
+resource_name = "薄荷"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 143 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=190]
+resource_name = "薄荷枝"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 141 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=116]
+resource_name = "西柚"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 61 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=154]
+resource_name = "西瓜"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 103 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=158]
+resource_name = "西芹"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 104 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=210]
+resource_name = "话梅"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 168 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("IconNode/Texture/back:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 169 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("IconNode/Texture/back:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -25 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("IconNode/Texture/MainIcon:show_behind_parent")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=117]
+resource_name = "青桔"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 60 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=155]
+resource_name = "香蕉"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 101 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=208]
+resource_name = "鸡蛋"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 167 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=159]
+resource_name = "黄瓜"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 106 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=165]
+resource_name = "黑糖水"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("IconNode/Texture/MainIcon:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 32 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("IconNode/Texture/back:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[node name="IconNode" type="Node2D"]
+
+[node name="Texture" type="Node2D" parent="."]
+
+[node name="back" type="Sprite" parent="Texture"]
+position = Vector2( 0, -25 )
+texture = ExtResource( 169 )
+
+[node name="MainIcon" type="Sprite" parent="Texture"]
+show_behind_parent = true
+texture = ExtResource( 168 )
+
+[node name="IconAni" type="AnimationPlayer" parent="."]
+root_node = NodePath("../..")
+autoplay = "init"
+anims/BEER = SubResource( 207 )
+anims/Choco = SubResource( 191 )
+anims/DrinkCup_L = SubResource( 76 )
+anims/DrinkCup_M = SubResource( 77 )
+anims/DrinkCup_S = SubResource( 74 )
+anims/FreeSugar = SubResource( 125 )
+anims/GAS = SubResource( 144 )
+anims/ICE = SubResource( 135 )
+anims/IPA = SubResource( 196 )
+anims/Sack_coffeebean = SubResource( 92 )
+anims/SodaCan_L = SubResource( 149 )
+anims/SodaCan_M = SubResource( 150 )
+anims/SodaCan_S = SubResource( 151 )
+anims/Sugar = SubResource( 82 )
+anims/SuperCup_M = SubResource( 170 )
+anims/TeaPort = SubResource( 102 )
+anims/WaterPort = SubResource( 103 )
+anims/bag_BlackCookie = SubResource( 183 )
+anims/bag_BrownieCake = SubResource( 185 )
+anims/bag_PinkChocolate = SubResource( 184 )
+anims/bag_boba = SubResource( 121 )
+anims/bag_brownsugar = SubResource( 122 )
+anims/bag_cheeze = SubResource( 132 )
+anims/bag_eggroll_black = SubResource( 188 )
+anims/bag_eggroll_white = SubResource( 189 )
+anims/bag_mashmallow = SubResource( 133 )
+anims/bag_mochi = SubResource( 180 )
+anims/bag_sago = SubResource( 123 )
+anims/bag_salt = SubResource( 179 )
+anims/bag_whitesugar = SubResource( 124 )
+anims/bottle_blueberry = SubResource( 146 )
+anims/bottle_cheery = SubResource( 147 )
+anims/bottle_grape = SubResource( 138 )
+anims/bottle_hazelnut = SubResource( 175 )
+anims/bottle_honey = SubResource( 96 )
+anims/bottle_kiwi = SubResource( 178 )
+anims/bottle_lemon = SubResource( 97 )
+anims/bottle_orange = SubResource( 99 )
+anims/bottle_osmanthus = SubResource( 100 )
+anims/bottle_pistachio = SubResource( 176 )
+anims/bottle_rose = SubResource( 186 )
+anims/bottle_vanilla = SubResource( 131 )
+anims/bottle_wine_blueliqueur = SubResource( 199 )
+anims/bottle_wine_brandy = SubResource( 202 )
+anims/bottle_wine_coffeeliqueur = SubResource( 201 )
+anims/bottle_wine_creamliqueur = SubResource( 200 )
+anims/bottle_wine_gin = SubResource( 203 )
+anims/bottle_wine_redwine = SubResource( 204 )
+anims/bottle_wine_rum = SubResource( 177 )
+anims/bottle_wine_tequila = SubResource( 205 )
+anims/bottle_wine_vodka = SubResource( 206 )
+anims/can_chestnut = SubResource( 86 )
+anims/can_coco = SubResource( 106 )
+anims/can_grassjelly = SubResource( 83 )
+anims/can_jelly = SubResource( 108 )
+anims/can_konjac = SubResource( 107 )
+anims/can_peanut = SubResource( 84 )
+anims/can_raisin = SubResource( 109 )
+anims/can_redbean = SubResource( 85 )
+anims/can_ricewine = SubResource( 114 )
+anims/coffeemaker_coffee = SubResource( 68 )
+anims/ice_CDSmilk = SubResource( 111 )
+anims/ice_coconutwater = SubResource( 94 )
+anims/ice_cream = SubResource( 129 )
+anims/ice_icebock = SubResource( 130 )
+anims/ice_lactobacillus = SubResource( 145 )
+anims/ice_milk = SubResource( 98 )
+anims/ice_oat = SubResource( 174 )
+anims/ice_yogurt = SubResource( 101 )
+anims/init = SubResource( 75 )
+anims/pop_blueorange = SubResource( 142 )
+anims/pop_cola = SubResource( 140 )
+anims/pop_lime = SubResource( 141 )
+anims/pop_lychee = SubResource( 148 )
+anims/pop_mint = SubResource( 143 )
+anims/powder_coco = SubResource( 66 )
+anims/powder_instant_coffee = SubResource( 70 )
+anims/powder_instant_milk = SubResource( 71 )
+anims/powder_instant_milktea = SubResource( 72 )
+anims/powder_instant_soybean = SubResource( 80 )
+anims/powder_mocha = SubResource( 69 )
+anims/powder_vegfat = SubResource( 56 )
+anims/tealeaf_dark = SubResource( 88 )
+anims/tealeaf_flower = SubResource( 89 )
+anims/tealeaf_green = SubResource( 67 )
+anims/tealeaf_oolong = SubResource( 90 )
+anims/tealeaf_red = SubResource( 57 )
+anims/tealeaf_white = SubResource( 187 )
+anims/tealeaf_wolfberry = SubResource( 169 )
+"anims/上层巧克力" = SubResource( 126 )
+"anims/上层焦糖" = SubResource( 128 )
+"anims/上层麻薯" = SubResource( 181 )
+"anims/世涛" = SubResource( 197 )
+"anims/凤梨" = SubResource( 152 )
+"anims/奇亚籽" = SubResource( 166 )
+"anims/奶油顶可可" = SubResource( 118 )
+"anims/奶油顶草莓" = SubResource( 119 )
+"anims/小熊软糖" = SubResource( 209 )
+"anims/小麦" = SubResource( 195 )
+"anims/拉格" = SubResource( 193 )
+"anims/挂壁巧克力" = SubResource( 112 )
+"anims/挂壁焦糖" = SubResource( 127 )
+"anims/挂壁麻薯" = SubResource( 182 )
+"anims/杨梅" = SubResource( 160 )
+"anims/柠檬" = SubResource( 105 )
+"anims/桃子" = SubResource( 161 )
+"anims/桑葚" = SubResource( 171 )
+"anims/橙子" = SubResource( 110 )
+"anims/火龙果" = SubResource( 172 )
+"anims/牛油果" = SubResource( 173 )
+"anims/甘蔗" = SubResource( 156 )
+"anims/生姜" = SubResource( 168 )
+"anims/白糖水" = SubResource( 164 )
+"anims/百香果" = SubResource( 115 )
+"anims/百香果肉" = SubResource( 167 )
+"anims/皮尔森" = SubResource( 198 )
+"anims/糖渍樱桃" = SubResource( 211 )
+"anims/胡萝卜" = SubResource( 157 )
+"anims/艾尔" = SubResource( 194 )
+"anims/芋头" = SubResource( 137 )
+"anims/芒果" = SubResource( 162 )
+"anims/芝士" = SubResource( 134 )
+"anims/芝士牛奶" = SubResource( 136 )
+"anims/草莓" = SubResource( 153 )
+"anims/葡萄" = SubResource( 163 )
+"anims/薄荷" = SubResource( 192 )
+"anims/薄荷枝" = SubResource( 190 )
+"anims/西柚" = SubResource( 116 )
+"anims/西瓜" = SubResource( 154 )
+"anims/西芹" = SubResource( 158 )
+"anims/话梅" = SubResource( 210 )
+"anims/青桔" = SubResource( 117 )
+"anims/香蕉" = SubResource( 155 )
+"anims/鸡蛋" = SubResource( 208 )
+"anims/黄瓜" = SubResource( 159 )
+"anims/黑糖水" = SubResource( 165 )

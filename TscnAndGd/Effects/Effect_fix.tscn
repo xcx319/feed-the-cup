@@ -1,0 +1,1213 @@
+[gd_scene load_steps=49 format=2]
+
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeA_4.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeA_5.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeA_2.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeA_1.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeA_3.tres" type="Texture" id=5]
+[ext_resource path="res://TscnAndGd/Effects/Effect_Smoke.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeB_3.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeB_2.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeC_1.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeB_1.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeB_4.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeC_2.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeB_5.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeD_3.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeC_3.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeD_2.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeC_4.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeD_4.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeC_5.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeD_1.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_smoke_typeD_5.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_fix_2.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_fix_1.tres" type="Texture" id=23]
+
+[sub_resource type="Animation" id=2]
+resource_name = "1"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "set"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("texture/EffectFix1:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.5, 64.5695, 0, -0.2, -32.0508, 0.5, 66.9808, 0, -0.2, -33.7253, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture/EffectFix1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("texture/EffectFix2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("texture/EffectFix2:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.2, 23.6291, -90, -0.2, -44.55, 0.1, 25.3767, -40, -0.25, 0, 0.25, 0, -90, -0.3, -45.9967, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 1 )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("texture:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "3"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 19 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "4"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 20 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 21 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "1"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "2"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 13 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "3"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 19 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "4"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 20 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 21 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "1"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "2"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 13 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "3"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 19 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "4"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 20 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 21 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "1"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "2"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 13 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "3"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 19 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "4"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 20 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 21 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "1"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 5 ), ExtResource( 1 ), ExtResource( 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "2"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 13 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "3"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 17 ), ExtResource( 19 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "4"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("texture/EffectSmokeTypeA1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 20 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 21 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "fix"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("texture/EffectFix1:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.5, 64.5695, 0, -0.2, -32.0508, 0.5, 66.9808, 0, -0.2, -33.7253, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture/EffectFix1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("texture/EffectFix2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("texture:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "set"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("texture/EffectFix1:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.5, 64.5695, 0, -0.2, -32.0508, 0.5, 66.9808, 0, -0.2, -33.7253, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("texture/EffectFix1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("texture/EffectFix2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("texture/EffectFix2:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.2, 23.6291, -90, -0.2, -44.55, 0.1, 25.3767, -40, -0.25, 0, 0.25, 0, -90, -0.3, -45.9967, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.3, 0.6, 1 )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("texture:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=27]
+length = 2.0
+loop = true
+tracks/0/type = "animation"
+tracks/0/path = NodePath("Effect_Smoke/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "2", "1", "4" ),
+"times": PoolRealArray( 0, 0.6, 1.3 )
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("Effect_Smoke2/AnimationPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "4", "2", "3" ),
+"times": PoolRealArray( 0.1, 0.7, 1.4 )
+}
+tracks/2/type = "animation"
+tracks/2/path = NodePath("Effect_Smoke3/AnimationPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": PoolStringArray( "1", "3", "2" ),
+"times": PoolRealArray( 0.2, 0.8, 1.3 )
+}
+tracks/3/type = "animation"
+tracks/3/path = NodePath("Effect_Smoke4/AnimationPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": PoolStringArray( "1", "4", "3" ),
+"times": PoolRealArray( 0.3, 0.9, 1.5 )
+}
+tracks/4/type = "animation"
+tracks/4/path = NodePath("Effect_Smoke5/AnimationPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": PoolStringArray( "4", "2", "1" ),
+"times": PoolRealArray( 0, 0.5, 1.1 )
+}
+tracks/5/type = "animation"
+tracks/5/path = NodePath("Effect_Smoke6/AnimationPlayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": PoolStringArray( "3", "4" ),
+"times": PoolRealArray( 0.4, 1.2 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("texture/EffectSmokeTypeD2:scale:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.4, 0.208944, 1, -0.247929, -0.0884815, 0.3, 0.299148, 1, -0.2, -0.127488, 0.3, 0.369847, 1.2, -0.2, -0.261665, 0.2, 0.125964, 1, -0.347929, -0.24207, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("texture/EffectSmokeTypeD2:scale:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.3, 0.0271851, 1.2, -0.386982, -0.00811028, 0.365089, -0.00378036, 1, -0.317554, -0.0516857, 0.182446, 0.267741, 1, -0.217554, -0.0888859, 0.282446, 0.242268, 1, -0.217554, -0.0632521, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4, 0.9, 1.4, 2 )
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("texture/EffectSmokeTypeD2:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.2, 1.6, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.741176, 0.741176, 0.741176, 0 ), Color( 0.741176, 0.741176, 0.741176, 1 ), Color( 0.741176, 0.741176, 0.741176, 1 ), Color( 0.741176, 0.741176, 0.741176, 0 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("texture/EffectSmokeTypeD3:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.4, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("texture/EffectSmokeTypeD3:scale:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.3, -0.221231, 1, -0.2, 0.233762, 0.21716, -0.0856358, 1.2, -0.5, -0.00202513, 0.4, 0.00137675, 1, -0.3, -0.207123, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1.4, 2 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("texture/EffectSmokeTypeD3:scale:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.2, -0.0506005, 1, -0.1, 0.101645, 0.2, -0.0706159, 1.1, -0.552859, -0.00951183, 0.547141, 3.45707e-06, 1, -0.378894, -0.0896466, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1.4, 2 )
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath(".:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/13/type = "animation"
+tracks/13/path = NodePath("Tool/Fix/Loop")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"clips": PoolStringArray( "fix", "fix" ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Tool/Fix:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 1, 1.02, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20, 0 ), Vector2( 20, 0 ), Vector2( -27, -37 ), Vector2( -27, -37 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Tool/Fix:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 1, 1.02, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( -1, 1 ), Vector2( -1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "Set"
+length = 2.0
+loop = true
+step = 0.02
+tracks/0/type = "animation"
+tracks/0/path = NodePath("Effect_Smoke/AnimationPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "2", "1", "4" ),
+"times": PoolRealArray( 0, 0.6, 1.3 )
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("Effect_Smoke2/AnimationPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "4", "2", "3" ),
+"times": PoolRealArray( 0.1, 0.7, 1.4 )
+}
+tracks/2/type = "animation"
+tracks/2/path = NodePath("Effect_Smoke3/AnimationPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": PoolStringArray( "1", "3", "2" ),
+"times": PoolRealArray( 0.2, 0.8, 1.3 )
+}
+tracks/3/type = "animation"
+tracks/3/path = NodePath("Effect_Smoke4/AnimationPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": PoolStringArray( "1", "4", "3" ),
+"times": PoolRealArray( 0.3, 0.9, 1.5 )
+}
+tracks/4/type = "animation"
+tracks/4/path = NodePath("Effect_Smoke5/AnimationPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": PoolStringArray( "4", "2", "1" ),
+"times": PoolRealArray( 0, 0.5, 1.1 )
+}
+tracks/5/type = "animation"
+tracks/5/path = NodePath("Effect_Smoke6/AnimationPlayer")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": PoolStringArray( "3", "4" ),
+"times": PoolRealArray( 0.4, 1.2 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("texture/EffectSmokeTypeD2:scale:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.4, 0.208944, 1, -0.247929, -0.0884815, 0.3, 0.299148, 1, -0.2, -0.127488, 0.3, 0.369847, 1.2, -0.2, -0.261665, 0.2, 0.125964, 1, -0.347929, -0.24207, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("texture/EffectSmokeTypeD2:scale:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.3, 0.0271851, 1.2, -0.386982, -0.00811028, 0.365089, -0.00378036, 1, -0.317554, -0.0516857, 0.182446, 0.267741, 1, -0.217554, -0.0888859, 0.282446, 0.242268, 1, -0.217554, -0.0632521, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4, 0.9, 1.4, 2 )
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("texture/EffectSmokeTypeD2:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.2, 1.6, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.741176, 0.741176, 0.741176, 0 ), Color( 0.741176, 0.741176, 0.741176, 1 ), Color( 0.741176, 0.741176, 0.741176, 1 ), Color( 0.741176, 0.741176, 0.741176, 0 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("texture/EffectSmokeTypeD3:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.4, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("texture/EffectSmokeTypeD3:scale:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.3, -0.221231, 1, -0.2, 0.233762, 0.21716, -0.0856358, 1.2, -0.5, -0.00202513, 0.4, 0.00137675, 1, -0.3, -0.207123, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1.4, 2 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("texture/EffectSmokeTypeD3:scale:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.2, -0.0506005, 1, -0.1, 0.101645, 0.2, -0.0706159, 1.1, -0.552859, -0.00951183, 0.547141, 3.45707e-06, 1, -0.378894, -0.0896466, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1.4, 2 )
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath(".:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/13/type = "animation"
+tracks/13/path = NodePath("Tool/Fix/Loop")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"clips": PoolStringArray( "set", "set" ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Tool/Fix:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 1, 1.02, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 20, 0 ), Vector2( 20, 0 ), Vector2( -27, -37 ), Vector2( -27, -37 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Tool/Fix:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 1, 1.02, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( -1, 1 ), Vector2( -1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "init"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[node name="Effect_Fix" type="Node2D"]
+
+[node name="texture" type="Node2D" parent="."]
+
+[node name="EffectSmokeTypeD3" type="Sprite" parent="texture"]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0.843137 )
+position = Vector2( 39, -31 )
+rotation = -0.00387264
+texture = ExtResource( 14 )
+
+[node name="EffectSmokeTypeD2" type="Sprite" parent="texture"]
+modulate = Color( 0.741176, 0.741176, 0.741176, 0 )
+self_modulate = Color( 1, 1, 1, 0.843137 )
+position = Vector2( -28, 11 )
+rotation = 0.872665
+texture = ExtResource( 16 )
+
+[node name="Effect_Smoke" parent="." instance=ExtResource( 6 )]
+script = null
+
+[node name="EffectSmokeTypeA1" parent="Effect_Smoke/texture" index="0"]
+texture = ExtResource( 21 )
+
+[node name="Effect_Smoke2" parent="." instance=ExtResource( 6 )]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( 23, -85 )
+script = null
+
+[node name="EffectSmokeTypeA1" parent="Effect_Smoke2/texture" index="0"]
+texture = ExtResource( 19 )
+
+[node name="AnimationPlayer" parent="Effect_Smoke2" index="1"]
+anims/1 = SubResource( 2 )
+anims/2 = SubResource( 3 )
+anims/3 = SubResource( 4 )
+anims/4 = SubResource( 5 )
+
+[node name="Effect_Smoke3" parent="." instance=ExtResource( 6 )]
+position = Vector2( -48, -50 )
+script = null
+
+[node name="EffectSmokeTypeA1" parent="Effect_Smoke3/texture" index="0"]
+texture = ExtResource( 13 )
+
+[node name="AnimationPlayer" parent="Effect_Smoke3" index="1"]
+anims/1 = SubResource( 6 )
+anims/2 = SubResource( 7 )
+anims/3 = SubResource( 8 )
+anims/4 = SubResource( 9 )
+
+[node name="Effect_Smoke4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 35, 35 )
+script = null
+
+[node name="EffectSmokeTypeA1" parent="Effect_Smoke4/texture" index="0"]
+texture = ExtResource( 19 )
+
+[node name="AnimationPlayer" parent="Effect_Smoke4" index="1"]
+anims/1 = SubResource( 10 )
+anims/2 = SubResource( 11 )
+anims/3 = SubResource( 12 )
+anims/4 = SubResource( 13 )
+
+[node name="Effect_Smoke5" parent="." instance=ExtResource( 6 )]
+position = Vector2( -28, -118 )
+script = null
+
+[node name="AnimationPlayer" parent="Effect_Smoke5" index="1"]
+anims/1 = SubResource( 14 )
+anims/2 = SubResource( 15 )
+anims/3 = SubResource( 16 )
+anims/4 = SubResource( 17 )
+
+[node name="Effect_Smoke6" parent="." instance=ExtResource( 6 )]
+modulate = Color( 0.898039, 0.898039, 0.898039, 1 )
+position = Vector2( -26, 47 )
+script = null
+
+[node name="EffectSmokeTypeA1" parent="Effect_Smoke6/texture" index="0"]
+texture = ExtResource( 21 )
+
+[node name="AnimationPlayer" parent="Effect_Smoke6" index="1"]
+anims/1 = SubResource( 18 )
+anims/2 = SubResource( 19 )
+anims/3 = SubResource( 20 )
+anims/4 = SubResource( 21 )
+
+[node name="Tool" type="Node2D" parent="."]
+
+[node name="Fix" type="Node2D" parent="Tool"]
+position = Vector2( -27, -37 )
+scale = Vector2( -1, 1 )
+
+[node name="texture" type="Node2D" parent="Tool/Fix"]
+modulate = Color( 1, 1, 1, 0 )
+
+[node name="EffectFix1" type="Sprite" parent="Tool/Fix/texture"]
+texture = ExtResource( 23 )
+offset = Vector2( 3, 24 )
+
+[node name="EffectFix2" type="Sprite" parent="Tool/Fix/texture"]
+visible = false
+rotation = -1.5708
+texture = ExtResource( 22 )
+offset = Vector2( -5, -19 )
+
+[node name="Loop" type="AnimationPlayer" parent="Tool/Fix"]
+anims/fix = SubResource( 1 )
+anims/set = SubResource( 26 )
+
+[node name="Ani" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/Fix = SubResource( 27 )
+anims/Set = SubResource( 23 )
+anims/init = SubResource( 25 )
+
+[editable path="Effect_Smoke"]
+[editable path="Effect_Smoke2"]
+[editable path="Effect_Smoke3"]
+[editable path="Effect_Smoke4"]
+[editable path="Effect_Smoke5"]
+[editable path="Effect_Smoke6"]

@@ -1,0 +1,2287 @@
+[gd_scene load_steps=57 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Main/Options.gd" type="Script" id=1]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_right.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_difficulty_light.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_dark.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_circle_white.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_circle_bg.tres" type="Texture" id=7]
+[ext_resource path="res://TscnAndGd/UI/Buttons/Option_But.gd" type="Script" id=8]
+[ext_resource path="res://TscnAndGd/Buttons/LogicBut.tscn" type="PackedScene" id=9]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=11]
+[ext_resource path="res://Language/Fonts/Base_special_B.tres" type="DynamicFont" id=12]
+[ext_resource path="res://Language/Fonts/Base_l_outline.tres" type="DynamicFont" id=13]
+[ext_resource path="res://TscnAndGd/UI/Buttons/OptionTypeButGroup.tres" type="ButtonGroup" id=14]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_5.png" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_fuction_0.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_light.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_fuction_10.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_fuction_2.tres" type="Texture" id=19]
+[ext_resource path="res://Sounds/Effect/气泡.wav" type="AudioStream" id=20]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_X.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_Y_PS.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_B.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_X_PS.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_B_PS.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_Y.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_A_PS.tres" type="Texture" id=27]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_A.tres" type="Texture" id=28]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_A_NS.tres" type="Texture" id=29]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_B_NS.tres" type="Texture" id=30]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_X_NS.tres" type="Texture" id=31]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_Y_NS.tres" type="Texture" id=32]
+
+[sub_resource type="StyleBoxTexture" id=186]
+texture = ExtResource( 15 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 0.823529, 0.588235, 0.392157 )
+
+[sub_resource type="StyleBoxTexture" id=187]
+texture = ExtResource( 15 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 0.588235, 0, 0.784314 )
+
+[sub_resource type="StyleBoxEmpty" id=188]
+
+[sub_resource type="StyleBoxEmpty" id=189]
+
+[sub_resource type="StyleBoxEmpty" id=190]
+
+[sub_resource type="StyleBoxTexture" id=193]
+texture = ExtResource( 17 )
+region_rect = Rect2( 0, 0, 90, 93 )
+margin_left = 25.0
+margin_right = 25.0
+margin_top = 25.0
+margin_bottom = 25.0
+modulate_color = Color( 0.74902, 1, 0.94902, 1 )
+
+[sub_resource type="StyleBoxTexture" id=192]
+texture = ExtResource( 17 )
+region_rect = Rect2( 0, 0, 90, 93 )
+margin_left = 25.0
+margin_right = 25.0
+margin_top = 25.0
+margin_bottom = 25.0
+modulate_color = Color( 1, 0.588235, 0, 1 )
+
+[sub_resource type="StyleBoxTexture" id=194]
+texture = ExtResource( 17 )
+region_rect = Rect2( 0, 0, 90, 93 )
+margin_left = 25.0
+margin_right = 25.0
+margin_top = 25.0
+margin_bottom = 25.0
+
+[sub_resource type="StyleBoxTexture" id=76]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 90, 93 )
+margin_left = 25.0
+margin_right = 25.0
+margin_top = 25.0
+margin_bottom = 25.0
+modulate_color = Color( 0.815686, 1, 0.952941, 1 )
+
+[sub_resource type="StyleBoxTexture" id=14]
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 88, 88 )
+margin_left = 25.0
+margin_right = 25.0
+margin_top = 25.0
+margin_bottom = 25.0
+modulate_color = Color( 1, 0.588235, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=197]
+
+[sub_resource type="StyleBoxEmpty" id=77]
+
+[sub_resource type="ButtonGroup" id=75]
+
+[sub_resource type="Animation" id=74]
+resource_name = "hide"
+length = 0.1
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_releasefocus"
+} ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "init"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "show"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_grabfocus"
+} ]
+}
+
+[sub_resource type="Animation" id=152]
+resource_name = "Audio"
+tracks/0/type = "value"
+tracks/0/path = NodePath("GameVBox:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("GraphicsVBox:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AudioVBox:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_Audio_Grab"
+} ]
+}
+
+[sub_resource type="Animation" id=153]
+resource_name = "Game"
+tracks/0/type = "value"
+tracks/0/path = NodePath("GameVBox:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("GraphicsVBox:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AudioVBox:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_Game_Grab"
+} ]
+}
+
+[sub_resource type="Animation" id=154]
+resource_name = "Graphics"
+tracks/0/type = "value"
+tracks/0/path = NodePath("GameVBox:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("GraphicsVBox:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("AudioVBox:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_Graphics_Grab"
+} ]
+}
+
+[sub_resource type="StyleBoxTexture" id=147]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 1, 0.823529, 0.588235, 1 )
+
+[sub_resource type="StyleBoxTexture" id=148]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 1, 0.588235, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=149]
+
+[sub_resource type="StyleBoxTexture" id=150]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+
+[sub_resource type="StyleBoxTexture" id=151]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[node name="Options" type="Control"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+script = ExtResource( 1 )
+
+[node name="R1" parent="." instance=ExtResource( 9 )]
+margin_left = 1189.0
+margin_top = 182.0
+margin_right = 1279.0
+margin_bottom = 272.0
+focus_mode = 2
+ButType = 2
+_butType = "R1"
+_ActionModeBool = true
+
+[node name="R1" parent="R1" instance=ExtResource( 10 )]
+margin_left = 45.0
+margin_top = 45.0
+margin_right = 45.0
+margin_bottom = 45.0
+bool_Small = true
+bool_Static = true
+
+[node name="L1" parent="." instance=ExtResource( 9 )]
+margin_left = 622.0
+margin_top = 182.0
+margin_right = 712.0
+margin_bottom = 272.0
+rect_min_size = Vector2( 90, 90 )
+rect_pivot_offset = Vector2( 45, 45 )
+focus_mode = 2
+custom_styles/hover = SubResource( 186 )
+custom_styles/pressed = SubResource( 187 )
+custom_styles/focus = SubResource( 188 )
+custom_styles/disabled = SubResource( 189 )
+custom_styles/normal = SubResource( 190 )
+ButType = 2
+_butType = "R1"
+_ActionModeBool = true
+
+[node name="L1" parent="L1" instance=ExtResource( 10 )]
+margin_left = 45.0
+margin_top = 45.0
+margin_right = 45.0
+margin_bottom = 45.0
+bool_Small = true
+bool_Static = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 702.0
+margin_top = 187.0
+margin_right = 1202.0
+margin_bottom = 247.0
+rect_min_size = Vector2( 500, 0 )
+
+[node name="Game" type="Button" parent="HBoxContainer"]
+margin_right = 160.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 160, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_mode = 0
+custom_styles/hover = SubResource( 193 )
+custom_styles/pressed = SubResource( 192 )
+custom_styles/focus = SubResource( 192 )
+custom_styles/normal = SubResource( 194 )
+toggle_mode = true
+pressed = true
+group = ExtResource( 14 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="HBoxContainer/Game"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 11 )
+text = "Game"
+align = 1
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-游戏类"
+
+[node name="IconFuction10" type="Sprite" parent="HBoxContainer/Game"]
+show_behind_parent = true
+position = Vector2( 32, 0 )
+texture = ExtResource( 18 )
+
+[node name="Graphics" type="Button" parent="HBoxContainer"]
+margin_left = 168.0
+margin_right = 328.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 160, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_mode = 0
+custom_styles/hover = SubResource( 193 )
+custom_styles/pressed = SubResource( 192 )
+custom_styles/focus = SubResource( 192 )
+custom_styles/normal = SubResource( 194 )
+toggle_mode = true
+group = ExtResource( 14 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="HBoxContainer/Graphics"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 11 )
+text = "Graphics"
+align = 1
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-图像类"
+
+[node name="IconFuction4" type="Sprite" parent="HBoxContainer/Graphics"]
+show_behind_parent = true
+position = Vector2( 35, -4 )
+texture = ExtResource( 19 )
+
+[node name="Audio" type="Button" parent="HBoxContainer"]
+margin_left = 336.0
+margin_right = 496.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 160, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_mode = 0
+custom_styles/hover = SubResource( 193 )
+custom_styles/pressed = SubResource( 192 )
+custom_styles/focus = SubResource( 192 )
+custom_styles/normal = SubResource( 194 )
+toggle_mode = true
+group = ExtResource( 14 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="HBoxContainer/Audio"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = ExtResource( 11 )
+text = "Audio"
+align = 1
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-音乐类"
+
+[node name="IconFuction0" type="Sprite" parent="HBoxContainer/Audio"]
+show_behind_parent = true
+position = Vector2( 34, -6 )
+texture = ExtResource( 16 )
+
+[node name="GameVBox" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -260.0
+margin_top = -240.0
+margin_right = 240.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 500, 0 )
+
+[node name="Language" type="Button" parent="GameVBox"]
+margin_right = 500.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../StressShow")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="GameVBox/Language"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "设置-语言"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-语言"
+
+[node name="BG" type="NinePatchRect" parent="GameVBox/Language"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="LanguageLable" type="Label" parent="GameVBox/Language"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -225.0
+margin_top = -21.0
+margin_right = 225.0
+margin_bottom = 20.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+
+[node name="SteamLabel" type="Label" parent="GameVBox/Language"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 270.0
+margin_top = -33.0
+margin_right = 960.0
+margin_bottom = 34.0
+custom_fonts/font = ExtResource( 12 )
+text = "默认读取Steam中游戏的语言设置"
+valign = 1
+autowrap = true
+script = ExtResource( 2 )
+LabelTEXT = "信息-读取Steam语言"
+
+[node name="L" parent="GameVBox/Language" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="GameVBox/Language" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="StressShow" type="Button" parent="GameVBox"]
+margin_top = 68.0
+margin_right = 500.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../Language")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../MultNameShow")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="GameVBox/StressShow"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "压力显示"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-压力显示"
+
+[node name="BG" type="NinePatchRect" parent="GameVBox/StressShow"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="L" parent="GameVBox/StressShow" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="GameVBox/StressShow" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="CurLabel" type="Label" parent="GameVBox/StressShow"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -201.0
+margin_top = -21.0
+margin_right = 200.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "一直显示"
+align = 1
+valign = 1
+
+[node name="MultNameShow" type="Button" parent="GameVBox"]
+margin_top = 136.0
+margin_right = 500.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../StressShow")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../Vibration")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="GameVBox/MultNameShow"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "联机名字显示"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-联机名字显示"
+
+[node name="BG" type="NinePatchRect" parent="GameVBox/MultNameShow"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="L" parent="GameVBox/MultNameShow" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="GameVBox/MultNameShow" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="MultNameLabel" type="Label" parent="GameVBox/MultNameShow"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -21.0
+margin_right = 201.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "一直显示"
+align = 1
+valign = 1
+
+[node name="Vibration" type="Button" parent="GameVBox"]
+margin_top = 204.0
+margin_right = 500.0
+margin_bottom = 264.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../MultNameShow")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../Touch")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="GameVBox/Vibration"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "震动开关"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-震动开关"
+
+[node name="BG" type="NinePatchRect" parent="GameVBox/Vibration"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="L" parent="GameVBox/Vibration" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="GameVBox/Vibration" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="VibrationLabel" type="Label" parent="GameVBox/Vibration"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -21.0
+margin_right = 201.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "开"
+align = 1
+valign = 1
+script = ExtResource( 2 )
+
+[node name="Touch" type="Button" parent="GameVBox"]
+margin_top = 272.0
+margin_right = 500.0
+margin_bottom = 332.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../Vibration")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../Interaction")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="GameVBox/Touch"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "拾取优先级"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-拾取优先级"
+
+[node name="BG" type="NinePatchRect" parent="GameVBox/Touch"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="L" parent="GameVBox/Touch" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="GameVBox/Touch" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="Label" type="Label" parent="GameVBox/Touch"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -21.0
+margin_right = 201.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "地面/物体"
+align = 1
+valign = 1
+script = ExtResource( 2 )
+
+[node name="InfoLabel" type="Label" parent="GameVBox/Touch"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 270.0
+margin_top = -29.0
+margin_right = 960.0
+margin_bottom = 95.0
+custom_fonts/font = ExtResource( 12 )
+text = "影响角色优先交互地面物品或设备。
+联机时以主机设置为准。"
+valign = 1
+autowrap = true
+script = ExtResource( 2 )
+LabelTEXT = "信息-交互说明"
+
+[node name="Interaction" type="Button" parent="GameVBox"]
+margin_top = 340.0
+margin_right = 500.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../Touch")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="GameVBox/Interaction"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "交互优先级"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-交互优先级"
+
+[node name="BG" type="NinePatchRect" parent="GameVBox/Interaction"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="L" parent="GameVBox/Interaction" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="GameVBox/Interaction" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="Label" type="Label" parent="GameVBox/Interaction"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -21.0
+margin_right = 201.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "开"
+align = 1
+valign = 1
+script = ExtResource( 2 )
+
+[node name="GraphicsVBox" type="VBoxContainer" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -260.0
+margin_top = -240.0
+margin_right = 240.0
+margin_bottom = 92.0
+rect_min_size = Vector2( 500, 0 )
+
+[node name="Camera" type="Button" parent="GraphicsVBox"]
+margin_right = 500.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../CurScreen")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="GraphicsVBox/Camera"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "Camera Zoom"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-视角缩放"
+
+[node name="HSlider" type="HSlider" parent="GraphicsVBox/Camera"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -16.0
+margin_right = 200.0
+margin_bottom = 16.0
+focus_mode = 0
+custom_icons/grabber_highlight = ExtResource( 6 )
+custom_icons/grabber = ExtResource( 7 )
+min_value = 50.0
+step = 5.0
+value = 50.0
+tick_count = 11
+ticks_on_borders = true
+
+[node name="BG" type="NinePatchRect" parent="GraphicsVBox/Camera"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="L" parent="GraphicsVBox/Camera" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="GraphicsVBox/Camera" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="CurScreen" type="Button" parent="GraphicsVBox"]
+margin_top = 68.0
+margin_right = 500.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../Camera")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../VSYNC")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="GraphicsVBox/CurScreen"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "设置-当前显示器"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-当前显示器"
+
+[node name="BG" type="NinePatchRect" parent="GraphicsVBox/CurScreen"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="L" parent="GraphicsVBox/CurScreen" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="GraphicsVBox/CurScreen" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="CurScreenLabel" type="Label" parent="GraphicsVBox/CurScreen"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -21.0
+margin_right = 250.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="VSYNC" type="Button" parent="GraphicsVBox"]
+margin_top = 136.0
+margin_right = 500.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../CurScreen")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../Resolution")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="GraphicsVBox/VSYNC"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "VSync"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-垂直同步"
+
+[node name="BG" type="NinePatchRect" parent="GraphicsVBox/VSYNC"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="L" parent="GraphicsVBox/VSYNC" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="GraphicsVBox/VSYNC" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="VSYNCLabel" type="Label" parent="GraphicsVBox/VSYNC"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -21.0
+margin_right = 250.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "开启"
+align = 1
+valign = 1
+script = ExtResource( 2 )
+
+[node name="Resolution" type="Button" parent="GraphicsVBox"]
+margin_top = 204.0
+margin_right = 500.0
+margin_bottom = 264.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../VSYNC")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../ScreenMode")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="GraphicsVBox/Resolution"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "设置-分辨率"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-分辨率"
+
+[node name="BG" type="NinePatchRect" parent="GraphicsVBox/Resolution"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="WindowSize" type="Label" parent="GraphicsVBox/Resolution"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -21.0
+margin_right = 250.0
+margin_bottom = 20.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1920 x 1080 (16:9)"
+align = 1
+valign = 1
+
+[node name="L" parent="GraphicsVBox/Resolution" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="GraphicsVBox/Resolution" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="ScreenMode" type="Button" parent="GraphicsVBox"]
+margin_top = 272.0
+margin_right = 500.0
+margin_bottom = 332.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../Resolution")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../NightSwitch")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="GraphicsVBox/ScreenMode"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "设置-窗口模式"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-窗口模式"
+
+[node name="BG" type="NinePatchRect" parent="GraphicsVBox/ScreenMode"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="WindowMode" type="Label" parent="GraphicsVBox/ScreenMode"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -21.0
+margin_right = 250.0
+margin_bottom = 20.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "OPTION-全屏"
+align = 1
+valign = 1
+
+[node name="L" parent="GraphicsVBox/ScreenMode" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="GraphicsVBox/ScreenMode" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="NightSwitch" type="Button" parent="GraphicsVBox"]
+margin_top = 340.0
+margin_right = 500.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../ScreenMode")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../FPS")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="GraphicsVBox/NightSwitch"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "夜晚及灯光开关"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-灯光开关"
+
+[node name="BG" type="NinePatchRect" parent="GraphicsVBox/NightSwitch"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="SwitchLabel" type="Label" parent="GraphicsVBox/NightSwitch"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -248.0
+margin_top = -24.0
+margin_right = 252.0
+margin_bottom = 17.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "On:Lighting at night (Turn off if there is lag)"
+align = 1
+valign = 1
+script = ExtResource( 2 )
+
+[node name="L" parent="GraphicsVBox/NightSwitch" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="GraphicsVBox/NightSwitch" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="SteamLabel" type="Label" parent="GraphicsVBox/NightSwitch"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 270.0
+margin_top = -35.0
+margin_right = 960.0
+margin_bottom = 35.0
+custom_fonts/font = ExtResource( 12 )
+text = "如果夜间卡顿请关闭"
+valign = 1
+autowrap = true
+script = ExtResource( 2 )
+LabelTEXT = "信息-提示关闭灯光"
+
+[node name="FPS" type="Button" parent="GraphicsVBox"]
+margin_top = 408.0
+margin_right = 500.0
+margin_bottom = 468.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../NightSwitch")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../ButShow")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="GraphicsVBox/FPS"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "最大帧率"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-最大帧率"
+
+[node name="BG" type="NinePatchRect" parent="GraphicsVBox/FPS"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="FPSLabel" type="Label" parent="GraphicsVBox/FPS"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -240.0
+margin_top = -24.0
+margin_right = 241.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "无限制"
+align = 1
+valign = 1
+script = ExtResource( 2 )
+SYNC_Bool = false
+
+[node name="L" parent="GraphicsVBox/FPS" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+focus_mode = 2
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="GraphicsVBox/FPS" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+focus_mode = 2
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="SteamLabel" type="Label" parent="GraphicsVBox/FPS"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 270.0
+margin_top = -35.0
+margin_right = 960.0
+margin_bottom = 35.0
+custom_fonts/font = ExtResource( 12 )
+text = "通常应该与当前显示器刷新率相同。"
+valign = 1
+autowrap = true
+script = ExtResource( 2 )
+LabelTEXT = "信息-帧率提示"
+
+[node name="ButShow" type="Button" parent="GraphicsVBox"]
+margin_top = 476.0
+margin_right = 500.0
+margin_bottom = 536.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../FPS")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="GraphicsVBox/ButShow"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "按键显示"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-按键显示"
+
+[node name="BG" type="NinePatchRect" parent="GraphicsVBox/ButShow"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Show" type="Label" parent="GraphicsVBox/ButShow"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -240.0
+margin_top = -24.0
+margin_right = 241.0
+margin_bottom = 21.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+
+[node name="PS" type="HBoxContainer" parent="GraphicsVBox/ButShow/Show"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -72.0
+margin_top = -13.5
+margin_right = 72.0
+margin_bottom = 26.5
+
+[node name="0" type="Control" parent="GraphicsVBox/ButShow/Show/PS"]
+margin_right = 30.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Sprite" type="Sprite" parent="GraphicsVBox/ButShow/Show/PS/0"]
+texture = ExtResource( 25 )
+offset = Vector2( 15, 15 )
+
+[node name="1" type="Control" parent="GraphicsVBox/ButShow/Show/PS"]
+margin_left = 38.0
+margin_right = 68.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Sprite" type="Sprite" parent="GraphicsVBox/ButShow/Show/PS/1"]
+texture = ExtResource( 27 )
+offset = Vector2( 15, 15 )
+
+[node name="2" type="Control" parent="GraphicsVBox/ButShow/Show/PS"]
+margin_left = 76.0
+margin_right = 106.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Sprite" type="Sprite" parent="GraphicsVBox/ButShow/Show/PS/2"]
+texture = ExtResource( 24 )
+offset = Vector2( 15, 15 )
+
+[node name="3" type="Control" parent="GraphicsVBox/ButShow/Show/PS"]
+margin_left = 114.0
+margin_right = 144.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Sprite" type="Sprite" parent="GraphicsVBox/ButShow/Show/PS/3"]
+texture = ExtResource( 22 )
+offset = Vector2( 15, 15 )
+
+[node name="XBOX" type="HBoxContainer" parent="GraphicsVBox/ButShow/Show"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -72.0
+margin_top = -13.5
+margin_right = 72.0
+margin_bottom = 26.5
+
+[node name="0" type="Control" parent="GraphicsVBox/ButShow/Show/XBOX"]
+margin_right = 30.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Sprite" type="Sprite" parent="GraphicsVBox/ButShow/Show/XBOX/0"]
+texture = ExtResource( 28 )
+offset = Vector2( 15, 15 )
+
+[node name="1" type="Control" parent="GraphicsVBox/ButShow/Show/XBOX"]
+margin_left = 38.0
+margin_right = 68.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Sprite" type="Sprite" parent="GraphicsVBox/ButShow/Show/XBOX/1"]
+texture = ExtResource( 23 )
+offset = Vector2( 15, 15 )
+
+[node name="2" type="Control" parent="GraphicsVBox/ButShow/Show/XBOX"]
+margin_left = 76.0
+margin_right = 106.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Sprite" type="Sprite" parent="GraphicsVBox/ButShow/Show/XBOX/2"]
+texture = ExtResource( 21 )
+offset = Vector2( 15, 15 )
+
+[node name="3" type="Control" parent="GraphicsVBox/ButShow/Show/XBOX"]
+margin_left = 114.0
+margin_right = 144.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Sprite" type="Sprite" parent="GraphicsVBox/ButShow/Show/XBOX/3"]
+texture = ExtResource( 26 )
+offset = Vector2( 15, 15 )
+
+[node name="NS" type="HBoxContainer" parent="GraphicsVBox/ButShow/Show"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -72.0
+margin_top = -13.5
+margin_right = 72.0
+margin_bottom = 26.5
+
+[node name="0" type="Control" parent="GraphicsVBox/ButShow/Show/NS"]
+margin_right = 30.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Sprite" type="Sprite" parent="GraphicsVBox/ButShow/Show/NS/0"]
+texture = ExtResource( 29 )
+offset = Vector2( 15, 15 )
+
+[node name="1" type="Control" parent="GraphicsVBox/ButShow/Show/NS"]
+margin_left = 38.0
+margin_right = 68.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Sprite" type="Sprite" parent="GraphicsVBox/ButShow/Show/NS/1"]
+texture = ExtResource( 30 )
+offset = Vector2( 15, 15 )
+
+[node name="2" type="Control" parent="GraphicsVBox/ButShow/Show/NS"]
+margin_left = 76.0
+margin_right = 106.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Sprite" type="Sprite" parent="GraphicsVBox/ButShow/Show/NS/2"]
+texture = ExtResource( 31 )
+offset = Vector2( 15, 15 )
+
+[node name="3" type="Control" parent="GraphicsVBox/ButShow/Show/NS"]
+margin_left = 114.0
+margin_right = 144.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Sprite" type="Sprite" parent="GraphicsVBox/ButShow/Show/NS/3"]
+texture = ExtResource( 32 )
+offset = Vector2( 15, 15 )
+
+[node name="L" parent="GraphicsVBox/ButShow" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+focus_mode = 2
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="GraphicsVBox/ButShow" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+focus_mode = 2
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="AudioVBox" type="VBoxContainer" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -260.0
+margin_top = -240.0
+margin_right = 240.0
+margin_bottom = -44.0
+rect_min_size = Vector2( 500, 0 )
+
+[node name="Audio" type="Button" parent="AudioVBox"]
+margin_right = 500.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../Music")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+pressed = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="AudioVBox/Audio"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "设置-主音量"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-主音量"
+
+[node name="HSlider" type="HSlider" parent="AudioVBox/Audio"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -16.0
+margin_right = 200.0
+margin_bottom = 16.0
+focus_mode = 0
+custom_icons/grabber_highlight = ExtResource( 6 )
+custom_icons/grabber = ExtResource( 7 )
+step = 10.0
+tick_count = 11
+ticks_on_borders = true
+
+[node name="BG" type="NinePatchRect" parent="AudioVBox/Audio"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="L" parent="AudioVBox/Audio" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="AudioVBox/Audio" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="Music" type="Button" parent="AudioVBox"]
+margin_top = 68.0
+margin_right = 500.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../Audio")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../Effect")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="AudioVBox/Music"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "设置-音乐"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-音乐"
+
+[node name="HSlider" type="HSlider" parent="AudioVBox/Music"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -16.0
+margin_right = 200.0
+margin_bottom = 16.0
+focus_mode = 0
+custom_icons/grabber_highlight = ExtResource( 6 )
+custom_icons/grabber = ExtResource( 7 )
+step = 10.0
+tick_count = 11
+ticks_on_borders = true
+
+[node name="BG" type="NinePatchRect" parent="AudioVBox/Music"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="L" parent="AudioVBox/Music" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="AudioVBox/Music" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="Effect" type="Button" parent="AudioVBox"]
+margin_top = 136.0
+margin_right = 500.0
+margin_bottom = 196.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../Music")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../FootStep")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="AudioVBox/Effect"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "设置-音效"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-音效"
+
+[node name="HSlider" type="HSlider" parent="AudioVBox/Effect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -16.0
+margin_right = 200.0
+margin_bottom = 16.0
+focus_mode = 0
+custom_icons/grabber_highlight = ExtResource( 6 )
+custom_icons/grabber = ExtResource( 7 )
+step = 10.0
+tick_count = 11
+ticks_on_borders = true
+
+[node name="BG" type="NinePatchRect" parent="AudioVBox/Effect"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="L" parent="AudioVBox/Effect" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="AudioVBox/Effect" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="FootStep" type="Button" parent="AudioVBox"]
+margin_top = 204.0
+margin_right = 500.0
+margin_bottom = 264.0
+rect_min_size = Vector2( 0, 60 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../Effect")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+custom_styles/hover = SubResource( 76 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 197 )
+custom_styles/normal = SubResource( 77 )
+toggle_mode = true
+group = SubResource( 75 )
+script = ExtResource( 8 )
+
+[node name="Lable" type="Label" parent="AudioVBox/FootStep"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -620.0
+margin_top = -25.0
+margin_right = -20.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 11 )
+text = "脚步音效"
+align = 2
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "设置-脚步音效"
+
+[node name="HSlider" type="HSlider" parent="AudioVBox/FootStep"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -16.0
+margin_right = 200.0
+margin_bottom = 16.0
+focus_mode = 0
+custom_icons/grabber_highlight = ExtResource( 6 )
+custom_icons/grabber = ExtResource( 7 )
+step = 10.0
+tick_count = 11
+ticks_on_borders = true
+
+[node name="BG" type="NinePatchRect" parent="AudioVBox/FootStep"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="L" parent="AudioVBox/FootStep" instance=ExtResource( 9 )]
+margin_left = 13.0
+margin_top = 13.0
+margin_right = 47.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "L"
+_ActionModeBool = true
+
+[node name="R" parent="AudioVBox/FootStep" instance=ExtResource( 9 )]
+margin_left = 453.0
+margin_top = 13.0
+margin_right = 487.0
+margin_bottom = 47.0
+ButType = 2
+_butType = "R"
+_ActionModeBool = true
+
+[node name="OptionAni" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/hide = SubResource( 74 )
+anims/init = SubResource( 1 )
+anims/show = SubResource( 2 )
+
+[node name="TypeAni" type="AnimationPlayer" parent="."]
+autoplay = "Game"
+anims/Audio = SubResource( 152 )
+anims/Game = SubResource( 153 )
+anims/Graphics = SubResource( 154 )
+
+[node name="ButControl" type="Control" parent="."]
+margin_left = 710.0
+margin_top = 891.0
+margin_right = 1210.0
+margin_bottom = 951.0
+rect_min_size = Vector2( 0, 60 )
+
+[node name="BackBut" parent="ButControl" instance=ExtResource( 9 )]
+margin_left = 405.0
+margin_top = 15.0
+margin_right = 490.0
+margin_bottom = 100.0
+custom_styles/hover = SubResource( 147 )
+custom_styles/pressed = SubResource( 148 )
+custom_styles/focus = SubResource( 149 )
+custom_styles/disabled = SubResource( 150 )
+custom_styles/normal = SubResource( 151 )
+ButType = 4
+
+[node name="B" parent="ButControl/BackBut" instance=ExtResource( 10 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "按钮-返回"
+
+[node name="ApplyBut" parent="ButControl" instance=ExtResource( 9 )]
+margin_left = 207.5
+margin_top = 15.0
+margin_right = 292.5
+margin_bottom = 100.0
+custom_styles/hover = SubResource( 147 )
+custom_styles/pressed = SubResource( 148 )
+custom_styles/focus = SubResource( 149 )
+custom_styles/disabled = SubResource( 150 )
+custom_styles/normal = SubResource( 151 )
+ButType = 3
+
+[node name="X" parent="ButControl/ApplyBut" instance=ExtResource( 10 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "按钮-启用"
+
+[node name="DefaultBut" parent="ButControl" instance=ExtResource( 9 )]
+margin_left = 10.0
+margin_top = 15.0
+margin_right = 95.0
+margin_bottom = 100.0
+focus_mode = 2
+ButType = 3
+
+[node name="Y" parent="ButControl/DefaultBut" instance=ExtResource( 10 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "按钮-默认设置"
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+margin_left = 696.0
+margin_top = 72.0
+margin_right = -722.0
+margin_bottom = 145.0
+custom_fonts/font = ExtResource( 13 )
+text = "设置"
+align = 1
+valign = 1
+script = ExtResource( 2 )
+LabelTEXT = "按钮-设置"
+
+[node name="MusicAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+bus = "Music"
+
+[node name="MasterAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+
+[node name="EffectAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+bus = "Effect"
+
+[node name="FootStepAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+bus = "FootStep"
+
+[connection signal="pressed" from="HBoxContainer/Game" to="." method="_on_Game_pressed"]
+[connection signal="pressed" from="HBoxContainer/Graphics" to="." method="_on_Graphics_pressed"]
+[connection signal="pressed" from="HBoxContainer/Audio" to="." method="_on_Audio_pressed"]
+[connection signal="pressed" from="GameVBox/Language/L" to="." method="_on_Language_L_pressed"]
+[connection signal="pressed" from="GameVBox/Language/R" to="." method="_on_Language_R_pressed"]
+[connection signal="pressed" from="GameVBox/StressShow/L" to="." method="_on_Stress_L_pressed"]
+[connection signal="pressed" from="GameVBox/StressShow/R" to="." method="_on_Stress_R_pressed"]
+[connection signal="pressed" from="GameVBox/MultNameShow/L" to="." method="_on_MultName_L_pressed"]
+[connection signal="pressed" from="GameVBox/MultNameShow/R" to="." method="_on_MultName_R_pressed"]
+[connection signal="pressed" from="GameVBox/Vibration/L" to="." method="_on_Vibration_L_pressed"]
+[connection signal="pressed" from="GameVBox/Vibration/R" to="." method="_on_Vibration_R_pressed"]
+[connection signal="pressed" from="GameVBox/Touch/L" to="." method="_on_Touch_L_pressed"]
+[connection signal="pressed" from="GameVBox/Touch/R" to="." method="_on_Touch_R_pressed"]
+[connection signal="pressed" from="GameVBox/Interaction/L" to="." method="_on_Interaction_L_pressed"]
+[connection signal="pressed" from="GameVBox/Interaction/R" to="." method="_on_Interaction_R_pressed"]
+[connection signal="value_changed" from="GraphicsVBox/Camera/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="GraphicsVBox/Camera/L" to="." method="_on_Camera_L_pressed"]
+[connection signal="pressed" from="GraphicsVBox/Camera/R" to="." method="_on_Camera_R_pressed"]
+[connection signal="pressed" from="GraphicsVBox/CurScreen/L" to="." method="_on_CurScreen_L_pressed"]
+[connection signal="pressed" from="GraphicsVBox/CurScreen/R" to="." method="_on_CurScreen_R_pressed"]
+[connection signal="pressed" from="GraphicsVBox/VSYNC/L" to="." method="_on_VSYNC_L_pressed"]
+[connection signal="pressed" from="GraphicsVBox/VSYNC/R" to="." method="_on_VSYNC_R_pressed"]
+[connection signal="pressed" from="GraphicsVBox/Resolution/L" to="." method="_on_Resolution_L_pressed"]
+[connection signal="pressed" from="GraphicsVBox/Resolution/R" to="." method="_on_Resolution_R_pressed"]
+[connection signal="pressed" from="GraphicsVBox/ScreenMode/L" to="." method="_on_ScreenMode_L_pressed"]
+[connection signal="pressed" from="GraphicsVBox/ScreenMode/R" to="." method="_on_ScreenMode_R_pressed"]
+[connection signal="pressed" from="GraphicsVBox/NightSwitch/L" to="." method="_on_NightSwitch_L_pressed"]
+[connection signal="pressed" from="GraphicsVBox/NightSwitch/R" to="." method="_on_NightSwitch_R_pressed"]
+[connection signal="pressed" from="GraphicsVBox/FPS/L" to="." method="_on_FPS_L_pressed"]
+[connection signal="pressed" from="GraphicsVBox/FPS/R" to="." method="_on_FPS_R_pressed"]
+[connection signal="pressed" from="GraphicsVBox/ButShow/L" to="." method="_on_ButShow_L_pressed"]
+[connection signal="pressed" from="GraphicsVBox/ButShow/R" to="." method="_on_ButShow_R_pressed"]
+[connection signal="value_changed" from="AudioVBox/Audio/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="AudioVBox/Audio/L" to="." method="_on_Audio_L_pressed"]
+[connection signal="pressed" from="AudioVBox/Audio/R" to="." method="_on_Audio_R_pressed"]
+[connection signal="value_changed" from="AudioVBox/Music/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="AudioVBox/Music/L" to="." method="_on_Music_L_pressed"]
+[connection signal="pressed" from="AudioVBox/Music/R" to="." method="_on_Music_R_pressed"]
+[connection signal="value_changed" from="AudioVBox/Effect/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="AudioVBox/Effect/L" to="." method="_on_Effect_L_pressed"]
+[connection signal="pressed" from="AudioVBox/Effect/R" to="." method="_on_Effect_R_pressed"]
+[connection signal="value_changed" from="AudioVBox/FootStep/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="pressed" from="AudioVBox/FootStep/L" to="." method="_on_FootStep_L_pressed"]
+[connection signal="pressed" from="AudioVBox/FootStep/R" to="." method="_on_FootStep_R_pressed"]
+[connection signal="pressed" from="ButControl/BackBut" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="ButControl/ApplyBut" to="." method="_on_Apply_pressed"]
+[connection signal="pressed" from="ButControl/DefaultBut" to="." method="_on_Defaults_pressed"]

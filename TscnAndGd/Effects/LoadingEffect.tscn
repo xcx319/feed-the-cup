@@ -1,0 +1,114 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Language/Fonts/猫啃网秀雅圆.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Resources/UI/Main/CityMap_1.png" type="Texture" id=2]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=96]
+size = 60
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=98]
+resource_name = "NoChoose"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="Animation" id=95]
+resource_name = "run"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "Loading..." ]
+}
+
+[sub_resource type="Animation" id=97]
+resource_name = "run"
+length = 10.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("ScrollContainer/Control/CityMap1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 10 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 92, 355 ), Vector2( 610, 355 ) ]
+}
+
+[node name="LoadingControl" type="Control"]
+margin_right = 700.0
+margin_bottom = 700.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_right = 700.0
+margin_bottom = 700.0
+
+[node name="Control" type="Control" parent="ScrollContainer"]
+
+[node name="CityMap1" type="Sprite" parent="ScrollContainer/Control"]
+position = Vector2( 92, 355 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = 152.0
+margin_right = -33.0
+margin_bottom = -170.0
+custom_fonts/font = SubResource( 96 )
+text = "Loading..."
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+script = ExtResource( 3 )
+LabelTEXT = "DEMO_No"
+
+[node name="Ani" type="AnimationPlayer" parent="."]
+autoplay = "NoChoose"
+anims/NoChoose = SubResource( 98 )
+anims/run = SubResource( 95 )
+
+[node name="Loop" type="AnimationPlayer" parent="."]
+autoplay = "run"
+anims/run = SubResource( 97 )

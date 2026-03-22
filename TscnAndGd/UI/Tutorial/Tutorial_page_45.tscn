@@ -1,0 +1,274 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_5.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_instant_coffee.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_port_water_full.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_3.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_4.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_opened.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_can_redbean.tres" type="Texture" id=7]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=8]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_waterport20_empty.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_waterport20.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_time_night.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/store_shelffreezer_base.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_6.png" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_Freezer_table_shelf.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_Freezer_table_base.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_Freezer_table_cover.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_Freezer_table_door_2.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_Freezer_table_door_1.tres" type="Texture" id=19]
+
+[sub_resource type="Shader" id=267]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=266]
+resource_local_to_scene = true
+shader = SubResource( 267 )
+shader_param/aura_width = 0.0
+shader_param/aura_color = Color( 1, 1, 0, 1 )
+
+[node name="保质" type="Node2D"]
+
+[node name="延长使用" type="Node2D" parent="."]
+position = Vector2( 322, 156 )
+
+[node name="FreezeOnTable" type="Node2D" parent="延长使用"]
+position = Vector2( -51, 42 )
+
+[node name="Back2" type="Node2D" parent="延长使用/FreezeOnTable"]
+show_behind_parent = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="延长使用/FreezeOnTable/Back2"]
+margin_left = -46.0
+margin_top = -112.0
+margin_right = 48.0
+margin_bottom = 26.0
+texture = ExtResource( 16 )
+patch_margin_top = 9
+patch_margin_bottom = 46
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Port2" type="Node2D" parent="延长使用/FreezeOnTable"]
+position = Vector2( 22, -22 )
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="延长使用/FreezeOnTable/Port2"]
+texture = ExtResource( 10 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="延长使用/FreezeOnTable/Port2"]
+modulate = Color( 0.309804, 0.666667, 0.34902, 1 )
+position = Vector2( 0, 9.2692 )
+scale = Vector2( 1, 0.707901 )
+texture = ExtResource( 3 )
+
+[node name="ItemWaterport20" type="Sprite" parent="延长使用/FreezeOnTable/Port2"]
+texture = ExtResource( 11 )
+
+[node name="IconLiquidInstantCoffee" type="Sprite" parent="延长使用/FreezeOnTable/Port2"]
+visible = false
+position = Vector2( 0, -60 )
+texture = ExtResource( 2 )
+
+[node name="Red3" type="Node2D" parent="延长使用/FreezeOnTable"]
+pause_mode = 2
+material = SubResource( 266 )
+position = Vector2( -21, 0 )
+
+[node name="Can" type="Sprite" parent="延长使用/FreezeOnTable/Red3"]
+pause_mode = 2
+use_parent_material = true
+texture = ExtResource( 6 )
+offset = Vector2( 0, -21 )
+
+[node name="Tex" type="Sprite" parent="延长使用/FreezeOnTable/Red3"]
+pause_mode = 2
+texture = ExtResource( 7 )
+offset = Vector2( 0, -21 )
+
+[node name="Layer2" type="Node2D" parent="延长使用/FreezeOnTable"]
+position = Vector2( 0, 18 )
+
+[node name="DeviceFreezerTableShelf" type="Sprite" parent="延长使用/FreezeOnTable/Layer2"]
+position = Vector2( 0, -84 )
+texture = ExtResource( 15 )
+
+[node name="Front2" type="Node2D" parent="延长使用/FreezeOnTable"]
+use_parent_material = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="延长使用/FreezeOnTable/Front2"]
+use_parent_material = true
+margin_left = -50.0
+margin_top = -164.0
+margin_right = 50.0
+margin_bottom = 36.0
+texture = ExtResource( 17 )
+patch_margin_top = 63
+patch_margin_bottom = 34
+
+[node name="Door" type="Node2D" parent="延长使用/FreezeOnTable/Front2"]
+position = Vector2( -23, -50 )
+
+[node name="DeviceFreezerTableDoor1" type="Sprite" parent="延长使用/FreezeOnTable/Front2/Door"]
+texture = ExtResource( 19 )
+
+[node name="DeviceFreezerTableDoor2" type="Sprite" parent="延长使用/FreezeOnTable/Front2/Door"]
+position = Vector2( 44, 0 )
+texture = ExtResource( 18 )
+
+[node name="Light" type="Node2D" parent="延长使用/FreezeOnTable"]
+position = Vector2( -25, 19 )
+
+[node name="DeviceSwitchlightGreen" type="Sprite" parent="延长使用/FreezeOnTable/Light"]
+position = Vector2( 0, 4 )
+texture = ExtResource( 13 )
+
+[node name="Red2" type="Node2D" parent="延长使用"]
+pause_mode = 2
+material = SubResource( 266 )
+position = Vector2( 184, 55 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="Can" type="Sprite" parent="延长使用/Red2"]
+pause_mode = 2
+use_parent_material = true
+texture = ExtResource( 6 )
+offset = Vector2( 0, -21 )
+
+[node name="Tex" type="Sprite" parent="延长使用/Red2"]
+pause_mode = 2
+texture = ExtResource( 7 )
+offset = Vector2( 0, -21 )
+
+[node name="Texture" type="Node2D" parent="延长使用/Red2"]
+position = Vector2( 0.769196, -34.6153 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="DeviceTrashbinEffect3" type="Sprite" parent="延长使用/Red2/Texture"]
+position = Vector2( 1.28571, -37.8571 )
+scale = Vector2( 1, 0.857143 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -28 )
+
+[node name="DeviceTrashbinEffect4" type="Sprite" parent="延长使用/Red2/Texture"]
+position = Vector2( -19.7802, -13.1868 )
+scale = Vector2( 1, 0.788235 )
+texture = ExtResource( 5 )
+offset = Vector2( 0, -28 )
+
+[node name="DeviceTrashbinEffect5" type="Sprite" parent="延长使用/Red2/Texture"]
+position = Vector2( 23.1333, -22.3333 )
+scale = Vector2( 1, 0.7 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -28 )
+
+[node name="Port3" type="Node2D" parent="延长使用"]
+position = Vector2( 254, 26 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="延长使用/Port3"]
+texture = ExtResource( 10 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="延长使用/Port3"]
+modulate = Color( 0.309804, 0.666667, 0.34902, 1 )
+position = Vector2( 0, 9.2692 )
+scale = Vector2( 1, 0.707901 )
+texture = ExtResource( 3 )
+
+[node name="ItemWaterport20" type="Sprite" parent="延长使用/Port3"]
+texture = ExtResource( 11 )
+
+[node name="IconLiquidInstantCoffee" type="Sprite" parent="延长使用/Port3"]
+visible = false
+position = Vector2( 0, -60 )
+texture = ExtResource( 2 )
+
+[node name="Texture" type="Node2D" parent="延长使用/Port3"]
+position = Vector2( -1.53845, -12.3077 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="DeviceTrashbinEffect3" type="Sprite" parent="延长使用/Port3/Texture"]
+position = Vector2( 1.28571, -37.8571 )
+scale = Vector2( 1, 0.857143 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -28 )
+
+[node name="DeviceTrashbinEffect4" type="Sprite" parent="延长使用/Port3/Texture"]
+position = Vector2( -19.7802, -13.1868 )
+scale = Vector2( 1, 0.788235 )
+texture = ExtResource( 5 )
+offset = Vector2( 0, -28 )
+
+[node name="DeviceTrashbinEffect5" type="Sprite" parent="延长使用/Port3/Texture"]
+position = Vector2( 23.1333, -22.3333 )
+scale = Vector2( 1, 0.7 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -28 )
+
+[node name="IconMenuArrow5" type="Sprite" parent="延长使用"]
+position = Vector2( 380, 136 )
+texture = ExtResource( 9 )
+offset = Vector2( -296, -102 )
+
+[node name="ParticleCircle5" type="Sprite" parent="延长使用/IconMenuArrow5"]
+self_modulate = Color( 0.113725, 0.12549, 0.27451, 1 )
+position = Vector2( -299, -144 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 14 )
+
+[node name="UiIconTimeNight" type="Sprite" parent="延长使用/IconMenuArrow5/ParticleCircle5"]
+position = Vector2( 4, 1 )
+scale = Vector2( 1.8, 1.8 )
+texture = ExtResource( 12 )
+
+[node name="82" type="RichTextLabel" parent="."]
+margin_left = 5.0
+margin_top = 252.0
+margin_right = 803.0
+margin_bottom = 410.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "放入冰柜中隔夜，饮品不会直接腐坏，只是会变得{术语_陈旧}。
+{术语_陈旧}的原料仍可以使用，但存放时间过长的话，也会{术语_腐坏}。"
+text = "放入冰柜中隔夜，饮品不会直接腐坏，只是会变得{术语_陈旧}。
+{术语_陈旧}的原料仍可以使用，但存放时间过长的话，也会{术语_腐坏}。"
+script = ExtResource( 8 )
+LabelTEXT = "信息-文字说明-82"
+Center_Bool = true

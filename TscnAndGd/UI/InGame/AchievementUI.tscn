@@ -1,0 +1,872 @@
+[gd_scene load_steps=50 format=2]
+
+[ext_resource path="res://TscnAndGd/Buttons/AchievementButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_Menu.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip.tres" type="Texture" id=3]
+[ext_resource path="res://TscnAndGd/Buttons/LogicBut.tscn" type="PackedScene" id=4]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_light.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_5.png" type="Texture" id=7]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_dark.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_wolf_head_front.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_money.tres" type="Texture" id=11]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=12]
+[ext_resource path="res://Language/Fonts/cn_font_logo.tres" type="DynamicFont" id=13]
+[ext_resource path="res://Resources/Effects/Single/Single/Colorpaper_4.png" type="Texture" id=14]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Language/Fonts/Base_l_outline.tres" type="DynamicFont" id=16]
+[ext_resource path="res://TscnAndGd/UI/InGame/黑幕.tscn" type="PackedScene" id=17]
+[ext_resource path="res://TscnAndGd/UI/InGame/AchievementUI.gd" type="Script" id=18]
+[ext_resource path="res://TscnAndGd/UI/Info/Scroll_Theme.tres" type="Theme" id=19]
+[ext_resource path="res://Resources/Effects/Single/Single/Colorpaper_1.png" type="Texture" id=20]
+[ext_resource path="res://Resources/Effects/Single/Single/Colorpaper_2.png" type="Texture" id=21]
+[ext_resource path="res://Resources/Effects/Single/Single/Colorpaper_3.png" type="Texture" id=22]
+[ext_resource path="res://Sounds/Effect/特效鼓掌.wav" type="AudioStream" id=23]
+
+[sub_resource type="StyleBoxTexture" id=185]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 1, 1, 0.392157 )
+
+[sub_resource type="StyleBoxTexture" id=186]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="StyleBoxEmpty" id=187]
+
+[sub_resource type="StyleBoxEmpty" id=188]
+
+[sub_resource type="StyleBoxEmpty" id=189]
+
+[sub_resource type="StyleBoxFlat" id=226]
+bg_color = Color( 0.0156863, 0.0156863, 0.0156863, 0.784314 )
+
+[sub_resource type="StyleBoxEmpty" id=219]
+
+[sub_resource type="StyleBoxEmpty" id=220]
+
+[sub_resource type="StyleBoxEmpty" id=221]
+
+[sub_resource type="StyleBoxEmpty" id=222]
+
+[sub_resource type="StyleBoxEmpty" id=223]
+
+[sub_resource type="Curve" id=249]
+max_value = 360.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=250]
+curve = SubResource( 249 )
+
+[sub_resource type="Gradient" id=251]
+colors = PoolColorArray( 1, 0.224609, 0.224609, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=241]
+gradient = SubResource( 251 )
+
+[sub_resource type="Curve" id=252]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.481818 ), -0.351698, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=253]
+curve = SubResource( 252 )
+
+[sub_resource type="ParticlesMaterial" id=254]
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_box_extents = Vector3( 50, 200, 1 )
+flag_disable_z = true
+direction = Vector3( -500, 500, 0 )
+gravity = Vector3( 0, 2000, 0 )
+initial_velocity = -2000.0
+initial_velocity_random = 1.0
+angular_velocity = 200.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 360.0
+angle_random = 1.0
+angle_curve = SubResource( 250 )
+scale_curve = SubResource( 253 )
+color_initial_ramp = SubResource( 241 )
+
+[sub_resource type="Gradient" id=255]
+colors = PoolColorArray( 0.160156, 0.507904, 1, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=256]
+gradient = SubResource( 255 )
+
+[sub_resource type="ParticlesMaterial" id=257]
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_box_extents = Vector3( 50, 200, 1 )
+flag_disable_z = true
+direction = Vector3( 500, 500, 0 )
+gravity = Vector3( 0, 2000, 0 )
+initial_velocity = -2000.0
+initial_velocity_random = 1.0
+angular_velocity = 200.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 360.0
+angle_random = 1.0
+angle_curve = SubResource( 250 )
+scale_curve = SubResource( 253 )
+color_initial_ramp = SubResource( 256 )
+
+[sub_resource type="Animation" id=224]
+resource_name = "Reward"
+length = 2.0
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1.8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_CanEndReward"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/RewardControl:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/RewardControl:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/RewardControl/Reward/Button:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Control/RewardControl/Particles/Paper1:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Control/RewardControl/Particles/Paper2:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Control/RewardControl/Particles/Paper3:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Control/RewardControl/Particles/Paper4:emitting")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/8/type = "audio"
+tracks/8/path = NodePath("Control/AudioStreamPlayer")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 23 )
+} ],
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=225]
+resource_name = "RewardEnd"
+length = 0.1
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/RewardControl:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=216]
+resource_name = "hide"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_closed"
+} ]
+}
+
+[sub_resource type="Animation" id=217]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=218]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Control/Info/BG/Scroll/VBox/0")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_grab"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_connect"
+} ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Control/RewardControl:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[node name="AchievementUI" type="CanvasLayer"]
+layer = 2
+visible = false
+script = ExtResource( 18 )
+
+[node name="Control" type="Control" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" parent="Control" instance=ExtResource( 17 )]
+
+[node name="BG" type="NinePatchRect" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -740.0
+margin_top = -480.0
+margin_right = 740.0
+margin_bottom = 445.0
+texture = ExtResource( 2 )
+patch_margin_left = 57
+patch_margin_top = 50
+patch_margin_right = 57
+patch_margin_bottom = 50
+
+[node name="LevelName" type="NinePatchRect" parent="Control/BG"]
+self_modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -627.5
+margin_top = 40.0
+margin_right = 627.5
+margin_bottom = 125.0
+texture = ExtResource( 10 )
+patch_margin_left = 43
+patch_margin_right = 44
+
+[node name="Label" type="Label" parent="Control/BG/LevelName"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -719.5
+margin_top = -42.5
+margin_right = 720.5
+margin_bottom = 42.5
+rect_min_size = Vector2( 500, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 16 )
+text = "成就界面"
+align = 1
+valign = 1
+script = ExtResource( 12 )
+LabelTEXT = "信息-成就"
+
+[node name="Control" type="Control" parent="Control/BG"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -15.0
+margin_top = 45.0
+margin_right = -15.0
+margin_bottom = 45.0
+
+[node name="InfoControl" type="Control" parent="Control"]
+margin_left = 1063.0
+margin_top = 220.0
+margin_right = 1657.0
+margin_bottom = 938.0
+
+[node name="BG" type="NinePatchRect" parent="Control/InfoControl"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 31.0
+margin_top = 61.0
+margin_right = -19.0
+margin_bottom = -495.0
+texture = ExtResource( 6 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Name" type="Label" parent="Control/InfoControl"]
+visible = false
+anchor_right = 1.0
+margin_left = 50.0
+margin_top = 22.0
+margin_right = -37.0
+margin_bottom = 86.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = ExtResource( 16 )
+text = "NAME"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="UnlockLabel" type="Label" parent="Control/InfoControl"]
+anchor_right = 1.0
+margin_left = 56.0
+margin_top = 84.0
+margin_right = -43.0
+margin_bottom = 197.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "INFO-解锁条件"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="BG" type="NinePatchRect" parent="Control/InfoControl/UnlockLabel"]
+visible = false
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -12.0
+margin_top = -11.0
+margin_right = 15.0
+margin_bottom = 10.0
+texture = ExtResource( 3 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="Label" type="Label" parent="Control/InfoControl/UnlockLabel"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -16.0
+margin_top = -130.5
+margin_right = 11.0
+margin_bottom = -87.5
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 16 )
+text = "解锁条件"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 12 )
+LabelTEXT = "信息-解锁条件"
+
+[node name="BG2" type="NinePatchRect" parent="Control/InfoControl"]
+self_modulate = Color( 0.313726, 0.313726, 0.313726, 1 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 35.0
+margin_top = 370.0
+margin_right = -27.0
+margin_bottom = -5.0
+texture = ExtResource( 3 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="RewardLabel" type="Label" parent="Control/InfoControl"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -40.0
+margin_right = -23.0
+margin_bottom = 3.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 16 )
+text = "解锁奖励"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 12 )
+LabelTEXT = "信息-解锁奖励"
+
+[node name="Sprite" type="Sprite" parent="Control/InfoControl/RewardLabel"]
+position = Vector2( 265, 212 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="RichTextLabel" parent="Control/InfoControl/RewardLabel"]
+margin_left = 40.0
+margin_top = 61.0
+margin_right = 506.0
+margin_bottom = 176.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+script = ExtResource( 5 )
+Center_Bool = true
+
+[node name="HomeMoneyLabel" type="Label" parent="Control/InfoControl/RewardLabel"]
+margin_left = 55.0
+margin_top = 314.0
+margin_right = 264.0
+margin_bottom = 355.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "5000"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="Control/InfoControl/RewardLabel/HomeMoneyLabel"]
+position = Vector2( 242, 20 )
+texture = ExtResource( 11 )
+
+[node name="Info" type="Control" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -5.0
+margin_right = -5.0
+
+[node name="BG" type="NinePatchRect" parent="Control/Info"]
+self_modulate = Color( 1, 0.994141, 0.90625, 0.588235 )
+anchor_left = 0.068
+anchor_top = 0.309
+anchor_right = 0.35
+anchor_bottom = 0.657
+margin_left = -683.0
+margin_top = -320.0
+margin_right = 97.0
+margin_bottom = 399.0
+mouse_filter = 0
+texture = ExtResource( 6 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Scroll" type="ScrollContainer" parent="Control/Info/BG"]
+margin_left = 13.0
+margin_top = 25.0
+margin_right = 764.0
+margin_bottom = 697.0
+theme = ExtResource( 19 )
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="VBox" type="VBoxContainer" parent="Control/Info/BG/Scroll"]
+margin_right = 740.0
+margin_bottom = 100.0
+custom_constants/separation = -5
+
+[node name="0" parent="Control/Info/BG/Scroll/VBox" instance=ExtResource( 1 )]
+margin_right = 740.0
+pressed = true
+
+[node name="ButControl" type="Control" parent="Control"]
+anchor_top = 0.907
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 0.439941
+margin_right = 1.0
+
+[node name="BackBut" parent="Control/ButControl" instance=ExtResource( 4 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 42.5
+margin_top = -42.5
+margin_right = 127.5
+margin_bottom = 42.5
+custom_styles/hover = SubResource( 185 )
+custom_styles/pressed = SubResource( 186 )
+custom_styles/focus = SubResource( 187 )
+custom_styles/disabled = SubResource( 188 )
+custom_styles/normal = SubResource( 189 )
+_ActionModeBool = true
+
+[node name="B" parent="Control/ButControl/BackBut" instance=ExtResource( 15 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-返回"
+
+[node name="ApplyBut" parent="Control/ButControl" instance=ExtResource( 4 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -127.5
+margin_top = -42.5
+margin_right = -42.5
+margin_bottom = 42.5
+custom_styles/hover = SubResource( 185 )
+custom_styles/pressed = SubResource( 186 )
+custom_styles/focus = SubResource( 187 )
+custom_styles/disabled = SubResource( 188 )
+custom_styles/normal = SubResource( 189 )
+_ActionModeBool = true
+
+[node name="A" parent="Control/ButControl/ApplyBut" instance=ExtResource( 15 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-确定"
+
+[node name="RewardControl" type="Control" parent="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Reward" type="Control" parent="Control/RewardControl"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -302.0
+margin_top = -252.0
+margin_right = 302.0
+margin_bottom = 252.0
+
+[node name="Panel4" type="Panel" parent="Control/RewardControl/Reward"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -658.0
+margin_top = -51.0
+margin_right = 659.0
+margin_bottom = 28.0
+custom_styles/panel = SubResource( 226 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/RewardControl/Reward"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 29.0
+margin_top = 86.0
+margin_right = -27.0
+margin_bottom = -70.0
+texture = ExtResource( 8 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="Sprite" type="Sprite" parent="Control/RewardControl/Reward"]
+position = Vector2( 301, 272 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="RichTextLabel" parent="Control/RewardControl/Reward"]
+anchor_right = 1.0
+margin_left = 54.0
+margin_top = 119.0
+margin_right = -52.0
+margin_bottom = 229.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+script = ExtResource( 5 )
+Center_Bool = true
+
+[node name="Reward" type="Label" parent="Control/RewardControl/Reward"]
+anchor_right = 1.0
+margin_left = -436.0
+margin_top = -35.0
+margin_right = 795.0
+margin_bottom = 116.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color = Color( 1, 0.937255, 0.0156863, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = ExtResource( 13 )
+text = "You have received a reward！"
+align = 1
+valign = 1
+script = ExtResource( 12 )
+LabelTEXT = "信息-解锁"
+
+[node name="Button" type="Button" parent="Control/RewardControl/Reward"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -73.0
+margin_top = 191.0
+margin_right = 77.0
+margin_bottom = 241.0
+custom_styles/hover = SubResource( 219 )
+custom_styles/pressed = SubResource( 220 )
+custom_styles/focus = SubResource( 221 )
+custom_styles/disabled = SubResource( 222 )
+custom_styles/normal = SubResource( 223 )
+
+[node name="A" parent="Control/RewardControl/Reward/Button" instance=ExtResource( 15 )]
+margin_left = 25.0
+margin_top = 24.0
+margin_right = 25.0
+margin_bottom = 24.0
+bool_Static = true
+Info_Str = "按钮-确定"
+
+[node name="HomeMoneyLabel" type="Label" parent="Control/RewardControl/Reward"]
+margin_left = 97.0
+margin_top = 353.0
+margin_right = 295.0
+margin_bottom = 409.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "5000"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="Control/RewardControl/Reward/HomeMoneyLabel"]
+position = Vector2( 236, 27 )
+texture = ExtResource( 11 )
+
+[node name="Particles" type="Node2D" parent="Control/RewardControl"]
+position = Vector2( 557, 508 )
+
+[node name="Paper1" type="Particles2D" parent="Control/RewardControl/Particles"]
+position = Vector2( -573, -224 )
+amount = 50
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.71
+randomness = 0.1
+local_coords = false
+process_material = SubResource( 254 )
+texture = ExtResource( 22 )
+
+[node name="Paper2" type="Particles2D" parent="Control/RewardControl/Particles"]
+position = Vector2( -567, -89 )
+amount = 50
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.8
+randomness = 0.1
+local_coords = false
+process_material = SubResource( 254 )
+texture = ExtResource( 20 )
+
+[node name="Paper3" type="Particles2D" parent="Control/RewardControl/Particles"]
+position = Vector2( 1380, -273 )
+amount = 50
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.73
+randomness = 0.1
+local_coords = false
+process_material = SubResource( 257 )
+texture = ExtResource( 21 )
+
+[node name="Paper4" type="Particles2D" parent="Control/RewardControl/Particles"]
+position = Vector2( 1381, -111 )
+amount = 50
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.73
+randomness = 0.1
+local_coords = false
+process_material = SubResource( 257 )
+texture = ExtResource( 14 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
+stream = ExtResource( 23 )
+bus = "Effect"
+
+[node name="Ani" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/Reward = SubResource( 224 )
+anims/RewardEnd = SubResource( 225 )
+anims/hide = SubResource( 216 )
+anims/init = SubResource( 217 )
+anims/show = SubResource( 218 )

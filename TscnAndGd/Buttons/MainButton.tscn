@@ -1,0 +1,95 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_dark.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_difficulty_light.tres" type="Texture" id=2]
+[ext_resource path="res://TscnAndGd/Buttons/MainButton.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 88, 88 )
+margin_left = 30.0
+margin_right = 30.0
+margin_top = 30.0
+margin_bottom = 30.0
+modulate_color = Color( 1, 1, 1, 0.588235 )
+
+[sub_resource type="StyleBoxTexture" id=196]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 88, 88 )
+margin_left = 30.0
+margin_right = 30.0
+margin_top = 30.0
+margin_bottom = 30.0
+modulate_color = Color( 1, 0.588235, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=197]
+
+[sub_resource type="StyleBoxEmpty" id=198]
+
+[sub_resource type="Animation" id=6]
+resource_name = "pressed"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.9, 0.9 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "on_pressed"
+} ]
+}
+
+[node name="MainBut" type="Button"]
+pause_mode = 2
+margin_top = 4.0
+margin_right = 465.0
+margin_bottom = 55.0
+rect_min_size = Vector2( 500, 60 )
+rect_pivot_offset = Vector2( 250, 30 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../GiveUpButton")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../CheckCardsBut")
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 196 )
+custom_styles/focus = SubResource( 196 )
+custom_styles/disabled = SubResource( 197 )
+custom_styles/normal = SubResource( 198 )
+action_mode = 0
+text = "按钮-回到游戏"
+script = ExtResource( 3 )
+
+[node name="BG" type="NinePatchRect" parent="."]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="Ani" type="AnimationPlayer" parent="."]
+anims/pressed = SubResource( 6 )

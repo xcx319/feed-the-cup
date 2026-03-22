@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=6 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_scroll_button.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_scroll_bar.tres" type="Texture" id=2]
+
+[sub_resource type="StyleBoxTexture" id=108]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 9, 25 )
+
+[sub_resource type="StyleBoxTexture" id=158]
+texture = ExtResource( 1 )
+region_rect = Rect2( 0, 0, 9, 25 )
+modulate_color = Color( 1, 0.584314, 0, 1 )
+
+[sub_resource type="StyleBoxTexture" id=109]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 10, 163 )
+margin_top = 3.0
+margin_bottom = 6.0
+
+[resource]
+VScrollBar/styles/grabber = SubResource( 108 )
+VScrollBar/styles/grabber_highlight = SubResource( 158 )
+VScrollBar/styles/grabber_pressed = SubResource( 158 )
+VScrollBar/styles/scroll = SubResource( 109 )

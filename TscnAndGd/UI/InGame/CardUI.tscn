@@ -1,0 +1,404 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Buttons/ChallengeButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://TscnAndGd/Buttons/LogicBut.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_left.tres" type="Texture" id=3]
+[ext_resource path="res://TscnAndGd/UI/Info/CurChoose.tscn" type="PackedScene" id=4]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_reroll.tres" type="Texture" id=6]
+[ext_resource path="res://Language/Fonts/Base_l_outline.tres" type="DynamicFont" id=7]
+[ext_resource path="res://Sounds/Effect/纸燃烧.wav" type="AudioStream" id=9]
+[ext_resource path="res://Sounds/Effect/气泡3.wav" type="AudioStream" id=10]
+[ext_resource path="res://TscnAndGd/UI/InGame/CardUI.gd" type="Script" id=13]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=16]
+
+[sub_resource type="Animation" id=199]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("../ColorRect:material:shader_param/radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=101]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=202]
+resource_name = "select"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("../ColorRect:material:shader_param/radius")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../ColorRect:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "audio"
+tracks/2/path = NodePath("AudioStreamPlayer")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 10 )
+} ],
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("..")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_select_end"
+} ]
+}
+
+[sub_resource type="Animation" id=102]
+resource_name = "show"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Panel:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0.588235 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../ColorRect:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="ButtonGroup" id=203]
+
+[sub_resource type="ButtonGroup" id=204]
+
+[sub_resource type="ButtonGroup" id=205]
+
+[sub_resource type="Shader" id=126]
+code = "shader_type canvas_item;
+
+uniform float strength: hint_range(0.0, 0.1, 0.001) = 0.08;
+uniform vec2 center = vec2(0.5, 0.5);
+uniform float abberation: hint_range(0.0, 1.0, 0.001) = 0.425;
+
+uniform float radius: hint_range(0.0, 10.0, 0.01) = 1.0;
+uniform float width: hint_range(0.0, 10.0, 0.01) = 0.04;
+uniform float feather: hint_range(0.0, 1.0, 0.001) = 0.135;
+
+void fragment() {
+	vec2 st = SCREEN_UV; //vec2 st = SCREEN_UV;
+	float aspect_ratio = TEXTURE_PIXEL_SIZE.y/TEXTURE_PIXEL_SIZE.x;//float aspect_ratio = SCREEN_PIXEL_SIZE.y/SCREEN_PIXEL_SIZE.x;
+	vec2 scaled_st = (st -vec2(0.0, 1)) / vec2(1.0, aspect_ratio) + vec2(0,1); //vec2 scaled_st = (st -vec2(0.0, 0.5)) / vec2(1.0, aspect_ratio) + vec2(0,0.5); 
+	
+	vec3 color = vec3(st.xy, 0);
+	vec2 dist_center = scaled_st - center;
+	float mask =  (1.0 - smoothstep(radius-feather, radius, length(dist_center))) * smoothstep(radius - width - feather, radius-width , length(dist_center));
+	vec2 offset = normalize(dist_center)*strength*mask;
+	vec2 biased_st = scaled_st - offset;
+	
+	vec2 abber_vec = offset*abberation*mask;
+	
+	vec2 final_st = st*(1.0-mask) + biased_st*mask;
+
+	vec4 red = texture(SCREEN_TEXTURE, final_st + abber_vec);
+	vec4 blue = texture(SCREEN_TEXTURE, final_st - abber_vec);
+	vec4 ori = texture(SCREEN_TEXTURE, final_st);
+	color = vec3(red.r, ori.g, blue.b);
+	COLOR = vec4(color, 1.0);
+}"
+
+[sub_resource type="ShaderMaterial" id=127]
+shader = SubResource( 126 )
+shader_param/strength = 0.08
+shader_param/center = Vector2( 0.5, 0.5 )
+shader_param/abberation = 0.425
+shader_param/radius = 1.0
+shader_param/width = 0.04
+shader_param/feather = 0.135
+
+[sub_resource type="StyleBoxTexture" id=154]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 1, 0.823529, 0.588235, 1 )
+
+[sub_resource type="StyleBoxTexture" id=153]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 1, 0.588235, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=155]
+
+[sub_resource type="StyleBoxTexture" id=157]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+
+[sub_resource type="StyleBoxTexture" id=156]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxEmpty" id=206]
+
+[sub_resource type="StyleBoxEmpty" id=207]
+
+[sub_resource type="StyleBoxEmpty" id=208]
+
+[sub_resource type="StyleBoxEmpty" id=209]
+
+[node name="CardUI" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 13 )
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color( 0, 0, 0, 0.588235 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Ani" type="Node" parent="."]
+
+[node name="Ani" type="AnimationPlayer" parent="Ani"]
+autoplay = "init"
+anims/RESET = SubResource( 199 )
+anims/init = SubResource( 101 )
+anims/select = SubResource( 202 )
+anims/show = SubResource( 102 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Ani"]
+stream = ExtResource( 10 )
+bus = "Effect"
+
+[node name="BurnAudio" type="AudioStreamPlayer" parent="Ani"]
+stream = ExtResource( 9 )
+bus = "Effect"
+
+[node name="ScrollButHBox" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 292.0
+margin_bottom = -148.0
+rect_min_size = Vector2( 800, 640 )
+focus_mode = 2
+input_pass_on_modal_close_click = false
+alignment = 1
+
+[node name="1" parent="ScrollButHBox" instance=ExtResource( 1 )]
+margin_left = 232.0
+margin_right = 712.0
+margin_bottom = 640.0
+focus_neighbour_top = NodePath(".")
+group = SubResource( 203 )
+
+[node name="ChallengeLabel" parent="ScrollButHBox/1/BG/ScrollContainer/Control/InfoNode" index="3"]
+bbcode_text = "[center]团建聚餐[/center]"
+text = "团建聚餐"
+
+[node name="2" parent="ScrollButHBox" instance=ExtResource( 1 )]
+margin_left = 720.0
+margin_right = 1200.0
+margin_bottom = 640.0
+focus_neighbour_left = NodePath("../1")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath("../3")
+group = SubResource( 204 )
+
+[node name="Info" parent="ScrollButHBox/2/BG/ScrollContainer/Control/InfoNode" index="1"]
+bbcode_text = "[center]今日结束时，随机获得300~500奖金。"
+text = "今日结束时，随机获得300~500奖金。"
+
+[node name="ChallengeLabel" parent="ScrollButHBox/2/BG/ScrollContainer/Control/InfoNode" index="3"]
+bbcode_text = "[shake rate=10 level=8][center]奖金"
+text = "奖金"
+
+[node name="3" parent="ScrollButHBox" instance=ExtResource( 1 )]
+margin_left = 1208.0
+margin_right = 1688.0
+margin_bottom = 640.0
+focus_neighbour_left = NodePath("../2")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+group = SubResource( 205 )
+
+[node name="Info" parent="ScrollButHBox/3/BG/ScrollContainer/Control/InfoNode" index="1"]
+bbcode_text = "[center]今日结束时，可抽取一个稀有奖励。"
+text = "今日结束时，可抽取一个稀有奖励。"
+
+[node name="ColorRect" type="Panel" parent="."]
+visible = false
+material = SubResource( 127 )
+margin_left = -966.0
+margin_top = -1086.0
+margin_right = 2835.0
+margin_bottom = 1925.0
+
+[node name="ButControl" type="Control" parent="."]
+anchor_top = 0.907
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -129.56
+
+[node name="BackBut" parent="ButControl" instance=ExtResource( 2 )]
+visible = false
+margin_left = 1070.0
+margin_top = 75.0
+margin_right = 1155.0
+margin_bottom = 160.0
+custom_styles/hover = SubResource( 154 )
+custom_styles/pressed = SubResource( 153 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 157 )
+custom_styles/normal = SubResource( 156 )
+
+[node name="B" parent="ButControl/BackBut" instance=ExtResource( 16 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-返回"
+
+[node name="ReBut" parent="ButControl" instance=ExtResource( 2 )]
+margin_left = 625.0
+margin_top = 80.0
+margin_right = 710.0
+margin_bottom = 165.0
+custom_styles/hover = SubResource( 206 )
+custom_styles/pressed = SubResource( 207 )
+custom_styles/focus = SubResource( 155 )
+custom_styles/disabled = SubResource( 208 )
+custom_styles/normal = SubResource( 209 )
+
+[node name="X" parent="ButControl/ReBut" instance=ExtResource( 16 )]
+margin_left = 145.0
+margin_top = 102.0
+margin_right = 145.0
+margin_bottom = 102.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-重抽"
+
+[node name="RandomCoin" type="Sprite" parent="ButControl/ReBut"]
+position = Vector2( 48, 100 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="ButControl/ReBut/RandomCoin"]
+margin_left = 8.0
+margin_top = -19.0
+margin_right = 78.0
+margin_bottom = 21.0
+text = "0"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="CurChoose" parent="." instance=ExtResource( 4 )]
+
+[node name="TitleLabel" type="Label" parent="."]
+anchor_top = 0.185
+anchor_right = 1.0
+anchor_bottom = 0.278
+margin_top = 2.2
+margin_bottom = -0.23999
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 7 )
+text = "信息_选择挑战"
+align = 1
+valign = 1
+script = ExtResource( 5 )
+LabelTEXT = "信息-选择挑战"
+
+[connection signal="pressed" from="ScrollButHBox/1" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="ScrollButHBox/2" to="." method="_on_2_pressed"]
+[connection signal="pressed" from="ScrollButHBox/3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="ButControl/BackBut" to="." method="_on_Back_pressed"]
+[connection signal="pressed" from="ButControl/ReBut" to="." method="_on_Re_pressed"]
+
+[editable path="ScrollButHBox/1"]
+[editable path="ScrollButHBox/2"]
+[editable path="ScrollButHBox/3"]

@@ -1,0 +1,1169 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/InGame/GameEndAccount.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Result_devil_1.tres" type="Texture" id=2]
+[ext_resource path="res://TscnAndGd/Effects/Effect_CoinCan.tscn" type="PackedScene" id=3]
+[ext_resource path="res://TscnAndGd/Effects/NumberEffect.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_Symbol_8.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Result_cup_1.tres" type="Texture" id=6]
+[ext_resource path="res://Sounds/Random/Coin/硬币1.wav" type="AudioStream" id=7]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Ui_Jackpot_1.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Ui_Jackpot_2.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_menu_recommend.tres" type="Texture" id=10]
+[ext_resource path="res://Sounds/Random/Coin/硬币4.wav" type="AudioStream" id=11]
+[ext_resource path="res://Sounds/Random/Coin/硬币5.wav" type="AudioStream" id=12]
+[ext_resource path="res://Sounds/Random/Coin/硬币3.wav" type="AudioStream" id=13]
+[ext_resource path="res://Sounds/Random/Coin/硬币8.wav" type="AudioStream" id=14]
+[ext_resource path="res://Sounds/Random/Coin/硬币6.wav" type="AudioStream" id=15]
+[ext_resource path="res://Sounds/Random/Coin/硬币2.wav" type="AudioStream" id=16]
+[ext_resource path="res://Sounds/Random/Coin/硬币10.wav" type="AudioStream" id=17]
+[ext_resource path="res://Sounds/Random/Coin/硬币7.wav" type="AudioStream" id=18]
+[ext_resource path="res://Sounds/Random/Coin/硬币9.wav" type="AudioStream" id=19]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1503.5, 102.75 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 2947.75, 102.75 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 950.875, 2817.81 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 255.392, 1724.27 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 222.473, 1724.27 )
+
+[sub_resource type="Animation" id=14]
+resource_name = "NoCoin"
+tracks/0/type = "value"
+tracks/0/path = NodePath("AllCollision/Sky:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CUPCOL/L:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.7 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CUPCOL/R:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.7 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_finished"
+} ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("INFOShow/BG/CoinAccount:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 155, -5 ), Vector2( 155, -5 ), Vector2( -665, 131 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("INFOShow/BG/GuestAccount:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 656, -43 ), Vector2( 656, -43 ), Vector2( 560, 210 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("INFOShow/BG/CoinAccount:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.3, 1.3 ), Vector2( 1.3, 1.3 ), Vector2( 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath(".:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("CoinCan:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 497, 1085 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("CoinCan:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "SPECIAL"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("DevilHand:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 2005, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("DevilHand:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1303, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("DevilHand:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 10, -0.25, 0, 3.5, -0.131104 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("显示获得绿票数额的位置1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 10.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("显示获得绿票数额的位置2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 11.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("显示获得绿票数额的位置3:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 12.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("AllCollision/Sky:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("CUPCOL/L:disabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("CUPCOL/R:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath(".:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("INFOShow:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("INFOShow/BG/CoinAccount:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.3, 1.3 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("INFOShow/BG/CoinAccount:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 155, -5 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("INFOShow/BG/GuestAccount:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 656, -43 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("CoinCan:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 497, 1085 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("CoinCan:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "init"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("DevilHand:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 2005, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("DevilHand:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1303, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("DevilHand:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 10, -0.25, 0, 3.5, -0.131104 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("显示获得绿票数额的位置1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 10.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("显示获得绿票数额的位置2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 11.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("显示获得绿票数额的位置3:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 12.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("AllCollision/Sky:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("CUPCOL/L:disabled")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("CUPCOL/R:disabled")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "method"
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_start"
+} ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath(".:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("INFOShow:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("INFOShow/BG/CoinAccount:scale")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1.3, 1.3 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("INFOShow/BG/CoinAccount:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 155, -5 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("INFOShow/BG/GuestAccount:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 656, -43 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("CoinCan:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 497, 1085 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("CoinCan:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "play"
+length = 3.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("DevilHand:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 2005, -0.25, 0, 0.25, 0, 1647, -0.25, 0, 0.25, 0, 1647, -0.25, 0, 0.25, 0, 500, -0.25, 0, 0.25, 0, 500, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 0.8, 1.6, 2.1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("DevilHand:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1303, -0.25, 0, 0.25, 0, 1235, -0.25, 0, 0.25, 0, 1235, -0.25, 0, 0.25, 0, 1149, -0.25, 0, 0.25, 0, 2000, -0.25, 0, 0.25, 0, 2000, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 0.8, 1.6, 2.1, 2.2 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("DevilHand:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 10, -0.25, 0, 0.1, -0.5, 10, -0.25, 0, 0.25, 0, 10, -0.25, 0, 0.25, 0, -100, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 0.8, 2.1 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("AllCollision/CollisionPolygon2D5:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.8, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -2030, -147 ), Vector2( -2030, -147 ), Vector2( -4000, -147 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AllCollision/Sky:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("CUPCOL/L:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("CUPCOL/R:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/7/type = "method"
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_finished"
+} ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("INFOShow/BG/CoinAccount:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2.7, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 155, -5 ), Vector2( 155, -5 ), Vector2( -665, 131 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("INFOShow/BG/GuestAccount:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 2.7, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 656, -43 ), Vector2( 656, -43 ), Vector2( 560, 210 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("INFOShow/BG/CoinAccount:scale")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 2.7, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1.3, 1.3 ), Vector2( 1.3, 1.3 ), Vector2( 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("CoinCan:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "完整动画预览效果"
+length = 18.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("DevilHand:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 2005, -0.25, 0, 0.25, 0, 2005, -0.25, 0, 0.25, 0, 1184, -0.25, 0, 0.25, 0, 903, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 7, 7.8, 8.3 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("DevilHand:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 1303, -0.25, 0, 0.25, 0, 1303, -0.25, 0, 0.25, 0, 1149, -0.25, 0, 0.25, 0, 1489, -0.25, 0, 0.25, 0, 2000, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 7, 7.8, 8.3, 9 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("DevilHand:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 10, -0.25, 0, 3.5, -0.131104, 10, -0.25, 0, 0.792181, 59.7103, -100, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 7, 8.3 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("显示获得绿票数额的位置1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 10.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("显示获得绿票数额的位置2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 11.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("显示获得绿票数额的位置3:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 12.6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("CoinCan:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 200.793, 472.775 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 2200, 200 )
+
+[node name="EndAccount" type="Control"]
+pause_mode = 2
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 1 )
+
+[node name="DropNode" type="Node2D" parent="."]
+pause_mode = 2
+
+[node name="AllCollision" type="StaticBody2D" parent="."]
+pause_mode = 2
+position = Vector2( 1004, 698 )
+collision_layer = 96
+collision_mask = 96
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="AllCollision"]
+pause_mode = 2
+position = Vector2( 134, 491 )
+shape = SubResource( 1 )
+
+[node name="Sky" type="CollisionShape2D" parent="AllCollision"]
+pause_mode = 2
+position = Vector2( -1460.25, -803 )
+shape = SubResource( 12 )
+disabled = true
+
+[node name="CollisionPolygon2D4" type="CollisionShape2D" parent="AllCollision"]
+pause_mode = 2
+position = Vector2( 1955.88, -1166 )
+shape = SubResource( 7 )
+
+[node name="CollisionPolygon2D5" type="CollisionShape2D" parent="AllCollision"]
+pause_mode = 2
+position = Vector2( -2030, -147 )
+shape = SubResource( 7 )
+
+[node name="CUPCOL" type="StaticBody2D" parent="."]
+pause_mode = 2
+position = Vector2( 1004, 698 )
+collision_layer = 0
+collision_mask = 0
+
+[node name="L" type="CollisionShape2D" parent="CUPCOL"]
+pause_mode = 2
+position = Vector2( -2019, -2112 )
+rotation = -0.698132
+shape = SubResource( 11 )
+
+[node name="R" type="CollisionShape2D" parent="CUPCOL"]
+pause_mode = 2
+position = Vector2( 1027, -2126 )
+rotation = 0.698132
+shape = SubResource( 2 )
+
+[node name="DevilHandAni" type="AnimationPlayer" parent="."]
+pause_mode = 2
+autoplay = "init"
+anims/NoCoin = SubResource( 14 )
+anims/SPECIAL = SubResource( 15 )
+anims/init = SubResource( 9 )
+anims/play = SubResource( 10 )
+"anims/完整动画预览效果" = SubResource( 4 )
+
+[node name="DevilHand" type="RigidBody2D" parent="."]
+pause_mode = 2
+position = Vector2( 2005, 1303 )
+rotation = 0.174533
+collision_layer = 0
+collision_mask = 96
+mode = 3
+mass = 9000.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DevilHand"]
+position = Vector2( 0, -21.6257 )
+scale = Vector2( 1, 0.952748 )
+polygon = PoolVector2Array( 9.07886, -1168.4, -25.7107, -922.16, -13.0825, -484.327, -108.196, -89.4354, 515.594, 226.762, 921.629, -1194.47 )
+
+[node name="CollisionPolygon2D4" type="CollisionShape2D" parent="DevilHand"]
+visible = false
+position = Vector2( 97.1237, -553.623 )
+shape = SubResource( 3 )
+disabled = true
+
+[node name="Hand" type="Sprite" parent="DevilHand"]
+position = Vector2( 13.8096, -578.182 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="CoinCan" parent="." instance=ExtResource( 3 )]
+pause_mode = 2
+position = Vector2( 497, 1085 )
+collision_layer = 64
+collision_mask = 96
+mass = 100.0
+gravity_scale = 0.0
+
+[node name="显示老虎机的位置" type="Node2D" parent="."]
+pause_mode = 2
+visible = false
+position = Vector2( 1518, 527 )
+
+[node name="UiJackpot2" type="Sprite" parent="显示老虎机的位置"]
+pause_mode = 2
+position = Vector2( 10, 5.5 )
+texture = ExtResource( 9 )
+
+[node name="UiJackpot1" type="Sprite" parent="显示老虎机的位置"]
+pause_mode = 2
+position = Vector2( 10, 5.5 )
+texture = ExtResource( 8 )
+
+[node name="显示获得绿票数额的位置1" type="Node2D" parent="."]
+pause_mode = 2
+visible = false
+position = Vector2( 543, 667 )
+
+[node name="UiSymbol8" type="Sprite" parent="显示获得绿票数额的位置1"]
+modulate = Color( 0.0980392, 1, 0.0901961, 1 )
+position = Vector2( -60, 12 )
+texture = ExtResource( 5 )
+
+[node name="UiSymbol9" type="Sprite" parent="显示获得绿票数额的位置1"]
+modulate = Color( 0.0980392, 1, 0.0901961, 1 )
+position = Vector2( 11, 16 )
+texture = ExtResource( 5 )
+
+[node name="UiSymbol10" type="Sprite" parent="显示获得绿票数额的位置1"]
+modulate = Color( 0.0980392, 1, 0.0901961, 1 )
+position = Vector2( 69, 16 )
+texture = ExtResource( 5 )
+
+[node name="显示获得绿票数额的位置2" type="Node2D" parent="."]
+pause_mode = 2
+visible = false
+position = Vector2( 452, 523 )
+rotation = 0.0872665
+
+[node name="UiSymbol8" type="Sprite" parent="显示获得绿票数额的位置2"]
+modulate = Color( 0.0980392, 1, 0.0901961, 1 )
+position = Vector2( -60, 12 )
+texture = ExtResource( 5 )
+
+[node name="UiSymbol9" type="Sprite" parent="显示获得绿票数额的位置2"]
+modulate = Color( 0.0980392, 1, 0.0901961, 1 )
+position = Vector2( 11, 16 )
+texture = ExtResource( 5 )
+
+[node name="UiSymbol10" type="Sprite" parent="显示获得绿票数额的位置2"]
+modulate = Color( 0.0980392, 1, 0.0901961, 1 )
+position = Vector2( 69, 16 )
+texture = ExtResource( 5 )
+
+[node name="显示获得绿票数额的位置3" type="Node2D" parent="."]
+pause_mode = 2
+visible = false
+position = Vector2( 541, 385 )
+rotation = -0.261799
+
+[node name="UiSymbol8" type="Sprite" parent="显示获得绿票数额的位置3"]
+modulate = Color( 0.0980392, 1, 0.0901961, 1 )
+position = Vector2( -60, 12 )
+texture = ExtResource( 5 )
+
+[node name="UiSymbol9" type="Sprite" parent="显示获得绿票数额的位置3"]
+modulate = Color( 0.0980392, 1, 0.0901961, 1 )
+position = Vector2( 11, 16 )
+texture = ExtResource( 5 )
+
+[node name="UiSymbol10" type="Sprite" parent="显示获得绿票数额的位置3"]
+modulate = Color( 0.0980392, 1, 0.0901961, 1 )
+position = Vector2( 69, 16 )
+texture = ExtResource( 5 )
+
+[node name="IconMenuRecommend" type="Sprite" parent="显示获得绿票数额的位置3"]
+position = Vector2( -110, -48 )
+texture = ExtResource( 10 )
+
+[node name="INFOShow" type="Control" parent="."]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+mouse_filter = 2
+
+[node name="BG" type="Control" parent="INFOShow"]
+pause_mode = 2
+self_modulate = Color( 1, 0.498039, 0, 0.686275 )
+margin_left = -98.0
+margin_top = -208.0
+margin_right = 319.0
+margin_bottom = -135.0
+mouse_filter = 2
+
+[node name="CoinAccount" type="Node2D" parent="INFOShow/BG"]
+position = Vector2( 155, -5 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="Scroll" type="ScrollContainer" parent="INFOShow/BG/CoinAccount"]
+pause_mode = 2
+modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -197.0
+margin_top = -39.0
+margin_right = 286.0
+margin_bottom = 65.0
+rect_min_size = Vector2( 483, 0 )
+mouse_filter = 2
+
+[node name="HBOX" type="HBoxContainer" parent="INFOShow/BG/CoinAccount/Scroll"]
+pause_mode = 2
+margin_right = 482.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 482, 104 )
+rect_pivot_offset = Vector2( 482, 104 )
+mouse_filter = 2
+custom_constants/separation = -6
+alignment = 1
+
+[node name="1000000" parent="INFOShow/BG/CoinAccount/Scroll/HBOX" instance=ExtResource( 4 )]
+pause_mode = 2
+mouse_filter = 2
+TYPE = 1
+cur_Bit = 5
+
+[node name="100000" parent="INFOShow/BG/CoinAccount/Scroll/HBOX" instance=ExtResource( 4 )]
+pause_mode = 2
+margin_left = 68.0
+margin_right = 142.0
+mouse_filter = 2
+TYPE = 1
+cur_Bit = 5
+
+[node name="10000" parent="INFOShow/BG/CoinAccount/Scroll/HBOX" instance=ExtResource( 4 )]
+pause_mode = 2
+margin_left = 136.0
+margin_right = 210.0
+mouse_filter = 2
+TYPE = 1
+cur_Bit = 4
+
+[node name="1000" parent="INFOShow/BG/CoinAccount/Scroll/HBOX" instance=ExtResource( 4 )]
+pause_mode = 2
+margin_left = 204.0
+margin_right = 278.0
+mouse_filter = 2
+TYPE = 1
+cur_Bit = 3
+
+[node name="100" parent="INFOShow/BG/CoinAccount/Scroll/HBOX" instance=ExtResource( 4 )]
+pause_mode = 2
+margin_left = 272.0
+margin_right = 346.0
+mouse_filter = 2
+TYPE = 1
+cur_Bit = 2
+
+[node name="10" parent="INFOShow/BG/CoinAccount/Scroll/HBOX" instance=ExtResource( 4 )]
+pause_mode = 2
+margin_left = 340.0
+margin_right = 414.0
+mouse_filter = 2
+TYPE = 1
+cur_Bit = 1
+
+[node name="1" parent="INFOShow/BG/CoinAccount/Scroll/HBOX" instance=ExtResource( 4 )]
+pause_mode = 2
+margin_left = 408.0
+margin_right = 482.0
+mouse_filter = 2
+TYPE = 1
+
+[node name="GuestAccount" type="Node2D" parent="INFOShow/BG"]
+pause_mode = 2
+position = Vector2( 656, -43 )
+
+[node name="ResultCup1" type="Sprite" parent="INFOShow/BG/GuestAccount"]
+pause_mode = 2
+position = Vector2( -1, 11 )
+scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 6 )
+
+[node name="CUPScroll" type="ScrollContainer" parent="INFOShow/BG/GuestAccount"]
+pause_mode = 2
+modulate = Color( 0.447059, 0.556863, 1, 1 )
+margin_left = -130.0
+margin_top = -41.0
+margin_right = 80.0
+margin_bottom = 63.0
+rect_pivot_offset = Vector2( 107.25, 103.438 )
+mouse_filter = 2
+
+[node name="HBOX" type="HBoxContainer" parent="INFOShow/BG/GuestAccount/CUPScroll"]
+pause_mode = 2
+margin_right = 210.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 210, 0 )
+rect_pivot_offset = Vector2( 37, 104 )
+mouse_filter = 2
+custom_constants/separation = -6
+alignment = 1
+
+[node name="100" parent="INFOShow/BG/GuestAccount/CUPScroll/HBOX" instance=ExtResource( 4 )]
+pause_mode = 2
+mouse_filter = 2
+TYPE = 1
+cur_Bit = 2
+
+[node name="10" parent="INFOShow/BG/GuestAccount/CUPScroll/HBOX" instance=ExtResource( 4 )]
+pause_mode = 2
+margin_left = 68.0
+margin_right = 142.0
+mouse_filter = 2
+TYPE = 1
+cur_Bit = 1
+
+[node name="1" parent="INFOShow/BG/GuestAccount/CUPScroll/HBOX" instance=ExtResource( 4 )]
+pause_mode = 2
+margin_left = 136.0
+margin_right = 210.0
+mouse_filter = 2
+TYPE = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+pause_mode = 2
+collision_layer = 0
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+pause_mode = 2
+position = Vector2( -97, 1394 )
+shape = SubResource( 13 )
+
+[node name="Audio" type="Node" parent="."]
+
+[node name="1" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 7 )
+bus = "Effect"
+
+[node name="2" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 16 )
+bus = "Effect"
+
+[node name="3" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 13 )
+bus = "Effect"
+
+[node name="4" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 11 )
+bus = "Effect"
+
+[node name="5" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 12 )
+bus = "Effect"
+
+[node name="6" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 15 )
+bus = "Effect"
+
+[node name="7" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 18 )
+bus = "Effect"
+
+[node name="8" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 14 )
+bus = "Effect"
+
+[node name="9" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 19 )
+bus = "Effect"
+
+[node name="10" type="AudioStreamPlayer" parent="Audio"]
+stream = ExtResource( 17 )
+bus = "Effect"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]

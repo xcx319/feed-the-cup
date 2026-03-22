@@ -1,0 +1,100 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_Trashbin_big.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_Trashbin_cover_1.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashItem_1.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashItem_6.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_TrashIcon_3.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_loadsign_2.tres" type="Texture" id=10]
+
+[sub_resource type="Shader" id=76]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}"
+
+[sub_resource type="ShaderMaterial" id=172]
+resource_local_to_scene = true
+shader = SubResource( 76 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 50, 90 )
+
+[node name="Trashbin" type="StaticBody2D"]
+material = SubResource( 172 )
+collision_layer = 128
+collision_mask = 5120
+
+[node name="AniNode" type="Node2D" parent="."]
+
+[node name="TexNode" type="Node2D" parent="."]
+use_parent_material = true
+position = Vector2( 0, -80 )
+
+[node name="OutdoorLoadsign2" type="Sprite" parent="TexNode"]
+self_modulate = Color( 0.172549, 0.254902, 0.207843, 1 )
+position = Vector2( 2, -48 )
+rotation = 1.5708
+scale = Vector2( 2, 1.5 )
+texture = ExtResource( 10 )
+
+[node name="OutdoorTrashbinBig" type="Sprite" parent="TexNode"]
+modulate = Color( 0.313726, 0.513726, 0.239216, 1 )
+use_parent_material = true
+position = Vector2( 1, 63 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, -100 )
+
+[node name="OutdoorTrashbinCover" type="Sprite" parent="TexNode"]
+modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+use_parent_material = true
+position = Vector2( 0, -45 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -60 )
+
+[node name="OutdoorTrashIcon3" type="Sprite" parent="TexNode"]
+position = Vector2( 1, 62 )
+texture = ExtResource( 7 )
+
+[node name="Inside" type="Node2D" parent="TexNode"]
+position = Vector2( 0, -20 )
+
+[node name="OutdoorTrashItem1" type="Sprite" parent="TexNode/Inside"]
+position = Vector2( -2, -62 )
+texture = ExtResource( 5 )
+
+[node name="OutdoorTrashItem6" type="Sprite" parent="TexNode/Inside"]
+position = Vector2( -13, -14 )
+texture = ExtResource( 6 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -80 )
+shape = SubResource( 4 )

@@ -1,0 +1,835 @@
+[gd_scene load_steps=34 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_2.tres" type="Texture" id=2]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Language/Fonts/Base_l.tres" type="DynamicFont" id=4]
+[ext_resource path="res://TscnAndGd/UI/InGame/Menu.gd" type="Script" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_decorate_1.tres" type="Texture" id=6]
+[ext_resource path="res://TscnAndGd/UI/InGame/Menu_Button.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_light.tres" type="Texture" id=8]
+[ext_resource path="res://Language/Fonts/Base_special_B.tres" type="DynamicFont" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut_1.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_menu_point.tres" type="Texture" id=12]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=13]
+
+[sub_resource type="Theme" id=183]
+
+[sub_resource type="ButtonGroup" id=200]
+
+[sub_resource type="Animation" id=204]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 653, 681 ) ]
+}
+
+[sub_resource type="Animation" id=205]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 651, 681 ) ]
+}
+
+[sub_resource type="Animation" id=206]
+resource_name = "show"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 794, 681 ) ]
+}
+
+[sub_resource type="StyleBoxEmpty" id=184]
+
+[sub_resource type="StyleBoxEmpty" id=185]
+
+[sub_resource type="StyleBoxEmpty" id=186]
+
+[sub_resource type="StyleBoxEmpty" id=187]
+
+[sub_resource type="StyleBoxEmpty" id=188]
+
+[sub_resource type="Animation" id=198]
+resource_name = "init"
+length = 2.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Sprite:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 45, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1, 2 )
+}
+
+[sub_resource type="Animation" id=203]
+resource_name = "HasCup"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -9, 745 ), Vector2( -643, 745 ), Vector2( -616, 745 ), Vector2( -616, 745 ), Vector2( -9, 745 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("effect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 1, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("Closed")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-未处理饮品杯" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="Animation" id=196]
+resource_name = "close"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -9, 745 ), Vector2( -643, 745 ), Vector2( -616, 745 ), Vector2( -616, 745 ), Vector2( -9, 745 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("effect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 1, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("Closed")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-未完成订单" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="Animation" id=202]
+resource_name = "dead"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -9, 745 ), Vector2( -643, 745 ), Vector2( -616, 745 ), Vector2( -616, 745 ), Vector2( -9, 745 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("effect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 1, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("Closed")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-有人倒下" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="Animation" id=199]
+resource_name = "delivery"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -9, 745 ), Vector2( -643, 745 ), Vector2( -616, 745 ), Vector2( -616, 745 ), Vector2( -9, 745 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("effect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 1, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("Closed")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-正在配送" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="Animation" id=201]
+resource_name = "holding"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -9, 745 ), Vector2( -643, 745 ), Vector2( -616, 745 ), Vector2( -616, 745 ), Vector2( -9, 745 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("effect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 1, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("Closed")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-未清空双手" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="Animation" id=197]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -9, 745 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=191]
+resource_name = "hide"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("CurMenu:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 200, -405 ), Vector2( 1000, -405 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=167]
+resource_name = "init"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("CurMenu:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1000, -405 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=190]
+resource_name = "show"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("CurMenu:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1000, -405 ), Vector2( 200, -405 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CurMenu:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[node name="Menu" type="Control"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+script = ExtResource( 5 )
+
+[node name="CurMenu" type="Control" parent="."]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 200.0
+margin_top = -405.0
+margin_right = 875.02
+margin_bottom = 405.0
+rect_min_size = Vector2( 675, 810 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Title" type="NinePatchRect" parent="CurMenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -15.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 40.0
+texture = ExtResource( 8 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="CurMenu/Title"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -970.0
+margin_top = 10.0
+margin_right = 820.0
+margin_bottom = 860.0
+
+[node name="Label" type="Label" parent="CurMenu/Title"]
+anchor_right = 1.0
+margin_top = 6.0
+margin_right = -0.0200195
+margin_bottom = 75.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "UI-菜单"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+script = ExtResource( 13 )
+LabelTEXT = "UI-菜单"
+
+[node name="UiPanelDecorate1" type="Sprite" parent="CurMenu/Title"]
+position = Vector2( 10, 237 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 6 )
+
+[node name="UiPanelDecorate2" type="Sprite" parent="CurMenu/Title"]
+position = Vector2( 10, 278 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 6 )
+
+[node name="UiPanelDecorate3" type="Sprite" parent="CurMenu/Title"]
+position = Vector2( 8.80005, 556.8 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 6 )
+
+[node name="UiPanelDecorate4" type="Sprite" parent="CurMenu/Title"]
+position = Vector2( 8.80005, 597.8 )
+scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 6 )
+
+[node name="MenuScroll" type="ScrollContainer" parent="CurMenu"]
+anchor_right = 1.007
+anchor_bottom = 1.031
+margin_left = 21.0
+margin_top = 106.0
+margin_right = 674.0
+margin_bottom = 787.0
+theme = SubResource( 183 )
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="MenuVBox" type="VBoxContainer" parent="CurMenu/MenuScroll"]
+margin_right = 635.0
+margin_bottom = 170.0
+custom_constants/separation = 0
+
+[node name="1" parent="CurMenu/MenuScroll/MenuVBox" instance=ExtResource( 7 )]
+group = SubResource( 200 )
+
+[node name="TYPE" type="AnimationPlayer" parent="CurMenu/MenuScroll"]
+autoplay = "init"
+anims/RESET = SubResource( 204 )
+anims/init = SubResource( 205 )
+anims/show = SubResource( 206 )
+
+[node name="ButControl" type="Control" parent="CurMenu"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -24.0
+margin_right = -0.0200195
+margin_bottom = 31.0
+
+[node name="CloseUI" type="Button" parent="CurMenu/ButControl"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 162.5
+margin_top = -25.0
+margin_right = 262.5
+margin_bottom = 25.0
+rect_min_size = Vector2( 100, 50 )
+custom_styles/hover = SubResource( 184 )
+custom_styles/pressed = SubResource( 185 )
+custom_styles/focus = SubResource( 186 )
+custom_styles/disabled = SubResource( 187 )
+custom_styles/normal = SubResource( 188 )
+
+[node name="B" parent="CurMenu/ButControl/CloseUI" instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_right = -25.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-关闭界面"
+
+[node name="CloseShop" type="Button" parent="CurMenu/ButControl"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -65.5
+margin_top = -25.0
+margin_right = 34.5
+margin_bottom = 25.0004
+rect_min_size = Vector2( 100, 50 )
+custom_styles/hover = SubResource( 184 )
+custom_styles/pressed = SubResource( 185 )
+custom_styles/focus = SubResource( 186 )
+custom_styles/disabled = SubResource( 187 )
+custom_styles/normal = SubResource( 188 )
+
+[node name="A" parent="CurMenu/ButControl/CloseShop" instance=ExtResource( 3 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_right = -25.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-今日结算"
+Info_1 = "BUT-提前营业"
+
+[node name="GuideNode" type="Node2D" parent="CurMenu/ButControl/CloseShop"]
+position = Vector2( -71, 24.5 )
+
+[node name="Sprite" type="Sprite" parent="CurMenu/ButControl/CloseShop/GuideNode"]
+texture = ExtResource( 12 )
+
+[node name="Ani" type="AnimationPlayer" parent="CurMenu/ButControl/CloseShop/GuideNode"]
+autoplay = "init"
+anims/init = SubResource( 198 )
+
+[node name="BG" type="NinePatchRect" parent="CurMenu"]
+self_modulate = Color( 0, 0.392157, 1, 0.784314 )
+margin_left = 27.0
+margin_top = 61.0
+margin_right = 648.0
+margin_bottom = 104.0
+texture = ExtResource( 1 )
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
+
+[node name="CurNum" type="Node2D" parent="CurMenu/BG"]
+position = Vector2( 6, 2 )
+
+[node name="Info" type="Label" parent="CurMenu/BG/CurNum"]
+margin_left = 50.0
+margin_right = 160.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-菜单上限"
+align = 1
+valign = 1
+script = ExtResource( 13 )
+LabelTEXT = "UI-菜单上限"
+
+[node name="Num" type="Label" parent="CurMenu/BG/CurNum/Info"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -25.0
+margin_right = 50.0
+margin_bottom = 25.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "2/2"
+valign = 1
+
+[node name="Extra" type="Label" parent="CurMenu/BG/CurNum"]
+margin_left = 400.0
+margin_right = 510.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-小料上限"
+align = 1
+valign = 1
+script = ExtResource( 13 )
+LabelTEXT = "UI-小料上限"
+
+[node name="Num" type="Label" parent="CurMenu/BG/CurNum/Extra"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 20.0
+margin_top = -25.0
+margin_right = 50.0
+margin_bottom = 25.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "2/2"
+valign = 1
+
+[node name="Popularity" type="Control" parent="CurMenu/BG"]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -270.98
+margin_top = 12.0
+margin_right = -130.98
+margin_bottom = 32.0
+
+[node name="TextureProgress" type="TextureProgress" parent="CurMenu/BG/Popularity"]
+margin_right = 140.0
+margin_bottom = 19.0
+value = 50.0
+texture_progress = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="CurMenu/BG/Popularity/TextureProgress"]
+modulate = Color( 0, 0, 0, 1 )
+show_behind_parent = true
+position = Vector2( 70, 10 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="CurMenu/BG/Popularity"]
+margin_left = -126.0
+margin_right = -6.0
+margin_bottom = 21.0
+text = "UI-热度"
+align = 1
+valign = 1
+
+[node name="Control" type="Control" parent="CurMenu"]
+margin_left = 656.0
+margin_top = -26.0
+margin_right = 656.0
+margin_bottom = -26.0
+
+[node name="Close" type="Control" parent="CurMenu/Control"]
+margin_left = -616.0
+margin_top = 745.0
+margin_right = 70.0
+margin_bottom = 820.0
+
+[node name="base" type="NinePatchRect" parent="CurMenu/Control/Close"]
+self_modulate = Color( 1, 1, 1, 0.588235 )
+margin_left = 5.0
+margin_top = 1.0
+margin_right = 677.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 483, 0 )
+texture = ExtResource( 10 )
+patch_margin_left = 44
+patch_margin_right = 44
+
+[node name="effect" type="NinePatchRect" parent="CurMenu/Control/Close"]
+modulate = Color( 1, 0.857143, 0.857143, 1 )
+margin_top = -9.0
+margin_right = 685.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 483, 0 )
+texture = ExtResource( 11 )
+patch_margin_left = 54
+patch_margin_right = 53
+
+[node name="Closed" type="Label" parent="CurMenu/Control/Close"]
+self_modulate = Color( 1, 0, 0, 1 )
+margin_left = -44.0
+margin_top = 8.0
+margin_right = 626.0
+margin_bottom = 65.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 9 )
+text = "You must complete the orders you've accepted."
+align = 2
+valign = 1
+autowrap = true
+clip_text = true
+script = ExtResource( 13 )
+LabelTEXT = "信息-未完成订单"
+
+[node name="CloseAni" type="AnimationPlayer" parent="CurMenu/Control/Close"]
+autoplay = "init"
+anims/HasCup = SubResource( 203 )
+anims/close = SubResource( 196 )
+anims/dead = SubResource( 202 )
+anims/delivery = SubResource( 199 )
+anims/holding = SubResource( 201 )
+anims/init = SubResource( 197 )
+
+[node name="MenuAni" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/hide = SubResource( 191 )
+anims/init = SubResource( 167 )
+anims/show = SubResource( 190 )
+
+[connection signal="pressed" from="CurMenu/ButControl/CloseUI" to="." method="call_hide"]
+[connection signal="pressed" from="CurMenu/ButControl/CloseShop" to="." method="call_Power_logic"]

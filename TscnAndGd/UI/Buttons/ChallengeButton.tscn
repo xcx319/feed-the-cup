@@ -1,0 +1,3197 @@
+[gd_scene load_steps=97 format=2]
+
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_reward_11.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Scroll_base.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_reward_12.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_evil.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_sign.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_reward_10.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Effects/Single/Single/FireAsh_1.png" type="Texture" id=7]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_reward_13.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_reward_14.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_reward_9.tres" type="Texture" id=10]
+[ext_resource path="res://TscnAndGd/UI/Buttons/ChallengeButton.gd" type="Script" id=11]
+[ext_resource path="res://Resources/Effects/Single/Single/light_trapezoid_1.png" type="Texture" id=13]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Scroll_sign_claw.tres" type="Texture" id=16]
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=17]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Scroll_base_light.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Scroll_base_L_2.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Scroll_decorate_2.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Scroll_decorate_1.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Scroll_base_L_1.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Scroll_base_R_2.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/Effects/Single/Single/Fire_2.png" type="Texture" id=24]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Resources/Effects/Single/Single/Fire_1.png" type="Texture" id=26]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_5.png" type="Texture" id=28]
+[ext_resource path="res://Resources/Effects/Single/Single/FireAsh_4.png" type="Texture" id=30]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_reward_3.tres" type="Texture" id=33]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/scroll_star_2.tres" type="Texture" id=34]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_reward_5.tres" type="Texture" id=35]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_reward_4.tres" type="Texture" id=36]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_reward_6.tres" type="Texture" id=37]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_reward_8.tres" type="Texture" id=38]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_reward_7.tres" type="Texture" id=39]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Scroll_base_R_1.tres" type="Texture" id=40]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Scroll_roll_2.tres" type="Texture" id=41]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Scroll_roll_3.tres" type="Texture" id=42]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Scroll_roll_4.tres" type="Texture" id=43]
+[ext_resource path="res://Resources/Ani/Result/Ani_Result_pack.sprites/Scroll_roll_1.tres" type="Texture" id=44]
+
+[sub_resource type="StyleBoxEmpty" id=186]
+
+[sub_resource type="StyleBoxEmpty" id=187]
+
+[sub_resource type="StyleBoxEmpty" id=188]
+
+[sub_resource type="StyleBoxEmpty" id=189]
+
+[sub_resource type="StyleBoxEmpty" id=190]
+
+[sub_resource type="ButtonGroup" id=147]
+
+[sub_resource type="CanvasItemMaterial" id=167]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=183]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=184]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=171]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=173]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=169]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id=170]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=168]
+blend_mode = 1
+
+[sub_resource type="Gradient" id=216]
+colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=217]
+gradient = SubResource( 216 )
+
+[sub_resource type="Curve" id=218]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -0.351698, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=219]
+curve = SubResource( 218 )
+
+[sub_resource type="ParticlesMaterial" id=215]
+emission_shape = 2
+emission_box_extents = Vector3( 200, 1, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, 800, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 360.0
+angle_random = 1.0
+scale = 0.8
+scale_random = 0.2
+scale_curve = SubResource( 219 )
+color_ramp = SubResource( 217 )
+
+[sub_resource type="CanvasItemMaterial" id=230]
+blend_mode = 1
+
+[sub_resource type="Gradient" id=191]
+offsets = PoolRealArray( 0, 0.490654, 1 )
+colors = PoolColorArray( 1, 0.784314, 0, 0.392157, 1, 0.392157, 0, 0.784314, 0, 0, 0, 0 )
+
+[sub_resource type="GradientTexture" id=231]
+gradient = SubResource( 191 )
+
+[sub_resource type="Curve" id=209]
+_data = [ Vector2( 0.00421941, 0.0863637 ), 0.0, 1.34659, 0, 0, Vector2( 1, 0.0863637 ), -1.63745, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=232]
+curve = SubResource( 209 )
+
+[sub_resource type="ParticlesMaterial" id=220]
+emission_shape = 2
+emission_box_extents = Vector3( 200, 10, 1 )
+gravity = Vector3( 0, 0, 0 )
+scale = 1.5
+scale_random = 0.5
+scale_curve = SubResource( 232 )
+color_ramp = SubResource( 231 )
+
+[sub_resource type="CanvasItemMaterial" id=202]
+
+[sub_resource type="Gradient" id=233]
+offsets = PoolRealArray( 0, 0.490654, 1 )
+colors = PoolColorArray( 1, 0.784314, 0, 0.392157, 1, 0.392157, 0, 0.784314, 0, 0, 0, 0 )
+
+[sub_resource type="GradientTexture" id=192]
+gradient = SubResource( 233 )
+
+[sub_resource type="Curve" id=212]
+_data = [ Vector2( 0.021097, 0.481818 ), 0.0, 2.25488, 0, 0, Vector2( 1, 0.0863637 ), -1.63745, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=194]
+curve = SubResource( 212 )
+
+[sub_resource type="ParticlesMaterial" id=207]
+emission_shape = 2
+emission_box_extents = Vector3( 200, 30, 1 )
+gravity = Vector3( 0, -500, 0 )
+scale = 1.5
+scale_random = 0.5
+scale_curve = SubResource( 194 )
+color_ramp = SubResource( 192 )
+
+[sub_resource type="Animation" id=114]
+resource_name = "冰饮"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/Evil:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ) ]
+}
+
+[sub_resource type="Animation" id=224]
+resource_name = "减压"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/Evil:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 37 ) ]
+}
+
+[sub_resource type="Animation" id=229]
+resource_name = "升级"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/Evil:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 39 ) ]
+}
+
+[sub_resource type="Animation" id=113]
+resource_name = "小料"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/Evil:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ) ]
+}
+
+[sub_resource type="Animation" id=225]
+resource_name = "招聘"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/Evil:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 35 ) ]
+}
+
+[sub_resource type="Animation" id=110]
+resource_name = "礼物"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/Evil:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ) ]
+}
+
+[sub_resource type="Animation" id=226]
+resource_name = "简化"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/Evil:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 33 ) ]
+}
+
+[sub_resource type="Animation" id=109]
+resource_name = "糖饮"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/Evil:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+
+[sub_resource type="Animation" id=227]
+resource_name = "资金"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/Evil:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 36 ) ]
+}
+
+[sub_resource type="Animation" id=228]
+resource_name = "随机"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/Evil:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 38 ) ]
+}
+
+[sub_resource type="Animation" id=112]
+resource_name = "顾客"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/Evil:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ) ]
+}
+
+[sub_resource type="Animation" id=116]
+resource_name = "饮品"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/Evil:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ) ]
+}
+
+[sub_resource type="Animation" id=149]
+resource_name = "+"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/Texture/AllLight:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.584314, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=151]
+resource_name = "init"
+length = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/Texture/AllLight:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0.211765, 0.847059, 1 ) ]
+}
+
+[sub_resource type="Animation" id=197]
+resource_name = "burn"
+length = 3.0
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer:rect_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.16, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 600, 565 ), Vector2( 600, 565 ), Vector2( 633, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../BG/Particles/Fire1:emitting")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.12, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../BG/Particles:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.16, 2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 260, 550 ), Vector2( 260, 550 ), Vector2( 260, 0 ), Vector2( 260, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../BG/Particles/Fire2:emitting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.12, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../BG/Particles/Light:emitting")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.12, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../BG/Particles/Ash1:emitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.12, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../../BG/Particles/Ash2:emitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.13, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+
+[sub_resource type="Animation" id=198]
+resource_name = "choose"
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/claw:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../BG/ScrollContainer/Control/claw:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.28, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0.133333, 0, 0, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../BG/ScrollContainer/Control/claw:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.24 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 5, 5 ), Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../BG/ScrollContainer/Control:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.05, 0.25, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ), Vector2( 1.1, 1.1 ), Vector2( 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../BG/ScrollContainer/Control/claw:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.24 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 90, 463 ), Vector2( 180, 500 ) ]
+}
+
+[sub_resource type="Animation" id=175]
+resource_name = "idle"
+length = 4.0
+loop = true
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 150, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/light:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../BG/Roll:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../BG/Roll:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 250, -12 ) ]
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("../../BG/Roll:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.06, 23.9203, 0.18, -0.385288 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../../BG/ScrollContainer/Control:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../../BG:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../../BG/ScrollContainer/Control/Texture/AllLight:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_Line:material:blend_mode")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_Line:material:blend_mode")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_light:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 1.16, 2, 2.62, 3.16, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.196078 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_light:self_modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.02, 0.86, 2.18, 2.68, 3.4, 4.02 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.196078 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_Line:self_modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 0.64, 1.6, 2.62, 3.38, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.196078 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_Line:self_modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 1.06, 2.18, 2.8, 3.42, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.196078 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.196078 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../../BG/ScrollContainer/Control/Texture/UiPanelScrollDecorate2:self_modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 1.44, 2.42, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.196078 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("../../BG/ScrollContainer/Control/Texture/UiPanelScrollDecorate1:self_modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 1.26, 2.96, 3.98 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.196078 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=174]
+resource_name = "init"
+length = 0.1
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 150, -800 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/light:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../BG/Roll:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../BG/Roll:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 250, -730 ) ]
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("../../BG/Roll:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.18, -37.4223 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../../BG/ScrollContainer/Control:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../../BG:rect_position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 220 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../../BG/ScrollContainer/Control/Texture/AllLight:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_Line:material:blend_mode")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_Line:material:blend_mode")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_light:self_modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_light:self_modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_Line:self_modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_Line:self_modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../../BG/ScrollContainer/Control/Texture/UiPanelScrollDecorate1:self_modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("../../BG/ScrollContainer/Control/Texture/UiPanelScrollDecorate2:self_modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("../../BG/ScrollContainer/Control/claw:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("../../BG/Particles/Ash1:emitting")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("../../BG/Particles/Light:emitting")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("../../BG/Particles/Fire1:emitting")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("../../BG/Particles/Fire2:emitting")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("../../BG/Particles:position")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 330, -500 ) ]
+}
+
+[sub_resource type="Animation" id=159]
+resource_name = "show"
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6, 0.92 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 150, -800 ), Vector2( 150, -800 ), Vector2( 150, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/light:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8, 0.92 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ true ],
+"method": "call_set_process"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../BG/Roll:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.64, 0.74, 0.86 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 44 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../BG/Roll:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.92 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../BG/Roll:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.28 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 250, -730 ), Vector2( 250, -12 ) ]
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("../../BG/Roll:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.18, -37.4223, 0, -0.1, 28.5499, 0.04, -48.9964, 0, -0.04, 46.4897, 0.06, -32.7927, 0, -0.06, 23.9203, 0.18, -0.385288 ),
+"times": PoolRealArray( 0, 0.28, 0.38, 0.48 )
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../../BG/ScrollContainer/Control:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.94, 0.96, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.9, 1.1 ), Vector2( 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../../BG:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.64, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 220 ), Vector2( 0, 220 ), Vector2( 0, 0 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../../BG/ScrollContainer/Control/Texture/AllLight:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.86, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_Line:material:blend_mode")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.74, 0.86 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 0, 1 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_Line:material:blend_mode")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.74, 0.86 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 0, 1 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_Line:self_modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_Line:self_modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_light:self_modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_light:self_modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("../../BG/ScrollContainer:rect_size")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 633, 900 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("../../BG/ScrollContainer/Control/claw:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("../../BG/Particles:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 330, -500 ) ]
+}
+
+[sub_resource type="Animation" id=221]
+resource_name = "show_select"
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.6, 0.92 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 150, -800 ), Vector2( 150, -800 ), Vector2( 150, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/light:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.72, 0.84 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("../..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ true ],
+"method": "call_set_process"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../BG/Roll:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.64, 0.74, 0.86 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 44 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../BG/Roll:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.92 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../BG/Roll:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.28 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 250, -730 ), Vector2( 250, -12 ) ]
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("../../BG/Roll:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.18, -37.4223, 0, -0.1, 28.5499, 0.04, -48.9964, 0, -0.04, 46.4897, 0.06, -32.7927, 0, -0.06, 23.9203, 0.18, -0.385288 ),
+"times": PoolRealArray( 0, 0.28, 0.38, 0.48 )
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../../BG/ScrollContainer/Control:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.94, 0.96, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.9, 1.1 ), Vector2( 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../../BG:rect_position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.64, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 220 ), Vector2( 0, 220 ), Vector2( 0, 0 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../../BG/ScrollContainer/Control/Texture/AllLight:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.86, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_Line:material:blend_mode")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.74, 0.86 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 0, 1 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_Line:material:blend_mode")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.74, 0.86 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 0, 1 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_Line:self_modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_Line:self_modulate")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_light:self_modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_light:self_modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("../../BG/ScrollContainer:rect_size")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 633, 900 ) ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("../../BG/ScrollContainer/Control/claw:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("../../BG/Particles:position")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 330, -500 ) ]
+}
+
+[sub_resource type="Animation" id=199]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/Texture/ChooseLight:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.0901961, 0.0901961, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../SelectShow:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=200]
+resource_name = "normal"
+length = 4.0
+loop = true
+step = 0.02
+tracks/0/type = "method"
+tracks/0/path = NodePath("../..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_Line:material:blend_mode")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_Line:material:blend_mode")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_light:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.16, 2, 2.62, 3.16, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_light:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.02, 0.86, 2.18, 2.68, 3.4, 4.02 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_Line:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.64, 1.6, 2.62, 3.38, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_Line:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1.06, 2.18, 2.8, 3.42, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.196078 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../SelectShow:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../../BG/ScrollContainer/Control/Texture/UiPanelScrollDecorate2:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1.44, 2.42, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../../BG/ScrollContainer/Control/Texture/UiPanelScrollDecorate1:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1.28, 2.7, 3.98 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../../BG/ScrollContainer/Control/Texture/ChooseLight:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.0901961, 0.0901961, 0 ) ]
+}
+
+[sub_resource type="Animation" id=201]
+resource_name = "select"
+length = 2.0
+loop = true
+step = 0.02
+tracks/0/type = "method"
+tracks/0/path = NodePath("../..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_Line:material:blend_mode")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_Line:material:blend_mode")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_light:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.28, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_light:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.02, 0.7, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_Line:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.48, 1.44, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_Line:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.9, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.196078 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../SelectShow:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../../BG/ScrollContainer/Control/Texture/UiPanelScrollDecorate2:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1.44, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../../BG/ScrollContainer/Control/Texture/UiPanelScrollDecorate1:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.6, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.392157 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../../BG/ScrollContainer/Control/Texture/ChooseLight:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 0.62, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.356863, 0.0901961, 1 ), Color( 1, 0.619608, 0, 1 ), Color( 1, 0.0901961, 0.0901961, 0 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../../BG/ScrollContainer/Control/Texture/ChooseLight:scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4, 4 ), Vector2( 4.4, 4 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../SelectShow:scale")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 0.68, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.05, 1.1 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=164]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/Texture/BG:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.231373, 0.180392, 0.121569, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../BG/Roll:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.486275, 0.384314, 0.298039, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_light:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.639216, 0.368627, 0.101961, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_light:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.717647, 0.321569, 0, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_light:material:blend_mode")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_light:material:blend_mode")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_Line:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_Line:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_light:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_light:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../../BG/ScrollContainer/Control/Texture/BG2:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.317647, 0.278431, 0.219608, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/HBOX/2:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/HBOX/3:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/HBOX/1:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil1:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil1:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil2:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil3:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=163]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/Texture/BG:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.152941, 0.129412, 0.243137, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../BG/Roll:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.337255, 0.172549, 0.384314, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_light:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.54902, 0, 0.827451, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_light:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.709804, 0, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_Line:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_Line:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_light:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_light:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../../BG/ScrollContainer/Control/Texture/BG2:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.290196, 0, 0.639216, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/HBOX/1:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/HBOX/2:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/HBOX/3:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil1:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil1:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 20, 0 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil2:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil2:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -20, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil3:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=165]
+resource_name = "3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/Texture/BG:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.388235, 0.0627451, 0.0627451, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../BG/Roll:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.721569, 0.219608, 0.219608, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_light:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_light:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_light:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_light:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_Line:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_Line:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../../BG/ScrollContainer/Control/Texture/BG2:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.752941, 0, 0, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/HBOX/1:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/HBOX/2:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/HBOX/3:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil1:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil1:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil2:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil2:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -40, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil3:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil3:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 40, 0 ) ]
+}
+
+[sub_resource type="Animation" id=234]
+resource_name = "4"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/Texture/BG:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.388235, 0.0627451, 0.0627451, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../BG/Roll:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.721569, 0.219608, 0.219608, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_light:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_light:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_light:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_light:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../../BG/ScrollContainer/Control/Texture/L_Line:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../../BG/ScrollContainer/Control/Texture/R_Line:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../../BG/ScrollContainer/Control/Texture/BG2:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.752941, 0, 0, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/HBOX/1:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/HBOX/2:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/HBOX/3:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil1:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil1:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil2:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil2:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -40, 0 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil3:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/17/type = "value"
+tracks/17/path = NodePath("../../BG/ScrollContainer/Control/Icon/Evil3:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 40, 0 ) ]
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/Challenge:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/ChallengeLabel:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/20/type = "value"
+tracks/20/path = NodePath("../../BG/ScrollContainer/Control/Texture/UiPanelScrollDecorate2:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("../../BG/ScrollContainer/Control/Texture/UiPanelScrollDecorate1:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("../../BG/ScrollContainer/Control/Texture/BG2:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/23/type = "value"
+tracks/23/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/Evil:visible")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=235]
+resource_name = "init"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/Challenge:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/ChallengeLabel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../BG/ScrollContainer/Control/Texture/UiPanelScrollDecorate2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../BG/ScrollContainer/Control/Texture/UiPanelScrollDecorate1:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../BG/ScrollContainer/Control/Texture/BG2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../BG/ScrollContainer/Control/InfoNode/Evil:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[node name="1" type="Button"]
+margin_right = 480.0
+margin_bottom = 600.0
+rect_min_size = Vector2( 480, 600 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_right = NodePath("../2")
+focus_neighbour_bottom = NodePath(".")
+custom_styles/hover = SubResource( 186 )
+custom_styles/pressed = SubResource( 187 )
+custom_styles/focus = SubResource( 188 )
+custom_styles/disabled = SubResource( 189 )
+custom_styles/normal = SubResource( 190 )
+group = SubResource( 147 )
+script = ExtResource( 11 )
+
+[node name="BG" type="Control" parent="."]
+anchor_right = 0.75
+anchor_bottom = 0.75
+margin_right = -3.05176e-05
+margin_bottom = -4.99133
+mouse_filter = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BG"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 273.0
+margin_bottom = 454.991
+mouse_filter = 1
+
+[node name="Control" type="Node2D" parent="BG/ScrollContainer"]
+position = Vector2( 150, 0 )
+
+[node name="Texture" type="Node2D" parent="BG/ScrollContainer/Control"]
+position = Vector2( 100, 0 )
+
+[node name="ChooseLight" type="Sprite" parent="BG/ScrollContainer/Control/Texture"]
+modulate = Color( 1, 0.0901961, 0.0901961, 0 )
+material = SubResource( 167 )
+position = Vector2( 0, 288 )
+scale = Vector2( 4.392, 4 )
+texture = ExtResource( 18 )
+
+[node name="BG" type="Sprite" parent="BG/ScrollContainer/Control/Texture"]
+modulate = Color( 0.231373, 0.180392, 0.121569, 1 )
+position = Vector2( 0, 246 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, 43 )
+
+[node name="BG2" type="Node2D" parent="BG/ScrollContainer/Control/Texture"]
+modulate = Color( 0.317647, 0.278431, 0.219608, 1 )
+position = Vector2( -21, 94 )
+scale = Vector2( 4, 3.5 )
+
+[node name="ParticleCircle5" type="Sprite" parent="BG/ScrollContainer/Control/Texture/BG2"]
+scale = Vector2( 1, -0.3 )
+texture = ExtResource( 13 )
+offset = Vector2( 0, 50 )
+
+[node name="ParticleCircle6" type="Sprite" parent="BG/ScrollContainer/Control/Texture/BG2"]
+scale = Vector2( 1, 0.588571 )
+texture = ExtResource( 13 )
+offset = Vector2( 0, 50 )
+
+[node name="UiPanelScrollDecorate2" type="Sprite" parent="BG/ScrollContainer/Control/Texture"]
+self_modulate = Color( 1, 1, 1, 0.714686 )
+material = SubResource( 183 )
+position = Vector2( 83, 98 )
+texture = ExtResource( 20 )
+
+[node name="UiPanelScrollDecorate1" type="Sprite" parent="BG/ScrollContainer/Control/Texture"]
+self_modulate = Color( 1, 1, 1, 0.70892 )
+material = SubResource( 184 )
+position = Vector2( -130, 103 )
+texture = ExtResource( 21 )
+
+[node name="AllLight" type="Sprite" parent="BG/ScrollContainer/Control/Texture"]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 0.584314, 0, 1 )
+material = SubResource( 167 )
+position = Vector2( 0, 288 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 18 )
+
+[node name="L_Line" type="Sprite" parent="BG/ScrollContainer/Control/Texture"]
+self_modulate = Color( 1, 1, 1, 0.60669 )
+material = SubResource( 171 )
+position = Vector2( -167, 284 )
+texture = ExtResource( 19 )
+
+[node name="R_Line" type="Sprite" parent="BG/ScrollContainer/Control/Texture"]
+self_modulate = Color( 1, 1, 1, 0.353991 )
+material = SubResource( 173 )
+position = Vector2( 150, 290 )
+texture = ExtResource( 23 )
+
+[node name="R_light" type="Sprite" parent="BG/ScrollContainer/Control/Texture"]
+visible = false
+modulate = Color( 0.717647, 0.321569, 0, 1 )
+self_modulate = Color( 1, 1, 1, 0.971055 )
+material = SubResource( 169 )
+position = Vector2( 155, 293 )
+scale = Vector2( 1.5, 1 )
+texture = ExtResource( 40 )
+
+[node name="L_light" type="Sprite" parent="BG/ScrollContainer/Control/Texture"]
+visible = false
+modulate = Color( 0.639216, 0.368627, 0.101961, 1 )
+self_modulate = Color( 1, 1, 1, 0.898693 )
+material = SubResource( 170 )
+position = Vector2( -155, 287 )
+scale = Vector2( 1.5, 1 )
+texture = ExtResource( 22 )
+
+[node name="Icon" type="Node2D" parent="BG/ScrollContainer/Control"]
+position = Vector2( 84, 165 )
+
+[node name="Evil1" type="Sprite" parent="BG/ScrollContainer/Control/Icon"]
+texture = ExtResource( 4 )
+
+[node name="Evil2" type="Sprite" parent="BG/ScrollContainer/Control/Icon"]
+visible = false
+position = Vector2( -40, 0 )
+texture = ExtResource( 4 )
+
+[node name="Evil3" type="Sprite" parent="BG/ScrollContainer/Control/Icon"]
+visible = false
+position = Vector2( 40, 0 )
+texture = ExtResource( 4 )
+
+[node name="InfoNode" type="Node2D" parent="BG/ScrollContainer/Control"]
+position = Vector2( -220, 0 )
+
+[node name="Evil" type="Sprite" parent="BG/ScrollContainer/Control/InfoNode"]
+position = Vector2( 305, 95 )
+texture = ExtResource( 35 )
+
+[node name="Info" type="RichTextLabel" parent="BG/ScrollContainer/Control/InfoNode"]
+margin_left = 180.0
+margin_top = 292.0
+margin_right = 416.0
+margin_bottom = 455.0
+mouse_filter = 1
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]卷轴所带来的增益效果，文本可能有点长，会自动换行。使用特殊词汇有不同颜色，图标。[/center]"
+tab_size = 0
+text = "卷轴所带来的增益效果，文本可能有点长，会自动换行。使用特殊词汇有不同颜色，图标。"
+scroll_active = false
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Challenge" type="RichTextLabel" parent="BG/ScrollContainer/Control/InfoNode"]
+margin_left = 176.0
+margin_top = 467.0
+margin_right = 335.0
+margin_bottom = 547.0
+mouse_filter = 1
+custom_colors/default_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center][shake rate=3 level=8][color=red][b]{信息-代价}[/b]
+[/color][/shake][/center]"
+tab_size = 0
+text = "{信息-代价}
+"
+scroll_active = false
+
+[node name="ChallengeLabel" type="RichTextLabel" parent="BG/ScrollContainer/Control/InfoNode"]
+margin_left = 160.0
+margin_top = 168.0
+margin_right = 442.0
+margin_bottom = 261.0
+mouse_filter = 1
+custom_colors/default_color = Color( 0, 1, 0, 1 )
+custom_fonts/normal_font = ExtResource( 17 )
+bbcode_enabled = true
+bbcode_text = "[shake rate=0 level=8][center]代价：代价名称
+[/shake]"
+text = "代价：代价名称
+[/shake]"
+scroll_active = false
+
+[node name="light" type="Sprite" parent="BG/ScrollContainer/Control/InfoNode"]
+self_modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 168 )
+position = Vector2( 320, 288 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 18 )
+
+[node name="HBOX" type="HBoxContainer" parent="BG/ScrollContainer/Control/InfoNode"]
+margin_left = 194.0
+margin_top = 495.0
+margin_right = 294.0
+margin_bottom = 525.0
+rect_min_size = Vector2( 100, 0 )
+rect_scale = Vector2( 1.2, 1.2 )
+custom_constants/separation = -5
+alignment = 1
+
+[node name="1" type="Control" parent="BG/ScrollContainer/Control/InfoNode/HBOX"]
+margin_left = 35.0
+margin_right = 65.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Icon" type="Sprite" parent="BG/ScrollContainer/Control/InfoNode/HBOX/1"]
+texture = ExtResource( 34 )
+offset = Vector2( 15, 15 )
+
+[node name="2" type="Control" parent="BG/ScrollContainer/Control/InfoNode/HBOX"]
+visible = false
+margin_left = 47.0
+margin_right = 77.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Icon" type="Sprite" parent="BG/ScrollContainer/Control/InfoNode/HBOX/2"]
+texture = ExtResource( 34 )
+offset = Vector2( 15, 15 )
+
+[node name="3" type="Control" parent="BG/ScrollContainer/Control/InfoNode/HBOX"]
+visible = false
+margin_left = 60.0
+margin_right = 90.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+
+[node name="Icon" type="Sprite" parent="BG/ScrollContainer/Control/InfoNode/HBOX/3"]
+texture = ExtResource( 34 )
+offset = Vector2( 15, 15 )
+
+[node name="claw" type="Sprite" parent="BG/ScrollContainer/Control"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 90, 463 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 16 )
+
+[node name="Roll" type="Sprite" parent="BG"]
+visible = false
+modulate = Color( 0.486275, 0.384314, 0.298039, 1 )
+position = Vector2( 250, -12 )
+texture = ExtResource( 43 )
+offset = Vector2( 0, 25 )
+
+[node name="Particles" type="Node2D" parent="BG"]
+position = Vector2( 330, -500 )
+
+[node name="Ash1" type="Particles2D" parent="BG/Particles"]
+position = Vector2( -10, 0 )
+emitting = false
+amount = 30
+lifetime = 0.5
+randomness = 0.1
+local_coords = false
+process_material = SubResource( 215 )
+texture = ExtResource( 7 )
+
+[node name="Ash2" type="Particles2D" parent="BG/Particles"]
+position = Vector2( -10, 0 )
+emitting = false
+amount = 30
+lifetime = 0.5
+randomness = 0.1
+local_coords = false
+process_material = SubResource( 215 )
+texture = ExtResource( 30 )
+
+[node name="Light" type="Particles2D" parent="BG/Particles"]
+material = SubResource( 230 )
+position = Vector2( -10, 5 )
+emitting = false
+amount = 100
+lifetime = 0.25
+randomness = 0.5
+process_material = SubResource( 220 )
+texture = ExtResource( 28 )
+
+[node name="Fire1" type="Particles2D" parent="BG/Particles"]
+material = SubResource( 202 )
+position = Vector2( -10, 0 )
+emitting = false
+amount = 25
+lifetime = 0.25
+randomness = 0.5
+process_material = SubResource( 207 )
+texture = ExtResource( 26 )
+
+[node name="Fire2" type="Particles2D" parent="BG/Particles"]
+material = SubResource( 202 )
+position = Vector2( -10, -30 )
+emitting = false
+amount = 25
+lifetime = 0.25
+randomness = 0.5
+process_material = SubResource( 207 )
+texture = ExtResource( 24 )
+
+[node name="Main" type="Node2D" parent="."]
+position = Vector2( 270, 345 )
+
+[node name="AniNode" type="Node" parent="Main"]
+
+[node name="EvilAni" type="AnimationPlayer" parent="Main/AniNode"]
+"anims/冰饮" = SubResource( 114 )
+"anims/减压" = SubResource( 224 )
+"anims/升级" = SubResource( 229 )
+"anims/小料" = SubResource( 113 )
+"anims/招聘" = SubResource( 225 )
+"anims/礼物" = SubResource( 110 )
+"anims/简化" = SubResource( 226 )
+"anims/糖饮" = SubResource( 109 )
+"anims/资金" = SubResource( 227 )
+"anims/随机" = SubResource( 228 )
+"anims/顾客" = SubResource( 112 )
+"anims/饮品" = SubResource( 116 )
+
+[node name="NameAni" type="AnimationPlayer" parent="Main/AniNode"]
+autoplay = "init"
+anims/+ = SubResource( 149 )
+anims/init = SubResource( 151 )
+
+[node name="BGAni" type="AnimationPlayer" parent="Main/AniNode"]
+autoplay = "init"
+anims/burn = SubResource( 197 )
+anims/choose = SubResource( 198 )
+anims/idle = SubResource( 175 )
+anims/init = SubResource( 174 )
+anims/show = SubResource( 159 )
+anims/show_select = SubResource( 221 )
+
+[node name="TypeAni" type="AnimationPlayer" parent="Main/AniNode"]
+autoplay = "init"
+anims/init = SubResource( 199 )
+anims/normal = SubResource( 200 )
+anims/select = SubResource( 201 )
+
+[node name="ColorAni" type="AnimationPlayer" parent="Main/AniNode"]
+autoplay = "init"
+anims/1 = SubResource( 164 )
+anims/2 = SubResource( 163 )
+anims/3 = SubResource( 165 )
+anims/4 = SubResource( 234 )
+anims/init = SubResource( 235 )
+
+[node name="SelectShow" type="Node2D" parent="Main"]
+visible = false
+position = Vector2( 68, 109 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Pop" type="Sprite" parent="Main/SelectShow"]
+position = Vector2( -94, 142 )
+rotation = -3.14159
+texture = ExtResource( 5 )
+
+[node name="A" parent="Main/SelectShow" instance=ExtResource( 25 )]
+margin_left = -129.0
+margin_top = 154.0
+margin_right = -129.0
+margin_bottom = 154.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-确定"
+OnBut = false
+
+[node name="Net" type="Node2D" parent="."]
+position = Vector2( 333, 505 )
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

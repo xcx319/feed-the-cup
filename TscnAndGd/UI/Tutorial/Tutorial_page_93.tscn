@@ -1,0 +1,801 @@
+[gd_scene load_steps=44 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=1]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_6.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_5.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_base.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_ui_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_cap_front.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_ui_1.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_cap_base.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_pop_cuprite.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_cap_3.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_s.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_ui_button.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_ui_base.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_gasbottle_base.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_cap_water.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_4.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_1.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_2.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_5.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_3.tres" type="Texture" id=21]
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=22]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=23]
+[ext_resource path="res://TscnAndGd/Effects/shaders/teleport-effect.tres" type="Shader" id=24]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_4.tres" type="Texture" id=26]
+
+[sub_resource type="ShaderMaterial" id=270]
+shader = ExtResource( 24 )
+shader_param/progress = 0.0
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = 0.15
+shader_param/color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="Animation" id=271]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.290196, 0.290196, 0.290196, 1 ) ]
+}
+
+[sub_resource type="Animation" id=272]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.752941, 0.635294, 0.435294, 1 ) ]
+}
+
+[sub_resource type="Animation" id=273]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.921569, 0.890196, 0.301961, 1 ) ]
+}
+
+[sub_resource type="Animation" id=274]
+resource_name = "3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.709804, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=275]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.290196, 0.290196, 0.290196, 1 ) ]
+}
+
+[sub_resource type="Animation" id=276]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.752941, 0.635294, 0.435294, 1 ) ]
+}
+
+[sub_resource type="Animation" id=277]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.921569, 0.890196, 0.301961, 1 ) ]
+}
+
+[sub_resource type="Animation" id=278]
+resource_name = "3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.709804, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=279]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.290196, 0.290196, 0.290196, 1 ) ]
+}
+
+[sub_resource type="Animation" id=280]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.752941, 0.635294, 0.435294, 1 ) ]
+}
+
+[sub_resource type="Animation" id=281]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.921569, 0.890196, 0.301961, 1 ) ]
+}
+
+[sub_resource type="Animation" id=282]
+resource_name = "3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.709804, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=283]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.290196, 0.290196, 0.290196, 1 ) ]
+}
+
+[sub_resource type="Animation" id=284]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.752941, 0.635294, 0.435294, 1 ) ]
+}
+
+[sub_resource type="Animation" id=285]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.921569, 0.890196, 0.301961, 1 ) ]
+}
+
+[sub_resource type="Animation" id=286]
+resource_name = "3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.709804, 1, 0, 1 ) ]
+}
+
+[node name="维持气泡" type="Node2D"]
+position = Vector2( 554, 756 )
+
+[node name="145" type="RichTextLabel" parent="."]
+margin_left = -149.0
+margin_top = 74.0
+margin_right = 589.0
+margin_bottom = 324.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "将{Gas Bottle}安装在{Soft Drink Blender}上，可以维持{Water Tank}内的气泡量，但会持续消耗{Gas Bottle}内的二氧化碳。
+下班前要记得将{Gas Bottle}取下，否则二氧化碳会被全部浪费。"
+text = "将{Gas Bottle}安装在{Soft Drink Blender}上，可以维持{Water Tank}内的气泡量，但会持续消耗{Gas Bottle}内的二氧化碳。
+下班前要记得将{Gas Bottle}取下，否则二氧化碳会被全部浪费。"
+script = ExtResource( 1 )
+LabelTEXT = "信息-文字说明-145"
+Center_Bool = true
+
+[node name="3" type="Node2D" parent="."]
+position = Vector2( 182, 12 )
+
+[node name="Machine" type="Node2D" parent="3"]
+material = SubResource( 270 )
+use_parent_material = true
+position = Vector2( -99, 46 )
+
+[node name="back" type="NinePatchRect" parent="3/Machine"]
+use_parent_material = true
+margin_left = -51.0
+margin_top = -79.0
+margin_right = 49.0
+margin_bottom = 11.0
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 100.024, 58.4203 )
+patch_margin_top = 2
+patch_margin_bottom = 50
+
+[node name="Base" type="Sprite" parent="3/Machine"]
+use_parent_material = true
+position = Vector2( 0, -87 )
+texture = ExtResource( 5 )
+
+[node name="Obj_X" type="Node2D" parent="3/Machine"]
+position = Vector2( -23, -104 )
+
+[node name="Cap2" type="Node2D" parent="3/Machine/Obj_X"]
+use_parent_material = true
+
+[node name="base" type="Sprite" parent="3/Machine/Obj_X/Cap2"]
+position = Vector2( 0, -16 )
+texture = ExtResource( 9 )
+offset = Vector2( 0, -21 )
+
+[node name="fan" type="Sprite" parent="3/Machine/Obj_X/Cap2/base"]
+position = Vector2( 0, 11 )
+texture = ExtResource( 11 )
+offset = Vector2( 0, -11 )
+
+[node name="Liquid" type="Node2D" parent="3/Machine/Obj_X/Cap2"]
+modulate = Color( 0.698039, 1, 0.172549, 1 )
+position = Vector2( 0, 15 )
+
+[node name="Top" type="Sprite" parent="3/Machine/Obj_X/Cap2/Liquid"]
+modulate = Color( 1, 1, 1, 0.588235 )
+light_mask = 0
+position = Vector2( 0, -38 )
+scale = Vector2( 1, 0.6715 )
+texture = ExtResource( 16 )
+
+[node name="TextureProgress" type="TextureProgress" parent="3/Machine/Obj_X/Cap2/Liquid"]
+margin_left = -24.0
+margin_top = -52.0
+margin_right = 24.0
+margin_bottom = -2.0
+value = 40.0
+texture_progress = ExtResource( 16 )
+fill_mode = 3
+tint_progress = Color( 0.784314, 0.784314, 0.784314, 0.784314 )
+
+[node name="front" type="Sprite" parent="3/Machine/Obj_X/Cap2"]
+use_parent_material = true
+position = Vector2( 0, -16 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -21 )
+
+[node name="GuestBigbottlePop1" type="Sprite" parent="3/Machine/Obj_X/Cap2/front"]
+position = Vector2( -14, 18 )
+texture = ExtResource( 18 )
+
+[node name="GuestBigbottlePop2" type="Sprite" parent="3/Machine/Obj_X/Cap2/front"]
+position = Vector2( 14, 9 )
+texture = ExtResource( 18 )
+
+[node name="GuestBigbottlePop3" type="Sprite" parent="3/Machine/Obj_X/Cap2/front"]
+position = Vector2( -8, 0 )
+texture = ExtResource( 21 )
+
+[node name="GuestBigbottlePop4" type="Sprite" parent="3/Machine/Obj_X/Cap2/front"]
+position = Vector2( 8, 15 )
+texture = ExtResource( 21 )
+
+[node name="GuestBigbottlePop5" type="Sprite" parent="3/Machine/Obj_X/Cap2/front"]
+position = Vector2( 10, -11 )
+texture = ExtResource( 20 )
+
+[node name="GuestBigbottlePop6" type="Sprite" parent="3/Machine/Obj_X/Cap2/front"]
+position = Vector2( 13, -5 )
+texture = ExtResource( 19 )
+
+[node name="GuestBigbottlePop7" type="Sprite" parent="3/Machine/Obj_X/Cap2/front"]
+position = Vector2( -12, -5 )
+texture = ExtResource( 17 )
+
+[node name="IconNode" type="Node2D" parent="3/Machine/Obj_X/Cap2"]
+position = Vector2( 1, -96 )
+
+[node name="Icon" type="Sprite" parent="3/Machine/Obj_X/Cap2/IconNode"]
+position = Vector2( 0, 3 )
+texture = ExtResource( 10 )
+
+[node name="LiquidLabel" type="Label" parent="3/Machine/Obj_X/Cap2/IconNode/Icon"]
+margin_left = -40.0
+margin_top = 9.0
+margin_right = 40.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 22 )
+text = "25"
+align = 1
+valign = 1
+
+[node name="Obj_Y" type="Node2D" parent="3/Machine"]
+position = Vector2( 23, -104 )
+
+[node name="Cap1" type="Node2D" parent="3/Machine/Obj_Y"]
+use_parent_material = true
+
+[node name="base" type="Sprite" parent="3/Machine/Obj_Y/Cap1"]
+position = Vector2( 0, -16 )
+texture = ExtResource( 9 )
+offset = Vector2( 0, -21 )
+
+[node name="fan" type="Sprite" parent="3/Machine/Obj_Y/Cap1/base"]
+position = Vector2( 0, 11 )
+texture = ExtResource( 11 )
+offset = Vector2( 0, -11 )
+
+[node name="front" type="Sprite" parent="3/Machine/Obj_Y/Cap1"]
+use_parent_material = true
+position = Vector2( 0, -16 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -21 )
+
+[node name="Gasbottl" type="Node2D" parent="3/Machine"]
+use_parent_material = true
+position = Vector2( 28, -81 )
+rotation = -1.5708
+
+[node name="back" type="Sprite" parent="3/Machine/Gasbottl"]
+use_parent_material = true
+position = Vector2( 0, -33 )
+texture = ExtResource( 15 )
+
+[node name="Ui" type="Sprite" parent="3/Machine/Gasbottl"]
+self_modulate = Color( 0.619608, 0.619608, 0.619608, 1 )
+position = Vector2( 7, 5 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -16 )
+
+[node name="TextureProgress" type="TextureProgress" parent="3/Machine/Gasbottl/Ui"]
+margin_left = -3.0
+margin_top = -33.0
+margin_right = 3.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 16 )
+value = 90.0
+texture_progress = ExtResource( 3 )
+fill_mode = 3
+tint_progress = Color( 0.321569, 1, 0.984314, 1 )
+
+[node name="UI" type="Node2D" parent="3/Machine"]
+position = Vector2( 0, 12 )
+
+[node name="Button" type="Sprite" parent="3/Machine/UI"]
+use_parent_material = true
+position = Vector2( 0, -56 )
+texture = ExtResource( 14 )
+
+[node name="X" type="Sprite" parent="3/Machine/UI"]
+self_modulate = Color( 0.921569, 0.890196, 0.301961, 1 )
+position = Vector2( -18, -53 )
+texture = ExtResource( 13 )
+offset = Vector2( 0, -12 )
+
+[node name="pop" type="Sprite" parent="3/Machine/UI/X"]
+position = Vector2( -3, -13 )
+texture = ExtResource( 8 )
+
+[node name="TextureProgress" type="TextureProgress" parent="3/Machine/UI/X"]
+margin_left = -13.0
+margin_top = -23.0
+margin_right = 7.0
+margin_bottom = -2.0
+rect_pivot_offset = Vector2( 9, 21 )
+value = 50.0
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+
+[node name="PopLevel" type="AnimationPlayer" parent="3/Machine/UI/X"]
+autoplay = "2"
+anims/0 = SubResource( 271 )
+anims/1 = SubResource( 272 )
+anims/2 = SubResource( 273 )
+anims/3 = SubResource( 274 )
+
+[node name="Y" type="Sprite" parent="3/Machine/UI"]
+self_modulate = Color( 0.290196, 0.290196, 0.290196, 1 )
+position = Vector2( 19, -53 )
+texture = ExtResource( 13 )
+offset = Vector2( 0, -12 )
+
+[node name="pop" type="Sprite" parent="3/Machine/UI/Y"]
+position = Vector2( -3, -13 )
+texture = ExtResource( 8 )
+
+[node name="TextureProgress" type="TextureProgress" parent="3/Machine/UI/Y"]
+margin_left = -13.0
+margin_top = -23.0
+margin_right = 8.0
+margin_bottom = -3.0
+rect_pivot_offset = Vector2( 11, 20 )
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+
+[node name="PopLevel" type="AnimationPlayer" parent="3/Machine/UI/Y"]
+autoplay = "0"
+anims/0 = SubResource( 275 )
+anims/1 = SubResource( 276 )
+anims/2 = SubResource( 277 )
+anims/3 = SubResource( 278 )
+
+[node name="Gasbottl2" type="Node2D" parent="3/Machine"]
+use_parent_material = true
+position = Vector2( -136, -35 )
+
+[node name="back" type="Sprite" parent="3/Machine/Gasbottl2"]
+use_parent_material = true
+position = Vector2( 0, -33 )
+texture = ExtResource( 15 )
+
+[node name="Ui" type="Sprite" parent="3/Machine/Gasbottl2"]
+self_modulate = Color( 0.619608, 0.619608, 0.619608, 1 )
+position = Vector2( 7, 5 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -16 )
+
+[node name="TextureProgress" type="TextureProgress" parent="3/Machine/Gasbottl2/Ui"]
+margin_left = -3.0
+margin_top = -33.0
+margin_right = 3.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 16 )
+value = 90.0
+texture_progress = ExtResource( 3 )
+fill_mode = 3
+tint_progress = Color( 0.321569, 1, 0.984314, 1 )
+
+[node name="TotuInfo1" type="Sprite" parent="3/Machine"]
+position = Vector2( -82, -79.3517 )
+rotation = -0.785397
+texture = ExtResource( 2 )
+
+[node name="Machine2" type="Node2D" parent="3"]
+material = SubResource( 270 )
+use_parent_material = true
+position = Vector2( 148, 47 )
+
+[node name="back" type="NinePatchRect" parent="3/Machine2"]
+use_parent_material = true
+margin_left = -51.0
+margin_top = -79.0
+margin_right = 49.0
+margin_bottom = 11.0
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 100.024, 58.4203 )
+patch_margin_top = 2
+patch_margin_bottom = 50
+
+[node name="Base" type="Sprite" parent="3/Machine2"]
+use_parent_material = true
+position = Vector2( 0, -87 )
+texture = ExtResource( 5 )
+
+[node name="Obj_X" type="Node2D" parent="3/Machine2"]
+position = Vector2( -23, -104 )
+
+[node name="Cap2" type="Node2D" parent="3/Machine2/Obj_X"]
+use_parent_material = true
+
+[node name="base" type="Sprite" parent="3/Machine2/Obj_X/Cap2"]
+position = Vector2( 0, -16 )
+texture = ExtResource( 9 )
+offset = Vector2( 0, -21 )
+
+[node name="fan" type="Sprite" parent="3/Machine2/Obj_X/Cap2/base"]
+position = Vector2( 0, 11 )
+texture = ExtResource( 11 )
+offset = Vector2( 0, -11 )
+
+[node name="Liquid" type="Node2D" parent="3/Machine2/Obj_X/Cap2"]
+modulate = Color( 0.698039, 1, 0.172549, 1 )
+position = Vector2( 0, 15 )
+
+[node name="Top" type="Sprite" parent="3/Machine2/Obj_X/Cap2/Liquid"]
+modulate = Color( 1, 1, 1, 0.588235 )
+light_mask = 0
+position = Vector2( 0, -38 )
+scale = Vector2( 1, 0.6715 )
+texture = ExtResource( 16 )
+
+[node name="TextureProgress" type="TextureProgress" parent="3/Machine2/Obj_X/Cap2/Liquid"]
+margin_left = -24.0
+margin_top = -52.0
+margin_right = 24.0
+margin_bottom = -2.0
+value = 40.0
+texture_progress = ExtResource( 16 )
+fill_mode = 3
+tint_progress = Color( 0.784314, 0.784314, 0.784314, 0.784314 )
+
+[node name="front" type="Sprite" parent="3/Machine2/Obj_X/Cap2"]
+use_parent_material = true
+position = Vector2( 0, -16 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -21 )
+
+[node name="GuestBigbottlePop1" type="Sprite" parent="3/Machine2/Obj_X/Cap2/front"]
+position = Vector2( -14, 18 )
+texture = ExtResource( 18 )
+
+[node name="GuestBigbottlePop2" type="Sprite" parent="3/Machine2/Obj_X/Cap2/front"]
+position = Vector2( 14, 9 )
+texture = ExtResource( 18 )
+
+[node name="GuestBigbottlePop3" type="Sprite" parent="3/Machine2/Obj_X/Cap2/front"]
+position = Vector2( -8, 0 )
+texture = ExtResource( 21 )
+
+[node name="GuestBigbottlePop4" type="Sprite" parent="3/Machine2/Obj_X/Cap2/front"]
+position = Vector2( 8, 15 )
+texture = ExtResource( 21 )
+
+[node name="GuestBigbottlePop5" type="Sprite" parent="3/Machine2/Obj_X/Cap2/front"]
+position = Vector2( 10, -11 )
+texture = ExtResource( 20 )
+
+[node name="GuestBigbottlePop6" type="Sprite" parent="3/Machine2/Obj_X/Cap2/front"]
+position = Vector2( 13, -5 )
+texture = ExtResource( 19 )
+
+[node name="GuestBigbottlePop7" type="Sprite" parent="3/Machine2/Obj_X/Cap2/front"]
+position = Vector2( -12, -5 )
+texture = ExtResource( 17 )
+
+[node name="IconNode" type="Node2D" parent="3/Machine2/Obj_X/Cap2"]
+position = Vector2( 1, -96 )
+
+[node name="Icon" type="Sprite" parent="3/Machine2/Obj_X/Cap2/IconNode"]
+position = Vector2( 0, 3 )
+texture = ExtResource( 10 )
+
+[node name="LiquidLabel" type="Label" parent="3/Machine2/Obj_X/Cap2/IconNode/Icon"]
+margin_left = -40.0
+margin_top = 9.0
+margin_right = 40.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 22 )
+text = "25"
+align = 1
+valign = 1
+
+[node name="Obj_Y" type="Node2D" parent="3/Machine2"]
+position = Vector2( 23, -104 )
+
+[node name="Cap1" type="Node2D" parent="3/Machine2/Obj_Y"]
+use_parent_material = true
+
+[node name="base" type="Sprite" parent="3/Machine2/Obj_Y/Cap1"]
+position = Vector2( 0, -16 )
+texture = ExtResource( 9 )
+offset = Vector2( 0, -21 )
+
+[node name="fan" type="Sprite" parent="3/Machine2/Obj_Y/Cap1/base"]
+position = Vector2( 0, 11 )
+texture = ExtResource( 11 )
+offset = Vector2( 0, -11 )
+
+[node name="front" type="Sprite" parent="3/Machine2/Obj_Y/Cap1"]
+use_parent_material = true
+position = Vector2( 0, -16 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -21 )
+
+[node name="Gasbottl" type="Node2D" parent="3/Machine2"]
+use_parent_material = true
+position = Vector2( 28, -81 )
+rotation = -1.5708
+
+[node name="back" type="Sprite" parent="3/Machine2/Gasbottl"]
+use_parent_material = true
+position = Vector2( 0, -33 )
+texture = ExtResource( 15 )
+
+[node name="Ui" type="Sprite" parent="3/Machine2/Gasbottl"]
+self_modulate = Color( 0.619608, 0.619608, 0.619608, 1 )
+position = Vector2( 7, 5 )
+texture = ExtResource( 4 )
+offset = Vector2( 0, -16 )
+
+[node name="TextureProgress" type="TextureProgress" parent="3/Machine2/Gasbottl/Ui"]
+margin_left = -3.0
+margin_top = -33.0
+margin_right = 3.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 16 )
+value = 30.0
+texture_progress = ExtResource( 3 )
+fill_mode = 3
+tint_progress = Color( 0.321569, 1, 0.984314, 1 )
+
+[node name="UI" type="Node2D" parent="3/Machine2"]
+position = Vector2( 0, 12 )
+
+[node name="Button" type="Sprite" parent="3/Machine2/UI"]
+use_parent_material = true
+position = Vector2( 0, -56 )
+texture = ExtResource( 14 )
+
+[node name="X" type="Sprite" parent="3/Machine2/UI"]
+self_modulate = Color( 0.921569, 0.890196, 0.301961, 1 )
+position = Vector2( -18, -53 )
+texture = ExtResource( 13 )
+offset = Vector2( 0, -12 )
+
+[node name="pop" type="Sprite" parent="3/Machine2/UI/X"]
+position = Vector2( -3, -13 )
+texture = ExtResource( 8 )
+
+[node name="TextureProgress" type="TextureProgress" parent="3/Machine2/UI/X"]
+margin_left = -13.0
+margin_top = -23.0
+margin_right = 7.0
+margin_bottom = -2.0
+rect_pivot_offset = Vector2( 9, 21 )
+value = 50.0
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+
+[node name="PopLevel" type="AnimationPlayer" parent="3/Machine2/UI/X"]
+autoplay = "2"
+anims/0 = SubResource( 279 )
+anims/1 = SubResource( 280 )
+anims/2 = SubResource( 281 )
+anims/3 = SubResource( 282 )
+
+[node name="Y" type="Sprite" parent="3/Machine2/UI"]
+self_modulate = Color( 0.290196, 0.290196, 0.290196, 1 )
+position = Vector2( 19, -53 )
+texture = ExtResource( 13 )
+offset = Vector2( 0, -12 )
+
+[node name="pop" type="Sprite" parent="3/Machine2/UI/Y"]
+position = Vector2( -3, -13 )
+texture = ExtResource( 8 )
+
+[node name="TextureProgress" type="TextureProgress" parent="3/Machine2/UI/Y"]
+margin_left = -13.0
+margin_top = -23.0
+margin_right = 8.0
+margin_bottom = -3.0
+rect_pivot_offset = Vector2( 11, 20 )
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+
+[node name="PopLevel" type="AnimationPlayer" parent="3/Machine2/UI/Y"]
+autoplay = "0"
+anims/0 = SubResource( 283 )
+anims/1 = SubResource( 284 )
+anims/2 = SubResource( 285 )
+anims/3 = SubResource( 286 )
+
+[node name="TotuInfo2" type="Sprite" parent="3"]
+position = Vector2( 20, -40 )
+texture = ExtResource( 23 )
+
+[node name="TotuInfo4" type="Sprite" parent="3/TotuInfo2"]
+position = Vector2( -3, -46 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 26 )
+
+[node name="A" parent="." instance=ExtResource( 25 )]
+margin_left = -85.0
+margin_top = -104.0
+margin_right = -85.0
+margin_bottom = -104.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-放置"
+OnBut = false

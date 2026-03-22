@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_13.tres" type="Texture" id=2]
+[ext_resource path="res://TscnAndGd/UI/Info/DayClosedInfo.gd" type="Script" id=3]
+
+[node name="DayClosedInfo" type="RichTextLabel"]
+margin_right = 650.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 650, 30 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+fit_content_height = true
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+visible = false
+position = Vector2( 10, 14 )
+texture = ExtResource( 2 )

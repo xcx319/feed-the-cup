@@ -1,0 +1,166 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_4.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_front_2.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_chair_3.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_6.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_3.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_8.tres" type="Texture" id=7]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/WorkCup_FrontTable_2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_7.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_chair_2.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_chair_1.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_1.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Door_glass_2.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Maps/Tmap_wallpaper.png" type="Texture" id=14]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 14 )
+region = Rect2( 458, 260, 54, 240 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 14 )
+region = Rect2( 513, 270, 54, 150 )
+
+[node name="ExteriorWall" type="Node2D"]
+
+[node name="MainWall" type="Node2D" parent="."]
+
+[node name="people" type="Node2D" parent="MainWall"]
+position = Vector2( 50, -200 )
+
+[node name="1" type="Node2D" parent="MainWall/people"]
+position = Vector2( 150, -150 )
+
+[node name="WorkChair1" type="Sprite" parent="MainWall/people/1"]
+position = Vector2( -75, 0 )
+texture = ExtResource( 11 )
+
+[node name="WorkDesk1" type="Sprite" parent="MainWall/people/1"]
+texture = ExtResource( 12 )
+
+[node name="WorkDesk2" type="Sprite" parent="MainWall/people/1"]
+position = Vector2( 9, -28 )
+texture = ExtResource( 6 )
+
+[node name="WorkFront2" type="Sprite" parent="MainWall/people/1"]
+position = Vector2( 4, 71 )
+texture = ExtResource( 2 )
+
+[node name="2" type="Node2D" parent="MainWall/people"]
+position = Vector2( 350, -150 )
+
+[node name="WorkChair3" type="Sprite" parent="MainWall/people/2"]
+position = Vector2( -95, 5 )
+texture = ExtResource( 10 )
+
+[node name="WorkDesk2" type="Sprite" parent="MainWall/people/2"]
+texture = ExtResource( 12 )
+
+[node name="WorkDesk4" type="Sprite" parent="MainWall/people/2"]
+position = Vector2( 15, -57 )
+texture = ExtResource( 1 )
+
+[node name="WorkDesk3" type="Sprite" parent="MainWall/people/2"]
+position = Vector2( 16, -6 )
+texture = ExtResource( 5 )
+
+[node name="WorkFront2" type="Sprite" parent="MainWall/people/2"]
+position = Vector2( -9, 61 )
+texture = ExtResource( 2 )
+
+[node name="3" type="Node2D" parent="MainWall/people"]
+position = Vector2( 525, -150 )
+
+[node name="WorkChair3" type="Sprite" parent="MainWall/people/3"]
+modulate = Color( 0.729412, 0.509804, 0.509804, 1 )
+position = Vector2( -79, 7 )
+texture = ExtResource( 3 )
+
+[node name="WorkDesk2" type="Sprite" parent="MainWall/people/3"]
+texture = ExtResource( 12 )
+
+[node name="WorkDesk7" type="Sprite" parent="MainWall/people/3"]
+position = Vector2( 22, -43 )
+texture = ExtResource( 9 )
+
+[node name="WorkDesk6" type="Sprite" parent="MainWall/people/3"]
+position = Vector2( 4, -11 )
+texture = ExtResource( 4 )
+
+[node name="WorkFront2" type="Sprite" parent="MainWall/people/3"]
+position = Vector2( 3, 63 )
+texture = ExtResource( 2 )
+
+[node name="4" type="Node2D" parent="MainWall/people"]
+position = Vector2( 1100, -150 )
+
+[node name="WorkChair3" type="Sprite" parent="MainWall/people/4"]
+modulate = Color( 0.694118, 0.694118, 0.694118, 1 )
+position = Vector2( -89, -7 )
+texture = ExtResource( 10 )
+
+[node name="WorkDesk2" type="Sprite" parent="MainWall/people/4"]
+texture = ExtResource( 12 )
+
+[node name="WorkFront2" type="Sprite" parent="MainWall/people/4"]
+position = Vector2( 0, 60 )
+texture = ExtResource( 2 )
+
+[node name="WorkDesk8" type="Sprite" parent="MainWall/people/4"]
+position = Vector2( 20, -52 )
+texture = ExtResource( 7 )
+
+[node name="WorkDesk7" type="Sprite" parent="MainWall/people/4"]
+position = Vector2( 13, -14 )
+texture = ExtResource( 9 )
+
+[node name="Floor1" type="Node2D" parent="MainWall"]
+scale = Vector2( 1, 1.02 )
+
+[node name="TexNode" type="Node2D" parent="MainWall/Floor1"]
+position = Vector2( 800, -25 )
+
+[node name="DoorGlass1" type="Sprite" parent="MainWall/Floor1/TexNode"]
+position = Vector2( 50, -120 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 13 )
+offset = Vector2( -50, 20 )
+
+[node name="DoorGlass2" type="Sprite" parent="MainWall/Floor1/TexNode"]
+position = Vector2( -50, -122.059 )
+texture = ExtResource( 13 )
+offset = Vector2( -50, 20 )
+
+[node name="WorkCupFrontTable" parent="MainWall" instance=ExtResource( 8 )]
+position = Vector2( 800, -175 )
+
+[node name="CornerBack6" type="Sprite" parent="."]
+position = Vector2( 25, -350 )
+texture = SubResource( 1 )
+offset = Vector2( 0, -118 )
+
+[node name="CornerBack9" type="Sprite" parent="."]
+position = Vector2( 50, -350 )
+rotation = -3.14159
+scale = Vector2( 1, -2.19968 )
+texture = SubResource( 2 )
+centered = false
+offset = Vector2( -2, 0 )
+
+[node name="CornerBack7" type="Sprite" parent="."]
+position = Vector2( 1225, -350 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 1 )
+offset = Vector2( 0, -118 )
+
+[node name="CornerBack10" type="Sprite" parent="."]
+position = Vector2( 1250, -350 )
+rotation = -3.14159
+scale = Vector2( 1, -2.19968 )
+texture = SubResource( 2 )
+centered = false
+offset = Vector2( -2, 0 )

@@ -1,0 +1,849 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://Language/Fonts/Base_m_outline.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_side_1.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_idle_1.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_idle_2.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_head_front.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Characters/Guest/Other/character_other_pack.sprites/Clothes_Runner_1_front.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_head_side.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_tail_back.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_idle_1.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_side_4.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_body_front.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_idle_0.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Characters/Guest/Other/character_other_pack.sprites/Clothes_Runner_1_side.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_hold_2.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_3.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_moodstar_1.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_body_base_2.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_leg_stand_1.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_body_base_1.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_water_1.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_body_form_1.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_1.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_arm_act_2.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_little_body_base_1.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_little_body_decorative_5.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_little_body_decorative_6.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_little_body_base_2.tres" type="Texture" id=27]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=28]
+[ext_resource path="res://Resources/Maps/Single/Hall/Tmap_floor_gym_2.png" type="Texture" id=29]
+[ext_resource path="res://Resources/Outdoor/outdoor2_pack.sprites/gym_groudlight_1.tres" type="Texture" id=30]
+[ext_resource path="res://Resources/Outdoor/outdoor2_pack.sprites/gym_groudline_1.tres" type="Texture" id=31]
+[ext_resource path="res://Resources/Outdoor/outdoor2_pack.sprites/gym_groudline_2.tres" type="Texture" id=32]
+[ext_resource path="res://Resources/Outdoor/outdoor2_pack.sprites/gym_groudlight_2.tres" type="Texture" id=33]
+
+[sub_resource type="TileSet" id=271]
+23/name = "Tmap_floor_gym_2.png 23"
+23/texture = ExtResource( 29 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 400, 0, 100, 100 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 0, 0 )
+23/navigation_offset = Vector2( 0, 0 )
+23/shape_offset = Vector2( 0, 0 )
+23/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+23/shape_one_way = false
+23/shape_one_way_margin = 0.0
+23/shapes = [  ]
+23/z_index = 0
+24/name = "Tmap_floor_gym_2.png 24"
+24/texture = ExtResource( 29 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 300, 0, 100, 100 )
+24/tile_mode = 0
+24/occluder_offset = Vector2( 0, 0 )
+24/navigation_offset = Vector2( 0, 0 )
+24/shape_offset = Vector2( 0, 0 )
+24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+24/shape_one_way = false
+24/shape_one_way_margin = 0.0
+24/shapes = [  ]
+24/z_index = 0
+25/name = "Tmap_floor_gym_2.png 25"
+25/texture = ExtResource( 29 )
+25/tex_offset = Vector2( 0, 0 )
+25/modulate = Color( 1, 1, 1, 1 )
+25/region = Rect2( 300, 100, 100, 100 )
+25/tile_mode = 0
+25/occluder_offset = Vector2( 0, 0 )
+25/navigation_offset = Vector2( 0, 0 )
+25/shape_offset = Vector2( 0, 0 )
+25/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+25/shape_one_way = false
+25/shape_one_way_margin = 0.0
+25/shapes = [  ]
+25/z_index = 0
+26/name = "Tmap_floor_gym_2.png 26"
+26/texture = ExtResource( 29 )
+26/tex_offset = Vector2( 0, 0 )
+26/modulate = Color( 1, 1, 1, 1 )
+26/region = Rect2( 400, 100, 100, 100 )
+26/tile_mode = 0
+26/occluder_offset = Vector2( 0, 0 )
+26/navigation_offset = Vector2( 0, 0 )
+26/shape_offset = Vector2( 0, 0 )
+26/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+26/shape_one_way = false
+26/shape_one_way_margin = 0.0
+26/shapes = [  ]
+26/z_index = 0
+35/name = "Tmap_floor_gym_2.png 35"
+35/texture = ExtResource( 29 )
+35/tex_offset = Vector2( 0, 0 )
+35/modulate = Color( 1, 1, 1, 1 )
+35/region = Rect2( 0, 0, 300, 300 )
+35/tile_mode = 0
+35/occluder_offset = Vector2( 0, 0 )
+35/navigation_offset = Vector2( 0, 0 )
+35/shape_offset = Vector2( 0, 0 )
+35/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+35/shape_one_way = false
+35/shape_one_way_margin = 0.0
+35/shapes = [  ]
+35/z_index = 0
+
+[sub_resource type="CanvasItemMaterial" id=272]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=273]
+blend_mode = 1
+
+[node name="Run" type="Node2D"]
+position = Vector2( 450, 110 )
+
+[node name="map" type="Node2D" parent="."]
+
+[node name="D_Run2" type="TileMap" parent="map"]
+position = Vector2( 600, 125 )
+tile_set = SubResource( 271 )
+cell_size = Vector2( 100, 100 )
+cell_quadrant_size = 20
+cell_custom_transform = Transform2D( 100, 0, 0, 100, 0, 0 )
+cell_y_sort = true
+bake_navigation = true
+format = 1
+tile_data = PoolIntArray( -65543, -1073741792, 0, -65542, -1073741792, 0, -65541, -1073741792, 0, -65540, -1073741793, 0, -65539, -1073741792, 0, -65538, -1073741793, 0, -65537, -1073741793, 0, -131072, -1073741793, 0, -131071, -1073741792, 0, -131070, -1073741792, 0, -131069, -1073741792, 0, -131068, -1073741792, 0, -131067, -1073741792, 0, -131066, -1073741792, 0, -131065, -1073741792, 0, -131064, -1073741792, 0, -131063, -1073741793, 0, -131062, -1073741792, 0, -131061, -1073741792, 0, -131060, -1073741793, 0, -131059, -1073741792, 0, -131058, -1073741793, 0, -131057, -1073741793, 0, -7, -1073741793, 0, -6, -1073741793, 0, -5, -1073741793, 0, -4, -1073741793, 0, -3, -1073741793, 0, -2, -1073741793, 0, -1, -1073741792, 0, -65536, -1073741793, 0, -65535, -1073741793, 0, -65534, -1073741792, 0, -65533, -1073741792, 0, -65532, -1073741792, 0, -65531, -1073741792, 0, -65530, -1073741792, 0, -65529, -1073741792, 0, -65528, -1073741792, 0, -65527, -1073741792, 0, -65526, -1073741792, 0, -65525, -1073741793, 0, -65524, -1073741792, 0, -65523, -1073741792, 0, -65522, -1073741793, 0, -65521, -1073741792, 0, 262135, 24, 0, 262136, 24, 0, 262137, 24, 0, 262138, 24, 0, 262139, 24, 0, 262140, 24, 0, 327671, 1073741848, 0, 327672, 1073741848, 0, 327673, 1073741848, 0, 327674, 1073741848, 0, 327675, 1073741848, 0, 327676, 1073741848, 0, 393214, 27, 0, 393215, 33, 0, 327680, 34, 0, 327681, 33, 0, 327682, 34, 0, 327683, 33, 0, 327684, 34, 0, 327685, 33, 0, 327686, 34, 0, 327687, 33, 0, 327688, 34, 0, 327689, -1610612706, 0, 458750, 34, 0, 458751, 33, 0, 393216, 34, 0, 393217, 33, 0, 393218, 34, 0, 393219, 33, 0, 393220, 34, 0, 393221, 33, 0, 393222, 34, 0, 393223, 33, 0, 393224, 34, 0, 393225, 33, 0, 524286, 34, 0, 524287, 33, 0, 458752, 34, 0, 458753, 33, 0, 458754, 34, 0, 458755, 33, 0, 458756, 34, 0, 458757, 33, 0, 458758, 34, 0, 458759, 33, 0, 458760, 34, 0, 458761, 33, 0, 589822, 27, 0, 589823, 33, 0, 524288, 34, 0, 524289, 33, 0, 524290, 34, 0, 524291, 33, 0, 524292, 34, 0, 524293, 33, 0, 524294, 34, 0, 524295, 33, 0, 524296, 34, 0, 524297, 30, 0, 655372, 24, 0, 655373, 24, 0, 655374, 24, 0, 655375, 24, 0, 655376, 24, 0, 655377, 24, 0, 720906, 25, 0, 720907, 1073741848, 0, 720908, 1073741848, 0, 720909, 1073741848, 0, 720910, 1073741848, 0, 720911, 1073741848, 0, 720912, 1073741848, 0, 720913, 1073741848, 0 )
+
+[node name="GymGroudline1" type="Sprite" parent="map"]
+position = Vector2( -289, 526.5 )
+rotation = 1.57079
+texture = ExtResource( 32 )
+
+[node name="GymGroudline2" type="Sprite" parent="map"]
+position = Vector2( 284, 525 )
+rotation = 1.57079
+texture = ExtResource( 31 )
+
+[node name="TextNode2" type="Node2D" parent="map"]
+position = Vector2( 100, 525 )
+rotation = 1.57079
+
+[node name="1" type="Sprite" parent="map/TextNode2"]
+self_modulate = Color( 0.368627, 0.368627, 0.368627, 1 )
+position = Vector2( -49, -16 )
+texture = ExtResource( 30 )
+
+[node name="add" type="Sprite" parent="map/TextNode2/1"]
+self_modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 272 )
+texture = ExtResource( 33 )
+
+[node name="2" type="Sprite" parent="map/TextNode2"]
+self_modulate = Color( 0.368627, 0.368627, 0.368627, 1 )
+position = Vector2( -49, -6 )
+texture = ExtResource( 30 )
+
+[node name="add" type="Sprite" parent="map/TextNode2/2"]
+self_modulate = Color( 1, 0.991554, 0.670588, 0.422323 )
+material = SubResource( 272 )
+texture = ExtResource( 33 )
+
+[node name="3" type="Sprite" parent="map/TextNode2"]
+self_modulate = Color( 0.368627, 0.368627, 0.368627, 1 )
+position = Vector2( -49, 4 )
+texture = ExtResource( 30 )
+
+[node name="add" type="Sprite" parent="map/TextNode2/3"]
+self_modulate = Color( 1, 0.990347, 0.623529, 0.482655 )
+material = SubResource( 272 )
+texture = ExtResource( 33 )
+
+[node name="4" type="Sprite" parent="map/TextNode2"]
+self_modulate = Color( 0.368627, 0.368627, 0.368627, 1 )
+position = Vector2( 51, -16 )
+texture = ExtResource( 30 )
+
+[node name="add" type="Sprite" parent="map/TextNode2/4"]
+self_modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 272 )
+texture = ExtResource( 33 )
+
+[node name="5" type="Sprite" parent="map/TextNode2"]
+self_modulate = Color( 0.368627, 0.368627, 0.368627, 1 )
+position = Vector2( 51, -6 )
+texture = ExtResource( 30 )
+
+[node name="add" type="Sprite" parent="map/TextNode2/5"]
+self_modulate = Color( 1, 0.991554, 0.670588, 0.422323 )
+material = SubResource( 272 )
+texture = ExtResource( 33 )
+
+[node name="6" type="Sprite" parent="map/TextNode2"]
+self_modulate = Color( 0.368627, 0.368627, 0.368627, 1 )
+position = Vector2( 51, 4 )
+texture = ExtResource( 30 )
+
+[node name="add" type="Sprite" parent="map/TextNode2/6"]
+self_modulate = Color( 1, 0.990347, 0.623529, 0.482655 )
+material = SubResource( 272 )
+texture = ExtResource( 33 )
+
+[node name="TextNode3" type="Node2D" parent="map"]
+position = Vector2( -150, 525 )
+rotation = 1.57079
+
+[node name="1" type="Sprite" parent="map/TextNode3"]
+self_modulate = Color( 0.368627, 0.368627, 0.368627, 1 )
+position = Vector2( -49, -16 )
+texture = ExtResource( 30 )
+
+[node name="add" type="Sprite" parent="map/TextNode3/1"]
+self_modulate = Color( 0.529412, 1, 0.388235, 0.784314 )
+material = SubResource( 273 )
+texture = ExtResource( 33 )
+
+[node name="2" type="Sprite" parent="map/TextNode3"]
+self_modulate = Color( 0.368627, 0.368627, 0.368627, 1 )
+position = Vector2( -49, -6 )
+texture = ExtResource( 30 )
+
+[node name="add" type="Sprite" parent="map/TextNode3/2"]
+self_modulate = Color( 0.529412, 1, 0.388235, 0.784314 )
+material = SubResource( 273 )
+texture = ExtResource( 33 )
+
+[node name="3" type="Sprite" parent="map/TextNode3"]
+self_modulate = Color( 0.368627, 0.368627, 0.368627, 1 )
+position = Vector2( -49, 4 )
+texture = ExtResource( 30 )
+
+[node name="add" type="Sprite" parent="map/TextNode3/3"]
+self_modulate = Color( 0.529412, 1, 0.388235, 1 )
+material = SubResource( 273 )
+texture = ExtResource( 33 )
+
+[node name="4" type="Sprite" parent="map/TextNode3"]
+self_modulate = Color( 0.368627, 0.368627, 0.368627, 1 )
+position = Vector2( 51, -16 )
+texture = ExtResource( 30 )
+
+[node name="add" type="Sprite" parent="map/TextNode3/4"]
+self_modulate = Color( 0.529412, 1, 0.388235, 0.784314 )
+material = SubResource( 273 )
+texture = ExtResource( 33 )
+
+[node name="5" type="Sprite" parent="map/TextNode3"]
+self_modulate = Color( 0.368627, 0.368627, 0.368627, 1 )
+position = Vector2( 51, -6 )
+texture = ExtResource( 30 )
+
+[node name="add" type="Sprite" parent="map/TextNode3/5"]
+self_modulate = Color( 0.529412, 1, 0.388235, 0.784314 )
+material = SubResource( 273 )
+texture = ExtResource( 33 )
+
+[node name="6" type="Sprite" parent="map/TextNode3"]
+self_modulate = Color( 0.368627, 0.368627, 0.368627, 1 )
+position = Vector2( 51, 4 )
+texture = ExtResource( 30 )
+
+[node name="add" type="Sprite" parent="map/TextNode3/6"]
+self_modulate = Color( 0.529412, 1, 0.388235, 0.784314 )
+material = SubResource( 273 )
+texture = ExtResource( 33 )
+
+[node name="0" type="Node2D" parent="."]
+light_mask = 0
+position = Vector2( -294, 210 )
+
+[node name="All_note" type="Node2D" parent="0"]
+
+[node name="Leg_L" type="Node2D" parent="0/All_note"]
+position = Vector2( -7, -27 )
+
+[node name="L" type="Sprite" parent="0/All_note/Leg_L"]
+texture = ExtResource( 9 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="0/All_note"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="R" type="Sprite" parent="0/All_note/Leg_R"]
+texture = ExtResource( 4 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="0/All_note"]
+position = Vector2( 0, -25 )
+
+[node name="BodyPose" type="Node2D" parent="0/All_note/Body_note"]
+rotation = -0.174533
+
+[node name="Body" type="Node2D" parent="0/All_note/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="0/All_note/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+texture = ExtResource( 11 )
+
+[node name="ClothesRunner1Front" type="Sprite" parent="0/All_note/Body_note/BodyPose/Body/BodyBase"]
+texture = ExtResource( 6 )
+
+[node name="HeadPose" type="Node2D" parent="0/All_note/Body_note/BodyPose/Body"]
+position = Vector2( 0, -68 )
+rotation = 0.139626
+
+[node name="Head" type="Node2D" parent="0/All_note/Body_note/BodyPose/Body/HeadPose"]
+
+[node name="Down" type="Sprite" parent="0/All_note/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 5 )
+offset = Vector2( 0, -26 )
+
+[node name="Arm_Hold" type="Node2D" parent="0/All_note/Body_note/BodyPose"]
+position = Vector2( 20, -47 )
+
+[node name="Pose_Hold" type="Node2D" parent="0/All_note/Body_note/BodyPose/Arm_Hold"]
+
+[node name="Arm" type="Sprite" parent="0/All_note/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 1, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 3 )
+offset = Vector2( -10, 3 )
+
+[node name="Arm" type="Node2D" parent="0/All_note/Body_note/BodyPose"]
+position = Vector2( -20, -47 )
+scale = Vector2( -1, 1 )
+
+[node name="Pose" type="Node2D" parent="0/All_note/Body_note/BodyPose/Arm"]
+
+[node name="Arm" type="Sprite" parent="0/All_note/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 3 )
+offset = Vector2( -10, 3 )
+
+[node name="Label" type="Label" parent="0"]
+margin_left = -73.0
+margin_top = -185.0
+margin_right = 55.0
+margin_bottom = -154.0
+custom_fonts/font = ExtResource( 1 )
+text = "5'"
+align = 1
+valign = 1
+
+[node name="1" type="Node2D" parent="."]
+light_mask = 0
+position = Vector2( -350, 543 )
+
+[node name="All_note" type="Node2D" parent="1"]
+
+[node name="Leg_L" type="Node2D" parent="1/All_note"]
+show_behind_parent = true
+position = Vector2( 7, -32 )
+scale = Vector2( -1, 1 )
+
+[node name="L" type="Sprite" parent="1/All_note/Leg_L"]
+texture = ExtResource( 9 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="1/All_note"]
+position = Vector2( -7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="R" type="Sprite" parent="1/All_note/Leg_R"]
+texture = ExtResource( 12 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="1/All_note"]
+show_behind_parent = true
+position = Vector2( 0, -25 )
+
+[node name="BodyPose" type="Node2D" parent="1/All_note/Body_note"]
+
+[node name="Body" type="Node2D" parent="1/All_note/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="1/All_note/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 11 )
+
+[node name="ClothesRunner1Side" type="Sprite" parent="1/All_note/Body_note/BodyPose/Body/BodyBase"]
+texture = ExtResource( 13 )
+
+[node name="HeadPose" type="Node2D" parent="1/All_note/Body_note/BodyPose/Body"]
+position = Vector2( 0, -68 )
+
+[node name="Head" type="Node2D" parent="1/All_note/Body_note/BodyPose/Body/HeadPose"]
+
+[node name="Left" type="Sprite" parent="1/All_note/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 7 )
+offset = Vector2( 0, -26 )
+flip_h = true
+
+[node name="Arm_Hold" type="Node2D" parent="1/All_note/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 10, -50 )
+
+[node name="Pose_Hold" type="Node2D" parent="1/All_note/Body_note/BodyPose/Arm_Hold"]
+
+[node name="Arm" type="Sprite" parent="1/All_note/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 1, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 3 )
+offset = Vector2( -10, 3 )
+
+[node name="Arm" type="Node2D" parent="1/All_note/Body_note/BodyPose"]
+position = Vector2( 0, -44 )
+scale = Vector2( -1, 1 )
+
+[node name="Pose" type="Node2D" parent="1/All_note/Body_note/BodyPose/Arm"]
+
+[node name="Arm" type="Sprite" parent="1/All_note/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 3 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="1/All_note/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( -28, -15 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 8 )
+offset = Vector2( 20, -16 )
+
+[node name="Label" type="Label" parent="1"]
+margin_left = -64.0
+margin_top = -185.0
+margin_right = 64.0
+margin_bottom = -154.0
+custom_fonts/font = ExtResource( 1 )
+text = "Ready..."
+align = 1
+valign = 1
+
+[node name="2" type="Node2D" parent="."]
+light_mask = 0
+position = Vector2( -173, 544 )
+
+[node name="All_note" type="Node2D" parent="2"]
+position = Vector2( 0, -5 )
+
+[node name="Leg_L" type="Node2D" parent="2/All_note"]
+show_behind_parent = true
+position = Vector2( 7, -32 )
+scale = Vector2( -1, 1 )
+
+[node name="L" type="Sprite" parent="2/All_note/Leg_L"]
+texture = ExtResource( 2 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="2/All_note"]
+position = Vector2( -7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="R" type="Sprite" parent="2/All_note/Leg_R"]
+texture = ExtResource( 10 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="2/All_note"]
+show_behind_parent = true
+position = Vector2( 0, -25 )
+
+[node name="BodyPose" type="Node2D" parent="2/All_note/Body_note"]
+rotation = 0.0773461
+scale = Vector2( 1.05, 1.05 )
+
+[node name="Body" type="Node2D" parent="2/All_note/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="2/All_note/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 11 )
+
+[node name="ClothesRunner1Side" type="Sprite" parent="2/All_note/Body_note/BodyPose/Body/BodyBase"]
+texture = ExtResource( 13 )
+
+[node name="HeadPose" type="Node2D" parent="2/All_note/Body_note/BodyPose/Body"]
+position = Vector2( 0, -68 )
+rotation = -0.10829
+
+[node name="Head" type="Node2D" parent="2/All_note/Body_note/BodyPose/Body/HeadPose"]
+
+[node name="Left" type="Sprite" parent="2/All_note/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 7 )
+offset = Vector2( 0, -26 )
+flip_h = true
+
+[node name="Arm_Hold" type="Node2D" parent="2/All_note/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 10, -50 )
+
+[node name="Pose_Hold" type="Node2D" parent="2/All_note/Body_note/BodyPose/Arm_Hold"]
+rotation = -0.0753885
+
+[node name="Arm" type="Sprite" parent="2/All_note/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 1, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 3 )
+offset = Vector2( -10, 3 )
+
+[node name="Arm" type="Node2D" parent="2/All_note/Body_note/BodyPose"]
+position = Vector2( 0, -44 )
+scale = Vector2( -1, 1 )
+
+[node name="Pose" type="Node2D" parent="2/All_note/Body_note/BodyPose/Arm"]
+rotation = -0.102966
+
+[node name="Arm" type="Sprite" parent="2/All_note/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 3 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="2/All_note/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( -28, -15 )
+rotation = 0.0534768
+scale = Vector2( -1, 1 )
+texture = ExtResource( 8 )
+offset = Vector2( 20, -16 )
+
+[node name="Label" type="Label" parent="2"]
+margin_left = -58.0
+margin_top = -185.0
+margin_right = 70.0
+margin_bottom = -154.0
+custom_fonts/font = ExtResource( 1 )
+text = "GO!"
+align = 1
+valign = 1
+
+[node name="3" type="Node2D" parent="."]
+light_mask = 0
+position = Vector2( 350, 575 )
+
+[node name="All_note" type="Node2D" parent="3"]
+position = Vector2( 0, -30.5013 )
+
+[node name="Leg_L" type="Node2D" parent="3/All_note"]
+position = Vector2( -7, -27 )
+
+[node name="L" type="Sprite" parent="3/All_note/Leg_L"]
+texture = ExtResource( 2 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="3/All_note"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="R" type="Sprite" parent="3/All_note/Leg_R"]
+texture = ExtResource( 2 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="3/All_note"]
+show_behind_parent = true
+position = Vector2( 0, -25 )
+
+[node name="BodyPose" type="Node2D" parent="3/All_note/Body_note"]
+
+[node name="Body" type="Node2D" parent="3/All_note/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="3/All_note/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+texture = ExtResource( 11 )
+
+[node name="ClothesRunner1Front" type="Sprite" parent="3/All_note/Body_note/BodyPose/Body/BodyBase"]
+texture = ExtResource( 6 )
+
+[node name="HeadPose" type="Node2D" parent="3/All_note/Body_note/BodyPose/Body"]
+position = Vector2( 0, -68 )
+rotation = 0.0834107
+
+[node name="Head" type="Node2D" parent="3/All_note/Body_note/BodyPose/Body/HeadPose"]
+
+[node name="Down" type="Sprite" parent="3/All_note/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 5 )
+offset = Vector2( 0, -26 )
+
+[node name="Arm_Hold" type="Node2D" parent="3/All_note/Body_note/BodyPose"]
+position = Vector2( 20, -47 )
+rotation = -1.4856
+
+[node name="Pose_Hold" type="Node2D" parent="3/All_note/Body_note/BodyPose/Arm_Hold"]
+
+[node name="Arm" type="Sprite" parent="3/All_note/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 1, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 14 )
+offset = Vector2( -10, 3 )
+
+[node name="Arm" type="Node2D" parent="3/All_note/Body_note/BodyPose"]
+position = Vector2( -20, -47 )
+rotation = 1.36711
+scale = Vector2( -1, 1 )
+
+[node name="Pose" type="Node2D" parent="3/All_note/Body_note/BodyPose/Arm"]
+
+[node name="Arm" type="Sprite" parent="3/All_note/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 14 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="3/All_note/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 0, -15 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 8 )
+offset = Vector2( 20, -16 )
+
+[node name="Label" type="Label" parent="3"]
+margin_left = -60.0
+margin_top = -213.0
+margin_right = 68.0
+margin_bottom = -182.0
+custom_fonts/font = ExtResource( 1 )
+text = "09''33"
+align = 1
+valign = 1
+
+[node name="161" type="RichTextLabel" parent="."]
+margin_left = -225.0
+margin_top = 2.0
+margin_right = 431.0
+margin_bottom = 333.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "当听到准备跑步的哨声，你会自动换上运动衫。请暂时放下手上的工作，到起跑线做好准备！
+
+听到枪声后比赛开始，你必须依次踩中跑道上的计分点，不可以作弊或者抢跑哦。
+
+只要你能完成比赛，观看的顾客就会非常开心，提升你可以获得的小费。但是如果你消极比赛，超过了10秒还没有完成，则会开始加压。"
+text = "当听到准备跑步的哨声，你会自动换上运动衫。请暂时放下手上的工作，到起跑线做好准备！
+
+听到枪声后比赛开始，你必须依次踩中跑道上的计分点，不可以作弊或者抢跑哦。
+
+只要你能完成比赛，观看的顾客就会非常开心，提升你可以获得的小费。但是如果你消极比赛，超过了10秒还没有完成，则会开始加压。"
+script = ExtResource( 28 )
+LabelTEXT = "信息-文字说明-161"
+Center_Bool = true
+
+[node name="Top_note2" type="Node2D" parent="."]
+light_mask = 0
+position = Vector2( 218, 632 )
+
+[node name="All_note" type="Node2D" parent="Top_note2"]
+position = Vector2( -3, 23.5001 )
+
+[node name="Body_note" type="Node2D" parent="Top_note2/All_note"]
+position = Vector2( 0, -24 )
+rotation = 0.0126879
+scale = Vector2( 0.99375, 1.00625 )
+
+[node name="Body" type="Node2D" parent="Top_note2/All_note/Body_note"]
+
+[node name="CupBody" type="Node2D" parent="Top_note2/All_note/Body_note/Body"]
+position = Vector2( 0.540222, -36.2831 )
+
+[node name="BodyBase1" type="Sprite" parent="Top_note2/All_note/Body_note/Body/CupBody"]
+modulate = Color( 0.521569, 0.305882, 0.223529, 1 )
+texture = ExtResource( 17 )
+
+[node name="Decorate2" type="Sprite" parent="Top_note2/All_note/Body_note/Body/CupBody"]
+modulate = Color( 0.443137, 0.278431, 0.278431, 1 )
+texture = ExtResource( 21 )
+
+[node name="BodyBase2" type="Sprite" parent="Top_note2/All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 19 )
+
+[node name="CupFace" type="Node2D" parent="Top_note2/All_note/Body_note/Body"]
+position = Vector2( 0.565796, -34.2956 )
+
+[node name="L" type="Node2D" parent="Top_note2/All_note/Body_note/Body/CupFace"]
+position = Vector2( -10, 0 )
+
+[node name="Eye" type="Sprite" parent="Top_note2/All_note/Body_note/Body/CupFace/L"]
+texture = ExtResource( 22 )
+
+[node name="Ball" type="Sprite" parent="Top_note2/All_note/Body_note/Body/CupFace/L"]
+position = Vector2( 1.80579, -2.84808 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 15 )
+
+[node name="R" type="Node2D" parent="Top_note2/All_note/Body_note/Body/CupFace"]
+position = Vector2( 8, 0 )
+scale = Vector2( -1, 1 )
+
+[node name="Eye" type="Sprite" parent="Top_note2/All_note/Body_note/Body/CupFace/R"]
+texture = ExtResource( 22 )
+
+[node name="Ball" type="Sprite" parent="Top_note2/All_note/Body_note/Body/CupFace/R"]
+position = Vector2( 0.16745, -2.99585 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 15 )
+
+[node name="Arm_Hold" type="Node2D" parent="Top_note2/All_note/Body_note"]
+position = Vector2( 20.9133, -17.1578 )
+
+[node name="Arm" type="Sprite" parent="Top_note2/All_note/Body_note/Arm_Hold"]
+texture = ExtResource( 23 )
+offset = Vector2( 4, -17 )
+
+[node name="Weapon_note" type="Node2D" parent="Top_note2/All_note/Body_note/Arm_Hold"]
+show_behind_parent = true
+position = Vector2( 20, 15 )
+scale = Vector2( -1, 1 )
+
+[node name="Legs" type="Node2D" parent="Top_note2/All_note"]
+show_behind_parent = true
+
+[node name="Leg_L" type="Node2D" parent="Top_note2/All_note/Legs"]
+position = Vector2( -7, -27 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="Top_note2/All_note/Legs/Leg_L"]
+self_modulate = Color( 0.254902, 0.176471, 0.0980392, 1 )
+texture = ExtResource( 18 )
+offset = Vector2( -6, 0 )
+
+[node name="Leg_R" type="Node2D" parent="Top_note2/All_note/Legs"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="Top_note2/All_note/Legs/Leg_R"]
+self_modulate = Color( 0.254902, 0.176471, 0.0980392, 1 )
+texture = ExtResource( 18 )
+offset = Vector2( -6, 0 )
+
+[node name="IconMoodstar2" type="Sprite" parent="Top_note2"]
+position = Vector2( 24, -9 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 16 )
+
+[node name="Top_note" type="Node2D" parent="."]
+light_mask = 0
+position = Vector2( 251, 388 )
+
+[node name="All_note" type="Node2D" parent="Top_note"]
+position = Vector2( -3, 23.5001 )
+
+[node name="Body_note" type="Node2D" parent="Top_note/All_note"]
+position = Vector2( 0, -24 )
+rotation = 0.0126879
+scale = Vector2( 0.99375, 1.00625 )
+
+[node name="Body" type="Node2D" parent="Top_note/All_note/Body_note"]
+
+[node name="CupBody" type="Node2D" parent="Top_note/All_note/Body_note/Body"]
+position = Vector2( 0, -24 )
+
+[node name="BodyBase1" type="Sprite" parent="Top_note/All_note/Body_note/Body/CupBody"]
+modulate = Color( 0.827451, 0.835294, 0.211765, 1 )
+texture = ExtResource( 27 )
+
+[node name="Decorate1" type="Sprite" parent="Top_note/All_note/Body_note/Body/CupBody"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 25 )
+
+[node name="Decorate2" type="Sprite" parent="Top_note/All_note/Body_note/Body/CupBody"]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 26 )
+
+[node name="BodyBase2" type="Sprite" parent="Top_note/All_note/Body_note/Body/CupBody"]
+texture = ExtResource( 24 )
+
+[node name="F1" type="Sprite" parent="Top_note/All_note/Body_note/Body/CupBody"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 0, 12 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 21 )
+
+[node name="Water_note" type="Node2D" parent="Top_note/All_note/Body_note/Body/CupBody"]
+position = Vector2( 0, -14 )
+
+[node name="WaterEff" type="Sprite" parent="Top_note/All_note/Body_note/Body/CupBody/Water_note"]
+modulate = Color( 0.854902, 0.729412, 0.427451, 0 )
+texture = ExtResource( 20 )
+offset = Vector2( 14, -6 )
+
+[node name="CupFace" type="Node2D" parent="Top_note/All_note/Body_note/Body"]
+position = Vector2( 0, -14 )
+
+[node name="L" type="Node2D" parent="Top_note/All_note/Body_note/Body/CupFace"]
+position = Vector2( -10, 0 )
+
+[node name="Eye" type="Sprite" parent="Top_note/All_note/Body_note/Body/CupFace/L"]
+texture = ExtResource( 22 )
+
+[node name="Ball" type="Sprite" parent="Top_note/All_note/Body_note/Body/CupFace/L"]
+position = Vector2( 1.80579, -2.84808 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 15 )
+
+[node name="R" type="Node2D" parent="Top_note/All_note/Body_note/Body/CupFace"]
+position = Vector2( 8, 0 )
+scale = Vector2( -1, 1 )
+
+[node name="Eye" type="Sprite" parent="Top_note/All_note/Body_note/Body/CupFace/R"]
+texture = ExtResource( 22 )
+
+[node name="Ball" type="Sprite" parent="Top_note/All_note/Body_note/Body/CupFace/R"]
+position = Vector2( 0.16745, -2.99585 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 15 )
+
+[node name="Arm_Hold" type="Node2D" parent="Top_note/All_note/Body_note"]
+position = Vector2( 20.9133, -17.1578 )
+
+[node name="Arm" type="Sprite" parent="Top_note/All_note/Body_note/Arm_Hold"]
+texture = ExtResource( 23 )
+offset = Vector2( 4, -17 )
+
+[node name="Weapon_note" type="Node2D" parent="Top_note/All_note/Body_note/Arm_Hold"]
+show_behind_parent = true
+position = Vector2( 20, 15 )
+scale = Vector2( -1, 1 )
+
+[node name="Legs" type="Node2D" parent="Top_note/All_note"]
+show_behind_parent = true
+
+[node name="Leg_L" type="Node2D" parent="Top_note/All_note/Legs"]
+position = Vector2( -7, -27 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="Top_note/All_note/Legs/Leg_L"]
+self_modulate = Color( 0.254902, 0.176471, 0.0980392, 1 )
+texture = ExtResource( 18 )
+offset = Vector2( -6, 0 )
+
+[node name="Leg_R" type="Node2D" parent="Top_note/All_note/Legs"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="Top_note/All_note/Legs/Leg_R"]
+self_modulate = Color( 0.254902, 0.176471, 0.0980392, 1 )
+texture = ExtResource( 18 )
+offset = Vector2( -6, 0 )
+
+[node name="IconMoodstar2" type="Sprite" parent="Top_note"]
+position = Vector2( 33, -0.499939 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 16 )

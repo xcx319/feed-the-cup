@@ -1,0 +1,148 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=1]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_port_water_full.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_waterport20_empty.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_4.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_steam_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_3.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_steam_1.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_waterport20.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_trashbin_effect_5.tres" type="Texture" id=10]
+
+[node name="量杯整合" type="Node2D"]
+position = Vector2( -43, -2 )
+
+[node name="IconMenuArrow3" type="Sprite" parent="."]
+position = Vector2( 504.5, 335 )
+texture = ExtResource( 2 )
+
+[node name="3" type="Node2D" parent="."]
+position = Vector2( 487.5, 333 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="Port3" type="Node2D" parent="3"]
+position = Vector2( -65, -50 )
+rotation = -0.785397
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="3/Port3"]
+texture = ExtResource( 4 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="3/Port3"]
+modulate = Color( 0.317647, 0.603922, 0.247059, 1 )
+position = Vector2( -1.34775, 9.08914 )
+scale = Vector2( 1, 0.630251 )
+texture = ExtResource( 3 )
+
+[node name="ItemWaterport20" type="Sprite" parent="3/Port3"]
+texture = ExtResource( 9 )
+
+[node name="ItemSteam3" type="Sprite" parent="3/Port3"]
+position = Vector2( 21.7593, -30.9032 )
+rotation = 1.0472
+scale = Vector2( 0.770525, 0.951582 )
+texture = ExtResource( 8 )
+
+[node name="ItemSteam4" type="Sprite" parent="3/Port3"]
+position = Vector2( 21.7571, -51.1293 )
+rotation = 1.0472
+texture = ExtResource( 6 )
+
+[node name="Port4" type="Node2D" parent="3"]
+position = Vector2( -112.308, -11.4615 )
+scale = Vector2( -1, 1 )
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="3/Port4"]
+texture = ExtResource( 4 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="3/Port4"]
+modulate = Color( 0.317647, 0.603922, 0.247059, 1 )
+position = Vector2( -1.34775, 9.08914 )
+scale = Vector2( 1, 0.630251 )
+texture = ExtResource( 3 )
+
+[node name="ItemWaterport20" type="Sprite" parent="3/Port4"]
+texture = ExtResource( 9 )
+
+[node name="Texture" type="Node2D" parent="3/Port4"]
+position = Vector2( -1.53845, -12.3077 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="DeviceTrashbinEffect3" type="Sprite" parent="3/Port4/Texture"]
+position = Vector2( 1.28571, -37.8571 )
+scale = Vector2( 1, 0.857143 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -28 )
+
+[node name="DeviceTrashbinEffect4" type="Sprite" parent="3/Port4/Texture"]
+position = Vector2( -19.7802, -13.1868 )
+scale = Vector2( 1, 0.788235 )
+texture = ExtResource( 5 )
+offset = Vector2( 0, -28 )
+
+[node name="DeviceTrashbinEffect5" type="Sprite" parent="3/Port4/Texture"]
+position = Vector2( 23.1333, -22.3333 )
+scale = Vector2( 1, 0.7 )
+texture = ExtResource( 10 )
+offset = Vector2( 0, -28 )
+
+[node name="Port5" type="Node2D" parent="3"]
+position = Vector2( 117.692, -7.46152 )
+
+[node name="ItemWaterport20Empty" type="Sprite" parent="3/Port5"]
+texture = ExtResource( 4 )
+
+[node name="ItemPortWaterFull" type="Sprite" parent="3/Port5"]
+modulate = Color( 0.317647, 0.603922, 0.247059, 1 )
+position = Vector2( 0, 0.5 )
+scale = Vector2( 1, 0.932432 )
+texture = ExtResource( 3 )
+
+[node name="ItemWaterport20" type="Sprite" parent="3/Port5"]
+texture = ExtResource( 9 )
+
+[node name="ItemSteam3" type="Sprite" parent="3/Port5"]
+position = Vector2( 9.23105, -38.5385 )
+texture = ExtResource( 8 )
+
+[node name="ItemSteam4" type="Sprite" parent="3/Port5"]
+position = Vector2( -13.769, -54.5385 )
+texture = ExtResource( 6 )
+
+[node name="Texture" type="Node2D" parent="3/Port5"]
+position = Vector2( -1.53845, -12.3077 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="DeviceTrashbinEffect3" type="Sprite" parent="3/Port5/Texture"]
+position = Vector2( 1.28571, -37.8571 )
+scale = Vector2( 1, 0.857143 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -28 )
+
+[node name="DeviceTrashbinEffect4" type="Sprite" parent="3/Port5/Texture"]
+position = Vector2( -19.7802, -13.1868 )
+scale = Vector2( 1, 0.788235 )
+texture = ExtResource( 5 )
+offset = Vector2( 0, -28 )
+
+[node name="DeviceTrashbinEffect5" type="Sprite" parent="3/Port5/Texture"]
+position = Vector2( 23.1333, -22.3333 )
+scale = Vector2( 1, 0.7 )
+texture = ExtResource( 10 )
+offset = Vector2( 0, -28 )
+
+[node name="57" type="RichTextLabel" parent="."]
+margin_left = 124.0
+margin_top = 387.0
+margin_right = 879.0
+margin_bottom = 560.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "将新的一壶热饮倒入常温的饮品中，会混合成热饮。
+但要小心，将新鲜的饮品倒入{术语_陈旧}的饮品中，一整壶都会变得{术语_陈旧}。"
+text = "将新的一壶热饮倒入常温的饮品中，会混合成热饮。
+但要小心，将新鲜的饮品倒入{术语_陈旧}的饮品中，一整壶都会变得{术语_陈旧}。"
+script = ExtResource( 1 )
+LabelTEXT = "信息-文字说明-57"
+Center_Bool = true

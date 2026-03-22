@@ -1,0 +1,114 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/GameLogic.gd" type="Script" id=1]
+[ext_resource path="res://TscnAndGd/UI/Main/LoadingUI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TscnAndGd/Logics/SystemLogic/AudioLogic.tscn" type="PackedScene" id=3]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/SkillLogic.gd" type="Script" id=4]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/Pressure.gd" type="Script" id=5]
+[ext_resource path="res://TscnAndGd/Logics/SystemLogic/SaveData.gd" type="Script" id=6]
+[ext_resource path="res://TscnAndGd/Logics/SystemLogic/AutoLoad.gd" type="Script" id=7]
+[ext_resource path="res://TscnAndGd/Logics/SystemLogic/ConfigLogic.gd" type="Script" id=8]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/AStarLogic.gd" type="Script" id=9]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/NPCLogic.gd" type="Script" id=10]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/StaffLogic.gd" type="Script" id=11]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/OrderLogic.gd" type="Script" id=12]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/LiquidLogic.gd" type="Script" id=13]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/DeviceLogic.gd" type="Script" id=14]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/BuyLogic.gd" type="Script" id=15]
+[ext_resource path="res://TscnAndGd/Logics/SystemLogic/GlobalData.gd" type="Script" id=16]
+[ext_resource path="res://TscnAndGd/Logics/SystemLogic/ScreenSizeSet.gd" type="Script" id=17]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/DayLogic.gd" type="Script" id=18]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/FormulaLogic.gd" type="Script" id=19]
+[ext_resource path="res://TscnAndGd/UI/InGame/GameUI.tscn" type="PackedScene" id=20]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/Home.gd" type="Script" id=21]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/Control.gd" type="Script" id=22]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/Card.gd" type="Script" id=24]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/Tutorial.gd" type="Script" id=25]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/Info.gd" type="Script" id=26]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/Achievement.gd" type="Script" id=27]
+[ext_resource path="res://TscnAndGd/Logics/GameLogic/NetWork.gd" type="Script" id=28]
+
+[node name="GameLogic" type="Node"]
+script = ExtResource( 1 )
+
+[node name="GlobalData" type="Node" parent="."]
+script = ExtResource( 16 )
+
+[node name="Astar" type="Node" parent="."]
+script = ExtResource( 9 )
+
+[node name="Achievement" type="Node" parent="."]
+script = ExtResource( 27 )
+
+[node name="Audio" parent="." instance=ExtResource( 3 )]
+
+[node name="Buy" type="Node" parent="."]
+script = ExtResource( 15 )
+
+[node name="Config" type="Node" parent="."]
+script = ExtResource( 8 )
+
+[node name="Control" type="Node" parent="."]
+pause_mode = 2
+script = ExtResource( 22 )
+
+[node name="Device" type="Node" parent="."]
+script = ExtResource( 14 )
+
+[node name="Day" type="Node" parent="."]
+script = ExtResource( 18 )
+
+[node name="Formula" type="Node" parent="."]
+script = ExtResource( 19 )
+
+[node name="Home" type="Node" parent="."]
+script = ExtResource( 21 )
+
+[node name="Skill" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="Pressure" type="Node" parent="."]
+script = ExtResource( 5 )
+
+[node name="Save" type="Node" parent="."]
+script = ExtResource( 6 )
+
+[node name="TSCNLoad" type="Node" parent="."]
+script = ExtResource( 7 )
+
+[node name="NPC" type="Node" parent="."]
+script = ExtResource( 10 )
+
+[node name="Staff" type="Node" parent="."]
+script = ExtResource( 11 )
+
+[node name="Order" type="Node" parent="."]
+script = ExtResource( 12 )
+
+[node name="Liquid" type="Node" parent="."]
+script = ExtResource( 13 )
+
+[node name="ScreenSet" type="Node" parent="."]
+script = ExtResource( 17 )
+
+[node name="GameUI" parent="." instance=ExtResource( 20 )]
+
+[node name="LoadingUI" parent="." instance=ExtResource( 2 )]
+
+[node name="Card" type="Node" parent="."]
+script = ExtResource( 24 )
+
+[node name="Tutorial" type="Node" parent="."]
+script = ExtResource( 25 )
+
+[node name="Info" type="Node" parent="."]
+script = ExtResource( 26 )
+
+[node name="NetWork" type="Node" parent="."]
+script = ExtResource( 28 )
+
+[node name="QTETimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="timeout" from="QTETimer" to="." method="_on_QTETimer_timeout"]

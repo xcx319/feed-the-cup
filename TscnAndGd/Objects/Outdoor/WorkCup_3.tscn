@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_1.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_chair_2.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_cup_2.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Work_desk_2.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_body_base_2.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_body_base_1.tres" type="Texture" id=8]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 58.75, 50 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 31.1875, 31.875 )
+
+[node name="WorkCup" type="StaticBody2D"]
+light_mask = 2
+collision_layer = 128
+collision_mask = 5120
+
+[node name="Textnode" type="Node2D" parent="."]
+
+[node name="WorkChair3" type="Sprite" parent="Textnode"]
+position = Vector2( -79, -30 )
+texture = ExtResource( 2 )
+
+[node name="WorkDesk1" type="Sprite" parent="Textnode"]
+position = Vector2( 0, -35 )
+texture = ExtResource( 1 )
+
+[node name="WorkDesk6" type="Sprite" parent="Textnode"]
+position = Vector2( -7, -61 )
+texture = ExtResource( 4 )
+
+[node name="GuestMarkcupBodyBase2" type="Sprite" parent="Textnode"]
+self_modulate = Color( 0.447059, 0.490196, 0.603922, 1 )
+position = Vector2( -70.0502, -55.5043 )
+rotation = -0.261799
+texture = ExtResource( 7 )
+
+[node name="GuestMarkcupBodyBase1" type="Sprite" parent="Textnode/GuestMarkcupBodyBase2"]
+texture = ExtResource( 8 )
+
+[node name="WorkCup2" type="Sprite" parent="Textnode"]
+position = Vector2( -38.0502, -37.5043 )
+texture = ExtResource( 3 )
+
+[node name="Aninode" type="Node2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -25 )
+rotation = 1.5708
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( -82.125, -12 )
+rotation = 1.5708
+shape = SubResource( 4 )

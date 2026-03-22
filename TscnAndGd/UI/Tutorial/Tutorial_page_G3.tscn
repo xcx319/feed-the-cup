@@ -1,0 +1,217 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_leg_stand_1.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_2.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_arm_idle_1.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_eye_1.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_papercup_body_form_1.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_papercup_body_decorative_15.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_papercup_body_base_1.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_papercup_body_base_2.tres" type="Texture" id=8]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=9]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_water_1.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_markcup_arm_act_1.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_papercup_body_form_2.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_papercup_body_form_3.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_papercup_body_decorative_1.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_papercup_body_decorative_16.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_papercup_body_decorative_10.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_papercup_body_decorative_7.tres" type="Texture" id=17]
+
+[node name="顾客大" type="Node2D"]
+position = Vector2( 434, 52.2097 )
+
+[node name="59" type="RichTextLabel" parent="."]
+margin_left = -136.0
+margin_top = 106.0
+margin_right = 145.0
+margin_bottom = 223.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "大纸杯顾客只会点大杯饮品。"
+text = "大纸杯顾客只会点大杯饮品。"
+script = ExtResource( 9 )
+LabelTEXT = "信息-文字说明-59"
+Center_Bool = true
+
+[node name="3" type="Node2D" parent="."]
+position = Vector2( -75, 64.7903 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="BodyBase1" type="Sprite" parent="3"]
+modulate = Color( 0.290196, 0.482353, 1, 1 )
+position = Vector2( 0, -94 )
+texture = ExtResource( 8 )
+
+[node name="Decorative1" type="Sprite" parent="3"]
+modulate = Color( 1, 0.34902, 0.654902, 1 )
+position = Vector2( 0, -94 )
+texture = ExtResource( 14 )
+
+[node name="Decorative2" type="Sprite" parent="3"]
+modulate = Color( 1, 0.960784, 0, 1 )
+position = Vector2( 0, -94 )
+texture = ExtResource( 17 )
+
+[node name="BodyBase2" type="Sprite" parent="3"]
+position = Vector2( 0, -94 )
+texture = ExtResource( 7 )
+
+[node name="WaterEff" type="Sprite" parent="3"]
+modulate = Color( 0.972549, 0.694118, 0.513726, 0.890196 )
+position = Vector2( 0, -116 )
+scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 10 )
+offset = Vector2( 14, -6 )
+
+[node name="Form1" type="Sprite" parent="3"]
+position = Vector2( 0, -94 )
+texture = ExtResource( 13 )
+
+[node name="Eye" type="Sprite" parent="3"]
+position = Vector2( -10, -67 )
+texture = ExtResource( 4 )
+
+[node name="Ball" type="Sprite" parent="3"]
+position = Vector2( -5.99997, -67 )
+texture = ExtResource( 2 )
+
+[node name="Eye2" type="Sprite" parent="3"]
+position = Vector2( 8, -67 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 4 )
+
+[node name="Ball2" type="Sprite" parent="3"]
+position = Vector2( 8, -67 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 2 )
+
+[node name="Arm" type="Sprite" parent="3"]
+position = Vector2( 22, -99 )
+texture = ExtResource( 3 )
+offset = Vector2( 4, -17 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="3"]
+self_modulate = Color( 0.254902, 0.176471, 0.0980392, 1 )
+position = Vector2( -7, -27 )
+texture = ExtResource( 1 )
+offset = Vector2( -6, 0 )
+
+[node name="GuestMarkcupLegStand2" type="Sprite" parent="3"]
+self_modulate = Color( 0.254902, 0.176471, 0.0980392, 1 )
+position = Vector2( 7, -27 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 1 )
+offset = Vector2( -6, 0 )
+
+[node name="2" type="Node2D" parent="."]
+position = Vector2( 92, 61.7903 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="BodyBase1" type="Sprite" parent="2"]
+modulate = Color( 0.290196, 1, 0.419608, 1 )
+position = Vector2( 0, -94 )
+texture = ExtResource( 8 )
+
+[node name="Decorative1" type="Sprite" parent="2"]
+modulate = Color( 0.196078, 0.764706, 0.47451, 1 )
+position = Vector2( 0, -94 )
+texture = ExtResource( 15 )
+
+[node name="Decorative2" type="Sprite" parent="2"]
+position = Vector2( 0, -94 )
+texture = ExtResource( 16 )
+
+[node name="BodyBase2" type="Sprite" parent="2"]
+position = Vector2( 0, -94 )
+texture = ExtResource( 7 )
+
+[node name="Form1" type="Sprite" parent="2"]
+modulate = Color( 0.443137, 0.776471, 1, 1 )
+position = Vector2( 0, -94 )
+texture = ExtResource( 12 )
+
+[node name="Arm" type="Sprite" parent="2"]
+position = Vector2( 21.9999, -99 )
+texture = ExtResource( 11 )
+offset = Vector2( 4, -17 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="2"]
+self_modulate = Color( 0.254902, 0.176471, 0.0980392, 1 )
+position = Vector2( -7, -27 )
+texture = ExtResource( 1 )
+offset = Vector2( -6, 0 )
+
+[node name="GuestMarkcupLegStand2" type="Sprite" parent="2"]
+self_modulate = Color( 0.254902, 0.176471, 0.0980392, 1 )
+position = Vector2( 6.99994, -27 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 1 )
+offset = Vector2( -6, 0 )
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2( 7, 81 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="1"]
+self_modulate = Color( 0.254902, 0.176471, 0.0980392, 1 )
+position = Vector2( -6.99994, -26.9999 )
+texture = ExtResource( 1 )
+offset = Vector2( -6, 0 )
+
+[node name="GuestMarkcupLegStand2" type="Sprite" parent="1"]
+self_modulate = Color( 0.254902, 0.176471, 0.0980392, 1 )
+position = Vector2( 7, -26.9999 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 1 )
+offset = Vector2( -6, 0 )
+
+[node name="CupBody" type="Node2D" parent="1"]
+position = Vector2( 0, -94 )
+
+[node name="BodyBase1" type="Sprite" parent="1/CupBody"]
+modulate = Color( 0.67451, 0.490196, 0.694118, 1 )
+texture = ExtResource( 8 )
+
+[node name="Decorative1" type="Sprite" parent="1/CupBody"]
+texture = ExtResource( 6 )
+
+[node name="BodyBase2" type="Sprite" parent="1/CupBody"]
+texture = ExtResource( 7 )
+
+[node name="Form1" type="Sprite" parent="1/CupBody"]
+modulate = Color( 0.635294, 0.560784, 0.498039, 1 )
+texture = ExtResource( 5 )
+
+[node name="CupFace" type="Node2D" parent="1"]
+position = Vector2( 0, -67 )
+
+[node name="L" type="Node2D" parent="1/CupFace"]
+position = Vector2( -10, 0 )
+
+[node name="Eye" type="Sprite" parent="1/CupFace/L"]
+texture = ExtResource( 4 )
+
+[node name="Ball" type="Sprite" parent="1/CupFace/L"]
+position = Vector2( 4, 0 )
+texture = ExtResource( 2 )
+
+[node name="R" type="Node2D" parent="1/CupFace"]
+position = Vector2( 8, 0 )
+scale = Vector2( -1, 1 )
+
+[node name="Eye" type="Sprite" parent="1/CupFace/R"]
+texture = ExtResource( 4 )
+
+[node name="Ball" type="Sprite" parent="1/CupFace/R"]
+texture = ExtResource( 2 )
+
+[node name="Arm" type="Sprite" parent="1"]
+position = Vector2( 22, -99 )
+texture = ExtResource( 3 )
+offset = Vector2( 4, -17 )

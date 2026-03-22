@@ -1,0 +1,118 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Resources/Maps/Tmap_wallexterior.png" type="Texture" id=1]
+[ext_resource path="res://TscnAndGd/Objects/WallPaper/WallPaper.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 311, 210, 104, 204 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 600, 97.5 )
+
+[sub_resource type="Animation" id=3]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.313726 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Loof" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TexNode" type="Node2D" parent="."]
+
+[node name="Loof1" type="Node2D" parent="TexNode"]
+modulate = Color( 0.866667, 0.835294, 0.835294, 1 )
+
+[node name="Loof1" type="Sprite" parent="TexNode/Loof1"]
+position = Vector2( 50, -100 )
+texture = SubResource( 5 )
+
+[node name="Loof2" type="Sprite" parent="TexNode/Loof1"]
+position = Vector2( 150, -100 )
+texture = SubResource( 5 )
+
+[node name="Loof3" type="Sprite" parent="TexNode/Loof1"]
+position = Vector2( 250, -100 )
+texture = SubResource( 5 )
+
+[node name="Loof4" type="Sprite" parent="TexNode/Loof1"]
+position = Vector2( 350, -100 )
+texture = SubResource( 5 )
+
+[node name="Loof5" type="Sprite" parent="TexNode/Loof1"]
+position = Vector2( 450, -100 )
+texture = SubResource( 5 )
+
+[node name="Loof6" type="Sprite" parent="TexNode/Loof1"]
+position = Vector2( 550, -100 )
+texture = SubResource( 5 )
+
+[node name="Loof7" type="Sprite" parent="TexNode/Loof1"]
+position = Vector2( 650, -100 )
+texture = SubResource( 5 )
+
+[node name="Loof8" type="Sprite" parent="TexNode/Loof1"]
+position = Vector2( 750, -100 )
+texture = SubResource( 5 )
+
+[node name="Loof9" type="Sprite" parent="TexNode/Loof1"]
+position = Vector2( 850, -100 )
+texture = SubResource( 5 )
+
+[node name="Loof10" type="Sprite" parent="TexNode/Loof1"]
+position = Vector2( 950, -100 )
+texture = SubResource( 5 )
+
+[node name="Loof11" type="Sprite" parent="TexNode/Loof1"]
+position = Vector2( 1050, -100 )
+texture = SubResource( 5 )
+
+[node name="Loof12" type="Sprite" parent="TexNode/Loof1"]
+position = Vector2( 1150, -100 )
+texture = SubResource( 5 )
+
+[node name="AreaNode" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="AreaNode"]
+collision_layer = 0
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaNode/Area2D"]
+visible = false
+position = Vector2( 600, -102.5 )
+shape = SubResource( 2 )
+
+[node name="AniNode" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AniNode"]
+autoplay = "init"
+anims/hide = SubResource( 3 )
+anims/init = SubResource( 4 )
+
+[connection signal="body_entered" from="AreaNode/Area2D" to="." method="_on_player_entered"]
+[connection signal="body_exited" from="AreaNode/Area2D" to="." method="_on_player_exited"]

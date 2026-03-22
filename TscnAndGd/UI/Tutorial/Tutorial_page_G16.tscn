@@ -1,0 +1,218 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_2.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_pop_1.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_1.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_6.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_5.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_3.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_top.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_2.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_pop_2.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_4.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_pop_3.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_say.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_glassbottle_arm_idle_1.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_glassbottle_body_base_2.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_glassbottle_body_base_1.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_pop_water.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_glassbottle_body_base_3.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_glassbottle_leg_stand_1.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_glassbottle_body_decorative_11.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_glassbottle_body_form_1.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_glassbottle_body_decorative_13.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_6.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_6.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_6.tres" type="Texture" id=31]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_2.tres" type="Texture" id=32]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_5.tres" type="Texture" id=33]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_1.tres" type="Texture" id=35]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_3.tres" type="Texture" id=36]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=44]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=45]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_pop_blueorange.tres" type="Texture" id=47]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_3.tres" type="Texture" id=48]
+
+[node name="GlassBottle" type="Node2D"]
+position = Vector2( 442, 240 )
+
+[node name="160" type="RichTextLabel" parent="."]
+margin_left = -319.0
+margin_top = 393.0
+margin_right = 381.0
+margin_bottom = 649.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "要想满足{Glass Bottle}的苛刻要求，需要精心设置你的配方搭配。
+单一配方可以通过制作多个水缸来控制气泡，而混合配方可以通过调整{Soda Water Machine}的气泡状态，来微调饮品的总气量。"
+text = "要想满足{Glass Bottle}的苛刻要求，需要精心设置你的配方搭配。
+单一配方可以通过制作多个水缸来控制气泡，而混合配方可以通过调整{Soda Water Machine}的气泡状态，来微调饮品的总气量。"
+script = ExtResource( 45 )
+LabelTEXT = "信息-文字说明-160"
+Center_Bool = true
+
+[node name="ui" type="Node2D" parent="."]
+position = Vector2( -579, -419 )
+
+[node name="UiIconStatePop1" type="Sprite" parent="ui"]
+position = Vector2( 831, 575 )
+texture = ExtResource( 9 )
+
+[node name="Cup4" type="Node2D" parent="ui"]
+position = Vector2( 831, 648 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="ui/Cup4"]
+texture = ExtResource( 24 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="ui/Cup4"]
+self_modulate = Color( 0.447059, 0.960784, 0.980392, 0.513726 )
+texture = ExtResource( 3 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="ui/Cup4"]
+self_modulate = Color( 0.447059, 0.960784, 0.980392, 0.513726 )
+texture = ExtResource( 8 )
+
+[node name="UiProcupWaterlayer3" type="Sprite" parent="ui/Cup4"]
+self_modulate = Color( 0.447059, 0.960784, 0.980392, 0.513726 )
+texture = ExtResource( 6 )
+
+[node name="UiProcupWaterlayer4" type="Sprite" parent="ui/Cup4"]
+self_modulate = Color( 0.447059, 0.960784, 0.980392, 0.513726 )
+texture = ExtResource( 10 )
+
+[node name="UiProcupWaterlayer5" type="Sprite" parent="ui/Cup4"]
+self_modulate = Color( 0.0745098, 0.478431, 1, 0.713726 )
+texture = ExtResource( 5 )
+
+[node name="UiProcupWaterlayer6" type="Sprite" parent="ui/Cup4"]
+self_modulate = Color( 0.0745098, 0.478431, 1, 0.713726 )
+texture = ExtResource( 4 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="ui/Cup4"]
+self_modulate = Color( 0.0745098, 0.478431, 1, 0.713726 )
+position = Vector2( 0, -46.25 )
+texture = ExtResource( 7 )
+
+[node name="UiProcupCup2" type="Sprite" parent="ui/Cup4"]
+texture = ExtResource( 25 )
+
+[node name="GuestBigbottlePop1" type="Sprite" parent="ui/Cup4"]
+position = Vector2( -9, 38.75 )
+texture = ExtResource( 35 )
+
+[node name="GuestBigbottlePop2" type="Sprite" parent="ui/Cup4"]
+position = Vector2( 9, 39.75 )
+texture = ExtResource( 32 )
+
+[node name="GuestBigbottlePop3" type="Sprite" parent="ui/Cup4"]
+position = Vector2( -16, 16.75 )
+texture = ExtResource( 36 )
+
+[node name="GuestBigbottlePop5" type="Sprite" parent="ui/Cup4"]
+position = Vector2( 15, 12.75 )
+texture = ExtResource( 33 )
+
+[node name="GuestBigbottlePop6" type="Sprite" parent="ui/Cup4"]
+position = Vector2( 10, 5.75 )
+texture = ExtResource( 31 )
+
+[node name="Icon2" type="Sprite" parent="ui"]
+position = Vector2( 602, 640 )
+texture = ExtResource( 16 )
+
+[node name="UiIconStatePop1" type="Sprite" parent="ui/Icon2"]
+position = Vector2( 0, 38 )
+texture = ExtResource( 9 )
+
+[node name="IconPopBlueorange" type="Sprite" parent="ui"]
+position = Vector2( 673, 639 )
+texture = ExtResource( 47 )
+
+[node name="UiIconStatePop2" type="Sprite" parent="ui/IconPopBlueorange"]
+position = Vector2( 0, 38 )
+texture = ExtResource( 11 )
+
+[node name="DeviceBobamachineUi1" type="Sprite" parent="ui"]
+position = Vector2( 636, 639 )
+texture = ExtResource( 48 )
+
+[node name="TotuInfo2" type="Sprite" parent="ui"]
+position = Vector2( 750, 654 )
+texture = ExtResource( 44 )
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2( -200, 322 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="Base1" type="Sprite" parent="1"]
+modulate = Color( 1, 1, 1, 0.545098 )
+position = Vector2( 0, -97 )
+texture = ExtResource( 15 )
+
+[node name="Base3" type="Sprite" parent="1"]
+modulate = Color( 0.882353, 0.964706, 0.964706, 0.576471 )
+position = Vector2( 0, -97 )
+texture = ExtResource( 17 )
+
+[node name="Base2" type="Sprite" parent="1"]
+position = Vector2( 0, -97 )
+texture = ExtResource( 14 )
+
+[node name="Form" type="Sprite" parent="1"]
+position = Vector2( 0, -154 )
+texture = ExtResource( 20 )
+offset = Vector2( 7, 41 )
+
+[node name="Decorative1" type="Sprite" parent="1"]
+position = Vector2( 0, -97 )
+texture = ExtResource( 19 )
+
+[node name="GuestGlassbottleBodyDecorative20" type="Sprite" parent="1"]
+position = Vector2( 0, -97 )
+texture = ExtResource( 21 )
+
+[node name="Arm" type="Sprite" parent="1"]
+position = Vector2( 12, -104 )
+texture = ExtResource( 13 )
+offset = Vector2( 4, -17 )
+
+[node name="GuestMarkcupLegStand1" type="Sprite" parent="1"]
+self_modulate = Color( 0.529412, 0.529412, 0.529412, 1 )
+position = Vector2( -6.99997, -45 )
+texture = ExtResource( 18 )
+offset = Vector2( -4, 20 )
+
+[node name="GuestMarkcupLegStand2" type="Sprite" parent="1"]
+self_modulate = Color( 0.47451, 0.47451, 0.47451, 1 )
+position = Vector2( 6.99997, -45 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 18 )
+offset = Vector2( -4, 20 )
+
+[node name="ui2" type="Node2D" parent="."]
+position = Vector2( -207, 328 )
+scale = Vector2( 1.3, 1.3 )
+
+[node name="UiPoptipIdeaSay" type="Sprite" parent="ui2"]
+position = Vector2( 87.6923, -176.154 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 12 )
+
+[node name="UiIconStatePop1" type="Sprite" parent="ui2"]
+position = Vector2( 33.2308, -187.538 )
+texture = ExtResource( 2 )
+
+[node name="UiIconStatePop2" type="Sprite" parent="ui2"]
+position = Vector2( 69.3846, -187.538 )
+texture = ExtResource( 9 )
+
+[node name="UiIconStatePop3" type="Sprite" parent="ui2"]
+position = Vector2( 104.769, -187.538 )
+texture = ExtResource( 11 )
+
+[node name="UiPoptipIdea2" type="Sprite" parent="ui2"]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 136.923, -187.692 )
+texture = ExtResource( 1 )

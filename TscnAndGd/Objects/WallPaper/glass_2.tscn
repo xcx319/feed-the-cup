@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resources/Maps/Tmap_wallpaper.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=83]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 510, 199, 240 )
+
+[node name="glass_9" type="Node2D"]
+z_as_relative = false
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 100, -120 )
+texture = SubResource( 83 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 199, 240 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 299, -120 )
+texture = SubResource( 83 )
+flip_h = true

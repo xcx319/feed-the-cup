@@ -1,0 +1,119 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_CoconutTree_2.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_CoconutTree_leaf_2.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_CoconutTree_leaf_3.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_CoconutTree_leaf_1.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_CoconutTree_leaf_4.tres" type="Texture" id=21]
+
+[sub_resource type="Animation" id=2]
+resource_name = "idle"
+length = 5.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("../Tree:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 2, -4.54021, 0, -1.7, 5.28472, 0.25, 0 ),
+"times": PoolRealArray( 0, 5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("../Tree/Main/Main3:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 1.7, -3.22747, 0, -2, 5.10622, 0.25, 0 ),
+"times": PoolRealArray( 0, 5 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("../Tree/Main/Main2:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.8, -3.42127, 0, -1.7, 6.07525, 0.25, 0 ),
+"times": PoolRealArray( 0, 5 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("../Tree/Main/Main4:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 2.3, 5.88145, 0, -1.7, -1.67701, 0.25, 0 ),
+"times": PoolRealArray( 0, 5 )
+}
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 25.0
+
+[node name="CocoTree" type="StaticBody2D"]
+collision_layer = 128
+collision_mask = 5120
+
+[node name="Tree" type="Node2D" parent="."]
+rotation = 0.0202982
+scale = Vector2( 1.8, 1.8 )
+
+[node name="Main" type="Node2D" parent="Tree"]
+position = Vector2( 7.22222, 6.11111 )
+
+[node name="Main2" type="Node2D" parent="Tree/Main"]
+position = Vector2( -19.1789, -238.275 )
+rotation = 0.0231575
+scale = Vector2( 1.1, 1.1 )
+
+[node name="OutdoorCoconutTreeLeaf3" type="Sprite" parent="Tree/Main/Main2"]
+position = Vector2( -1, -1 )
+texture = ExtResource( 13 )
+offset = Vector2( -12, -19 )
+
+[node name="Main1" type="Node2D" parent="Tree/Main"]
+position = Vector2( -7.22222, -6.11111 )
+
+[node name="Tree" type="Sprite" parent="Tree/Main/Main1"]
+position = Vector2( -22.2222, -55 )
+texture = ExtResource( 1 )
+offset = Vector2( 17, -58 )
+
+[node name="Main3" type="Node2D" parent="Tree/Main"]
+position = Vector2( -20.1789, -236.275 )
+rotation = 0.0180337
+
+[node name="OutdoorCoconutTreeLeaf1" type="Sprite" parent="Tree/Main/Main3"]
+position = Vector2( 2.88782, -0.379349 )
+rotation = 0.523599
+texture = ExtResource( 20 )
+offset = Vector2( 38, 5 )
+
+[node name="OutdoorCoconutTreeLeaf2" type="Sprite" parent="Tree/Main/Main3"]
+position = Vector2( -0.833473, 9.13237 )
+rotation = -0.261799
+texture = ExtResource( 12 )
+offset = Vector2( 11, 32 )
+
+[node name="Main4" type="Node2D" parent="Tree/Main"]
+position = Vector2( -28.936, -233.226 )
+rotation = -0.00434513
+
+[node name="OutdoorCoconutTreeLeaf4" type="Sprite" parent="Tree/Main/Main4"]
+position = Vector2( 6.0013, 0.992149 )
+rotation = 0.261799
+texture = ExtResource( 21 )
+offset = Vector2( -23, 51 )
+
+[node name="Aninode" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Aninode"]
+autoplay = "idle"
+anims/idle = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )

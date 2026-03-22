@@ -1,0 +1,327 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_light.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut_1.tres" type="Texture" id=2]
+[ext_resource path="res://TscnAndGd/UI/Info/BoardInfo.gd" type="Script" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_coin.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_devil_2.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_GuestView_per.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_GuestView_ok.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_GuestView_bad.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_multy.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_rep.tres" type="Texture" id=10]
+[ext_resource path="res://Sounds/Effect/掉落物品.wav" type="AudioStream" id=11]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_frame_light.tres" type="Texture" id=13]
+[ext_resource path="res://Language/Fonts/Base_l.tres" type="DynamicFont" id=14]
+
+[sub_resource type="Animation" id=1]
+resource_name = "init"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "非法经营"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 3, 3 ), Vector2( 1, 1 ) ]
+}
+tracks/3/type = "audio"
+tracks/3/path = NodePath("AudioStreamPlayer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 11 )
+} ],
+"times": PoolRealArray( 0.3 )
+}
+
+[node name="BoardInfo" type="Control"]
+margin_right = 1300.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 1300, 65 )
+script = ExtResource( 3 )
+
+[node name="BG" type="NinePatchRect" parent="."]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+input_pass_on_modal_close_click = false
+texture = ExtResource( 1 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="NinePatchRect" type="NinePatchRect" parent="BG"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -7.0
+margin_top = 4.0
+margin_right = -1186.0
+margin_bottom = -4.0
+rect_pivot_offset = Vector2( 375, 50 )
+texture = ExtResource( 2 )
+patch_margin_left = 57
+patch_margin_top = 27
+patch_margin_right = 52
+patch_margin_bottom = 30
+
+[node name="UiIconRep" type="Sprite" parent="BG/NinePatchRect"]
+position = Vector2( 24, 23 )
+texture = ExtResource( 10 )
+
+[node name="Control" type="Control" parent="BG"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+input_pass_on_modal_close_click = false
+
+[node name="Rank" type="Label" parent="BG/Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -1.0
+margin_top = -39.5
+margin_right = 124.0
+margin_bottom = 40.5
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Point" type="Label" parent="BG/Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 342.0
+margin_top = -39.5
+margin_right = 556.0
+margin_bottom = 40.5
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-"
+align = 2
+valign = 1
+autowrap = true
+
+[node name="Icon" type="Sprite" parent="BG/Control/Point"]
+light_mask = 0
+position = Vector2( 234, 40 )
+texture = ExtResource( 4 )
+
+[node name="Name" type="Label" parent="BG/Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 109.0
+margin_top = -39.5
+margin_right = 395.0
+margin_bottom = 40.5
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "----"
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+
+[node name="PlayerNum" type="Label" parent="BG/Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 556.0
+margin_top = -39.5
+margin_right = 636.0
+margin_bottom = 40.5
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "-"
+align = 2
+valign = 1
+autowrap = true
+
+[node name="Sprite" type="Sprite" parent="BG/Control/PlayerNum"]
+position = Vector2( 106, 40 )
+texture = ExtResource( 9 )
+
+[node name="Level" type="Label" parent="BG/Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 688.0
+margin_top = -39.5
+margin_right = 818.0
+margin_bottom = 40.5
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "21314"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Devil" type="Label" parent="BG/Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 804.0
+margin_top = -39.5
+margin_right = 901.0
+margin_bottom = 40.5
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+align = 2
+valign = 1
+autowrap = true
+
+[node name="Sprite" type="Sprite" parent="BG/Control/Devil"]
+position = Vector2( 122, 40 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 5 )
+
+[node name="Perfect" type="Label" parent="BG/Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 954.0
+margin_top = -40.0
+margin_right = 1034.0
+margin_bottom = 40.0
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "100"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Sprite" type="Sprite" parent="BG/Control/Perfect"]
+position = Vector2( 85, 40 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 6 )
+
+[node name="Good" type="Label" parent="BG/Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 1071.0
+margin_top = -40.0
+margin_right = 1151.0
+margin_bottom = 40.0
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "100"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Sprite2" type="Sprite" parent="BG/Control/Good"]
+position = Vector2( 87, 40 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 7 )
+
+[node name="Bad" type="Label" parent="BG/Control"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 1181.0
+margin_top = -40.0
+margin_right = 1261.0
+margin_bottom = 40.0
+input_pass_on_modal_close_click = false
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "100"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Sprite3" type="Sprite" parent="BG/Control/Bad"]
+position = Vector2( 84, 40 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 8 )
+
+[node name="Illegal" type="Label" parent="BG/Control"]
+visible = false
+margin_left = 53.0
+margin_top = 10.0
+margin_right = 185.0
+margin_bottom = 51.0
+rect_rotation = -10.0
+rect_pivot_offset = Vector2( 66, 20 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 14 )
+text = "非法经营"
+align = 1
+valign = 1
+script = ExtResource( 12 )
+LabelTEXT = "信息-异常"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="BG/Control/Illegal"]
+self_modulate = Color( 1, 0, 0, 0.784314 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -19.0
+margin_top = -15.0
+margin_right = 17.0
+margin_bottom = 12.0
+texture = ExtResource( 13 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="BG/Control/Illegal"]
+autoplay = "init"
+anims/init = SubResource( 1 )
+"anims/非法经营" = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="BG/Control/Illegal"]
+stream = ExtResource( 11 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

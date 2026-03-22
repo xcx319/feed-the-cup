@@ -1,0 +1,216 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Door_gray_1.tres" type="Texture" id=1]
+[ext_resource path="res://TscnAndGd/Objects/WallPaper/Door.gd" type="Script" id=2]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Door_gray_3.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Door_gray_2.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Door_gray_5.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Door_gray_4.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Door_staff_1.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Door_staff_2.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Door_staff_3.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Door_staff_4.tres" type="Texture" id=10]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 58.5, 66 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "close"
+length = 0.5
+step = 0.025
+tracks/0/type = "method"
+tracks/0/path = NodePath("..")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "AniCall_Closed"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../TexNode/Door:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 6 ), ExtResource( 5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../TexNode/Door:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 0.45, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 58, -150 ), Vector2( 58, -150 ), Vector2( 62, -156 ), Vector2( 58, -150 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../TexNode/Door/Staff:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), null ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../TexNode/Door/Staff:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TexNode/Door:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../TexNode/Door/Staff:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 7 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../TexNode/Door/Staff:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "open"
+length = 0.5
+step = 0.025
+tracks/0/type = "value"
+tracks/0/path = NodePath("../TexNode/Door:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../TexNode/Door:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.45, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 58, -150 ), Vector2( 58, -150 ), Vector2( 54, -144 ), Vector2( 58, -150 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../TexNode/Door/Staff:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ null, ExtResource( 10 ), ExtResource( 9 ), ExtResource( 8 ), ExtResource( 7 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../TexNode/Door/Staff:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[node name="Door_Staff" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TexNode" type="Node2D" parent="."]
+position = Vector2( -105, 1 )
+
+[node name="Door" type="Sprite" parent="TexNode"]
+self_modulate = Color( 0.290196, 0.8, 0.270588, 1 )
+position = Vector2( 58, -150 )
+texture = ExtResource( 5 )
+
+[node name="Staff" type="Sprite" parent="TexNode/Door"]
+visible = false
+position = Vector2( -5, -39 )
+texture = ExtResource( 7 )
+
+[node name="AreaNode" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="AreaNode"]
+collision_layer = 0
+collision_mask = 9222
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaNode/Area2D"]
+position = Vector2( -4.5, -51 )
+shape = SubResource( 2 )
+
+[node name="AniNode" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AniNode"]
+autoplay = "init"
+anims/close = SubResource( 5 )
+anims/init = SubResource( 4 )
+anims/open = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="body_entered" from="AreaNode/Area2D" to="." method="_on_player_entered"]
+[connection signal="body_exited" from="AreaNode/Area2D" to="." method="_on_player_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

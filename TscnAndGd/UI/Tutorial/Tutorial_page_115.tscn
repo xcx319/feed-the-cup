@@ -1,0 +1,216 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_bayberry_slice_3.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_bayberry_slice_1.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_bayberry_slice_2.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_Fruitcore_close.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_bayberry_apart_4.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_bayberry_apart_3.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_bayberry_slice_4.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_bayberry_apart_1.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_Fruitcore_base.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_bayberry_apart_2.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_Fruitcore_cover.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_bayberry_single_1.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=14]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=15]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_box_square_front.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_box_square.tres" type="Texture" id=17]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=18]
+
+[node name="杨梅" type="Node2D"]
+
+[node name="181" type="RichTextLabel" parent="."]
+margin_left = -324.0
+margin_top = -14.0
+margin_right = 329.0
+margin_bottom = 161.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "将杨梅放入去核器，用力压下！
+去核后的杨梅可以作为小料加入饮品，顾客们不用担心被果核卡住。
+用不完的杨梅记得存放在小料冰柜里。"
+text = "将杨梅放入去核器，用力压下！
+去核后的杨梅可以作为小料加入饮品，顾客们不用担心被果核卡住。
+用不完的杨梅记得存放在小料冰柜里。"
+script = ExtResource( 15 )
+LabelTEXT = "信息-文字说明-181"
+Center_Bool = true
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2( -73, 88 )
+
+[node name="TexNode" type="Node2D" parent="1"]
+use_parent_material = true
+position = Vector2( -202, -206 )
+
+[node name="base" type="Sprite" parent="1/TexNode"]
+texture = ExtResource( 9 )
+offset = Vector2( 0, -30 )
+
+[node name="open" type="Sprite" parent="1/TexNode"]
+texture = ExtResource( 11 )
+offset = Vector2( 0, -30 )
+
+[node name="FruitBayberrySingle1" type="Sprite" parent="1/TexNode"]
+position = Vector2( -68, -22 )
+rotation = -0.261799
+texture = ExtResource( 12 )
+
+[node name="TexNode2" type="Node2D" parent="1"]
+use_parent_material = true
+position = Vector2( -34, -207 )
+
+[node name="base" type="Sprite" parent="1/TexNode2"]
+texture = ExtResource( 9 )
+offset = Vector2( 0, -30 )
+
+[node name="open" type="Sprite" parent="1/TexNode2"]
+texture = ExtResource( 11 )
+offset = Vector2( 0, -30 )
+
+[node name="Fruit" type="Node2D" parent="1/TexNode2"]
+
+[node name="FruitBayberrySlice1" type="Sprite" parent="1/TexNode2/Fruit"]
+position = Vector2( -1, -17 )
+texture = ExtResource( 8 )
+
+[node name="FruitBayberrySlice2" type="Sprite" parent="1/TexNode2/Fruit"]
+position = Vector2( -21, -7 )
+texture = ExtResource( 10 )
+
+[node name="FruitBayberrySlice3" type="Sprite" parent="1/TexNode2/Fruit"]
+position = Vector2( 12, 11 )
+rotation = -3.14159
+texture = ExtResource( 6 )
+
+[node name="FruitBayberrySlice4" type="Sprite" parent="1/TexNode2/Fruit"]
+position = Vector2( -12, 12 )
+rotation = -0.523598
+scale = Vector2( -1, 1 )
+texture = ExtResource( 5 )
+
+[node name="FruitBayberrySlice5" type="Sprite" parent="1/TexNode2/Fruit"]
+position = Vector2( 20, -9 )
+texture = ExtResource( 10 )
+
+[node name="TexNode3" type="Node2D" parent="1"]
+use_parent_material = true
+position = Vector2( 150, -209 )
+
+[node name="base" type="Sprite" parent="1/TexNode3"]
+texture = ExtResource( 9 )
+offset = Vector2( 0, -30 )
+
+[node name="Fruit" type="Node2D" parent="1/TexNode3"]
+
+[node name="FruitBayberrySlice3" type="Sprite" parent="1/TexNode3/Fruit"]
+position = Vector2( 12, 11 )
+rotation = -3.14159
+texture = ExtResource( 6 )
+
+[node name="FruitBayberrySlice4" type="Sprite" parent="1/TexNode3/Fruit"]
+position = Vector2( -12, 12 )
+rotation = -0.523598
+scale = Vector2( -1, 1 )
+texture = ExtResource( 5 )
+
+[node name="close" type="Sprite" parent="1/TexNode3"]
+position = Vector2( 0, -13 )
+texture = ExtResource( 4 )
+
+[node name="TexNode4" type="Node2D" parent="1"]
+use_parent_material = true
+position = Vector2( 333, -204 )
+
+[node name="base" type="Sprite" parent="1/TexNode4"]
+texture = ExtResource( 9 )
+offset = Vector2( 0, -30 )
+
+[node name="open" type="Sprite" parent="1/TexNode4"]
+texture = ExtResource( 11 )
+offset = Vector2( 0, -30 )
+
+[node name="Fruit" type="Node2D" parent="1/TexNode4"]
+
+[node name="FruitBayberrySlice1" type="Sprite" parent="1/TexNode4/Fruit"]
+position = Vector2( -1, -17 )
+texture = ExtResource( 3 )
+
+[node name="FruitBayberrySlice2" type="Sprite" parent="1/TexNode4/Fruit"]
+position = Vector2( -21, -7 )
+texture = ExtResource( 2 )
+
+[node name="FruitBayberrySlice3" type="Sprite" parent="1/TexNode4/Fruit"]
+position = Vector2( 12, 11 )
+rotation = -3.14159
+texture = ExtResource( 3 )
+
+[node name="FruitBayberrySlice4" type="Sprite" parent="1/TexNode4/Fruit"]
+position = Vector2( -12, 12 )
+rotation = -0.523598
+scale = Vector2( -1, 1 )
+texture = ExtResource( 1 )
+
+[node name="FruitBayberrySlice5" type="Sprite" parent="1/TexNode4/Fruit"]
+position = Vector2( 20, -9 )
+texture = ExtResource( 7 )
+
+[node name="TotuInfo1" type="Sprite" parent="1"]
+position = Vector2( -234, -228 )
+rotation = -0.261799
+texture = ExtResource( 13 )
+
+[node name="TotuInfo2" type="Sprite" parent="1"]
+position = Vector2( -119, -213 )
+texture = ExtResource( 14 )
+
+[node name="TotuInfo3" type="Sprite" parent="1"]
+position = Vector2( 60, -215 )
+texture = ExtResource( 14 )
+
+[node name="TotuInfo4" type="Sprite" parent="1"]
+position = Vector2( 248, -215 )
+texture = ExtResource( 14 )
+
+[node name="box3" type="Node2D" parent="."]
+position = Vector2( 339, -84 )
+
+[node name="ItemBoxSquare" type="Sprite" parent="box3"]
+position = Vector2( -2.5, 3 )
+texture = ExtResource( 17 )
+
+[node name="FruitBayberrySlice1" type="Sprite" parent="box3/ItemBoxSquare"]
+position = Vector2( 7.5, 3 )
+texture = ExtResource( 2 )
+
+[node name="FruitBayberrySlice2" type="Sprite" parent="box3/ItemBoxSquare"]
+position = Vector2( -4.5, -8 )
+texture = ExtResource( 3 )
+
+[node name="FruitBayberrySlice3" type="Sprite" parent="box3/ItemBoxSquare"]
+position = Vector2( 11.5, -13 )
+texture = ExtResource( 1 )
+
+[node name="FruitBayberrySlice4" type="Sprite" parent="box3/ItemBoxSquare"]
+position = Vector2( -10.5, 6 )
+texture = ExtResource( 7 )
+
+[node name="ItemBoxSquareFront" type="Sprite" parent="box3"]
+position = Vector2( -2.5, 3 )
+texture = ExtResource( 16 )
+
+[node name="TotuInfo1" type="Sprite" parent="box3"]
+position = Vector2( -25, -36 )
+texture = ExtResource( 13 )
+
+[node name="X" parent="." instance=ExtResource( 18 )]
+margin_left = -37.0
+margin_top = -202.0
+margin_right = -37.0
+margin_bottom = -202.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-压"
+OnBut = false

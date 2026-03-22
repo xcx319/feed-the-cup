@@ -1,0 +1,152 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_cuptip_1.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_frame_line.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_water_all.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_2.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_top.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_1.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cupline_2.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_2.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_2.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_lemon_single_2.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_8.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_3.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_mix_2.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_hademade_lemon.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=17]
+
+[node name="挤柠檬汁" type="Node2D"]
+position = Vector2( -63, -100 )
+
+[node name="要求" type="Node2D" parent="."]
+position = Vector2( 136, 56 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="要求"]
+margin_left = -136.0
+margin_top = -66.0
+margin_right = 111.0
+margin_bottom = 93.0
+texture = ExtResource( 2 )
+patch_margin_left = 15
+patch_margin_top = 12
+patch_margin_right = 20
+patch_margin_bottom = 25
+
+[node name="UiFrameLine" type="Sprite" parent="要求"]
+position = Vector2( -16.25, 11.75 )
+scale = Vector2( 0.9, 0.774286 )
+texture = ExtResource( 3 )
+
+[node name="Cup2" type="Node2D" parent="要求"]
+position = Vector2( -85, 8 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="要求/Cup2"]
+texture = ExtResource( 9 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="要求/Cup2"]
+self_modulate = Color( 0.972549, 1, 0.341176, 0.556863 )
+texture = ExtResource( 7 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="要求/Cup2"]
+self_modulate = Color( 0.972549, 1, 0.341176, 0.556863 )
+texture = ExtResource( 5 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="要求/Cup2"]
+self_modulate = Color( 0.972549, 1, 0.341176, 0.556863 )
+position = Vector2( 0, 6 )
+texture = ExtResource( 6 )
+
+[node name="UiProcupCup2" type="Sprite" parent="要求/Cup2"]
+texture = ExtResource( 10 )
+
+[node name="IconLiquidJuiceLemon" type="Sprite" parent="要求"]
+position = Vector2( 12, -22 )
+texture = ExtResource( 16 )
+
+[node name="IconLiquidNumber2" type="Sprite" parent="要求"]
+position = Vector2( 60, 19 )
+texture = ExtResource( 15 )
+
+[node name="IconLiquidWaterAll" type="Sprite" parent="要求"]
+position = Vector2( 59, -23 )
+texture = ExtResource( 4 )
+
+[node name="Cup2" type="Node2D" parent="."]
+position = Vector2( 543, 67 )
+scale = Vector2( 0.717486, 0.710514 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="Cup2"]
+texture = ExtResource( 9 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="Cup2"]
+self_modulate = Color( 1, 0.964706, 0.133333, 0.784314 )
+texture = ExtResource( 7 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="Cup2"]
+self_modulate = Color( 1, 0.964706, 0.133333, 0.784314 )
+position = Vector2( 2, 24 )
+scale = Vector2( 0.9, 1 )
+texture = ExtResource( 6 )
+
+[node name="UiProcupCup2" type="Sprite" parent="Cup2"]
+texture = ExtResource( 10 )
+
+[node name="UiProcupCupline2" type="Sprite" parent="Cup2"]
+position = Vector2( 30, 10 )
+texture = ExtResource( 8 )
+
+[node name="IconLiquidJuiceLemon2" type="Sprite" parent="Cup2"]
+position = Vector2( -6.10352e-05, -46.4453 )
+scale = Vector2( 1.39376, 1.40743 )
+texture = ExtResource( 16 )
+
+[node name="Cup" type="Node2D" parent="."]
+position = Vector2( 296, 67 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="Cup"]
+texture = ExtResource( 9 )
+
+[node name="UiProcupCup2" type="Sprite" parent="Cup"]
+texture = ExtResource( 10 )
+
+[node name="UiProcupCupline2" type="Sprite" parent="Cup"]
+position = Vector2( 30, 10 )
+texture = ExtResource( 8 )
+
+[node name="TotuInfo3" type="Sprite" parent="Cup"]
+position = Vector2( 57.1428, 24.2858 )
+texture = ExtResource( 14 )
+
+[node name="FruitLemonSingle4" type="Sprite" parent="Cup"]
+position = Vector2( 105.714, 18.5714 )
+scale = Vector2( 1.42857, 1.42857 )
+texture = ExtResource( 12 )
+
+[node name="UiIconInfo8" type="Sprite" parent="."]
+position = Vector2( 451.5, 31.5 )
+texture = ExtResource( 13 )
+
+[node name="IconMenuArrow3" type="Sprite" parent="."]
+position = Vector2( 452.5, 83.5 )
+scale = Vector2( 0.833332, 0.833332 )
+texture = ExtResource( 17 )
+
+[node name="46" type="RichTextLabel" parent="."]
+margin_left = -90.0
+margin_top = 153.0
+margin_right = 655.0
+margin_bottom = 322.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "这里卖鲜榨柠檬汁，不再是瓶装廉价果汁了。
+用爪子把柠檬汁挤进杯子里！很新鲜的哦~
+一颗柠檬可以榨出一份液体。"
+text = "这里卖鲜榨柠檬汁，不再是瓶装廉价果汁了。
+用爪子把柠檬汁挤进杯子里！很新鲜的哦~
+一颗柠檬可以榨出一份液体。"
+script = ExtResource( 1 )
+LabelTEXT = "信息-文字说明-46"
+Center_Bool = true

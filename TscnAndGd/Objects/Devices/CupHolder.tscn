@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_cupholder_back.tres" type="Texture" id=1]
+[ext_resource path="res://TscnAndGd/Objects/Devices/Control_Info.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_cupholder_front.tres" type="Texture" id=5]
+[ext_resource path="res://TscnAndGd/Objects/Devices/CupHolder.gd" type="Script" id=6]
+
+[node name="CupHolder" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="TexNode" type="Node2D" parent="."]
+
+[node name="back" type="Sprite" parent="TexNode"]
+texture = ExtResource( 1 )
+offset = Vector2( 0, -15 )
+
+[node name="front" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+offset = Vector2( 0, -15 )
+
+[node name="Control_Info" parent="." instance=ExtResource( 3 )]

@@ -1,0 +1,113 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Buttons/StaffWorkButton.gd" type="Script" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_skill_1.tres" type="Texture" id=2]
+[ext_resource path="res://Language/Fonts/cn_font_BaseBlack.tres" type="DynamicFont" id=3]
+[ext_resource path="res://TscnAndGd/UI/Info/StudyIcon.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Resources/Maps/logic_white.png" type="Texture" id=5]
+
+[sub_resource type="StyleBoxTexture" id=232]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 100, 100 )
+margin_left = 1.0
+margin_right = 1.0
+margin_top = 1.0
+margin_bottom = 1.0
+modulate_color = Color( 1, 1, 1, 0.588235 )
+
+[sub_resource type="StyleBoxEmpty" id=231]
+
+[sub_resource type="StyleBoxEmpty" id=233]
+
+[node name="Button" type="Button"]
+margin_right = 425.0
+margin_bottom = 23.0
+custom_styles/hover = SubResource( 232 )
+custom_styles/pressed = SubResource( 232 )
+custom_styles/focus = SubResource( 232 )
+custom_styles/disabled = SubResource( 231 )
+custom_styles/normal = SubResource( 233 )
+script = ExtResource( 1 )
+
+[node name="ICON" type="Sprite" parent="."]
+position = Vector2( 45, 10.5 )
+scale = Vector2( 0.625, 0.625 )
+texture = ExtResource( 2 )
+
+[node name="priority" type="Label" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -10.5
+margin_right = 35.0
+margin_bottom = 10.5
+text = "1"
+align = 1
+valign = 1
+
+[node name="WORKNAME" type="Label" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 65.0
+margin_top = -10.5
+margin_right = 185.0
+margin_bottom = 10.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "工作文字描述"
+clip_text = true
+
+[node name="HBox" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -205.0
+margin_top = -8.0
+margin_right = -9.0
+margin_bottom = 8.0
+alignment = 1
+
+[node name="1" parent="HBox" instance=ExtResource( 4 )]
+margin_left = 10.0
+margin_right = 26.0
+margin_bottom = 16.0
+
+[node name="2" parent="HBox" instance=ExtResource( 4 )]
+margin_left = 30.0
+margin_right = 46.0
+margin_bottom = 16.0
+
+[node name="3" parent="HBox" instance=ExtResource( 4 )]
+margin_left = 50.0
+margin_right = 66.0
+margin_bottom = 16.0
+
+[node name="4" parent="HBox" instance=ExtResource( 4 )]
+margin_left = 70.0
+margin_right = 86.0
+margin_bottom = 16.0
+
+[node name="5" parent="HBox" instance=ExtResource( 4 )]
+margin_left = 90.0
+margin_right = 106.0
+margin_bottom = 16.0
+
+[node name="6" parent="HBox" instance=ExtResource( 4 )]
+margin_left = 110.0
+margin_right = 126.0
+margin_bottom = 16.0
+
+[node name="7" parent="HBox" instance=ExtResource( 4 )]
+margin_left = 130.0
+margin_right = 146.0
+margin_bottom = 16.0
+
+[node name="8" parent="HBox" instance=ExtResource( 4 )]
+margin_left = 150.0
+margin_right = 166.0
+margin_bottom = 16.0
+
+[node name="9" parent="HBox" instance=ExtResource( 4 )]
+margin_left = 170.0
+margin_right = 186.0
+margin_bottom = 16.0

@@ -1,0 +1,224 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/InGame/ChallengeUI.gd" type="Script" id=2]
+[ext_resource path="res://TscnAndGd/UI/Buttons/RewardChooseButton.tscn" type="PackedScene" id=3]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=4]
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut_1.tres" type="Texture" id=6]
+
+[sub_resource type="CanvasItemMaterial" id=123]
+blend_mode = 1
+
+[sub_resource type="Animation" id=124]
+resource_name = "init"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("NinePatchRect:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.705882 ), Color( 0.564706, 0, 0, 0.705882 ), Color( 0, 0, 0, 0.705882 ) ]
+}
+
+[sub_resource type="Animation" id=120]
+resource_name = "hide"
+length = 0.5
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_del"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 540 ), Vector2( -500, 540 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/Title/NinePatchRect2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=121]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -500, 540 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=122]
+resource_name = "show"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -500, 540 ), Vector2( 50, 540 ), Vector2( 0, 540 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/Title/NinePatchRect2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 0.211765, 0.211765, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/3/type = "animation"
+tracks/3/path = NodePath("Control/Title/Loop")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+
+[node name="Challenge" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="Control" type="Control" parent="."]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -500.0
+margin_right = -500.0
+
+[node name="Title" type="Node2D" parent="Control"]
+position = Vector2( 0, 13 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Control/Title"]
+self_modulate = Color( 0, 0, 0, 0.705882 )
+margin_left = -103.0
+margin_top = -218.0
+margin_right = 413.0
+margin_bottom = -149.0
+rect_scale = Vector2( 1, -1 )
+texture = ExtResource( 6 )
+patch_margin_left = 56
+patch_margin_right = 56
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Control/Title"]
+material = SubResource( 123 )
+margin_left = -111.0
+margin_top = -208.0
+margin_right = 423.0
+margin_bottom = -119.0
+rect_scale = Vector2( 1, -1 )
+texture = ExtResource( 6 )
+patch_margin_left = 54
+patch_margin_right = 54
+
+[node name="Label" type="Label" parent="Control/Title"]
+margin_left = 51.0
+margin_top = -283.0
+margin_right = 367.0
+margin_bottom = -221.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "恶魔契约的代价"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 4 )
+LabelTEXT = "信息-代价信息"
+
+[node name="Loop" type="AnimationPlayer" parent="Control/Title"]
+anims/init = SubResource( 124 )
+
+[node name="ChallengeInfo" parent="Control" instance=ExtResource( 3 )]
+margin_left = 50.0
+margin_top = -200.0
+margin_right = 370.0
+margin_bottom = 200.0
+focus_mode = 0
+mouse_filter = 2
+
+[node name="Ani" type="AnimationPlayer" parent="Control"]
+root_node = NodePath("../..")
+autoplay = "init"
+anims/hide = SubResource( 120 )
+anims/init = SubResource( 121 )
+anims/show = SubResource( 122 )

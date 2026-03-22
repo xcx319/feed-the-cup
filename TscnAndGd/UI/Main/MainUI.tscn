@@ -1,0 +1,1560 @@
+[gd_scene load_steps=74 format=2]
+
+[ext_resource path="res://Language/Fonts/Base_m.tres" type="DynamicFont" id=1]
+[ext_resource path="res://TscnAndGd/Buttons/MainButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TscnAndGd/UI/Main/MainUI.gd" type="Script" id=3]
+[ext_resource path="res://Sounds/Effect/人声嚼珍珠.wav" type="AudioStream" id=4]
+[ext_resource path="res://Sounds/Random/Straw/人声吸管5.wav" type="AudioStream" id=5]
+[ext_resource path="res://Sounds/Random/Straw/人声吸管1.wav" type="AudioStream" id=6]
+[ext_resource path="res://Resources/UI/Main/MainBG_1.png" type="Texture" id=7]
+[ext_resource path="res://Resources/UI/Main/MainBG_logo_1.png" type="Texture" id=8]
+[ext_resource path="res://Resources/Effects/Single/Single/light_square_1.png" type="Texture" id=9]
+[ext_resource path="res://Sounds/Random/Straw/人声吸管4.wav" type="AudioStream" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_fuction_0.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_fuction_2.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_fuction_4.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_fuction_7.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_fuction_8.tres" type="Texture" id=15]
+[ext_resource path="res://Sounds/Random/Straw/人声吸管2.wav" type="AudioStream" id=16]
+[ext_resource path="res://Sounds/Random/Straw/人声吸管3.wav" type="AudioStream" id=17]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=18]
+[ext_resource path="res://TscnAndGd/UI/Main/Cast.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_fuction_9.tres" type="Texture" id=20]
+[ext_resource path="res://Language/Fonts/Base_m_outline.tres" type="DynamicFont" id=21]
+[ext_resource path="res://Language/Fonts/Base_s.tres" type="DynamicFont" id=22]
+[ext_resource path="res://Resources/Loading/Loading_pack.sprites/Loading_control_2.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut _2.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/UI/Main/Logo_Zh_orig.png" type="Texture" id=25]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_fuction_1.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_dark.tres" type="Texture" id=27]
+[ext_resource path="res://Language/Fonts/Base_l_outline.tres" type="DynamicFont" id=28]
+[ext_resource path="res://Language/Fonts/Base_l.tres" type="DynamicFont" id=29]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_lable.tres" type="Texture" id=30]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=31]
+[ext_resource path="res://Sounds/Effect/气泡.wav" type="AudioStream" id=32]
+[ext_resource path="res://Sounds/Effect/气泡2.wav" type="AudioStream" id=33]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_0.tres" type="Texture" id=34]
+[ext_resource path="res://Resources/Loading/Loading_pack.sprites/icon_discord.tres" type="Texture" id=35]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_5.png" type="Texture" id=36]
+[ext_resource path="res://Resources/Loading/Loading_pack.sprites/icon_qq.tres" type="Texture" id=37]
+[ext_resource path="res://TscnAndGd/UI/Buttons/button_base.gd" type="Script" id=38]
+[ext_resource path="res://Resources/Loading/Loading_pack.sprites/icon_save.tres" type="Texture" id=39]
+[ext_resource path="res://Resources/Loading/Loading_pack.sprites/icon_steam.tres" type="Texture" id=40]
+
+[sub_resource type="StyleBoxTexture" id=134]
+texture = ExtResource( 27 )
+region_rect = Rect2( 0, 0, 90, 93 )
+margin_left = 30.0
+margin_right = 30.0
+margin_top = 30.0
+margin_bottom = 30.0
+modulate_color = Color( 0.768627, 0.996078, 1, 1 )
+
+[sub_resource type="StyleBoxTexture" id=194]
+texture = ExtResource( 27 )
+region_rect = Rect2( 0, 0, 90, 93 )
+margin_left = 30.0
+margin_right = 30.0
+margin_top = 30.0
+margin_bottom = 30.0
+modulate_color = Color( 1, 0.705882, 0.286275, 1 )
+
+[sub_resource type="StyleBoxTexture" id=195]
+texture = ExtResource( 27 )
+region_rect = Rect2( 0, 0, 90, 93 )
+margin_left = 30.0
+margin_right = 30.0
+margin_top = 30.0
+margin_bottom = 30.0
+modulate_color = Color( 1, 0.517647, 0.517647, 1 )
+
+[sub_resource type="Animation" id=14]
+resource_name = "pressed"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.9, 0.9 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "on_pressed"
+} ]
+}
+
+[sub_resource type="Animation" id=186]
+resource_name = "ch"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 25 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.7, 0.7 ) ]
+}
+
+[sub_resource type="Animation" id=187]
+resource_name = "en"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 8 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.9, 0.9 ) ]
+}
+
+[sub_resource type="Animation" id=184]
+resource_name = "KeySetting"
+length = 0.3
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=185]
+resource_name = "KeySettingHide"
+length = 0.5
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "grab_focus"
+} ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.1
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=11]
+length = 0.5
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "grab_focus"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("..:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath("..")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=193]
+resource_name = "Tutorial"
+length = 0.2
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=183]
+resource_name = "init"
+length = 0.5
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath("Logo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.44, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 383, -280 ), Vector2( 383, -280 ), Vector2( 383, 282 ), Vector2( 383, 270 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "init"
+
+[sub_resource type="Animation" id=204]
+resource_name = "play"
+length = 20.0
+loop = true
+tracks/0/type = "audio"
+tracks/0/path = NodePath("AudioStreamPlayer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 17 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 4 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 10 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 5 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 16 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 17 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 6 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 5 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 10 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 17 )
+} ],
+"times": PoolRealArray( 0.2, 0.8, 4.1, 4.9, 6.1, 8.8, 11.5, 14.5, 17, 18 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Con/LoadingControl2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2.06752, 3.06752, 4, 5, 6.06752, 7.06752, 8, 9, 10.0675, 11.0675, 12, 13, 14, 15.0675, 16, 17, 18.0675, 19.0675, 20 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0, -10.0, 10.0 ]
+}
+
+[sub_resource type="Theme" id=216]
+VScrollBar/styles/scroll = null
+
+[sub_resource type="StyleBoxEmpty" id=196]
+
+[sub_resource type="StyleBoxEmpty" id=197]
+
+[sub_resource type="StyleBoxEmpty" id=198]
+
+[sub_resource type="StyleBoxEmpty" id=199]
+
+[sub_resource type="StyleBoxEmpty" id=200]
+
+[sub_resource type="Animation" id=203]
+resource_name = "DEMO_New"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/Button:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/Button:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.2, 1.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "audio"
+tracks/4/path = NodePath("AudioStreamPlayer2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 32 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 33 )
+} ],
+"times": PoolRealArray( 0.2, 1.5 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Control:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.7, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 610, -1000 ), Vector2( 610, -1000 ), Vector2( 610, 275.5 ), Vector2( 610, 275.5 ) ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("..")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1.7 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_CanPress"
+} ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("TextureProgress:value")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.7, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 100.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("TextureProgress:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.7, 0.8, 1.5, 1.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/9/type = "method"
+tracks/9/path = NodePath("Control/Label")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "DEMO_Info_New" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Control/UpdateInfo:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Control/Label:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Control:rect_size")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 700, 529 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("TextureProgress:rect_position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 682, 751 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Control/Button:rect_position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 258, 426 ) ]
+}
+
+[sub_resource type="Animation" id=215]
+resource_name = "UpdateInfo"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/Button:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/Button:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "audio"
+tracks/4/path = NodePath("AudioStreamPlayer2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 32 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 33 )
+} ],
+"times": PoolRealArray( 0.2, 1 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Control:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 610, -1000 ), Vector2( 610, 200 ) ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("..")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_CanPress"
+} ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("TextureProgress:value")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.2, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 100.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("TextureProgress:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.2, 0.3, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/9/type = "method"
+tracks/9/path = NodePath("Control/Label")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "DEMO_Info_New" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Control/Label:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Control:rect_size")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 700, 740 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Control/UpdateInfo:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("TextureProgress:rect_position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 682, 892 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Control/Button:rect_position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 258, 653.5 ), Vector2( 258, 651 ) ]
+}
+
+[sub_resource type="Animation" id=201]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=202]
+resource_name = "show"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/Button:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 4.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/Button:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 4.5, 5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "audio"
+tracks/4/path = NodePath("AudioStreamPlayer2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 32 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 33 )
+} ],
+"times": PoolRealArray( 0.2, 4.8 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Control:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 610, -1000 ), Vector2( 610, -1000 ), Vector2( 610, 275.5 ) ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("..")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 4.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_CanPress"
+} ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("TextureProgress:value")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.7, 4.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 100.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("TextureProgress:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 0.7, 0.8, 4.3, 4.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/9/type = "method"
+tracks/9/path = NodePath("Control/Label")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "DEMO_Info" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="StyleBoxTexture" id=210]
+texture = ExtResource( 36 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 1, 0, 0.392157 )
+
+[sub_resource type="StyleBoxEmpty" id=211]
+
+[sub_resource type="StyleBoxEmpty" id=212]
+
+[sub_resource type="StyleBoxEmpty" id=213]
+
+[sub_resource type="StyleBoxEmpty" id=214]
+
+[sub_resource type="StyleBoxEmpty" id=206]
+
+[sub_resource type="StyleBoxEmpty" id=207]
+
+[sub_resource type="StyleBoxEmpty" id=208]
+
+[sub_resource type="StyleBoxEmpty" id=209]
+
+[node name="MainUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+script = ExtResource( 3 )
+
+[node name="MainButList" type="VBoxContainer" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_bottom = 1.0
+margin_left = 165.0
+margin_top = 563.0
+margin_right = 665.0
+margin_bottom = -23.0
+rect_min_size = Vector2( 400, 200 )
+custom_constants/separation = 10
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="LightSquare1" type="Sprite" parent="MainButList"]
+modulate = Color( 0, 0, 0, 0.537255 )
+position = Vector2( 245, 172 )
+scale = Vector2( 8, 6 )
+texture = ExtResource( 9 )
+
+[node name="Play" parent="MainButList" instance=ExtResource( 2 )]
+margin_top = 0.0
+margin_right = 500.0
+margin_bottom = 60.0
+focus_neighbour_top = NodePath(".")
+focus_neighbour_bottom = NodePath("../WishList")
+custom_styles/hover = SubResource( 134 )
+ButLabel = "按钮-开始"
+ButType = 3
+
+[node name="icon1" type="Sprite" parent="MainButList/Play"]
+position = Vector2( 42, 22 )
+texture = ExtResource( 12 )
+
+[node name="WishList" parent="MainButList" instance=ExtResource( 2 )]
+margin_top = 70.0
+margin_right = 500.0
+margin_bottom = 130.0
+focus_neighbour_top = NodePath("../Play")
+focus_neighbour_bottom = NodePath("../Tutorial")
+custom_styles/hover = SubResource( 194 )
+text = "添加愿望单"
+ButLabel = "按钮-添加愿望单"
+ButType = 3
+
+[node name="BG" parent="MainButList/WishList" index="0"]
+self_modulate = Color( 1, 0.956863, 0.298039, 1 )
+
+[node name="icon3" type="Sprite" parent="MainButList/WishList"]
+position = Vector2( 42, 22 )
+texture = ExtResource( 14 )
+
+[node name="Tutorial" parent="MainButList" instance=ExtResource( 2 )]
+margin_top = 140.0
+margin_right = 500.0
+margin_bottom = 200.0
+focus_neighbour_top = NodePath("../WishList")
+focus_neighbour_bottom = NodePath("../Statistics")
+custom_styles/hover = SubResource( 134 )
+text = "按钮-新手教程"
+ButLabel = "按钮-新手教程"
+ButType = 3
+
+[node name="icon2" type="Sprite" parent="MainButList/Tutorial"]
+position = Vector2( 42, 22 )
+texture = ExtResource( 26 )
+
+[node name="Statistics" parent="MainButList" instance=ExtResource( 2 )]
+visible = false
+margin_top = 75.0
+margin_right = 500.0
+margin_bottom = 135.0
+focus_neighbour_top = NodePath("../Tutorial")
+focus_neighbour_bottom = NodePath("../Options")
+custom_styles/hover = SubResource( 134 )
+text = "按钮-统计"
+ButLabel = "按钮-统计"
+ButType = 3
+
+[node name="icon3" type="Sprite" parent="MainButList/Statistics"]
+position = Vector2( 42, 22 )
+texture = ExtResource( 13 )
+
+[node name="Options" parent="MainButList" instance=ExtResource( 2 )]
+margin_top = 210.0
+margin_right = 500.0
+margin_bottom = 270.0
+focus_neighbour_top = NodePath("../Statistics")
+focus_neighbour_bottom = NodePath("../KeySettingBut")
+custom_styles/hover = SubResource( 134 )
+text = "按钮-设置"
+ButLabel = "按钮-设置"
+ButType = 3
+
+[node name="icon4" type="Sprite" parent="MainButList/Options"]
+position = Vector2( 42, 22 )
+texture = ExtResource( 11 )
+
+[node name="KeySettingBut" parent="MainButList" instance=ExtResource( 2 )]
+margin_top = 280.0
+margin_right = 500.0
+margin_bottom = 340.0
+focus_neighbour_top = NodePath("../Options")
+focus_neighbour_bottom = NodePath("../Cast")
+custom_styles/hover = SubResource( 134 )
+text = "按钮-设置"
+ButLabel = "按钮-按键设置"
+ButType = 3
+
+[node name="Icon" type="Sprite" parent="MainButList/KeySettingBut"]
+position = Vector2( 42, 24 )
+texture = ExtResource( 20 )
+
+[node name="Cast" parent="MainButList" instance=ExtResource( 2 )]
+margin_top = 350.0
+margin_right = 500.0
+margin_bottom = 410.0
+focus_neighbour_top = NodePath("../KeySettingBut")
+focus_neighbour_bottom = NodePath("../Exit")
+custom_styles/hover = SubResource( 134 )
+text = "按钮-制作人员"
+ButLabel = "按钮-制作人员"
+ButType = 3
+
+[node name="icon3" type="Sprite" parent="MainButList/Cast"]
+position = Vector2( 42, 22 )
+texture = ExtResource( 13 )
+
+[node name="Exit" parent="MainButList" instance=ExtResource( 2 )]
+margin_top = 420.0
+margin_right = 500.0
+margin_bottom = 480.0
+focus_neighbour_top = NodePath("../Cast")
+focus_neighbour_bottom = NodePath(".")
+custom_styles/hover = SubResource( 195 )
+text = "按钮-退出游戏"
+ButLabel = "按钮-退出游戏"
+ButType = 4
+
+[node name="BG" parent="MainButList/Exit" index="0"]
+self_modulate = Color( 1, 0.784314, 0.784314, 1 )
+
+[node name="Ani" parent="MainButList/Exit" index="1"]
+anims/pressed = SubResource( 14 )
+
+[node name="icon5" type="Sprite" parent="MainButList/Exit"]
+position = Vector2( 42, 22 )
+texture = ExtResource( 15 )
+
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 960, 540 )
+z_index = -3
+texture = ExtResource( 7 )
+
+[node name="Logo" type="Sprite" parent="."]
+position = Vector2( 383, -280 )
+scale = Vector2( 0.7, 0.7 )
+z_index = -2
+texture = ExtResource( 25 )
+offset = Vector2( 80, 20 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Logo"]
+anims/ch = SubResource( 186 )
+anims/en = SubResource( 187 )
+
+[node name="ButtonAni" type="AnimationPlayer" parent="."]
+root_node = NodePath("../MainButList")
+autoplay = "ShowUp"
+anims/KeySetting = SubResource( 184 )
+anims/KeySettingHide = SubResource( 185 )
+anims/MainHide = SubResource( 10 )
+anims/ShowUp = SubResource( 11 )
+anims/Tutorial = SubResource( 193 )
+
+[node name="LogoAni" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/init = SubResource( 183 )
+
+[node name="Loop" type="AnimationPlayer" parent="."]
+autoplay = "play"
+anims/init = SubResource( 15 )
+anims/play = SubResource( 204 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+bus = "Music"
+
+[node name="Cast" parent="." instance=ExtResource( 19 )]
+modulate = Color( 1, 1, 1, 0 )
+mouse_filter = 2
+input_pass_on_modal_close_click = false
+
+[node name="Node2D" parent="Cast/Moon" index="1"]
+visible = false
+rotation = 0.0
+
+[node name="LightSquare1" parent="Cast/Moon" index="3"]
+self_modulate = Color( 0.0196078, 0.00784314, 0.0862745, 1 )
+
+[node name="LightTrapezoid1" parent="Cast/Moon" index="4"]
+self_modulate = Color( 0.211765, 0.368627, 0.388235, 1 )
+
+[node name="Body_note" parent="Cast/Bear/SpriteTex/Top_note/All_note" index="2"]
+rotation = 0.0
+
+[node name="Head" parent="Cast/Bear/SpriteTex/Top_note/All_note/Body_note/BodyPose/Body/HeadPose" index="0"]
+rotation = 0.0
+
+[node name="HomeComputerdesk2" parent="Cast/Bear/SpriteTex/Top_note/All_note/Body_note/BodyPose" index="1"]
+rotation = 0.0
+
+[node name="Arm_Hold" parent="Cast/Bear/SpriteTex/Top_note/All_note/Body_note/BodyPose" index="2"]
+rotation = 0.0
+
+[node name="Arm" parent="Cast/Bear/SpriteTex/Top_note/All_note/Body_note/BodyPose" index="3"]
+rotation = 0.0
+
+[node name="Head" parent="Cast/Fox/SpriteTex/Top_note/All_note/Body_note/BodyPose/Body/HeadPose" index="0"]
+rotation = 0.0
+
+[node name="Arm_Hold" parent="Cast/Fox/SpriteTex/Top_note/All_note/Body_note/BodyPose" index="2"]
+rotation = 0.0
+
+[node name="Arm" parent="Cast/Fox/SpriteTex/Top_note/All_note/Body_note/BodyPose" index="3"]
+rotation = 0.0
+
+[node name="Con" type="Node2D" parent="."]
+position = Vector2( 1788, 932 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Con"]
+self_modulate = Color( 0.490196, 1, 0, 0.784314 )
+show_behind_parent = true
+margin_left = -568.0
+margin_top = -11.0
+margin_right = 189.0
+margin_bottom = 95.0
+texture = ExtResource( 24 )
+patch_margin_left = 44
+patch_margin_right = 48
+
+[node name="Label" type="Label" parent="Con"]
+margin_left = -416.0
+margin_top = -9.0
+margin_right = 129.0
+margin_bottom = 45.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "推荐手柄推荐手柄"
+autowrap = true
+script = ExtResource( 18 )
+LabelTEXT = "信息-推荐手柄"
+
+[node name="LoadingControl2" type="Sprite" parent="Con"]
+position = Vector2( -504, 39 )
+rotation = 0.174533
+texture = ExtResource( 23 )
+
+[node name="6" type="Label" parent="Con"]
+margin_left = -241.0
+margin_top = 46.0
+margin_right = 129.0
+margin_bottom = 94.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 22 )
+text = "Early Access does not represent final quality, the game will be continuously updated."
+align = 2
+valign = 2
+autowrap = true
+script = ExtResource( 18 )
+LabelTEXT = "DEMO_Info_6"
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="Con"]
+self_modulate = Color( 0, 0, 0, 0.784314 )
+show_behind_parent = true
+margin_left = -331.0
+margin_top = 95.0
+margin_right = 268.0
+margin_bottom = 134.0
+texture = ExtResource( 24 )
+patch_margin_left = 44
+patch_margin_right = 48
+
+[node name="DEMOLABEL" type="Label" parent="."]
+margin_left = 1482.0
+margin_top = 1030.0
+margin_right = 1913.0
+margin_bottom = 1066.0
+custom_fonts/font = ExtResource( 21 )
+text = "Feed the Cups DEMO v1.3 不稳定版"
+
+[node name="NewInfo" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Control" type="Control" parent="NewInfo"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -350.0
+margin_top = -340.0
+margin_right = 350.0
+margin_bottom = 400.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="NewInfo/Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 30 )
+patch_margin_left = 100
+patch_margin_top = 50
+patch_margin_right = 100
+patch_margin_bottom = 50
+
+[node name="TitleLabel" type="Label" parent="NewInfo/Control"]
+anchor_right = 1.0
+margin_left = 11.0
+margin_top = 13.0
+margin_right = -13.0
+margin_bottom = 107.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 28 )
+text = "重要信息"
+align = 1
+valign = 1
+script = ExtResource( 18 )
+LabelTEXT = "DEMO_Title"
+
+[node name="Label" type="Label" parent="NewInfo/Control"]
+visible = false
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 12.0
+margin_top = -131.5
+margin_right = -13.0
+margin_bottom = 147.5
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 29 )
+text = "存档部分重置
+1.关卡高难度清空
+2.大部分统计数据清空"
+align = 1
+valign = 1
+script = ExtResource( 18 )
+LabelTEXT = "DEMO_Info"
+
+[node name="UpdateInfo" type="RichTextLabel" parent="NewInfo/Control"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 43.0
+margin_top = -280.0
+margin_right = -46.0
+margin_bottom = 305.0
+theme = SubResource( 216 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center]
+欢迎来到0.9.x内测版！
+此版本可能存在问题导致无法正常进行游戏
+此版本内容可能根据测试情况进行调整
+内测内容：
+1.地铁站现在暂时只会前往新增的第五章关卡。
+2.地铁站新增初始整理货物逻辑（检票员处开关）。
+3.第八章第一关开放测试。
+
+近期更新内容汇总：[fill][b]
+分解机与Steam交互逻辑优化，分解更快速。（预计新增自动分解功能，暂未实现）
+邮箱逻辑更新，与Steam交互逻辑优化，信封大于10时，进行十连抽，小于10时进行单抽。
+再次修正联机进行游戏回家时，某些情况下角色读取错误问题。
+更新零卡糖机按键位置。
+修正气泡机右侧气泡显示略微偏差的问题。
+面糊桶未清空的隔夜提示文字修正。
+帅哥哥布林收取酒桶后，现在可以正常关店了。
+更新8-1地图碰撞，避免顾客被挤进墙内，酒杯掉在无法拾取的地方。
+啤酒关卡对应教学更新。
+啤酒关卡初始难度，顾客从无啤酒泡调整为满啤酒泡。（降低啤酒消耗）
+[/b][/fill]
+[/center]"
+text = "
+欢迎来到0.9.x内测版！
+此版本可能存在问题导致无法正常进行游戏
+此版本内容可能根据测试情况进行调整
+内测内容：
+1.地铁站现在暂时只会前往新增的第五章关卡。
+2.地铁站新增初始整理货物逻辑（检票员处开关）。
+3.第八章第一关开放测试。
+
+近期更新内容汇总：
+分解机与Steam交互逻辑优化，分解更快速。（预计新增自动分解功能，暂未实现）
+邮箱逻辑更新，与Steam交互逻辑优化，信封大于10时，进行十连抽，小于10时进行单抽。
+再次修正联机进行游戏回家时，某些情况下角色读取错误问题。
+更新零卡糖机按键位置。
+修正气泡机右侧气泡显示略微偏差的问题。
+面糊桶未清空的隔夜提示文字修正。
+帅哥哥布林收取酒桶后，现在可以正常关店了。
+更新8-1地图碰撞，避免顾客被挤进墙内，酒杯掉在无法拾取的地方。
+啤酒关卡对应教学更新。
+啤酒关卡初始难度，顾客从无啤酒泡调整为满啤酒泡。（降低啤酒消耗）
+
+"
+
+[node name="Button" type="Button" parent="NewInfo/Control"]
+margin_left = 258.0
+margin_top = 651.0
+margin_right = 458.0
+margin_bottom = 731.0
+custom_styles/hover = SubResource( 196 )
+custom_styles/pressed = SubResource( 197 )
+custom_styles/focus = SubResource( 198 )
+custom_styles/disabled = SubResource( 199 )
+custom_styles/normal = SubResource( 200 )
+
+[node name="A" parent="NewInfo/Control/Button" instance=ExtResource( 31 )]
+margin_left = 45.0
+margin_top = 37.5
+margin_right = 45.0
+margin_bottom = 37.5
+bool_Small = true
+bool_Static = true
+Info_Str = "按钮-确定"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="NewInfo"]
+autoplay = "init"
+anims/DEMO_New = SubResource( 203 )
+anims/UpdateInfo = SubResource( 215 )
+anims/init = SubResource( 201 )
+anims/show = SubResource( 202 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="NewInfo"]
+stream = ExtResource( 33 )
+bus = "Effect"
+
+[node name="TextureProgress" type="TextureProgress" parent="NewInfo"]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 1, 1, 0.784314 )
+margin_left = 682.0
+margin_top = 892.0
+margin_right = 1252.0
+margin_bottom = 915.0
+value = 100.0
+texture_under = ExtResource( 34 )
+texture_progress = ExtResource( 34 )
+tint_under = Color( 0, 0, 0, 1 )
+tint_progress = Color( 0, 1, 0, 1 )
+nine_patch_stretch = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -124.0
+margin_top = -235.0
+margin_right = -24.0
+margin_bottom = 189.0
+
+[node name="SaveFolder" type="Button" parent="VBoxContainer"]
+margin_right = 100.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+focus_mode = 0
+custom_styles/hover = SubResource( 210 )
+custom_styles/pressed = SubResource( 211 )
+custom_styles/focus = SubResource( 212 )
+custom_styles/disabled = SubResource( 213 )
+custom_styles/normal = SubResource( 214 )
+script = ExtResource( 38 )
+
+[node name="Sprite" type="Sprite" parent="VBoxContainer/SaveFolder"]
+show_behind_parent = true
+position = Vector2( 50, 50 )
+texture = ExtResource( 39 )
+
+[node name="QQGROUP" type="Button" parent="VBoxContainer"]
+margin_top = 108.0
+margin_right = 100.0
+margin_bottom = 208.0
+rect_min_size = Vector2( 100, 100 )
+focus_mode = 0
+custom_styles/hover = SubResource( 210 )
+custom_styles/pressed = SubResource( 206 )
+custom_styles/focus = SubResource( 207 )
+custom_styles/disabled = SubResource( 208 )
+custom_styles/normal = SubResource( 209 )
+script = ExtResource( 38 )
+
+[node name="Sprite" type="Sprite" parent="VBoxContainer/QQGROUP"]
+show_behind_parent = true
+position = Vector2( 50, 50 )
+texture = ExtResource( 37 )
+
+[node name="Discord" type="Button" parent="VBoxContainer"]
+margin_top = 216.0
+margin_right = 100.0
+margin_bottom = 316.0
+rect_min_size = Vector2( 100, 100 )
+focus_mode = 0
+custom_styles/hover = SubResource( 210 )
+custom_styles/pressed = SubResource( 206 )
+custom_styles/focus = SubResource( 207 )
+custom_styles/disabled = SubResource( 208 )
+custom_styles/normal = SubResource( 209 )
+script = ExtResource( 38 )
+
+[node name="Sprite" type="Sprite" parent="VBoxContainer/Discord"]
+show_behind_parent = true
+position = Vector2( 50, 50 )
+texture = ExtResource( 35 )
+
+[node name="SteamGroup" type="Button" parent="VBoxContainer"]
+margin_top = 324.0
+margin_right = 100.0
+margin_bottom = 424.0
+rect_min_size = Vector2( 100, 100 )
+focus_mode = 0
+custom_styles/hover = SubResource( 210 )
+custom_styles/pressed = SubResource( 206 )
+custom_styles/focus = SubResource( 207 )
+custom_styles/disabled = SubResource( 208 )
+custom_styles/normal = SubResource( 209 )
+script = ExtResource( 38 )
+
+[node name="Sprite" type="Sprite" parent="VBoxContainer/SteamGroup"]
+show_behind_parent = true
+position = Vector2( 50, 50 )
+texture = ExtResource( 40 )
+
+[connection signal="pressed" from="MainButList/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="MainButList/WishList" to="." method="_on_WishList_pressed"]
+[connection signal="pressed" from="MainButList/Tutorial" to="." method="_on_Tutorial_pressed"]
+[connection signal="pressed" from="MainButList/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="MainButList/KeySettingBut" to="." method="_on_KeySettingBut_pressed"]
+[connection signal="pressed" from="MainButList/Cast" to="." method="_on_Cast_pressed"]
+[connection signal="pressed" from="MainButList/Exit" to="." method="_on_Exit_pressed"]
+[connection signal="pressed" from="NewInfo/Control/Button" to="." method="call_CheckINFO"]
+[connection signal="pressed" from="VBoxContainer/SaveFolder" to="." method="_on_SaveFolder_pressed"]
+[connection signal="pressed" from="VBoxContainer/QQGROUP" to="." method="_on_QQGROUP_pressed"]
+[connection signal="pressed" from="VBoxContainer/Discord" to="." method="_on_Discord_pressed"]
+[connection signal="pressed" from="VBoxContainer/SteamGroup" to="." method="_on_SteamGroup_pressed"]
+
+[editable path="MainButList/WishList"]
+[editable path="MainButList/Exit"]
+[editable path="Cast"]

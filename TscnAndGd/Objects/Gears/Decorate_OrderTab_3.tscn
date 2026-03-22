@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_Streamer.tscn" type="PackedScene" id=1]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_Air.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_Show_1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://TscnAndGd/Objects/Gears/Decorate_Show_2.tscn" type="PackedScene" id=5]
+
+[node name="Decorate_OrderTab" type="Node2D"]
+
+[node name="Decorate_Show_1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2, -39 )
+
+[node name="Decorate_Show_2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 106, -35 )
+
+[node name="Decorate_Streamer" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1, -77 )
+
+[node name="Decorate_Air" parent="." instance=ExtResource( 2 )]
+position = Vector2( 104, 0 )

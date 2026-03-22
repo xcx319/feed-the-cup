@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resources/Outdoor/outdoor_pack.sprites/Outdoor_statue_1.tres" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 30, 38.5 )
+
+[node name="ParkStatue" type="StaticBody2D"]
+light_mask = 2
+collision_layer = 128
+collision_mask = 5120
+
+[node name="Textnode" type="Node2D" parent="."]
+position = Vector2( -4, -31 )
+
+[node name="Fount" type="Sprite" parent="Textnode"]
+position = Vector2( 15, 0 )
+texture = ExtResource( 1 )
+offset = Vector2( 0, -50 )
+
+[node name="Aninode" type="Node2D" parent="."]
+position = Vector2( -4, -31 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -2.49999, -10 )
+rotation = 1.5708
+shape = SubResource( 1 )

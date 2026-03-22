@@ -1,0 +1,372 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_idle_0.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_head_front.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_tail_back.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_hold_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_idle_1.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_body_front.tres" type="Texture" id=8]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=9]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Resources/Devices/table/Device_table_1.png" type="Texture" id=11]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_2.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_top.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_1.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_2.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_2.tres" type="Texture" id=16]
+
+
+[node name="交换杯号" type="Node2D"]
+
+[node name="Label23" type="RichTextLabel" parent="."]
+margin_left = -276.0
+margin_top = 127.0
+margin_right = 309.0
+margin_bottom = 277.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "你是否因为看错单号而烦恼？
+杯子上的单号可以撕下来互换，这样不怕做错号啦。"
+text = "你是否因为看错单号而烦恼？
+杯子上的单号可以撕下来互换，这样不怕做错号啦。"
+script = ExtResource( 9 )
+LabelTEXT = "信息-文字说明-23"
+Center_Bool = true
+
+[node name="B1" type="Node2D" parent="."]
+position = Vector2( -8.5, -123 )
+
+[node name="Bear3" type="Node2D" parent="B1"]
+position = Vector2( -208, 75 )
+
+[node name="Leg_L" type="Node2D" parent="B1/Bear3"]
+position = Vector2( -7, -27 )
+
+[node name="L" type="Sprite" parent="B1/Bear3/Leg_L"]
+texture = ExtResource( 1 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="B1/Bear3"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="R" type="Sprite" parent="B1/Bear3/Leg_R"]
+texture = ExtResource( 1 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="B1/Bear3"]
+show_behind_parent = true
+position = Vector2( 0, -25 )
+rotation = -0.0441624
+scale = Vector2( 1.025, 1.015 )
+
+[node name="BodyPose" type="Node2D" parent="B1/Bear3/Body_note"]
+
+[node name="Body" type="Node2D" parent="B1/Bear3/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="B1/Bear3/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+texture = ExtResource( 8 )
+
+[node name="HeadPose" type="Node2D" parent="B1/Bear3/Body_note/BodyPose/Body"]
+position = Vector2( 0, -70 )
+
+[node name="Head" type="Node2D" parent="B1/Bear3/Body_note/BodyPose/Body/HeadPose"]
+rotation = 0.131937
+
+[node name="Down" type="Sprite" parent="B1/Bear3/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 2 )
+offset = Vector2( 0, -26 )
+
+[node name="Arm_Hold" type="Node2D" parent="B1/Bear3/Body_note/BodyPose"]
+position = Vector2( 22, -47 )
+rotation = 1.309
+
+[node name="Pose_Hold" type="Node2D" parent="B1/Bear3/Body_note/BodyPose/Arm_Hold"]
+rotation = -0.0846485
+
+[node name="Arm" type="Sprite" parent="B1/Bear3/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+rotation = -1.309
+scale = Vector2( -1, 1 )
+texture = ExtResource( 6 )
+offset = Vector2( -10, 3 )
+
+[node name="Weapon_note" type="Node2D" parent="B1/Bear3/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 42.9619, -0.720909 )
+
+[node name="3" type="Node2D" parent="B1/Bear3/Body_note/BodyPose/Arm_Hold/Pose_Hold/Weapon_note"]
+position = Vector2( -31.2766, -30.9243 )
+rotation = -1.0472
+
+[node name="Cup" type="Node2D" parent="B1/Bear3/Body_note/BodyPose/Arm_Hold/Pose_Hold/Weapon_note/3"]
+position = Vector2( -1, 0 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="B1/Bear3/Body_note/BodyPose/Arm_Hold/Pose_Hold/Weapon_note/3/Cup"]
+texture = ExtResource( 12 )
+
+[node name="UiProcupCup2" type="Sprite" parent="B1/Bear3/Body_note/BodyPose/Arm_Hold/Pose_Hold/Weapon_note/3/Cup"]
+texture = ExtResource( 15 )
+
+[node name="IDLabel" type="Label" parent="B1/Bear3/Body_note/BodyPose/Arm_Hold/Pose_Hold/Weapon_note/3"]
+margin_left = -11.0
+margin_top = -42.0
+margin_right = 44.0
+margin_bottom = -16.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "#2"
+valign = 1
+
+[node name="Arm" type="Node2D" parent="B1/Bear3/Body_note/BodyPose"]
+position = Vector2( -22, -47 )
+rotation = -0.315317
+scale = Vector2( -1.15, 1.15 )
+
+[node name="Pose" type="Node2D" parent="B1/Bear3/Body_note/BodyPose/Arm"]
+rotation = -0.117282
+
+[node name="Arm" type="Sprite" parent="B1/Bear3/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 7 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="B1/Bear3/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 0, -15 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 5 )
+offset = Vector2( 20, -16 )
+
+[node name="WorkBench2" type="Node2D" parent="B1"]
+position = Vector2( -95, 165 )
+
+[node name="L" type="Sprite" parent="B1/WorkBench2"]
+texture = ExtResource( 11 )
+offset = Vector2( -25, -30 )
+hframes = 2
+vframes = 8
+frame = 10
+
+[node name="R" type="Sprite" parent="B1/WorkBench2"]
+texture = ExtResource( 11 )
+offset = Vector2( 25, -30 )
+flip_h = true
+hframes = 2
+vframes = 8
+frame = 10
+
+[node name="2" type="Node2D" parent="B1"]
+position = Vector2( -95, 69 )
+
+[node name="Cup" type="Node2D" parent="B1/2"]
+position = Vector2( -1, 0 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="B1/2/Cup"]
+texture = ExtResource( 12 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="B1/2/Cup"]
+self_modulate = Color( 1, 0.690196, 0.341176, 0.909804 )
+texture = ExtResource( 14 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="B1/2/Cup"]
+self_modulate = Color( 1, 0.690196, 0.341176, 0.909804 )
+texture = ExtResource( 16 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="B1/2/Cup"]
+self_modulate = Color( 1, 0.690196, 0.341176, 0.909804 )
+position = Vector2( 0, 6 )
+texture = ExtResource( 13 )
+
+[node name="UiProcupCup2" type="Sprite" parent="B1/2/Cup"]
+texture = ExtResource( 15 )
+
+[node name="IDLabel" type="Label" parent="B1/2"]
+margin_left = -11.0
+margin_top = -42.0
+margin_right = 44.0
+margin_bottom = -16.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "#1"
+valign = 1
+
+[node name="B" parent="B1" instance=ExtResource( 10 )]
+margin_left = -89.0
+margin_top = -32.0
+margin_right = -89.0
+margin_bottom = -32.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-交换单号"
+OnBut = false
+
+[node name="TotuInfo1" type="Sprite" parent="B1"]
+position = Vector2( -111, 4 )
+texture = ExtResource( 4 )
+
+[node name="TotuInfo2" type="Sprite" parent="."]
+position = Vector2( 21.5, -11 )
+texture = ExtResource( 3 )
+
+[node name="B2" type="Node2D" parent="."]
+position = Vector2( -8.5, -123 )
+
+[node name="Bear4" type="Node2D" parent="B2"]
+position = Vector2( 104, 81 )
+
+[node name="Leg_L" type="Node2D" parent="B2/Bear4"]
+position = Vector2( -7, -27 )
+
+[node name="L" type="Sprite" parent="B2/Bear4/Leg_L"]
+texture = ExtResource( 1 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="B2/Bear4"]
+position = Vector2( 7, -27 )
+scale = Vector2( -1, 1 )
+
+[node name="R" type="Sprite" parent="B2/Bear4/Leg_R"]
+texture = ExtResource( 1 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="B2/Bear4"]
+show_behind_parent = true
+position = Vector2( 0, -25 )
+rotation = -0.0441624
+scale = Vector2( 1.025, 1.015 )
+
+[node name="BodyPose" type="Node2D" parent="B2/Bear4/Body_note"]
+
+[node name="Body" type="Node2D" parent="B2/Bear4/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="B2/Bear4/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+texture = ExtResource( 8 )
+
+[node name="HeadPose" type="Node2D" parent="B2/Bear4/Body_note/BodyPose/Body"]
+position = Vector2( 0, -70 )
+
+[node name="Head" type="Node2D" parent="B2/Bear4/Body_note/BodyPose/Body/HeadPose"]
+rotation = 0.131937
+
+[node name="Down" type="Sprite" parent="B2/Bear4/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 2 )
+offset = Vector2( 0, -26 )
+
+[node name="Arm_Hold" type="Node2D" parent="B2/Bear4/Body_note/BodyPose"]
+position = Vector2( 22, -47 )
+rotation = 0.261799
+
+[node name="Pose_Hold" type="Node2D" parent="B2/Bear4/Body_note/BodyPose/Arm_Hold"]
+rotation = -0.0846485
+
+[node name="Arm" type="Sprite" parent="B2/Bear4/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+rotation = -1.309
+scale = Vector2( -1, 1 )
+texture = ExtResource( 6 )
+offset = Vector2( -10, 3 )
+
+[node name="Weapon_note" type="Node2D" parent="B2/Bear4/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 42.9619, -0.720909 )
+
+[node name="3" type="Node2D" parent="B2/Bear4/Body_note/BodyPose/Arm_Hold/Pose_Hold/Weapon_note"]
+position = Vector2( -15.5964, -48.9922 )
+
+[node name="Cup" type="Node2D" parent="B2/Bear4/Body_note/BodyPose/Arm_Hold/Pose_Hold/Weapon_note/3"]
+position = Vector2( -1, 0 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="B2/Bear4/Body_note/BodyPose/Arm_Hold/Pose_Hold/Weapon_note/3/Cup"]
+texture = ExtResource( 12 )
+
+[node name="UiProcupCup2" type="Sprite" parent="B2/Bear4/Body_note/BodyPose/Arm_Hold/Pose_Hold/Weapon_note/3/Cup"]
+texture = ExtResource( 15 )
+
+[node name="IDLabel" type="Label" parent="B2/Bear4/Body_note/BodyPose/Arm_Hold/Pose_Hold/Weapon_note/3"]
+margin_left = -11.0
+margin_top = -42.0
+margin_right = 44.0
+margin_bottom = -16.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "#1"
+valign = 1
+
+[node name="Arm" type="Node2D" parent="B2/Bear4/Body_note/BodyPose"]
+position = Vector2( -22, -47 )
+rotation = -0.315317
+scale = Vector2( -1.15, 1.15 )
+
+[node name="Pose" type="Node2D" parent="B2/Bear4/Body_note/BodyPose/Arm"]
+rotation = -0.117282
+
+[node name="Arm" type="Sprite" parent="B2/Bear4/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 7 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="B2/Bear4/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 0, -15 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 5 )
+offset = Vector2( 20, -16 )
+
+[node name="WorkBench3" type="Node2D" parent="B2"]
+position = Vector2( 199, 166 )
+
+[node name="L" type="Sprite" parent="B2/WorkBench3"]
+texture = ExtResource( 11 )
+offset = Vector2( -25, -30 )
+hframes = 2
+vframes = 8
+frame = 10
+
+[node name="R" type="Sprite" parent="B2/WorkBench3"]
+texture = ExtResource( 11 )
+offset = Vector2( 25, -30 )
+flip_h = true
+hframes = 2
+vframes = 8
+frame = 10
+
+[node name="1" type="Node2D" parent="B2"]
+position = Vector2( 198, 72 )
+
+[node name="Cup" type="Node2D" parent="B2/1"]
+position = Vector2( -1, 0 )
+scale = Vector2( 0.6, 0.6 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="B2/1/Cup"]
+texture = ExtResource( 12 )
+
+[node name="UiProcupWaterlayer1" type="Sprite" parent="B2/1/Cup"]
+self_modulate = Color( 1, 0.690196, 0.341176, 0.909804 )
+texture = ExtResource( 14 )
+
+[node name="UiProcupWaterlayer2" type="Sprite" parent="B2/1/Cup"]
+self_modulate = Color( 1, 0.690196, 0.341176, 0.909804 )
+texture = ExtResource( 16 )
+
+[node name="UiProcupWaterlayerTop" type="Sprite" parent="B2/1/Cup"]
+self_modulate = Color( 1, 0.690196, 0.341176, 0.909804 )
+position = Vector2( 0, 6 )
+texture = ExtResource( 13 )
+
+[node name="UiProcupCup2" type="Sprite" parent="B2/1/Cup"]
+texture = ExtResource( 15 )
+
+[node name="IDLabel" type="Label" parent="B2/1"]
+margin_left = -11.0
+margin_top = -42.0
+margin_right = 44.0
+margin_bottom = -16.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "#2"
+valign = 1

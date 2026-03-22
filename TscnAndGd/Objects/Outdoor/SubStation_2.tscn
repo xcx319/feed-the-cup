@@ -1,0 +1,2639 @@
+[gd_scene load_steps=90 format=2]
+
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Sub_down_3.tres" type="Texture" id=1]
+[ext_resource path="res://TscnAndGd/Buttons/LogicBut.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TscnAndGd/UI/InGame/黑幕.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_cup_group_2.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_light.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Effects/Single/Single/Particle_circle_5.png" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_coin.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_gift_high.tres" type="Texture" id=14]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=15]
+[ext_resource path="res://Language/Fonts/Base_special_W.tres" type="DynamicFont" id=16]
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=17]
+[ext_resource path="res://Language/Fonts/Base_l_outline.tres" type="DynamicFont" id=18]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Language/Fonts/Base.tres" type="DynamicFont" id=21]
+[ext_resource path="res://TscnAndGd/Buttons/Devil_Icon.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_poptip_idea_say.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_frame.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_app_nostar.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_app_star.tres" type="Texture" id=26]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip.tres" type="Texture" id=27]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_Menu.tres" type="Texture" id=28]
+[ext_resource path="res://Resources/UI/Scrolls/ui_scroll_pack.sprites/Icon_menu_daily_2.tres" type="Texture" id=29]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_money.tres" type="Texture" id=30]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut.tres" type="Texture" id=31]
+[ext_resource path="res://TscnAndGd/Objects/Outdoor/SubStation.gd" type="Script" id=32]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_none.tres" type="Texture" id=33]
+[ext_resource path="res://Language/Fonts/Base_m_outline.tres" type="DynamicFont" id=34]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_devil_2.tres" type="Texture" id=35]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_button_special_blank_dark.tres" type="Texture" id=36]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_button_special_blank_orange.tres" type="Texture" id=37]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_tips_3.tres" type="Texture" id=38]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Sub_train_2.tres" type="Texture" id=39]
+[ext_resource path="res://Resources/Building/Building_pack.sprites/Sub_train_1.tres" type="Texture" id=40]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_Bigbg.tres" type="Texture" id=41]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_multy.tres" type="Texture" id=42]
+
+[sub_resource type="Animation" id=321]
+resource_name = "homemoney"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 1.7, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Control/Label")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-货币不足" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="Animation" id=317]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=318]
+resource_name = "play"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 1.7, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Control/Label")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-前往地铁站" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="StyleBoxTexture" id=185]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 1, 1, 0.392157 )
+
+[sub_resource type="StyleBoxTexture" id=186]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="StyleBoxEmpty" id=187]
+
+[sub_resource type="StyleBoxEmpty" id=188]
+
+[sub_resource type="StyleBoxEmpty" id=189]
+
+[sub_resource type="Animation" id=271]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=272]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.588235, 0, 1 ) ]
+}
+
+[sub_resource type="DynamicFontData" id=190]
+font_path = "res://Language/Fonts/猫啃网秀雅圆.ttf"
+
+[sub_resource type="DynamicFont" id=191]
+size = 50
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 190 )
+
+[sub_resource type="Animation" id=269]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=270]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.588235, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=289]
+resource_name = "-1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "?" ]
+}
+
+[sub_resource type="Animation" id=258]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=259]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.25098, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=260]
+resource_name = "3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.501961, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=261]
+resource_name = "4"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.74902, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=262]
+resource_name = "5"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=263]
+resource_name = "6"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.74902, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=264]
+resource_name = "7"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.501961, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=265]
+resource_name = "8"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.25098, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=266]
+resource_name = "9"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=319]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=320]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.588235, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=288]
+resource_name = "-1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=267]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=268]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.588235, 0, 1 ) ]
+}
+
+[sub_resource type="StyleBoxTexture" id=292]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 100, 100 )
+modulate_color = Color( 1, 1, 1, 0.392157 )
+
+[sub_resource type="StyleBoxTexture" id=293]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 100, 100 )
+
+[sub_resource type="StyleBoxEmpty" id=294]
+
+[sub_resource type="StyleBoxEmpty" id=295]
+
+[sub_resource type="StyleBoxEmpty" id=296]
+
+[sub_resource type="StyleBoxTexture" id=314]
+texture = ExtResource( 37 )
+region_rect = Rect2( 0, 0, 85, 74 )
+margin_left = 30.0
+margin_right = 30.0
+margin_top = 30.0
+margin_bottom = 30.0
+modulate_color = Color( 1, 1, 1, 0.392157 )
+
+[sub_resource type="StyleBoxTexture" id=297]
+texture = ExtResource( 37 )
+region_rect = Rect2( 0, 0, 85, 74 )
+margin_left = 30.0
+margin_right = 30.0
+margin_top = 30.0
+margin_bottom = 30.0
+
+[sub_resource type="StyleBoxTexture" id=312]
+texture = ExtResource( 36 )
+region_rect = Rect2( 0, 0, 85, 74 )
+margin_left = 30.0
+margin_right = 30.0
+margin_top = 30.0
+margin_bottom = 30.0
+modulate_color = Color( 1, 0.309804, 0.309804, 1 )
+
+[sub_resource type="StyleBoxTexture" id=299]
+texture = ExtResource( 36 )
+region_rect = Rect2( 0, 0, 85, 74 )
+margin_left = 30.0
+margin_right = 30.0
+margin_top = 30.0
+margin_bottom = 30.0
+
+[sub_resource type="ButtonGroup" id=300]
+
+[sub_resource type="Animation" id=301]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=302]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.588235, 0, 1 ) ]
+}
+
+[sub_resource type="StyleBoxTexture" id=315]
+texture = ExtResource( 37 )
+region_rect = Rect2( 0, 0, 85, 74 )
+margin_left = 30.0
+margin_right = 30.0
+margin_top = 30.0
+margin_bottom = 30.0
+modulate_color = Color( 1, 1, 1, 0.392157 )
+
+[sub_resource type="StyleBoxTexture" id=313]
+texture = ExtResource( 36 )
+region_rect = Rect2( 0, 0, 85, 74 )
+margin_left = 30.0
+margin_right = 30.0
+margin_top = 30.0
+margin_bottom = 30.0
+modulate_color = Color( 1, 0.309804, 0.309804, 1 )
+
+[sub_resource type="Animation" id=303]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=304]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:custom_colors/font_color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.588235, 0, 1 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=290]
+extents = Vector2( 120.5, 60 )
+
+[sub_resource type="RectangleShape2D" id=316]
+extents = Vector2( 203.5, 60 )
+
+[sub_resource type="Animation" id=291]
+resource_name = "NoIn"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 1.2, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, -5.0, 5.0, 0.0, 0.0 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-地铁不可进" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("A:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=143]
+resource_name = "init"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("A:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=144]
+resource_name = "play"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 1.2, 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 8.0, -5.0, 0.0, 0.0 ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-地铁可进" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("A:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=306]
+resource_name = "Start"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("../LEVELINFO:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../SPECIAL_CHOOSE:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../SPECIAL_CHOOSE/Control/ButControl:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../SPECIAL_CHOOSE/Control/BG:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 220, -1060 ), Vector2( 220, 60 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../SPECIAL_CHOOSE/Control:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("..")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_Control"
+} ]
+}
+
+[sub_resource type="Animation" id=305]
+resource_name = "init"
+tracks/0/type = "value"
+tracks/0/path = NodePath("../LEVELINFO:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../SPECIAL_CHOOSE:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=307]
+resource_name = "show_Choose"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("../LEVELINFO:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../SPECIAL_CHOOSE:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../SPECIAL_CHOOSE/Control/Panel:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../SPECIAL_CHOOSE/Control/ButControl:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../SPECIAL_CHOOSE/Control:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("..")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_Control"
+} ]
+}
+
+[sub_resource type="Animation" id=308]
+resource_name = "show_Level"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("../LEVELINFO:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../SPECIAL_CHOOSE:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../SPECIAL_CHOOSE/Control/ButControl:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../SPECIAL_CHOOSE/Control:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "method"
+tracks/4/path = NodePath("..")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0.2 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_Control"
+} ]
+}
+
+[node name="SubStation" type="StaticBody2D"]
+light_mask = 2
+collision_layer = 128
+collision_mask = 5634
+script = ExtResource( 32 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 4
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -727.0
+margin_top = -352.0
+margin_right = 727.0
+margin_bottom = -213.0
+custom_fonts/font = ExtResource( 18 )
+text = "请所有成员进入地铁站，准备出发。"
+align = 1
+valign = 1
+script = ExtResource( 15 )
+LabelTEXT = "信息-前往地铁站"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/Control"]
+self_modulate = Color( 1, 0.745098, 0.745098, 0.686275 )
+show_behind_parent = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -354.0
+margin_right = 960.0
+margin_bottom = -203.0
+texture = ExtResource( 41 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="InfoAni" type="AnimationPlayer" parent="CanvasLayer"]
+autoplay = "init"
+anims/homemoney = SubResource( 321 )
+anims/init = SubResource( 317 )
+anims/play = SubResource( 318 )
+
+[node name="Textnode" type="Node2D" parent="."]
+
+[node name="SubDown1" type="Sprite" parent="Textnode"]
+position = Vector2( 0, -120 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -183, 30, 148, 29, 148, 10, -104, 12, -105, -89, 105, -87, 105, -111, -181, -112 )
+
+[node name="LEVELINFO" type="CanvasLayer" parent="."]
+layer = 2
+visible = false
+
+[node name="Control" type="Control" parent="LEVELINFO"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" parent="LEVELINFO/Control" instance=ExtResource( 3 )]
+visible = false
+
+[node name="BG" type="NinePatchRect" parent="LEVELINFO/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -740.0
+margin_top = -480.0
+margin_right = 740.0
+margin_bottom = 445.0
+texture = ExtResource( 28 )
+patch_margin_left = 57
+patch_margin_top = 50
+patch_margin_right = 57
+patch_margin_bottom = 50
+
+[node name="LevelName" type="NinePatchRect" parent="LEVELINFO/Control/BG"]
+self_modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -627.5
+margin_top = 40.0
+margin_right = 627.5
+margin_bottom = 125.0
+texture = ExtResource( 31 )
+patch_margin_left = 43
+patch_margin_right = 44
+
+[node name="Label" type="Label" parent="LEVELINFO/Control/BG/LevelName"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -719.5
+margin_top = -42.5
+margin_right = 720.5
+margin_bottom = 42.5
+rect_min_size = Vector2( 500, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 18 )
+text = "地铁站"
+align = 1
+valign = 1
+script = ExtResource( 15 )
+LabelTEXT = "信息-地铁站"
+
+[node name="Control" type="Control" parent="LEVELINFO/Control/BG"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -15.0
+margin_top = 45.0
+margin_right = -15.0
+margin_bottom = 45.0
+
+[node name="InfoControl" type="Control" parent="LEVELINFO/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="BG" type="NinePatchRect" parent="LEVELINFO/Control/InfoControl"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -26.0
+margin_top = -324.0
+margin_right = 684.0
+margin_bottom = 391.0
+texture = ExtResource( 24 )
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="ViewportContainer" type="ViewportContainer" parent="LEVELINFO/Control/InfoControl/BG"]
+show_behind_parent = true
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 705.0
+margin_bottom = 705.0
+rect_min_size = Vector2( 700, 700 )
+mouse_filter = 2
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="LEVELINFO/Control/InfoControl/BG/ViewportContainer"]
+size = Vector2( 700, 700 )
+handle_input_locally = false
+usage = 0
+render_target_update_mode = 0
+
+[node name="ButControl" type="Control" parent="LEVELINFO/Control"]
+anchor_top = 0.907
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 0.439941
+margin_right = 1.0
+
+[node name="BackBut" parent="LEVELINFO/Control/ButControl" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 42.5
+margin_top = -42.5
+margin_right = 127.5
+margin_bottom = 42.5
+custom_styles/hover = SubResource( 185 )
+custom_styles/pressed = SubResource( 186 )
+custom_styles/focus = SubResource( 187 )
+custom_styles/disabled = SubResource( 188 )
+custom_styles/normal = SubResource( 189 )
+_ActionModeBool = true
+
+[node name="B" parent="LEVELINFO/Control/ButControl/BackBut" instance=ExtResource( 19 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-返回"
+
+[node name="ApplyBut" parent="LEVELINFO/Control/ButControl" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -127.5
+margin_top = -42.5
+margin_right = -42.5
+margin_bottom = 42.5
+custom_styles/hover = SubResource( 185 )
+custom_styles/pressed = SubResource( 186 )
+custom_styles/focus = SubResource( 187 )
+custom_styles/disabled = SubResource( 188 )
+custom_styles/normal = SubResource( 189 )
+_ActionModeBool = true
+
+[node name="A" parent="LEVELINFO/Control/ButControl/ApplyBut" instance=ExtResource( 19 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-确定"
+
+[node name="Cost" type="Label" parent="LEVELINFO/Control/ButControl/ApplyBut"]
+visible = false
+margin_left = 124.5
+margin_top = -70.5
+margin_right = 339.5
+margin_bottom = -7.5
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "入场费"
+align = 2
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "信息-入场费"
+
+[node name="Label" type="Label" parent="LEVELINFO/Control/ButControl/ApplyBut/Cost"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 127.0
+margin_top = -10.5
+margin_right = 301.0
+margin_bottom = 14.5
+rect_min_size = Vector2( 174, 0 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 17 )
+text = "300"
+align = 2
+valign = 1
+script = ExtResource( 15 )
+LabelTEXT = "信息-报销"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LEVELINFO/Control/ButControl/ApplyBut/Cost/Label"]
+autoplay = "0"
+anims/0 = SubResource( 271 )
+anims/1 = SubResource( 272 )
+
+[node name="Sprite" type="Sprite" parent="LEVELINFO/Control/ButControl/ApplyBut/Cost/Label"]
+position = Vector2( 200, 12 )
+texture = ExtResource( 30 )
+
+[node name="Line2D" type="Line2D" parent="LEVELINFO/Control/ButControl/ApplyBut/Cost/Label"]
+position = Vector2( 776, 307 )
+points = PoolVector2Array( -645, -301, -597, -290 )
+width = 5.0
+default_color = Color( 1, 0, 0, 1 )
+
+[node name="DemoLabel" type="Label" parent="LEVELINFO/Control"]
+visible = false
+margin_left = 1014.0
+margin_top = 734.0
+margin_right = 1607.0
+margin_bottom = 904.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+custom_fonts/font = SubResource( 191 )
+text = "Demo versions are not eligible to purchase this. 0_o"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "DEMO_NoBuy"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="LEVELINFO/Control/DemoLabel"]
+self_modulate = Color( 0.294118, 1, 1, 0.588235 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -29.0
+margin_top = -29.0
+margin_right = 33.0
+margin_bottom = 36.0
+texture = ExtResource( 14 )
+patch_margin_left = 20
+patch_margin_top = 20
+patch_margin_right = 20
+patch_margin_bottom = 20
+
+[node name="InfoBG" type="NinePatchRect" parent="LEVELINFO/Control"]
+margin_left = 237.0
+margin_top = 326.0
+margin_right = 931.0
+margin_bottom = 682.0
+texture = ExtResource( 5 )
+patch_margin_left = 22
+patch_margin_top = 28
+patch_margin_right = 25
+patch_margin_bottom = 32
+
+[node name="BaseInfo1" type="VBoxContainer" parent="LEVELINFO/Control/InfoBG"]
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 21.0
+margin_top = -54.2
+margin_right = -467.0
+margin_bottom = -134.0
+rect_min_size = Vector2( 150, 0 )
+custom_constants/separation = 20
+
+[node name="CostMoney" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo1"]
+margin_right = 206.0
+margin_bottom = 25.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-开店本金"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "UI-开店本金"
+
+[node name="Label" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo1/CostMoney"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -8.5
+margin_right = 64.0
+margin_bottom = 12.5
+rect_min_size = Vector2( 174, 0 )
+custom_fonts/font = ExtResource( 17 )
+text = "50000"
+align = 2
+valign = 1
+
+[node name="MoneyIcon" type="Sprite" parent="LEVELINFO/Control/InfoBG/BaseInfo1/CostMoney/Label"]
+position = Vector2( 200, 10 )
+texture = ExtResource( 8 )
+
+[node name="DailyRent" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo1"]
+visible = false
+margin_top = 45.0
+margin_right = 206.0
+margin_bottom = 70.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-每日租金"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "UI-每日租金"
+
+[node name="Label" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo1/DailyRent"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -10.5
+margin_right = 64.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 174, 0 )
+custom_fonts/font = ExtResource( 17 )
+text = "500"
+align = 2
+valign = 1
+
+[node name="MoneyIcon" type="Sprite" parent="LEVELINFO/Control/InfoBG/BaseInfo1/DailyRent/Label"]
+position = Vector2( 200, 10 )
+texture = ExtResource( 8 )
+
+[node name="DayCount" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo1"]
+margin_top = 45.0
+margin_right = 206.0
+margin_bottom = 70.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "营业周期"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "UI-营业周期"
+
+[node name="Label" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo1/DayCount"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -10.5
+margin_right = 64.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 174, 0 )
+custom_fonts/font = ExtResource( 17 )
+text = "50000"
+align = 2
+valign = 1
+
+[node name="Icon" type="Sprite" parent="LEVELINFO/Control/InfoBG/BaseInfo1/DayCount/Label"]
+position = Vector2( 200, 10 )
+texture = ExtResource( 29 )
+
+[node name="Update" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo1"]
+margin_top = 90.0
+margin_right = 206.0
+margin_bottom = 115.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "随机升级"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "UI-随机升级"
+
+[node name="Label" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Update"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -10.5
+margin_right = 64.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 174, 0 )
+custom_fonts/font = ExtResource( 17 )
+text = "10"
+align = 2
+valign = 1
+
+[node name="Icon" type="Sprite" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Update/Label"]
+position = Vector2( 200, 12 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 33 )
+
+[node name="Reward" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo1"]
+margin_top = 135.0
+margin_right = 206.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-高峰时间"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-奖励倍率"
+
+[node name="Label" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Reward"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -10.5
+margin_right = 64.0
+margin_bottom = 14.5
+rect_min_size = Vector2( 174, 0 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 17 )
+text = "5%"
+align = 2
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Reward/Label"]
+autoplay = "0"
+anims/0 = SubResource( 269 )
+anims/1 = SubResource( 270 )
+
+[node name="Sprite" type="Sprite" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Reward/Label"]
+position = Vector2( 200, 12 )
+texture = ExtResource( 30 )
+
+[node name="Popular" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo1"]
+margin_top = 180.0
+margin_right = 206.0
+margin_bottom = 205.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-店铺人气"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-初始评级"
+
+[node name="HBox" type="HBoxContainer" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Popular"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -46.0
+margin_top = -2.0
+margin_right = 100.0
+margin_bottom = 26.0
+custom_constants/separation = 4
+
+[node name="1" type="Control" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Popular/HBox"]
+margin_right = 26.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+
+[node name="TextureProgress" type="TextureProgress" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Popular/HBox/1"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 2.0
+value = 2.0
+texture_under = ExtResource( 25 )
+texture_progress = ExtResource( 26 )
+
+[node name="2" type="Control" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Popular/HBox"]
+margin_left = 30.0
+margin_right = 56.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+
+[node name="TextureProgress" type="TextureProgress" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Popular/HBox/2"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 2.0
+value = 2.0
+texture_under = ExtResource( 25 )
+texture_progress = ExtResource( 26 )
+
+[node name="3" type="Control" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Popular/HBox"]
+margin_left = 60.0
+margin_right = 86.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+
+[node name="TextureProgress" type="TextureProgress" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Popular/HBox/3"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 2.0
+value = 2.0
+texture_under = ExtResource( 25 )
+texture_progress = ExtResource( 26 )
+
+[node name="4" type="Control" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Popular/HBox"]
+margin_left = 90.0
+margin_right = 116.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+
+[node name="TextureProgress" type="TextureProgress" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Popular/HBox/4"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 2.0
+value = 2.0
+texture_under = ExtResource( 25 )
+texture_progress = ExtResource( 26 )
+
+[node name="5" type="Control" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Popular/HBox"]
+margin_left = 120.0
+margin_right = 146.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+
+[node name="TextureProgress" type="TextureProgress" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Popular/HBox/5"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 2.0
+value = 2.0
+texture_under = ExtResource( 25 )
+texture_progress = ExtResource( 26 )
+
+[node name="Unit" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Popular"]
+visible = false
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 340.0
+margin_top = -10.5
+margin_right = 395.0
+margin_bottom = 10.5
+text = "日"
+
+[node name="Label" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo1/Popular/Unit"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -235.0
+margin_top = -10.5
+margin_right = -61.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 174, 0 )
+text = "50000"
+align = 2
+valign = 1
+
+[node name="BaseInfo2" type="VBoxContainer" parent="LEVELINFO/Control/InfoBG"]
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 352.0
+margin_top = -54.2
+margin_right = -129.0
+margin_bottom = -134.0
+rect_min_size = Vector2( 200, 0 )
+custom_constants/separation = 20
+
+[node name="OpeningHours" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo2"]
+margin_right = 213.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-营业时间"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-营业时间"
+
+[node name="Label" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo2/OpeningHours"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -10.5
+margin_right = 100.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 200, 0 )
+custom_fonts/font = ExtResource( 17 )
+text = "11:00 ~ 20:00"
+align = 2
+valign = 1
+
+[node name="Traffic" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo2"]
+margin_top = 45.0
+margin_right = 213.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-人流量"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-人流量"
+
+[node name="Label" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo2/Traffic"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -10.5
+margin_right = 100.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 200, 0 )
+custom_colors/font_color = Color( 1, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 17 )
+text = "?"
+align = 2
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LEVELINFO/Control/InfoBG/BaseInfo2/Traffic/Label"]
+anims/-1 = SubResource( 289 )
+anims/1 = SubResource( 258 )
+anims/2 = SubResource( 259 )
+anims/3 = SubResource( 260 )
+anims/4 = SubResource( 261 )
+anims/5 = SubResource( 262 )
+anims/6 = SubResource( 263 )
+anims/7 = SubResource( 264 )
+anims/8 = SubResource( 265 )
+anims/9 = SubResource( 266 )
+
+[node name="Challenge" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo2"]
+margin_top = 90.0
+margin_right = 213.0
+margin_bottom = 115.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "随机代价"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "UI-随机代价"
+
+[node name="Label" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo2/Challenge"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -10.5
+margin_right = 64.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 174, 0 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 17 )
+text = "10"
+align = 2
+valign = 1
+
+[node name="Icon" type="Sprite" parent="LEVELINFO/Control/InfoBG/BaseInfo2/Challenge/Label"]
+position = Vector2( 200, 12 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 35 )
+
+[node name="RewardMax" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo2"]
+margin_top = 135.0
+margin_right = 213.0
+margin_bottom = 160.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "奖励上限"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-奖励上限"
+
+[node name="Label" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo2/RewardMax"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -10.5
+margin_right = 64.0
+margin_bottom = 14.5
+rect_min_size = Vector2( 174, 0 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 17 )
+text = "5000"
+align = 2
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LEVELINFO/Control/InfoBG/BaseInfo2/RewardMax/Label"]
+autoplay = "0"
+anims/0 = SubResource( 319 )
+anims/1 = SubResource( 320 )
+
+[node name="Sprite" type="Sprite" parent="LEVELINFO/Control/InfoBG/BaseInfo2/RewardMax/Label"]
+position = Vector2( 200, 12 )
+texture = ExtResource( 30 )
+
+[node name="PeakTime" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo2"]
+margin_top = 180.0
+margin_right = 213.0
+margin_bottom = 205.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "UI-高峰时间"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-高峰时间"
+
+[node name="Label" type="Label" parent="LEVELINFO/Control/InfoBG/BaseInfo2/PeakTime"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -10.5
+margin_right = 100.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 200, 0 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 17 )
+text = "下午"
+align = 2
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LEVELINFO/Control/InfoBG/BaseInfo2/PeakTime/Label"]
+autoplay = "-1"
+anims/-1 = SubResource( 288 )
+anims/0 = SubResource( 267 )
+anims/1 = SubResource( 268 )
+
+[node name="Title" type="Label" parent="LEVELINFO/Control/InfoBG"]
+margin_left = 18.0
+margin_top = 365.0
+margin_right = 655.0
+margin_bottom = 394.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 16 )
+text = "关卡特点"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "信息-关卡特点"
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="LEVELINFO/Control/InfoBG/Title"]
+self_modulate = Color( 0.207843, 0.207843, 0.207843, 1 )
+margin_left = -12.0
+margin_top = 35.0
+margin_right = 671.0
+margin_bottom = 245.0
+texture = ExtResource( 27 )
+patch_margin_left = 23
+patch_margin_top = 28
+patch_margin_right = 23
+patch_margin_bottom = 24
+
+[node name="GamePlay" type="VBoxContainer" parent="LEVELINFO/Control/InfoBG"]
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 12.0
+margin_top = 339.8
+margin_right = -11.0
+margin_bottom = 270.0
+custom_constants/separation = 5
+
+[node name="1" type="Label" parent="LEVELINFO/Control/InfoBG/GamePlay"]
+margin_right = 671.0
+margin_bottom = 118.0
+text = "关卡进度不会保存
+111
+111
+111"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2" type="Label" parent="LEVELINFO/Control/InfoBG/GamePlay"]
+margin_top = 123.0
+margin_right = 671.0
+margin_bottom = 148.0
+text = "222"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3" type="Label" parent="LEVELINFO/Control/InfoBG/GamePlay"]
+margin_top = 153.0
+margin_right = 671.0
+margin_bottom = 178.0
+text = "333"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4" type="Label" parent="LEVELINFO/Control/InfoBG/GamePlay"]
+margin_top = 183.0
+margin_right = 671.0
+margin_bottom = 208.0
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="通关信息" type="NinePatchRect" parent="LEVELINFO/Control"]
+visible = false
+self_modulate = Color( 0.470588, 1, 1, 0.784314 )
+margin_left = 940.0
+margin_top = 222.0
+margin_right = 1638.0
+margin_bottom = 332.0
+texture = ExtResource( 5 )
+patch_margin_left = 25
+patch_margin_top = 25
+patch_margin_right = 25
+patch_margin_bottom = 25
+
+[node name="BaseInfo1" type="VBoxContainer" parent="LEVELINFO/Control/通关信息"]
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_top = -5.0
+margin_right = -457.0
+margin_bottom = -23.0
+rect_min_size = Vector2( 150, 0 )
+custom_constants/separation = 20
+
+[node name="HighMoney" type="Label" parent="LEVELINFO/Control/通关信息/BaseInfo1"]
+margin_right = 211.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "最高收入"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-最高收入"
+
+[node name="Label" type="Label" parent="LEVELINFO/Control/通关信息/BaseInfo1/HighMoney"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -12.5
+margin_right = 48.0
+margin_bottom = 12.5
+rect_min_size = Vector2( 100, 0 )
+custom_colors/font_color = Color( 1, 0.784314, 0, 1 )
+custom_fonts/font = ExtResource( 17 )
+text = "0"
+align = 2
+valign = 1
+
+[node name="MoneyIcon" type="Sprite" parent="LEVELINFO/Control/通关信息/BaseInfo1/HighMoney/Label"]
+position = Vector2( 174, 12.4 )
+texture = ExtResource( 8 )
+
+[node name="DevelLevel" type="Label" parent="LEVELINFO/Control/通关信息/BaseInfo1"]
+margin_top = 45.0
+margin_right = 211.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "通关最高难度"
+valign = 1
+script = ExtResource( 15 )
+LabelTEXT = "UI-通关信息"
+
+[node name="HBox" type="HBoxContainer" parent="LEVELINFO/Control/通关信息/BaseInfo1/DevelLevel"]
+margin_left = 319.0
+margin_top = 10.0
+margin_right = 483.0
+margin_bottom = 38.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_constants/separation = 20
+
+[node name="0" parent="LEVELINFO/Control/通关信息/BaseInfo1/DevelLevel/HBox" instance=ExtResource( 22 )]
+margin_top = 0.0
+margin_bottom = 28.0
+
+[node name="BaseInfo2" type="VBoxContainer" parent="LEVELINFO/Control/通关信息"]
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 379.0
+margin_top = -6.0
+margin_right = -110.0
+margin_bottom = -69.0
+rect_min_size = Vector2( 200, 0 )
+custom_constants/separation = 20
+
+[node name="test" type="Label" parent="LEVELINFO/Control/通关信息/BaseInfo2"]
+visible = false
+margin_right = 223.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "最高销量"
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "UI-最高销量"
+
+[node name="HBox" type="HBoxContainer" parent="LEVELINFO/Control/通关信息/BaseInfo2/test"]
+margin_left = 170.0
+margin_top = 10.0
+margin_right = 334.0
+margin_bottom = 10.0
+custom_constants/separation = 20
+
+[node name="SellTotal" type="Label" parent="LEVELINFO/Control/通关信息/BaseInfo2"]
+margin_right = 209.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "最高销量"
+valign = 1
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+LabelTEXT = "UI-最高销量"
+
+[node name="Label" type="Label" parent="LEVELINFO/Control/通关信息/BaseInfo2/SellTotal"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -12.5
+margin_right = 48.0
+margin_bottom = 12.5
+rect_min_size = Vector2( 100, 0 )
+custom_colors/font_color = Color( 1, 0.784314, 0, 1 )
+custom_fonts/font = ExtResource( 17 )
+text = "0"
+align = 2
+valign = 1
+
+[node name="Icon" type="Sprite" parent="LEVELINFO/Control/通关信息/BaseInfo2/SellTotal/Label"]
+position = Vector2( 174, 23.4 )
+texture = ExtResource( 4 )
+flip_v = true
+
+[node name="Label" type="Label" parent="LEVELINFO/Control"]
+margin_left = 249.0
+margin_top = 225.0
+margin_right = 920.0
+margin_bottom = 323.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 21 )
+text = "Challenge random levels daily for 1 day.
+Extract a certain number of gifts at the beginning."
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "信息-地铁说明"
+
+[node name="Choose" type="Control" parent="LEVELINFO/Control"]
+margin_left = 1048.0
+margin_top = 807.0
+margin_right = 1048.0
+margin_bottom = 807.0
+
+[node name="HBox" type="VBoxContainer" parent="LEVELINFO/Control/Choose"]
+margin_left = -77.0
+margin_top = -405.0
+margin_right = -49.0
+margin_bottom = 100.0
+custom_constants/separation = 26
+alignment = 2
+
+[node name="0" parent="LEVELINFO/Control/Choose/HBox" instance=ExtResource( 22 )]
+margin_top = 423.0
+margin_bottom = 451.0
+
+[node name="1" parent="LEVELINFO/Control/Choose/HBox" instance=ExtResource( 22 )]
+margin_top = 477.0
+margin_bottom = 505.0
+
+[node name="DownBut" parent="LEVELINFO/Control/Choose" instance=ExtResource( 2 )]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 380.0
+margin_top = 55.0
+margin_right = 430.0
+margin_bottom = 105.0
+rect_min_size = Vector2( 50, 50 )
+custom_styles/hover = SubResource( 292 )
+custom_styles/pressed = SubResource( 293 )
+custom_styles/focus = SubResource( 294 )
+custom_styles/disabled = SubResource( 295 )
+custom_styles/normal = SubResource( 296 )
+_ActionModeBool = true
+
+[node name="DOWN" parent="LEVELINFO/Control/Choose/DownBut" instance=ExtResource( 19 )]
+margin_left = 25.0
+margin_top = 25.0
+margin_right = 25.0
+margin_bottom = 25.0
+ZINDEX = 0
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-降低难度"
+
+[node name="UpBut" parent="LEVELINFO/Control/Choose" instance=ExtResource( 2 )]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 150.0
+margin_top = 55.0
+margin_right = 200.0
+margin_bottom = 105.0
+rect_min_size = Vector2( 50, 50 )
+custom_styles/hover = SubResource( 292 )
+custom_styles/pressed = SubResource( 293 )
+custom_styles/focus = SubResource( 294 )
+custom_styles/disabled = SubResource( 295 )
+custom_styles/normal = SubResource( 296 )
+_ActionModeBool = true
+
+[node name="UP" parent="LEVELINFO/Control/Choose/UpBut" instance=ExtResource( 19 )]
+margin_left = 25.0
+margin_top = 25.0
+margin_right = 25.0
+margin_bottom = 25.0
+ZINDEX = 0
+ButPlayer = 1
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-提高难度"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="LEVELINFO/Control/Choose"]
+visible = false
+self_modulate = Color( 0.470588, 1, 1, 0.784314 )
+show_behind_parent = true
+margin_left = -106.0
+margin_top = 51.0
+margin_right = 590.0
+margin_bottom = 111.0
+texture = ExtResource( 5 )
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 30
+
+[node name="Label" type="Label" parent="LEVELINFO/Control/Choose"]
+visible = false
+margin_left = -11.0
+margin_top = 51.0
+margin_right = 190.0
+margin_bottom = 108.0
+custom_fonts/font = ExtResource( 34 )
+text = "选择难度"
+valign = 1
+script = ExtResource( 15 )
+LabelTEXT = "信息-难度选择"
+
+[node name="SPECIAL_CHOOSE" type="CanvasLayer" parent="."]
+layer = 2
+visible = false
+
+[node name="Control" type="Control" parent="SPECIAL_CHOOSE"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Panel" parent="SPECIAL_CHOOSE/Control" instance=ExtResource( 3 )]
+visible = false
+
+[node name="BG" type="NinePatchRect" parent="SPECIAL_CHOOSE/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -740.0
+margin_top = -853.333
+margin_right = 740.0
+margin_bottom = 71.6866
+texture = ExtResource( 28 )
+patch_margin_left = 57
+patch_margin_top = 50
+patch_margin_right = 57
+patch_margin_bottom = 50
+
+[node name="LevelName" type="NinePatchRect" parent="SPECIAL_CHOOSE/Control/BG"]
+self_modulate = Color( 0, 0, 0, 0.588235 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -627.5
+margin_top = 40.0
+margin_right = 627.5
+margin_bottom = 125.0
+texture = ExtResource( 31 )
+patch_margin_left = 43
+patch_margin_right = 44
+
+[node name="Label" type="Label" parent="SPECIAL_CHOOSE/Control/BG/LevelName"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -719.5
+margin_top = -42.5
+margin_right = 720.5
+margin_bottom = 42.5
+rect_min_size = Vector2( 500, 0 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 18 )
+text = "地铁站"
+align = 1
+valign = 1
+script = ExtResource( 15 )
+LabelTEXT = "信息-地铁站"
+
+[node name="Control" type="Control" parent="SPECIAL_CHOOSE/Control/BG"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -693.0
+margin_top = -321.509
+margin_right = 693.0
+margin_bottom = 221.491
+
+[node name="SubTrain1" type="Sprite" parent="SPECIAL_CHOOSE/Control/BG/Control"]
+position = Vector2( 506, 101 )
+scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 40 )
+
+[node name="SubTrain2" type="Sprite" parent="SPECIAL_CHOOSE/Control/BG/Control"]
+position = Vector2( 1191, 102 )
+scale = Vector2( 1.4, 1.4 )
+texture = ExtResource( 39 )
+
+[node name="BG" type="NinePatchRect" parent="SPECIAL_CHOOSE/Control/BG/Control"]
+modulate = Color( 0.603922, 0.756863, 0.890196, 1 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 43.0
+margin_top = 169.0
+margin_right = -743.0
+margin_bottom = 6.0
+texture = ExtResource( 38 )
+patch_margin_left = 50
+patch_margin_top = 36
+patch_margin_right = 50
+patch_margin_bottom = 37
+
+[node name="InfoLabel" type="Label" parent="SPECIAL_CHOOSE/Control/BG/Control/BG"]
+anchor_right = 1.0
+margin_left = 13.0
+margin_top = 10.0
+margin_right = -16.0
+margin_bottom = 369.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "前往今日指定的直营店进行挑战。
+
+每日可反复挑战该直营店，虽然直营店的当前状态是固定的。但每次选择不同的礼物或实用重抽，都可能形成不同的组合。可以反复尝试。
+
+完成挑战可获得丰厚的奖励。
+"
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "新信息-指定直营店说明"
+
+[node name="BG2" type="NinePatchRect" parent="SPECIAL_CHOOSE/Control/BG/Control"]
+modulate = Color( 0.819608, 0.431373, 0.431373, 1 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 732.0
+margin_top = 169.0
+margin_right = -54.0
+margin_bottom = 6.0
+texture = ExtResource( 38 )
+patch_margin_left = 50
+patch_margin_top = 36
+patch_margin_right = 50
+patch_margin_bottom = 37
+
+[node name="InfoLabel2" type="Label" parent="SPECIAL_CHOOSE/Control/BG/Control/BG2"]
+anchor_right = 1.0
+margin_left = 11.0
+margin_top = 15.0
+margin_right = -13.0
+margin_bottom = 368.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "前往急需帮忙的直营店进行挑战。
+
+每家急需帮忙的直营店只可挑战一次，无论挑战成功或失败，均可获得不错的奖励。"
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "信息-随机直营店说明"
+
+[node name="TitleLabel" type="Label" parent="SPECIAL_CHOOSE/Control/BG"]
+anchor_right = 1.0
+margin_left = 97.0
+margin_top = 199.0
+margin_right = -1062.0
+margin_bottom = 298.0
+custom_fonts/font = ExtResource( 34 )
+text = "前往随机直营店"
+valign = 2
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "信息-指定直营店"
+
+[node name="TitleLabel2" type="Label" parent="SPECIAL_CHOOSE/Control/BG"]
+anchor_right = 1.0
+margin_left = 788.0
+margin_top = 195.0
+margin_right = -383.0
+margin_bottom = 304.0
+custom_fonts/font = ExtResource( 34 )
+text = "前往随机直营店"
+valign = 2
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "信息-随机直营店"
+
+[node name="Grid" type="GridContainer" parent="SPECIAL_CHOOSE/Control/BG"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -578.0
+margin_top = 248.491
+margin_right = 622.0
+margin_bottom = 356.491
+custom_constants/hseparation = 150
+columns = 2
+
+[node name="Free" type="Button" parent="SPECIAL_CHOOSE/Control/BG/Grid"]
+margin_right = 500.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 500, 100 )
+focus_mode = 0
+custom_styles/hover = SubResource( 314 )
+custom_styles/pressed = SubResource( 297 )
+custom_styles/focus = SubResource( 297 )
+custom_styles/disabled = SubResource( 312 )
+custom_styles/normal = SubResource( 299 )
+toggle_mode = true
+group = SubResource( 300 )
+
+[node name="Cost" type="Label" parent="SPECIAL_CHOOSE/Control/BG/Grid/Free"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -295.0
+margin_top = -44.0
+margin_right = -82.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "地铁票价"
+align = 2
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "信息-入场费"
+
+[node name="Label" type="Label" parent="SPECIAL_CHOOSE/Control/BG/Grid/Free/Cost"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 14.0
+margin_top = -10.5
+margin_right = 188.0
+margin_bottom = 14.5
+rect_min_size = Vector2( 174, 0 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 17 )
+text = "1000  500 x            "
+align = 2
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SPECIAL_CHOOSE/Control/BG/Grid/Free/Cost/Label"]
+autoplay = "0"
+anims/0 = SubResource( 301 )
+anims/1 = SubResource( 302 )
+
+[node name="Sprite" type="Sprite" parent="SPECIAL_CHOOSE/Control/BG/Grid/Free/Cost/Label"]
+position = Vector2( 200, 12 )
+texture = ExtResource( 30 )
+
+[node name="Sprite2" type="Sprite" parent="SPECIAL_CHOOSE/Control/BG/Grid/Free/Cost/Label"]
+position = Vector2( 141, 12 )
+texture = ExtResource( 42 )
+
+[node name="Line2D2" type="Line2D" parent="SPECIAL_CHOOSE/Control/BG/Grid/Free/Cost/Label"]
+position = Vector2( 656, 306.999 )
+points = PoolVector2Array( -645, -301, -597, -290 )
+width = 5.0
+default_color = Color( 1, 0, 0, 1 )
+
+[node name="Cost" type="Button" parent="SPECIAL_CHOOSE/Control/BG/Grid"]
+margin_left = 650.0
+margin_right = 1150.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 500, 100 )
+focus_mode = 0
+custom_styles/hover = SubResource( 315 )
+custom_styles/pressed = SubResource( 297 )
+custom_styles/focus = SubResource( 297 )
+custom_styles/disabled = SubResource( 313 )
+custom_styles/normal = SubResource( 299 )
+toggle_mode = true
+group = SubResource( 300 )
+
+[node name="Cost" type="Label" parent="SPECIAL_CHOOSE/Control/BG/Grid/Cost"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -295.0
+margin_top = -44.0
+margin_right = -82.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 158, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "地铁票价"
+align = 2
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "信息-入场费"
+
+[node name="Label" type="Label" parent="SPECIAL_CHOOSE/Control/BG/Grid/Cost/Cost"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 14.0
+margin_top = -10.5
+margin_right = 188.0
+margin_bottom = 14.5
+rect_min_size = Vector2( 174, 0 )
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 17 )
+text = "报销"
+align = 2
+valign = 1
+script = ExtResource( 15 )
+LabelTEXT = "信息-报销"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SPECIAL_CHOOSE/Control/BG/Grid/Cost/Cost/Label"]
+autoplay = "0"
+anims/0 = SubResource( 303 )
+anims/1 = SubResource( 304 )
+
+[node name="Sprite" type="Sprite" parent="SPECIAL_CHOOSE/Control/BG/Grid/Cost/Cost/Label"]
+position = Vector2( 200, 12 )
+texture = ExtResource( 30 )
+
+[node name="Line2D" type="Line2D" parent="SPECIAL_CHOOSE/Control/BG/Grid/Cost/Cost/Label"]
+visible = false
+position = Vector2( 776, 308.999 )
+points = PoolVector2Array( -645, -301, -597, -290 )
+width = 5.0
+default_color = Color( 1, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="SPECIAL_CHOOSE/Control/BG"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -616.0
+margin_top = 375.491
+margin_right = 609.0
+margin_bottom = 411.491
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 34 )
+text = "目前地铁在试运营阶段，暂无任何奖励。"
+align = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "信息-暂无奖励"
+
+[node name="ButControl" type="Control" parent="SPECIAL_CHOOSE/Control"]
+visible = false
+anchor_top = 0.907
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.0
+margin_top = 0.439941
+margin_right = 1.0
+
+[node name="BackBut" parent="SPECIAL_CHOOSE/Control/ButControl" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 42.5
+margin_top = -42.5
+margin_right = 127.5
+margin_bottom = 42.5
+focus_mode = 2
+custom_styles/hover = SubResource( 185 )
+custom_styles/pressed = SubResource( 186 )
+custom_styles/focus = SubResource( 187 )
+custom_styles/disabled = SubResource( 188 )
+custom_styles/normal = SubResource( 189 )
+_ActionModeBool = true
+
+[node name="B" parent="SPECIAL_CHOOSE/Control/ButControl/BackBut" instance=ExtResource( 19 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-返回"
+
+[node name="ApplyBut" parent="SPECIAL_CHOOSE/Control/ButControl" instance=ExtResource( 2 )]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -127.5
+margin_top = -42.5
+margin_right = -42.5
+margin_bottom = 42.5
+focus_mode = 2
+custom_styles/hover = SubResource( 185 )
+custom_styles/pressed = SubResource( 186 )
+custom_styles/focus = SubResource( 187 )
+custom_styles/disabled = SubResource( 188 )
+custom_styles/normal = SubResource( 189 )
+_ActionModeBool = true
+
+[node name="A" parent="SPECIAL_CHOOSE/Control/ButControl/ApplyBut" instance=ExtResource( 19 )]
+margin_left = 40.0
+margin_top = 40.0
+margin_right = 40.0
+margin_bottom = 40.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-确定"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4610
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -23.5, -44 )
+shape = SubResource( 290 )
+
+[node name="PlayerArea2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4610
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea2D"]
+position = Vector2( 59.5, -44 )
+shape = SubResource( 316 )
+
+[node name="Info" type="Node2D" parent="."]
+position = Vector2( 127, -181 )
+
+[node name="Label" type="Label" parent="Info"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -85.0
+margin_top = -55.0
+margin_right = 24.0
+margin_bottom = -30.0
+rect_scale = Vector2( -1, 1 )
+rect_pivot_offset = Vector2( 85, 55 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "双人合作"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 15 )
+LabelTEXT = "信息-开启2P"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="Info/Label"]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 42.0
+margin_top = -10.0
+margin_right = 71.0
+margin_bottom = 31.0
+rect_scale = Vector2( -1, 1 )
+rect_pivot_offset = Vector2( 37.1141, 62.4635 )
+texture = ExtResource( 23 )
+patch_margin_left = 65
+patch_margin_top = 17
+patch_margin_right = 29
+patch_margin_bottom = 33
+
+[node name="Ani" type="AnimationPlayer" parent="Info/Label"]
+autoplay = "init"
+anims/NoIn = SubResource( 291 )
+anims/init = SubResource( 143 )
+anims/play = SubResource( 144 )
+
+[node name="A" parent="Info/Label" instance=ExtResource( 19 )]
+visible = false
+margin_left = -3.0
+margin_top = 13.0
+margin_right = -3.0
+margin_bottom = 13.0
+bool_Small = true
+bool_Static = true
+OnBut = false
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Ani" type="AnimationPlayer" parent="Node"]
+autoplay = "init"
+anims/Start = SubResource( 306 )
+anims/init = SubResource( 305 )
+anims/show_Choose = SubResource( 307 )
+anims/show_Level = SubResource( 308 )
+
+[connection signal="pressed" from="LEVELINFO/Control/ButControl/BackBut" to="." method="_on_LEVEL_BackBut_pressed"]
+[connection signal="pressed" from="LEVELINFO/Control/ButControl/ApplyBut" to="." method="_on_ApplyBut_pressed"]
+[connection signal="pressed" from="SPECIAL_CHOOSE/Control/BG/Grid/Free" to="." method="_on_Free_pressed"]
+[connection signal="pressed" from="SPECIAL_CHOOSE/Control/BG/Grid/Cost" to="." method="_on_Cost_pressed"]
+[connection signal="pressed" from="SPECIAL_CHOOSE/Control/ButControl/BackBut" to="." method="_on_BackBut_pressed"]
+[connection signal="pressed" from="SPECIAL_CHOOSE/Control/ButControl/ApplyBut" to="." method="_on_Choose_ApplyBut_pressed"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
+[connection signal="body_entered" from="PlayerArea2D" to="." method="_on_PlayerArea2D_body_entered"]
+[connection signal="body_exited" from="PlayerArea2D" to="." method="_on_PlayerArea2D_body_exited"]

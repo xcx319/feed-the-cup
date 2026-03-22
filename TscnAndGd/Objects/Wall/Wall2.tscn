@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resources/Maps/Tmap_wall.png" type="Texture" id=1]
+
+[sub_resource type="TileSet" id=105]
+0/name = "Tmap_wall.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 50, 94 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[node name="Wall2" type="TileMap"]
+z_index = -2
+tile_set = SubResource( 105 )
+cell_size = Vector2( 50, 50 )
+cell_custom_transform = Transform2D( 50, 0, 0, 50, 0, 0 )
+cell_y_sort = true
+collision_layer = 128
+collision_mask = 1536
+format = 1
+tile_data = PoolIntArray( 655392, 0, 0, 655394, 1, 0, 720930, 1, 0, 786464, 0, 0, 786466, 1, 0, 852002, 1, 0, 917536, 0, 0, 917538, 1, 0, 983074, 1, 0, 1048608, 0, 0, 1048610, 1, 0, 1114146, 1, 0, 1179680, 0, 0 )

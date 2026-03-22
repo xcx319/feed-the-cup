@@ -1,0 +1,532 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resources/Devices/table/Device_table_1.png" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_beer_1.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_wine_beer_Lager.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_BeerBarrel_Wood_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_BeerBarrel_Wood_head.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_top.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_2.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/GameUI/ui_nofilter_pack.sprites/Ui_procup_waterlayer_1.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_beer_baselayer_2.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_foam_1.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_glasscup_beer_2.tres" type="Texture" id=13]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=14]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_idle_1.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_body_front.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_arm_work_4.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_leg_idle_0.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_tail_back.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Characters/Players/Staff/character_staff_pack.sprites/character_bear_head_side.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_number_2.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_check.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_check_wrong.tres" type="Texture" id=24]
+
+[sub_resource type="Shader" id=320]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=318]
+resource_local_to_scene = true
+shader = SubResource( 320 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[sub_resource type="Shader" id=76]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}"
+
+[sub_resource type="ShaderMaterial" id=319]
+resource_local_to_scene = true
+shader = SubResource( 76 )
+shader_param/outline_width = 0.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[node name="啤酒桶1" type="Node2D"]
+position = Vector2( 413, 110 )
+
+[node name="226" type="RichTextLabel" parent="."]
+margin_left = -381.0
+margin_top = 154.0
+margin_right = 457.0
+margin_bottom = 390.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "将装满啤酒的木桶放在桌子上，安装上酒嘴。
+使用扎啤杯接取啤酒，啤酒会额外形成啤酒泡，仅消耗一份啤酒就可以接满一个容量两份的小酒杯。
+拧开酒嘴后啤酒不会停下，你需要在合适的时机关闭酒嘴，否则啤酒泡会溢出杯子。
+"
+text = "将装满啤酒的木桶放在桌子上，安装上酒嘴。
+使用扎啤杯接取啤酒，啤酒会额外形成啤酒泡，仅消耗一份啤酒就可以接满一个容量两份的小酒杯。
+拧开酒嘴后啤酒不会停下，你需要在合适的时机关闭酒嘴，否则啤酒泡会溢出杯子。
+"
+script = ExtResource( 14 )
+LabelTEXT = "信息-文字说明-226"
+Center_Bool = true
+
+[node name="啤酒泡" type="Node2D" parent="."]
+position = Vector2( 30, -508 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="啤酒泡"]
+margin_left = -106.0
+margin_top = 484.0
+margin_right = 232.0
+margin_bottom = 524.0
+texture = ExtResource( 15 )
+patch_margin_left = 23
+patch_margin_right = 27
+
+[node name="2" type="Sprite" parent="啤酒泡"]
+pause_mode = 2
+use_parent_material = true
+position = Vector2( -90, 490 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, 10 )
+
+[node name="A" parent="啤酒泡" instance=ExtResource( 1 )]
+margin_left = -47.0
+margin_top = 498.0
+margin_right = -47.0
+margin_bottom = 498.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-开"
+OnBut = false
+
+[node name="3" type="Node2D" parent="啤酒泡"]
+position = Vector2( 172, 438 )
+
+[node name="CUP1" type="Node2D" parent="啤酒泡/3"]
+pause_mode = 2
+material = SubResource( 318 )
+position = Vector2( -244, 125 )
+__meta__ = {
+"_editor_description_": "SCALE 0.57"
+}
+
+[node name="baseLayer" type="Node2D" parent="啤酒泡/3/CUP1"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+
+[node name="Cup_S" type="Sprite" parent="啤酒泡/3/CUP1/baseLayer"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+texture = ExtResource( 11 )
+
+[node name="Tex" type="Node2D" parent="啤酒泡/3/CUP1"]
+pause_mode = 2
+use_parent_material = true
+
+[node name="Front" type="Node2D" parent="啤酒泡/3/CUP1/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="CupF_S" type="Sprite" parent="啤酒泡/3/CUP1/Tex/Front"]
+pause_mode = 2
+use_parent_material = true
+texture = ExtResource( 13 )
+
+[node name="CUP2" type="Node2D" parent="啤酒泡/3"]
+pause_mode = 2
+material = SubResource( 318 )
+position = Vector2( -88, 124 )
+__meta__ = {
+"_editor_description_": "SCALE 0.57"
+}
+
+[node name="baseLayer" type="Node2D" parent="啤酒泡/3/CUP2"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+
+[node name="Cup_S" type="Sprite" parent="啤酒泡/3/CUP2/baseLayer"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+texture = ExtResource( 11 )
+
+[node name="Tex" type="Node2D" parent="啤酒泡/3/CUP2"]
+pause_mode = 2
+use_parent_material = true
+
+[node name="Layer" type="Node2D" parent="啤酒泡/3/CUP2/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="Layer1" type="TextureProgress" parent="啤酒泡/3/CUP2/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 10 )
+fill_mode = 3
+
+[node name="Layer2" type="TextureProgress" parent="啤酒泡/3/CUP2/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 1, 1, 1, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 45.0
+texture_progress = ExtResource( 9 )
+fill_mode = 3
+
+[node name="Layer0" type="Sprite" parent="啤酒泡/3/CUP2/Tex/Layer"]
+pause_mode = 2
+position = Vector2( 0, 7 )
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 8 )
+offset = Vector2( 1, 0 )
+
+[node name="Front" type="Node2D" parent="啤酒泡/3/CUP2/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="CupF_S" type="Sprite" parent="啤酒泡/3/CUP2/Tex/Front"]
+pause_mode = 2
+use_parent_material = true
+texture = ExtResource( 13 )
+
+[node name="DrinkTop" type="Node2D" parent="啤酒泡/3/CUP2/Tex"]
+pause_mode = 2
+visible = false
+show_behind_parent = true
+position = Vector2( 0, 10 )
+scale = Vector2( 0.9, 0.9 )
+
+[node name="Top" type="Sprite" parent="啤酒泡/3/CUP2/Tex/DrinkTop"]
+pause_mode = 2
+use_parent_material = true
+position = Vector2( 0, 19 )
+texture = ExtResource( 12 )
+
+[node name="IconWineBeerAle" type="Sprite" parent="啤酒泡/3/CUP2"]
+position = Vector2( 41, 56 )
+texture = ExtResource( 5 )
+
+[node name="IconLiquidNumber2" type="Sprite" parent="啤酒泡/3/CUP2/IconWineBeerAle"]
+position = Vector2( -1, 34 )
+texture = ExtResource( 22 )
+
+[node name="CUP3" type="Node2D" parent="啤酒泡/3"]
+pause_mode = 2
+material = SubResource( 318 )
+position = Vector2( 77, 123 )
+__meta__ = {
+"_editor_description_": "SCALE 0.57"
+}
+
+[node name="baseLayer" type="Node2D" parent="啤酒泡/3/CUP3"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+
+[node name="Cup_S" type="Sprite" parent="啤酒泡/3/CUP3/baseLayer"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+texture = ExtResource( 11 )
+
+[node name="Tex" type="Node2D" parent="啤酒泡/3/CUP3"]
+pause_mode = 2
+use_parent_material = true
+
+[node name="Layer" type="Node2D" parent="啤酒泡/3/CUP3/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="Layer1" type="TextureProgress" parent="啤酒泡/3/CUP3/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 100.0
+texture_progress = ExtResource( 10 )
+fill_mode = 3
+
+[node name="Layer2" type="TextureProgress" parent="啤酒泡/3/CUP3/Tex/Layer"]
+pause_mode = 2
+self_modulate = Color( 0.87451, 0.764706, 0.458824, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = -62.0
+margin_right = 34.0
+margin_bottom = 62.0
+value = 45.0
+texture_progress = ExtResource( 9 )
+fill_mode = 3
+
+[node name="Layer0" type="Sprite" parent="啤酒泡/3/CUP3/Tex/Layer"]
+pause_mode = 2
+position = Vector2( 0, 7 )
+scale = Vector2( 0.95, 0.95 )
+texture = ExtResource( 8 )
+offset = Vector2( 1, 0 )
+
+[node name="Front" type="Node2D" parent="啤酒泡/3/CUP3/Tex"]
+pause_mode = 2
+show_behind_parent = true
+
+[node name="CupF_S" type="Sprite" parent="啤酒泡/3/CUP3/Tex/Front"]
+pause_mode = 2
+use_parent_material = true
+texture = ExtResource( 13 )
+
+[node name="DrinkTop" type="Node2D" parent="啤酒泡/3/CUP3/Tex"]
+pause_mode = 2
+show_behind_parent = true
+position = Vector2( 0, 10 )
+scale = Vector2( 0.9, 0.9 )
+
+[node name="Top" type="Sprite" parent="啤酒泡/3/CUP3/Tex/DrinkTop"]
+pause_mode = 2
+use_parent_material = true
+position = Vector2( 0, 19 )
+texture = ExtResource( 12 )
+
+[node name="UiIconStateBeer1" type="Sprite" parent="啤酒泡/3/CUP3"]
+position = Vector2( 0, -23 )
+texture = ExtResource( 4 )
+
+[node name="UiIconStateCheckWrong" type="Sprite" parent="啤酒泡"]
+self_modulate = Color( 0.988235, 0.0313726, 0.0313726, 1 )
+position = Vector2( 292, 549 )
+scale = Vector2( 0.74, 0.74 )
+texture = ExtResource( 24 )
+
+[node name="UiIconStateCheck" type="Sprite" parent="啤酒泡"]
+self_modulate = Color( 0.00392157, 1, 0.137255, 1 )
+position = Vector2( 156, 626 )
+scale = Vector2( 0.84, 0.84 )
+texture = ExtResource( 23 )
+
+[node name="启桶" type="Node2D" parent="."]
+position = Vector2( -350, 41 )
+
+[node name="table2" type="Node2D" parent="启桶"]
+position = Vector2( 129, -36 )
+
+[node name="L" type="Sprite" parent="启桶/table2"]
+position = Vector2( 2, 87 )
+texture = ExtResource( 3 )
+offset = Vector2( -25, -30 )
+hframes = 2
+vframes = 8
+frame = 10
+
+[node name="R" type="Sprite" parent="启桶/table2"]
+position = Vector2( 2, 87 )
+texture = ExtResource( 3 )
+offset = Vector2( 25, -30 )
+flip_h = true
+hframes = 2
+vframes = 8
+frame = 10
+
+[node name="TexNode2" type="Node2D" parent="启桶"]
+pause_mode = 2
+material = SubResource( 319 )
+position = Vector2( 128, -28 )
+
+[node name="1" type="Sprite" parent="启桶/TexNode2"]
+pause_mode = 2
+use_parent_material = true
+position = Vector2( 0, 60 )
+texture = ExtResource( 6 )
+offset = Vector2( 0, -61.175 )
+
+[node name="2" type="Sprite" parent="启桶/TexNode2"]
+pause_mode = 2
+use_parent_material = true
+position = Vector2( 0, 35 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, 10 )
+
+[node name="UI" type="Node2D" parent="启桶/TexNode2"]
+visible = false
+z_index = 1
+
+[node name="UseTex" type="Sprite" parent="启桶/TexNode2/UI"]
+position = Vector2( 0, -64 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="启桶/TexNode2/UI/UseTex"]
+margin_left = -21.0
+margin_top = 18.0
+margin_right = 19.0
+margin_bottom = 43.0
+custom_fonts/font = ExtResource( 2 )
+text = "40"
+align = 1
+valign = 1
+
+[node name="Bear" type="Node2D" parent="启桶"]
+position = Vector2( 40, 97 )
+scale = Vector2( -1.1, 1.1 )
+
+[node name="Leg_L" type="Node2D" parent="启桶/Bear"]
+show_behind_parent = true
+position = Vector2( -6.36365, -32.7273 )
+
+[node name="L" type="Sprite" parent="启桶/Bear/Leg_L"]
+texture = ExtResource( 19 )
+offset = Vector2( -8, 6 )
+
+[node name="Leg_R" type="Node2D" parent="启桶/Bear"]
+position = Vector2( 8.18181, -26.3636 )
+
+[node name="R" type="Sprite" parent="启桶/Bear/Leg_R"]
+texture = ExtResource( 19 )
+offset = Vector2( -8, 6 )
+
+[node name="Body_note" type="Node2D" parent="启桶/Bear"]
+show_behind_parent = true
+position = Vector2( 0, -25 )
+
+[node name="BodyPose" type="Node2D" parent="启桶/Bear/Body_note"]
+scale = Vector2( 1.05, 1.05 )
+
+[node name="Body" type="Node2D" parent="启桶/Bear/Body_note/BodyPose"]
+
+[node name="BodyBase" type="Sprite" parent="启桶/Bear/Body_note/BodyPose/Body"]
+modulate = Color( 0.909804, 0.909804, 0.937255, 1 )
+position = Vector2( 0, -30 )
+texture = ExtResource( 17 )
+
+[node name="HeadPose" type="Node2D" parent="启桶/Bear/Body_note/BodyPose/Body"]
+position = Vector2( -0.968323, -65.3376 )
+rotation = 0.261799
+
+[node name="Head" type="Node2D" parent="启桶/Bear/Body_note/BodyPose/Body/HeadPose"]
+
+[node name="Left" type="Sprite" parent="启桶/Bear/Body_note/BodyPose/Body/HeadPose/Head"]
+texture = ExtResource( 21 )
+offset = Vector2( 0, -26 )
+
+[node name="Arm_Hold" type="Node2D" parent="启桶/Bear/Body_note/BodyPose"]
+position = Vector2( 0, -44 )
+rotation = 0.785397
+scale = Vector2( -1, 1 )
+
+[node name="Pose_Hold" type="Node2D" parent="启桶/Bear/Body_note/BodyPose/Arm_Hold"]
+position = Vector2( 8.61996, 7.54245 )
+rotation = 0.0673216
+
+[node name="Arm" type="Sprite" parent="启桶/Bear/Body_note/BodyPose/Arm_Hold/Pose_Hold"]
+position = Vector2( 1, 0 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 18 )
+offset = Vector2( -10, 3 )
+
+[node name="Arm" type="Node2D" parent="启桶/Bear/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( -10, -50 )
+rotation = 0.523598
+scale = Vector2( -1, 1 )
+
+[node name="Pose" type="Node2D" parent="启桶/Bear/Body_note/BodyPose/Arm"]
+rotation = 0.523598
+
+[node name="Arm" type="Sprite" parent="启桶/Bear/Body_note/BodyPose/Arm/Pose"]
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 16 )
+offset = Vector2( -10, 3 )
+
+[node name="Tail" type="Sprite" parent="启桶/Bear/Body_note/BodyPose"]
+show_behind_parent = true
+position = Vector2( 28, -15 )
+rotation = 0.0534768
+texture = ExtResource( 20 )
+offset = Vector2( 20, -16 )
+
+[node name="X" parent="启桶" instance=ExtResource( 1 )]
+margin_left = 126.0
+margin_top = 69.0
+margin_right = 126.0
+margin_bottom = 69.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-启桶"
+OnBut = false

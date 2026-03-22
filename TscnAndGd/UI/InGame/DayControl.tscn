@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/InGame/DayControl.gd" type="Script" id=1]
+[ext_resource path="res://Language/Fonts/cn_font_logo.tres" type="DynamicFont" id=2]
+[ext_resource path="res://TscnAndGd/UI/Info/DayTypeInfo.tscn" type="PackedScene" id=3]
+
+[node name="DayControl" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+script = ExtResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -32.5
+margin_bottom = 32.5
+rect_min_size = Vector2( 1000, 50 )
+mouse_filter = 2
+custom_constants/separation = 5
+alignment = 1
+
+[node name="Control" parent="HBoxContainer" instance=ExtResource( 3 )]
+margin_left = 927.0
+margin_right = 992.0
+
+[node name="DAYLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -229.0
+margin_right = 960.0
+margin_bottom = -68.9999
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+custom_fonts/font = ExtResource( 2 )
+text = "DAY 1"
+align = 1
+valign = 1
+autowrap = true

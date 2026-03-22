@@ -1,0 +1,136 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_tree_1.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_1_t.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_1_b.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_2_b.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_2_s.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Tree/Tree_pack.sprites/Outdoor_FlowerTree_group_5_b.tres" type="Texture" id=6]
+
+[sub_resource type="Animation" id=1]
+resource_name = "init"
+length = 25.0
+loop = true
+tracks/0/type = "animation"
+tracks/0/path = NodePath("Loop")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "loopout", "loopout", "loopout", "back", "loopin", "loopin", "show" ),
+"times": PoolRealArray( 0, 4, 8, 12, 13.1, 18, 23 )
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "back"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Main:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 44.9999, -0.2, 0.53764, 0.4, -6.99064, 0, -0.25, 0, 0.4, 1.41126 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "loopin"
+length = 5.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Main:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.2, 0.53764, 1.2, 6.96466, 0, -1, -9.99342, 0.25, 0 ),
+"times": PoolRealArray( 0, 5 )
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "loopout"
+length = 4.0
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Main:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 44.9999, -0.2, 0.53764, 1, 1.52925, 53, -1.1, -0.313599, 0.8, -0.444016, 45, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 2.7, 4 )
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "show"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("Main:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.4, 1.41126, 50, -0.3, -0.135391, 0.2, 0.315338, 44.9999, -0.2, 0.53764, 1, 1.52925 ),
+"times": PoolRealArray( 0, 1.5, 2 )
+}
+
+[node name="Effect_FlowerRod" type="Node2D"]
+
+[node name="Texture" type="Node2D" parent="."]
+rotation = 0.436332
+scale = Vector2( 1, -1 )
+
+[node name="Ani" type="AnimationPlayer" parent="Texture"]
+autoplay = "init"
+anims/init = SubResource( 1 )
+
+[node name="Loop" type="AnimationPlayer" parent="Texture"]
+anims/back = SubResource( 2 )
+anims/loopin = SubResource( 3 )
+anims/loopout = SubResource( 4 )
+anims/show = SubResource( 5 )
+
+[node name="Main" type="Node2D" parent="Texture"]
+rotation = -0.0158104
+scale = Vector2( 1, 1 )
+
+[node name="Tree" type="Sprite" parent="Texture/Main"]
+texture = ExtResource( 1 )
+offset = Vector2( -108, -18 )
+
+[node name="OutdoorFlowerTreeGroup5B" type="Sprite" parent="Texture/Main"]
+position = Vector2( -140, -26 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 6 )
+
+[node name="7" type="Node2D" parent="Texture/Main"]
+position = Vector2( -93, -39 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+
+[node name="OutdoorFlowerTreeGroup1T" type="Sprite" parent="Texture/Main/7"]
+position = Vector2( 20.5, -29.5 )
+texture = ExtResource( 2 )
+
+[node name="OutdoorFlowerTreeGroup1B" type="Sprite" parent="Texture/Main/7"]
+position = Vector2( 20.5, -29.5 )
+texture = ExtResource( 3 )
+
+[node name="8" type="Node2D" parent="Texture/Main"]
+position = Vector2( 27, 0.999999 )
+rotation = 2.87979
+scale = Vector2( 1, -1 )
+
+[node name="OutdoorFlowerTreeGroup2S" type="Sprite" parent="Texture/Main/8"]
+position = Vector2( 81, -6 )
+texture = ExtResource( 5 )
+
+[node name="OutdoorFlowerTreeGroup2B" type="Sprite" parent="Texture/Main/8"]
+position = Vector2( 81, -6 )
+texture = ExtResource( 4 )

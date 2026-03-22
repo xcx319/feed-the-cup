@@ -1,0 +1,1050 @@
+[gd_scene load_steps=47 format=2]
+
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_port_water_full.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_5.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_6.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_switchlight_green.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_switchlight_red.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_water_all.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_pop_2.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_pop_1.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_pop_3.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_cap_front.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_cap_water.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_pop_water.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_ui_2.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_ui_1.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_s.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_ui_base.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_ui_button.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_cap_base.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/item_gasbottle_base.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_base.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_popmachine_cap_3.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_sodamachine_s.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_sodamachine_uiblank.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_switchlight_white.tres" type="Texture" id=24]
+[ext_resource path="res://TscnAndGd/Effects/shaders/teleport-effect.tres" type="Shader" id=25]
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=26]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=29]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_2.tres" type="Texture" id=30]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_1.tres" type="Texture" id=31]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_5.tres" type="Texture" id=32]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_3.tres" type="Texture" id=33]
+[ext_resource path="res://Resources/Characters/Guest/Cup/guest_cup_pack.sprites/guest_bigbottle_pop_4.tres" type="Texture" id=34]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_pop_cupsi.tres" type="Texture" id=36]
+
+[sub_resource type="Animation" id=271]
+resource_name = "Pop1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pop1/light:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pop2/light:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 24 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Pop3/light:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 24 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pop1/light:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pop2/light:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.627451 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Pop3/light:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.627451 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Pop3:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.517647, 0.517647, 0.517647, 0.823529 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Pop2:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.517647, 0.517647, 0.517647, 0.823529 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Pop1:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Pop2:show_behind_parent")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Icon2:texture")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 12 ) ]
+}
+
+[sub_resource type="Animation" id=272]
+resource_name = "Pop2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pop1/light:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 24 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pop2/light:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Pop3/light:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 24 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pop1/light:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.627451 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pop2/light:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Pop3/light:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.627451 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Pop2:show_behind_parent")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Pop2:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Pop1:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.517647, 0.517647, 0.517647, 0.823529 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Pop3:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.517647, 0.517647, 0.517647, 0.823529 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Icon2:texture")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 12 ) ]
+}
+
+[sub_resource type="Animation" id=273]
+resource_name = "Pop3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pop1/light:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 24 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pop2/light:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 24 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Pop3/light:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 4 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pop1/light:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.627451 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pop2/light:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0.627451 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Pop3/light:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Pop2:show_behind_parent")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Pop2:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.517647, 0.517647, 0.517647, 0.823529 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Pop1:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.517647, 0.517647, 0.517647, 0.823529 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Pop3:self_modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Icon2:texture")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 12 ) ]
+}
+
+[sub_resource type="Animation" id=274]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Pop1/light:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Pop2/light:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Pop3/light:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Pop1/light:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Pop2/light:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Pop3/light:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Pop1:self_modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.517647, 0.517647, 0.517647, 0.823529 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Pop2:self_modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.517647, 0.517647, 0.517647, 0.823529 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Pop3:self_modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.517647, 0.517647, 0.517647, 0.823529 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Pop2:show_behind_parent")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Icon2:texture")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 6 ) ]
+}
+
+[sub_resource type="ShaderMaterial" id=275]
+shader = ExtResource( 25 )
+shader_param/progress = 0.0
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = 0.15
+shader_param/color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="Animation" id=276]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.290196, 0.290196, 0.290196, 1 ) ]
+}
+
+[sub_resource type="Animation" id=277]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.752941, 0.635294, 0.435294, 1 ) ]
+}
+
+[sub_resource type="Animation" id=278]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.921569, 0.890196, 0.301961, 1 ) ]
+}
+
+[sub_resource type="Animation" id=279]
+resource_name = "3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.709804, 1, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=280]
+resource_name = "0"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.290196, 0.290196, 0.290196, 1 ) ]
+}
+
+[sub_resource type="Animation" id=281]
+resource_name = "1"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.752941, 0.635294, 0.435294, 1 ) ]
+}
+
+[sub_resource type="Animation" id=282]
+resource_name = "2"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.921569, 0.890196, 0.301961, 1 ) ]
+}
+
+[sub_resource type="Animation" id=283]
+resource_name = "3"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.709804, 1, 0, 1 ) ]
+}
+
+[node name="合理分配" type="Node2D"]
+
+[node name="machine" type="Node2D" parent="."]
+position = Vector2( 1014, 545 )
+
+[node name="2" type="Node2D" parent="machine"]
+use_parent_material = true
+position = Vector2( 48, -123 )
+
+[node name="box" type="Sprite" parent="machine/2"]
+use_parent_material = true
+position = Vector2( 0, 8 )
+texture = ExtResource( 22 )
+offset = Vector2( 0, -80 )
+
+[node name="GasNode" type="Node2D" parent="machine/2"]
+position = Vector2( 31, -92 )
+rotation = -1.5708
+
+[node name="Gas2" type="Node2D" parent="machine/2/GasNode"]
+use_parent_material = true
+
+[node name="back" type="Sprite" parent="machine/2/GasNode/Gas2"]
+use_parent_material = true
+position = Vector2( 0, -33 )
+texture = ExtResource( 19 )
+
+[node name="Ui" type="Sprite" parent="machine/2/GasNode/Gas2"]
+self_modulate = Color( 0.619608, 0.619608, 0.619608, 1 )
+position = Vector2( 7, 5 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, -16 )
+
+[node name="TextureProgress" type="TextureProgress" parent="machine/2/GasNode/Gas2/Ui"]
+margin_left = -3.0
+margin_top = -33.0
+margin_right = 3.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 16 )
+value = 100.0
+texture_progress = ExtResource( 3 )
+fill_mode = 3
+tint_progress = Color( 0.321569, 1, 0.984314, 1 )
+
+[node name="DeviceCoffeemachineBt" type="Sprite" parent="machine/2"]
+position = Vector2( 1, -67 )
+texture = ExtResource( 23 )
+
+[node name="WaterPosition" type="Node2D" parent="machine/2"]
+position = Vector2( 0, -42 )
+
+[node name="water" type="Sprite" parent="machine/2/WaterPosition"]
+self_modulate = Color( 1, 1, 1, 0.784314 )
+rotation = 3.14159
+scale = Vector2( 0.2, 1e-05 )
+texture = ExtResource( 1 )
+offset = Vector2( 1, -28 )
+
+[node name="DrinkCupNode" type="Node2D" parent="machine/2"]
+position = Vector2( 0, 7 )
+
+[node name="UI" type="Node2D" parent="machine/2"]
+position = Vector2( 0, 6 )
+
+[node name="Pop1" type="Sprite" parent="machine/2/UI"]
+position = Vector2( -25, -78 )
+texture = ExtResource( 8 )
+
+[node name="light" type="Sprite" parent="machine/2/UI/Pop1"]
+position = Vector2( -1, 20 )
+texture = ExtResource( 4 )
+
+[node name="Pop3" type="Sprite" parent="machine/2/UI"]
+self_modulate = Color( 0.517647, 0.517647, 0.517647, 0.823529 )
+position = Vector2( 26, -78 )
+texture = ExtResource( 9 )
+
+[node name="light" type="Sprite" parent="machine/2/UI/Pop3"]
+self_modulate = Color( 0, 0, 0, 0.627451 )
+position = Vector2( -1, 20 )
+texture = ExtResource( 24 )
+
+[node name="Pop2" type="Sprite" parent="machine/2/UI"]
+self_modulate = Color( 0.517647, 0.517647, 0.517647, 0.823529 )
+show_behind_parent = true
+position = Vector2( 0, -78 )
+texture = ExtResource( 7 )
+
+[node name="light" type="Sprite" parent="machine/2/UI/Pop2"]
+self_modulate = Color( 0, 0, 0, 0.627451 )
+position = Vector2( -1, 20 )
+texture = ExtResource( 24 )
+
+[node name="UIAni" type="AnimationPlayer" parent="machine/2/UI"]
+autoplay = "Pop1"
+anims/Pop1 = SubResource( 271 )
+anims/Pop2 = SubResource( 272 )
+anims/Pop3 = SubResource( 273 )
+anims/init = SubResource( 274 )
+
+[node name="Icon2" type="Sprite" parent="machine/2/UI"]
+position = Vector2( 0, -142 )
+texture = ExtResource( 12 )
+
+[node name="Machine" type="Node2D" parent="machine"]
+material = SubResource( 275 )
+use_parent_material = true
+position = Vector2( -160, -116 )
+
+[node name="back" type="NinePatchRect" parent="machine/Machine"]
+use_parent_material = true
+margin_left = -51.0
+margin_top = -81.0
+margin_right = 49.0
+margin_bottom = 9.0
+texture = ExtResource( 15 )
+region_rect = Rect2( 0, 0, 100.024, 58.4203 )
+patch_margin_top = 2
+patch_margin_bottom = 50
+
+[node name="Base" type="Sprite" parent="machine/Machine"]
+use_parent_material = true
+position = Vector2( 0, -87 )
+texture = ExtResource( 20 )
+
+[node name="Obj_X" type="Node2D" parent="machine/Machine"]
+position = Vector2( -23, -104 )
+
+[node name="Cap2" type="Node2D" parent="machine/Machine/Obj_X"]
+use_parent_material = true
+
+[node name="base" type="Sprite" parent="machine/Machine/Obj_X/Cap2"]
+position = Vector2( 0, -16 )
+texture = ExtResource( 18 )
+offset = Vector2( 0, -21 )
+
+[node name="fan" type="Sprite" parent="machine/Machine/Obj_X/Cap2/base"]
+position = Vector2( 0, 11 )
+texture = ExtResource( 21 )
+offset = Vector2( 0, -11 )
+
+[node name="Liquid" type="Node2D" parent="machine/Machine/Obj_X/Cap2"]
+modulate = Color( 0.196078, 0.196078, 0.196078, 1 )
+position = Vector2( 0, 15 )
+
+[node name="Top" type="Sprite" parent="machine/Machine/Obj_X/Cap2/Liquid"]
+modulate = Color( 1, 1, 1, 0.588235 )
+light_mask = 0
+position = Vector2( 0, -38 )
+scale = Vector2( 1, 0.6715 )
+texture = ExtResource( 11 )
+
+[node name="TextureProgress" type="TextureProgress" parent="machine/Machine/Obj_X/Cap2/Liquid"]
+margin_left = -24.0
+margin_top = -52.0
+margin_right = 24.0
+margin_bottom = -2.0
+value = 40.0
+texture_progress = ExtResource( 11 )
+fill_mode = 3
+tint_progress = Color( 0.784314, 0.784314, 0.784314, 0.784314 )
+
+[node name="front" type="Sprite" parent="machine/Machine/Obj_X/Cap2"]
+use_parent_material = true
+position = Vector2( 0, -16 )
+texture = ExtResource( 10 )
+offset = Vector2( 0, -21 )
+
+[node name="GuestBigbottlePop1" type="Sprite" parent="machine/Machine/Obj_X/Cap2/front"]
+position = Vector2( -14, 18 )
+texture = ExtResource( 31 )
+
+[node name="GuestBigbottlePop2" type="Sprite" parent="machine/Machine/Obj_X/Cap2/front"]
+position = Vector2( 14, 9 )
+texture = ExtResource( 31 )
+
+[node name="GuestBigbottlePop3" type="Sprite" parent="machine/Machine/Obj_X/Cap2/front"]
+position = Vector2( -8, 0 )
+texture = ExtResource( 33 )
+
+[node name="GuestBigbottlePop4" type="Sprite" parent="machine/Machine/Obj_X/Cap2/front"]
+position = Vector2( 8, 15 )
+texture = ExtResource( 33 )
+
+[node name="GuestBigbottlePop5" type="Sprite" parent="machine/Machine/Obj_X/Cap2/front"]
+position = Vector2( 10, -11 )
+texture = ExtResource( 32 )
+
+[node name="GuestBigbottlePop6" type="Sprite" parent="machine/Machine/Obj_X/Cap2/front"]
+position = Vector2( 13, -5 )
+texture = ExtResource( 30 )
+
+[node name="GuestBigbottlePop7" type="Sprite" parent="machine/Machine/Obj_X/Cap2/front"]
+position = Vector2( -12, -5 )
+texture = ExtResource( 34 )
+
+[node name="IconNode" type="Node2D" parent="machine/Machine/Obj_X/Cap2"]
+position = Vector2( 1, -96 )
+
+[node name="Icon" type="Sprite" parent="machine/Machine/Obj_X/Cap2/IconNode"]
+position = Vector2( 0, 3 )
+texture = ExtResource( 36 )
+
+[node name="LiquidLabel" type="Label" parent="machine/Machine/Obj_X/Cap2/IconNode/Icon"]
+margin_left = -40.0
+margin_top = 9.0
+margin_right = 40.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 26 )
+text = "25"
+align = 1
+valign = 1
+
+[node name="Obj_Y" type="Node2D" parent="machine/Machine"]
+position = Vector2( 23, -104 )
+
+[node name="Cap1" type="Node2D" parent="machine/Machine/Obj_Y"]
+use_parent_material = true
+
+[node name="base" type="Sprite" parent="machine/Machine/Obj_Y/Cap1"]
+position = Vector2( 0, -16 )
+texture = ExtResource( 18 )
+offset = Vector2( 0, -21 )
+
+[node name="fan" type="Sprite" parent="machine/Machine/Obj_Y/Cap1/base"]
+position = Vector2( 0, 11 )
+texture = ExtResource( 21 )
+offset = Vector2( 0, -11 )
+
+[node name="front" type="Sprite" parent="machine/Machine/Obj_Y/Cap1"]
+use_parent_material = true
+position = Vector2( 0, -16 )
+texture = ExtResource( 10 )
+offset = Vector2( 0, -21 )
+
+[node name="Gasbottl3" type="Node2D" parent="machine/Machine"]
+use_parent_material = true
+position = Vector2( 26, -82 )
+rotation = -1.57079
+
+[node name="back" type="Sprite" parent="machine/Machine/Gasbottl3"]
+use_parent_material = true
+position = Vector2( 0, -33 )
+texture = ExtResource( 19 )
+
+[node name="Ui" type="Sprite" parent="machine/Machine/Gasbottl3"]
+self_modulate = Color( 0.619608, 0.619608, 0.619608, 1 )
+position = Vector2( 7, 5 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, -16 )
+
+[node name="TextureProgress" type="TextureProgress" parent="machine/Machine/Gasbottl3/Ui"]
+margin_left = -3.0
+margin_top = -33.0
+margin_right = 3.0
+margin_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 16 )
+value = 100.0
+texture_progress = ExtResource( 3 )
+fill_mode = 3
+tint_progress = Color( 0.321569, 1, 0.984314, 1 )
+
+[node name="UI" type="Node2D" parent="machine/Machine"]
+position = Vector2( 0, 12 )
+
+[node name="Button" type="Sprite" parent="machine/Machine/UI"]
+use_parent_material = true
+position = Vector2( 0, -56 )
+texture = ExtResource( 16 )
+
+[node name="X" type="Sprite" parent="machine/Machine/UI"]
+self_modulate = Color( 0.921569, 0.890196, 0.301961, 1 )
+position = Vector2( -18, -53 )
+texture = ExtResource( 17 )
+offset = Vector2( 0, -12 )
+
+[node name="pop" type="Sprite" parent="machine/Machine/UI/X"]
+position = Vector2( -3, -13 )
+texture = ExtResource( 14 )
+
+[node name="TextureProgress" type="TextureProgress" parent="machine/Machine/UI/X"]
+margin_left = -13.0
+margin_top = -23.0
+margin_right = 7.0
+margin_bottom = -2.0
+rect_pivot_offset = Vector2( 9, 21 )
+value = 50.0
+texture_progress = ExtResource( 13 )
+fill_mode = 3
+
+[node name="PopLevel" type="AnimationPlayer" parent="machine/Machine/UI/X"]
+autoplay = "2"
+anims/0 = SubResource( 276 )
+anims/1 = SubResource( 277 )
+anims/2 = SubResource( 278 )
+anims/3 = SubResource( 279 )
+
+[node name="Y" type="Sprite" parent="machine/Machine/UI"]
+self_modulate = Color( 0.290196, 0.290196, 0.290196, 1 )
+position = Vector2( 19, -53 )
+texture = ExtResource( 17 )
+offset = Vector2( 0, -12 )
+
+[node name="pop" type="Sprite" parent="machine/Machine/UI/Y"]
+position = Vector2( -3, -13 )
+texture = ExtResource( 14 )
+
+[node name="TextureProgress" type="TextureProgress" parent="machine/Machine/UI/Y"]
+margin_left = -13.0
+margin_top = -23.0
+margin_right = 8.0
+margin_bottom = -3.0
+rect_pivot_offset = Vector2( 11, 20 )
+texture_progress = ExtResource( 13 )
+fill_mode = 3
+
+[node name="PopLevel" type="AnimationPlayer" parent="machine/Machine/UI/Y"]
+autoplay = "0"
+anims/0 = SubResource( 280 )
+anims/1 = SubResource( 281 )
+anims/2 = SubResource( 282 )
+anims/3 = SubResource( 283 )
+
+[node name="164" type="RichTextLabel" parent="."]
+margin_left = 624.0
+margin_top = 459.0
+margin_right = 1331.0
+margin_bottom = 646.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "当气瓶数量不够多，无法保证每个机器都配置气瓶的时候，你需要合理分配气瓶安装的位置，时刻注意二氧化碳的剩余量。"
+text = "当气瓶数量不够多，无法保证每个机器都配置气瓶的时候，你需要合理分配气瓶安装的位置，时刻注意二氧化碳的剩余量。"
+script = ExtResource( 29 )
+LabelTEXT = "信息-文字说明-164"
+Center_Bool = true

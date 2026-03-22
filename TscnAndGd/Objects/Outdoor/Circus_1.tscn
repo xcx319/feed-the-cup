@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Resources/Outdoor/outdoor2_pack.sprites/circus_castle_1.tres" type="Texture" id=1]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 55.0
+height = 30.0
+
+[node name="Circus" type="StaticBody2D"]
+light_mask = 2
+collision_layer = 128
+collision_mask = 5120
+
+[node name="TexNode" type="Node2D" parent="."]
+
+[node name="castle1" type="Sprite" parent="TexNode"]
+position = Vector2( 0, 50 )
+texture = ExtResource( 1 )
+offset = Vector2( -42, -208 )
+
+[node name="castle2" type="Sprite" parent="TexNode"]
+position = Vector2( 0, 50 )
+scale = Vector2( -1, 1 )
+texture = ExtResource( 1 )
+offset = Vector2( -42, -208 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource( 1 )

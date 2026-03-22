@@ -1,0 +1,118 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_supercup_cup_4.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_supercup_baselayer_4.tres" type="Texture" id=2]
+[ext_resource path="res://Language/Fonts/Base_m_outline.tres" type="DynamicFont" id=3]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=4]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_TicketMachine_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_TicketMachine_front.tres" type="Texture" id=7]
+
+[sub_resource type="Shader" id=304]
+code = "shader_type canvas_item;
+render_mode blend_premul_alpha;
+
+// This shader only works properly with premultiplied alpha blend mode.
+uniform float aura_width = 2.0;
+uniform vec4 aura_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, aura_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(aura_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	col.rgb *= col.a;
+
+	COLOR = col;
+	COLOR.rgb += aura_color.rgb * (maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=305]
+resource_local_to_scene = true
+shader = SubResource( 304 )
+shader_param/aura_width = 0.0
+shader_param/aura_color = Color( 1, 1, 0, 1 )
+
+[node name="超级杯贴票" type="Node2D"]
+
+[node name="196" type="RichTextLabel" parent="."]
+margin_left = -365.0
+margin_top = 70.0
+margin_right = 395.0
+margin_bottom = 217.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "用贴票机给超级杯贴上单号，这种制作方式可以允许你预制少量饮品。
+你需要回忆起泡茶的方法，不同的茶叶需要的温度不同。"
+text = "用贴票机给超级杯贴上单号，这种制作方式可以允许你预制少量饮品。
+你需要回忆起泡茶的方法，不同的茶叶需要的温度不同。"
+script = ExtResource( 4 )
+LabelTEXT = "信息-文字说明-196"
+Center_Bool = true
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2( 96, 1 )
+
+[node name="DeviceTicketMachineFront2" type="Sprite" parent="1"]
+position = Vector2( -156, -17 )
+texture = ExtResource( 7 )
+
+[node name="Label" type="Label" parent="1/DeviceTicketMachineFront2"]
+margin_left = -5.0
+margin_top = -66.0
+margin_right = 12.0
+margin_bottom = -35.0
+custom_fonts/font = ExtResource( 3 )
+text = "1"
+
+[node name="DeviceTicketMachine2" type="Sprite" parent="1/DeviceTicketMachineFront2"]
+position = Vector2( 9, 12 )
+texture = ExtResource( 6 )
+
+[node name="TexNode10" type="Node2D" parent="1"]
+pause_mode = 2
+material = SubResource( 305 )
+position = Vector2( -27, -40 )
+
+[node name="Label2" type="Label" parent="1/TexNode10"]
+margin_left = -7.0
+margin_top = -91.0
+margin_right = 10.0
+margin_bottom = -60.0
+custom_fonts/font = ExtResource( 3 )
+text = "1"
+
+[node name="Cup_S" type="Sprite" parent="1/TexNode10"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+texture = ExtResource( 2 )
+
+[node name="CupF_S" type="Sprite" parent="1/TexNode10"]
+pause_mode = 2
+use_parent_material = true
+texture = ExtResource( 1 )
+
+[node name="TotuInfo6" type="Sprite" parent="1"]
+position = Vector2( -104, -52 )
+rotation = -0.785397
+texture = ExtResource( 5 )

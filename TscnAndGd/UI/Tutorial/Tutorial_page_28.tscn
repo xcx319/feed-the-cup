@@ -1,0 +1,113 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=1]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_workboard.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_baselayer_2.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_procup_cup_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/Item/item_pack.sprites/item_deco_lemon.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_lemon_single_4.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_lemon_slice_4.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_9.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_lemon_slice_1.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_lemon_slice_2.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_lemon_slice_5.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Item/item_pack.sprites/fruit_lemon_slice_3.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_1.tres" type="Texture" id=16]
+
+
+[node name="切" type="Node2D"]
+position = Vector2( -15, 84 )
+
+[node name="48" type="RichTextLabel" parent="."]
+margin_left = -143.0
+margin_top = 260.0
+margin_right = 615.0
+margin_bottom = 428.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "想要卖的更多，饮品的美观也很重要。
+将柠檬放在{术语_菜板}上，切成片！
+装饰的柠檬片不仅可以让人神清气爽，还可以提高单价呢！"
+text = "想要卖的更多，饮品的美观也很重要。
+将柠檬放在{术语_菜板}上，切成片！
+装饰的柠檬片不仅可以让人神清气爽，还可以提高单价呢！"
+script = ExtResource( 1 )
+LabelTEXT = "信息-文字说明-48"
+Center_Bool = true
+
+[node name="DeviceWorkboard" type="Sprite" parent="."]
+position = Vector2( -5, 139 )
+texture = ExtResource( 4 )
+
+[node name="FruitLemonSingle4" type="Sprite" parent="DeviceWorkboard"]
+position = Vector2( -65, -19 )
+texture = ExtResource( 8 )
+
+[node name="UiIconInfo0" type="Sprite" parent="DeviceWorkboard"]
+position = Vector2( -20, -4 )
+texture = ExtResource( 16 )
+
+[node name="DeviceWorkboard2" type="Sprite" parent="."]
+position = Vector2( 256, 139 )
+texture = ExtResource( 4 )
+
+[node name="FruitLemonSlice1" type="Sprite" parent="DeviceWorkboard2"]
+position = Vector2( -9.5, 28.5 )
+texture = ExtResource( 11 )
+
+[node name="FruitLemonSlice2" type="Sprite" parent="DeviceWorkboard2"]
+position = Vector2( -4.5, 28.5 )
+texture = ExtResource( 12 )
+
+[node name="FruitLemonSlice3" type="Sprite" parent="DeviceWorkboard2"]
+position = Vector2( 0.5, 28.5 )
+texture = ExtResource( 14 )
+
+[node name="FruitLemonSlice4" type="Sprite" parent="DeviceWorkboard2"]
+position = Vector2( 5.5, 28.5 )
+texture = ExtResource( 9 )
+
+[node name="FruitLemonSlice5" type="Sprite" parent="DeviceWorkboard2"]
+position = Vector2( 10.5, 28.5 )
+texture = ExtResource( 13 )
+
+[node name="UiIconInfo1" type="Sprite" parent="."]
+position = Vector2( 124, 170 )
+texture = ExtResource( 15 )
+
+[node name="UiIconInfo9" type="Sprite" parent="UiIconInfo1"]
+position = Vector2( 0, -44 )
+texture = ExtResource( 10 )
+
+[node name="X" parent="." instance=ExtResource( 2 )]
+margin_left = 107.0
+margin_top = 213.0
+margin_right = 107.0
+margin_bottom = 213.0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-加工"
+OnBut = false
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 115, -15 )
+
+[node name="UiIconInfo2" type="Sprite" parent="Node2D"]
+position = Vector2( 262, 186 )
+texture = ExtResource( 15 )
+
+[node name="Cup" type="Node2D" parent="Node2D"]
+position = Vector2( 350, 164 )
+scale = Vector2( 0.7, 0.7 )
+
+[node name="UiProcupCupBaselayer2" type="Sprite" parent="Node2D/Cup"]
+texture = ExtResource( 5 )
+
+[node name="ItemDecoLemon" type="Sprite" parent="Node2D/Cup"]
+position = Vector2( 28, -6 )
+texture = ExtResource( 7 )
+
+[node name="UiProcupCup2" type="Sprite" parent="Node2D/Cup"]
+texture = ExtResource( 6 )

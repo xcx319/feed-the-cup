@@ -1,0 +1,99 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://TscnAndGd/Objects/Items/DrinkCup.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/Ui_procup_cup_shake.tres" type="Texture" id=3]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=5]
+[ext_resource path="res://TscnAndGd/Objects/Devices/ShakeCup.gd" type="Script" id=24]
+
+[sub_resource type="CapsuleShape2D" id=179]
+radius = 8.0
+height = 16.0
+
+[sub_resource type="Shader" id=176]
+code = "shader_type canvas_item;
+
+uniform float outline_width = 2.0;
+uniform vec4 outline_color: hint_color;
+
+void fragment() {
+	vec4 col = texture(TEXTURE, UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa = col.a;
+	float mina = col.a;
+
+	a = texture(TEXTURE, UV + vec2(0.0, -outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(0.0, outline_width) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(-outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	a = texture(TEXTURE, UV + vec2(outline_width, 0.0) * ps).a;
+	maxa = max(a, maxa);
+	mina = min(a, mina);
+
+	COLOR = mix(col ,outline_color, maxa - mina);//COLOR = mix(col, outline_color, maxa - mina);
+}
+"
+
+[sub_resource type="ShaderMaterial" id=177]
+resource_local_to_scene = true
+shader = SubResource( 176 )
+shader_param/outline_width = 1.0
+shader_param/outline_color = Color( 1, 1, 0, 1 )
+
+[node name="ShakeCup" type="Area2D"]
+collision_layer = 384
+collision_mask = 3584
+script = ExtResource( 24 )
+__meta__ = {
+"_editor_description_": "ITEM"
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource( 179 )
+
+[node name="DrinkCup" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1, 1 )
+
+[node name="TexNode" parent="DrinkCup" index="1"]
+material = SubResource( 177 )
+
+[node name="Layer1" parent="DrinkCup/TexNode/Tex/Layer" index="0"]
+value = 10.0
+
+[node name="Layer0" parent="DrinkCup/TexNode/Tex/Layer" index="6"]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 0, 50 )
+scale = Vector2( 0.83, 0.83 )
+
+[node name="Sprite" type="Sprite" parent="DrinkCup/TexNode/Tex/Front" index="3"]
+position = Vector2( -1, -10 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="But" type="VBoxContainer" parent="."]
+visible = false
+margin_left = -20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = 120.0
+custom_constants/separation = 28
+
+[node name="A" parent="But" instance=ExtResource( 5 )]
+bool_Small = true
+Info_Str = "BUT-拿"
+Info_1 = "BUT-加入"
+OnBut = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+
+[editable path="DrinkCup"]

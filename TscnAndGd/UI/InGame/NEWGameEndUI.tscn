@@ -1,0 +1,4424 @@
+[gd_scene load_steps=81 format=2]
+
+[ext_resource path="res://Sounds/Effect/气泡.wav" type="AudioStream" id=1]
+[ext_resource path="res://Language/Fonts/Base_m_outline.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_Symbol_max.tres" type="Texture" id=3]
+[ext_resource path="res://Language/Fonts/cn_font_logo.tres" type="DynamicFont" id=4]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=5]
+[ext_resource path="res://TscnAndGd/UI/InGame/DayControl.tscn" type="PackedScene" id=6]
+[ext_resource path="res://TscnAndGd/UI/InGame/GameEndUI.gd" type="Script" id=7]
+[ext_resource path="res://Resources/UI/Main/MainBG_logo_1.png" type="Texture" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_money.tres" type="Texture" id=9]
+[ext_resource path="res://TscnAndGd/UI/Info/CurChoose.tscn" type="PackedScene" id=10]
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=11]
+[ext_resource path="res://Language/Fonts/Base_l.tres" type="DynamicFont" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut_1.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/UI/Main/Demo_BG.png" type="Texture" id=14]
+[ext_resource path="res://TscnAndGd/Effects/Effect_Money.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_GuestView_bad.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_GuestView_1.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_GuestView_ok.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_GuestView_2.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_GuestView_3.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_GuestView_4.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/Effects/effect_pack.sprites/Effect_GuestView_per.tres" type="Texture" id=22]
+[ext_resource path="res://Sounds/Effect/提示服务铃2.wav" type="AudioStream" id=23]
+[ext_resource path="res://Sounds/Effect/提示服务铃3.wav" type="AudioStream" id=24]
+[ext_resource path="res://Sounds/Effect/提示服务铃1.wav" type="AudioStream" id=25]
+[ext_resource path="res://Language/Fonts/Base_l_outline.tres" type="DynamicFont" id=26]
+[ext_resource path="res://Language/Fonts/猫啃网秀雅圆.ttf" type="DynamicFontData" id=27]
+[ext_resource path="res://TscnAndGd/UI/Info/GiftUI.tscn" type="PackedScene" id=28]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_coin.tres" type="Texture" id=29]
+[ext_resource path="res://Language/Fonts/Base_special_W.tres" type="DynamicFont" id=30]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_bg.tres" type="Texture" id=31]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_rep.tres" type="Texture" id=33]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_eggcoin.tres" type="Texture" id=34]
+[ext_resource path="res://TscnAndGd/UI/InGame/MoneyBarProgress.gd" type="Script" id=35]
+
+[sub_resource type="StyleBoxFlat" id=105]
+bg_color = Color( 0.0156863, 0.0156863, 0.0156863, 0.784314 )
+
+[sub_resource type="Animation" id=120]
+resource_name = "1"
+length = 3.0
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("GuestReview:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.26, 0.36, 0.46, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("GuestReview:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.14, 0.92, 1, 1.12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 1.3, 1.3 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=121]
+resource_name = "2"
+length = 3.0
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("GuestReview:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.26, 0.36, 0.46, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 18 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("GuestReview:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.14, 0.92, 1, 1.12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 1.3, 1.3 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=122]
+resource_name = "3"
+length = 3.0
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("GuestReview:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.26, 0.36, 0.46, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 16 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("GuestReview:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.14, 0.92, 1, 1.28 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 1.3, 1.3 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=123]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=124]
+resource_name = "1"
+length = 3.0
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("GuestReview:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.26, 0.36, 0.46, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("GuestReview:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.14, 0.92, 1, 1.12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 1.3, 1.3 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=125]
+resource_name = "2"
+length = 3.0
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("GuestReview:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.26, 0.36, 0.46, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 18 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("GuestReview:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.14, 0.92, 1, 1.12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 1.3, 1.3 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=126]
+resource_name = "3"
+length = 3.0
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("GuestReview:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.26, 0.36, 0.46, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 16 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("GuestReview:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.14, 0.92, 1, 1.28 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 1.3, 1.3 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=127]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=128]
+resource_name = "1"
+length = 3.0
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("GuestReview:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.26, 0.36, 0.46, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("GuestReview:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.14, 0.92, 1, 1.12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 1.3, 1.3 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=129]
+resource_name = "2"
+length = 3.0
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("GuestReview:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.26, 0.36, 0.46, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 18 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("GuestReview:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.14, 0.92, 1, 1.12 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 1.3, 1.3 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=130]
+resource_name = "3"
+length = 3.0
+step = 0.02
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("GuestReview:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.26, 0.36, 0.46, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ ExtResource( 17 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 16 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("GuestReview:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.14, 0.92, 1, 1.28 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 1.3, 1.3 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=131]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="DynamicFontData" id=95]
+font_path = "res://Language/Fonts/simhei.ttf"
+
+[sub_resource type="DynamicFont" id=100]
+size = 30
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 95 )
+
+[sub_resource type="Animation" id=146]
+resource_name = "play"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:value")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 100.0 ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "init"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Icon:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Icon:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.35, 0.6, 0.85, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 4, 4 ), Vector2( 1.6, 1.6 ), Vector2( 2.5, 2.5 ), Vector2( 2.5, 2.5 ), Vector2( 3, 3 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Icon:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.65, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -500, -500 ), Vector2( -500, -500 ), Vector2( 32, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Icon:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 20.0, -20.0, 0.0 ]
+}
+
+[sub_resource type="Animation" id=96]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ false ],
+"method": "call_show_switch"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/BG/UnlockLevel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("DemoEnd:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Button:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=119]
+resource_name = "play"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("DemoEnd:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "animation"
+tracks/3/path = NodePath("MoneyAni")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0.1 )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Button:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Panel:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Panel:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=97]
+resource_name = "show"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/BG/Mission/BigWin:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 286, 0 ), Vector2( 286, 0 ), Vector2( 286, -140 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/BG/Mission/BigWin:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1.4, 1.4 ), Vector2( 1, 1 ) ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Control/BG/Mission/BigWin:rect_rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.1, 20.7355, 0, -0.06, -17.1731, 0.12, 17.4795, 0, -0.1, -16.2428, 0.08, 13.0607, 0, -0.16, -11.5915, 0.08, 6.31626, 0, -0.1, -10.4286, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.6 )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Control/BG/Mission/BigLose:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 290, -314 ), Vector2( 286, -220 ), Vector2( 286, -220 ) ]
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Control/BG/Mission/BigLose:rect_rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.44, 15.7353, -8, -0.12, -12.3128, 0.08, 2.5607, -8, -0.08, -1.41151, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 0.6 )
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Control:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Control:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.52 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "animation"
+tracks/8/path = NodePath("Control/BG/InfoControl/Review/Perfect/HappyAni")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"clips": PoolStringArray( "init", "1" ),
+"times": PoolRealArray( 0, 0.2 )
+}
+tracks/9/type = "animation"
+tracks/9/path = NodePath("Control/BG/InfoControl/Review/Good/HappyAni")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"clips": PoolStringArray( "init", "2" ),
+"times": PoolRealArray( 0, 0.4 )
+}
+tracks/10/type = "animation"
+tracks/10/path = NodePath("Control/BG/InfoControl/Review/Bad/HappyAni")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"clips": PoolStringArray( "init", "3" ),
+"times": PoolRealArray( 0, 0.8 )
+}
+tracks/11/type = "audio"
+tracks/11/path = NodePath("FingerAudio")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 23 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 24 )
+}, {
+"end_offset": 0.561777,
+"start_offset": 0.0,
+"stream": ExtResource( 25 )
+} ],
+"times": PoolRealArray( 1.1, 1.4, 1.7 )
+}
+tracks/12/type = "method"
+tracks/12/path = NodePath(".")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_CurCard_init"
+} ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Control/BG/InfoControl/Reward:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Control/Label:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Control/DayControl:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Control/BG/Special:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=143]
+resource_name = "show_S"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/BG/Mission/BigWin:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 286, 0 ), Vector2( 286, 0 ), Vector2( 286, -140 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/BG/Mission/BigWin:rect_scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1.4, 1.4 ), Vector2( 1, 1 ) ]
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("Control/BG/Mission/BigWin:rect_rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.1, 20.7355, 0, -0.06, -17.1731, 0.12, 17.4795, 0, -0.1, -16.2428, 0.08, 13.0607, 0, -0.16, -11.5915, 0.08, 6.31626, 0, -0.1, -10.4286, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.6 )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Control/BG/Mission/BigLose:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 290, -314 ), Vector2( 286, -220 ), Vector2( 286, -220 ) ]
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("Control/BG/Mission/BigLose:rect_rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.44, 15.7353, -8, -0.12, -12.3128, 0.08, 2.5607, -8, -0.08, -1.41151, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 0.6 )
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Control:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Control:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.52 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "animation"
+tracks/8/path = NodePath("Control/BG/InfoControl/Review/Perfect/HappyAni")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"clips": PoolStringArray( "init", "1" ),
+"times": PoolRealArray( 0, 0.2 )
+}
+tracks/9/type = "animation"
+tracks/9/path = NodePath("Control/BG/InfoControl/Review/Good/HappyAni")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"clips": PoolStringArray( "init", "2" ),
+"times": PoolRealArray( 0, 0.4 )
+}
+tracks/10/type = "animation"
+tracks/10/path = NodePath("Control/BG/InfoControl/Review/Bad/HappyAni")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"clips": PoolStringArray( "init", "3" ),
+"times": PoolRealArray( 0, 0.8 )
+}
+tracks/11/type = "audio"
+tracks/11/path = NodePath("FingerAudio")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 23 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 24 )
+}, {
+"end_offset": 0.561777,
+"start_offset": 0.0,
+"stream": ExtResource( 25 )
+} ],
+"times": PoolRealArray( 1.1, 1.4, 1.7 )
+}
+tracks/12/type = "method"
+tracks/12/path = NodePath(".")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_CurCard_init"
+} ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Control/BG/InfoControl/Reward:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Control/Label:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Control/DayControl:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Control/BG/Special:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=133]
+resource_name = "备份"
+length = 8.0
+step = 0.02
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ false ],
+"method": "call_show_switch"
+}, {
+"args": [ true ],
+"method": "call_show_switch"
+} ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Control/BG/Mission/BigWin:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 286, 0 ), Vector2( 286, 0 ), Vector2( 286, -140 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/BG/Mission/BigWin:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1.4, 1.4 ), Vector2( 1, 1 ) ]
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("Control/BG/Mission/BigWin:rect_rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.1, 20.7355, 0, -0.06, -17.1731, 0.12, 17.4795, 0, -0.1, -16.2428, 0.08, 13.0607, 0, -0.16, -11.5915, 0.08, 6.31626, 0, -0.1, -10.4286, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.3, 0.5, 0.6 )
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Control/BG/Mission/BigLose:rect_position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 290, -314 ), Vector2( 286, -220 ), Vector2( 286, -220 ) ]
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("Control/BG/Mission/BigLose:rect_rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.44, 15.7353, -8, -0.12, -12.3128, 0.08, 2.5607, -8, -0.08, -1.41151, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 0.6 )
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Control/BG/InfoControl/Date/Popular:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Control/BG/InfoControl/Date/DayLabel:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1.8, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("Control/BG/InfoControl/Date/TotalSellLabel:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 2, 2.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("Control/BG/InfoControl/Date/TotalMoney:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 2.2, 2.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Control/BG/InfoControl/Date/Popular/HBox/1:rect_scale")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 1.1, 1.3, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 2, 2 ), Vector2( 1, 1 ) ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Control/BG/InfoControl/Date/Popular/HBox/2:rect_scale")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 1.2, 1.4, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 2, 2 ), Vector2( 1, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Control/BG/InfoControl/Date/Popular/HBox/3:rect_scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 1.3, 1.5, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 2, 2 ), Vector2( 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Control/BG/InfoControl/Date/Popular/HBox/4:rect_scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 1.4, 1.6, 1.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 2, 2 ), Vector2( 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Control/BG/InfoControl/Date/Popular/HBox/5:rect_scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 1.5, 1.7, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 1e-05, 1e-05 ), Vector2( 2, 2 ), Vector2( 1, 1 ) ]
+}
+tracks/16/type = "value"
+tracks/16/path = NodePath("Control/BG/InfoControl/Reward/StoreBaseValueLabel:rect_scale")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"times": PoolRealArray( 0, 2.3, 2.4, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/17/type = "bezier"
+tracks/17/path = NodePath("Control/BG/InfoControl/Reward/StoreBaseValueLabel:rect_rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.0619349, 124.744, 0, -0.25, 0, 0.0619349, 124.744, 0, -0.218065, -55.7514, 0.25, 0 ),
+"times": PoolRealArray( 0, 2.3, 2.5 )
+}
+tracks/18/type = "value"
+tracks/18/path = NodePath("Control/BG/InfoControl/Reward/X:rect_scale")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/keys = {
+"times": PoolRealArray( 0, 0.64, 0.84 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/19/type = "value"
+tracks/19/path = NodePath("Control/BG/InfoControl/Reward/RateLabel:rect_scale")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/keys = {
+"times": PoolRealArray( 0, 0.84, 0.94, 1.14 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/20/type = "bezier"
+tracks/20/path = NodePath("Control/BG/InfoControl/Reward/RateLabel:rect_rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.114276, 157.144, 0, -0.25, 0, 0.174652, 70.54, 0, -0.225348, -67.7, 0.105363, 30.6333, 0, -0.114637, -26.8667, 0.125363, 11.4667, 0, -0.0946372, -13.5333, 0.245363, -1.03334 ),
+"times": PoolRealArray( 0, 0.84, 1.14, 1.34, 1.54 )
+}
+tracks/21/type = "value"
+tracks/21/path = NodePath("Control/BG/InfoControl/Reward/=:rect_scale")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/keys = {
+"times": PoolRealArray( 0, 1.34, 1.54 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/22/type = "value"
+tracks/22/path = NodePath("Control/BG/InfoControl/Reward/StoreValueLabel:rect_scale")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/keys = {
+"times": PoolRealArray( 0, 6.94, 7.04, 7.24 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/23/type = "bezier"
+tracks/23/path = NodePath("Control/BG/InfoControl/Reward/StoreValueLabel:rect_rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.274514, -128.456, 0, -0.25, 0, 0.1, -48, 0, -0.0999999, 37, 0.0781569, -31.0333, 0, -0.0818427, 22.4389, 0.0981572, -15.0611, 0, -0.0618429, 14.1056, 0.25, 0 ),
+"times": PoolRealArray( 0, 6.94, 7.24, 7.44, 7.64 )
+}
+tracks/24/type = "value"
+tracks/24/path = NodePath("Button:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/keys = {
+"times": PoolRealArray( 0, 2.9, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true ]
+}
+tracks/25/type = "value"
+tracks/25/path = NodePath("Control:visible")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/26/type = "value"
+tracks/26/path = NodePath("Control:modulate")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/keys = {
+"times": PoolRealArray( 0.04, 0.52 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/27/type = "animation"
+tracks/27/path = NodePath("Control/BG/InfoControl/Review/Perfect/HappyAni")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/keys = {
+"clips": PoolStringArray( "init", "1" ),
+"times": PoolRealArray( 0, 3 )
+}
+tracks/28/type = "animation"
+tracks/28/path = NodePath("Control/BG/InfoControl/Review/Good/HappyAni")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/keys = {
+"clips": PoolStringArray( "init", "2" ),
+"times": PoolRealArray( 0, 3.98 )
+}
+tracks/29/type = "animation"
+tracks/29/path = NodePath("Control/BG/InfoControl/Review/Bad/HappyAni")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/keys = {
+"clips": PoolStringArray( "init", "3" ),
+"times": PoolRealArray( 0, 4.86 )
+}
+
+[sub_resource type="Animation" id=101]
+resource_name = "0"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/BG/Mission/BigWin:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/BG/Mission/BigLose:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Control/BG/Mission/BigLose")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-压力过高" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="Animation" id=102]
+resource_name = "1"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/BG/Mission/BigLose:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/BG/Mission/BigWin:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Control/BG/Mission/BigLose")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-经营失败" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="Animation" id=104]
+resource_name = "2"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/BG/Mission/BigWin:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/BG/Mission/BigLose:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Control/BG/Mission/BigLose")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-放弃" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="Animation" id=141]
+resource_name = "Join"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/BG/Mission/BigWin:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/BG/Mission/BigLose:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Control/BG/Mission/BigLose")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-乱入结算" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("Control/BG/Mission/BigWin")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-乱入结算" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="Animation" id=103]
+resource_name = "complete"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Control/BG/Mission/BigLose:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control/BG/Mission/BigWin:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Control/BG/Mission/BigWin")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ "信息-通关" ],
+"method": "call_Tr_TEXT"
+} ]
+}
+
+[sub_resource type="Animation" id=144]
+resource_name = "-1"
+length = 1.5
+tracks/0/type = "animation"
+tracks/0/path = NodePath("DevilMoney/Effect_Money/Ani")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("DevilMoney/Effect_Money2/Ani")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "animation"
+tracks/2/path = NodePath("DevilMoney/Effect_Money3/Ani")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "animation"
+tracks/3/path = NodePath("DevilMoney/Effect_Money4/Ani")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "animation"
+tracks/4/path = NodePath("DevilMoney/Effect_Money5/Ani")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "animation"
+tracks/5/path = NodePath("DevilMoney/Effect_Money6/Ani")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "animation"
+tracks/6/path = NodePath("DevilMoney/Effect_Money7/Ani")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "animation"
+tracks/7/path = NodePath("DevilMoney/Effect_Money8/Ani")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Control/BG/InfoControl/Reward/StoreValueLabel:rect_scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("Control/BG/InfoControl/Reward/StoreValueLabel:rect_rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.274514, -128.456 ),
+"times": PoolRealArray( 0 )
+}
+tracks/10/type = "method"
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 1.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ true ],
+"method": "call_show_switch"
+} ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Button:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 0.7, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Button:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 1.1, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.888889 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Control/BG/InfoControl/Reward/=:rect_scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Control/BG/InfoControl/Reward/X:rect_scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Control/BG/InfoControl/Reward/RateLabel:rect_scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("Control/BG/InfoControl/Reward/RateLabel:rect_rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.114276, 157.144 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=132]
+resource_name = "0"
+length = 4.0
+tracks/0/type = "animation"
+tracks/0/path = NodePath("DevilMoney/Effect_Money/Ani")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("DevilMoney/Effect_Money2/Ani")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "animation"
+tracks/2/path = NodePath("DevilMoney/Effect_Money3/Ani")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "animation"
+tracks/3/path = NodePath("DevilMoney/Effect_Money4/Ani")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "animation"
+tracks/4/path = NodePath("DevilMoney/Effect_Money5/Ani")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": PoolStringArray( "init", "end_2" ),
+"times": PoolRealArray( 0, 1.5 )
+}
+tracks/5/type = "animation"
+tracks/5/path = NodePath("DevilMoney/Effect_Money6/Ani")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "animation"
+tracks/6/path = NodePath("DevilMoney/Effect_Money7/Ani")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "animation"
+tracks/7/path = NodePath("DevilMoney/Effect_Money8/Ani")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Control/BG/InfoControl/Reward/StoreValueLabel:rect_scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2.8, 2.9, 3.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("Control/BG/InfoControl/Reward/StoreValueLabel:rect_rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.274514, -128.456, 0, -0.25, 0, 0.1, -48, 0, -0.0999999, 37, 0.0781569, -31.0333, 0, -0.0818427, 22.4389, 0.0981572, -15.0611, 0, -0.0618429, 14.1056, 0.25, 0 ),
+"times": PoolRealArray( 0, 2.8, 3.1, 3.3, 3.5 )
+}
+tracks/10/type = "method"
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 4 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ true ],
+"method": "call_show_switch"
+} ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Button:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 3.2, 3.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Button:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 3.6, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.888889 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Control/BG/InfoControl/Reward/=:rect_scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 2.6, 2.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Control/BG/InfoControl/Reward/X:rect_scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 1.6, 1.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Control/BG/InfoControl/Reward/RateLabel:rect_scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 1.8, 1.9, 2.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("Control/BG/InfoControl/Reward/RateLabel:rect_rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.114276, 157.144, 0, -0.25, 0, 0.174652, 70.54, 0, -0.225348, -67.7, 0.105363, 30.6333, 0, -0.114637, -26.8667, 0.125363, 11.4667, 0, -0.0946372, -13.5333, 0.245363, -1.03334 ),
+"times": PoolRealArray( 0, 1.8, 2.1, 2.3, 2.5 )
+}
+
+[sub_resource type="Animation" id=137]
+resource_name = "1"
+length = 5.0
+tracks/0/type = "animation"
+tracks/0/path = NodePath("DevilMoney/Effect_Money/Ani")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("DevilMoney/Effect_Money2/Ani")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "animation"
+tracks/2/path = NodePath("DevilMoney/Effect_Money3/Ani")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": PoolStringArray( "init", "end_2", "end_1" ),
+"times": PoolRealArray( 0, 1.7, 2.8 )
+}
+tracks/3/type = "animation"
+tracks/3/path = NodePath("DevilMoney/Effect_Money4/Ani")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "animation"
+tracks/4/path = NodePath("DevilMoney/Effect_Money5/Ani")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "animation"
+tracks/5/path = NodePath("DevilMoney/Effect_Money6/Ani")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "animation"
+tracks/6/path = NodePath("DevilMoney/Effect_Money7/Ani")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "animation"
+tracks/7/path = NodePath("DevilMoney/Effect_Money8/Ani")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Control/BG/InfoControl/Reward/StoreValueLabel:rect_scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 4.1, 4.2, 4.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("Control/BG/InfoControl/Reward/StoreValueLabel:rect_rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.274514, -128.456, 0, -0.25, 0, 0.1, -48, 0, -0.0999999, 37, 0.0781569, -31.0333, 0, -0.0818427, 22.4389, 0.0981572, -15.0611, 0, -0.0618429, 14.1056, 0.25, 0 ),
+"times": PoolRealArray( 0, 4.1, 4.4, 4.6, 4.8 )
+}
+tracks/10/type = "method"
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ true ],
+"method": "call_show_switch"
+} ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Button:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 4.6, 4.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Button:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 4.7, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.888889 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Control/BG/InfoControl/Reward/=:rect_scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 3.9, 4.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Control/BG/InfoControl/Reward/X:rect_scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 3.1, 3.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Control/BG/InfoControl/Reward/RateLabel:rect_scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 3.3, 3.4, 3.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("Control/BG/InfoControl/Reward/RateLabel:rect_rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.114276, 157.144, 0, -0.25, 0, 0.174652, 70.54, 0, -0.225348, -67.7, 0.105363, 30.6333, 0, -0.114637, -26.8667, 0.125363, 11.4667, 0, -0.0946372, -13.5333, 0.245363, -1.03334 ),
+"times": PoolRealArray( 0, 3.3, 3.6, 3.8, 4 )
+}
+
+[sub_resource type="Animation" id=138]
+resource_name = "2"
+length = 5.0
+tracks/0/type = "animation"
+tracks/0/path = NodePath("DevilMoney/Effect_Money/Ani")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "init", "more_1" ),
+"times": PoolRealArray( 0, 1.5 )
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("DevilMoney/Effect_Money2/Ani")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "init", "end_3" ),
+"times": PoolRealArray( 0, 3.1 )
+}
+tracks/2/type = "animation"
+tracks/2/path = NodePath("DevilMoney/Effect_Money3/Ani")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": PoolStringArray( "init", "more_2" ),
+"times": PoolRealArray( 0, 2.2 )
+}
+tracks/3/type = "animation"
+tracks/3/path = NodePath("DevilMoney/Effect_Money4/Ani")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "animation"
+tracks/4/path = NodePath("DevilMoney/Effect_Money5/Ani")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "animation"
+tracks/5/path = NodePath("DevilMoney/Effect_Money6/Ani")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "animation"
+tracks/6/path = NodePath("DevilMoney/Effect_Money7/Ani")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "animation"
+tracks/7/path = NodePath("DevilMoney/Effect_Money8/Ani")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Control/BG/InfoControl/Reward/StoreValueLabel:rect_scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 4.1, 4.2, 4.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("Control/BG/InfoControl/Reward/StoreValueLabel:rect_rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.274514, -128.456, 0, -0.25, 0, 0.1, -48, 0, -0.0999999, 37, 0.0781569, -31.0333, 0, -0.0818427, 22.4389, 0.0981572, -15.0611, 0, -0.0618429, 14.1056, 0.25, 0 ),
+"times": PoolRealArray( 0, 4.1, 4.4, 4.6, 4.8 )
+}
+tracks/10/type = "method"
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ true ],
+"method": "call_show_switch"
+} ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Button:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 4.5, 4.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Button:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 4.7, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Control/BG/InfoControl/Reward/=:rect_scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 3.9, 4.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Control/BG/InfoControl/Reward/X:rect_scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 3.1, 3.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Control/BG/InfoControl/Reward/RateLabel:rect_scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 3.3, 3.4, 3.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("Control/BG/InfoControl/Reward/RateLabel:rect_rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.114276, 157.144, 0, -0.25, 0, 0.174652, 70.54, 0, -0.225348, -67.7, 0.105363, 30.6333, 0, -0.114637, -26.8667, 0.125363, 11.4667, 0, -0.0946372, -13.5333, 0.245363, -1.03334 ),
+"times": PoolRealArray( 0, 3.3, 3.6, 3.8, 4 )
+}
+
+[sub_resource type="Animation" id=135]
+resource_name = "3"
+length = 7.0
+tracks/0/type = "animation"
+tracks/0/path = NodePath("DevilMoney/Effect_Money/Ani")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "init", "more_1" ),
+"times": PoolRealArray( 0, 1.6 )
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("DevilMoney/Effect_Money2/Ani")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "init", "more_2" ),
+"times": PoolRealArray( 0, 2.2 )
+}
+tracks/2/type = "animation"
+tracks/2/path = NodePath("DevilMoney/Effect_Money3/Ani")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": PoolStringArray( "init", "more_3" ),
+"times": PoolRealArray( 0, 2.9 )
+}
+tracks/3/type = "animation"
+tracks/3/path = NodePath("DevilMoney/Effect_Money4/Ani")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": PoolStringArray( "init", "more_4" ),
+"times": PoolRealArray( 0, 3.7 )
+}
+tracks/4/type = "animation"
+tracks/4/path = NodePath("DevilMoney/Effect_Money5/Ani")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": PoolStringArray( "init", "end_3", "end_1" ),
+"times": PoolRealArray( 0, 4.5, 5.5 )
+}
+tracks/5/type = "animation"
+tracks/5/path = NodePath("DevilMoney/Effect_Money6/Ani")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "animation"
+tracks/6/path = NodePath("DevilMoney/Effect_Money7/Ani")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "animation"
+tracks/7/path = NodePath("DevilMoney/Effect_Money8/Ani")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Control/BG/InfoControl/Reward/StoreValueLabel:rect_scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 5.9, 6, 6.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("Control/BG/InfoControl/Reward/StoreValueLabel:rect_rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.274514, -128.456, 0, -0.25, 0, 0.1, -48, 0, -0.0999999, 37, 0.0781569, -31.0333, 0, -0.0818427, 22.4389, 0.0981572, -15.0611, 0, -0.0618429, 14.1056, 0.25, 0 ),
+"times": PoolRealArray( 0, 5.9, 6.2, 6.4, 6.6 )
+}
+tracks/10/type = "method"
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 7 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ true ],
+"method": "call_show_switch"
+} ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Button:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 6.6, 6.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Button:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 6.7, 7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Control/BG/InfoControl/Reward/=:rect_scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 5.7, 5.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Control/BG/InfoControl/Reward/X:rect_scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 5, 5.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Control/BG/InfoControl/Reward/RateLabel:rect_scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 5.2, 5.3, 5.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("Control/BG/InfoControl/Reward/RateLabel:rect_rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.114276, 157.144, 0, -0.25, 0, 0.174652, 70.54, 0, -0.225348, -67.7, 0.105363, 30.6333, 0, -0.114637, -26.8667, 0.125363, 11.4667, 0, -0.0946372, -13.5333, 0.245363, -1.03334 ),
+"times": PoolRealArray( 0, 5.2, 5.5, 5.7, 5.9 )
+}
+
+[sub_resource type="Animation" id=136]
+resource_name = "4"
+length = 8.0
+tracks/0/type = "animation"
+tracks/0/path = NodePath("DevilMoney/Effect_Money/Ani")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "init", "more_1" ),
+"times": PoolRealArray( 0, 1.5 )
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("DevilMoney/Effect_Money2/Ani")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "init", "more_2" ),
+"times": PoolRealArray( 0, 2.4 )
+}
+tracks/2/type = "animation"
+tracks/2/path = NodePath("DevilMoney/Effect_Money3/Ani")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": PoolStringArray( "init", "more_4" ),
+"times": PoolRealArray( 0, 3.1 )
+}
+tracks/3/type = "animation"
+tracks/3/path = NodePath("DevilMoney/Effect_Money4/Ani")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": PoolStringArray( "init", "more_3" ),
+"times": PoolRealArray( 0, 4 )
+}
+tracks/4/type = "animation"
+tracks/4/path = NodePath("DevilMoney/Effect_Money5/Ani")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": PoolStringArray( "init", "more_2" ),
+"times": PoolRealArray( 0, 4.9 )
+}
+tracks/5/type = "animation"
+tracks/5/path = NodePath("DevilMoney/Effect_Money6/Ani")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": PoolStringArray( "init", "more_1" ),
+"times": PoolRealArray( 0, 5.7 )
+}
+tracks/6/type = "animation"
+tracks/6/path = NodePath("DevilMoney/Effect_Money7/Ani")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"clips": PoolStringArray( "init", "end_2" ),
+"times": PoolRealArray( 0, 6.6 )
+}
+tracks/7/type = "animation"
+tracks/7/path = NodePath("DevilMoney/Effect_Money8/Ani")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Control/BG/InfoControl/Reward/StoreValueLabel:rect_scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 6.94, 7.04, 7.24 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("Control/BG/InfoControl/Reward/StoreValueLabel:rect_rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.274514, -128.456, 0, -0.25, 0, 0.1, -48, 0, -0.0999999, 37, 0.0781569, -31.0333, 0, -0.0818427, 22.4389, 0.0981572, -15.0611, 0, -0.0618429, 14.1056, 0.25, 0 ),
+"times": PoolRealArray( 0, 6.94, 7.24, 7.44, 7.64 )
+}
+tracks/10/type = "method"
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ true ],
+"method": "call_show_switch"
+} ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Button:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 7.6, 7.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Button:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 7.7, 8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Control/BG/InfoControl/Reward/=:rect_scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 6.7, 6.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Control/BG/InfoControl/Reward/X:rect_scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 5.9, 6.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Control/BG/InfoControl/Reward/RateLabel:rect_scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 6.1, 6.2, 6.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("Control/BG/InfoControl/Reward/RateLabel:rect_rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.114276, 157.144, 0, -0.25, 0, 0.174652, 70.54, 0, -0.225348, -67.7, 0.105363, 30.6333, 0, -0.114637, -26.8667, 0.125363, 11.4667, 0, -0.0946372, -13.5333, 0.245363, -1.03334 ),
+"times": PoolRealArray( 0, 6.1, 6.4, 6.6, 6.8 )
+}
+
+[sub_resource type="Animation" id=134]
+resource_name = "5"
+length = 8.0
+tracks/0/type = "animation"
+tracks/0/path = NodePath("DevilMoney/Effect_Money/Ani")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "init", "more_1" ),
+"times": PoolRealArray( 0, 1.5 )
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("DevilMoney/Effect_Money2/Ani")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "init", "more_2" ),
+"times": PoolRealArray( 0, 2.1 )
+}
+tracks/2/type = "animation"
+tracks/2/path = NodePath("DevilMoney/Effect_Money3/Ani")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": PoolStringArray( "init", "more_4" ),
+"times": PoolRealArray( 0, 2.7 )
+}
+tracks/3/type = "animation"
+tracks/3/path = NodePath("DevilMoney/Effect_Money4/Ani")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": PoolStringArray( "init", "more_3" ),
+"times": PoolRealArray( 0, 3.4 )
+}
+tracks/4/type = "animation"
+tracks/4/path = NodePath("DevilMoney/Effect_Money5/Ani")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": PoolStringArray( "init", "more_2" ),
+"times": PoolRealArray( 0, 4.3 )
+}
+tracks/5/type = "animation"
+tracks/5/path = NodePath("DevilMoney/Effect_Money6/Ani")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": PoolStringArray( "init", "more_1" ),
+"times": PoolRealArray( 0, 5.3 )
+}
+tracks/6/type = "animation"
+tracks/6/path = NodePath("DevilMoney/Effect_Money7/Ani")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"clips": PoolStringArray( "init", "more_3" ),
+"times": PoolRealArray( 0, 5.9 )
+}
+tracks/7/type = "animation"
+tracks/7/path = NodePath("DevilMoney/Effect_Money8/Ani")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"clips": PoolStringArray( "init", "end_1" ),
+"times": PoolRealArray( 0, 6.7 )
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("Control/BG/InfoControl/Reward/StoreValueLabel:rect_scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 6.9, 7, 7.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("Control/BG/InfoControl/Reward/StoreValueLabel:rect_rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.274514, -128.456, 0, -0.25, 0, 0.1, -48, 0, -0.0999999, 37, 0.0781569, -31.0333, 0, -0.0818427, 22.4389, 0.0981572, -15.0611, 0, -0.0618429, 14.1056, 0.25, 0 ),
+"times": PoolRealArray( 0, 6.9, 7.2, 7.4, 7.6 )
+}
+tracks/10/type = "method"
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ true ],
+"method": "call_show_switch"
+} ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("Button:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 7.6, 7.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, false, true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("Button:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 7.7, 8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("Control/BG/InfoControl/Reward/=:rect_scale")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0, 6.7, 6.9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("Control/BG/InfoControl/Reward/X:rect_scale")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0, 6, 6.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1, 1 ) ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("Control/BG/InfoControl/Reward/RateLabel:rect_scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0, 6.2, 6.3, 6.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+tracks/16/type = "bezier"
+tracks/16/path = NodePath("Control/BG/InfoControl/Reward/RateLabel:rect_rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.114276, 157.144, 0, -0.25, 0, 0.174652, 70.54, 0, -0.225348, -67.7, 0.105363, 30.6333, 0, -0.114637, -26.8667, 0.125363, 11.4667, 0, -0.0946372, -13.5333, 0.245363, -1.03334 ),
+"times": PoolRealArray( 0, 6.2, 6.5, 6.7, 6.9 )
+}
+
+[sub_resource type="Animation" id=139]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "animation"
+tracks/0/path = NodePath("DevilMoney/Effect_Money/Ani")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "animation"
+tracks/1/path = NodePath("DevilMoney/Effect_Money2/Ani")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "animation"
+tracks/2/path = NodePath("DevilMoney/Effect_Money3/Ani")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "animation"
+tracks/3/path = NodePath("DevilMoney/Effect_Money4/Ani")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "animation"
+tracks/4/path = NodePath("DevilMoney/Effect_Money5/Ani")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "animation"
+tracks/5/path = NodePath("DevilMoney/Effect_Money6/Ani")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "animation"
+tracks/6/path = NodePath("DevilMoney/Effect_Money7/Ani")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "animation"
+tracks/7/path = NodePath("DevilMoney/Effect_Money8/Ani")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"clips": PoolStringArray( "init" ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="DynamicFontData" id=145]
+font_path = "res://Language/Fonts/猫啃网秀雅圆.ttf"
+
+[sub_resource type="DynamicFont" id=112]
+size = 50
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 145 )
+
+[sub_resource type="DynamicFont" id=142]
+size = 80
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 27 )
+
+[sub_resource type="StyleBoxEmpty" id=107]
+
+[sub_resource type="StyleBoxEmpty" id=108]
+
+[sub_resource type="StyleBoxEmpty" id=109]
+
+[sub_resource type="StyleBoxEmpty" id=110]
+
+[sub_resource type="StyleBoxEmpty" id=111]
+
+[sub_resource type="Animation" id=117]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=118]
+resource_name = "play"
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Control:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "audio"
+tracks/2/path = NodePath("Control/Audio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 1 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 1 )
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 1 )
+} ],
+"times": PoolRealArray( 0.5, 0.7, 0.85 )
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Control/Sprite/NinePatchRect2:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1000, -482 ), Vector2( 1000, -482 ), Vector2( -250, -482 ), Vector2( -224, -482 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Control/Sprite/NinePatchRect:rect_position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.6, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1000, -367 ), Vector2( 1000, -367 ), Vector2( -100, -367 ), Vector2( -82, -367 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Control/Sprite/MainBgLogo1:self_modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.7, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Control/Sprite/MainBgLogo1:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.7, 0.9, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.3, 0.3 ), Vector2( 0.3, 0.3 ), Vector2( 0.8, 0.8 ), Vector2( 0.6, 0.6 ) ]
+}
+
+[sub_resource type="StyleBoxEmpty" id=140]
+
+[node name="GameEndUI" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 7 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 105 )
+
+[node name="Control" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+mouse_filter = 1
+
+[node name="Panel4" type="Panel" parent="Control"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -203.0
+margin_bottom = 246.0
+custom_styles/panel = SubResource( 105 )
+
+[node name="DayControl" parent="Control" instance=ExtResource( 6 )]
+anchor_top = 1.0
+margin_top = -786.0
+margin_bottom = -57.0
+
+[node name="Label" type="Label" parent="Control"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -500.0
+margin_top = -250.0
+margin_right = 500.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 1000, 300 )
+custom_fonts/font = ExtResource( 4 )
+text = "直営店
+チャレンジ"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 11 )
+LabelTEXT = "信息-地铁站"
+
+[node name="BG" type="Control" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -604.0
+margin_top = -474.0
+margin_right = 604.0
+margin_bottom = 474.0
+
+[node name="Mission" type="Control" parent="Control/BG"]
+margin_left = -267.0
+margin_top = 271.0
+margin_right = 942.0
+margin_bottom = 386.0
+
+[node name="BigWin" type="Label" parent="Control/BG/Mission"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -318.5
+margin_top = -197.5
+margin_right = 881.5
+margin_bottom = 66.5
+rect_pivot_offset = Vector2( 600, 71 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 2
+custom_fonts/font = ExtResource( 4 )
+text = "目标完成"
+align = 1
+valign = 1
+script = ExtResource( 11 )
+LabelTEXT = "信息-通关"
+
+[node name="BigLose" type="Label" parent="Control/BG/Mission"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -318.5
+margin_top = -277.5
+margin_right = 881.5
+margin_bottom = -13.5
+rect_rotation = -8.0
+rect_pivot_offset = Vector2( 800, 124 )
+custom_colors/font_color = Color( 0.819608, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "放弃任务"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 11 )
+LabelTEXT = "信息-放弃"
+
+[node name="InfoControl" type="Control" parent="Control/BG"]
+margin_left = -306.0
+margin_top = 147.0
+margin_right = 219.0
+margin_bottom = 904.0
+
+[node name="Reward" type="Control" parent="Control/BG/InfoControl"]
+margin_left = 201.0
+margin_top = 202.0
+margin_right = 636.0
+margin_bottom = 466.0
+
+[node name="StoreBaseValueLabel" type="Label" parent="Control/BG/InfoControl/Reward"]
+visible = false
+margin_left = -81.0
+margin_right = 214.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( 130, 36 )
+custom_colors/font_color = Color( 1, 0.564706, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = ExtResource( 12 )
+text = "店铺估值"
+align = 1
+script = ExtResource( 11 )
+LabelTEXT = "信息-总营业额"
+
+[node name="Label" type="Label" parent="Control/BG/InfoControl/Reward/StoreBaseValueLabel"]
+margin_left = 17.0
+margin_top = 46.0
+margin_right = 206.0
+margin_bottom = 89.0
+custom_fonts/font = ExtResource( 12 )
+text = "999999999999"
+align = 2
+valign = 1
+
+[node name="X" type="Label" parent="Control/BG/InfoControl/Reward"]
+margin_left = 234.0
+margin_top = -14.0
+margin_right = 298.0
+margin_bottom = 115.0
+rect_scale = Vector2( 1e-05, 1e-05 )
+rect_pivot_offset = Vector2( 33, 78 )
+custom_fonts/font = ExtResource( 4 )
+text = "x"
+
+[node name="RateLabel" type="Label" parent="Control/BG/InfoControl/Reward"]
+margin_left = 299.0
+margin_top = 63.0
+margin_right = 436.0
+margin_bottom = 104.0
+rect_scale = Vector2( 1e-05, 1e-05 )
+rect_pivot_offset = Vector2( 67, -8 )
+custom_colors/font_color = Color( 1, 0.298039, 0.694118, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "0.01"
+
+[node name="Label" type="Label" parent="Control/BG/InfoControl/Reward/RateLabel"]
+margin_left = 2.0
+margin_top = -44.0
+margin_right = 307.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.564706, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = ExtResource( 12 )
+text = "奖励倍率"
+script = ExtResource( 11 )
+LabelTEXT = "信息-奖励倍率"
+
+[node name="=" type="Label" parent="Control/BG/InfoControl/Reward"]
+margin_left = 103.0
+margin_top = 221.0
+margin_right = 167.0
+margin_bottom = 350.0
+rect_scale = Vector2( 1e-05, 1e-05 )
+rect_pivot_offset = Vector2( 32, 63 )
+custom_fonts/font = ExtResource( 4 )
+text = "="
+
+[node name="StoreValueLabel" type="Label" parent="Control/BG/InfoControl/Reward"]
+margin_left = 95.0
+margin_top = 121.0
+margin_right = 467.0
+margin_bottom = 162.0
+rect_scale = Vector2( 1e-05, 1e-05 )
+rect_pivot_offset = Vector2( 176, 122 )
+custom_fonts/font = ExtResource( 12 )
+align = 1
+script = ExtResource( 11 )
+
+[node name="Label" type="Label" parent="Control/BG/InfoControl/Reward/StoreValueLabel"]
+margin_left = 85.0
+margin_top = 124.0
+margin_right = 380.0
+margin_bottom = 253.0
+rect_scale = Vector2( 0.6, 0.6 )
+custom_fonts/font = ExtResource( 4 )
+text = "00000"
+align = 2
+valign = 1
+
+[node name="Icon" type="Sprite" parent="Control/BG/InfoControl/Reward/StoreValueLabel/Label"]
+light_mask = 0
+position = Vector2( 348.333, 70.0001 )
+scale = Vector2( 1.6, 1.6 )
+texture = ExtResource( 9 )
+
+[node name="MaxLabel" type="Label" parent="Control/BG/InfoControl/Reward/StoreValueLabel/Label/Icon"]
+margin_left = -241.667
+margin_top = -47.9167
+margin_right = -171.667
+margin_bottom = -16.9167
+rect_rotation = -15.0
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_fonts/font = ExtResource( 2 )
+align = 1
+
+[node name="UiSymbolMax" type="Sprite" parent="Control/BG/InfoControl/Reward/StoreValueLabel/Label/Icon/MaxLabel"]
+self_modulate = Color( 1, 0.403922, 0.152941, 1 )
+position = Vector2( 48, 16 )
+texture = ExtResource( 3 )
+
+[node name="First" type="Label" parent="Control/BG/InfoControl/Reward/StoreValueLabel"]
+margin_left = 86.0
+margin_top = 5.0
+margin_right = 462.0
+margin_bottom = 46.0
+rect_pivot_offset = Vector2( 130, 36 )
+custom_colors/font_color = Color( 1, 0.564706, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 4
+custom_fonts/font = ExtResource( 12 )
+text = "首通奖励"
+script = ExtResource( 11 )
+LabelTEXT = "信息-首通奖励"
+
+[node name="Label" type="Label" parent="Control/BG/InfoControl/Reward/StoreValueLabel/First"]
+self_modulate = Color( 0, 0.941176, 0.101961, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -379.0
+margin_top = 20.5
+margin_right = -254.0
+margin_bottom = 63.5
+custom_fonts/font = ExtResource( 12 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="+" type="Label" parent="Control/BG/InfoControl/Reward/StoreValueLabel/First"]
+margin_left = -77.0
+margin_top = -16.0
+margin_right = -13.0
+margin_bottom = 113.0
+rect_pivot_offset = Vector2( 33, 78 )
+custom_fonts/font = ExtResource( 4 )
+text = "+"
+
+[node name="Review" type="Node2D" parent="Control/BG/InfoControl"]
+position = Vector2( 1559, 273 )
+
+[node name="Perfect" type="Node2D" parent="Control/BG/InfoControl/Review"]
+
+[node name="GuestReview" type="Sprite" parent="Control/BG/InfoControl/Review/Perfect"]
+texture = ExtResource( 22 )
+
+[node name="HappyAni" type="AnimationPlayer" parent="Control/BG/InfoControl/Review/Perfect"]
+autoplay = "init"
+anims/1 = SubResource( 120 )
+anims/2 = SubResource( 121 )
+anims/3 = SubResource( 122 )
+anims/init = SubResource( 123 )
+
+[node name="Label" type="Label" parent="Control/BG/InfoControl/Review/Perfect"]
+modulate = Color( 1, 0.501961, 0.952941, 1 )
+margin_left = 24.0
+margin_top = -24.0
+margin_right = 204.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 26 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Good" type="Node2D" parent="Control/BG/InfoControl/Review"]
+position = Vector2( 1, 83 )
+
+[node name="GuestReview" type="Sprite" parent="Control/BG/InfoControl/Review/Good"]
+texture = ExtResource( 18 )
+
+[node name="HappyAni" type="AnimationPlayer" parent="Control/BG/InfoControl/Review/Good"]
+autoplay = "init"
+anims/1 = SubResource( 124 )
+anims/2 = SubResource( 125 )
+anims/3 = SubResource( 126 )
+anims/init = SubResource( 127 )
+
+[node name="Label" type="Label" parent="Control/BG/InfoControl/Review/Good"]
+modulate = Color( 1, 0.854902, 0.2, 1 )
+margin_left = 24.0
+margin_top = -24.0
+margin_right = 204.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 26 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="Bad" type="Node2D" parent="Control/BG/InfoControl/Review"]
+position = Vector2( 2, 164 )
+
+[node name="GuestReview" type="Sprite" parent="Control/BG/InfoControl/Review/Bad"]
+texture = ExtResource( 16 )
+
+[node name="HappyAni" type="AnimationPlayer" parent="Control/BG/InfoControl/Review/Bad"]
+autoplay = "init"
+anims/1 = SubResource( 128 )
+anims/2 = SubResource( 129 )
+anims/3 = SubResource( 130 )
+anims/init = SubResource( 131 )
+
+[node name="Label" type="Label" parent="Control/BG/InfoControl/Review/Bad"]
+modulate = Color( 0.447059, 0.639216, 0.847059, 1 )
+margin_left = 24.0
+margin_top = -24.0
+margin_right = 204.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 26 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="money" type="Control" parent="Control/BG"]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -907.0
+margin_top = 809.0
+margin_right = -907.0
+margin_bottom = 809.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MoneyLabel" type="Label" parent="Control/BG/money"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_right = 165.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 100 )
+text = "99999999"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="Control/BG/money/MoneyLabel"]
+light_mask = 0
+position = Vector2( 190, 20 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Control/BG/money/MoneyLabel"]
+anchor_right = 1.0
+margin_top = -20.0
+margin_bottom = 1.0
+rect_min_size = Vector2( 200, 0 )
+text = "当前资产"
+align = 1
+valign = 1
+
+[node name="+" type="Label" parent="Control/BG/money/MoneyLabel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -145.0
+margin_top = -20.0
+margin_right = 285.0
+margin_bottom = 1.0
+rect_min_size = Vector2( 430, 0 )
+text = "+"
+align = 1
+valign = 1
+
+[node name="TotalCost" type="Label" parent="Control/BG/money"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = 200.0
+margin_right = 365.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 100 )
+text = "999999"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="Control/BG/money/TotalCost"]
+light_mask = 0
+position = Vector2( 190, 20 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Control/BG/money/TotalCost"]
+anchor_right = 1.0
+margin_top = -20.0
+margin_right = 35.0
+margin_bottom = 1.0
+text = "总计获得"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="=" type="Label" parent="Control/BG/money/TotalCost"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -145.0
+margin_top = -20.0
+margin_right = 285.0
+margin_bottom = 1.0
+rect_min_size = Vector2( 430, 0 )
+text = "="
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FinalMoney" type="Label" parent="Control/BG/money"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = 400.0
+margin_right = 565.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 100 )
+text = "99999999"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="Control/BG/money/FinalMoney"]
+light_mask = 0
+position = Vector2( 190, 20 )
+texture = ExtResource( 9 )
+
+[node name="Label" type="Label" parent="Control/BG/money/FinalMoney"]
+anchor_top = -0.375
+anchor_right = 1.212
+margin_top = -5.0
+margin_right = 0.0200043
+margin_bottom = 1.0
+text = "最终资产"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UnlockLevel" type="Label" parent="Control/BG"]
+visible = false
+margin_left = 201.0
+margin_top = 721.0
+margin_right = 1097.0
+margin_bottom = 849.0
+custom_colors/font_color = Color( 1, 0.564706, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_y = 8
+custom_fonts/font = ExtResource( 4 )
+text = "已解锁新关卡！"
+
+[node name="Special" type="Control" parent="Control/BG"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -922.0
+margin_top = -215.0
+margin_right = -266.0
+margin_bottom = 215.0
+
+[node name="MoneyControl" type="Control" parent="Control/BG/Special"]
+pause_mode = 2
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -202.0
+margin_top = -381.0
+margin_right = -202.0
+margin_bottom = -381.0
+
+[node name="BG" type="NinePatchRect" parent="Control/BG/Special/MoneyControl"]
+pause_mode = 2
+self_modulate = Color( 1, 1, 1, 0.588235 )
+margin_left = -469.0
+margin_top = 3.0
+margin_right = 170.0
+margin_bottom = 59.0
+texture = ExtResource( 13 )
+patch_margin_left = 54
+patch_margin_right = 53
+
+[node name="ProgressBG" type="NinePatchRect" parent="Control/BG/Special/MoneyControl/BG"]
+pause_mode = 2
+visible = false
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 31.0
+margin_top = 33.0
+margin_right = -5.0
+texture = ExtResource( 31 )
+patch_margin_left = 42
+patch_margin_right = 42
+
+[node name="Progress" type="TextureProgress" parent="Control/BG/Special/MoneyControl/BG/ProgressBG"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 7.0
+margin_top = 1.0
+margin_right = -39.0
+margin_bottom = 1.0
+value = 100.0
+allow_greater = true
+texture_under = ExtResource( 31 )
+texture_progress = ExtResource( 31 )
+tint_progress = Color( 1, 0.498039, 0, 1 )
+nine_patch_stretch = true
+stretch_margin_left = 50
+stretch_margin_right = 50
+script = ExtResource( 35 )
+
+[node name="Icon" type="Sprite" parent="Control/BG/Special/MoneyControl/BG/ProgressBG/Progress"]
+pause_mode = 2
+visible = false
+position = Vector2( 395, -4 )
+texture = ExtResource( 33 )
+
+[node name="NumLabel" type="Label" parent="Control/BG/Special/MoneyControl/BG/ProgressBG/Progress"]
+pause_mode = 2
+visible = false
+margin_left = 71.0
+margin_top = -6.0
+margin_right = 445.0
+margin_bottom = 23.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 30 )
+text = "5000 / 10000"
+align = 2
+valign = 2
+
+[node name="Max" type="Sprite" parent="Control/BG/Special/MoneyControl/BG/ProgressBG/Progress"]
+visible = false
+self_modulate = Color( 1, 0.498039, 0, 1 )
+position = Vector2( 319, 0 )
+texture = ExtResource( 3 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/BG/Special/MoneyControl/BG/ProgressBG/Progress"]
+anims/play = SubResource( 146 )
+
+[node name="MoneyCount" type="Label" parent="Control/BG/Special/MoneyControl"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = -435.0
+margin_top = 10.0
+margin_right = -214.0
+margin_bottom = 50.0
+custom_fonts/font = SubResource( 100 )
+text = "9999"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="Control/BG/Special/MoneyControl/MoneyCount"]
+light_mask = 0
+position = Vector2( 246, 19 )
+texture = ExtResource( 29 )
+
+[node name="EggCoin" type="Label" parent="Control/BG/Special/MoneyControl"]
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = -106.0
+margin_top = 11.0
+margin_right = 59.0
+margin_bottom = 51.0
+custom_colors/font_color = Color( 1, 0.196078, 0, 1 )
+custom_fonts/font = SubResource( 100 )
+text = "99999"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="Control/BG/Special/MoneyControl/EggCoin"]
+light_mask = 0
+position = Vector2( 190, 20 )
+texture = ExtResource( 34 )
+
+[node name="=" type="Label" parent="Control/BG/Special/MoneyControl"]
+margin_left = -145.0
+margin_top = 10.0
+margin_right = -126.0
+margin_bottom = 51.0
+rect_pivot_offset = Vector2( 32, 63 )
+custom_fonts/font = ExtResource( 26 )
+text = "="
+
+[node name="GiftNode" type="Control" parent="Control/BG/Special"]
+margin_left = 4.0
+margin_top = 124.0
+margin_right = 4.0
+margin_bottom = 124.0
+
+[node name="BG" type="NinePatchRect" parent="Control/BG/Special/GiftNode"]
+self_modulate = Color( 1, 1, 1, 0.588235 )
+margin_left = -14.0
+margin_right = 613.0
+margin_bottom = 54.0
+texture = ExtResource( 13 )
+patch_margin_left = 50
+patch_margin_right = 50
+
+[node name="GiftCountNode" type="GridContainer" parent="Control/BG/Special/GiftNode"]
+pause_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 67.0
+margin_top = 22.0
+margin_right = 284.0
+margin_bottom = 76.0
+custom_constants/vseparation = 30
+custom_constants/hseparation = -50
+columns = 20
+
+[node name="Control" parent="Control/BG/Special/GiftNode/GiftCountNode" instance=ExtResource( 28 )]
+margin_bottom = 0.0
+
+[node name="AnimationPlayer" parent="Control/BG/Special/GiftNode/GiftCountNode/Control" index="1"]
+anims/init = SubResource( 1 )
+
+[node name="EggCoin" type="Label" parent="Control/BG/Special/GiftNode"]
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = 337.0
+margin_top = 8.0
+margin_right = 502.0
+margin_bottom = 48.0
+custom_colors/font_color = Color( 1, 0.196078, 0, 1 )
+custom_fonts/font = SubResource( 100 )
+text = "999"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="Control/BG/Special/GiftNode/EggCoin"]
+light_mask = 0
+position = Vector2( 190, 20 )
+texture = ExtResource( 34 )
+
+[node name="=" type="Label" parent="Control/BG/Special/GiftNode"]
+margin_left = 303.0
+margin_top = 9.0
+margin_right = 322.0
+margin_bottom = 50.0
+rect_pivot_offset = Vector2( 32, 63 )
+custom_fonts/font = ExtResource( 26 )
+text = "="
+
+[node name="Finished" type="Control" parent="Control/BG/Special"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -650.0
+margin_top = 197.0
+margin_right = -650.0
+margin_bottom = 197.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="BG" type="NinePatchRect" parent="Control/BG/Special/Finished"]
+self_modulate = Color( 1, 1, 1, 0.588235 )
+margin_left = -14.0
+margin_right = 613.0
+margin_bottom = 54.0
+texture = ExtResource( 13 )
+patch_margin_left = 50
+patch_margin_right = 50
+
+[node name="EggCoin" type="Label" parent="Control/BG/Special/Finished"]
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = 365.0
+margin_top = 8.0
+margin_right = 495.0
+margin_bottom = 48.0
+custom_colors/font_color = Color( 1, 0.196078, 0, 1 )
+custom_fonts/font = SubResource( 100 )
+text = "0"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="Control/BG/Special/Finished/EggCoin"]
+light_mask = 0
+position = Vector2( 156, 20 )
+texture = ExtResource( 34 )
+
+[node name="Label" type="Label" parent="Control/BG/Special/Finished"]
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = -13.0
+margin_top = 6.0
+margin_right = 320.0
+margin_bottom = 47.0
+custom_fonts/font = ExtResource( 2 )
+text = "通关奖励"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 11 )
+LabelTEXT = "UI-通关奖励"
+
+[node name="EggCoinCount" type="Control" parent="Control/BG/Special"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -657.0
+margin_top = 345.0
+margin_right = -657.0
+margin_bottom = 345.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="EggCoin" type="Label" parent="Control/BG/Special/EggCoinCount"]
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = 292.0
+margin_top = -62.0
+margin_right = 650.0
+margin_bottom = 67.0
+rect_scale = Vector2( 0.6, 0.6 )
+custom_colors/font_color = Color( 1, 0.196078, 0, 1 )
+custom_fonts/font = ExtResource( 4 )
+text = "+99999"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="Control/BG/Special/EggCoinCount"]
+light_mask = 0
+position = Vector2( 529, -26 )
+texture = ExtResource( 34 )
+
+[node name="TotalEggCoin" type="Label" parent="Control/BG/Special/EggCoinCount"]
+visible = false
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = 125.0
+margin_right = 290.0
+margin_bottom = 40.0
+custom_colors/font_color = Color( 1, 0.196078, 0, 1 )
+custom_fonts/font = SubResource( 100 )
+text = "99999"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="Control/BG/Special/EggCoinCount/TotalEggCoin"]
+light_mask = 0
+position = Vector2( 190, 20 )
+texture = ExtResource( 34 )
+
+[node name="DevilMoney" type="Node2D" parent="."]
+z_index = 1
+
+[node name="Effect_Money" parent="DevilMoney" instance=ExtResource( 15 )]
+pause_mode = 2
+position = Vector2( -202, 849 )
+
+[node name="Effect_Money2" parent="DevilMoney" instance=ExtResource( 15 )]
+pause_mode = 2
+position = Vector2( -218, 788 )
+
+[node name="Effect_Money3" parent="DevilMoney" instance=ExtResource( 15 )]
+pause_mode = 2
+position = Vector2( -115, 908 )
+
+[node name="Effect_Money4" parent="DevilMoney" instance=ExtResource( 15 )]
+pause_mode = 2
+position = Vector2( -136, 868 )
+
+[node name="Effect_Money5" parent="DevilMoney" instance=ExtResource( 15 )]
+pause_mode = 2
+position = Vector2( -150, 806 )
+
+[node name="Effect_Money6" parent="DevilMoney" instance=ExtResource( 15 )]
+pause_mode = 2
+position = Vector2( -176, 743 )
+
+[node name="Effect_Money7" parent="DevilMoney" instance=ExtResource( 15 )]
+pause_mode = 2
+position = Vector2( -153, 684 )
+
+[node name="Effect_Money8" parent="DevilMoney" instance=ExtResource( 15 )]
+pause_mode = 2
+position = Vector2( -182, 628 )
+
+[node name="CurChoose" parent="DevilMoney" instance=ExtResource( 10 )]
+margin_right = 0.0
+margin_bottom = 0.0
+
+[node name="Ani" type="AnimationPlayer" parent="."]
+pause_mode = 2
+autoplay = "init"
+anims/init = SubResource( 96 )
+anims/play = SubResource( 119 )
+anims/show = SubResource( 97 )
+anims/show_S = SubResource( 143 )
+"anims/备份" = SubResource( 133 )
+
+[node name="TypeAni" type="AnimationPlayer" parent="."]
+anims/0 = SubResource( 101 )
+anims/1 = SubResource( 102 )
+anims/2 = SubResource( 104 )
+anims/Join = SubResource( 141 )
+anims/complete = SubResource( 103 )
+
+[node name="MoneyAni" type="AnimationPlayer" parent="."]
+anims/-1 = SubResource( 144 )
+anims/0 = SubResource( 132 )
+anims/1 = SubResource( 137 )
+anims/2 = SubResource( 138 )
+anims/3 = SubResource( 135 )
+anims/4 = SubResource( 136 )
+anims/5 = SubResource( 134 )
+anims/init = SubResource( 139 )
+
+[node name="DemoEnd" type="CanvasLayer" parent="."]
+layer = 3
+visible = false
+
+[node name="Control" type="Control" parent="DemoEnd"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="Sprite" type="Sprite" parent="DemoEnd/Control"]
+position = Vector2( 960, 540 )
+texture = ExtResource( 14 )
+
+[node name="1" type="Label" parent="DemoEnd/Control/Sprite"]
+margin_left = -939.0
+margin_top = -454.0
+margin_right = -104.0
+margin_bottom = -404.0
+rect_rotation = -6.0
+custom_colors/font_color = Color( 0.466667, 1, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 112 )
+text = "Different More Level and Customers"
+autowrap = true
+script = ExtResource( 11 )
+LabelTEXT = "DEMO_Info_1"
+
+[node name="2" type="Label" parent="DemoEnd/Control/Sprite"]
+margin_left = -952.0
+margin_top = 328.0
+margin_right = -202.0
+margin_bottom = 378.0
+rect_rotation = 19.0
+custom_colors/font_color = Color( 0.615686, 1, 0.168627, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 112 )
+text = "Service and Takeout"
+autowrap = true
+script = ExtResource( 11 )
+LabelTEXT = "DEMO_Info_2"
+
+[node name="3" type="Label" parent="DemoEnd/Control/Sprite"]
+margin_left = -270.0
+margin_top = 479.0
+margin_right = 609.0
+margin_bottom = 529.0
+rect_rotation = -14.0
+custom_colors/font_color = Color( 0.615686, 1, 0.168627, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 112 )
+text = "Character and house upgrading"
+autowrap = true
+script = ExtResource( 11 )
+LabelTEXT = "DEMO_Info_3"
+
+[node name="4" type="Label" parent="DemoEnd/Control/Sprite"]
+margin_left = 337.0
+margin_top = 6.0
+margin_right = 971.0
+margin_bottom = 56.0
+rect_rotation = 4.95115
+custom_colors/font_color = Color( 0.615686, 1, 0.168627, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 112 )
+text = "More Demonic Ability"
+autowrap = true
+script = ExtResource( 11 )
+LabelTEXT = "DEMO_Info_4"
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="DemoEnd/Control/Sprite"]
+self_modulate = Color( 0, 0, 0, 0.627451 )
+margin_left = -224.0
+margin_top = -482.0
+margin_right = 1012.0
+margin_bottom = -350.0
+texture = ExtResource( 13 )
+patch_margin_left = 53
+patch_margin_right = 53
+
+[node name="5" type="Label" parent="DemoEnd/Control/Sprite/NinePatchRect2"]
+margin_left = 12.0
+margin_top = -9.0
+margin_right = 1201.0
+margin_bottom = 128.0
+custom_colors/font_color = Color( 0.972549, 0.796078, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 142 )
+text = "Thank you for playining our DEMO!"
+align = 1
+valign = 1
+autowrap = true
+script = ExtResource( 11 )
+LabelTEXT = "DEMO_Info_5"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="DemoEnd/Control/Sprite"]
+self_modulate = Color( 0.615686, 1, 0.168627, 1 )
+margin_left = -82.0
+margin_top = -367.0
+margin_right = 1024.0
+margin_bottom = -290.0
+texture = ExtResource( 13 )
+patch_margin_left = 53
+patch_margin_right = 53
+
+[node name="7" type="Label" parent="DemoEnd/Control/Sprite/NinePatchRect"]
+margin_left = 68.0
+margin_top = 19.0
+margin_right = 934.0
+margin_bottom = 67.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 12 )
+text = "If you like our game, please join the wishlist!"
+autowrap = true
+script = ExtResource( 11 )
+LabelTEXT = "DEMO_Info_7"
+
+[node name="EffectGuestViewPer" type="Sprite" parent="DemoEnd/Control/Sprite/NinePatchRect"]
+position = Vector2( 11, 35 )
+scale = Vector2( 1.45312, 1.45312 )
+texture = ExtResource( 22 )
+
+[node name="NinePatchRect3" type="NinePatchRect" parent="DemoEnd/Control/Sprite/NinePatchRect"]
+self_modulate = Color( 0, 0, 0, 0.627451 )
+show_behind_parent = true
+margin_left = 1.0
+margin_top = 5.0
+margin_right = 1116.0
+margin_bottom = 88.0
+texture = ExtResource( 13 )
+patch_margin_left = 53
+patch_margin_right = 53
+
+[node name="MainBgLogo1" type="Sprite" parent="DemoEnd/Control/Sprite"]
+position = Vector2( 734, -124 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 8 )
+
+[node name="Audio" type="AudioStreamPlayer" parent="DemoEnd/Control"]
+stream = ExtResource( 1 )
+bus = "Effect"
+
+[node name="Button" type="Button" parent="DemoEnd/Control"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 131.0
+margin_top = -795.0
+margin_right = 293.0
+margin_bottom = -746.0
+rect_pivot_offset = Vector2( 84, 26 )
+custom_styles/hover = SubResource( 107 )
+custom_styles/pressed = SubResource( 108 )
+custom_styles/focus = SubResource( 109 )
+custom_styles/disabled = SubResource( 110 )
+custom_styles/normal = SubResource( 111 )
+
+[node name="A" parent="DemoEnd/Control/Button" instance=ExtResource( 5 )]
+margin_left = 25.0
+margin_top = 25.0
+margin_right = 25.0
+margin_bottom = 25.0
+bool_Static = true
+Info_Str = "BUT-确定"
+
+[node name="Ani" type="AnimationPlayer" parent="DemoEnd"]
+anims/init = SubResource( 117 )
+anims/play = SubResource( 118 )
+
+[node name="Button" type="Button" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.888889 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -80.0
+margin_top = -124.0
+margin_right = 82.0
+margin_bottom = -75.0
+rect_pivot_offset = Vector2( 84, 26 )
+custom_styles/hover = SubResource( 107 )
+custom_styles/pressed = SubResource( 108 )
+custom_styles/focus = SubResource( 109 )
+custom_styles/disabled = SubResource( 110 )
+custom_styles/normal = SubResource( 140 )
+
+[node name="A" parent="Button" instance=ExtResource( 5 )]
+margin_left = 25.0
+margin_top = 25.0
+margin_right = 25.0
+margin_bottom = 25.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+Info_Str = "BUT-确定"
+OnBut = false
+
+[node name="FingerAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )
+bus = "Effect"
+
+[connection signal="pressed" from="DemoEnd/Control/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+
+[editable path="Control/BG/Special/GiftNode/GiftCountNode/Control"]

@@ -1,0 +1,132 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_Label.gd" type="Script" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_frame_line.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/Loading/Loading_pack.sprites/Loading_control_1.tres" type="Texture" id=4]
+[ext_resource path="res://Language/Fonts/Base_outline.tres" type="DynamicFont" id=5]
+
+[node name="Keyborad" type="Node2D"]
+position = Vector2( 35, 264 )
+
+[node name="LoadingControl1" type="Sprite" parent="."]
+position = Vector2( 198, -4 )
+texture = ExtResource( 4 )
+
+[node name="UiFrameLine2" type="Sprite" parent="."]
+position = Vector2( 61, -16 )
+rotation = 1.5708
+scale = Vector2( 1, 0.6 )
+texture = ExtResource( 2 )
+
+[node name="A" type="Node2D" parent="."]
+modulate = Color( 0.0196078, 1, 0, 1 )
+position = Vector2( -247, 3 )
+
+[node name="UiFrameLine3" type="Sprite" parent="A"]
+position = Vector2( 444, 56 )
+scale = Vector2( 1, 0.4 )
+texture = ExtResource( 2 )
+
+[node name="B" type="Node2D" parent="."]
+modulate = Color( 1, 0.294118, 0.294118, 1 )
+position = Vector2( -247, 3 )
+
+[node name="UiFrameLine3" type="Sprite" parent="B"]
+position = Vector2( 562, -19 )
+rotation = 1.5708
+scale = Vector2( 1, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="X" type="Node2D" parent="."]
+modulate = Color( 0, 1, 1, 1 )
+position = Vector2( -248, 8 )
+
+[node name="UiFrameLine" type="Sprite" parent="X"]
+position = Vector2( 392, -127 )
+rotation = 1.5708
+texture = ExtResource( 2 )
+
+[node name="UiFrameLine3" type="Sprite" parent="X"]
+position = Vector2( 477, -84 )
+scale = Vector2( 1, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="Y" type="Node2D" parent="."]
+modulate = Color( 1, 0.729412, 0.054902, 1 )
+position = Vector2( -221, -49 )
+
+[node name="UiFrameLine" type="Sprite" parent="Y"]
+position = Vector2( 562, -36 )
+rotation = 1.5708
+texture = ExtResource( 2 )
+
+[node name="UiFrameLine3" type="Sprite" parent="Y"]
+position = Vector2( 475, -11 )
+scale = Vector2( 1, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="信息-A" type="Label" parent="."]
+margin_left = -17.0
+margin_top = 97.0
+margin_right = 414.0
+margin_bottom = 172.0
+custom_colors/font_color = Color( 0.160784, 1, 0, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "确定（拿，放）"
+align = 1
+autowrap = true
+script = ExtResource( 1 )
+LabelTEXT = "信息-A键"
+
+[node name="信息-B" type="Label" parent="."]
+margin_left = 346.0
+margin_top = -62.0
+margin_right = 601.0
+margin_bottom = 27.0
+custom_colors/font_color = Color( 1, 0.329412, 0.329412, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "交换单号（取消）"
+valign = 1
+autowrap = true
+script = ExtResource( 1 )
+LabelTEXT = "信息-B键"
+
+[node name="信息-X" type="Label" parent="."]
+margin_left = -143.0
+margin_top = -197.0
+margin_right = 231.0
+margin_bottom = -123.0
+custom_colors/font_color = Color( 0, 1, 0.988235, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "互动（打开，搅拌）"
+align = 2
+valign = 2
+autowrap = true
+script = ExtResource( 1 )
+LabelTEXT = "信息-X键"
+
+[node name="信息-Y" type="Label" parent="."]
+margin_left = 255.0
+margin_top = -157.0
+margin_right = 636.0
+margin_bottom = -89.0
+custom_colors/font_color = Color( 1, 0.74902, 0, 1 )
+custom_fonts/font = ExtResource( 5 )
+text = "特殊（开关，出杯，放地上）"
+valign = 2
+autowrap = true
+script = ExtResource( 1 )
+LabelTEXT = "信息-Y键"
+
+[node name="信息-人物移动" type="Label" parent="."]
+margin_left = -70.0
+margin_top = -88.0
+margin_right = 65.0
+margin_bottom = -20.0
+custom_fonts/font = ExtResource( 5 )
+text = "移动"
+align = 2
+valign = 2
+autowrap = true
+script = ExtResource( 1 )
+LabelTEXT = "信息-人物移动"

@@ -1,0 +1,743 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_progress_bg.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_coin.tres" type="Texture" id=2]
+[ext_resource path="res://TscnAndGd/Buttons/SceneButton.gd" type="Script" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_menu_1.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_menu_2.tres" type="Texture" id=5]
+[ext_resource path="res://TscnAndGd/UI/Main/BrandSelection.gd" type="Script" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_menu_3.tres" type="Texture" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=21]
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=10]
+
+[sub_resource type="StyleBoxEmpty" id=7]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="ButtonGroup" id=27]
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=23]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Shine:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.745098, 0.745098, 0.745098, 1 ) ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "select"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Shine:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.352941 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "1"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Rank1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Rank2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Rank3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=25]
+resource_name = "2"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Rank1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Rank2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Rank3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "3"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Rank1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Rank2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Rank3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Language/Fonts/simhei.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 1 )
+
+[node name="BrandSelection" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+
+[node name="TitleLabel" type="Label" parent="."]
+anchor_right = 1.0
+margin_bottom = 21.0
+rect_min_size = Vector2( 0, 150 )
+text = "选择店铺"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SceneHBox" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -750.0
+margin_top = -375.0
+margin_right = 750.0
+margin_bottom = 375.0
+custom_constants/separation = 30
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="0" type="Button" parent="SceneHBox"]
+margin_right = 480.0
+margin_bottom = 750.0
+rect_min_size = Vector2( 480, 0 )
+custom_styles/hover = SubResource( 21 )
+custom_styles/pressed = SubResource( 9 )
+custom_styles/focus = SubResource( 10 )
+custom_styles/disabled = SubResource( 7 )
+custom_styles/normal = SubResource( 11 )
+group = SubResource( 27 )
+script = ExtResource( 3 )
+
+[node name="BaseInfo" type="VBoxContainer" parent="SceneHBox/0"]
+anchor_top = 0.2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 30.0
+margin_right = -250.0
+margin_bottom = -124.0
+rect_min_size = Vector2( 200, 0 )
+custom_constants/separation = 20
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JoinCost" type="Label" parent="SceneHBox/0/BaseInfo"]
+margin_top = 166.0
+margin_right = 200.0
+margin_bottom = 187.0
+text = "加盟费"
+valign = 1
+
+[node name="Label" type="Label" parent="SceneHBox/0/BaseInfo/JoinCost"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -10.5
+margin_right = 184.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 224, 0 )
+text = "50000"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoneyIcon" type="Sprite" parent="SceneHBox/0/BaseInfo/JoinCost/Label"]
+position = Vector2( 240, 13 )
+texture = ExtResource( 2 )
+
+[node name="DecorateCost" type="Label" parent="SceneHBox/0/BaseInfo"]
+margin_top = 207.0
+margin_right = 200.0
+margin_bottom = 228.0
+text = "每平装修费"
+valign = 1
+
+[node name="Label" type="Label" parent="SceneHBox/0/BaseInfo/DecorateCost"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -10.5
+margin_right = 184.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 224, 0 )
+text = "500"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoneyIcon" type="Sprite" parent="SceneHBox/0/BaseInfo/DecorateCost/Label"]
+position = Vector2( 240, 13 )
+texture = ExtResource( 2 )
+
+[node name="FormulaType" type="Label" parent="SceneHBox/0/BaseInfo"]
+margin_top = 248.0
+margin_right = 200.0
+margin_bottom = 269.0
+rect_min_size = Vector2( 158, 0 )
+text = "饮品类型"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SceneHBox/0/BaseInfo/FormulaType"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -10.5
+margin_right = 210.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 250, 0 )
+text = "奶茶"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stores" type="Label" parent="SceneHBox/0/BaseInfo"]
+margin_top = 289.0
+margin_right = 200.0
+margin_bottom = 310.0
+rect_min_size = Vector2( 158, 0 )
+text = "门店数量"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SceneHBox/0/BaseInfo/Stores"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = -10.5
+margin_right = 210.0
+margin_bottom = 10.5
+rect_min_size = Vector2( 250, 0 )
+text = "100"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BarInfo" type="HBoxContainer" parent="SceneHBox/0"]
+anchor_top = 0.784
+anchor_right = 1.0
+anchor_bottom = 0.983
+margin_right = 2.0
+margin_bottom = -0.25
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BrandPopularity" type="Label" parent="SceneHBox/0/BarInfo"]
+margin_top = 64.0
+margin_right = 158.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 158, 0 )
+text = "品牌人气"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Progress" type="TextureProgress" parent="SceneHBox/0/BarInfo/BrandPopularity"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = 19.0
+margin_right = 66.0
+margin_bottom = 45.0
+value = 50.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 1 )
+tint_under = Color( 0, 0, 0, 1 )
+tint_progress = Color( 1, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SceneHBox/0/BarInfo/BrandPopularity"]
+visible = false
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -158.0
+margin_top = 31.5
+margin_bottom = 52.5
+rect_min_size = Vector2( 158, 0 )
+text = "?"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Trend" type="Label" parent="SceneHBox/0/BarInfo"]
+margin_left = 162.0
+margin_top = 64.0
+margin_right = 320.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 158, 0 )
+text = "品牌趋势"
+align = 1
+valign = 1
+
+[node name="Progress" type="TextureProgress" parent="SceneHBox/0/BarInfo/Trend"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = 19.0
+margin_right = 34.0
+margin_bottom = 59.0
+value = 50.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 1 )
+tint_under = Color( 0, 0, 0, 1 )
+tint_progress = Color( 1, 1, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SceneHBox/0/BarInfo/Trend"]
+visible = false
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -158.0
+margin_top = 31.5
+margin_bottom = 52.5
+rect_min_size = Vector2( 158, 0 )
+text = "?"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PurchaseMult" type="Label" parent="SceneHBox/0/BarInfo"]
+margin_left = 324.0
+margin_top = 64.0
+margin_right = 482.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 158, 0 )
+text = "进货价格"
+align = 1
+valign = 1
+
+[node name="Progress" type="TextureProgress" parent="SceneHBox/0/BarInfo/PurchaseMult"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -34.0
+margin_top = 19.0
+margin_right = 34.0
+margin_bottom = 59.0
+value = 50.0
+texture_under = ExtResource( 1 )
+texture_progress = ExtResource( 1 )
+tint_under = Color( 0, 0, 0, 1 )
+tint_progress = Color( 0, 1, 0.976471, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="SceneHBox/0/BarInfo/PurchaseMult"]
+visible = false
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -158.0
+margin_top = 31.5
+margin_bottom = 52.5
+rect_min_size = Vector2( 158, 0 )
+text = "?"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Location" type="Label" parent="SceneHBox/0"]
+anchor_right = 1.0
+anchor_bottom = 0.089
+margin_left = 12.0
+margin_top = 10.0
+margin_right = -14.0
+margin_bottom = -16.75
+rect_min_size = Vector2( 450, 42 )
+text = "位置"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rank1" type="NinePatchRect" parent="SceneHBox/0"]
+visible = false
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 4 )
+patch_margin_left = 20
+patch_margin_top = 80
+patch_margin_right = 20
+patch_margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rank2" type="NinePatchRect" parent="SceneHBox/0"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+patch_margin_left = 20
+patch_margin_top = 80
+patch_margin_right = 20
+patch_margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rank3" type="NinePatchRect" parent="SceneHBox/0"]
+visible = false
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 7 )
+patch_margin_left = 20
+patch_margin_top = 80
+patch_margin_right = 20
+patch_margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shine" type="Panel" parent="SceneHBox/0"]
+modulate = Color( 1, 1, 1, 0 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+custom_styles/panel = SubResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SceneHBox/0"]
+autoplay = "init"
+anims/init = SubResource( 23 )
+anims/select = SubResource( 22 )
+
+[node name="TypeAni" type="AnimationPlayer" parent="SceneHBox/0"]
+anims/1 = SubResource( 24 )
+anims/2 = SubResource( 25 )
+anims/3 = SubResource( 26 )
+
+[node name="money" type="Control" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -1267.76
+margin_top = 952.3
+margin_right = -1267.76
+margin_bottom = 952.3
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="MoneyLabel" type="Label" parent="money"]
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_right = 165.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 2 )
+text = "999999999999"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="money/MoneyLabel"]
+light_mask = 0
+position = Vector2( 180, 23 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="money/MoneyLabel"]
+anchor_right = 1.0
+margin_top = -20.0
+margin_bottom = 1.0
+rect_min_size = Vector2( 200, 0 )
+text = "当前资金"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="money/MoneyLabel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -165.0
+margin_top = -20.0
+margin_right = 265.0
+margin_bottom = 1.0
+rect_min_size = Vector2( 430, 0 )
+text = "-"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TotalCost" type="Label" parent="money"]
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = 200.0
+margin_right = 365.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 2 )
+text = "999999999999"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="money/TotalCost"]
+light_mask = 0
+position = Vector2( 180, 23 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="money/TotalCost"]
+anchor_right = 1.0
+margin_top = -20.0
+margin_right = 35.0
+margin_bottom = 1.0
+text = "总计花费"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="money/TotalCost"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -165.0
+margin_top = -20.0
+margin_right = 265.0
+margin_bottom = 1.0
+rect_min_size = Vector2( 430, 0 )
+text = "-"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FinalMoney" type="Label" parent="money"]
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = 400.0
+margin_right = 565.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 2 )
+text = "999999999999"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="money/FinalMoney"]
+light_mask = 0
+position = Vector2( 180, 23 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="money/FinalMoney"]
+anchor_right = 1.0
+margin_top = -20.0
+margin_right = 35.0
+margin_bottom = 1.0
+text = "剩余资金"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="SceneHBox/0" to="." method="_on_brand_pressed"]

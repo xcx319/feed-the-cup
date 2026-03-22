@@ -1,0 +1,127 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Resources/Maps/Tmap_wallpaper.png" type="Texture" id=1]
+[ext_resource path="res://TscnAndGd/Objects/WallPaper/WallPaper.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 2, 760, 52, 240 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 2, 760, 150, 240 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 10, 760, 200, 240 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 10, 760, 200, 240 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 150, 760, 150, 240 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 200, 760, 100, 240 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 297.5, 112.5 )
+
+[sub_resource type="Animation" id=3]
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.498039 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="WallPaper" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="TexNode" type="Node2D" parent="."]
+
+[node name="Sprite_open" type="Sprite" parent="TexNode"]
+position = Vector2( 24, 0 )
+texture = SubResource( 10 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite_end" type="Sprite" parent="TexNode"]
+position = Vector2( 575, 0 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 6 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite1" type="Sprite" parent="TexNode"]
+position = Vector2( 150, 0 )
+texture = SubResource( 5 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite2" type="Sprite" parent="TexNode"]
+visible = false
+position = Vector2( 350, 0 )
+scale = Vector2( -1, 1 )
+texture = SubResource( 7 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite3" type="Sprite" parent="TexNode"]
+position = Vector2( 325, 0 )
+texture = SubResource( 8 )
+offset = Vector2( 0, -118 )
+
+[node name="Sprite4" type="Sprite" parent="TexNode"]
+position = Vector2( 450, 0 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = SubResource( 9 )
+offset = Vector2( 0, -118 )
+
+[node name="AreaNode" type="Node2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="AreaNode"]
+collision_layer = 0
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaNode/Area2D"]
+visible = false
+position = Vector2( 302.5, -112.5 )
+shape = SubResource( 2 )
+
+[node name="AniNode" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AniNode"]
+autoplay = "init"
+anims/hide = SubResource( 3 )
+anims/init = SubResource( 4 )
+
+[connection signal="body_entered" from="AreaNode/Area2D" to="." method="_on_player_entered"]
+[connection signal="body_exited" from="AreaNode/Area2D" to="." method="_on_player_exited"]

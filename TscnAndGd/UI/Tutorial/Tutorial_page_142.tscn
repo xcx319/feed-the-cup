@@ -1,0 +1,503 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://TscnAndGd/UI/Info/Tr_RichLabel.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_switchlight_green.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/Achieve/ui_achieve_pack.sprites/Totu_info_2.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_switchlight_white.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_eggroll_icecream_1.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_eggroll_icecream_2.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_icecream_mocha.tres" type="Texture" id=7]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_IceCream_switch_2.tres" type="Texture" id=8]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_IceCream_switch_1.tres" type="Texture" id=9]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_eggroll_white.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_IceCream_switch_4.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_IceCream_switch_3.tres" type="Texture" id=12]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_icecream_coco.tres" type="Texture" id=13]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_IceCream_box.tres" type="Texture" id=14]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_IceCream_front.tres" type="Texture" id=15]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=16]
+[ext_resource path="res://TscnAndGd/Effects/shaders/teleport-effect.tres" type="Shader" id=17]
+[ext_resource path="res://Resources/Item/item_pack.sprites/material_sugar_choco.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_sugarmachine_cover.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_sugarmachine_choco_s.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/item_eggroll_skin_m.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_cuptip_1.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_frame_line.tres" type="Texture" id=23]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_particle_0.tres" type="Texture" id=24]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_liquid_mix_23.tres" type="Texture" id=25]
+[ext_resource path="res://Resources/Devices/device2_pack.sprites/device_IceCream_box_s.tres" type="Texture" id=26]
+
+[sub_resource type="ShaderMaterial" id=308]
+shader = ExtResource( 17 )
+shader_param/progress = 0.0
+shader_param/noise_desnity = 60.0
+shader_param/beam_size = 0.15
+shader_param/color = Color( 0, 0, 0, 1 )
+
+[node name="双色甜筒" type="Node2D"]
+position = Vector2( 942, 192 )
+
+[node name="216" type="RichTextLabel" parent="."]
+margin_left = -357.0
+margin_top = 288.0
+margin_right = 374.0
+margin_bottom = 408.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "同时按下两个按键（或快速连按两个按键）可以接出一个双色冰淇淋。"
+text = "同时按下两个按键（或快速连按两个按键）可以接出一个双色冰淇淋。"
+script = ExtResource( 1 )
+LabelTEXT = "信息-文字说明-216"
+Center_Bool = true
+
+[node name="217" type="RichTextLabel" parent="."]
+margin_left = -335.0
+margin_top = 590.0
+margin_right = 438.0
+margin_bottom = 754.0
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "蛋卷冰淇淋做好后，根据客人的选择，淋上特殊的巧克力脆皮糖浆。
+加入这种糖浆后，就不可以再对蛋卷做任何操作了。"
+text = "蛋卷冰淇淋做好后，根据客人的选择，淋上特殊的巧克力脆皮糖浆。
+加入这种糖浆后，就不可以再对蛋卷做任何操作了。"
+script = ExtResource( 1 )
+LabelTEXT = "信息-文字说明-217"
+Center_Bool = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_left = -333.0
+margin_top = 91.0
+margin_right = -107.0
+margin_bottom = 273.0
+texture = ExtResource( 22 )
+patch_margin_left = 15
+patch_margin_top = 12
+patch_margin_right = 20
+patch_margin_bottom = 25
+
+[node name="line" type="Sprite" parent="NinePatchRect"]
+position = Vector2( 112, 83 )
+scale = Vector2( 1, 0.902857 )
+texture = ExtResource( 23 )
+
+[node name="IconLiquidBottleOrange2" type="Sprite" parent="NinePatchRect"]
+position = Vector2( 146, 36 )
+texture = ExtResource( 7 )
+
+[node name="IconIcecreamCoco" type="Sprite" parent="NinePatchRect"]
+position = Vector2( 146, 79 )
+texture = ExtResource( 13 )
+
+[node name="IconLiquidMix23" type="Sprite" parent="NinePatchRect"]
+position = Vector2( 146, 120 )
+texture = ExtResource( 25 )
+
+[node name="Small4" type="Node2D" parent="NinePatchRect"]
+pause_mode = 2
+position = Vector2( 45, 94 )
+
+[node name="Cup_L" type="Sprite" parent="NinePatchRect/Small4"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+position = Vector2( 0, 28.0702 )
+texture = ExtResource( 10 )
+
+[node name="Layer3" type="TextureProgress" parent="NinePatchRect/Small4"]
+pause_mode = 2
+self_modulate = Color( 0.172549, 0.788235, 0.0627451, 1 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -22.0
+margin_top = -30.0
+margin_right = 22.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 22, 28 )
+value = 100.0
+texture_progress = ExtResource( 5 )
+fill_mode = 3
+
+[node name="Layer2" type="TextureProgress" parent="NinePatchRect/Small4"]
+pause_mode = 2
+self_modulate = Color( 1, 1, 1, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -22.0
+margin_top = -30.0
+margin_right = 22.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 22, 28 )
+value = 100.0
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+tint_progress = Color( 0.494118, 0.231373, 0.117647, 1 )
+
+[node name="UiIconStateCold" type="Sprite" parent="NinePatchRect"]
+position = Vector2( 91, 26 )
+texture = ExtResource( 24 )
+
+[node name="1" type="Node2D" parent="."]
+position = Vector2( 341, 68 )
+
+[node name="Machine" type="Node2D" parent="1"]
+material = SubResource( 308 )
+use_parent_material = true
+position = Vector2( -266, 147 )
+scale = Vector2( 0.9, 0.9 )
+
+[node name="Back" type="Node2D" parent="1/Machine"]
+show_behind_parent = true
+
+[node name="Emptybbx" type="Sprite" parent="1/Machine/Back"]
+use_parent_material = true
+position = Vector2( -47, -144 )
+texture = ExtResource( 14 )
+offset = Vector2( 0, -15 )
+
+[node name="Emptybbx2" type="Sprite" parent="1/Machine/Back"]
+use_parent_material = true
+position = Vector2( -47, -101 )
+texture = ExtResource( 14 )
+offset = Vector2( 0, -15 )
+
+[node name="Emptybbx3" type="Sprite" parent="1/Machine/Back"]
+use_parent_material = true
+position = Vector2( 47, -145 )
+texture = ExtResource( 14 )
+offset = Vector2( 0, -15 )
+
+[node name="DeviceIceCreamBoxS" type="Sprite" parent="1/Machine/Back/Emptybbx3"]
+position = Vector2( -2, -14 )
+texture = ExtResource( 26 )
+
+[node name="Emptybbx4" type="Sprite" parent="1/Machine/Back"]
+use_parent_material = true
+position = Vector2( 47, -100 )
+texture = ExtResource( 14 )
+offset = Vector2( 0, -15 )
+
+[node name="DeviceIceCreamBoxS" type="Sprite" parent="1/Machine/Back/Emptybbx4"]
+position = Vector2( -2, -14 )
+texture = ExtResource( 26 )
+
+[node name="Base" type="Sprite" parent="1/Machine"]
+use_parent_material = true
+position = Vector2( 0, -67 )
+texture = ExtResource( 15 )
+
+[node name="Switch" type="Node2D" parent="1/Machine"]
+position = Vector2( 0, 25 )
+
+[node name="A" type="Sprite" parent="1/Machine/Switch"]
+position = Vector2( -78, -124 )
+texture = ExtResource( 9 )
+offset = Vector2( 0, -12 )
+
+[node name="X" type="Sprite" parent="1/Machine/Switch"]
+position = Vector2( -29, -124 )
+texture = ExtResource( 8 )
+offset = Vector2( 0, -12 )
+
+[node name="Y" type="Sprite" parent="1/Machine/Switch"]
+position = Vector2( 17, -123 )
+texture = ExtResource( 12 )
+offset = Vector2( 0, -12 )
+
+[node name="B" type="Sprite" parent="1/Machine/Switch"]
+position = Vector2( 67, -124 )
+texture = ExtResource( 11 )
+offset = Vector2( 0, -12 )
+
+[node name="ALight" type="Sprite" parent="1/Machine/Switch"]
+show_behind_parent = true
+position = Vector2( -61.5, -123.5 )
+texture = ExtResource( 2 )
+
+[node name="XLight" type="Sprite" parent="1/Machine/Switch"]
+self_modulate = Color( 0.196078, 0.196078, 0.196078, 1 )
+show_behind_parent = true
+position = Vector2( -13.5, -123.5 )
+texture = ExtResource( 4 )
+
+[node name="YLight" type="Sprite" parent="1/Machine/Switch"]
+self_modulate = Color( 0.196078, 0.196078, 0.196078, 1 )
+show_behind_parent = true
+position = Vector2( 33.5, -123.5 )
+texture = ExtResource( 4 )
+
+[node name="BLight" type="Sprite" parent="1/Machine/Switch"]
+self_modulate = Color( 0.196078, 0.196078, 0.196078, 1 )
+show_behind_parent = true
+position = Vector2( 82.5, -123.5 )
+texture = ExtResource( 4 )
+
+[node name="Icon" type="Sprite" parent="1/Machine"]
+position = Vector2( -50, -175 )
+texture = ExtResource( 7 )
+
+[node name="IconIcecreamCoco" type="Sprite" parent="1/Machine"]
+position = Vector2( -48, -131 )
+texture = ExtResource( 13 )
+
+[node name="X" parent="1/Machine" instance=ExtResource( 16 )]
+margin_left = -80.0
+margin_top = -172.0
+margin_right = -80.0
+margin_bottom = -172.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+OnBut = false
+
+[node name="A" parent="1/Machine" instance=ExtResource( 16 )]
+margin_left = -81.0
+margin_top = -127.0
+margin_right = -81.0
+margin_bottom = -127.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+OnBut = false
+
+[node name="Small2" type="Node2D" parent="1"]
+pause_mode = 2
+show_behind_parent = true
+position = Vector2( -14, 78 )
+
+[node name="Cup_L" type="Sprite" parent="1/Small2"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+position = Vector2( -13, 29.0702 )
+texture = ExtResource( 10 )
+
+[node name="Layer1" type="TextureProgress" parent="1/Small2"]
+pause_mode = 2
+self_modulate = Color( 0.298039, 0.788235, 0.372549, 1 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -35.0
+margin_top = -27.0
+margin_right = 9.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 22, 28 )
+value = 100.0
+texture_progress = ExtResource( 5 )
+fill_mode = 3
+
+[node name="Layer2" type="TextureProgress" parent="1/Small2"]
+pause_mode = 2
+self_modulate = Color( 1, 1, 1, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -35.0
+margin_top = -27.0
+margin_right = 9.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 22, 28 )
+value = 100.0
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+tint_progress = Color( 0.494118, 0.231373, 0.117647, 1 )
+
+[node name="X" parent="1/Small2" instance=ExtResource( 16 )]
+margin_left = -83.0
+margin_top = -15.0
+margin_right = -83.0
+margin_bottom = -15.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+OnBut = false
+
+[node name="A" parent="1/Small2" instance=ExtResource( 16 )]
+margin_left = -113.0
+margin_top = -15.0
+margin_right = -113.0
+margin_bottom = -15.0
+ZINDEX = 0
+bool_Small = true
+bool_Static = true
+OnBut = false
+
+[node name="TotuInfo3" type="Sprite" parent="1/Small2"]
+position = Vector2( -98, 25 )
+texture = ExtResource( 3 )
+
+[node name="2" type="Node2D" parent="."]
+position = Vector2( 230, 407 )
+
+[node name="DeviceSugarmachineChocoS" type="Sprite" parent="2"]
+position = Vector2( -206.695, 103.305 )
+texture = ExtResource( 20 )
+
+[node name="DeviceSugarmachineCover" type="Sprite" parent="2"]
+position = Vector2( -218, 61 )
+rotation = -0.785397
+texture = ExtResource( 19 )
+
+[node name="MaterialSugarChoco" type="Sprite" parent="2"]
+position = Vector2( -151, 41 )
+rotation = -1.0472
+texture = ExtResource( 18 )
+
+[node name="TotuInfo2" type="Sprite" parent="2"]
+position = Vector2( -109.695, 117.305 )
+texture = ExtResource( 3 )
+
+[node name="TotuInfo3" type="Sprite" parent="2"]
+position = Vector2( -316, 117 )
+texture = ExtResource( 3 )
+
+[node name="Node2D" type="Node2D" parent="2"]
+position = Vector2( -14, 94 )
+
+[node name="Cup_L" type="Sprite" parent="2/Node2D"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+position = Vector2( 0, 28.0702 )
+texture = ExtResource( 10 )
+
+[node name="ItemEggrollSkinS" type="Sprite" parent="2/Node2D"]
+position = Vector2( 0, -15 )
+texture = ExtResource( 21 )
+
+[node name="Layer2" type="TextureProgress" parent="2/Node2D"]
+pause_mode = 2
+self_modulate = Color( 0.298039, 0.788235, 0.372549, 1 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -22.0
+margin_top = -28.0
+margin_right = 22.0
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 22, 28 )
+value = 100.0
+texture_progress = ExtResource( 5 )
+fill_mode = 3
+
+[node name="Layer3" type="TextureProgress" parent="2/Node2D"]
+pause_mode = 2
+self_modulate = Color( 1, 1, 1, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -22.0
+margin_top = -28.0
+margin_right = 22.0
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 22, 28 )
+value = 100.0
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+tint_progress = Color( 0.494118, 0.231373, 0.117647, 1 )
+
+[node name="Layer4" type="TextureProgress" parent="2/Node2D"]
+pause_mode = 2
+self_modulate = Color( 0.298039, 0.788235, 0.372549, 1 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -22.0
+margin_top = -53.0
+margin_right = 22.0
+margin_bottom = -9.0
+rect_pivot_offset = Vector2( 22, 28 )
+value = 100.0
+texture_progress = ExtResource( 5 )
+fill_mode = 3
+
+[node name="Layer5" type="TextureProgress" parent="2/Node2D"]
+pause_mode = 2
+self_modulate = Color( 1, 1, 1, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -22.0
+margin_top = -53.0
+margin_right = 22.0
+margin_bottom = -9.0
+rect_pivot_offset = Vector2( 22, 28 )
+value = 100.0
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+tint_progress = Color( 0.494118, 0.231373, 0.117647, 1 )
+
+[node name="Node2D2" type="Node2D" parent="2"]
+position = Vector2( -422, 98 )
+
+[node name="Cup_L" type="Sprite" parent="2/Node2D2"]
+pause_mode = 2
+show_behind_parent = true
+use_parent_material = true
+position = Vector2( 0, 28.0702 )
+texture = ExtResource( 10 )
+
+[node name="Layer2" type="TextureProgress" parent="2/Node2D2"]
+pause_mode = 2
+self_modulate = Color( 0.298039, 0.788235, 0.372549, 1 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -22.0
+margin_top = -28.0
+margin_right = 22.0
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 22, 28 )
+value = 100.0
+texture_progress = ExtResource( 5 )
+fill_mode = 3
+
+[node name="Layer3" type="TextureProgress" parent="2/Node2D2"]
+pause_mode = 2
+self_modulate = Color( 1, 1, 1, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -22.0
+margin_top = -28.0
+margin_right = 22.0
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 22, 28 )
+value = 100.0
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+tint_progress = Color( 0.494118, 0.231373, 0.117647, 1 )
+
+[node name="Layer4" type="TextureProgress" parent="2/Node2D2"]
+pause_mode = 2
+self_modulate = Color( 0.298039, 0.788235, 0.372549, 1 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -22.0
+margin_top = -54.0
+margin_right = 22.0
+margin_bottom = -10.0
+rect_pivot_offset = Vector2( 22, 28 )
+value = 100.0
+texture_progress = ExtResource( 5 )
+fill_mode = 3
+
+[node name="Layer5" type="TextureProgress" parent="2/Node2D2"]
+pause_mode = 2
+self_modulate = Color( 1, 1, 1, 0.941176 )
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -22.0
+margin_top = -54.0
+margin_right = 22.0
+margin_bottom = -10.0
+rect_pivot_offset = Vector2( 22, 28 )
+value = 100.0
+texture_progress = ExtResource( 6 )
+fill_mode = 3
+tint_progress = Color( 0.494118, 0.231373, 0.117647, 1 )

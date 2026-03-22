@@ -1,0 +1,124 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://TscnAndGd/Objects/Special/ThrowObj.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Devices/device_pack.sprites/device_box_body.tres" type="Texture" id=2]
+
+[sub_resource type="PhysicsMaterial" id=202]
+bounce = 1.0
+
+[sub_resource type="RectangleShape2D" id=203]
+extents = Vector2( 35, 35 )
+
+[sub_resource type="CircleShape2D" id=204]
+radius = 24.0208
+
+[sub_resource type="Animation" id=205]
+resource_name = "Touch"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:collision_layer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 512 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:collision_mask")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 9346 ]
+}
+
+[sub_resource type="Animation" id=206]
+resource_name = "init"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:collision_layer")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 512 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:collision_mask")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 128 ]
+}
+
+[node name="ThrowObj" type="RigidBody2D"]
+pause_mode = 2
+collision_layer = 512
+collision_mask = 128
+mode = 2
+mass = 5.0
+physics_material_override = SubResource( 202 )
+gravity_scale = 0.0
+contacts_reported = 5
+contact_monitor = true
+linear_damp = 0.5
+script = ExtResource( 1 )
+
+[node name="ObjNode" type="RigidBody2D" parent="."]
+pause_mode = 2
+collision_layer = 0
+collision_mask = 0
+physics_material_override = SubResource( 202 )
+gravity_scale = 0.0
+continuous_cd = 2
+contacts_reported = 5
+contact_monitor = true
+linear_damp = 0.5
+
+[node name="Sprite" type="Sprite" parent="ObjNode"]
+pause_mode = 2
+visible = false
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ObjNode"]
+pause_mode = 2
+shape = SubResource( 203 )
+disabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+pause_mode = 2
+shape = SubResource( 204 )
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+pause_mode = 2
+node_a = NodePath("..")
+node_b = NodePath("../ObjNode")
+
+[node name="Timer" type="Timer" parent="."]
+pause_mode = 2
+wait_time = 0.1
+one_shot = true
+
+[node name="CollAni" type="AnimationPlayer" parent="."]
+autoplay = "init"
+anims/Touch = SubResource( 205 )
+anims/init = SubResource( 206 )
+
+[connection signal="body_entered" from="." to="." method="_on_ThrowObj_body_entered"]
+[connection signal="body_entered" from="ObjNode" to="ObjNode" method="_on_RigidBody2D_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

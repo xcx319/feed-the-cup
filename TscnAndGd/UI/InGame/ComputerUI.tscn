@@ -1,0 +1,3632 @@
+[gd_scene load_steps=103 format=2]
+
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_screen.tres" type="Texture" id=1]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_choose.tres" type="Texture" id=2]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_app_star.tres" type="Texture" id=3]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_menu_arrow_1.tres" type="Texture" id=4]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_coin.tres" type="Texture" id=5]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip_cut.tres" type="Texture" id=6]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_state_lock.tres" type="Texture" id=7]
+[ext_resource path="res://TscnAndGd/Buttons/BaseButton.gd" type="Script" id=8]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_LB.tres" type="Texture" id=10]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_RB.tres" type="Texture" id=11]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_strip.tres" type="Texture" id=12]
+[ext_resource path="res://TscnAndGd/Buttons/NoFocusButton.gd" type="Script" id=13]
+[ext_resource path="res://TscnAndGd/Buttons/UIChangeButton.gd" type="Script" id=14]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_icon_app_nostar.tres" type="Texture" id=15]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_Y.tres" type="Texture" id=16]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_X.tres" type="Texture" id=17]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_frame.tres" type="Texture" id=18]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_right.tres" type="Texture" id=19]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_left.tres" type="Texture" id=20]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_down.tres" type="Texture" id=21]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_controlbutton_up.tres" type="Texture" id=22]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Ui_panel_frame_white.tres" type="Texture" id=23]
+[ext_resource path="res://TscnAndGd/UI/InGame/OrderNode.tscn" type="PackedScene" id=24]
+[ext_resource path="res://TscnAndGd/UI/InGame/BuyNode.tscn" type="PackedScene" id=25]
+[ext_resource path="res://TscnAndGd/Buttons/Button_controller.tscn" type="PackedScene" id=26]
+[ext_resource path="res://TscnAndGd/UI/InGame/Popular.gd" type="Script" id=31]
+[ext_resource path="res://Resources/UI/GameUI/ui_pack.sprites/Icon_fuction_0.tres" type="Texture" id=33]
+
+[sub_resource type="Animation" id=118]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../MainNode:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, -1100 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../MainNode:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=119]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("../MainNode:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../MainNode:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -1100 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=137]
+resource_name = "BankUIShow"
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("../BankNode:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../BankNode:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("..")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.02, 0.28, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"values": [ {
+"args": [ false ],
+"method": "call_ani"
+}, {
+"args": [ true ],
+"method": "call_ani"
+}, {
+"args": [ true ],
+"method": "call_ani"
+}, {
+"args": [  ],
+"method": "call_Bank_GrabFocus"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../MainNode/MainUI:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../LevelNode:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=163]
+resource_name = "BuyUIShow"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("../LevelNode:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../BankNode:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../MainNode/MainUI:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../LevelNode:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../LevelNode/DevBuy:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../LevelNode/Type:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../LevelNode/DevBuy:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../LevelNode/Type:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../LevelNode/OrderNode:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=158]
+resource_name = "LevelUIShow"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("../LevelNode:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../BankNode:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../MainNode/MainUI:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../LevelNode:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../LevelNode/OrderNode:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../LevelNode/DevBuy:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../LevelNode/Type:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../LevelNode/Type:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/8/type = "method"
+tracks/8/path = NodePath("..")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_Bank_GrabFocus"
+} ]
+}
+
+[sub_resource type="Animation" id=165]
+resource_name = "MenuUIShow"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("../MainNode/MainUI:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../FinalCheck:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../BankNode:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../MainNode/MainUI/BankBut:mouse_filter")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../MainNode/MainUI:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../LevelNode:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=161]
+resource_name = "OrderUIShow"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("../LevelNode:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../BankNode:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../MainNode/MainUI:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../LevelNode:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../LevelNode/OrderNode:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../LevelNode/DevBuy:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../LevelNode/Type:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../LevelNode/OrderNode:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0.1, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../LevelNode/Type:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=120]
+resource_name = "show"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("../MainNode/MainUI:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../FinalCheck:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../BankNode:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../MainNode/MainUI/BankBut:mouse_filter")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../MainNode/MainUI:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("..")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.3 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "call_Bank_GrabFocus"
+} ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../LevelNode:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../MainNode:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Language/Fonts/simhei.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 1 )
+
+[sub_resource type="Animation" id=76]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("MoneyPlus:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 66, 50 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MoneyPlus:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=77]
+resource_name = "plus"
+tracks/0/type = "value"
+tracks/0/path = NodePath("MoneyPlus:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MoneyPlus:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 66, 50 ), Vector2( 66, 30 ), Vector2( 66, 30 ), Vector2( 66, 10 ) ]
+}
+
+[sub_resource type="Animation" id=80]
+resource_name = "reduce"
+tracks/0/type = "value"
+tracks/0/path = NodePath("MoneyPlus:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MoneyPlus:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 66, 10 ), Vector2( 66, 30 ), Vector2( 66, 30 ), Vector2( 66, 50 ) ]
+}
+
+[sub_resource type="Animation" id=232]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("CoinPlus:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 66, 50 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CoinPlus:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=233]
+resource_name = "plus"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CoinPlus:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CoinPlus:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 66, 50 ), Vector2( 66, 30 ), Vector2( 66, 30 ), Vector2( 66, 10 ) ]
+}
+
+[sub_resource type="Animation" id=234]
+resource_name = "reduce"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CoinPlus:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CoinPlus:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.8, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 66, 10 ), Vector2( 66, 30 ), Vector2( 66, 30 ), Vector2( 66, 50 ) ]
+}
+
+[sub_resource type="StyleBoxTexture" id=107]
+
+[sub_resource type="DynamicFontData" id=230]
+font_path = "res://Language/Fonts/simhei.ttf"
+
+[sub_resource type="DynamicFont" id=231]
+size = 40
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = SubResource( 230 )
+
+[sub_resource type="StyleBoxEmpty" id=110]
+
+[sub_resource type="StyleBoxTexture" id=111]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 152, 160 )
+margin_left = 64.0
+margin_right = 63.0
+margin_top = 69.0
+margin_bottom = 63.7968
+modulate_color = Color( 0, 1, 1, 1 )
+
+[sub_resource type="StyleBoxTexture" id=112]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 152, 160 )
+margin_left = 64.0
+margin_right = 63.0
+margin_top = 69.0
+margin_bottom = 63.7968
+modulate_color = Color( 0.784314, 1, 1, 1 )
+
+[sub_resource type="StyleBoxTexture" id=109]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 152, 160 )
+margin_left = 70.0
+margin_right = 70.0
+margin_top = 70.0
+margin_bottom = 70.0
+modulate_color = Color( 0.627451, 1, 1, 1 )
+
+[sub_resource type="ButtonGroup" id=113]
+
+[sub_resource type="DynamicFontData" id=114]
+font_path = "res://Language/Fonts/simhei.ttf"
+
+[sub_resource type="DynamicFont" id=115]
+size = 38
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = SubResource( 114 )
+
+[sub_resource type="StyleBoxEmpty" id=116]
+
+[sub_resource type="Animation" id=145]
+resource_name = "disable"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("InfoNode:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ShopNode:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=146]
+resource_name = "show"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("InfoNode:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("ShopNode:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=159]
+resource_name = "disable"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("ShopNode:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("InfoNode:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=160]
+resource_name = "show"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("InfoNode:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ShopNode:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="StyleBoxEmpty" id=121]
+
+[sub_resource type="ButtonGroup" id=122]
+
+[sub_resource type="StyleBoxEmpty" id=140]
+
+[sub_resource type="StyleBoxTexture" id=141]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 452, 81 )
+modulate_color = Color( 0, 1, 0.180392, 1 )
+
+[sub_resource type="StyleBoxTexture" id=142]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 452, 81 )
+modulate_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+
+[sub_resource type="StyleBoxTexture" id=123]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 452, 81 )
+modulate_color = Color( 0.498039, 1, 0.498039, 1 )
+
+[sub_resource type="StyleBoxTexture" id=124]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 40, 30 )
+modulate_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+
+[sub_resource type="StyleBoxTexture" id=103]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 40, 30 )
+
+[sub_resource type="StyleBoxTexture" id=102]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 40, 30 )
+modulate_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=143]
+
+[sub_resource type="StyleBoxTexture" id=128]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 452, 81 )
+modulate_color = Color( 0.784314, 0.784314, 0.784314, 1 )
+
+[sub_resource type="Animation" id=126]
+resource_name = "loan"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Loan:pressed")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Loan/Pressed:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Loan/Normal:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Repayment:pressed")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Repayment/Pressed:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Repayment/Normal:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Loan:disabled")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=125]
+resource_name = "repayment"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Loan/Pressed:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Loan/Normal:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Repayment/Pressed:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Repayment/Normal:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Repayment:pressed")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Loan:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=127]
+resource_name = "开店宝"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Loan/Pressed/VBox/Borrow/MoneyLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "50000" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Loan/Pressed/TitleLabel:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "10日超低息开店宝" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Loan/Pressed/VBox/PayBack/Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "可" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Loan/Pressed/VBox/Repayment/DayLabel:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "10" ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Repayment/Pressed/TitleLabel:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "10日超低息开店宝" ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Repayment/Pressed/VBox/PayBack/Label:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "可" ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Repayment/Pressed/VBox/Borrow/MoneyLabel:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "50000" ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../Repayment/Pressed/VBox/Usury/UsuryLabel:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "1%" ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../Loan/Pressed/VBox/Usury/UsuryLabel:text")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "1%" ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../Loan/Pressed/VBox/RepaymentBase/MoneyLabel:text")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "0" ]
+}
+tracks/10/type = "method"
+tracks/10/path = NodePath("../..")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 50000, 0, 1.0, true ],
+"method": "call_loan_logic"
+} ]
+}
+
+[sub_resource type="Animation" id=139]
+resource_name = "紧急资金"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../Loan/Pressed/VBox/Borrow/MoneyLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "50000" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../Loan/Pressed/TitleLabel:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "紧急周转" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../Loan/Pressed/VBox/PayBack/Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "可" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../Loan/Pressed/VBox/Repayment/DayLabel:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "5" ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../Repayment/Pressed/TitleLabel:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "紧急周转" ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../Repayment/Pressed/VBox/PayBack/Label:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "可" ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../Repayment/Pressed/VBox/Borrow/MoneyLabel:text")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "50000" ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("../Repayment/Pressed/VBox/Usury/UsuryLabel:text")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "0.1%" ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("../Loan/Pressed/VBox/Usury/UsuryLabel:text")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "0.1%" ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("../Loan/Pressed/VBox/RepaymentBase/MoneyLabel:text")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "5000" ]
+}
+tracks/10/type = "method"
+tracks/10/path = NodePath("../..")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ 50000, 5000, 0.1, true ],
+"method": "call_loan_logic"
+} ]
+}
+
+[sub_resource type="Animation" id=147]
+resource_name = "init"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../FinalCheck:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=129]
+resource_name = "loan"
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../FinalCheck/BG/money/MoneyLabel/Label2:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "+" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../FinalCheck/BG/money/TotalCost/Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "借款金额" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../FinalCheck/BG/money/FinalMoney/Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "借后资金" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../FinalCheck/BG:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -400, -1100 ), Vector2( -400, -200 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../FinalCheck:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("../../FinalCheck:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/6/type = "method"
+tracks/6/path = NodePath("../..")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.1, 0.29, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"values": [ {
+"args": [ false ],
+"method": "call_ani"
+}, {
+"args": [ true ],
+"method": "call_ani"
+}, {
+"args": [ true ],
+"method": "call_ani"
+}, {
+"args": [  ],
+"method": "call_Bank_GrabFocus"
+} ]
+}
+
+[sub_resource type="Animation" id=131]
+resource_name = "repayment"
+length = 0.3
+step = 0.01
+tracks/0/type = "value"
+tracks/0/path = NodePath("../../FinalCheck/BG/money/MoneyLabel/Label2:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "-" ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../FinalCheck/BG/money/TotalCost/Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "还款金额" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("../../FinalCheck/BG/money/FinalMoney/Label:text")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "剩余资金" ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("../../FinalCheck/BG:rect_position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -400, -1100 ), Vector2( -400, -200 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("../../FinalCheck:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("../..")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.01, 0.29, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"values": [ {
+"args": [ false ],
+"method": "call_ani"
+}, {
+"args": [ true ],
+"method": "call_ani"
+}, {
+"args": [ true ],
+"method": "call_ani"
+}, {
+"args": [  ],
+"method": "call_Bank_GrabFocus"
+} ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("../../FinalCheck:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFontData" id=95]
+font_path = "res://Language/Fonts/simhei.ttf"
+
+[sub_resource type="DynamicFont" id=130]
+size = 20
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 95 )
+
+[sub_resource type="StyleBoxEmpty" id=133]
+
+[sub_resource type="StyleBoxTexture" id=134]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 452, 81 )
+modulate_color = Color( 0, 1, 0, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=135]
+
+[sub_resource type="StyleBoxTexture" id=136]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 452, 81 )
+modulate_color = Color( 0.498039, 1, 0.498039, 1 )
+
+[sub_resource type="StyleBoxTexture" id=132]
+
+[sub_resource type="StyleBoxTexture" id=96]
+texture = ExtResource( 22 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=148]
+texture = ExtResource( 22 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="StyleBoxTexture" id=149]
+texture = ExtResource( 22 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=97]
+texture = ExtResource( 21 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=117]
+texture = ExtResource( 21 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="StyleBoxTexture" id=150]
+texture = ExtResource( 21 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=98]
+texture = ExtResource( 20 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=151]
+texture = ExtResource( 20 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="StyleBoxTexture" id=152]
+texture = ExtResource( 20 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=99]
+texture = ExtResource( 19 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=153]
+texture = ExtResource( 19 )
+region_rect = Rect2( 0, 0, 32, 34 )
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="StyleBoxTexture" id=154]
+texture = ExtResource( 19 )
+region_rect = Rect2( 0, 0, 32, 34 )
+
+[sub_resource type="StyleBoxTexture" id=100]
+texture = ExtResource( 17 )
+region_rect = Rect2( 0, 0, 30, 30 )
+
+[sub_resource type="StyleBoxTexture" id=155]
+texture = ExtResource( 17 )
+region_rect = Rect2( 0, 0, 30, 30 )
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="StyleBoxTexture" id=156]
+texture = ExtResource( 16 )
+region_rect = Rect2( 0, 0, 30, 30 )
+
+[sub_resource type="StyleBoxTexture" id=101]
+texture = ExtResource( 16 )
+region_rect = Rect2( 0, 0, 30, 30 )
+
+[sub_resource type="StyleBoxTexture" id=157]
+texture = ExtResource( 16 )
+region_rect = Rect2( 0, 0, 30, 30 )
+modulate_color = Color( 0.498039, 0.498039, 0.498039, 1 )
+
+[sub_resource type="StyleBoxTexture" id=164]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 452, 81 )
+margin_left = 15.0
+margin_right = 15.0
+margin_top = 15.0
+margin_bottom = 15.0
+modulate_color = Color( 1, 0.498039, 0, 1 )
+
+[sub_resource type="StyleBoxTexture" id=162]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 452, 81 )
+margin_left = 15.0
+margin_right = 15.0
+margin_top = 15.0
+margin_bottom = 15.0
+
+[node name="ComputerUI" type="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="AniNode" type="Node2D" parent="."]
+
+[node name="Ani" type="AnimationPlayer" parent="AniNode"]
+autoplay = "init"
+anims/init = SubResource( 118 )
+anims/show = SubResource( 119 )
+
+[node name="UIAni" type="AnimationPlayer" parent="AniNode"]
+autoplay = "show"
+anims/BankUIShow = SubResource( 137 )
+anims/BuyUIShow = SubResource( 163 )
+anims/LevelUIShow = SubResource( 158 )
+anims/MenuUIShow = SubResource( 165 )
+anims/OrderUIShow = SubResource( 161 )
+anims/show = SubResource( 120 )
+
+[node name="MainNode" type="Node2D" parent="."]
+
+[node name="BG" type="NinePatchRect" parent="MainNode"]
+margin_left = -900.0
+margin_top = -500.0
+margin_right = 935.0
+margin_bottom = 495.0
+texture = ExtResource( 1 )
+patch_margin_left = 30
+patch_margin_top = 35
+patch_margin_right = 60
+patch_margin_bottom = 35
+
+[node name="TitleName" type="NinePatchRect" parent="MainNode"]
+self_modulate = Color( 1, 1, 1, 0.588235 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -757.5
+margin_top = -470.0
+margin_right = 757.5
+margin_bottom = -385.0
+texture = ExtResource( 6 )
+patch_margin_left = 43
+patch_margin_right = 44
+
+[node name="money" type="Control" parent="MainNode/TitleName"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 112.5
+margin_top = 20.0
+margin_right = 112.5
+margin_bottom = 20.0
+
+[node name="MoneyLabel" type="Label" parent="MainNode/TitleName/money"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = -164.925
+margin_top = -20.0
+margin_right = 0.0749969
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 2 )
+text = "999999999999"
+align = 2
+valign = 1
+
+[node name="MoneyPlus" type="Label" parent="MainNode/TitleName/money/MoneyLabel"]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -99.0
+margin_top = 30.0
+margin_bottom = 51.0
+text = "+25"
+align = 2
+valign = 1
+
+[node name="MoneyPlusAni" type="AnimationPlayer" parent="MainNode/TitleName/money/MoneyLabel"]
+autoplay = "init"
+anims/init = SubResource( 76 )
+anims/plus = SubResource( 77 )
+anims/reduce = SubResource( 80 )
+
+[node name="Sprite" type="Sprite" parent="MainNode/TitleName/money/MoneyLabel"]
+light_mask = 0
+position = Vector2( 180, 22 )
+texture = ExtResource( 5 )
+
+[node name="CoinLabel" type="Label" parent="MainNode/TitleName/money"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = -164.925
+margin_top = 20.0
+margin_right = 0.0750122
+margin_bottom = 60.0
+custom_fonts/font = SubResource( 2 )
+text = "999999999999"
+align = 2
+valign = 1
+
+[node name="CoinPlus" type="Label" parent="MainNode/TitleName/money/CoinLabel"]
+modulate = Color( 1, 1, 1, 0 )
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -99.0
+margin_top = 30.0
+margin_bottom = 51.0
+text = "+25"
+align = 2
+valign = 1
+
+[node name="CoinPlusAni" type="AnimationPlayer" parent="MainNode/TitleName/money/CoinLabel"]
+autoplay = "init"
+anims/init = SubResource( 232 )
+anims/plus = SubResource( 233 )
+anims/reduce = SubResource( 234 )
+
+[node name="Sprite" type="Sprite" parent="MainNode/TitleName/money/CoinLabel"]
+self_modulate = Color( 1, 0.392157, 0.392157, 1 )
+light_mask = 0
+position = Vector2( 180, 22 )
+texture = ExtResource( 5 )
+
+[node name="BackBut" type="Button" parent="MainNode/TitleName"]
+margin_left = -92.0
+margin_right = 48.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 85, 85 )
+focus_mode = 0
+custom_styles/hover = SubResource( 107 )
+custom_styles/pressed = SubResource( 107 )
+custom_styles/normal = SubResource( 107 )
+script = ExtResource( 13 )
+
+[node name="B" parent="MainNode/TitleName/BackBut" instance=ExtResource( 26 )]
+margin_left = 99.5
+margin_top = 40.0
+margin_right = 99.5
+margin_bottom = 40.0
+bool_Static = true
+
+[node name="Sprite" type="Sprite" parent="MainNode/TitleName/BackBut"]
+position = Vector2( 29.5, 40 )
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="MainNode/TitleName"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -79.5
+margin_top = -42.5
+margin_right = 180.5
+margin_bottom = 47.5
+custom_fonts/font = SubResource( 231 )
+text = "信息-我的电脑"
+align = 1
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="MainNode/TitleName/Label"]
+position = Vector2( -50, 46 )
+texture = ExtResource( 33 )
+
+[node name="MainUI" type="Control" parent="MainNode"]
+visible = false
+
+[node name="BankBut" type="Button" parent="MainNode/MainUI"]
+margin_left = -800.0
+margin_top = -340.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 800, 380 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath("../StoreBut")
+focus_neighbour_bottom = NodePath("../HomeBut")
+custom_styles/hover = SubResource( 110 )
+custom_styles/pressed = SubResource( 111 )
+custom_styles/focus = SubResource( 111 )
+custom_styles/disabled = SubResource( 112 )
+custom_styles/normal = SubResource( 109 )
+group = SubResource( 113 )
+script = ExtResource( 14 )
+
+[node name="DebtNode" type="Control" parent="MainNode/MainUI/BankBut"]
+
+[node name="TitleLabel" type="Label" parent="MainNode/MainUI/BankBut/DebtNode"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_top = 65.0
+margin_right = 800.0
+margin_bottom = 315.0
+rect_min_size = Vector2( 800, 250 )
+custom_fonts/font = SubResource( 115 )
+text = "某借钱APP"
+align = 1
+
+[node name="Debt" type="Label" parent="MainNode/MainUI/BankBut/DebtNode"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_top = 160.0
+margin_right = 500.0
+margin_bottom = 199.0
+rect_min_size = Vector2( 500, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "欠款"
+align = 1
+valign = 1
+
+[node name="MoneyLabel" type="Label" parent="MainNode/MainUI/BankBut/DebtNode/Debt"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -20.0
+margin_right = 65.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 2 )
+text = "999999999999"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="MainNode/MainUI/BankBut/DebtNode/Debt/MoneyLabel"]
+light_mask = 0
+position = Vector2( 180, 23 )
+texture = ExtResource( 5 )
+
+[node name="PayBack" type="Label" parent="MainNode/MainUI/BankBut/DebtNode"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_top = 240.0
+margin_right = 500.0
+margin_bottom = 279.0
+custom_fonts/font = SubResource( 115 )
+text = "还款日"
+align = 1
+valign = 1
+
+[node name="DayLabel" type="Label" parent="MainNode/MainUI/BankBut/DebtNode/PayBack"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -19.5
+margin_right = 55.0
+margin_bottom = 19.5
+rect_min_size = Vector2( 165, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "5"
+align = 2
+valign = 1
+
+[node name="Unit" type="Label" parent="MainNode/MainUI/BankBut/DebtNode/PayBack/DayLabel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 6.0
+margin_top = -19.5
+margin_right = 61.0
+margin_bottom = 19.5
+custom_fonts/font = SubResource( 115 )
+text = "日"
+valign = 1
+
+[node name="InfoNode" type="Control" parent="MainNode/MainUI/BankBut"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="TitleLabel" type="Label" parent="MainNode/MainUI/BankBut/InfoNode"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -125.0
+margin_right = 400.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 800, 250 )
+custom_fonts/font = SubResource( 115 )
+text = "某借钱APP"
+align = 1
+autowrap = true
+
+[node name="InfoLabel" type="Label" parent="MainNode/MainUI/BankBut/InfoNode"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -320.0
+margin_top = -80.0
+margin_right = 320.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 300, 200 )
+custom_fonts/font = SubResource( 115 )
+text = "可进行资金借款。"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="StoreBut" type="Button" parent="MainNode/MainUI"]
+margin_top = -340.0
+margin_right = 800.0
+margin_bottom = 40.0
+focus_neighbour_left = NodePath("../BankBut")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath("../MenuBut")
+custom_styles/hover = SubResource( 116 )
+custom_styles/pressed = SubResource( 111 )
+custom_styles/focus = SubResource( 111 )
+custom_styles/disabled = SubResource( 112 )
+custom_styles/normal = SubResource( 109 )
+group = SubResource( 113 )
+script = ExtResource( 8 )
+
+[node name="ShopNode" type="Control" parent="MainNode/MainUI/StoreBut"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="TitleLabel" type="Label" parent="MainNode/MainUI/StoreBut/ShopNode"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -125.0
+margin_right = 400.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 800, 250 )
+custom_fonts/font = SubResource( 115 )
+text = "店铺功能集合APP"
+align = 1
+
+[node name="Value" type="Label" parent="MainNode/MainUI/StoreBut/ShopNode"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -30.0
+margin_right = 100.0
+margin_bottom = 9.0
+rect_min_size = Vector2( 500, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "店铺价值评估"
+align = 1
+valign = 1
+
+[node name="MoneyLabel" type="Label" parent="MainNode/MainUI/StoreBut/ShopNode/Value"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -20.0
+margin_right = 65.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 2 )
+text = "999999999999"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="MainNode/MainUI/StoreBut/ShopNode/Value/MoneyLabel"]
+light_mask = 0
+position = Vector2( 180, 23 )
+texture = ExtResource( 5 )
+
+[node name="Popular" type="Label" parent="MainNode/MainUI/StoreBut/ShopNode"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = 50.0
+margin_right = 100.0
+margin_bottom = 89.0
+custom_fonts/font = SubResource( 115 )
+text = "店铺声望"
+align = 1
+valign = 1
+
+[node name="HBox" type="HBoxContainer" parent="MainNode/MainUI/StoreBut/ShopNode/Popular"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -60.0
+margin_top = -13.5
+margin_right = 86.0
+margin_bottom = 14.5
+script = ExtResource( 31 )
+
+[node name="1" type="Control" parent="MainNode/MainUI/StoreBut/ShopNode/Popular/HBox"]
+margin_right = 26.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+
+[node name="TextureProgress" type="TextureProgress" parent="MainNode/MainUI/StoreBut/ShopNode/Popular/HBox/1"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 20.0
+value = 20.0
+texture_under = ExtResource( 15 )
+texture_progress = ExtResource( 3 )
+
+[node name="2" type="Control" parent="MainNode/MainUI/StoreBut/ShopNode/Popular/HBox"]
+margin_left = 30.0
+margin_right = 56.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+
+[node name="TextureProgress" type="TextureProgress" parent="MainNode/MainUI/StoreBut/ShopNode/Popular/HBox/2"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 20.0
+value = 20.0
+texture_under = ExtResource( 15 )
+texture_progress = ExtResource( 3 )
+
+[node name="3" type="Control" parent="MainNode/MainUI/StoreBut/ShopNode/Popular/HBox"]
+margin_left = 60.0
+margin_right = 86.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+
+[node name="TextureProgress" type="TextureProgress" parent="MainNode/MainUI/StoreBut/ShopNode/Popular/HBox/3"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 20.0
+value = 20.0
+texture_under = ExtResource( 15 )
+texture_progress = ExtResource( 3 )
+
+[node name="4" type="Control" parent="MainNode/MainUI/StoreBut/ShopNode/Popular/HBox"]
+margin_left = 90.0
+margin_right = 116.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+
+[node name="TextureProgress" type="TextureProgress" parent="MainNode/MainUI/StoreBut/ShopNode/Popular/HBox/4"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 20.0
+value = 20.0
+texture_under = ExtResource( 15 )
+texture_progress = ExtResource( 3 )
+
+[node name="5" type="Control" parent="MainNode/MainUI/StoreBut/ShopNode/Popular/HBox"]
+margin_left = 120.0
+margin_right = 146.0
+margin_bottom = 28.0
+rect_min_size = Vector2( 26, 0 )
+
+[node name="TextureProgress" type="TextureProgress" parent="MainNode/MainUI/StoreBut/ShopNode/Popular/HBox/5"]
+margin_right = 28.0
+margin_bottom = 28.0
+max_value = 20.0
+value = 20.0
+texture_under = ExtResource( 15 )
+texture_progress = ExtResource( 3 )
+
+[node name="InfoNode" type="Control" parent="MainNode/MainUI/StoreBut"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="TitleLabel" type="Label" parent="MainNode/MainUI/StoreBut/InfoNode"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -320.0
+margin_top = -125.0
+margin_right = 320.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 0, 250 )
+custom_fonts/font = SubResource( 115 )
+text = "拥有店铺后开启。"
+align = 1
+
+[node name="Lock" type="Sprite" parent="MainNode/MainUI/StoreBut/InfoNode"]
+scale = Vector2( 5, 5 )
+texture = ExtResource( 7 )
+
+[node name="Ani" type="AnimationPlayer" parent="MainNode/MainUI/StoreBut"]
+autoplay = "disable"
+anims/disable = SubResource( 145 )
+anims/show = SubResource( 146 )
+
+[node name="HomeBut" type="Button" parent="MainNode/MainUI"]
+margin_left = -800.0
+margin_top = 40.0
+margin_bottom = 420.0
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath("../BankBut")
+focus_neighbour_right = NodePath("../MenuBut")
+focus_neighbour_bottom = NodePath(".")
+custom_styles/hover = SubResource( 116 )
+custom_styles/pressed = SubResource( 111 )
+custom_styles/focus = SubResource( 111 )
+custom_styles/disabled = SubResource( 112 )
+custom_styles/normal = SubResource( 109 )
+group = SubResource( 113 )
+script = ExtResource( 8 )
+
+[node name="TitleLabel" type="Label" parent="MainNode/MainUI/HomeBut"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -125.0
+margin_right = 400.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 800, 250 )
+custom_fonts/font = SubResource( 115 )
+text = "房屋中介及家电"
+align = 1
+
+[node name="HomeType" type="Label" parent="MainNode/MainUI/HomeBut"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -30.0
+margin_right = 100.0
+margin_bottom = 9.0
+rect_min_size = Vector2( 500, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "当前户型"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="MainNode/MainUI/HomeBut/HomeType"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -70.0
+margin_top = -19.5
+margin_right = 95.0
+margin_bottom = 19.5
+rect_min_size = Vector2( 165, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "蜗居型"
+align = 2
+valign = 1
+
+[node name="MenuBut" type="Button" parent="MainNode/MainUI"]
+margin_top = 40.0
+margin_right = 800.0
+margin_bottom = 420.0
+focus_neighbour_left = NodePath("../HomeBut")
+focus_neighbour_top = NodePath("../StoreBut")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+custom_styles/hover = SubResource( 116 )
+custom_styles/pressed = SubResource( 111 )
+custom_styles/focus = SubResource( 111 )
+custom_styles/disabled = SubResource( 112 )
+custom_styles/normal = SubResource( 109 )
+disabled = true
+group = SubResource( 113 )
+script = ExtResource( 8 )
+
+[node name="InfoNode" type="Control" parent="MainNode/MainUI/MenuBut"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="Lock" type="Sprite" parent="MainNode/MainUI/MenuBut/InfoNode"]
+scale = Vector2( 5, 5 )
+texture = ExtResource( 7 )
+
+[node name="TitleLabel" type="Label" parent="MainNode/MainUI/MenuBut/InfoNode"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -320.0
+margin_top = -125.0
+margin_right = 320.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 0, 250 )
+custom_fonts/font = SubResource( 115 )
+text = "拥有店铺后开启。"
+align = 1
+
+[node name="ShopNode" type="Control" parent="MainNode/MainUI/MenuBut"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="TitleLabel" type="Label" parent="MainNode/MainUI/MenuBut/ShopNode"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 45.0
+margin_right = 780.0
+margin_bottom = 295.0
+rect_min_size = Vector2( 800, 250 )
+custom_fonts/font = SubResource( 115 )
+text = "菜单管理"
+align = 1
+
+[node name="OrderMax" type="Label" parent="MainNode/MainUI/MenuBut/ShopNode"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 140.0
+margin_right = 480.0
+margin_bottom = 179.0
+rect_min_size = Vector2( 500, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "当前数量"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="MainNode/MainUI/MenuBut/ShopNode/OrderMax"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -70.0
+margin_top = -19.5
+margin_right = 95.0
+margin_bottom = 19.5
+rect_min_size = Vector2( 165, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "2/3"
+align = 2
+valign = 1
+
+[node name="OrderBool" type="Label" parent="MainNode/MainUI/MenuBut/ShopNode"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = 220.0
+margin_right = 480.0
+margin_bottom = 259.0
+rect_min_size = Vector2( 500, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "已获得配方"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="MainNode/MainUI/MenuBut/ShopNode/OrderBool"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -70.0
+margin_top = -19.5
+margin_right = 95.0
+margin_bottom = 19.5
+rect_min_size = Vector2( 165, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "5"
+align = 2
+valign = 1
+
+[node name="Ani" type="AnimationPlayer" parent="MainNode/MainUI/MenuBut"]
+anims/disable = SubResource( 159 )
+anims/show = SubResource( 160 )
+
+[node name="BankNode" type="Node2D" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.333333 )
+
+[node name="Loan" type="Button" parent="BankNode"]
+margin_left = -760.0
+margin_top = -335.0
+margin_right = -25.0
+margin_bottom = 420.0
+custom_styles/hover = SubResource( 121 )
+custom_styles/pressed = SubResource( 111 )
+custom_styles/focus = SubResource( 111 )
+custom_styles/disabled = SubResource( 112 )
+custom_styles/normal = SubResource( 109 )
+disabled = true
+toggle_mode = true
+button_mask = 0
+group = SubResource( 122 )
+
+[node name="Pressed" type="Control" parent="BankNode/Loan"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+
+[node name="VBox" type="VBoxContainer" parent="BankNode/Loan/Pressed"]
+margin_left = -375.5
+margin_top = 160.0
+margin_right = 124.5
+margin_bottom = 555.0
+custom_constants/separation = 50
+
+[node name="Borrow" type="Label" parent="BankNode/Loan/Pressed/VBox"]
+margin_right = 500.0
+margin_bottom = 39.0
+rect_min_size = Vector2( 500, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "借款金额"
+align = 1
+valign = 1
+
+[node name="MoneyLabel" type="Label" parent="BankNode/Loan/Pressed/VBox/Borrow"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -20.0
+margin_right = 65.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 2 )
+text = "50000"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="BankNode/Loan/Pressed/VBox/Borrow/MoneyLabel"]
+light_mask = 0
+position = Vector2( 180, 23 )
+texture = ExtResource( 5 )
+
+[node name="RepaymentBase" type="Label" parent="BankNode/Loan/Pressed/VBox"]
+margin_top = 89.0
+margin_right = 500.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 500, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "手续费"
+align = 1
+valign = 1
+
+[node name="MoneyLabel" type="Label" parent="BankNode/Loan/Pressed/VBox/RepaymentBase"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -20.0
+margin_right = 65.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 2 )
+text = "0"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="BankNode/Loan/Pressed/VBox/RepaymentBase/MoneyLabel"]
+light_mask = 0
+position = Vector2( 180, 23 )
+texture = ExtResource( 5 )
+
+[node name="Usury" type="Label" parent="BankNode/Loan/Pressed/VBox"]
+margin_top = 178.0
+margin_right = 500.0
+margin_bottom = 217.0
+custom_fonts/font = SubResource( 115 )
+text = "利率"
+align = 1
+valign = 1
+
+[node name="UsuryLabel" type="Label" parent="BankNode/Loan/Pressed/VBox/Usury"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -152.0
+margin_top = -18.5
+margin_right = 13.0
+margin_bottom = 20.5
+rect_min_size = Vector2( 165, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "0.01%"
+align = 2
+valign = 1
+
+[node name="Unit" type="Label" parent="BankNode/Loan/Pressed/VBox/Usury/UsuryLabel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 6.0
+margin_top = -19.5
+margin_right = 61.0
+margin_bottom = 19.5
+custom_fonts/font = SubResource( 115 )
+text = "每日"
+valign = 1
+
+[node name="Repayment" type="Label" parent="BankNode/Loan/Pressed/VBox"]
+margin_top = 267.0
+margin_right = 500.0
+margin_bottom = 306.0
+custom_fonts/font = SubResource( 115 )
+text = "贷款周期"
+align = 1
+valign = 1
+
+[node name="DayLabel" type="Label" parent="BankNode/Loan/Pressed/VBox/Repayment"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -19.5
+margin_right = 55.0
+margin_bottom = 19.5
+rect_min_size = Vector2( 165, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "10"
+align = 2
+valign = 1
+
+[node name="Unit" type="Label" parent="BankNode/Loan/Pressed/VBox/Repayment/DayLabel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 6.0
+margin_top = -19.5
+margin_right = 101.0
+margin_bottom = 19.5
+custom_fonts/font = SubResource( 115 )
+text = "日"
+valign = 1
+
+[node name="PayBack" type="Label" parent="BankNode/Loan/Pressed/VBox"]
+margin_top = 356.0
+margin_right = 500.0
+margin_bottom = 395.0
+custom_fonts/font = SubResource( 115 )
+text = "提前还款"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="BankNode/Loan/Pressed/VBox/PayBack"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -19.5
+margin_right = 55.0
+margin_bottom = 19.5
+rect_min_size = Vector2( 210, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "可"
+align = 2
+valign = 1
+
+[node name="LoanBut" type="Button" parent="BankNode/Loan/Pressed"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = 595.0
+margin_right = 200.0
+margin_bottom = 695.0
+rect_min_size = Vector2( 400, 100 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+custom_fonts/font = SubResource( 115 )
+custom_styles/hover = SubResource( 140 )
+custom_styles/pressed = SubResource( 141 )
+custom_styles/focus = SubResource( 141 )
+custom_styles/disabled = SubResource( 142 )
+custom_styles/normal = SubResource( 123 )
+text = "贷款"
+script = ExtResource( 8 )
+
+[node name="A" parent="BankNode/Loan/Pressed/LoanBut" instance=ExtResource( 26 )]
+bool_Static = true
+
+[node name="TitleLabel" type="Label" parent="BankNode/Loan/Pressed"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -362.5
+margin_top = 10.0
+margin_right = 362.5
+margin_bottom = 155.0
+custom_fonts/font = SubResource( 115 )
+text = "10日超低息开店宝"
+align = 1
+valign = 1
+
+[node name="R" type="Button" parent="BankNode/Loan/Pressed/TitleLabel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 232.5
+margin_top = -20.0
+margin_right = 272.5
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+custom_styles/disabled = SubResource( 124 )
+custom_styles/normal = SubResource( 103 )
+disabled = true
+
+[node name="R1" parent="BankNode/Loan/Pressed/TitleLabel/R" instance=ExtResource( 26 )]
+bool_Small = true
+bool_Static = true
+
+[node name="L" type="Button" parent="BankNode/Loan/Pressed/TitleLabel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -267.5
+margin_top = -20.0
+margin_right = -227.5
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+custom_styles/disabled = SubResource( 102 )
+custom_styles/normal = SubResource( 102 )
+disabled = true
+
+[node name="L1" parent="BankNode/Loan/Pressed/TitleLabel/L" instance=ExtResource( 26 )]
+bool_Small = true
+bool_Static = true
+
+[node name="Normal" type="Control" parent="BankNode/Loan"]
+anchor_left = 0.5
+anchor_right = 0.5
+
+[node name="InfoLabel" type="Label" parent="BankNode/Loan/Normal"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -287.0
+margin_top = 10.0
+margin_right = 274.0
+margin_bottom = 750.0
+custom_fonts/font = SubResource( 115 )
+text = "需要结清贷款才能再度借款。"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Repayment" type="Button" parent="BankNode"]
+margin_left = 25.0
+margin_top = -335.0
+margin_right = 760.0
+margin_bottom = 420.0
+custom_styles/hover = SubResource( 121 )
+custom_styles/pressed = SubResource( 111 )
+custom_styles/focus = SubResource( 112 )
+custom_styles/disabled = SubResource( 112 )
+custom_styles/normal = SubResource( 109 )
+disabled = true
+toggle_mode = true
+pressed = true
+button_mask = 0
+group = SubResource( 122 )
+
+[node name="Pressed" type="Control" parent="BankNode/Repayment"]
+anchor_left = 0.5
+anchor_right = 0.5
+
+[node name="VBox" type="VBoxContainer" parent="BankNode/Repayment/Pressed"]
+margin_left = -375.5
+margin_top = 160.0
+margin_right = 124.5
+margin_bottom = 555.0
+custom_constants/separation = 50
+
+[node name="Borrow" type="Label" parent="BankNode/Repayment/Pressed/VBox"]
+margin_right = 500.0
+margin_bottom = 39.0
+rect_min_size = Vector2( 500, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "借款"
+align = 1
+valign = 1
+
+[node name="MoneyLabel" type="Label" parent="BankNode/Repayment/Pressed/VBox/Borrow"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -20.0
+margin_right = 65.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 2 )
+text = "200000"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="BankNode/Repayment/Pressed/VBox/Borrow/MoneyLabel"]
+light_mask = 0
+position = Vector2( 180, 23 )
+texture = ExtResource( 5 )
+
+[node name="Usury" type="Label" parent="BankNode/Repayment/Pressed/VBox"]
+margin_top = 89.0
+margin_right = 500.0
+margin_bottom = 128.0
+custom_fonts/font = SubResource( 115 )
+text = "利率"
+align = 1
+valign = 1
+
+[node name="UsuryLabel" type="Label" parent="BankNode/Repayment/Pressed/VBox/Usury"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -148.0
+margin_top = -19.5
+margin_right = 17.0
+margin_bottom = 19.5
+rect_min_size = Vector2( 165, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "0.01%"
+align = 2
+valign = 1
+
+[node name="Unit" type="Label" parent="BankNode/Repayment/Pressed/VBox/Usury/UsuryLabel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 6.0
+margin_top = -19.5
+margin_right = 61.0
+margin_bottom = 19.5
+custom_fonts/font = SubResource( 115 )
+text = "每日"
+valign = 1
+
+[node name="Repayment" type="Label" parent="BankNode/Repayment/Pressed/VBox"]
+margin_top = 178.0
+margin_right = 500.0
+margin_bottom = 217.0
+custom_fonts/font = SubResource( 115 )
+text = "最终还款剩余"
+align = 1
+valign = 1
+
+[node name="DayLabel" type="Label" parent="BankNode/Repayment/Pressed/VBox/Repayment"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -19.5
+margin_right = 55.0
+margin_bottom = 19.5
+rect_min_size = Vector2( 165, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "5"
+align = 2
+valign = 1
+
+[node name="Unit" type="Label" parent="BankNode/Repayment/Pressed/VBox/Repayment/DayLabel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 6.0
+margin_top = -19.5
+margin_right = 101.0
+margin_bottom = 19.5
+custom_fonts/font = SubResource( 115 )
+text = "日"
+valign = 1
+
+[node name="PayBack" type="Label" parent="BankNode/Repayment/Pressed/VBox"]
+margin_top = 267.0
+margin_right = 500.0
+margin_bottom = 306.0
+custom_fonts/font = SubResource( 115 )
+text = "提前还款"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="BankNode/Repayment/Pressed/VBox/PayBack"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -110.0
+margin_top = -19.5
+margin_right = 55.0
+margin_bottom = 19.5
+rect_min_size = Vector2( 210, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "可"
+align = 2
+valign = 1
+
+[node name="Debt" type="Label" parent="BankNode/Repayment/Pressed/VBox"]
+margin_top = 356.0
+margin_right = 500.0
+margin_bottom = 395.0
+rect_min_size = Vector2( 500, 0 )
+custom_fonts/font = SubResource( 115 )
+text = "欠款总额"
+align = 1
+valign = 1
+
+[node name="MoneyLabel" type="Label" parent="BankNode/Repayment/Pressed/VBox/Debt"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -20.0
+margin_right = 65.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 2 )
+text = "280000"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="BankNode/Repayment/Pressed/VBox/Debt/MoneyLabel"]
+light_mask = 0
+position = Vector2( 180, 23 )
+texture = ExtResource( 5 )
+
+[node name="RepaymentBut" type="Button" parent="BankNode/Repayment/Pressed"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = 595.0
+margin_right = 200.0
+margin_bottom = 695.0
+rect_min_size = Vector2( 400, 100 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+custom_fonts/font = SubResource( 115 )
+custom_styles/hover = SubResource( 143 )
+custom_styles/pressed = SubResource( 141 )
+custom_styles/focus = SubResource( 141 )
+custom_styles/disabled = SubResource( 128 )
+custom_styles/normal = SubResource( 123 )
+text = "提前还款"
+script = ExtResource( 8 )
+
+[node name="A" parent="BankNode/Repayment/Pressed/RepaymentBut" instance=ExtResource( 26 )]
+margin_left = 47.5
+margin_top = 50.0
+margin_right = 47.5
+margin_bottom = 50.0
+bool_Static = true
+
+[node name="TitleLabel" type="Label" parent="BankNode/Repayment/Pressed"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -362.5
+margin_top = 10.0
+margin_right = 362.5
+margin_bottom = 155.0
+custom_fonts/font = SubResource( 115 )
+text = "10日超低息开店宝"
+align = 1
+valign = 1
+
+[node name="Normal" type="Control" parent="BankNode/Repayment"]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+
+[node name="InfoLabel" type="Label" parent="BankNode/Repayment/Normal"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -287.0
+margin_top = 160.0
+margin_right = 274.0
+margin_bottom = 595.0
+custom_fonts/font = SubResource( 115 )
+text = "目前暂无借款记录。"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="AniNode" type="Node" parent="BankNode"]
+
+[node name="Ani" type="AnimationPlayer" parent="BankNode/AniNode"]
+autoplay = "loan"
+anims/loan = SubResource( 126 )
+anims/repayment = SubResource( 125 )
+
+[node name="TypeAni" type="AnimationPlayer" parent="BankNode/AniNode"]
+"anims/开店宝" = SubResource( 127 )
+"anims/紧急资金" = SubResource( 139 )
+
+[node name="FinalCheckAni" type="AnimationPlayer" parent="BankNode/AniNode"]
+autoplay = "init"
+anims/init = SubResource( 147 )
+anims/loan = SubResource( 129 )
+anims/repayment = SubResource( 131 )
+
+[node name="FinalCheck" type="Control" parent="."]
+visible = false
+
+[node name="Panel" type="Panel" parent="FinalCheck"]
+self_modulate = Color( 0, 0, 0, 0.392157 )
+margin_left = -960.0
+margin_top = -540.0
+margin_right = 960.0
+margin_bottom = 540.0
+
+[node name="BG" type="NinePatchRect" parent="FinalCheck"]
+self_modulate = Color( 0.666667, 1, 1, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -400.0
+margin_top = -200.0
+margin_right = 400.0
+margin_bottom = 200.0
+texture = ExtResource( 2 )
+patch_margin_left = 70
+patch_margin_top = 70
+patch_margin_right = 70
+patch_margin_bottom = 70
+
+[node name="money" type="Control" parent="FinalCheck/BG"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -300.0
+margin_top = -20.0
+margin_right = -300.0
+margin_bottom = -20.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MoneyLabel" type="Label" parent="FinalCheck/BG/money"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_right = 165.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 130 )
+text = "999999999999"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="FinalCheck/BG/money/MoneyLabel"]
+light_mask = 0
+position = Vector2( 180, 23 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="FinalCheck/BG/money/MoneyLabel"]
+anchor_right = 1.0
+margin_top = -20.0
+margin_bottom = 1.0
+rect_min_size = Vector2( 200, 0 )
+text = "当前资金"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="FinalCheck/BG/money/MoneyLabel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -165.0
+margin_top = -20.0
+margin_right = 265.0
+margin_bottom = 1.0
+rect_min_size = Vector2( 430, 0 )
+text = "+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TotalCost" type="Label" parent="FinalCheck/BG/money"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = 200.0
+margin_right = 365.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 130 )
+text = "999999999999"
+align = 2
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="FinalCheck/BG/money/TotalCost"]
+light_mask = 0
+position = Vector2( 180, 23 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="FinalCheck/BG/money/TotalCost"]
+anchor_right = 1.0
+margin_top = -20.0
+margin_right = 35.0
+margin_bottom = 1.0
+text = "借款金额"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="FinalCheck/BG/money/TotalCost"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -165.0
+margin_top = -20.0
+margin_right = 265.0
+margin_bottom = 1.0
+rect_min_size = Vector2( 430, 0 )
+text = "="
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FinalMoney" type="Label" parent="FinalCheck/BG/money"]
+self_modulate = Color( 1, 0.784314, 0, 1 )
+anchor_left = 0.615
+anchor_top = 0.9
+anchor_right = 0.615
+anchor_bottom = 0.9
+margin_left = 400.0
+margin_right = 565.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 130 )
+text = "999999999999"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="FinalCheck/BG/money/FinalMoney"]
+light_mask = 0
+position = Vector2( 180, 23 )
+texture = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="FinalCheck/BG/money/FinalMoney"]
+anchor_right = 1.0
+margin_top = -20.0
+margin_right = 35.0
+margin_bottom = 1.0
+text = "借后资金"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoLabel" type="Label" parent="FinalCheck/BG"]
+anchor_right = 1.0
+margin_left = 80.0
+margin_top = 20.0
+margin_right = -80.0
+margin_bottom = 140.0
+text = "资金变化最终确认"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Apply" type="Button" parent="FinalCheck/BG"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = 40.0
+margin_right = 150.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 300, 100 )
+focus_neighbour_left = NodePath(".")
+focus_neighbour_top = NodePath(".")
+focus_neighbour_right = NodePath(".")
+focus_neighbour_bottom = NodePath(".")
+custom_fonts/font = SubResource( 115 )
+custom_styles/hover = SubResource( 133 )
+custom_styles/pressed = SubResource( 134 )
+custom_styles/focus = SubResource( 134 )
+custom_styles/disabled = SubResource( 135 )
+custom_styles/normal = SubResource( 136 )
+text = "确定"
+script = ExtResource( 8 )
+
+[node name="A" parent="FinalCheck/BG/Apply" instance=ExtResource( 26 )]
+bool_Static = true
+
+[node name="BackBut" type="Button" parent="FinalCheck/BG"]
+margin_left = 30.0
+margin_top = 30.0
+margin_right = 115.0
+margin_bottom = 115.0
+rect_min_size = Vector2( 85, 85 )
+custom_styles/hover = SubResource( 132 )
+custom_styles/pressed = SubResource( 132 )
+custom_styles/normal = SubResource( 132 )
+icon = ExtResource( 4 )
+script = ExtResource( 13 )
+
+[node name="B" parent="FinalCheck/BG/BackBut" instance=ExtResource( 26 )]
+bool_Static = true
+
+[node name="LevelNode" type="Node2D" parent="."]
+
+[node name="ViewportContainer" type="ViewportContainer" parent="LevelNode"]
+margin_left = -855.0
+margin_top = -354.0
+margin_right = -55.0
+margin_bottom = 446.0
+rect_min_size = Vector2( 800, 800 )
+mouse_filter = 2
+stretch = true
+
+[node name="Viewport" type="Viewport" parent="LevelNode/ViewportContainer"]
+size = Vector2( 800, 800 )
+handle_input_locally = false
+usage = 0
+render_target_update_mode = 3
+
+[node name="ViewportBG" type="NinePatchRect" parent="LevelNode"]
+margin_left = -860.0
+margin_top = -359.0
+margin_right = -50.0
+margin_bottom = 456.0
+texture = ExtResource( 18 )
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="CameraControl" type="Node2D" parent="LevelNode"]
+position = Vector2( 0, -50 )
+z_index = 1
+
+[node name="Func" type="NinePatchRect" parent="LevelNode/CameraControl"]
+self_modulate = Color( 0, 1, 1, 0.392157 )
+margin_left = -855.0
+margin_top = 455.0
+margin_right = -55.0
+margin_bottom = 496.0
+rect_pivot_offset = Vector2( 0, 25 )
+mouse_filter = 0
+texture = ExtResource( 23 )
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LevelNode/CameraControl/Func"]
+margin_right = 800.0
+margin_bottom = 40.0
+custom_constants/separation = 90
+
+[node name="UP" type="Button" parent="LevelNode/CameraControl/Func/HBoxContainer"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 96 )
+custom_styles/pressed = SubResource( 96 )
+custom_styles/focus = SubResource( 96 )
+custom_styles/disabled = SubResource( 148 )
+custom_styles/normal = SubResource( 149 )
+script = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="LevelNode/CameraControl/Func/HBoxContainer/UP"]
+show_behind_parent = true
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = -20.0
+margin_right = 45.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+text = "UP"
+align = 1
+valign = 1
+
+[node name="DOWN" type="Button" parent="LevelNode/CameraControl/Func/HBoxContainer"]
+margin_left = 130.0
+margin_right = 170.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 97 )
+custom_styles/pressed = SubResource( 97 )
+custom_styles/disabled = SubResource( 117 )
+custom_styles/normal = SubResource( 150 )
+enabled_focus_mode = 0
+script = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="LevelNode/CameraControl/Func/HBoxContainer/DOWN"]
+show_behind_parent = true
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = -20.0
+margin_right = 45.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+text = "DOWN"
+align = 1
+valign = 1
+
+[node name="LEFT" type="Button" parent="LevelNode/CameraControl/Func/HBoxContainer"]
+margin_left = 260.0
+margin_right = 300.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 98 )
+custom_styles/pressed = SubResource( 98 )
+custom_styles/disabled = SubResource( 151 )
+custom_styles/normal = SubResource( 152 )
+enabled_focus_mode = 0
+script = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="LevelNode/CameraControl/Func/HBoxContainer/LEFT"]
+show_behind_parent = true
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = -20.0
+margin_right = 45.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+text = "LEFT"
+align = 1
+valign = 1
+
+[node name="RIGHT" type="Button" parent="LevelNode/CameraControl/Func/HBoxContainer"]
+margin_left = 390.0
+margin_right = 430.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 99 )
+custom_styles/pressed = SubResource( 99 )
+custom_styles/disabled = SubResource( 153 )
+custom_styles/normal = SubResource( 154 )
+enabled_focus_mode = 0
+script = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="LevelNode/CameraControl/Func/HBoxContainer/RIGHT"]
+show_behind_parent = true
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = -20.0
+margin_right = 55.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+text = "RIGHT"
+align = 1
+valign = 1
+
+[node name="IN" type="Button" parent="LevelNode/CameraControl/Func/HBoxContainer"]
+margin_left = 520.0
+margin_right = 560.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 100 )
+custom_styles/pressed = SubResource( 100 )
+custom_styles/disabled = SubResource( 155 )
+custom_styles/normal = SubResource( 100 )
+enabled_focus_mode = 0
+script = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="LevelNode/CameraControl/Func/HBoxContainer/IN"]
+show_behind_parent = true
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = -20.0
+margin_right = 65.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+text = "ZOOM -"
+align = 1
+valign = 1
+
+[node name="OUT" type="Button" parent="LevelNode/CameraControl/Func/HBoxContainer"]
+margin_left = 650.0
+margin_right = 690.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+focus_mode = 0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 156 )
+custom_styles/pressed = SubResource( 101 )
+custom_styles/disabled = SubResource( 157 )
+custom_styles/normal = SubResource( 101 )
+enabled_focus_mode = 0
+script = ExtResource( 13 )
+
+[node name="Label" type="Label" parent="LevelNode/CameraControl/Func/HBoxContainer/OUT"]
+show_behind_parent = true
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 5.0
+margin_top = -20.0
+margin_right = 65.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+text = "ZOOM +"
+align = 1
+valign = 1
+
+[node name="DevBuy" parent="LevelNode" instance=ExtResource( 25 )]
+visible = false
+
+[node name="OrderNode" parent="LevelNode" instance=ExtResource( 24 )]
+visible = false
+margin_top = -360.0
+margin_bottom = 460.0
+rect_min_size = Vector2( 0, 0 )
+
+[node name="Type" type="Control" parent="LevelNode"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LevelNode/Type"]
+margin_top = -340.0
+margin_right = 800.0
+margin_bottom = 420.0
+custom_constants/separation = 50
+
+[node name="DevBuyBut" type="Button" parent="LevelNode/Type/VBoxContainer"]
+margin_right = 800.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 0, 200 )
+custom_styles/hover = SubResource( 164 )
+custom_styles/pressed = SubResource( 164 )
+custom_styles/focus = SubResource( 164 )
+custom_styles/normal = SubResource( 162 )
+text = "店内设施购买"
+
+[node name="OrderBut" type="Button" parent="LevelNode/Type/VBoxContainer"]
+margin_top = 250.0
+margin_right = 800.0
+margin_bottom = 450.0
+rect_min_size = Vector2( 0, 200 )
+custom_styles/hover = SubResource( 164 )
+custom_styles/pressed = SubResource( 164 )
+custom_styles/focus = SubResource( 164 )
+custom_styles/normal = SubResource( 162 )
+text = "店铺订货"
+
+[connection signal="pressed" from="MainNode/TitleName/BackBut" to="." method="_on_BackBut_pressed"]
+[connection signal="pressed" from="MainNode/MainUI/BankBut" to="." method="_on_BankBut_pressed"]
+[connection signal="pressed" from="MainNode/MainUI/StoreBut" to="." method="_on_StoreBut_pressed"]
+[connection signal="pressed" from="MainNode/MainUI/MenuBut" to="." method="_on_MenuBut_pressed"]
+[connection signal="pressed" from="BankNode/Loan/Pressed/LoanBut" to="." method="_on_LoanBut_pressed"]
+[connection signal="pressed" from="BankNode/Repayment/Pressed/RepaymentBut" to="." method="_on_RepaymentBut_pressed"]
+[connection signal="pressed" from="FinalCheck/BG/Apply" to="." method="_on_FinalCheck_Apply_pressed"]
+[connection signal="pressed" from="FinalCheck/BG/BackBut" to="." method="_on_FinalCheck_BackBut_pressed"]
+[connection signal="pressed" from="LevelNode/CameraControl/Func/HBoxContainer/UP" to="." method="_on_UP_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="LevelNode/CameraControl/Func/HBoxContainer/DOWN" to="." method="_on_DOWN_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="LevelNode/CameraControl/Func/HBoxContainer/LEFT" to="." method="_on_LEFT_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="LevelNode/CameraControl/Func/HBoxContainer/RIGHT" to="." method="_on_RIGHT_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="LevelNode/CameraControl/Func/HBoxContainer/IN" to="." method="_on_IN_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="LevelNode/CameraControl/Func/HBoxContainer/OUT" to="." method="_on_OUT_pressed" binds= [ 1 ]]
+[connection signal="pressed" from="LevelNode/Type/VBoxContainer/DevBuyBut" to="." method="_on_DevBuyBut_pressed"]
+[connection signal="pressed" from="LevelNode/Type/VBoxContainer/OrderBut" to="." method="_on_OrderBut_pressed"]
