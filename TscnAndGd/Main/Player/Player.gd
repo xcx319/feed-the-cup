@@ -157,7 +157,11 @@ func _MultName_Logic():
 	if not SteamLogic.IsMultiplay:
 		NameAni.play("init")
 		return
-	var _NAME: String = Steam.getFriendPersonaName(cur_Player)
+	var _NAME: String = ""
+	if SteamLogic.STEAM_BOOL:
+		_NAME = Steam.getFriendPersonaName(cur_Player)
+	else:
+		_NAME = OnlineNetwork.get_member_name(cur_Player)
 	if typeof(_NAME) == TYPE_STRING:
 		NameLabel.text = _NAME
 		NameLabel.rect_position.x = int(float(NameLabel.rect_size.x) / 2) * - 1

@@ -13,7 +13,10 @@ func call_net(_Type: String, _Info: String, _SteamID: int):
 			var _INFOTEXT = GameLogic.CardTrans.get_message(_Info)
 			var _NAME = ""
 			if _SteamID != 0:
-				_NAME = Steam.getFriendPersonaName(_SteamID)
+				if SteamLogic.STEAM_BOOL:
+					_NAME = Steam.getFriendPersonaName(_SteamID)
+				else:
+					_NAME = OnlineNetwork.get_member_name(_SteamID)
 			InfoLabel.bbcode_text = "[shake rate=0 level=0][center]" + _NAME + " " + _INFOTEXT + "[/center][/shake]"
 func call_init(_Type: String, _Info: String, _NUM: String = "", _MaxBool: bool = false):
 	TypeAni.play(str(_Type))

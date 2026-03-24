@@ -398,3 +398,17 @@ func _on_SteamGroup_pressed():
 		_:
 			var _DIR = "https://steamcommunity.com/chat/invite/UHJDKy33"
 			var _RETURN = OS.shell_open(_DIR)
+
+func _on_OnlineMultiplayer_pressed():
+	GameLogic.Audio.But_Apply.play(0)
+	if GameLogic.Con.is_connected("P1_Control", self, "_control_logic"):
+		GameLogic.Con.disconnect("P1_Control", self, "_control_logic")
+	if GameLogic.Con.is_connected("P2_Control", self, "_control_logic"):
+		GameLogic.Con.disconnect("P2_Control", self, "_control_logic")
+	var _lobby_scene = load("res://TscnAndGd/UI/Online/OnlineLobby.tscn").instance()
+	get_tree().get_root().add_child(_lobby_scene)
+	self.queue_free()
+
+
+func _on_OnlineButton_pressed():
+	_on_OnlineMultiplayer_pressed()

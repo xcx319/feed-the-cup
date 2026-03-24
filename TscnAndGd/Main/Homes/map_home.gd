@@ -42,18 +42,23 @@ func _ready() -> void :
 		GameLogic.Can_ESC = true
 
 	GameLogic.GameUI.MainMenu.call_ESC_hide()
-	_SteamLogic()
-	_Logic_Init()
 
-	HomeIn_Bool = true
-	call_deferred("MissionComplete_Check")
+	# 先连接信号，再初始化逻辑（避免 _Logic_Init 出错导致信号未连接）
 	if not GameLogic.is_connected("SYNC", self, "MissionComplete_Check"):
 		var _Con = GameLogic.connect("SYNC", self, "MissionComplete_Check")
 	if not SteamLogic.is_connected("CreateNetPlayer", self, "call_NetWork_PlayerCreate"):
 		var _Con = SteamLogic.connect("CreateNetPlayer", self, "call_NetWork_PlayerCreate")
-
 	if not SteamLogic.is_connected("PlayerSYNC", self, "_PlayerSYNC"):
 		var _SteamCon = SteamLogic.connect("PlayerSYNC", self, "_PlayerSYNC")
+
+	_SteamLogic()
+	_Logic_Init()
+
+	# 重放场景加载期间缓存的 CreateNetPlayer（必须在 _Logic_Init 之后，自身玩家已创建）
+	SteamLogic.replay_pending_create_player()
+
+	HomeIn_Bool = true
+	call_deferred("MissionComplete_Check")
 	if SteamLogic.IsMultiplay and not SteamLogic.LOBBY_IsMaster:
 		return
 
@@ -65,9 +70,11 @@ func _ready() -> void :
 				if has_node("CanvasLayer/AnimationPlayer"):
 					$CanvasLayer / AnimationPlayer.play("Tutorial")
 	if not _ISCG:
-		SteamLogic.call_create_Lobby()
-	yield(get_tree().create_timer(10), "timeout")
-	GameLogic.Achievement.call_SteamAchievement()
+		if SteamLogic.STEAM_BOOL:
+			SteamLogic.call_create_Lobby()
+	if SteamLogic.STEAM_BOOL:
+		yield(get_tree().create_timer(10), "timeout")
+		GameLogic.Achievement.call_SteamAchievement()
 
 func _PlayerSYNC(_Type: String, _SteamID: int, _Data: Array):
 	for _playerNode in Ysort_Players.get_children():
@@ -144,7 +151,8 @@ func _OpenCG_End():
 	if has_node("MapNode/Audio"):
 		GameLogic.Audio.call_TileSet(get_node("MapNode/Audio"))
 	GameLogic.LoadingUI.BGM_logic()
-	SteamLogic.call_create_Lobby()
+	if SteamLogic.STEAM_BOOL:
+		SteamLogic.call_create_Lobby()
 	_ISCG = false
 	if not _ISCG:
 		if not SteamLogic.IsMultiplay:
@@ -378,7 +386,10 @@ func _PlayerCreate():
 
 
 func call_NetWork_PlayerCreate(_DataArray: Array):
-
+	print("[联机] call_NetWork_PlayerCreate: size=", _DataArray.size(), " player_id=", _DataArray[2] if _DataArray.size() > 2 else "?", " pos=", _DataArray[3] if _DataArray.size() > 3 else "?")
+	if _DataArray.size() < 7:
+		print("[联机] call_NetWork_PlayerCreate 数据不足: ", _DataArray.size())
+		return
 	var _TSCN = _DataArray[0]
 	var _cur_ID = _DataArray[1]
 	var _cur_Player_ID = _DataArray[2]
@@ -433,6 +444,7 @@ func call_NetWork_PlayerCreate(_DataArray: Array):
 	_NetPlayer._MultName_Logic()
 
 	_NetPlayer.call_change_avatar(_NetPlayer.cur_ID, _AVATARDIC)
+	print("[联机] call_NetWork_PlayerCreate 完成: ", str(_cur_Player_ID))
 	if SteamLogic.LOBBY_IsMaster:
 
 		GameLogic.Achievement.call_SetAchievement("MULTIPLAY_1")

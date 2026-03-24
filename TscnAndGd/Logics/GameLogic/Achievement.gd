@@ -1090,7 +1090,8 @@ func get_achievement(value: String, _DIC: Dictionary) -> void :
 					call_SetAchievement(value)
 
 func call_SetAchievement(_VALUE):
-
+	if not SteamLogic.STEAM_BOOL:
+		return
 	var _R = Steam.setAchievement(_VALUE)
 	var _RS = Steam.storeStats()
 
@@ -1182,6 +1183,6 @@ func call_StatUp():
 	call_SetStat("Order", _ORDER)
 
 func call_SetStat(_STAT, _value):
-
-
+	if not SteamLogic.STEAM_BOOL:
+		return
 	var _r = Steam.setStatInt(_STAT, _value)

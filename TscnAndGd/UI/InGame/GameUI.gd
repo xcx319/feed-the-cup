@@ -398,7 +398,11 @@ func call_UI_init():
 func call_HomeInfo():
 
 	if SteamLogic.IsMultiplay and not SteamLogic.LOBBY_IsMaster:
-		var _NAME: String = Steam.getFriendPersonaName(SteamLogic.MasterID)
+		var _NAME: String = ""
+		if SteamLogic.STEAM_BOOL:
+			_NAME = Steam.getFriendPersonaName(SteamLogic.MasterID)
+		else:
+			_NAME = OnlineNetwork.get_member_name(SteamLogic.MasterID)
 		$HomeInfo / Label.text = _NAME + " " + GameLogic.CardTrans.get_message("信息-的家")
 		$HomeInfo.show()
 		$HomeInfo / AnimationPlayer.play("Home")
@@ -445,7 +449,11 @@ func call_InHome():
 	_info_Init()
 	GameLogic.Tutorial.call_Check_Level2()
 	if SteamLogic.IsMultiplay and not SteamLogic.LOBBY_IsMaster:
-		var _NAME: String = Steam.getFriendPersonaName(SteamLogic.MasterID)
+		var _NAME: String = ""
+		if SteamLogic.STEAM_BOOL:
+			_NAME = Steam.getFriendPersonaName(SteamLogic.MasterID)
+		else:
+			_NAME = OnlineNetwork.get_member_name(SteamLogic.MasterID)
 		$HomeInfo / Label.text = _NAME + " " + GameLogic.CardTrans.get_message("信息-的家")
 		$HomeInfo / AnimationPlayer.play("Home")
 		$HomeInfo.show()
@@ -1499,9 +1507,17 @@ func call_Master_set():
 		$JoinInfo / Info / Day.text = "DAY " + str(_DAY + 1)
 	call_LevelInfo_set(_LEVEL)
 func call_JoinInfo_set():
-	var _LEVEL = Steam.getLobbyData(SteamLogic.LOBBY_ID, "Level")
-	var _Devil = Steam.getLobbyData(SteamLogic.LOBBY_ID, "Devil")
-	var _DAY = Steam.getLobbyData(SteamLogic.LOBBY_ID, "Day")
+	var _LEVEL = ""
+	var _Devil = "0"
+	var _DAY = "0"
+	if SteamLogic.STEAM_BOOL:
+		_LEVEL = Steam.getLobbyData(SteamLogic.LOBBY_ID, "Level")
+		_Devil = Steam.getLobbyData(SteamLogic.LOBBY_ID, "Devil")
+		_DAY = Steam.getLobbyData(SteamLogic.LOBBY_ID, "Day")
+	else:
+		_LEVEL = GameLogic.cur_level
+		_Devil = str(GameLogic.cur_Day)
+		_DAY = str(GameLogic.cur_Day)
 	var _SPECIALNUM: int = GameLogic.SPECIALLEVEL_Int
 
 	if SteamLogic.IsMultiplay and not SteamLogic.LOBBY_IsMaster:
@@ -1560,7 +1576,8 @@ func _on_MailTimer_timeout():
 		call_NewMail()
 
 func call_NewMail():
-
+	if not SteamLogic.STEAM_BOOL:
+		return
 	var result = Steam.triggerItemDrop(54001)
 	if result:
 

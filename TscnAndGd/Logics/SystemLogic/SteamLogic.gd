@@ -20,6 +20,8 @@ var SLOT_4: int
 
 var LatencyStart: float
 var IsMultiplay: bool
+var _pending_callv_queue: Array = []  # 缓存尚未创建节点的 Callv 消息
+var _pending_create_player: Array = []  # 缓存场景未加载时的 CreateNetPlayer 数据
 var LOBBY_IsMaster: bool
 var LOBBY_gameData = {}
 var LOBBY_statisticsData = {}
@@ -129,10 +131,14 @@ func LevelDic_Init():
 
 var _FASHIONDIC: Dictionary = {}
 func call_InLevel():
+	if not STEAM_BOOL:
+		return
 	if STEAM_ID != 0:
 		var _return = Steam.setLobbyJoinable(LOBBY_ID, false)
 
 func call_InHome():
+	if not STEAM_BOOL:
+		return
 	if STEAM_ID != 0 and LOBBY_IsMaster and LOBBY_ID:
 		var _return = Steam.setLobbyJoinable(LOBBY_ID, true)
 	else:
@@ -307,6 +313,8 @@ func _initialize_Steam() -> void :
 
 		print("_IS_ONLINE:", _IS_ONLINE)
 func _process(_delta):
+	if not STEAM_BOOL:
+		return
 	Steam.run_callbacks()
 	if LOBBY_ID > 0:
 
@@ -331,8 +339,8 @@ func _make_P2P_Handshake() -> void :
 var _Latency_DIC: Dictionary
 var _CHECK_DIC: Dictionary
 func call_Latency():
-
-
+	if not STEAM_BOOL:
+		return
 	var _VERSIONReturn = Steam.setLobbyData(LOBBY_ID, "VERSION", GameLogic.Save.VERSION)
 	var SEND_TYPE: int = Steam.P2P_SEND_UNRELIABLE_NO_DELAY
 	_send_P2P_Packet(0, {"message": "Latency", "from": STEAM_ID, "join": GameLogic.GameUI._LEVELCHECKINT}, SEND_TYPE)
@@ -531,12 +539,14 @@ func _on_Lobby_Joined(lobby_id: int, _permissions: int, _locked: bool, response:
 func return_check(_ID):
 	if IsMultiplay and LOBBY_IsMaster:
 		if SLOT != _ID and SLOT_2 != _ID and SLOT_3 != _ID and SLOT_4 != _ID:
-			var _RETURN = Steam.closeP2PSessionWithUser(_ID)
+			if STEAM_BOOL:
+				var _RETURN = Steam.closeP2PSessionWithUser(_ID)
 			return true
 	return
 
 func _get_Lobby_Members():
-
+	if not STEAM_BOOL:
+		return
 	if not LOBBY_IsMaster:
 		printerr(STEAM_ID, " 不执行getmember逻辑")
 		return
@@ -640,6 +650,8 @@ func _Del_Wrong_Members(_MEMBERS):
 	PlayerNum = LOBBY_MEMBERS.size()
 
 func _on_Lobby_Chat_Update(_lobby_id: int, _change_id: int, _making_change_id: int, _chat_state: int) -> void :
+	if not STEAM_BOOL:
+		return
 	var CHANGER: String = Steam.getFriendPersonaName(_change_id)
 
 	if _chat_state == 1:
@@ -671,6 +683,21 @@ func _on_Lobby_Chat_Update(_lobby_id: int, _change_id: int, _making_change_id: i
 	emit_signal("LobbyUpdate")
 
 func _send_P2P_Packet(target: int, packet_data: Dictionary, SEND_TYPE: int) -> void :
+	# WebSocket 模式：通过 OnlineNetwork 中继，使用 var2bytes + base64 保留 Godot 类型
+	if not STEAM_BOOL:
+		if not OnlineNetwork.is_connected:
+			return
+		var _bytes = var2bytes(packet_data)
+		var _b64 = Marshalls.raw_to_base64(_bytes)
+		var _msg = packet_data.get("message", "")
+		if _msg != "Callv" and _msg != "Set":
+			print("[WS P2P] 发送: ", _msg, " target=", target)
+		OnlineNetwork.send_game_event("p2p_relay", {
+			"target": target,
+			"b64": _b64,
+		})
+		return
+
 	var CHANNEL: int = 0
 	var _DATA: PoolByteArray
 
@@ -737,7 +764,7 @@ func _read_P2P_Packet(_CHANNEL) -> void :
 					_read_Logic(READABLE)
 					return
 
-			var _RETURN = Steam.closeP2PSessionWithUser(READABLE.from)
+			var _RETURN = Steam.closeP2PSessionWithUser(READABLE.from) if STEAM_BOOL else false
 func _read_Logic(READABLE):
 	if READABLE.has("message"):
 		match READABLE["message"]:
@@ -759,6 +786,8 @@ func _read_Logic(READABLE):
 					var _Node = get_node(READABLE.node)
 					if is_instance_valid(_Node):
 						_Node.set(READABLE.key, READABLE.value)
+				else:
+					_pending_callv_queue.append(READABLE.duplicate())
 			"CallID":
 
 				if not OBJECT_DIC.has(READABLE.id):
@@ -778,8 +807,8 @@ func _read_Logic(READABLE):
 						var _re = OBJECT_DIC.erase(READABLE.id)
 
 			"Callv":
-
 				if not has_node(READABLE.node):
+					_pending_callv_queue.append(READABLE.duplicate())
 					return
 				var _Node = get_node(READABLE.node)
 				if is_instance_valid(_Node):
@@ -914,77 +943,68 @@ func call_Master_But_SYNC(_args: Array):
 	var SEND_TYPE: int = Steam.P2P_SEND_RELIABLE
 	_send_P2P_Packet(MasterID, {"message": "PuppetBut", "from": STEAM_ID, "args": _args}, SEND_TYPE)
 func call_everybody_sync(_Info: String, _args: Array = [], _SteamID = STEAM_ID):
-	if not STEAM_BOOL:
+	if not STEAM_BOOL and not OnlineNetwork.is_connected:
 		return
-	var SEND_TYPE: int = Steam.P2P_SEND_UNRELIABLE_NO_DELAY
+	var SEND_TYPE: int = 2
 	_send_P2P_Packet(0, {"message": _Info, "from": _SteamID, "args": _args}, SEND_TYPE)
 
 func call_master_sync(_Info: String, _args: Array = [], _SteamID = STEAM_ID):
-	if not STEAM_BOOL:
+	if not STEAM_BOOL and not OnlineNetwork.is_connected:
 		return
-	var SEND_TYPE: int = Steam.P2P_SEND_UNRELIABLE_NO_DELAY
+	var SEND_TYPE: int = 2
 	_send_P2P_Packet(MasterID, {"message": _Info, "from": _SteamID, "args": _args}, SEND_TYPE)
 	print(" call Master:", _Info)
 func call_one_sync(_ID, _Info: String, _args: Array = [], _SteamID = STEAM_ID):
-	if not STEAM_BOOL:
+	if not STEAM_BOOL and not OnlineNetwork.is_connected:
 		return
-
-	var SEND_TYPE: int = Steam.P2P_SEND_RELIABLE
+	var SEND_TYPE: int = 2
 	_send_P2P_Packet(_ID, {"message": _Info, "from": STEAM_ID, "args": _args}, SEND_TYPE)
 
 func call_everybody_node_sync(_node: Node, _func_name: String, _args: Array = []):
-	if not STEAM_BOOL:
+	if not STEAM_BOOL and not OnlineNetwork.is_connected:
 		return
-	var SEND_TYPE: int = Steam.P2P_SEND_UNRELIABLE_NO_DELAY
-
+	var SEND_TYPE: int = 2
 	if is_instance_valid(_node):
 		var _NodePath = _node.get_path()
-
 		_send_P2P_Packet(0, {"message": "Callv", "from": STEAM_ID, "node": _NodePath, "func_name": _func_name, "args": _args}, SEND_TYPE)
 		_node.callv(_func_name, _args)
+
 func call_puppet_node_sync(_node: Node, _func_name: String, _args: Array = []):
-	if not STEAM_BOOL:
+	if not STEAM_BOOL and not OnlineNetwork.is_connected:
 		return
-	var SEND_TYPE: int = Steam.P2P_SEND_RELIABLE
-	if _func_name in ["call_puppet_move"]:
-		SEND_TYPE = Steam.P2P_SEND_UNRELIABLE_NO_DELAY
+	var SEND_TYPE: int = 2
 	if _node.is_inside_tree():
 		var _NodePath = _node.get_path()
 		_send_P2P_Packet(0, {"message": "Callv", "from": STEAM_ID, "node": _NodePath, "func_name": _func_name, "args": _args}, SEND_TYPE)
 
 func call_puppet_id_sync(_ID: int, _func_name: String, _args: Array = []):
-	if not STEAM_BOOL:
+	if not STEAM_BOOL and not OnlineNetwork.is_connected:
 		return
-	var SEND_TYPE: int = Steam.P2P_SEND_RELIABLE
-	if _func_name in ["call_puppet_move"]:
-		SEND_TYPE = Steam.P2P_SEND_UNRELIABLE_NO_DELAY
+	var SEND_TYPE: int = 2
 	if SteamLogic.OBJECT_DIC.has(_ID):
-		var _OBJ = SteamLogic.OBJECT_DIC[_ID]
-
 		_send_P2P_Packet(0, {"message": "CallID", "from": STEAM_ID, "id": _ID, "func_name": _func_name, "args": _args}, SEND_TYPE)
-	if _ID == 0:
-		pass
+
 func call_master_node_sync(_node: Node, _func_name: String, _args: Array = []):
-	if not STEAM_BOOL:
+	if not STEAM_BOOL and not OnlineNetwork.is_connected:
 		return
-	var SEND_TYPE: int = Steam.P2P_SEND_RELIABLE
-	if _func_name in ["call_puppet_move"]:
-		SEND_TYPE = Steam.P2P_SEND_UNRELIABLE_NO_DELAY
+	var SEND_TYPE: int = 2
 	if is_instance_valid(_node):
 		var _NodePath = _node.get_path()
 		_send_P2P_Packet(MasterID, {"message": "Callv", "from": STEAM_ID, "node": _NodePath, "func_name": _func_name, "args": _args}, SEND_TYPE)
+
 func call_puppet_set_sync(_node: Node, _key: String, _value):
-	if not STEAM_BOOL:
+	if not STEAM_BOOL and not OnlineNetwork.is_connected:
 		return
-	var SEND_TYPE: int = Steam.P2P_SEND_RELIABLE
+	var SEND_TYPE: int = 2
 	if is_instance_valid(_node):
 		if _node.is_inside_tree():
 			var _NodePath = _node.get_path()
 			_send_P2P_Packet(0, {"message": "Set", "from": STEAM_ID, "node": _NodePath, "key": _key, "value": _value}, SEND_TYPE)
+
 func call_one_set_sync(_STEAMID, _node: Node, _key: String, _value):
-	if not STEAM_BOOL:
+	if not STEAM_BOOL and not OnlineNetwork.is_connected:
 		return
-	var SEND_TYPE: int = Steam.P2P_SEND_RELIABLE
+	var SEND_TYPE: int = 2
 	if is_instance_valid(_node):
 		var _NodePath = _node.get_path()
 		_send_P2P_Packet(_STEAMID, {"message": "Set", "from": STEAM_ID, "node": _NodePath, "key": _key, "value": _value}, SEND_TYPE)
@@ -1032,11 +1052,7 @@ func call_LoadHomeOrGame():
 		GameLogic.call_HomeLoad_puppet()
 
 func _create_PuppetPlayer(_INFO: Array, _SteamID):
-
-
-
-
-
+	print("[联机] _create_PuppetPlayer: from=", _SteamID, " INFO[2]=", _INFO[2] if _INFO.size() > 2 else "?", " STEAM_ID=", STEAM_ID)
 
 	for _i in LOBBY_MEMBERS.size():
 		if LOBBY_MEMBERS[_i].steam_id == _INFO[2]:
@@ -1052,9 +1068,55 @@ func _create_PuppetPlayer(_INFO: Array, _SteamID):
 		var _FASION = _INFO[6]
 
 		_FASHIONDIC[int(_UID)] = _FASION
+	if get_signal_connection_list("CreateNetPlayer").size() == 0:
+		# 场景还没加载完，缓存数据等 map_home 连接信号后重放
+		print("[联机] CreateNetPlayer 无监听，缓存 INFO[2]=", _INFO[2] if _INFO.size() > 2 else "?")
+		_pending_create_player.append(_INFO)
+		return
 	emit_signal("CreateNetPlayer", _INFO)
+	# 延迟一帧后重放缓存的 Callv 消息（等节点树就绪）
+	call_deferred("_replay_pending_callv")
 
 	pass
+
+# 供 map_home 连接信号后调用，重放缓存的 CreateNetPlayer
+func replay_pending_create_player():
+	if _pending_create_player.empty():
+		return
+	print("[联机] 重放缓存 CreateNetPlayer: ", _pending_create_player.size(), " 条")
+	var _queue = _pending_create_player.duplicate()
+	_pending_create_player.clear()
+	for _info in _queue:
+		emit_signal("CreateNetPlayer", _info)
+	call_deferred("_replay_pending_callv")
+
+func _replay_pending_callv():
+	if _pending_callv_queue.empty():
+		return
+	print("[联机] 重放缓存消息: ", _pending_callv_queue.size(), " 条")
+	var _queue = _pending_callv_queue.duplicate()
+	_pending_callv_queue.clear()
+	var _ok = 0
+	var _fail = 0
+	for msg in _queue:
+		if has_node(msg.node):
+			var _Node = get_node(msg.node)
+			if not is_instance_valid(_Node):
+				_fail += 1
+				continue
+			if msg.message == "Set":
+				_Node.set(msg.key, msg.value)
+				_ok += 1
+			elif msg.message == "Callv":
+				if _Node.has_method(msg.func_name):
+					_Node.callv(msg.func_name, msg.args)
+					_ok += 1
+				else:
+					_fail += 1
+		else:
+			_fail += 1
+	print("[联机] 重放完成: 成功=", _ok, " 失败=", _fail)
+
 func call_PLAYER_SYNC():
 
 	var _YSortPlayer = null
@@ -1457,8 +1519,9 @@ func _Specialboard_Scores_Downloaded(_message: String, _boardID: int, _result: A
 
 				if _NAME in ["20251225"]:
 					if not _EQUIPDIC.has(1110006):
-						var _reTr = Steam.triggerItemDrop(53001)
-						var _status = Steam.getResultStatus(_reTr)
+						if STEAM_BOOL:
+							var _reTr = Steam.triggerItemDrop(53001)
+							var _status = Steam.getResultStatus(_reTr)
 
 
 
